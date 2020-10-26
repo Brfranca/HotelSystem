@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\EmployeeBLL.cs" />
     <Compile Include="Utils\Validator.cs" />
     <Compile Include="BLL\ClientBLL.cs" />
     <Compile Include="Extentions\StringExtentions.cs" />

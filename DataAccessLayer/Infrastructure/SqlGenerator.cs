@@ -33,7 +33,7 @@ namespace DataAccessLayer.Infrastructure
             {
                 if (propriedade.Name != "ID")
                 {
-                    if (propriedade.GetValue(item) == "" || propriedade.GetValue(item) == null)
+                    if ((string)propriedade.GetValue(item) == "" || propriedade.GetValue(item) == null)
                     {
                         command.Parameters.AddWithValue("@" + propriedade.Name, DBNull.Value);
                     }
