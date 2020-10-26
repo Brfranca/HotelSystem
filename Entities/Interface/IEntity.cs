@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entities.Interface
 {
-    public interface IEntity<T>
+    public class IEntity
     {
-        T ID { get; set; }
+        int ID { get; set; }
     }
 }

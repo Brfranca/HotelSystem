@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Entities
 {
     [TableName("PRODUCTS")]
-    public class Product : IEntity<int>
+    public class Product : IEntity
     {
         [NonEditable]
         public int ID { get; set; }

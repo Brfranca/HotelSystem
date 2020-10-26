@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Income : IEntity<int>
+    public class Income : IEntity
     {
         public int ID { get; set; }
     }

@@ -28,7 +28,7 @@ namespace BusinessLogicalLayer
             if (!resultInsert.Success)
                 return resultInsert;
 
-            return Response.CreateSuccess("Cliente cadastrador com sucesso!");
+            return Response.CreateSuccess("Cliente cadastrado com sucesso!");
         }
 
         public Response Update(Client client)

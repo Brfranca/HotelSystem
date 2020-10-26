@@ -61,7 +61,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\AddressDAL.cs" />
     <Compile Include="DAL\BaseDAL.cs" />
     <Compile Include="DAL\ClientDAL.cs" />
     <Compile Include="DAL\EmployeeDAL.cs" />

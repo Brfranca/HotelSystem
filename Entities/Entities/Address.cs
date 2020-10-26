@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    [TableName("ADDRESSES")]
-    public class Address : IEntity<int>
+    [TableName("EMPLOYEES")]
+    public class Address
     {
-        [NonEditable]
-        public int ID { get; set; }
         public string Street { get; set; }
         public string Number { get; set; }
         public string District { get; set; }
