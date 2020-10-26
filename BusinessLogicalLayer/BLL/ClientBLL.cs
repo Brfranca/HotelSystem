@@ -90,7 +90,7 @@ namespace BusinessLogicalLayer
             }
             catch (Exception erro)
             {
-                return Response.CreateFailure($"Erro na validação do cliente! Erros: {erro.GetBaseException().Message}");
+                return Response.CreateFailureException("Erro na validação do cliente!", erro);
             }
         }
 
