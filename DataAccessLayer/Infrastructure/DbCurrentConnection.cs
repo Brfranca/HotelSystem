@@ -10,27 +10,26 @@ namespace DataAccessLayer.Infrastructure
 {
     internal class DbCurrentConnection : IDisposable
     {
-        private DbConnection conn;
-
+        private readonly DbConnection _connection;
         public DbCurrentConnection(DbCommand command)
         {
-            conn = DbFactory.GetCurrentConnection();
-            command.Connection = this.conn;
+            _connection = DbFactory.GetCurrentConnection();
+            command.Connection = this._connection;
         }
 
         public void OpenConnection()
         {
-            if(conn.State != System.Data.ConnectionState.Open)
+            if(_connection.State != System.Data.ConnectionState.Open)
             {
-                this.conn.Open();
+                this._connection.Open();
             }
         }
 
         public void CloseConnection()
         {
-            if (conn.State != System.Data.ConnectionState.Closed)
+            if (_connection.State != System.Data.ConnectionState.Closed)
             {
-                this.conn.Close();
+                this._connection.Close();
             }
         }
 

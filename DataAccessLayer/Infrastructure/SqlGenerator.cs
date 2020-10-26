@@ -12,7 +12,7 @@ namespace DataAccessLayer.Infrastructure
 {
     public class SqlGenerator<T>
     {
-        private static string GetTableName()
+        public static string GetTableName()
         {
             return typeof(T).GetCustomAttribute<TableName>().Text;
         }

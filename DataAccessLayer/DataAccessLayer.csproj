@@ -61,7 +61,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\AddressDAL.cs" />
+    <Compile Include="DAL\BaseDAL.cs" />
     <Compile Include="DAL\ClientDAL.cs" />
+    <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="DAL\IncomeDAL.cs" />
+    <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="DAL\RoomDAL.cs" />
+    <Compile Include="DAL\SupplierDAL.cs" />
     <Compile Include="Interfaces\IEntityCRUD.cs" />
     <Compile Include="Infrastructure\DbCurrentConnection.cs" />
     <Compile Include="Infrastructure\DbExtention.cs" />

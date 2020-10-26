@@ -1,14 +1,14 @@
-﻿using Entities.Interface;
+﻿using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entities
+namespace DataAccessLayer.DAL
 {
-    public class Income : IEntity<int>
+    public class AddressDAL : BaseDAL<Address>, IEntityCRUD<Address>
     {
-        public int ID { get; set; }
+
     }
 }

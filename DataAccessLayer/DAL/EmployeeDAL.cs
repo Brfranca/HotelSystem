@@ -1,30 +1,17 @@
 ﻿using Common;
-using DataAccessLayer.DAL;
 using DataAccessLayer.Infrastructure;
 using Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DataAccessLayer
+namespace DataAccessLayer.DAL
 {
-    public class ClientDAL : BaseDAL<Client>, IEntityCRUD<Client>
+    public class EmployeeDAL : BaseDAL<Employee>, IEntityCRUD<Employee>
     {
-        public QueryResponse<Client> GetByCpf(string cpf)
-        {
-            DbCommand command = DbFactory.GetCurrentCommand();
-            command.CommandText = $"{_select} WHERE CPF = @CPF";
-            command.Parameters.AddWithValue("@CPF", cpf);
-            return new DbExecuter().GetSingleData<Client>(command);
-        }
-
-        public QueryResponse<Client> GetByRg(string rg)
-        {
-            DbCommand command = DbFactory.GetCurrentCommand();
-            command.CommandText = $"{_select} WHERE RG = @RG";
-            command.Parameters.AddWithValue("@RG", rg);
-            return new DbExecuter().GetSingleData<Client>(command);
-        }
-
         public bool ExistCpf(string cpf, int id)
         {
             return Exist(cpf, id, "CPF");
