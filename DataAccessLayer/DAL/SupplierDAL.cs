@@ -12,11 +12,11 @@ namespace DataAccessLayer.DAL
 {
     public class SupplierDAL : BaseDAL<Supplier>, IEntityCRUD<Supplier>
     {
-        public QueryResponse<Supplier> GetByCnpj(Supplier supplier)
+        public QueryResponse<Supplier> GetByCnpj(string cnpj)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
             command.CommandText = $"{_select} WHERE CNPJ = @CNPJ";
-            command.Parameters.AddWithValue("@CNPJ", supplier.CNPJ);
+            command.Parameters.AddWithValue("@CNPJ", cnpj);
             return new DbExecuter().GetSingleData<Supplier>(command);
         }
 

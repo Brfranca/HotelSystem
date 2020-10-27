@@ -18,12 +18,12 @@ namespace BusinessLogicalLayer
 
         public Response Register(Client client)
         {
-            var result = Validate(client);
+            Response result = Validate(client);
             if (!result.Success)
                 return result;
             client.CPF = client.CPF.RemoveMaskCPF();
 
-            var resultInsert = _clienteDALL.Insert(client);
+            Response resultInsert = _clienteDALL.Insert(client);
             if (!resultInsert.Success)
                 return resultInsert;
 
@@ -32,12 +32,12 @@ namespace BusinessLogicalLayer
 
         public Response Update(Client client)
         {
-            var result = Validate(client);
+            Response result = Validate(client);
             if (!result.Success)
                 return result;
 
             client.CPF = client.CPF.RemoveMaskCPF();
-            var resultInsert = _clienteDALL.Update(client);
+            Response resultInsert = _clienteDALL.Update(client);
             if (!resultInsert.Success)
                 return resultInsert;
 
@@ -47,7 +47,7 @@ namespace BusinessLogicalLayer
         public Response Delete(Client client)
         {
 
-            var resultInsert = _clienteDALL.Delete(client);
+            Response resultInsert = _clienteDALL.Delete(client);
             if (!resultInsert.Success)
                 return resultInsert;
 

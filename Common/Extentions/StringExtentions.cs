@@ -56,7 +56,7 @@ namespace BusinessLogicalLayer.Extentions
             return Regex.IsMatch(cep, @"^\d{5}-d\{3}$");
         }
 
-        public static string IsValidCNPJ(this string cnpj)
+        public static bool IsValidCnpj(this string cnpj)
         {
             int[] multiplicador1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -67,7 +67,7 @@ namespace BusinessLogicalLayer.Extentions
             cnpj = cnpj.Trim();
             cnpj = cnpj.Replace(".", "").Replace("-", "").Replace("/", "");
             if (cnpj.Length != 14)
-                return "";
+                return false;
             tempCnpj = cnpj.Substring(0, 12);
             soma = 0;
             for (int i = 0; i < 12; i++)
@@ -88,12 +88,7 @@ namespace BusinessLogicalLayer.Extentions
             else
                 resto = 11 - resto;
             digito = digito + resto.ToString();
-
-            if (cnpj.EndsWith(digito))
-            {
-                return "";
-            }
-            return "CNPJ inválido";
+            return cnpj.EndsWith(digito);
         }
 
         public static bool IsValidName(this string nameCompleto)
