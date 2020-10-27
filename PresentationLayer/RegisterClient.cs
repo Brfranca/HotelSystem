@@ -2,13 +2,6 @@
 using Common;
 using Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -27,9 +20,9 @@ namespace PresentationLayer
             client.CPF = txtCadCliCpf.Text;
             client.RG = txtCadCliRg.Text;
             client.Phone1 = txtCadCliTel1.Text;
-            client.Phone2 = txtCadCliTel1.Text;
+            client.Phone2 = txtCadCliTel2.Text;
             client.Email = txtCadCliEmail.Text;
-            //ativo
+            //devemos acrescentar o ativo?
 
             Response response = new Response();
             ClientBLL clientBLL = new ClientBLL();
@@ -37,8 +30,6 @@ namespace PresentationLayer
             response = clientBLL.Register(client);
 
             MessageBox.Show(response.Message);
-
-
         }
     }
 }

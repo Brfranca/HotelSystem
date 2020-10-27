@@ -44,7 +44,6 @@
     <Compile Include="BLL\EmployeeBLL.cs" />
     <Compile Include="Utils\Validator.cs" />
     <Compile Include="BLL\ClientBLL.cs" />
-    <Compile Include="Extentions\StringExtentions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

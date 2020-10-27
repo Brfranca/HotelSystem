@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extentions\Database.cs" />
+    <Compile Include="Extentions\StringExtentions.cs" />
     <Compile Include="Response\QueryResponse.cs" />
     <Compile Include="Response\Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

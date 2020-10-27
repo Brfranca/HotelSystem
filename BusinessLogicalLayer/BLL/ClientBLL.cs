@@ -5,8 +5,6 @@ using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer
 {
@@ -23,6 +21,7 @@ namespace BusinessLogicalLayer
             var result = Validate(client);
             if (!result.Success)
                 return result;
+            client.CPF = client.CPF.RemoveMaskCPF();
 
             var resultInsert = _clienteDALL.Insert(client);
             if (!resultInsert.Success)
@@ -37,6 +36,7 @@ namespace BusinessLogicalLayer
             if (!result.Success)
                 return result;
 
+            client.CPF = client.CPF.RemoveMaskCPF();
             var resultInsert = _clienteDALL.Update(client);
             if (!resultInsert.Success)
                 return resultInsert;
@@ -100,7 +100,7 @@ namespace BusinessLogicalLayer
             {
                 validator.AddError("Email deve ser informado!");
             }
-            else if (email.IsValidEmail())
+            else if (!email.IsValidEmail())
             {
                 validator.AddError("Email inválido!");
             }
@@ -110,20 +110,20 @@ namespace BusinessLogicalLayer
             }
         }
 
-        private static void ValidatePhone(string phone1, string phone2, Validator validator)
+        private void ValidatePhone(string phone1, string phone2, Validator validator)
         {
             if (phone1.IsNullOrWhiteSpace())
             {
                 validator.AddError("Telefone 1 deve ser informado!");
             }
-            else if (phone1.IsValidPhone())
+            else if (!phone1.IsValidPhone())
             {
                 validator.AddError("Telefone 1 inválido!");
             }
             if (phone2.HasValue())
             {
                 //Caso tenha valor validar se é valido
-                if (phone2.IsValidPhone())
+                if (!phone2.IsValidPhone())
                 {
                     validator.AddError("Telefone 2 inválido!");
                 }
@@ -160,7 +160,7 @@ namespace BusinessLogicalLayer
             {
                 validator.AddError("Cpf deve conter 11 caracteres!");
             }
-            else if (cpf.IsValidCPF())
+            else if (!cpf.IsValidCPF())
             {
                 validator.AddError("CPF inválido!");
             }
@@ -170,13 +170,13 @@ namespace BusinessLogicalLayer
             }
         }
 
-        private static void ValidateName(string name, Validator validator)
+        private void ValidateName(string name, Validator validator)
         {
             if (name.IsNullOrWhiteSpace())
             {
                 validator.AddError("Nome deve ser informado!");
             }
-            else if (name.IsValidName())
+            else if (!name.IsValidName())
             {
                 validator.AddError("Nome completo deve ser informado!");
             }

@@ -1,12 +1,8 @@
 ﻿using Entities.DataAnnotations;
-using Entities.Interface;
 using System;
-using System.Collections.Generic;
 using System.Data.Common;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer.Infrastructure
 {
@@ -19,12 +15,12 @@ namespace DataAccessLayer.Infrastructure
 
         public static DbCommand BuildInsertCommand(T item)
         {
-            StringBuilder comando = new StringBuilder();
-            comando.AppendFormat("INSERT INTO {0} ({1}) VALUES ({2});SELECT SCOPE_IDENTITY();", GetTableName(), GetInsertFields(false), GetInsertFields(true));
-            DbCommand command = DbFactory.GetCurrentCommand();
-            GenerateInsertParameters(command, item);
-            command.CommandText = comando.ToString();
-            return command;
+            StringBuilder command = new StringBuilder();
+            command.AppendFormat("INSERT INTO {0} ({1}) VALUES ({2});SELECT SCOPE_IDENTITY();", GetTableName(), GetInsertFields(false), GetInsertFields(true));
+            DbCommand dbCommand = DbFactory.GetCurrentCommand();
+            GenerateInsertParameters(dbCommand, item);
+            dbCommand.CommandText = command.ToString();
+            return dbCommand;
         }
 
         private static void GenerateInsertParameters(DbCommand command, T item)

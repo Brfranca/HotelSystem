@@ -2,7 +2,6 @@
 using DataAccessLayer.DAL;
 using DataAccessLayer.Infrastructure;
 using Entities;
-using System.Collections.Generic;
 using System.Data.Common;
 
 namespace DataAccessLayer

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.Extentions
 {
@@ -115,6 +112,11 @@ namespace BusinessLogicalLayer.Extentions
                     return false;
             }
             return true;
+        }
+
+        public static string RemoveMaskCPF(this string cpf)
+        {
+            return cpf.Replace(".", "").Replace("-", "");
         }
 
         public static bool HasValue(this string value) => !string.IsNullOrWhiteSpace(value);
