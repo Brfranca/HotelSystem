@@ -45,5 +45,19 @@ namespace DataAccessLayer.DAL
             command.Parameters.AddWithValue("@ID", id);
             return new DbExecuter().GetSingleData<T>(command);
         }
+
+        public bool Exist(string value, int id, string columnName)
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            string and = "";
+            if (id > 0)
+            {
+                command.Parameters.AddWithValue($"@ID", id);
+                and = "AND ID <> @ID";
+            }
+            command.CommandText = $"{_select} WHERE {columnName} = @{columnName} {and}";
+            command.Parameters.AddWithValue($"@{columnName}", value);
+            return new DbExecuter().ExistData(command);
+        }
     }
 }

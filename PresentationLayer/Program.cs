@@ -10,8 +10,8 @@ namespace PresentationLayer
         [STAThread]
         static void Main()
         {
-            var x = Database.GetPath();
-            AppDomain.CurrentDomain.SetData("DataDirectory", Database.GetPath());
+            string x = Database.GetPath();
+            AppDomain.CurrentDomain.SetData("DataDirectory", x);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new RegisterClient());

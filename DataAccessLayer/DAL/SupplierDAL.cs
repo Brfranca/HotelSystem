@@ -25,19 +25,9 @@ namespace DataAccessLayer.DAL
             return Exist(cnpj, id, "CNPJ");
         }
 
-        private bool Exist(string value, int id, string columnName)
+        public bool ExistEmail(string email, int id)
         {
-            DbCommand command = DbFactory.GetCurrentCommand();
-            string and = "";
-            if (id > 0)
-            {
-                command.Parameters.AddWithValue($"@ID", id);
-                and = "AND ID <> @ID";
-            }
-            command.CommandText = $"{_select} WHERE {columnName} = @{columnName} {and}";
-            command.Parameters.AddWithValue($"@{columnName}", value);
-            return new DbExecuter().ExistData(command);
+            return Exist(email, id, "EMAIL");
         }
-        
     }
 }
