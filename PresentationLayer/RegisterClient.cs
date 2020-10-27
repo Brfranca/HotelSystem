@@ -24,12 +24,13 @@ namespace PresentationLayer
             client.Email = txtCadCliEmail.Text;
             //devemos acrescentar o ativo?
 
-            Response response = new Response();
             ClientBLL clientBLL = new ClientBLL();
 
-            response = clientBLL.Register(client);
+            Response response = clientBLL.Register(client);
 
             MessageBox.Show(response.Message);
+
+            
         }
     }
 }
