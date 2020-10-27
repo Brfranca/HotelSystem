@@ -12,7 +12,7 @@ namespace BusinessLogicalLayer.BLL
 {
     public class SupplierBLL
     {
-        private SupplierDAL _supplierDAL;
+        private readonly SupplierDAL _supplierDAL;
 
         public SupplierBLL()
         {
