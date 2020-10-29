@@ -41,14 +41,13 @@ namespace PresentationLayer
 
         private void FormRegisterClient_Load(object sender, EventArgs e)
         {
-            //Verificar GetAll
-            //QueryResponse<List<Client>> response = new QueryResponse<List<Client>>();
-            //response = _clientBLL.GetAll();
+            QueryResponse<List<Client>> response = new QueryResponse<List<Client>>();
+            response = _clientBLL.GetAll();
 
-            //foreach (var item in response.Data)
-            //{
-            //    dgvClients.Rows.Add(item.ID, item.Name, item.Phone1, item.Phone2);
-            //}
+            foreach (var item in response.Data)
+            {
+                dgvClients.Rows.Add(item.ID, item.Name, item.Phone1, item.Phone2);
+            }
         }
     }
 }

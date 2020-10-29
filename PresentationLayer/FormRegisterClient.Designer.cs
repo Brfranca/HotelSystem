@@ -106,9 +106,9 @@
             // 
             // btnClient_Search
             // 
-            this.btnClient_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(62)))), ((int)(((byte)(113)))));
+            this.btnClient_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
             this.btnClient_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Search.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(62)))), ((int)(((byte)(113)))));
+            this.btnClient_Search.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
             this.btnClient_Search.FlatAppearance.BorderSize = 3;
             this.btnClient_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Search.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -421,7 +421,7 @@
             // 
             // pnlTopBar
             // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(46)))), ((int)(((byte)(94)))));
+            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
             this.pnlTopBar.Controls.Add(this.lblNomeTabela);
             this.pnlTopBar.Controls.Add(this.picBtnClose);
             this.pnlTopBar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -433,9 +433,9 @@
             // 
             // btnClient_New
             // 
-            this.btnClient_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_New.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_New.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_New.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_New.FlatAppearance.BorderSize = 3;
             this.btnClient_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_New.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -449,9 +449,9 @@
             // 
             // btnClient_Register
             // 
-            this.btnClient_Register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Register.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Register.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Register.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Register.FlatAppearance.BorderSize = 3;
             this.btnClient_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Register.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -466,9 +466,9 @@
             // 
             // btnClient_Edit
             // 
-            this.btnClient_Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Edit.FlatAppearance.BorderSize = 3;
             this.btnClient_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Edit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -482,9 +482,9 @@
             // 
             // btnClient_Delete
             // 
-            this.btnClient_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Delete.FlatAppearance.BorderSize = 3;
             this.btnClient_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Delete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -498,9 +498,9 @@
             // 
             // btnClient_Update
             // 
-            this.btnClient_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Update.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnClient_Update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnClient_Update.FlatAppearance.BorderSize = 3;
             this.btnClient_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Update.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

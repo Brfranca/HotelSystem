@@ -76,8 +76,8 @@ namespace BusinessLogicalLayer
 
         public Response Validate(Client client)
         {
-            try
-            {
+            //try
+            //{
                 Validator validator = new Validator();
 
                 ValidateName(client.Name, validator);
@@ -87,11 +87,11 @@ namespace BusinessLogicalLayer
                 ValidateEmail(client.Email, client.ID, validator);
 
                 return validator.Validate();
-            }
-            catch (Exception erro)
-            {
-                return Response.CreateFailureException("Erro na validação do cliente!", erro);
-            }
+            //}
+            //catch (Exception erro)
+            //{
+            //    return Response.CreateFailureException("Erro na validação do cliente!", erro);
+            //}
         }
 
         private void ValidateEmail(string email,int id, Validator validator)
