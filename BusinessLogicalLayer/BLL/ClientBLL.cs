@@ -18,10 +18,10 @@ namespace BusinessLogicalLayer
 
         public Response Register(Client client)
         {
+            client.CPF = client.CPF.RemoveMaskCPF();
             Response result = Validate(client);
             if (!result.Success)
                 return result;
-            client.CPF = client.CPF.RemoveMaskCPF();
 
             Response resultInsert = _clienteDALL.Insert(client);
             if (!resultInsert.Success)

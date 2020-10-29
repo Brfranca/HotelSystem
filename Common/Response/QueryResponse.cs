@@ -9,7 +9,6 @@ namespace Common
 {
     public class QueryResponse<T> : Response
     {
-
         public T Data { get; set; }
 
         public static QueryResponse<T> CreateSuccess(T data, string message = "")
