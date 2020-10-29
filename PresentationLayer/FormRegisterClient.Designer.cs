@@ -38,14 +38,12 @@
             this.pnlConsCliCod = new System.Windows.Forms.Panel();
             this.lblConsCliCod = new System.Windows.Forms.Label();
             this.btnClient_Search = new System.Windows.Forms.Button();
-            this.txtConsCliNome = new System.Windows.Forms.TextBox();
             this.lblConsCliNome = new System.Windows.Forms.Label();
             this.lblConsultar = new System.Windows.Forms.Label();
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.lblConsCliCadastrados = new System.Windows.Forms.Label();
             this.dgvClients = new System.Windows.Forms.DataGridView();
             this.txtCadCliCpf = new System.Windows.Forms.MaskedTextBox();
-            this.chkCadCliEstado = new System.Windows.Forms.CheckBox();
             this.txtCadCliEmail = new System.Windows.Forms.TextBox();
             this.lblCadCliEmail = new System.Windows.Forms.Label();
             this.txtCadCliTel2 = new System.Windows.Forms.TextBox();
@@ -62,12 +60,14 @@
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.btnClient_New = new System.Windows.Forms.Button();
             this.btnClient_Register = new System.Windows.Forms.Button();
-            this.btnClient_Edit = new System.Windows.Forms.Button();
             this.btnClient_Delete = new System.Windows.Forms.Button();
-            this.btnClient_Update = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnlClientName = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBtnClose)).BeginInit();
             this.pnlTopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCadID
@@ -100,9 +100,9 @@
             this.lblConsCliCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliCod.Location = new System.Drawing.Point(676, 85);
             this.lblConsCliCod.Name = "lblConsCliCod";
-            this.lblConsCliCod.Size = new System.Drawing.Size(68, 23);
+            this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
             this.lblConsCliCod.TabIndex = 152;
-            this.lblConsCliCod.Text = "Código";
+            this.lblConsCliCod.Text = "CPF";
             // 
             // btnClient_Search
             // 
@@ -113,25 +113,12 @@
             this.btnClient_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Search.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient_Search.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Search.Location = new System.Drawing.Point(852, 91);
+            this.btnClient_Search.Location = new System.Drawing.Point(860, 91);
             this.btnClient_Search.Name = "btnClient_Search";
-            this.btnClient_Search.Size = new System.Drawing.Size(144, 53);
+            this.btnClient_Search.Size = new System.Drawing.Size(127, 44);
             this.btnClient_Search.TabIndex = 154;
             this.btnClient_Search.Text = "Pesquisar";
             this.btnClient_Search.UseVisualStyleBackColor = false;
-            // 
-            // txtConsCliNome
-            // 
-            this.txtConsCliNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))));
-            this.txtConsCliNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConsCliNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsCliNome.ForeColor = System.Drawing.Color.Black;
-            this.txtConsCliNome.Location = new System.Drawing.Point(402, 106);
-            this.txtConsCliNome.Margin = new System.Windows.Forms.Padding(0);
-            this.txtConsCliNome.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtConsCliNome.Name = "txtConsCliNome";
-            this.txtConsCliNome.Size = new System.Drawing.Size(265, 27);
-            this.txtConsCliNome.TabIndex = 151;
             // 
             // lblConsCliNome
             // 
@@ -224,7 +211,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClients.Size = new System.Drawing.Size(594, 313);
+            this.dgvClients.Size = new System.Drawing.Size(594, 325);
             this.dgvClients.TabIndex = 156;
             // 
             // txtCadCliCpf
@@ -238,20 +225,6 @@
             this.txtCadCliCpf.Name = "txtCadCliCpf";
             this.txtCadCliCpf.Size = new System.Drawing.Size(157, 27);
             this.txtCadCliCpf.TabIndex = 135;
-            // 
-            // chkCadCliEstado
-            // 
-            this.chkCadCliEstado.AutoSize = true;
-            this.chkCadCliEstado.BackColor = System.Drawing.Color.Transparent;
-            this.chkCadCliEstado.Checked = true;
-            this.chkCadCliEstado.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkCadCliEstado.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkCadCliEstado.Location = new System.Drawing.Point(35, 339);
-            this.chkCadCliEstado.Name = "chkCadCliEstado";
-            this.chkCadCliEstado.Size = new System.Drawing.Size(75, 27);
-            this.chkCadCliEstado.TabIndex = 146;
-            this.chkCadCliEstado.Text = "Ativo";
-            this.chkCadCliEstado.UseVisualStyleBackColor = false;
             // 
             // txtCadCliEmail
             // 
@@ -440,11 +413,11 @@
             this.btnClient_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_New.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient_New.ForeColor = System.Drawing.Color.White;
-            this.btnClient_New.Location = new System.Drawing.Point(89, 516);
+            this.btnClient_New.Location = new System.Drawing.Point(800, 519);
             this.btnClient_New.Name = "btnClient_New";
-            this.btnClient_New.Size = new System.Drawing.Size(222, 53);
+            this.btnClient_New.Size = new System.Drawing.Size(138, 47);
             this.btnClient_New.TabIndex = 158;
-            this.btnClient_New.Text = "Novo";
+            this.btnClient_New.Text = "Selecionar";
             this.btnClient_New.UseVisualStyleBackColor = false;
             // 
             // btnClient_Register
@@ -456,29 +429,13 @@
             this.btnClient_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Register.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient_Register.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Register.Location = new System.Drawing.Point(378, 516);
+            this.btnClient_Register.Location = new System.Drawing.Point(112, 516);
             this.btnClient_Register.Name = "btnClient_Register";
-            this.btnClient_Register.Size = new System.Drawing.Size(144, 53);
+            this.btnClient_Register.Size = new System.Drawing.Size(189, 53);
             this.btnClient_Register.TabIndex = 159;
             this.btnClient_Register.Text = "Cadastrar";
             this.btnClient_Register.UseVisualStyleBackColor = false;
             this.btnClient_Register.Click += new System.EventHandler(this.btnClient_Register_Click);
-            // 
-            // btnClient_Edit
-            // 
-            this.btnClient_Edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Edit.FlatAppearance.BorderSize = 3;
-            this.btnClient_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_Edit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_Edit.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Edit.Location = new System.Drawing.Point(541, 516);
-            this.btnClient_Edit.Name = "btnClient_Edit";
-            this.btnClient_Edit.Size = new System.Drawing.Size(144, 53);
-            this.btnClient_Edit.TabIndex = 160;
-            this.btnClient_Edit.Text = "Editar";
-            this.btnClient_Edit.UseVisualStyleBackColor = false;
             // 
             // btnClient_Delete
             // 
@@ -489,28 +446,52 @@
             this.btnClient_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClient_Delete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient_Delete.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Delete.Location = new System.Drawing.Point(702, 516);
+            this.btnClient_Delete.Location = new System.Drawing.Point(645, 519);
             this.btnClient_Delete.Name = "btnClient_Delete";
-            this.btnClient_Delete.Size = new System.Drawing.Size(144, 53);
+            this.btnClient_Delete.Size = new System.Drawing.Size(138, 47);
             this.btnClient_Delete.TabIndex = 161;
             this.btnClient_Delete.Text = "Excluir";
             this.btnClient_Delete.UseVisualStyleBackColor = false;
             // 
-            // btnClient_Update
+            // pictureBox1
             // 
-            this.btnClient_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Update.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Update.FlatAppearance.BorderSize = 3;
-            this.btnClient_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_Update.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_Update.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Update.Location = new System.Drawing.Point(864, 516);
-            this.btnClient_Update.Name = "btnClient_Update";
-            this.btnClient_Update.Size = new System.Drawing.Size(144, 53);
-            this.btnClient_Update.TabIndex = 162;
-            this.btnClient_Update.Text = "Atualizar";
-            this.btnClient_Update.UseVisualStyleBackColor = false;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(954, 524);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 39);
+            this.pictureBox1.TabIndex = 163;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.button1.Location = new System.Drawing.Point(252, 343);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 36);
+            this.button1.TabIndex = 164;
+            this.button1.Text = "Limpar";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pnlClientName
+            // 
+            this.pnlClientName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlClientName.Location = new System.Drawing.Point(403, 129);
+            this.pnlClientName.MaximumSize = new System.Drawing.Size(500, 1);
+            this.pnlClientName.Name = "pnlClientName";
+            this.pnlClientName.Size = new System.Drawing.Size(248, 1);
+            this.pnlClientName.TabIndex = 165;
             // 
             // FormRegisterClient
             // 
@@ -518,23 +499,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1061, 594);
-            this.Controls.Add(this.btnClient_Update);
+            this.Controls.Add(this.pnlClientName);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClient_Delete);
-            this.Controls.Add(this.btnClient_Edit);
             this.Controls.Add(this.btnClient_Register);
             this.Controls.Add(this.btnClient_New);
             this.Controls.Add(this.lblCadID);
             this.Controls.Add(this.pnlConsCliCod);
             this.Controls.Add(this.lblConsCliCod);
             this.Controls.Add(this.btnClient_Search);
-            this.Controls.Add(this.txtConsCliNome);
             this.Controls.Add(this.lblConsCliNome);
             this.Controls.Add(this.lblConsultar);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.lblConsCliCadastrados);
             this.Controls.Add(this.dgvClients);
             this.Controls.Add(this.txtCadCliCpf);
-            this.Controls.Add(this.chkCadCliEstado);
             this.Controls.Add(this.txtCadCliEmail);
             this.Controls.Add(this.lblCadCliEmail);
             this.Controls.Add(this.txtCadCliTel2);
@@ -556,6 +536,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBtnClose)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,14 +547,12 @@
         private System.Windows.Forms.Panel pnlConsCliCod;
         private System.Windows.Forms.Label lblConsCliCod;
         private System.Windows.Forms.Button btnClient_Search;
-        private System.Windows.Forms.TextBox txtConsCliNome;
         private System.Windows.Forms.Label lblConsCliNome;
         private System.Windows.Forms.Label lblConsultar;
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Label lblConsCliCadastrados;
         private System.Windows.Forms.DataGridView dgvClients;
         private System.Windows.Forms.MaskedTextBox txtCadCliCpf;
-        private System.Windows.Forms.CheckBox chkCadCliEstado;
         private System.Windows.Forms.TextBox txtCadCliEmail;
         private System.Windows.Forms.Label lblCadCliEmail;
         private System.Windows.Forms.TextBox txtCadCliTel2;
@@ -590,8 +569,9 @@
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.Button btnClient_New;
         private System.Windows.Forms.Button btnClient_Register;
-        private System.Windows.Forms.Button btnClient_Edit;
         private System.Windows.Forms.Button btnClient_Delete;
-        private System.Windows.Forms.Button btnClient_Update;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlClientName;
     }
 }
