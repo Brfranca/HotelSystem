@@ -32,7 +32,7 @@ namespace DataAccessLayer.Infrastructure
             }
             catch (Exception ex)
             {
-                return Response.CreateFailureException("Erro no banco de dados, contate o administrador.", ex);
+                return Response.CreateFailureException("Ocorreu um erro, contate o administrador.", ex);
             }
         }
 
@@ -49,7 +49,8 @@ namespace DataAccessLayer.Infrastructure
                     table.Load(reader);
                     if (table.Rows.Count == 0)
                     {
-                        return QueryResponse<List<T>>.CreateFailure("Registro não encontrado.");
+                        List<T> datan = new List<T>();
+                        return QueryResponse<List<T>>.CreateSuccess(datan, "Nenhum registro cadastrado.");
                     }
 
                     List<T> data = table.ConvertDataTable<T>();
@@ -58,7 +59,7 @@ namespace DataAccessLayer.Infrastructure
             }
             catch (Exception ex)
             {
-                return QueryResponse<List<T>>.CreateFailureException("Erro no banco de dados, contate o administrador.", ex);
+                return QueryResponse<List<T>>.CreateFailureException("Ocorreu um erro, contate o administrador.", ex);
             }
         }
 
@@ -83,7 +84,7 @@ namespace DataAccessLayer.Infrastructure
             }
             catch (Exception ex)
             {
-                return QueryResponse<T>.CreateFailureException("Erro no banco de dados, contate o administrador", ex);
+                return QueryResponse<T>.CreateFailureException("Ocorreu um erro, contate o administrador.", ex);
             }
         }
 
