@@ -28,23 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterEmployee));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.picBtnClose = new System.Windows.Forms.PictureBox();
-            this.pnlEmployeeName = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClient_Delete = new System.Windows.Forms.Button();
-            this.btnClient_Register = new System.Windows.Forms.Button();
-            this.btnClient_New = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterEmployee));
+            this.btnEmployeeRegister = new System.Windows.Forms.Button();
             this.lblCadID = new System.Windows.Forms.Label();
-            this.pnlEmployeeCPF = new System.Windows.Forms.Panel();
             this.lblConsCliCod = new System.Windows.Forms.Label();
-            this.btnClient_Search = new System.Windows.Forms.Button();
+            this.btnEmployeeSearch = new System.Windows.Forms.Button();
             this.lblConsCliNome = new System.Windows.Forms.Label();
             this.lblConsultar = new System.Windows.Forms.Label();
             this.lblCadastrar = new System.Windows.Forms.Label();
@@ -61,8 +54,6 @@
             this.lblCadCliCpf = new System.Windows.Forms.Label();
             this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.lblCadCliNome = new System.Windows.Forms.Label();
-            this.pnlTopBar = new System.Windows.Forms.Panel();
-            this.lblNomeTabela = new System.Windows.Forms.Label();
             this.txtEmployeeStreet = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmployeeCity = new System.Windows.Forms.TextBox();
@@ -70,125 +61,50 @@
             this.txtEmployeeNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pnlEmployeePassword2 = new System.Windows.Forms.Panel();
             this.lblCadPassFun2 = new System.Windows.Forms.Label();
             this.txtEmployeePassword2 = new System.Windows.Forms.TextBox();
-            this.pnlEmployeePassword = new System.Windows.Forms.Panel();
             this.lblCadPassFun = new System.Windows.Forms.Label();
             this.txtEmployeePassword = new System.Windows.Forms.TextBox();
             this.mktEmployeeCEP = new System.Windows.Forms.MaskedTextBox();
             this.cboEmployeePosition = new System.Windows.Forms.ComboBox();
-            this.txtSearchName = new System.Windows.Forms.TextBox();
-            this.txtSearchCPF = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtEmployeeSearchCPF = new System.Windows.Forms.TextBox();
+            this.txtEmployeeDistrict = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnEmployeeClear = new System.Windows.Forms.Button();
+            this.btnEmployeeDelete = new System.Windows.Forms.Button();
+            this.btnEmployeeNew = new System.Windows.Forms.Button();
+            this.picEmployeeRefresh = new System.Windows.Forms.PictureBox();
+            this.chkEmployeeActive = new System.Windows.Forms.CheckBox();
+            this.txtEmployeeSearchName = new System.Windows.Forms.TextBox();
+            this.pnlEmployeeName = new System.Windows.Forms.Panel();
+            this.pnlEmployeeCPF = new System.Windows.Forms.Panel();
+            this.picEmployeeClose = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.picIcone = new System.Windows.Forms.PictureBox();
+            this.pnlEmployeeTopBar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
-            this.pnlTopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmployeeRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmployeeClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
+            this.pnlEmployeeTopBar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // picBtnClose
+            // btnEmployeeRegister
             // 
-            this.picBtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.picBtnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBtnClose.BackgroundImage")));
-            this.picBtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBtnClose.Location = new System.Drawing.Point(1119, 7);
-            this.picBtnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.picBtnClose.Name = "picBtnClose";
-            this.picBtnClose.Size = new System.Drawing.Size(26, 26);
-            this.picBtnClose.TabIndex = 7;
-            this.picBtnClose.TabStop = false;
-            this.picBtnClose.Click += new System.EventHandler(this.picBtnClose_Click);
-            // 
-            // pnlEmployeeName
-            // 
-            this.pnlEmployeeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlEmployeeName.Location = new System.Drawing.Point(403, 138);
-            this.pnlEmployeeName.MaximumSize = new System.Drawing.Size(501, 1);
-            this.pnlEmployeeName.Name = "pnlEmployeeName";
-            this.pnlEmployeeName.Size = new System.Drawing.Size(248, 1);
-            this.pnlEmployeeName.TabIndex = 193;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.button1.Location = new System.Drawing.Point(251, 525);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 35);
-            this.button1.TabIndex = 192;
-            this.button1.Text = "Limpar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(1050, 586);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 38);
-            this.pictureBox1.TabIndex = 191;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnClient_Delete
-            // 
-            this.btnClient_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Delete.FlatAppearance.BorderSize = 3;
-            this.btnClient_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_Delete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_Delete.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Delete.Location = new System.Drawing.Point(743, 581);
-            this.btnClient_Delete.Name = "btnClient_Delete";
-            this.btnClient_Delete.Size = new System.Drawing.Size(138, 47);
-            this.btnClient_Delete.TabIndex = 190;
-            this.btnClient_Delete.Text = "Excluir";
-            this.btnClient_Delete.UseVisualStyleBackColor = false;
-            // 
-            // btnClient_Register
-            // 
-            this.btnClient_Register.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Register.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Register.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Register.FlatAppearance.BorderSize = 3;
-            this.btnClient_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_Register.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_Register.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Register.Location = new System.Drawing.Point(112, 578);
-            this.btnClient_Register.Name = "btnClient_Register";
-            this.btnClient_Register.Size = new System.Drawing.Size(189, 53);
-            this.btnClient_Register.TabIndex = 189;
-            this.btnClient_Register.Text = "Cadastrar";
-            this.btnClient_Register.UseVisualStyleBackColor = false;
-            // 
-            // btnClient_New
-            // 
-            this.btnClient_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_New.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_New.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_New.FlatAppearance.BorderSize = 3;
-            this.btnClient_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_New.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_New.ForeColor = System.Drawing.Color.White;
-            this.btnClient_New.Location = new System.Drawing.Point(898, 581);
-            this.btnClient_New.Name = "btnClient_New";
-            this.btnClient_New.Size = new System.Drawing.Size(138, 47);
-            this.btnClient_New.TabIndex = 188;
-            this.btnClient_New.Text = "Selecionar";
-            this.btnClient_New.UseVisualStyleBackColor = false;
+            this.btnEmployeeRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployeeRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeRegister.FlatAppearance.BorderSize = 3;
+            this.btnEmployeeRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeRegister.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeRegister.Location = new System.Drawing.Point(83, 626);
+            this.btnEmployeeRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEmployeeRegister.Name = "btnEmployeeRegister";
+            this.btnEmployeeRegister.Size = new System.Drawing.Size(189, 53);
+            this.btnEmployeeRegister.TabIndex = 189;
+            this.btnEmployeeRegister.Text = "Cadastrar";
+            this.btnEmployeeRegister.UseVisualStyleBackColor = false;
             // 
             // lblCadID
             // 
@@ -196,21 +112,12 @@
             this.lblCadID.BackColor = System.Drawing.Color.Transparent;
             this.lblCadID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadID.Location = new System.Drawing.Point(278, 83);
+            this.lblCadID.Location = new System.Drawing.Point(275, 97);
             this.lblCadID.Name = "lblCadID";
             this.lblCadID.Size = new System.Drawing.Size(33, 23);
             this.lblCadID.TabIndex = 177;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pnlEmployeeCPF
-            // 
-            this.pnlEmployeeCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlEmployeeCPF.Location = new System.Drawing.Point(680, 138);
-            this.pnlEmployeeCPF.MaximumSize = new System.Drawing.Size(501, 1);
-            this.pnlEmployeeCPF.Name = "pnlEmployeeCPF";
-            this.pnlEmployeeCPF.Size = new System.Drawing.Size(189, 1);
-            this.pnlEmployeeCPF.TabIndex = 184;
             // 
             // lblConsCliCod
             // 
@@ -218,27 +125,28 @@
             this.lblConsCliCod.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsCliCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsCliCod.Location = new System.Drawing.Point(677, 85);
+            this.lblConsCliCod.Location = new System.Drawing.Point(673, 97);
             this.lblConsCliCod.Name = "lblConsCliCod";
             this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
             this.lblConsCliCod.TabIndex = 183;
             this.lblConsCliCod.Text = "CPF";
             // 
-            // btnClient_Search
+            // btnEmployeeSearch
             // 
-            this.btnClient_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnClient_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Search.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnClient_Search.FlatAppearance.BorderSize = 3;
-            this.btnClient_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_Search.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_Search.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Search.Location = new System.Drawing.Point(909, 91);
-            this.btnClient_Search.Name = "btnClient_Search";
-            this.btnClient_Search.Size = new System.Drawing.Size(127, 45);
-            this.btnClient_Search.TabIndex = 185;
-            this.btnClient_Search.Text = "Pesquisar";
-            this.btnClient_Search.UseVisualStyleBackColor = false;
+            this.btnEmployeeSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
+            this.btnEmployeeSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployeeSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
+            this.btnEmployeeSearch.FlatAppearance.BorderSize = 3;
+            this.btnEmployeeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeSearch.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeSearch.Location = new System.Drawing.Point(942, 102);
+            this.btnEmployeeSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEmployeeSearch.Name = "btnEmployeeSearch";
+            this.btnEmployeeSearch.Size = new System.Drawing.Size(127, 45);
+            this.btnEmployeeSearch.TabIndex = 185;
+            this.btnEmployeeSearch.Text = "Pesquisar";
+            this.btnEmployeeSearch.UseVisualStyleBackColor = false;
             // 
             // lblConsCliNome
             // 
@@ -246,7 +154,7 @@
             this.lblConsCliNome.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsCliNome.Location = new System.Drawing.Point(398, 85);
+            this.lblConsCliNome.Location = new System.Drawing.Point(366, 98);
             this.lblConsCliNome.Name = "lblConsCliNome";
             this.lblConsCliNome.Size = new System.Drawing.Size(182, 23);
             this.lblConsCliNome.TabIndex = 182;
@@ -258,7 +166,7 @@
             this.lblConsultar.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsultar.Location = new System.Drawing.Point(397, 49);
+            this.lblConsultar.Location = new System.Drawing.Point(364, 60);
             this.lblConsultar.Name = "lblConsultar";
             this.lblConsultar.Size = new System.Drawing.Size(125, 32);
             this.lblConsultar.TabIndex = 181;
@@ -270,7 +178,7 @@
             this.lblCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.lblCadastrar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadastrar.Location = new System.Drawing.Point(29, 49);
+            this.lblCadastrar.Location = new System.Drawing.Point(18, 60);
             this.lblCadastrar.Name = "lblCadastrar";
             this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
             this.lblCadastrar.TabIndex = 167;
@@ -282,7 +190,7 @@
             this.lblConsCliCadastrados.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliCadastrados.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsCliCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsCliCadastrados.Location = new System.Drawing.Point(398, 150);
+            this.lblConsCliCadastrados.Location = new System.Drawing.Point(368, 155);
             this.lblConsCliCadastrados.Name = "lblConsCliCadastrados";
             this.lblConsCliCadastrados.Size = new System.Drawing.Size(213, 23);
             this.lblConsCliCadastrados.TabIndex = 186;
@@ -299,7 +207,7 @@
             this.dgvEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F);
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -309,18 +217,19 @@
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
             dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEmployee.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvEmployee.Location = new System.Drawing.Point(402, 173);
+            this.dgvEmployee.Location = new System.Drawing.Point(370, 176);
+            this.dgvEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
             dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -331,7 +240,7 @@
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.dgvEmployee.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployee.Size = new System.Drawing.Size(709, 387);
+            this.dgvEmployee.Size = new System.Drawing.Size(755, 427);
             this.dgvEmployee.TabIndex = 187;
             // 
             // txtEmployeeCPF
@@ -339,11 +248,12 @@
             this.txtEmployeeCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
             this.txtEmployeeCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtEmployeeCPF.Location = new System.Drawing.Point(35, 167);
+            this.txtEmployeeCPF.Location = new System.Drawing.Point(24, 176);
+            this.txtEmployeeCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmployeeCPF.Mask = "000,000,000-00";
             this.txtEmployeeCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeCPF.Name = "txtEmployeeCPF";
-            this.txtEmployeeCPF.Size = new System.Drawing.Size(161, 27);
+            this.txtEmployeeCPF.Size = new System.Drawing.Size(144, 27);
             this.txtEmployeeCPF.TabIndex = 171;
             // 
             // txtEmployeeEmail
@@ -352,11 +262,12 @@
             this.txtEmployeeEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeEmail.Location = new System.Drawing.Point(35, 290);
+            this.txtEmployeeEmail.Location = new System.Drawing.Point(24, 289);
             this.txtEmployeeEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeEmail.MaxLength = 200;
             this.txtEmployeeEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
-            this.txtEmployeeEmail.Size = new System.Drawing.Size(325, 27);
+            this.txtEmployeeEmail.Size = new System.Drawing.Size(303, 27);
             this.txtEmployeeEmail.TabIndex = 180;
             // 
             // lblCadCliEmail
@@ -365,7 +276,7 @@
             this.lblCadCliEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliEmail.Location = new System.Drawing.Point(31, 267);
+            this.lblCadCliEmail.Location = new System.Drawing.Point(20, 266);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
             this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
             this.lblCadCliEmail.TabIndex = 179;
@@ -377,7 +288,7 @@
             this.lblCadCliTel2.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliTel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliTel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliTel2.Location = new System.Drawing.Point(31, 329);
+            this.lblCadCliTel2.Location = new System.Drawing.Point(20, 323);
             this.lblCadCliTel2.Name = "lblCadCliTel2";
             this.lblCadCliTel2.Size = new System.Drawing.Size(40, 23);
             this.lblCadCliTel2.TabIndex = 176;
@@ -389,12 +300,12 @@
             this.txtEmployeePhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeePhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeePhone.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeePhone.Location = new System.Drawing.Point(35, 229);
+            this.txtEmployeePhone.Location = new System.Drawing.Point(24, 233);
             this.txtEmployeePhone.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeePhone.MaxLength = 11;
             this.txtEmployeePhone.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(161, 27);
+            this.txtEmployeePhone.Size = new System.Drawing.Size(144, 27);
             this.txtEmployeePhone.TabIndex = 175;
             // 
             // lblCadCliTel1
@@ -403,7 +314,7 @@
             this.lblCadCliTel1.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliTel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliTel1.Location = new System.Drawing.Point(31, 207);
+            this.lblCadCliTel1.Location = new System.Drawing.Point(20, 210);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
             this.lblCadCliTel1.Size = new System.Drawing.Size(77, 23);
             this.lblCadCliTel1.TabIndex = 174;
@@ -415,11 +326,12 @@
             this.txtEmployeeRG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeRG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeRG.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeRG.Location = new System.Drawing.Point(210, 167);
+            this.txtEmployeeRG.Location = new System.Drawing.Point(183, 176);
             this.txtEmployeeRG.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeRG.MaxLength = 15;
             this.txtEmployeeRG.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeRG.Name = "txtEmployeeRG";
-            this.txtEmployeeRG.Size = new System.Drawing.Size(150, 27);
+            this.txtEmployeeRG.Size = new System.Drawing.Size(144, 27);
             this.txtEmployeeRG.TabIndex = 173;
             // 
             // lblCadCliRg
@@ -428,7 +340,7 @@
             this.lblCadCliRg.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliRg.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliRg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliRg.Location = new System.Drawing.Point(206, 145);
+            this.lblCadCliRg.Location = new System.Drawing.Point(178, 154);
             this.lblCadCliRg.Name = "lblCadCliRg";
             this.lblCadCliRg.Size = new System.Drawing.Size(33, 23);
             this.lblCadCliRg.TabIndex = 172;
@@ -440,7 +352,7 @@
             this.lblCadCliCpf.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliCpf.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliCpf.Location = new System.Drawing.Point(31, 146);
+            this.lblCadCliCpf.Location = new System.Drawing.Point(20, 154);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
             this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
             this.lblCadCliCpf.TabIndex = 170;
@@ -452,11 +364,12 @@
             this.txtEmployeeName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeName.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeName.Location = new System.Drawing.Point(35, 109);
+            this.txtEmployeeName.Location = new System.Drawing.Point(24, 120);
             this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeName.MaxLength = 100;
             this.txtEmployeeName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(325, 27);
+            this.txtEmployeeName.Size = new System.Drawing.Size(303, 27);
             this.txtEmployeeName.TabIndex = 169;
             // 
             // lblCadCliNome
@@ -465,34 +378,11 @@
             this.lblCadCliNome.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliNome.Location = new System.Drawing.Point(31, 85);
+            this.lblCadCliNome.Location = new System.Drawing.Point(20, 98);
             this.lblCadCliNome.Name = "lblCadCliNome";
             this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
             this.lblCadCliNome.TabIndex = 168;
             this.lblCadCliNome.Text = "Nome";
-            // 
-            // pnlTopBar
-            // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
-            this.pnlTopBar.Controls.Add(this.lblNomeTabela);
-            this.pnlTopBar.Controls.Add(this.picBtnClose);
-            this.pnlTopBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
-            this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(1154, 39);
-            this.pnlTopBar.TabIndex = 166;
-            // 
-            // lblNomeTabela
-            // 
-            this.lblNomeTabela.AutoSize = true;
-            this.lblNomeTabela.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblNomeTabela.ForeColor = System.Drawing.Color.White;
-            this.lblNomeTabela.Location = new System.Drawing.Point(34, 9);
-            this.lblNomeTabela.Name = "lblNomeTabela";
-            this.lblNomeTabela.Size = new System.Drawing.Size(210, 28);
-            this.lblNomeTabela.TabIndex = 0;
-            this.lblNomeTabela.Text = "Tabela de Funcionários";
             // 
             // txtEmployeeStreet
             // 
@@ -500,11 +390,12 @@
             this.txtEmployeeStreet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeStreet.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeStreet.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeStreet.Location = new System.Drawing.Point(35, 414);
+            this.txtEmployeeStreet.Location = new System.Drawing.Point(24, 402);
             this.txtEmployeeStreet.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeStreet.MaxLength = 150;
             this.txtEmployeeStreet.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeStreet.Name = "txtEmployeeStreet";
-            this.txtEmployeeStreet.Size = new System.Drawing.Size(226, 27);
+            this.txtEmployeeStreet.Size = new System.Drawing.Size(229, 27);
             this.txtEmployeeStreet.TabIndex = 195;
             // 
             // label1
@@ -513,7 +404,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label1.Location = new System.Drawing.Point(31, 391);
+            this.label1.Location = new System.Drawing.Point(20, 379);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 23);
             this.label1.TabIndex = 194;
@@ -525,12 +416,12 @@
             this.txtEmployeeCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeCity.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeCity.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeCity.Location = new System.Drawing.Point(166, 352);
+            this.txtEmployeeCity.Location = new System.Drawing.Point(157, 346);
             this.txtEmployeeCity.Margin = new System.Windows.Forms.Padding(0);
-            this.txtEmployeeCity.MaxLength = 11;
+            this.txtEmployeeCity.MaxLength = 100;
             this.txtEmployeeCity.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeCity.Name = "txtEmployeeCity";
-            this.txtEmployeeCity.Size = new System.Drawing.Size(197, 27);
+            this.txtEmployeeCity.Size = new System.Drawing.Size(170, 27);
             this.txtEmployeeCity.TabIndex = 197;
             // 
             // label2
@@ -539,7 +430,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label2.Location = new System.Drawing.Point(162, 329);
+            this.label2.Location = new System.Drawing.Point(152, 323);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 23);
             this.label2.TabIndex = 196;
@@ -551,12 +442,12 @@
             this.txtEmployeeNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeNumber.Location = new System.Drawing.Point(274, 414);
+            this.txtEmployeeNumber.Location = new System.Drawing.Point(268, 402);
             this.txtEmployeeNumber.Margin = new System.Windows.Forms.Padding(0);
-            this.txtEmployeeNumber.MaxLength = 11;
+            this.txtEmployeeNumber.MaxLength = 7;
             this.txtEmployeeNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeNumber.Name = "txtEmployeeNumber";
-            this.txtEmployeeNumber.Size = new System.Drawing.Size(88, 27);
+            this.txtEmployeeNumber.Size = new System.Drawing.Size(59, 27);
             this.txtEmployeeNumber.TabIndex = 199;
             // 
             // label3
@@ -565,7 +456,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label3.Location = new System.Drawing.Point(270, 391);
+            this.label3.Location = new System.Drawing.Point(264, 379);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 23);
             this.label3.TabIndex = 198;
@@ -577,20 +468,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label4.Location = new System.Drawing.Point(206, 206);
+            this.label4.Location = new System.Drawing.Point(179, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 23);
             this.label4.TabIndex = 200;
             this.label4.Text = "Cargo";
-            // 
-            // pnlEmployeePassword2
-            // 
-            this.pnlEmployeePassword2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlEmployeePassword2.Location = new System.Drawing.Point(201, 507);
-            this.pnlEmployeePassword2.MaximumSize = new System.Drawing.Size(501, 1);
-            this.pnlEmployeePassword2.Name = "pnlEmployeePassword2";
-            this.pnlEmployeePassword2.Size = new System.Drawing.Size(161, 1);
-            this.pnlEmployeePassword2.TabIndex = 206;
             // 
             // lblCadPassFun2
             // 
@@ -598,7 +480,7 @@
             this.lblCadPassFun2.BackColor = System.Drawing.Color.Transparent;
             this.lblCadPassFun2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadPassFun2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadPassFun2.Location = new System.Drawing.Point(200, 451);
+            this.lblCadPassFun2.Location = new System.Drawing.Point(180, 495);
             this.lblCadPassFun2.Name = "lblCadPassFun2";
             this.lblCadPassFun2.Size = new System.Drawing.Size(122, 23);
             this.lblCadPassFun2.TabIndex = 204;
@@ -610,24 +492,13 @@
             this.txtEmployeePassword2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeePassword2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeePassword2.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeePassword2.Location = new System.Drawing.Point(203, 477);
+            this.txtEmployeePassword2.Location = new System.Drawing.Point(184, 518);
             this.txtEmployeePassword2.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeePassword2.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePassword2.Name = "txtEmployeePassword2";
-            this.txtEmployeePassword2.Size = new System.Drawing.Size(155, 27);
+            this.txtEmployeePassword2.Size = new System.Drawing.Size(143, 27);
             this.txtEmployeePassword2.TabIndex = 205;
             this.txtEmployeePassword2.UseSystemPasswordChar = true;
-            this.txtEmployeePassword2.Click += new System.EventHandler(this.txtEmployeePassword2_Click);
-            this.txtEmployeePassword2.Leave += new System.EventHandler(this.txtEmployeePassword2_Leave);
-            // 
-            // pnlEmployeePassword
-            // 
-            this.pnlEmployeePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlEmployeePassword.Location = new System.Drawing.Point(33, 507);
-            this.pnlEmployeePassword.MaximumSize = new System.Drawing.Size(501, 1);
-            this.pnlEmployeePassword.Name = "pnlEmployeePassword";
-            this.pnlEmployeePassword.Size = new System.Drawing.Size(161, 1);
-            this.pnlEmployeePassword.TabIndex = 207;
             // 
             // lblCadPassFun
             // 
@@ -635,7 +506,7 @@
             this.lblCadPassFun.BackColor = System.Drawing.Color.Transparent;
             this.lblCadPassFun.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadPassFun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadPassFun.Location = new System.Drawing.Point(31, 451);
+            this.lblCadPassFun.Location = new System.Drawing.Point(20, 495);
             this.lblCadPassFun.Name = "lblCadPassFun";
             this.lblCadPassFun.Size = new System.Drawing.Size(58, 23);
             this.lblCadPassFun.TabIndex = 202;
@@ -647,25 +518,24 @@
             this.txtEmployeePassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeePassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeePassword.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeePassword.Location = new System.Drawing.Point(35, 477);
+            this.txtEmployeePassword.Location = new System.Drawing.Point(24, 518);
             this.txtEmployeePassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeePassword.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePassword.Name = "txtEmployeePassword";
-            this.txtEmployeePassword.Size = new System.Drawing.Size(155, 27);
+            this.txtEmployeePassword.Size = new System.Drawing.Size(145, 27);
             this.txtEmployeePassword.TabIndex = 203;
             this.txtEmployeePassword.UseSystemPasswordChar = true;
-            this.txtEmployeePassword.Click += new System.EventHandler(this.txtEmployeePassword_Click);
-            this.txtEmployeePassword.Leave += new System.EventHandler(this.txtEmployeePassword_Leave);
             // 
             // mktEmployeeCEP
             // 
             this.mktEmployeeCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(224)))), ((int)(((byte)(226)))));
             this.mktEmployeeCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mktEmployeeCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.mktEmployeeCEP.Location = new System.Drawing.Point(35, 352);
-            this.mktEmployeeCEP.Mask = "00,000-00";
+            this.mktEmployeeCEP.Location = new System.Drawing.Point(24, 346);
+            this.mktEmployeeCEP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mktEmployeeCEP.Mask = "000,000-00";
             this.mktEmployeeCEP.Name = "mktEmployeeCEP";
-            this.mktEmployeeCEP.Size = new System.Drawing.Size(120, 27);
+            this.mktEmployeeCEP.Size = new System.Drawing.Size(118, 27);
             this.mktEmployeeCEP.TabIndex = 208;
             // 
             // cboEmployeePosition
@@ -674,57 +544,244 @@
             this.cboEmployeePosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEmployeePosition.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cboEmployeePosition.FormattingEnabled = true;
-            this.cboEmployeePosition.Location = new System.Drawing.Point(210, 227);
+            this.cboEmployeePosition.Location = new System.Drawing.Point(183, 232);
+            this.cboEmployeePosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboEmployeePosition.Name = "cboEmployeePosition";
-            this.cboEmployeePosition.Size = new System.Drawing.Size(150, 31);
+            this.cboEmployeePosition.Size = new System.Drawing.Size(144, 31);
             this.cboEmployeePosition.TabIndex = 209;
             // 
-            // txtSearchName
+            // txtEmployeeSearchCPF
             // 
-            this.txtSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
-            this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchName.Location = new System.Drawing.Point(413, 109);
-            this.txtSearchName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchName.MaxLength = 11;
-            this.txtSearchName.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(229, 27);
-            this.txtSearchName.TabIndex = 210;
-            this.txtSearchName.Click += new System.EventHandler(this.txtSearchName_Click);
-            this.txtSearchName.Leave += new System.EventHandler(this.txtSearchName_Leave);
+            this.txtEmployeeSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtEmployeeSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmployeeSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeSearchCPF.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeSearchCPF.Location = new System.Drawing.Point(681, 120);
+            this.txtEmployeeSearchCPF.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeSearchCPF.MaxLength = 11;
+            this.txtEmployeeSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtEmployeeSearchCPF.Name = "txtEmployeeSearchCPF";
+            this.txtEmployeeSearchCPF.Size = new System.Drawing.Size(188, 27);
+            this.txtEmployeeSearchCPF.TabIndex = 211;
+            this.txtEmployeeSearchCPF.Click += new System.EventHandler(this.txtEmployeeSearchCPF_Click);
+            this.txtEmployeeSearchCPF.Leave += new System.EventHandler(this.txtEmployeeSearchCPF_Leave);
             // 
-            // txtSearchCPF
+            // txtEmployeeDistrict
             // 
-            this.txtSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
-            this.txtSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCPF.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchCPF.Location = new System.Drawing.Point(693, 107);
-            this.txtSearchCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchCPF.MaxLength = 11;
-            this.txtSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchCPF.Name = "txtSearchCPF";
-            this.txtSearchCPF.Size = new System.Drawing.Size(167, 27);
-            this.txtSearchCPF.TabIndex = 211;
-            this.txtSearchCPF.Click += new System.EventHandler(this.txtSearchCPF_Click);
-            this.txtSearchCPF.Leave += new System.EventHandler(this.txtSearchCPF_Leave);
+            this.txtEmployeeDistrict.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(219)))), ((int)(((byte)(221)))));
+            this.txtEmployeeDistrict.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmployeeDistrict.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeDistrict.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeDistrict.Location = new System.Drawing.Point(24, 460);
+            this.txtEmployeeDistrict.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeDistrict.MaxLength = 150;
+            this.txtEmployeeDistrict.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtEmployeeDistrict.Name = "txtEmployeeDistrict";
+            this.txtEmployeeDistrict.Size = new System.Drawing.Size(303, 27);
+            this.txtEmployeeDistrict.TabIndex = 214;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.label6.Location = new System.Drawing.Point(20, 437);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 23);
+            this.label6.TabIndex = 213;
+            this.label6.Text = "Bairro";
+            // 
+            // btnEmployeeClear
+            // 
+            this.btnEmployeeClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmployeeClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployeeClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeClear.FlatAppearance.BorderSize = 3;
+            this.btnEmployeeClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeClear.Location = new System.Drawing.Point(229, 555);
+            this.btnEmployeeClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEmployeeClear.Name = "btnEmployeeClear";
+            this.btnEmployeeClear.Size = new System.Drawing.Size(98, 36);
+            this.btnEmployeeClear.TabIndex = 215;
+            this.btnEmployeeClear.Text = "Limpar";
+            this.btnEmployeeClear.UseVisualStyleBackColor = false;
+            // 
+            // btnEmployeeDelete
+            // 
+            this.btnEmployeeDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployeeDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeDelete.FlatAppearance.BorderSize = 3;
+            this.btnEmployeeDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeDelete.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeDelete.Location = new System.Drawing.Point(775, 628);
+            this.btnEmployeeDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEmployeeDelete.Name = "btnEmployeeDelete";
+            this.btnEmployeeDelete.Size = new System.Drawing.Size(138, 47);
+            this.btnEmployeeDelete.TabIndex = 217;
+            this.btnEmployeeDelete.Text = "Excluir";
+            this.btnEmployeeDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnEmployeeNew
+            // 
+            this.btnEmployeeNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployeeNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnEmployeeNew.FlatAppearance.BorderSize = 3;
+            this.btnEmployeeNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployeeNew.ForeColor = System.Drawing.Color.White;
+            this.btnEmployeeNew.Location = new System.Drawing.Point(925, 628);
+            this.btnEmployeeNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEmployeeNew.Name = "btnEmployeeNew";
+            this.btnEmployeeNew.Size = new System.Drawing.Size(138, 47);
+            this.btnEmployeeNew.TabIndex = 216;
+            this.btnEmployeeNew.Text = "Selecionar";
+            this.btnEmployeeNew.UseVisualStyleBackColor = false;
+            // 
+            // picEmployeeRefresh
+            // 
+            this.picEmployeeRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picEmployeeRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.picEmployeeRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEmployeeRefresh.BackgroundImage")));
+            this.picEmployeeRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picEmployeeRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picEmployeeRefresh.Location = new System.Drawing.Point(1078, 632);
+            this.picEmployeeRefresh.Margin = new System.Windows.Forms.Padding(0);
+            this.picEmployeeRefresh.Name = "picEmployeeRefresh";
+            this.picEmployeeRefresh.Size = new System.Drawing.Size(42, 38);
+            this.picEmployeeRefresh.TabIndex = 219;
+            this.picEmployeeRefresh.TabStop = false;
+            // 
+            // chkEmployeeActive
+            // 
+            this.chkEmployeeActive.AutoSize = true;
+            this.chkEmployeeActive.BackColor = System.Drawing.Color.Transparent;
+            this.chkEmployeeActive.Checked = true;
+            this.chkEmployeeActive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkEmployeeActive.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkEmployeeActive.Location = new System.Drawing.Point(24, 560);
+            this.chkEmployeeActive.Name = "chkEmployeeActive";
+            this.chkEmployeeActive.Size = new System.Drawing.Size(75, 27);
+            this.chkEmployeeActive.TabIndex = 220;
+            this.chkEmployeeActive.Text = "Ativo";
+            this.chkEmployeeActive.UseVisualStyleBackColor = false;
+            // 
+            // txtEmployeeSearchName
+            // 
+            this.txtEmployeeSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtEmployeeSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmployeeSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeSearchName.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeSearchName.Location = new System.Drawing.Point(374, 120);
+            this.txtEmployeeSearchName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeSearchName.MaxLength = 11;
+            this.txtEmployeeSearchName.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtEmployeeSearchName.Name = "txtEmployeeSearchName";
+            this.txtEmployeeSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtEmployeeSearchName.TabIndex = 210;
+            this.txtEmployeeSearchName.Click += new System.EventHandler(this.txtEmployeeSearchName_Click);
+            this.txtEmployeeSearchName.Leave += new System.EventHandler(this.txtEmployeeSearchName_Leave);
+            // 
+            // pnlEmployeeName
+            // 
+            this.pnlEmployeeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlEmployeeName.Location = new System.Drawing.Point(369, 141);
+            this.pnlEmployeeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlEmployeeName.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlEmployeeName.Name = "pnlEmployeeName";
+            this.pnlEmployeeName.Size = new System.Drawing.Size(270, 1);
+            this.pnlEmployeeName.TabIndex = 221;
+            // 
+            // pnlEmployeeCPF
+            // 
+            this.pnlEmployeeCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlEmployeeCPF.Location = new System.Drawing.Point(677, 141);
+            this.pnlEmployeeCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlEmployeeCPF.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlEmployeeCPF.Name = "pnlEmployeeCPF";
+            this.pnlEmployeeCPF.Size = new System.Drawing.Size(206, 1);
+            this.pnlEmployeeCPF.TabIndex = 222;
+            // 
+            // picEmployeeClose
+            // 
+            this.picEmployeeClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picEmployeeClose.BackColor = System.Drawing.Color.Transparent;
+            this.picEmployeeClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picEmployeeClose.BackgroundImage")));
+            this.picEmployeeClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picEmployeeClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picEmployeeClose.Location = new System.Drawing.Point(1118, 8);
+            this.picEmployeeClose.Margin = new System.Windows.Forms.Padding(0);
+            this.picEmployeeClose.Name = "picEmployeeClose";
+            this.picEmployeeClose.Size = new System.Drawing.Size(29, 24);
+            this.picEmployeeClose.TabIndex = 7;
+            this.picEmployeeClose.TabStop = false;
+            this.picEmployeeClose.Click += new System.EventHandler(this.picEmployeeClose_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(34, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(202, 28);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Tabela de Funcionário";
+            // 
+            // picIcone
+            // 
+            this.picIcone.BackColor = System.Drawing.Color.Transparent;
+            this.picIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIcone.BackgroundImage")));
+            this.picIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picIcone.Location = new System.Drawing.Point(3, 10);
+            this.picIcone.Name = "picIcone";
+            this.picIcone.Size = new System.Drawing.Size(32, 25);
+            this.picIcone.TabIndex = 169;
+            this.picIcone.TabStop = false;
+            // 
+            // pnlEmployeeTopBar
+            // 
+            this.pnlEmployeeTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
+            this.pnlEmployeeTopBar.Controls.Add(this.picIcone);
+            this.pnlEmployeeTopBar.Controls.Add(this.label5);
+            this.pnlEmployeeTopBar.Controls.Add(this.picEmployeeClose);
+            this.pnlEmployeeTopBar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlEmployeeTopBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEmployeeTopBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlEmployeeTopBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlEmployeeTopBar.Name = "pnlEmployeeTopBar";
+            this.pnlEmployeeTopBar.Size = new System.Drawing.Size(1156, 40);
+            this.pnlEmployeeTopBar.TabIndex = 212;
             // 
             // FormRegisterEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1154, 657);
-            this.Controls.Add(this.txtSearchCPF);
-            this.Controls.Add(this.txtSearchName);
+            this.ClientSize = new System.Drawing.Size(1156, 699);
+            this.Controls.Add(this.pnlEmployeeCPF);
+            this.Controls.Add(this.pnlEmployeeName);
+            this.Controls.Add(this.chkEmployeeActive);
+            this.Controls.Add(this.picEmployeeRefresh);
+            this.Controls.Add(this.btnEmployeeDelete);
+            this.Controls.Add(this.btnEmployeeNew);
+            this.Controls.Add(this.btnEmployeeClear);
+            this.Controls.Add(this.txtEmployeeDistrict);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.pnlEmployeeTopBar);
+            this.Controls.Add(this.txtEmployeeSearchCPF);
+            this.Controls.Add(this.txtEmployeeSearchName);
             this.Controls.Add(this.cboEmployeePosition);
             this.Controls.Add(this.mktEmployeeCEP);
-            this.Controls.Add(this.pnlEmployeePassword2);
             this.Controls.Add(this.lblCadPassFun2);
             this.Controls.Add(this.txtEmployeePassword2);
-            this.Controls.Add(this.pnlEmployeePassword);
             this.Controls.Add(this.lblCadPassFun);
             this.Controls.Add(this.txtEmployeePassword);
             this.Controls.Add(this.label4);
@@ -734,16 +791,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmployeeStreet);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pnlEmployeeName);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnClient_Delete);
-            this.Controls.Add(this.btnClient_Register);
-            this.Controls.Add(this.btnClient_New);
+            this.Controls.Add(this.btnEmployeeRegister);
             this.Controls.Add(this.lblCadID);
-            this.Controls.Add(this.pnlEmployeeCPF);
             this.Controls.Add(this.lblConsCliCod);
-            this.Controls.Add(this.btnClient_Search);
+            this.Controls.Add(this.btnEmployeeSearch);
             this.Controls.Add(this.lblConsCliNome);
             this.Controls.Add(this.lblConsultar);
             this.Controls.Add(this.lblCadastrar);
@@ -760,35 +811,29 @@
             this.Controls.Add(this.lblCadCliCpf);
             this.Controls.Add(this.txtEmployeeName);
             this.Controls.Add(this.lblCadCliNome);
-            this.Controls.Add(this.pnlTopBar);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormRegisterEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegisterEmployee";
             this.Load += new System.EventHandler(this.FormRegisterEmployee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
-            this.pnlTopBar.ResumeLayout(false);
-            this.pnlTopBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmployeeRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEmployeeClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
+            this.pnlEmployeeTopBar.ResumeLayout(false);
+            this.pnlEmployeeTopBar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picBtnClose;
-        private System.Windows.Forms.Panel pnlEmployeeName;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnClient_Delete;
-        private System.Windows.Forms.Button btnClient_Register;
-        private System.Windows.Forms.Button btnClient_New;
+        private System.Windows.Forms.Button btnEmployeeRegister;
         private System.Windows.Forms.Label lblCadID;
-        private System.Windows.Forms.Panel pnlEmployeeCPF;
         private System.Windows.Forms.Label lblConsCliCod;
-        private System.Windows.Forms.Button btnClient_Search;
+        private System.Windows.Forms.Button btnEmployeeSearch;
         private System.Windows.Forms.Label lblConsCliNome;
         private System.Windows.Forms.Label lblConsultar;
         private System.Windows.Forms.Label lblCadastrar;
@@ -805,8 +850,6 @@
         private System.Windows.Forms.Label lblCadCliCpf;
         private System.Windows.Forms.TextBox txtEmployeeName;
         private System.Windows.Forms.Label lblCadCliNome;
-        private System.Windows.Forms.Panel pnlTopBar;
-        private System.Windows.Forms.Label lblNomeTabela;
         private System.Windows.Forms.TextBox txtEmployeeStreet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEmployeeCity;
@@ -814,15 +857,26 @@
         private System.Windows.Forms.TextBox txtEmployeeNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel pnlEmployeePassword2;
         private System.Windows.Forms.Label lblCadPassFun2;
         private System.Windows.Forms.TextBox txtEmployeePassword2;
-        private System.Windows.Forms.Panel pnlEmployeePassword;
         private System.Windows.Forms.Label lblCadPassFun;
         private System.Windows.Forms.TextBox txtEmployeePassword;
         private System.Windows.Forms.MaskedTextBox mktEmployeeCEP;
         private System.Windows.Forms.ComboBox cboEmployeePosition;
-        private System.Windows.Forms.TextBox txtSearchName;
-        private System.Windows.Forms.TextBox txtSearchCPF;
+        private System.Windows.Forms.TextBox txtEmployeeSearchCPF;
+        private System.Windows.Forms.TextBox txtEmployeeDistrict;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnEmployeeClear;
+        private System.Windows.Forms.Button btnEmployeeDelete;
+        private System.Windows.Forms.Button btnEmployeeNew;
+        private System.Windows.Forms.PictureBox picEmployeeRefresh;
+        private System.Windows.Forms.CheckBox chkEmployeeActive;
+        private System.Windows.Forms.TextBox txtEmployeeSearchName;
+        private System.Windows.Forms.Panel pnlEmployeeName;
+        private System.Windows.Forms.Panel pnlEmployeeCPF;
+        private System.Windows.Forms.PictureBox picEmployeeClose;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox picIcone;
+        private System.Windows.Forms.Panel pnlEmployeeTopBar;
     }
 }

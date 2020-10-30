@@ -19,27 +19,43 @@ namespace PresentationLayer
             lblAttencion.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picCloseButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void chkMostrarSenha_CheckedChanged(object sender, EventArgs e)
+        private void txtUser_Click(object sender, EventArgs e)
         {
-            if (chkMostrarSenha.Checked)
-                txtSenha.UseSystemPasswordChar = false;
+            pnlUser.BackColor = Color.FromArgb(37, 206, 15);
+
+        }
+
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            pnlUser.BackColor = Color.Black;
+        }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            pnlPassword.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            pnlPassword.BackColor = Color.Black;
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked)
+                txtPassword.UseSystemPasswordChar = false;
             else
-                txtSenha.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void picLoginClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

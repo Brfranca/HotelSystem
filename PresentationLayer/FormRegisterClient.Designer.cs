@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterClient));
             this.lblCadID = new System.Windows.Forms.Label();
             this.lblConsCliCod = new System.Windows.Forms.Label();
-            this.btnClient_Search = new System.Windows.Forms.Button();
+            this.btnClientSearch = new System.Windows.Forms.Button();
             this.lblConsCliNome = new System.Windows.Forms.Label();
             this.lblConsultar = new System.Windows.Forms.Label();
             this.lblCadastrar = new System.Windows.Forms.Label();
@@ -57,23 +57,25 @@
             this.lblCadCliCpf = new System.Windows.Forms.Label();
             this.txtClientName = new System.Windows.Forms.TextBox();
             this.lblCadCliNome = new System.Windows.Forms.Label();
-            this.picBtnClose = new System.Windows.Forms.PictureBox();
+            this.picClientClose = new System.Windows.Forms.PictureBox();
             this.lblNomeTabela = new System.Windows.Forms.Label();
-            this.pnlTopBar = new System.Windows.Forms.Panel();
-            this.btnClient_New = new System.Windows.Forms.Button();
+            this.pnlClientTopBar = new System.Windows.Forms.Panel();
+            this.picIcone = new System.Windows.Forms.PictureBox();
+            this.btnClientNew = new System.Windows.Forms.Button();
             this.btnClientRegister = new System.Windows.Forms.Button();
-            this.btnClient_Delete = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtSearchName = new System.Windows.Forms.TextBox();
-            this.pnlSearchName = new System.Windows.Forms.Panel();
-            this.pnlSearchCPF = new System.Windows.Forms.Panel();
-            this.txtSearchCPF = new System.Windows.Forms.TextBox();
+            this.btnClientDelete = new System.Windows.Forms.Button();
+            this.btnClientClear = new System.Windows.Forms.Button();
+            this.txtClientSearchName = new System.Windows.Forms.TextBox();
+            this.pnlClientName = new System.Windows.Forms.Panel();
+            this.pnlClientCPF = new System.Windows.Forms.Panel();
+            this.txtClientSearchCPF = new System.Windows.Forms.TextBox();
             this.txtClientPhone1 = new System.Windows.Forms.TextBox();
+            this.picClientRefresh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnClose)).BeginInit();
-            this.pnlTopBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClientClose)).BeginInit();
+            this.pnlClientTopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClientRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCadID
@@ -82,7 +84,7 @@
             this.lblCadID.BackColor = System.Drawing.Color.Transparent;
             this.lblCadID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadID.Location = new System.Drawing.Point(279, 84);
+            this.lblCadID.Location = new System.Drawing.Point(275, 97);
             this.lblCadID.Name = "lblCadID";
             this.lblCadID.Size = new System.Drawing.Size(33, 23);
             this.lblCadID.TabIndex = 141;
@@ -95,27 +97,28 @@
             this.lblConsCliCod.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsCliCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsCliCod.Location = new System.Drawing.Point(677, 85);
+            this.lblConsCliCod.Location = new System.Drawing.Point(673, 97);
             this.lblConsCliCod.Name = "lblConsCliCod";
             this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
             this.lblConsCliCod.TabIndex = 152;
             this.lblConsCliCod.Text = "CPF";
             // 
-            // btnClient_Search
+            // btnClientSearch
             // 
-            this.btnClient_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnClient_Search.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Search.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnClient_Search.FlatAppearance.BorderSize = 3;
-            this.btnClient_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_Search.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_Search.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Search.Location = new System.Drawing.Point(912, 91);
-            this.btnClient_Search.Name = "btnClient_Search";
-            this.btnClient_Search.Size = new System.Drawing.Size(127, 44);
-            this.btnClient_Search.TabIndex = 154;
-            this.btnClient_Search.Text = "Pesquisar";
-            this.btnClient_Search.UseVisualStyleBackColor = false;
+            this.btnClientSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
+            this.btnClientSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
+            this.btnClientSearch.FlatAppearance.BorderSize = 3;
+            this.btnClientSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientSearch.ForeColor = System.Drawing.Color.White;
+            this.btnClientSearch.Location = new System.Drawing.Point(942, 102);
+            this.btnClientSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClientSearch.Name = "btnClientSearch";
+            this.btnClientSearch.Size = new System.Drawing.Size(127, 45);
+            this.btnClientSearch.TabIndex = 154;
+            this.btnClientSearch.Text = "Pesquisar";
+            this.btnClientSearch.UseVisualStyleBackColor = false;
             // 
             // lblConsCliNome
             // 
@@ -123,7 +126,7 @@
             this.lblConsCliNome.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsCliNome.Location = new System.Drawing.Point(399, 85);
+            this.lblConsCliNome.Location = new System.Drawing.Point(366, 98);
             this.lblConsCliNome.Name = "lblConsCliNome";
             this.lblConsCliNome.Size = new System.Drawing.Size(145, 23);
             this.lblConsCliNome.TabIndex = 150;
@@ -135,7 +138,7 @@
             this.lblConsultar.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsultar.Location = new System.Drawing.Point(397, 49);
+            this.lblConsultar.Location = new System.Drawing.Point(364, 60);
             this.lblConsultar.Name = "lblConsultar";
             this.lblConsultar.Size = new System.Drawing.Size(125, 32);
             this.lblConsultar.TabIndex = 149;
@@ -147,7 +150,7 @@
             this.lblCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.lblCadastrar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadastrar.Location = new System.Drawing.Point(29, 49);
+            this.lblCadastrar.Location = new System.Drawing.Point(18, 60);
             this.lblCadastrar.Name = "lblCadastrar";
             this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
             this.lblCadastrar.TabIndex = 131;
@@ -159,7 +162,7 @@
             this.lblConsCliCadastrados.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliCadastrados.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsCliCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsCliCadastrados.Location = new System.Drawing.Point(399, 150);
+            this.lblConsCliCadastrados.Location = new System.Drawing.Point(368, 155);
             this.lblConsCliCadastrados.Name = "lblConsCliCadastrados";
             this.lblConsCliCadastrados.Size = new System.Drawing.Size(176, 23);
             this.lblConsCliCadastrados.TabIndex = 155;
@@ -169,19 +172,19 @@
             // 
             this.dgvClients.AllowUserToAddRows = false;
             this.dgvClients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClients.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvClients.ColumnHeadersHeight = 29;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -189,31 +192,32 @@
             this.CPF,
             this.Phone1,
             this.Email});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvClients.Location = new System.Drawing.Point(401, 172);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvClients.Location = new System.Drawing.Point(370, 176);
+            this.dgvClients.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClients.Size = new System.Drawing.Size(713, 325);
+            this.dgvClients.Size = new System.Drawing.Size(700, 344);
             this.dgvClients.TabIndex = 156;
             // 
             // Name1
@@ -252,11 +256,12 @@
             this.txtClientCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
             this.txtClientCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtClientCPF.Location = new System.Drawing.Point(35, 169);
+            this.txtClientCPF.Location = new System.Drawing.Point(24, 176);
+            this.txtClientCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtClientCPF.Mask = "000,000,000-00";
             this.txtClientCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientCPF.Name = "txtClientCPF";
-            this.txtClientCPF.Size = new System.Drawing.Size(161, 27);
+            this.txtClientCPF.Size = new System.Drawing.Size(144, 27);
             this.txtClientCPF.TabIndex = 1;
             // 
             // txtClientEmail
@@ -265,11 +270,12 @@
             this.txtClientEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtClientEmail.Location = new System.Drawing.Point(35, 298);
+            this.txtClientEmail.Location = new System.Drawing.Point(24, 289);
             this.txtClientEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.txtClientEmail.MaxLength = 200;
             this.txtClientEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientEmail.Name = "txtClientEmail";
-            this.txtClientEmail.Size = new System.Drawing.Size(325, 27);
+            this.txtClientEmail.Size = new System.Drawing.Size(303, 27);
             this.txtClientEmail.TabIndex = 5;
             // 
             // lblCadCliEmail
@@ -278,7 +284,7 @@
             this.lblCadCliEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliEmail.Location = new System.Drawing.Point(31, 275);
+            this.lblCadCliEmail.Location = new System.Drawing.Point(20, 266);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
             this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
             this.lblCadCliEmail.TabIndex = 143;
@@ -290,12 +296,12 @@
             this.txtClientPhone2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientPhone2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientPhone2.ForeColor = System.Drawing.Color.Black;
-            this.txtClientPhone2.Location = new System.Drawing.Point(209, 235);
+            this.txtClientPhone2.Location = new System.Drawing.Point(183, 233);
             this.txtClientPhone2.Margin = new System.Windows.Forms.Padding(0);
             this.txtClientPhone2.MaxLength = 11;
             this.txtClientPhone2.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone2.Name = "txtClientPhone2";
-            this.txtClientPhone2.Size = new System.Drawing.Size(151, 27);
+            this.txtClientPhone2.Size = new System.Drawing.Size(144, 27);
             this.txtClientPhone2.TabIndex = 4;
             // 
             // lblCadCliTel2
@@ -304,7 +310,7 @@
             this.lblCadCliTel2.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliTel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliTel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliTel2.Location = new System.Drawing.Point(201, 212);
+            this.lblCadCliTel2.Location = new System.Drawing.Point(179, 210);
             this.lblCadCliTel2.Name = "lblCadCliTel2";
             this.lblCadCliTel2.Size = new System.Drawing.Size(92, 23);
             this.lblCadCliTel2.TabIndex = 140;
@@ -316,7 +322,7 @@
             this.lblCadCliTel1.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliTel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliTel1.Location = new System.Drawing.Point(31, 212);
+            this.lblCadCliTel1.Location = new System.Drawing.Point(20, 210);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
             this.lblCadCliTel1.Size = new System.Drawing.Size(92, 23);
             this.lblCadCliTel1.TabIndex = 138;
@@ -328,11 +334,12 @@
             this.txtClientRG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientRG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientRG.ForeColor = System.Drawing.Color.Black;
-            this.txtClientRG.Location = new System.Drawing.Point(209, 167);
+            this.txtClientRG.Location = new System.Drawing.Point(183, 176);
             this.txtClientRG.Margin = new System.Windows.Forms.Padding(0);
+            this.txtClientRG.MaxLength = 15;
             this.txtClientRG.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientRG.Name = "txtClientRG";
-            this.txtClientRG.Size = new System.Drawing.Size(151, 27);
+            this.txtClientRG.Size = new System.Drawing.Size(144, 27);
             this.txtClientRG.TabIndex = 2;
             // 
             // lblCadCliRg
@@ -341,7 +348,7 @@
             this.lblCadCliRg.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliRg.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliRg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliRg.Location = new System.Drawing.Point(201, 145);
+            this.lblCadCliRg.Location = new System.Drawing.Point(178, 154);
             this.lblCadCliRg.Name = "lblCadCliRg";
             this.lblCadCliRg.Size = new System.Drawing.Size(33, 23);
             this.lblCadCliRg.TabIndex = 136;
@@ -353,7 +360,7 @@
             this.lblCadCliCpf.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliCpf.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliCpf.Location = new System.Drawing.Point(31, 145);
+            this.lblCadCliCpf.Location = new System.Drawing.Point(20, 154);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
             this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
             this.lblCadCliCpf.TabIndex = 134;
@@ -365,11 +372,12 @@
             this.txtClientName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientName.ForeColor = System.Drawing.Color.Black;
-            this.txtClientName.Location = new System.Drawing.Point(35, 108);
+            this.txtClientName.Location = new System.Drawing.Point(24, 120);
             this.txtClientName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtClientName.MaxLength = 100;
             this.txtClientName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(325, 27);
+            this.txtClientName.Size = new System.Drawing.Size(303, 27);
             this.txtClientName.TabIndex = 0;
             // 
             // lblCadCliNome
@@ -378,66 +386,80 @@
             this.lblCadCliNome.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadCliNome.Location = new System.Drawing.Point(31, 85);
+            this.lblCadCliNome.Location = new System.Drawing.Point(20, 98);
             this.lblCadCliNome.Name = "lblCadCliNome";
             this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
             this.lblCadCliNome.TabIndex = 132;
             this.lblCadCliNome.Text = "Nome";
             // 
-            // picBtnClose
+            // picClientClose
             // 
-            this.picBtnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.picClientClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBtnClose.BackColor = System.Drawing.Color.Transparent;
-            this.picBtnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBtnClose.BackgroundImage")));
-            this.picBtnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBtnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBtnClose.Location = new System.Drawing.Point(1119, 7);
-            this.picBtnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.picBtnClose.Name = "picBtnClose";
-            this.picBtnClose.Size = new System.Drawing.Size(25, 26);
-            this.picBtnClose.TabIndex = 7;
-            this.picBtnClose.TabStop = false;
-            this.picBtnClose.Click += new System.EventHandler(this.picBtnClose_Click);
+            this.picClientClose.BackColor = System.Drawing.Color.Transparent;
+            this.picClientClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClientClose.BackgroundImage")));
+            this.picClientClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picClientClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClientClose.Location = new System.Drawing.Point(1062, 8);
+            this.picClientClose.Margin = new System.Windows.Forms.Padding(0);
+            this.picClientClose.Name = "picClientClose";
+            this.picClientClose.Size = new System.Drawing.Size(29, 24);
+            this.picClientClose.TabIndex = 7;
+            this.picClientClose.TabStop = false;
+            this.picClientClose.Click += new System.EventHandler(this.picClientClose_Click);
             // 
             // lblNomeTabela
             // 
             this.lblNomeTabela.AutoSize = true;
             this.lblNomeTabela.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblNomeTabela.ForeColor = System.Drawing.Color.White;
-            this.lblNomeTabela.Location = new System.Drawing.Point(33, 9);
+            this.lblNomeTabela.Location = new System.Drawing.Point(34, 8);
             this.lblNomeTabela.Name = "lblNomeTabela";
             this.lblNomeTabela.Size = new System.Drawing.Size(167, 28);
             this.lblNomeTabela.TabIndex = 0;
             this.lblNomeTabela.Text = "Tabela de Clientes";
             // 
-            // pnlTopBar
+            // pnlClientTopBar
             // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
-            this.pnlTopBar.Controls.Add(this.lblNomeTabela);
-            this.pnlTopBar.Controls.Add(this.picBtnClose);
-            this.pnlTopBar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
-            this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(1153, 40);
-            this.pnlTopBar.TabIndex = 130;
+            this.pnlClientTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
+            this.pnlClientTopBar.Controls.Add(this.picIcone);
+            this.pnlClientTopBar.Controls.Add(this.lblNomeTabela);
+            this.pnlClientTopBar.Controls.Add(this.picClientClose);
+            this.pnlClientTopBar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlClientTopBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlClientTopBar.Location = new System.Drawing.Point(0, 0);
+            this.pnlClientTopBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlClientTopBar.Name = "pnlClientTopBar";
+            this.pnlClientTopBar.Size = new System.Drawing.Size(1100, 40);
+            this.pnlClientTopBar.TabIndex = 130;
             // 
-            // btnClient_New
+            // picIcone
             // 
-            this.btnClient_New.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_New.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_New.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_New.FlatAppearance.BorderSize = 3;
-            this.btnClient_New.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_New.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_New.ForeColor = System.Drawing.Color.White;
-            this.btnClient_New.Location = new System.Drawing.Point(912, 519);
-            this.btnClient_New.Name = "btnClient_New";
-            this.btnClient_New.Size = new System.Drawing.Size(137, 47);
-            this.btnClient_New.TabIndex = 158;
-            this.btnClient_New.Text = "Selecionar";
-            this.btnClient_New.UseVisualStyleBackColor = false;
+            this.picIcone.BackColor = System.Drawing.Color.Transparent;
+            this.picIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIcone.BackgroundImage")));
+            this.picIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picIcone.Location = new System.Drawing.Point(3, 10);
+            this.picIcone.Name = "picIcone";
+            this.picIcone.Size = new System.Drawing.Size(32, 25);
+            this.picIcone.TabIndex = 169;
+            this.picIcone.TabStop = false;
+            // 
+            // btnClientNew
+            // 
+            this.btnClientNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClientNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClientNew.FlatAppearance.BorderSize = 3;
+            this.btnClientNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientNew.ForeColor = System.Drawing.Color.White;
+            this.btnClientNew.Location = new System.Drawing.Point(879, 546);
+            this.btnClientNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClientNew.Name = "btnClientNew";
+            this.btnClientNew.Size = new System.Drawing.Size(138, 47);
+            this.btnClientNew.TabIndex = 158;
+            this.btnClientNew.Text = "Selecionar";
+            this.btnClientNew.UseVisualStyleBackColor = false;
             // 
             // btnClientRegister
             // 
@@ -448,108 +470,102 @@
             this.btnClientRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientRegister.ForeColor = System.Drawing.Color.White;
-            this.btnClientRegister.Location = new System.Drawing.Point(112, 516);
+            this.btnClientRegister.Location = new System.Drawing.Point(109, 540);
+            this.btnClientRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientRegister.Name = "btnClientRegister";
             this.btnClientRegister.Size = new System.Drawing.Size(189, 53);
             this.btnClientRegister.TabIndex = 6;
             this.btnClientRegister.Text = "Cadastrar";
             this.btnClientRegister.UseVisualStyleBackColor = false;
+            this.btnClientRegister.Click += new System.EventHandler(this.btnClientRegister_Click);
             // 
-            // btnClient_Delete
+            // btnClientDelete
             // 
-            this.btnClient_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClient_Delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClient_Delete.FlatAppearance.BorderSize = 3;
-            this.btnClient_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClient_Delete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient_Delete.ForeColor = System.Drawing.Color.White;
-            this.btnClient_Delete.Location = new System.Drawing.Point(757, 519);
-            this.btnClient_Delete.Name = "btnClient_Delete";
-            this.btnClient_Delete.Size = new System.Drawing.Size(137, 47);
-            this.btnClient_Delete.TabIndex = 161;
-            this.btnClient_Delete.Text = "Excluir";
-            this.btnClient_Delete.UseVisualStyleBackColor = false;
+            this.btnClientDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClientDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClientDelete.FlatAppearance.BorderSize = 3;
+            this.btnClientDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientDelete.ForeColor = System.Drawing.Color.White;
+            this.btnClientDelete.Location = new System.Drawing.Point(729, 546);
+            this.btnClientDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClientDelete.Name = "btnClientDelete";
+            this.btnClientDelete.Size = new System.Drawing.Size(138, 47);
+            this.btnClientDelete.TabIndex = 161;
+            this.btnClientDelete.Text = "Excluir";
+            this.btnClientDelete.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnClientClear
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(1061, 524);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 39);
-            this.pictureBox1.TabIndex = 163;
-            this.pictureBox1.TabStop = false;
+            this.btnClientClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClientClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClientClear.FlatAppearance.BorderSize = 3;
+            this.btnClientClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClientClear.Location = new System.Drawing.Point(229, 336);
+            this.btnClientClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClientClear.Name = "btnClientClear";
+            this.btnClientClear.Size = new System.Drawing.Size(98, 36);
+            this.btnClientClear.TabIndex = 7;
+            this.btnClientClear.Text = "Limpar";
+            this.btnClientClear.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // txtClientSearchName
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.button1.Location = new System.Drawing.Point(251, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 36);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Limpar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.txtClientSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtClientSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClientSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientSearchName.ForeColor = System.Drawing.Color.Black;
+            this.txtClientSearchName.Location = new System.Drawing.Point(374, 120);
+            this.txtClientSearchName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtClientSearchName.MaxLength = 11;
+            this.txtClientSearchName.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtClientSearchName.Name = "txtClientSearchName";
+            this.txtClientSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtClientSearchName.TabIndex = 166;
+            this.txtClientSearchName.Click += new System.EventHandler(this.txtClientSearchName_Click);
+            this.txtClientSearchName.Leave += new System.EventHandler(this.txtClientSearchName_Leave);
             // 
-            // txtSearchName
+            // pnlClientName
             // 
-            this.txtSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
-            this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchName.Location = new System.Drawing.Point(411, 108);
-            this.txtSearchName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchName.MaxLength = 11;
-            this.txtSearchName.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(229, 27);
-            this.txtSearchName.TabIndex = 166;
-            this.txtSearchName.Click += new System.EventHandler(this.txtSearchName_Click);
+            this.pnlClientName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlClientName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pnlClientName.Location = new System.Drawing.Point(369, 141);
+            this.pnlClientName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlClientName.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlClientName.Name = "pnlClientName";
+            this.pnlClientName.Size = new System.Drawing.Size(270, 1);
+            this.pnlClientName.TabIndex = 166;
             // 
-            // pnlSearchName
+            // pnlClientCPF
             // 
-            this.pnlSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlSearchName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSearchName.Location = new System.Drawing.Point(401, 138);
-            this.pnlSearchName.MaximumSize = new System.Drawing.Size(501, 1);
-            this.pnlSearchName.Name = "pnlSearchName";
-            this.pnlSearchName.Size = new System.Drawing.Size(248, 1);
-            this.pnlSearchName.TabIndex = 166;
+            this.pnlClientCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlClientCPF.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pnlClientCPF.Location = new System.Drawing.Point(677, 141);
+            this.pnlClientCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlClientCPF.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlClientCPF.Name = "pnlClientCPF";
+            this.pnlClientCPF.Size = new System.Drawing.Size(206, 1);
+            this.pnlClientCPF.TabIndex = 167;
             // 
-            // pnlSearchCPF
+            // txtClientSearchCPF
             // 
-            this.pnlSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlSearchCPF.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSearchCPF.Location = new System.Drawing.Point(680, 138);
-            this.pnlSearchCPF.MaximumSize = new System.Drawing.Size(501, 1);
-            this.pnlSearchCPF.Name = "pnlSearchCPF";
-            this.pnlSearchCPF.Size = new System.Drawing.Size(189, 1);
-            this.pnlSearchCPF.TabIndex = 167;
-            // 
-            // txtSearchCPF
-            // 
-            this.txtSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
-            this.txtSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCPF.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchCPF.Location = new System.Drawing.Point(689, 108);
-            this.txtSearchCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchCPF.MaxLength = 11;
-            this.txtSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchCPF.Name = "txtSearchCPF";
-            this.txtSearchCPF.Size = new System.Drawing.Size(167, 27);
-            this.txtSearchCPF.TabIndex = 168;
+            this.txtClientSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtClientSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClientSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClientSearchCPF.ForeColor = System.Drawing.Color.Black;
+            this.txtClientSearchCPF.Location = new System.Drawing.Point(681, 120);
+            this.txtClientSearchCPF.Margin = new System.Windows.Forms.Padding(0);
+            this.txtClientSearchCPF.MaxLength = 11;
+            this.txtClientSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtClientSearchCPF.Name = "txtClientSearchCPF";
+            this.txtClientSearchCPF.Size = new System.Drawing.Size(191, 27);
+            this.txtClientSearchCPF.TabIndex = 168;
+            this.txtClientSearchCPF.Click += new System.EventHandler(this.txtClientSearchCPF_Click);
+            this.txtClientSearchCPF.Leave += new System.EventHandler(this.txtClientSearchCPF_Leave);
             // 
             // txtClientPhone1
             // 
@@ -557,32 +573,48 @@
             this.txtClientPhone1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientPhone1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientPhone1.ForeColor = System.Drawing.Color.Black;
-            this.txtClientPhone1.Location = new System.Drawing.Point(35, 235);
+            this.txtClientPhone1.Location = new System.Drawing.Point(24, 233);
             this.txtClientPhone1.Margin = new System.Windows.Forms.Padding(0);
             this.txtClientPhone1.MaxLength = 11;
             this.txtClientPhone1.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone1.Name = "txtClientPhone1";
-            this.txtClientPhone1.Size = new System.Drawing.Size(161, 27);
+            this.txtClientPhone1.Size = new System.Drawing.Size(144, 27);
             this.txtClientPhone1.TabIndex = 3;
+            // 
+            // picClientRefresh
+            // 
+            this.picClientRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClientRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.picClientRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClientRefresh.BackgroundImage")));
+            this.picClientRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picClientRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClientRefresh.Location = new System.Drawing.Point(1023, 550);
+            this.picClientRefresh.Margin = new System.Windows.Forms.Padding(0);
+            this.picClientRefresh.Name = "picClientRefresh";
+            this.picClientRefresh.Size = new System.Drawing.Size(42, 38);
+            this.picClientRefresh.TabIndex = 192;
+            this.picClientRefresh.TabStop = false;
+            this.picClientRefresh.Click += new System.EventHandler(this.picClientRefresh_Click);
             // 
             // FormRegisterClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1153, 593);
-            this.Controls.Add(this.pnlSearchCPF);
-            this.Controls.Add(this.txtSearchCPF);
-            this.Controls.Add(this.pnlSearchName);
-            this.Controls.Add(this.txtSearchName);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnClient_Delete);
+            this.ClientSize = new System.Drawing.Size(1100, 610);
+            this.Controls.Add(this.picClientRefresh);
+            this.Controls.Add(this.pnlClientCPF);
+            this.Controls.Add(this.txtClientSearchCPF);
+            this.Controls.Add(this.pnlClientName);
+            this.Controls.Add(this.txtClientSearchName);
+            this.Controls.Add(this.btnClientClear);
+            this.Controls.Add(this.btnClientDelete);
             this.Controls.Add(this.btnClientRegister);
-            this.Controls.Add(this.btnClient_New);
+            this.Controls.Add(this.btnClientNew);
             this.Controls.Add(this.lblCadID);
             this.Controls.Add(this.lblConsCliCod);
-            this.Controls.Add(this.btnClient_Search);
+            this.Controls.Add(this.btnClientSearch);
             this.Controls.Add(this.lblConsCliNome);
             this.Controls.Add(this.lblConsultar);
             this.Controls.Add(this.lblCadastrar);
@@ -600,17 +632,20 @@
             this.Controls.Add(this.lblCadCliCpf);
             this.Controls.Add(this.txtClientName);
             this.Controls.Add(this.lblCadCliNome);
-            this.Controls.Add(this.pnlTopBar);
+            this.Controls.Add(this.pnlClientTopBar);
+            this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormRegisterClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterClient";
             this.Load += new System.EventHandler(this.FormRegisterClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBtnClose)).EndInit();
-            this.pnlTopBar.ResumeLayout(false);
-            this.pnlTopBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClientClose)).EndInit();
+            this.pnlClientTopBar.ResumeLayout(false);
+            this.pnlClientTopBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClientRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,7 +654,7 @@
         #endregion
         private System.Windows.Forms.Label lblCadID;
         private System.Windows.Forms.Label lblConsCliCod;
-        private System.Windows.Forms.Button btnClient_Search;
+        private System.Windows.Forms.Button btnClientSearch;
         private System.Windows.Forms.Label lblConsCliNome;
         private System.Windows.Forms.Label lblConsultar;
         private System.Windows.Forms.Label lblCadastrar;
@@ -636,22 +671,23 @@
         private System.Windows.Forms.Label lblCadCliCpf;
         private System.Windows.Forms.TextBox txtClientName;
         private System.Windows.Forms.Label lblCadCliNome;
-        private System.Windows.Forms.PictureBox picBtnClose;
+        private System.Windows.Forms.PictureBox picClientClose;
         private System.Windows.Forms.Label lblNomeTabela;
-        private System.Windows.Forms.Panel pnlTopBar;
-        private System.Windows.Forms.Button btnClient_New;
+        private System.Windows.Forms.Panel pnlClientTopBar;
+        private System.Windows.Forms.Button btnClientNew;
         private System.Windows.Forms.Button btnClientRegister;
-        private System.Windows.Forms.Button btnClient_Delete;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtSearchName;
-        private System.Windows.Forms.Panel pnlSearchName;
-        private System.Windows.Forms.Panel pnlSearchCPF;
-        private System.Windows.Forms.TextBox txtSearchCPF;
+        private System.Windows.Forms.Button btnClientDelete;
+        private System.Windows.Forms.Button btnClientClear;
+        private System.Windows.Forms.TextBox txtClientSearchName;
+        private System.Windows.Forms.Panel pnlClientName;
+        private System.Windows.Forms.Panel pnlClientCPF;
+        private System.Windows.Forms.TextBox txtClientSearchCPF;
         private System.Windows.Forms.TextBox txtClientPhone1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.PictureBox picIcone;
+        private System.Windows.Forms.PictureBox picClientRefresh;
     }
 }

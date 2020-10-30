@@ -18,11 +18,6 @@ namespace PresentationLayer
             _clientBLL = new ClientBLL();
         }
 
-        private void picBtnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void FormRegisterClient_Load(object sender, EventArgs e)
         {
             QueryResponse<List<Client>> response = _clientBLL.GetAll();
@@ -35,6 +30,26 @@ namespace PresentationLayer
             {
                 dgvClients.Rows.Add(item.Name, item.CPF.InsertMaskCPF(), item.Phone1, item.Email);
             }
+        }
+
+        private void txtClientSearchCPF_Click(object sender, EventArgs e)
+        {
+            pnlClientCPF.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtClientSearchCPF_Leave(object sender, EventArgs e)
+        {
+            pnlClientCPF.BackColor = Color.Black;
+        }
+
+        private void txtClientSearchName_Click(object sender, EventArgs e)
+        {
+            pnlClientName.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtClientSearchName_Leave(object sender, EventArgs e)
+        {
+            pnlClientName.BackColor = Color.Black;
         }
 
         private void btnClientRegister_Click(object sender, EventArgs e)
@@ -52,24 +67,23 @@ namespace PresentationLayer
             MessageBox.Show(response.Message);
         }
 
-        private void txtSearchName_Click(object sender, EventArgs e)
+        private void picClientRefresh_Click(object sender, EventArgs e)
         {
-            pnlSearchName.BackColor = Color.FromArgb(37, 206, 15);
+            QueryResponse<List<Client>> response = _clientBLL.GetAll();
+            if (!response.Success)
+            {
+                MessageBox.Show(response.Message);
+                return;
+            }
+            foreach (var item in response.Data)
+            {
+                dgvClients.Rows.Add(item.Name, item.CPF.InsertMaskCPF(), item.Phone1, item.Email);
+            }
         }
 
-        private void txtSearchCPF_Click(object sender, EventArgs e)
+        private void picClientClose_Click(object sender, EventArgs e)
         {
-            pnlSearchCPF.BackColor = Color.FromArgb(37, 206, 15);
-        }
-
-        private void txtSearchName_Leave(object sender, EventArgs e)
-        {
-            pnlSearchName.BackColor = Color.Black;
-        }
-
-        private void txtSearchCPF_Leave(object sender, EventArgs e)
-        {
-            pnlSearchCPF.BackColor = Color.Black;
+            this.Close();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace PresentationLayer
             AppDomain.CurrentDomain.SetData("DataDirectory", x);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRegisterClient());
+            Application.Run(new FormLogin());
         }
     }
 }
