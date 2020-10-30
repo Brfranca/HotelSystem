@@ -37,12 +37,11 @@ namespace DataAccessLayer.Infrastructure
 
             foreach (DataColumn column in dr.Table.Columns)
             {
-                foreach (PropertyInfo pro in temp.GetProperties())
+                PropertyInfo pro = temp.GetProperties()
+                    .FirstOrDefault(x => x.Name.ToUpper() == column.ColumnName.ToUpper());
+                if (dr[column.ColumnName] != DBNull.Value)
                 {
-                    if (pro.Name == column.ColumnName)
-                        pro.SetValue(obj, dr[column.ColumnName], null);
-                    else
-                        continue;
+                    pro.SetValue(obj, dr[column.ColumnName], null);
                 }
             }
             return obj;

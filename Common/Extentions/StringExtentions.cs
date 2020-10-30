@@ -114,6 +114,11 @@ namespace BusinessLogicalLayer.Extentions
             return cpf.Replace(".", "").Replace("-", "");
         }
 
+        public static string InsertMaskCPF(this string cpf)
+        {
+            return cpf.Insert(3, ".").Insert(7, ".").Insert(11,"-");
+        }
+
         public static bool HasValue(this string value) => !string.IsNullOrWhiteSpace(value);
 
         public static bool IsNullOrWhiteSpace(this string value) => string.IsNullOrWhiteSpace(value);

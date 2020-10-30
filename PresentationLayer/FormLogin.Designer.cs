@@ -51,7 +51,7 @@
             // 
             // pnlTopBar
             // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(46)))), ((int)(((byte)(94)))));
+            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
             this.pnlTopBar.Controls.Add(this.lblNomeFarmacia);
             this.pnlTopBar.Controls.Add(this.picCloseButton);
             this.pnlTopBar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -95,7 +95,7 @@
             this.lblAttencion.BackColor = System.Drawing.Color.Transparent;
             this.lblAttencion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAttencion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(0)))), ((int)(((byte)(34)))));
-            this.lblAttencion.Location = new System.Drawing.Point(90, 71);
+            this.lblAttencion.Location = new System.Drawing.Point(90, 73);
             this.lblAttencion.MinimumSize = new System.Drawing.Size(348, 0);
             this.lblAttencion.Name = "lblAttencion";
             this.lblAttencion.Size = new System.Drawing.Size(348, 23);
@@ -110,7 +110,7 @@
             this.picAttencion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAttencion.BackgroundImage")));
             this.picAttencion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picAttencion.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.picAttencion.Location = new System.Drawing.Point(250, 42);
+            this.picAttencion.Location = new System.Drawing.Point(250, 44);
             this.picAttencion.Margin = new System.Windows.Forms.Padding(0);
             this.picAttencion.Name = "picAttencion";
             this.picAttencion.Size = new System.Drawing.Size(26, 26);
@@ -120,7 +120,7 @@
             // pnlSenha
             // 
             this.pnlSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlSenha.Location = new System.Drawing.Point(187, 180);
+            this.pnlSenha.Location = new System.Drawing.Point(187, 182);
             this.pnlSenha.Name = "pnlSenha";
             this.pnlSenha.Size = new System.Drawing.Size(185, 1);
             this.pnlSenha.TabIndex = 38;
@@ -131,7 +131,7 @@
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(192, 156);
+            this.txtSenha.Location = new System.Drawing.Point(192, 158);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(0);
             this.txtSenha.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtSenha.Name = "txtSenha";
@@ -142,21 +142,21 @@
             // pnlUsuario
             // 
             this.pnlUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlUsuario.Location = new System.Drawing.Point(187, 123);
+            this.pnlUsuario.Location = new System.Drawing.Point(187, 125);
             this.pnlUsuario.Name = "pnlUsuario";
             this.pnlUsuario.Size = new System.Drawing.Size(185, 1);
             this.pnlUsuario.TabIndex = 36;
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(60)))), ((int)(((byte)(139)))));
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.btnLogin.FlatAppearance.BorderSize = 3;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(150, 242);
+            this.btnLogin.Location = new System.Drawing.Point(150, 244);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(222, 53);
             this.btnLogin.TabIndex = 40;
@@ -171,7 +171,7 @@
             this.chkMostrarSenha.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.chkMostrarSenha.FlatAppearance.BorderSize = 2;
             this.chkMostrarSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.chkMostrarSenha.Location = new System.Drawing.Point(192, 195);
+            this.chkMostrarSenha.Location = new System.Drawing.Point(192, 197);
             this.chkMostrarSenha.Name = "chkMostrarSenha";
             this.chkMostrarSenha.Size = new System.Drawing.Size(123, 21);
             this.chkMostrarSenha.TabIndex = 39;
@@ -185,7 +185,7 @@
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(192, 99);
+            this.txtUsuario.Location = new System.Drawing.Point(192, 101);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.txtUsuario.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtUsuario.Name = "txtUsuario";
@@ -199,7 +199,7 @@
             this.picSenha.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picSenha.BackgroundImage")));
             this.picSenha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picSenha.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.picSenha.Location = new System.Drawing.Point(150, 157);
+            this.picSenha.Location = new System.Drawing.Point(150, 159);
             this.picSenha.Margin = new System.Windows.Forms.Padding(0);
             this.picSenha.Name = "picSenha";
             this.picSenha.Size = new System.Drawing.Size(26, 26);
@@ -213,10 +213,10 @@
             this.picUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUsuario.BackgroundImage")));
             this.picUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picUsuario.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.picUsuario.Location = new System.Drawing.Point(150, 100);
+            this.picUsuario.Location = new System.Drawing.Point(150, 96);
             this.picUsuario.Margin = new System.Windows.Forms.Padding(0);
             this.picUsuario.Name = "picUsuario";
-            this.picUsuario.Size = new System.Drawing.Size(26, 26);
+            this.picUsuario.Size = new System.Drawing.Size(26, 32);
             this.picUsuario.TabIndex = 41;
             this.picUsuario.TabStop = false;
             // 
@@ -241,7 +241,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hotel System";
+            this.Text = " ";
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCloseButton)).EndInit();

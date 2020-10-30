@@ -10,9 +10,14 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
 {
-    class RoomBLL
+    public class RoomBLL
     {
         private readonly RoomDAL _roomDAL;
+        public RoomBLL()
+        {
+            _roomDAL = new RoomDAL();
+        }
+
         public Response Register(Room room)
         {
             Response result = Validate(room);
