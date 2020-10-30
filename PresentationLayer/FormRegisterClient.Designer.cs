@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterClient));
             this.lblCadID = new System.Windows.Forms.Label();
             this.lblConsCliCod = new System.Windows.Forms.Label();
@@ -86,7 +86,7 @@
             this.lblCadID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadID.Location = new System.Drawing.Point(275, 97);
             this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(33, 23);
+            this.lblCadID.Size = new System.Drawing.Size(27, 19);
             this.lblCadID.TabIndex = 141;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -99,7 +99,7 @@
             this.lblConsCliCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliCod.Location = new System.Drawing.Point(673, 97);
             this.lblConsCliCod.Name = "lblConsCliCod";
-            this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
+            this.lblConsCliCod.Size = new System.Drawing.Size(34, 19);
             this.lblConsCliCod.TabIndex = 152;
             this.lblConsCliCod.Text = "CPF";
             // 
@@ -128,7 +128,7 @@
             this.lblConsCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliNome.Location = new System.Drawing.Point(366, 98);
             this.lblConsCliNome.Name = "lblConsCliNome";
-            this.lblConsCliNome.Size = new System.Drawing.Size(145, 23);
+            this.lblConsCliNome.Size = new System.Drawing.Size(122, 19);
             this.lblConsCliNome.TabIndex = 150;
             this.lblConsCliNome.Text = "Nome do Cliente";
             // 
@@ -140,7 +140,7 @@
             this.lblConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsultar.Location = new System.Drawing.Point(364, 60);
             this.lblConsultar.Name = "lblConsultar";
-            this.lblConsultar.Size = new System.Drawing.Size(125, 32);
+            this.lblConsultar.Size = new System.Drawing.Size(98, 25);
             this.lblConsultar.TabIndex = 149;
             this.lblConsultar.Text = "Consultar";
             // 
@@ -152,7 +152,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadastrar.Location = new System.Drawing.Point(18, 60);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
+            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
             this.lblCadastrar.TabIndex = 131;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -164,7 +164,7 @@
             this.lblConsCliCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliCadastrados.Location = new System.Drawing.Point(368, 155);
             this.lblConsCliCadastrados.Name = "lblConsCliCadastrados";
-            this.lblConsCliCadastrados.Size = new System.Drawing.Size(176, 23);
+            this.lblConsCliCadastrados.Size = new System.Drawing.Size(148, 19);
             this.lblConsCliCadastrados.TabIndex = 155;
             this.lblConsCliCadastrados.Text = "Clientes Cadastrados";
             // 
@@ -172,19 +172,19 @@
             // 
             this.dgvClients.AllowUserToAddRows = false;
             this.dgvClients.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClients.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClients.ColumnHeadersHeight = 29;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -192,30 +192,30 @@
             this.CPF,
             this.Phone1,
             this.Email});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvClients.Location = new System.Drawing.Point(370, 176);
             this.dgvClients.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(700, 344);
             this.dgvClients.TabIndex = 156;
@@ -261,7 +261,7 @@
             this.txtClientCPF.Mask = "000,000,000-00";
             this.txtClientCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientCPF.Name = "txtClientCPF";
-            this.txtClientCPF.Size = new System.Drawing.Size(144, 27);
+            this.txtClientCPF.Size = new System.Drawing.Size(144, 22);
             this.txtClientCPF.TabIndex = 1;
             // 
             // txtClientEmail
@@ -275,7 +275,7 @@
             this.txtClientEmail.MaxLength = 200;
             this.txtClientEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientEmail.Name = "txtClientEmail";
-            this.txtClientEmail.Size = new System.Drawing.Size(303, 27);
+            this.txtClientEmail.Size = new System.Drawing.Size(303, 22);
             this.txtClientEmail.TabIndex = 5;
             // 
             // lblCadCliEmail
@@ -286,7 +286,7 @@
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliEmail.Location = new System.Drawing.Point(20, 266);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
+            this.lblCadCliEmail.Size = new System.Drawing.Size(51, 19);
             this.lblCadCliEmail.TabIndex = 143;
             this.lblCadCliEmail.Text = "E-mail";
             // 
@@ -301,7 +301,7 @@
             this.txtClientPhone2.MaxLength = 11;
             this.txtClientPhone2.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone2.Name = "txtClientPhone2";
-            this.txtClientPhone2.Size = new System.Drawing.Size(144, 27);
+            this.txtClientPhone2.Size = new System.Drawing.Size(144, 22);
             this.txtClientPhone2.TabIndex = 4;
             // 
             // lblCadCliTel2
@@ -312,7 +312,7 @@
             this.lblCadCliTel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliTel2.Location = new System.Drawing.Point(179, 210);
             this.lblCadCliTel2.Name = "lblCadCliTel2";
-            this.lblCadCliTel2.Size = new System.Drawing.Size(92, 23);
+            this.lblCadCliTel2.Size = new System.Drawing.Size(78, 19);
             this.lblCadCliTel2.TabIndex = 140;
             this.lblCadCliTel2.Text = "Telefone 2";
             // 
@@ -324,7 +324,7 @@
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliTel1.Location = new System.Drawing.Point(20, 210);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(92, 23);
+            this.lblCadCliTel1.Size = new System.Drawing.Size(78, 19);
             this.lblCadCliTel1.TabIndex = 138;
             this.lblCadCliTel1.Text = "Telefone 1";
             // 
@@ -339,7 +339,7 @@
             this.txtClientRG.MaxLength = 15;
             this.txtClientRG.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientRG.Name = "txtClientRG";
-            this.txtClientRG.Size = new System.Drawing.Size(144, 27);
+            this.txtClientRG.Size = new System.Drawing.Size(144, 22);
             this.txtClientRG.TabIndex = 2;
             // 
             // lblCadCliRg
@@ -350,7 +350,7 @@
             this.lblCadCliRg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliRg.Location = new System.Drawing.Point(178, 154);
             this.lblCadCliRg.Name = "lblCadCliRg";
-            this.lblCadCliRg.Size = new System.Drawing.Size(33, 23);
+            this.lblCadCliRg.Size = new System.Drawing.Size(28, 19);
             this.lblCadCliRg.TabIndex = 136;
             this.lblCadCliRg.Text = "RG";
             // 
@@ -362,7 +362,7 @@
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliCpf.Location = new System.Drawing.Point(20, 154);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
+            this.lblCadCliCpf.Size = new System.Drawing.Size(34, 19);
             this.lblCadCliCpf.TabIndex = 134;
             this.lblCadCliCpf.Text = "CPF";
             // 
@@ -377,7 +377,7 @@
             this.txtClientName.MaxLength = 100;
             this.txtClientName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(303, 27);
+            this.txtClientName.Size = new System.Drawing.Size(303, 22);
             this.txtClientName.TabIndex = 0;
             // 
             // lblCadCliNome
@@ -388,7 +388,7 @@
             this.lblCadCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliNome.Location = new System.Drawing.Point(20, 98);
             this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
+            this.lblCadCliNome.Size = new System.Drawing.Size(50, 19);
             this.lblCadCliNome.TabIndex = 132;
             this.lblCadCliNome.Text = "Nome";
             // 
@@ -415,7 +415,7 @@
             this.lblNomeTabela.ForeColor = System.Drawing.Color.White;
             this.lblNomeTabela.Location = new System.Drawing.Point(34, 8);
             this.lblNomeTabela.Name = "lblNomeTabela";
-            this.lblNomeTabela.Size = new System.Drawing.Size(167, 28);
+            this.lblNomeTabela.Size = new System.Drawing.Size(133, 21);
             this.lblNomeTabela.TabIndex = 0;
             this.lblNomeTabela.Text = "Tabela de Clientes";
             // 
@@ -460,6 +460,7 @@
             this.btnClientNew.TabIndex = 158;
             this.btnClientNew.Text = "Selecionar";
             this.btnClientNew.UseVisualStyleBackColor = false;
+            this.btnClientNew.Click += new System.EventHandler(this.btnClientNew_Click);
             // 
             // btnClientRegister
             // 
@@ -524,7 +525,7 @@
             this.txtClientSearchName.MaxLength = 11;
             this.txtClientSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientSearchName.Name = "txtClientSearchName";
-            this.txtClientSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtClientSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtClientSearchName.TabIndex = 166;
             this.txtClientSearchName.Click += new System.EventHandler(this.txtClientSearchName_Click);
             this.txtClientSearchName.Leave += new System.EventHandler(this.txtClientSearchName_Leave);
@@ -562,7 +563,7 @@
             this.txtClientSearchCPF.MaxLength = 11;
             this.txtClientSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientSearchCPF.Name = "txtClientSearchCPF";
-            this.txtClientSearchCPF.Size = new System.Drawing.Size(191, 27);
+            this.txtClientSearchCPF.Size = new System.Drawing.Size(191, 22);
             this.txtClientSearchCPF.TabIndex = 168;
             this.txtClientSearchCPF.Click += new System.EventHandler(this.txtClientSearchCPF_Click);
             this.txtClientSearchCPF.Leave += new System.EventHandler(this.txtClientSearchCPF_Leave);
@@ -578,7 +579,7 @@
             this.txtClientPhone1.MaxLength = 11;
             this.txtClientPhone1.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone1.Name = "txtClientPhone1";
-            this.txtClientPhone1.Size = new System.Drawing.Size(144, 27);
+            this.txtClientPhone1.Size = new System.Drawing.Size(144, 22);
             this.txtClientPhone1.TabIndex = 3;
             // 
             // picClientRefresh
@@ -599,7 +600,7 @@
             // 
             // FormRegisterClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1100, 610);

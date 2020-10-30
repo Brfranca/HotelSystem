@@ -20,16 +20,7 @@ namespace PresentationLayer
 
         private void FormRegisterClient_Load(object sender, EventArgs e)
         {
-            QueryResponse<List<Client>> response = _clientBLL.GetAll();
-            if (!response.Success)
-            {
-                MessageBox.Show(response.Message);
-                return;
-            }
-            foreach (var item in response.Data)
-            {
-                dgvClients.Rows.Add(item.Name, item.CPF.InsertMaskCPF(), item.Phone1, item.Email);
-            }
+            UpDateGrid();
         }
 
         private void txtClientSearchCPF_Click(object sender, EventArgs e)
@@ -69,6 +60,17 @@ namespace PresentationLayer
 
         private void picClientRefresh_Click(object sender, EventArgs e)
         {
+            UpDateGrid();
+        }
+
+        private void picClientClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void UpDateGrid()
+        {
+            //Ver como fazer o clear da grid
             QueryResponse<List<Client>> response = _clientBLL.GetAll();
             if (!response.Success)
             {
@@ -81,9 +83,9 @@ namespace PresentationLayer
             }
         }
 
-        private void picClientClose_Click(object sender, EventArgs e)
+        private void btnClientNew_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }
