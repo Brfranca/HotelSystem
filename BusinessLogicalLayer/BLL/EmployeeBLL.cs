@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
 {
-    class EmployeeBLL
+    public class EmployeeBLL
     {
         private readonly EmployeeDAL _employeeDAL;
 

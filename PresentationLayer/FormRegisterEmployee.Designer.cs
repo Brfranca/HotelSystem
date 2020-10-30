@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterEmployee));
             this.btnEmployeeRegister = new System.Windows.Forms.Button();
             this.lblCadID = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.lblConsCliCadastrados = new System.Windows.Forms.Label();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.txtEmployeeCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mktEmployeeCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtEmployeeEmail = new System.Windows.Forms.TextBox();
             this.lblCadCliEmail = new System.Windows.Forms.Label();
             this.lblCadCliTel2 = new System.Windows.Forms.Label();
@@ -105,6 +105,7 @@
             this.btnEmployeeRegister.TabIndex = 189;
             this.btnEmployeeRegister.Text = "Cadastrar";
             this.btnEmployeeRegister.UseVisualStyleBackColor = false;
+            this.btnEmployeeRegister.Click += new System.EventHandler(this.btnEmployeeRegister_Click);
             // 
             // lblCadID
             // 
@@ -200,61 +201,61 @@
             // 
             this.dgvEmployee.AllowUserToAddRows = false;
             this.dgvEmployee.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployee.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEmployee.ColumnHeadersHeight = 29;
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployee.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployee.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvEmployee.Location = new System.Drawing.Point(370, 176);
             this.dgvEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEmployee.RowHeadersVisible = false;
             this.dgvEmployee.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvEmployee.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvEmployee.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(755, 427);
             this.dgvEmployee.TabIndex = 187;
             // 
-            // txtEmployeeCPF
+            // mktEmployeeCPF
             // 
-            this.txtEmployeeCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
-            this.txtEmployeeCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmployeeCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtEmployeeCPF.Location = new System.Drawing.Point(24, 176);
-            this.txtEmployeeCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmployeeCPF.Mask = "000,000,000-00";
-            this.txtEmployeeCPF.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtEmployeeCPF.Name = "txtEmployeeCPF";
-            this.txtEmployeeCPF.Size = new System.Drawing.Size(144, 27);
-            this.txtEmployeeCPF.TabIndex = 171;
+            this.mktEmployeeCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
+            this.mktEmployeeCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mktEmployeeCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.mktEmployeeCPF.Location = new System.Drawing.Point(24, 176);
+            this.mktEmployeeCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mktEmployeeCPF.Mask = "000,000,000-00";
+            this.mktEmployeeCPF.MinimumSize = new System.Drawing.Size(0, 24);
+            this.mktEmployeeCPF.Name = "mktEmployeeCPF";
+            this.mktEmployeeCPF.Size = new System.Drawing.Size(144, 27);
+            this.mktEmployeeCPF.TabIndex = 171;
             // 
             // txtEmployeeEmail
             // 
@@ -800,7 +801,7 @@
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.lblConsCliCadastrados);
             this.Controls.Add(this.dgvEmployee);
-            this.Controls.Add(this.txtEmployeeCPF);
+            this.Controls.Add(this.mktEmployeeCPF);
             this.Controls.Add(this.txtEmployeeEmail);
             this.Controls.Add(this.lblCadCliEmail);
             this.Controls.Add(this.lblCadCliTel2);
@@ -839,7 +840,7 @@
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Label lblConsCliCadastrados;
         private System.Windows.Forms.DataGridView dgvEmployee;
-        private System.Windows.Forms.MaskedTextBox txtEmployeeCPF;
+        private System.Windows.Forms.MaskedTextBox mktEmployeeCPF;
         private System.Windows.Forms.TextBox txtEmployeeEmail;
         private System.Windows.Forms.Label lblCadCliEmail;
         private System.Windows.Forms.Label lblCadCliTel2;

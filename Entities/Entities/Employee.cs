@@ -21,5 +21,6 @@ namespace Entities
         public string Email { get; set; }
         public Address Address { get; set; }
         public EmployeeType EmployeeType { get; set; }
+        public string Password { get; set; }
     }
 }
