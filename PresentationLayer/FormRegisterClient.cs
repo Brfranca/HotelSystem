@@ -51,8 +51,6 @@ namespace PresentationLayer
 
             if (btnClientRegister.Text == "Cadastrar")
             {
-                txtClientRG.Enabled = true;
-                txtClientCPF.Enabled = true;
                 Response response = _clientBLL.Register(client);
                 MessageBox.Show(response.Message);
                 FormHelper.ClearForm(this);
@@ -65,6 +63,8 @@ namespace PresentationLayer
                 Response response = _clientBLL.Update(client);
                 MessageBox.Show(response.Message);
                 btnClientRegister.Text = "Cadastrar";
+                txtClientRG.Enabled = true;
+                txtClientCPF.Enabled = true;
                 FormHelper.ClearForm(this);
                 UpDateGrid();
             }
