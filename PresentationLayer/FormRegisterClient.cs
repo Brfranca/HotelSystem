@@ -46,13 +46,16 @@ namespace PresentationLayer
 
         private void btnClientRegister_Click(object sender, EventArgs e)
         {
-            Client client = new Client();
-            CreateClient(client);
+            Client client = CreateClient();
 
             if (btnClientRegister.Text == "Cadastrar")
             {
                 Response response = _clientBLL.Register(client);
                 MessageBox.Show(response.Message);
+                if (!response.Success)
+                {
+                    return;
+                }
                 FormHelper.ClearForm(this);
                 UpDateGrid();
             }
@@ -65,6 +68,8 @@ namespace PresentationLayer
                 btnClientRegister.Text = "Cadastrar";
                 txtClientRG.Enabled = true;
                 txtClientCPF.Enabled = true;
+                lblCliIdGet.Text = "";
+                btnClientDelete.Visible = false;
                 FormHelper.ClearForm(this);
                 UpDateGrid();
             }
@@ -118,8 +123,7 @@ namespace PresentationLayer
 
         private void btnClientDelete_Click(object sender, EventArgs e)
         {
-            Client client = new Client();
-            CreateClient(client);
+            Client client = CreateClient();
             client.ID = Convert.ToInt32(lblCliIdGet.Text);
             Response response = _clientBLL.Delete(client);
             MessageBox.Show(response.Message);
@@ -128,14 +132,16 @@ namespace PresentationLayer
             UpDateGrid();
         }
 
-        private void CreateClient(Client client)
+        private Client CreateClient()
         {
+            Client client = new Client();
             client.Name = txtClientName.Text;
             client.CPF = txtClientCPF.Text.RemoveMaskCPF();
             client.RG = txtClientRG.Text;
             client.Phone1 = txtClientPhone1.Text;
             client.Phone2 = txtClientPhone2.Text;
             client.Email = txtClientEmail.Text;
+            return client;
         }
 
         private void btnClientClear_Click(object sender, EventArgs e)
