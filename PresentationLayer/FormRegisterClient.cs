@@ -20,7 +20,7 @@ namespace PresentationLayer
 
         private void FormRegisterClient_Load(object sender, EventArgs e)
         {
-            UpDateGrid();
+            UpdateGrid();
             btnClientDelete.Visible = false;
         }
 
@@ -52,12 +52,11 @@ namespace PresentationLayer
             {
                 Response response = _clientBLL.Register(client);
                 MessageBox.Show(response.Message);
-                if (!response.Success)
+                if (response.Success)
                 {
-                    return;
+                    FormHelper.ClearForm(this);
+                    UpdateGrid();
                 }
-                FormHelper.ClearForm(this);
-                UpDateGrid();
             }
 
             else if (btnClientRegister.Text == "Editar")
@@ -66,19 +65,16 @@ namespace PresentationLayer
                 Response response = _clientBLL.Update(client);
                 MessageBox.Show(response.Message);
                 btnClientRegister.Text = "Cadastrar";
-                txtClientRG.Enabled = true;
-                txtClientCPF.Enabled = true;
-                lblCliIdGet.Text = "";
+                ChangeEnableTextBox();
                 btnClientDelete.Visible = false;
                 FormHelper.ClearForm(this);
-                UpDateGrid();
+                UpdateGrid();
             }
-            
         }
 
         private void picClientRefresh_Click(object sender, EventArgs e)
         {
-            UpDateGrid();
+            UpdateGrid();
         }
 
         private void picClientClose_Click(object sender, EventArgs e)
@@ -86,7 +82,7 @@ namespace PresentationLayer
             this.Close();
         }
 
-        private void UpDateGrid()
+        private void UpdateGrid()
         {
             dgvClients.Rows.Clear();
             QueryResponse<List<Client>> response = _clientBLL.GetAll();
@@ -106,8 +102,7 @@ namespace PresentationLayer
             btnClientRegister.Text = "Editar";
 
             string cpf = (string)dgvClients.Rows[e.RowIndex].Cells[1].Value;
-            string cpfAjustado = cpf.RemoveMaskCPF();
-            QueryResponse<Client> response = _clientBLL.GetByCpf(cpfAjustado);
+            QueryResponse<Client> response = _clientBLL.GetByCpf(cpf);
             txtClientCPF.Text = response.Data.CPF;
             txtClientEmail.Text = response.Data.Email;
             txtClientName.Text = response.Data.Name;
@@ -116,8 +111,7 @@ namespace PresentationLayer
             txtClientRG.Text = response.Data.RG;
             lblCliIdGet.Text = response.Data.ID.ToString();
 
-            txtClientRG.Enabled = false;
-            txtClientCPF.Enabled = false;
+            ChangeEnableTextBox();
             btnClientDelete.Visible = true;
         }
 
@@ -127,9 +121,9 @@ namespace PresentationLayer
             client.ID = Convert.ToInt32(lblCliIdGet.Text);
             Response response = _clientBLL.Delete(client);
             MessageBox.Show(response.Message);
-            lblCliIdGet.Text = "";
             FormHelper.ClearForm(this);
-            UpDateGrid();
+            UpdateGrid();
+            ChangeEnableTextBox();
         }
 
         private Client CreateClient()
@@ -147,14 +141,33 @@ namespace PresentationLayer
         private void btnClientClear_Click(object sender, EventArgs e)
         {
             FormHelper.ClearForm(this);
-            lblCliIdGet.Text = "";
             if (btnClientRegister.Text == "Editar")
             {
                 btnClientRegister.Text = "Cadastrar";
-                txtClientRG.Enabled = true;
-                txtClientCPF.Enabled = true;
+                ChangeEnableTextBox();
                 btnClientDelete.Visible = false;
             }
+        }
+
+        private void ChangeEnableTextBox()
+        {
+            if (txtClientRG.Enabled)
+            {
+                txtClientRG.Enabled = false;
+            }
+            else
+            {
+                txtClientRG.Enabled = true;
+            }
+            if (txtClientCPF.Enabled)
+            {
+                txtClientCPF.Enabled = false;
+            }
+            else
+            {
+                txtClientCPF.Enabled = true;
+            }
+            
         }
     }
 }
