@@ -21,6 +21,7 @@ namespace PresentationLayer
         private void FormRegisterClient_Load(object sender, EventArgs e)
         {
             UpDateGrid();
+            btnClientDelete.Visible = false;
         }
 
         private void txtClientSearchCPF_Click(object sender, EventArgs e)
@@ -46,16 +47,28 @@ namespace PresentationLayer
         private void btnClientRegister_Click(object sender, EventArgs e)
         {
             Client client = new Client();
-            client.Name = txtClientName.Text;
-            client.CPF = txtClientCPF.Text;
-            client.RG = txtClientRG.Text;
-            client.Phone1 = txtClientPhone1.Text;
-            client.Phone2 = txtClientPhone2.Text;
-            client.Email = txtClientEmail.Text;
+            CreateClient(client);
 
-            Response response = _clientBLL.Register(client);
+            if (btnClientRegister.Text == "Cadastrar")
+            {
+                txtClientRG.Enabled = true;
+                txtClientCPF.Enabled = true;
+                Response response = _clientBLL.Register(client);
+                MessageBox.Show(response.Message);
+                FormHelper.ClearForm(this);
+                UpDateGrid();
+            }
 
-            MessageBox.Show(response.Message);
+            else if (btnClientRegister.Text == "Editar")
+            {
+                client.ID = Convert.ToInt32(lblCliIdGet.Text);
+                Response response = _clientBLL.Update(client);
+                MessageBox.Show(response.Message);
+                btnClientRegister.Text = "Cadastrar";
+                FormHelper.ClearForm(this);
+                UpDateGrid();
+            }
+            
         }
 
         private void picClientRefresh_Click(object sender, EventArgs e)
@@ -70,7 +83,7 @@ namespace PresentationLayer
 
         private void UpDateGrid()
         {
-            //Ver como fazer o clear da grid
+            dgvClients.Rows.Clear();
             QueryResponse<List<Client>> response = _clientBLL.GetAll();
             if (!response.Success)
             {
@@ -83,9 +96,59 @@ namespace PresentationLayer
             }
         }
 
-        private void btnClientNew_Click(object sender, EventArgs e)
+        private void dgvClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            btnClientRegister.Text = "Editar";
 
+            string cpf = (string)dgvClients.Rows[e.RowIndex].Cells[1].Value;
+            string cpfAjustado = cpf.RemoveMaskCPF();
+            QueryResponse<Client> response = _clientBLL.GetByCpf(cpfAjustado);
+            txtClientCPF.Text = response.Data.CPF;
+            txtClientEmail.Text = response.Data.Email;
+            txtClientName.Text = response.Data.Name;
+            txtClientPhone1.Text = response.Data.Phone1;
+            txtClientPhone2.Text = response.Data.Phone2;
+            txtClientRG.Text = response.Data.RG;
+            lblCliIdGet.Text = response.Data.ID.ToString();
+
+            txtClientRG.Enabled = false;
+            txtClientCPF.Enabled = false;
+            btnClientDelete.Visible = true;
+        }
+
+        private void btnClientDelete_Click(object sender, EventArgs e)
+        {
+            Client client = new Client();
+            CreateClient(client);
+            client.ID = Convert.ToInt32(lblCliIdGet.Text);
+            Response response = _clientBLL.Delete(client);
+            MessageBox.Show(response.Message);
+            lblCliIdGet.Text = "";
+            FormHelper.ClearForm(this);
+            UpDateGrid();
+        }
+
+        private void CreateClient(Client client)
+        {
+            client.Name = txtClientName.Text;
+            client.CPF = txtClientCPF.Text.RemoveMaskCPF();
+            client.RG = txtClientRG.Text;
+            client.Phone1 = txtClientPhone1.Text;
+            client.Phone2 = txtClientPhone2.Text;
+            client.Email = txtClientEmail.Text;
+        }
+
+        private void btnClientClear_Click(object sender, EventArgs e)
+        {
+            FormHelper.ClearForm(this);
+            lblCliIdGet.Text = "";
+            if (btnClientRegister.Text == "Editar")
+            {
+                btnClientRegister.Text = "Cadastrar";
+                txtClientRG.Enabled = true;
+                txtClientCPF.Enabled = true;
+                btnClientDelete.Visible = false;
+            }
         }
     }
 }

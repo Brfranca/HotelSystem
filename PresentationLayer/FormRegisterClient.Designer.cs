@@ -71,6 +71,7 @@
             this.txtClientSearchCPF = new System.Windows.Forms.TextBox();
             this.txtClientPhone1 = new System.Windows.Forms.TextBox();
             this.picClientRefresh = new System.Windows.Forms.PictureBox();
+            this.lblCliIdGet = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClientClose)).BeginInit();
             this.pnlClientTopBar.SuspendLayout();
@@ -219,6 +220,7 @@
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(700, 344);
             this.dgvClients.TabIndex = 156;
+            this.dgvClients.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClients_CellDoubleClick);
             // 
             // Name1
             // 
@@ -460,7 +462,6 @@
             this.btnClientNew.TabIndex = 158;
             this.btnClientNew.Text = "Selecionar";
             this.btnClientNew.UseVisualStyleBackColor = false;
-            this.btnClientNew.Click += new System.EventHandler(this.btnClientNew_Click);
             // 
             // btnClientRegister
             // 
@@ -496,6 +497,7 @@
             this.btnClientDelete.TabIndex = 161;
             this.btnClientDelete.Text = "Excluir";
             this.btnClientDelete.UseVisualStyleBackColor = false;
+            this.btnClientDelete.Click += new System.EventHandler(this.btnClientDelete_Click);
             // 
             // btnClientClear
             // 
@@ -513,6 +515,7 @@
             this.btnClientClear.TabIndex = 7;
             this.btnClientClear.Text = "Limpar";
             this.btnClientClear.UseVisualStyleBackColor = false;
+            this.btnClientClear.Click += new System.EventHandler(this.btnClientClear_Click);
             // 
             // txtClientSearchName
             // 
@@ -598,12 +601,25 @@
             this.picClientRefresh.TabStop = false;
             this.picClientRefresh.Click += new System.EventHandler(this.picClientRefresh_Click);
             // 
+            // lblCliIdGet
+            // 
+            this.lblCliIdGet.AutoSize = true;
+            this.lblCliIdGet.BackColor = System.Drawing.Color.Transparent;
+            this.lblCliIdGet.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliIdGet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCliIdGet.Location = new System.Drawing.Point(308, 96);
+            this.lblCliIdGet.Name = "lblCliIdGet";
+            this.lblCliIdGet.Size = new System.Drawing.Size(0, 19);
+            this.lblCliIdGet.TabIndex = 193;
+            this.lblCliIdGet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FormRegisterClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1100, 610);
+            this.Controls.Add(this.lblCliIdGet);
             this.Controls.Add(this.picClientRefresh);
             this.Controls.Add(this.pnlClientCPF);
             this.Controls.Add(this.txtClientSearchCPF);
@@ -690,5 +706,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.PictureBox picClientRefresh;
+        private System.Windows.Forms.Label lblCliIdGet;
     }
 }

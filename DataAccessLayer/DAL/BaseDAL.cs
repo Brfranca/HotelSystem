@@ -52,9 +52,10 @@ namespace DataAccessLayer.DAL
             string and = "";
             if (id > 0)
             {
-                command.Parameters.AddWithValue($"@ID", id);
-                and = "AND ID <> @ID";
+                command.Parameters.AddWithValue("@ID", id);
+                and = "AND ID != @ID";
             }
+
             command.CommandText = $"{_select} WHERE {columnName} = @{columnName} {and}";
             command.Parameters.AddWithValue($"@{columnName}", value);
             return new DbExecuter().ExistData(command);
