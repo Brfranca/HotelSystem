@@ -65,7 +65,8 @@ namespace PresentationLayer
                 Response response = _clientBLL.Update(client);
                 MessageBox.Show(response.Message);
                 btnClientRegister.Text = "Cadastrar";
-                ChangeEnableTextBox();
+                txtClientRG.Enabled = true;
+                txtClientCPF.Enabled = true;
                 btnClientDelete.Visible = false;
                 FormHelper.ClearForm(this);
                 UpdateGrid();
@@ -110,8 +111,9 @@ namespace PresentationLayer
             txtClientPhone2.Text = response.Data.Phone2;
             txtClientRG.Text = response.Data.RG;
             lblCliIdGet.Text = response.Data.ID.ToString();
+            txtClientRG.Enabled = false;
+            txtClientCPF.Enabled = false;
 
-            ChangeEnableTextBox();
             btnClientDelete.Visible = true;
         }
 
@@ -123,7 +125,8 @@ namespace PresentationLayer
             MessageBox.Show(response.Message);
             FormHelper.ClearForm(this);
             UpdateGrid();
-            ChangeEnableTextBox();
+            txtClientRG.Enabled = true;
+            txtClientCPF.Enabled = true;
         }
 
         private Client CreateClient()
@@ -144,30 +147,11 @@ namespace PresentationLayer
             if (btnClientRegister.Text == "Editar")
             {
                 btnClientRegister.Text = "Cadastrar";
-                ChangeEnableTextBox();
+                txtClientRG.Enabled = true;
+                txtClientCPF.Enabled = true;
                 btnClientDelete.Visible = false;
             }
         }
 
-        private void ChangeEnableTextBox()
-        {
-            if (txtClientRG.Enabled)
-            {
-                txtClientRG.Enabled = false;
-            }
-            else
-            {
-                txtClientRG.Enabled = true;
-            }
-            if (txtClientCPF.Enabled)
-            {
-                txtClientCPF.Enabled = false;
-            }
-            else
-            {
-                txtClientCPF.Enabled = true;
-            }
-            
-        }
     }
 }
