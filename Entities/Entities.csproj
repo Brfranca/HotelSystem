@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAnnotations\NonEditable.cs" />
-    <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="DataAnnotations\TableName.cs" />
     <Compile Include="Entities\Employee.cs" />

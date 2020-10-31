@@ -25,7 +25,7 @@ namespace PresentationLayer
 
         private void FormRegisterEmployee_Load(object sender, EventArgs e)
         {
-
+            cboEmployeePosition.DataSource = Enum.GetValues(typeof(EmployeeType));
         }
 
         private void txtEmployeeSearchName_Click(object sender, EventArgs e)
@@ -61,15 +61,15 @@ namespace PresentationLayer
             employee.RG = txtEmployeeRG.Text;
             employee.Phone = txtEmployeePhone.Text;
             employee.Email = txtEmployeeEmail.Text;
-            employee.Address.CEP = mktEmployeeCEP.Text;
-            employee.Address.City = txtEmployeeCity.Text;
-            employee.Address.Street = txtEmployeeStreet.Text;
-            employee.Address.Number = txtEmployeeNumber.Text;
-            employee.Address.District = txtEmployeeDistrict.Text;
-            employee.EmployeeType = (EmployeeType)cboEmployeePosition.SelectedIndex;
             employee.Password = txtEmployeePassword.Text;
+            employee.EmployeeType = (EmployeeType)cboEmployeePosition.SelectedIndex;
+            employee.CEP = mktEmployeeCEP.Text;
+            employee.City = txtEmployeeCity.Text;
+            employee.Street = txtEmployeeStreet.Text;
+            employee.Number = txtEmployeeNumber.Text;
+            employee.District = txtEmployeeDistrict.Text;
 
-            Response response = _employeeBLL.Register(employee);
+            Response response = _employeeBLL.Register(employee, txtEmployeePassword2.Text);
 
             MessageBox.Show(response.Message);
         }

@@ -2,8 +2,8 @@
 {
     public enum EmployeeType
     {
+        Administrador,
         Gerente,
-        Recepcionista,
-        Administrador
+        Recepcionista
     }
 }

@@ -102,7 +102,7 @@
             this.btnEmployeeRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEmployeeRegister.Name = "btnEmployeeRegister";
             this.btnEmployeeRegister.Size = new System.Drawing.Size(189, 53);
-            this.btnEmployeeRegister.TabIndex = 189;
+            this.btnEmployeeRegister.TabIndex = 14;
             this.btnEmployeeRegister.Text = "Cadastrar";
             this.btnEmployeeRegister.UseVisualStyleBackColor = false;
             this.btnEmployeeRegister.Click += new System.EventHandler(this.btnEmployeeRegister_Click);
@@ -145,7 +145,7 @@
             this.btnEmployeeSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEmployeeSearch.Name = "btnEmployeeSearch";
             this.btnEmployeeSearch.Size = new System.Drawing.Size(127, 45);
-            this.btnEmployeeSearch.TabIndex = 185;
+            this.btnEmployeeSearch.TabIndex = 18;
             this.btnEmployeeSearch.Text = "Pesquisar";
             this.btnEmployeeSearch.UseVisualStyleBackColor = false;
             // 
@@ -242,7 +242,7 @@
             this.dgvEmployee.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(755, 427);
-            this.dgvEmployee.TabIndex = 187;
+            this.dgvEmployee.TabIndex = 19;
             // 
             // mktEmployeeCPF
             // 
@@ -255,7 +255,7 @@
             this.mktEmployeeCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.mktEmployeeCPF.Name = "mktEmployeeCPF";
             this.mktEmployeeCPF.Size = new System.Drawing.Size(144, 27);
-            this.mktEmployeeCPF.TabIndex = 171;
+            this.mktEmployeeCPF.TabIndex = 1;
             // 
             // txtEmployeeEmail
             // 
@@ -269,7 +269,7 @@
             this.txtEmployeeEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
             this.txtEmployeeEmail.Size = new System.Drawing.Size(303, 27);
-            this.txtEmployeeEmail.TabIndex = 180;
+            this.txtEmployeeEmail.TabIndex = 5;
             // 
             // lblCadCliEmail
             // 
@@ -307,7 +307,7 @@
             this.txtEmployeePhone.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePhone.Name = "txtEmployeePhone";
             this.txtEmployeePhone.Size = new System.Drawing.Size(144, 27);
-            this.txtEmployeePhone.TabIndex = 175;
+            this.txtEmployeePhone.TabIndex = 3;
             // 
             // lblCadCliTel1
             // 
@@ -333,7 +333,7 @@
             this.txtEmployeeRG.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeRG.Name = "txtEmployeeRG";
             this.txtEmployeeRG.Size = new System.Drawing.Size(144, 27);
-            this.txtEmployeeRG.TabIndex = 173;
+            this.txtEmployeeRG.TabIndex = 2;
             // 
             // lblCadCliRg
             // 
@@ -371,7 +371,7 @@
             this.txtEmployeeName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.Size = new System.Drawing.Size(303, 27);
-            this.txtEmployeeName.TabIndex = 169;
+            this.txtEmployeeName.TabIndex = 0;
             // 
             // lblCadCliNome
             // 
@@ -396,8 +396,8 @@
             this.txtEmployeeStreet.MaxLength = 150;
             this.txtEmployeeStreet.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeStreet.Name = "txtEmployeeStreet";
-            this.txtEmployeeStreet.Size = new System.Drawing.Size(229, 27);
-            this.txtEmployeeStreet.TabIndex = 195;
+            this.txtEmployeeStreet.Size = new System.Drawing.Size(303, 27);
+            this.txtEmployeeStreet.TabIndex = 8;
             // 
             // label1
             // 
@@ -423,7 +423,7 @@
             this.txtEmployeeCity.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeCity.Name = "txtEmployeeCity";
             this.txtEmployeeCity.Size = new System.Drawing.Size(170, 27);
-            this.txtEmployeeCity.TabIndex = 197;
+            this.txtEmployeeCity.TabIndex = 7;
             // 
             // label2
             // 
@@ -443,13 +443,13 @@
             this.txtEmployeeNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeNumber.Location = new System.Drawing.Point(268, 402);
+            this.txtEmployeeNumber.Location = new System.Drawing.Point(24, 460);
             this.txtEmployeeNumber.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeeNumber.MaxLength = 7;
             this.txtEmployeeNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeNumber.Name = "txtEmployeeNumber";
-            this.txtEmployeeNumber.Size = new System.Drawing.Size(59, 27);
-            this.txtEmployeeNumber.TabIndex = 199;
+            this.txtEmployeeNumber.Size = new System.Drawing.Size(62, 27);
+            this.txtEmployeeNumber.TabIndex = 9;
             // 
             // label3
             // 
@@ -457,7 +457,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label3.Location = new System.Drawing.Point(264, 379);
+            this.label3.Location = new System.Drawing.Point(20, 437);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 23);
             this.label3.TabIndex = 198;
@@ -498,7 +498,7 @@
             this.txtEmployeePassword2.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePassword2.Name = "txtEmployeePassword2";
             this.txtEmployeePassword2.Size = new System.Drawing.Size(143, 27);
-            this.txtEmployeePassword2.TabIndex = 205;
+            this.txtEmployeePassword2.TabIndex = 12;
             this.txtEmployeePassword2.UseSystemPasswordChar = true;
             // 
             // lblCadPassFun
@@ -524,7 +524,7 @@
             this.txtEmployeePassword.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePassword.Name = "txtEmployeePassword";
             this.txtEmployeePassword.Size = new System.Drawing.Size(145, 27);
-            this.txtEmployeePassword.TabIndex = 203;
+            this.txtEmployeePassword.TabIndex = 11;
             this.txtEmployeePassword.UseSystemPasswordChar = true;
             // 
             // mktEmployeeCEP
@@ -534,10 +534,10 @@
             this.mktEmployeeCEP.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.mktEmployeeCEP.Location = new System.Drawing.Point(24, 346);
             this.mktEmployeeCEP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mktEmployeeCEP.Mask = "000,000-00";
+            this.mktEmployeeCEP.Mask = "00000-000";
             this.mktEmployeeCEP.Name = "mktEmployeeCEP";
             this.mktEmployeeCEP.Size = new System.Drawing.Size(118, 27);
-            this.mktEmployeeCEP.TabIndex = 208;
+            this.mktEmployeeCEP.TabIndex = 6;
             // 
             // cboEmployeePosition
             // 
@@ -549,7 +549,7 @@
             this.cboEmployeePosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboEmployeePosition.Name = "cboEmployeePosition";
             this.cboEmployeePosition.Size = new System.Drawing.Size(144, 31);
-            this.cboEmployeePosition.TabIndex = 209;
+            this.cboEmployeePosition.TabIndex = 4;
             // 
             // txtEmployeeSearchCPF
             // 
@@ -563,7 +563,7 @@
             this.txtEmployeeSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeSearchCPF.Name = "txtEmployeeSearchCPF";
             this.txtEmployeeSearchCPF.Size = new System.Drawing.Size(188, 27);
-            this.txtEmployeeSearchCPF.TabIndex = 211;
+            this.txtEmployeeSearchCPF.TabIndex = 17;
             this.txtEmployeeSearchCPF.Click += new System.EventHandler(this.txtEmployeeSearchCPF_Click);
             this.txtEmployeeSearchCPF.Leave += new System.EventHandler(this.txtEmployeeSearchCPF_Leave);
             // 
@@ -573,13 +573,13 @@
             this.txtEmployeeDistrict.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeDistrict.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeDistrict.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeDistrict.Location = new System.Drawing.Point(24, 460);
+            this.txtEmployeeDistrict.Location = new System.Drawing.Point(101, 460);
             this.txtEmployeeDistrict.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeeDistrict.MaxLength = 150;
             this.txtEmployeeDistrict.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeDistrict.Name = "txtEmployeeDistrict";
-            this.txtEmployeeDistrict.Size = new System.Drawing.Size(303, 27);
-            this.txtEmployeeDistrict.TabIndex = 214;
+            this.txtEmployeeDistrict.Size = new System.Drawing.Size(226, 27);
+            this.txtEmployeeDistrict.TabIndex = 10;
             // 
             // label6
             // 
@@ -587,7 +587,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.label6.Location = new System.Drawing.Point(20, 437);
+            this.label6.Location = new System.Drawing.Point(98, 437);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 23);
             this.label6.TabIndex = 213;
@@ -606,7 +606,7 @@
             this.btnEmployeeClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEmployeeClear.Name = "btnEmployeeClear";
             this.btnEmployeeClear.Size = new System.Drawing.Size(98, 36);
-            this.btnEmployeeClear.TabIndex = 215;
+            this.btnEmployeeClear.TabIndex = 15;
             this.btnEmployeeClear.Text = "Limpar";
             this.btnEmployeeClear.UseVisualStyleBackColor = false;
             // 
@@ -623,7 +623,7 @@
             this.btnEmployeeDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEmployeeDelete.Name = "btnEmployeeDelete";
             this.btnEmployeeDelete.Size = new System.Drawing.Size(138, 47);
-            this.btnEmployeeDelete.TabIndex = 217;
+            this.btnEmployeeDelete.TabIndex = 20;
             this.btnEmployeeDelete.Text = "Excluir";
             this.btnEmployeeDelete.UseVisualStyleBackColor = false;
             // 
@@ -640,7 +640,7 @@
             this.btnEmployeeNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEmployeeNew.Name = "btnEmployeeNew";
             this.btnEmployeeNew.Size = new System.Drawing.Size(138, 47);
-            this.btnEmployeeNew.TabIndex = 216;
+            this.btnEmployeeNew.TabIndex = 21;
             this.btnEmployeeNew.Text = "Selecionar";
             this.btnEmployeeNew.UseVisualStyleBackColor = false;
             // 
@@ -669,7 +669,7 @@
             this.chkEmployeeActive.Location = new System.Drawing.Point(24, 560);
             this.chkEmployeeActive.Name = "chkEmployeeActive";
             this.chkEmployeeActive.Size = new System.Drawing.Size(75, 27);
-            this.chkEmployeeActive.TabIndex = 220;
+            this.chkEmployeeActive.TabIndex = 13;
             this.chkEmployeeActive.Text = "Ativo";
             this.chkEmployeeActive.UseVisualStyleBackColor = false;
             // 
@@ -685,7 +685,7 @@
             this.txtEmployeeSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeSearchName.Name = "txtEmployeeSearchName";
             this.txtEmployeeSearchName.Size = new System.Drawing.Size(258, 27);
-            this.txtEmployeeSearchName.TabIndex = 210;
+            this.txtEmployeeSearchName.TabIndex = 16;
             this.txtEmployeeSearchName.Click += new System.EventHandler(this.txtEmployeeSearchName_Click);
             this.txtEmployeeSearchName.Leave += new System.EventHandler(this.txtEmployeeSearchName_Leave);
             // 

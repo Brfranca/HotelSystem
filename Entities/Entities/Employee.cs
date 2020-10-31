@@ -1,11 +1,6 @@
 ﻿using Entities.DataAnnotations;
 using Entities.Enums;
 using Entities.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entities
 {
@@ -19,8 +14,14 @@ namespace Entities
         public string RG { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public Address Address { get; set; }
+        public string Street { get; set; }
+        public string Number { get; set; }
+        public string District { get; set; }
+        public string City { get; set; }
+        public string CEP { get; set; }
         public EmployeeType EmployeeType { get; set; }
         public string Password { get; set; }
+        public bool Active { get; set; }
+
     }
 }

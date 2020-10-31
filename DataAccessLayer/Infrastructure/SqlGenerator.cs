@@ -29,7 +29,7 @@ namespace DataAccessLayer.Infrastructure
             {
                 if (propriedade.Name != "ID")
                 {
-                    if ((string)propriedade.GetValue(item) == "" || propriedade.GetValue(item) == null)
+                    if (propriedade.GetValue(item) == "" || propriedade.GetValue(item) == null)
                     {
                         command.Parameters.AddWithValue("@" + propriedade.Name, DBNull.Value);
                     }
@@ -44,6 +44,7 @@ namespace DataAccessLayer.Infrastructure
         private static string GetInsertFields(bool isParameters)
         {
             StringBuilder builder = new StringBuilder();
+
             foreach (var item in typeof(T).GetProperties())
             {
                 if (item.Name != "ID")

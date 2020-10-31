@@ -19,12 +19,12 @@ namespace BusinessLogicalLayer.BLL
             _employeeDAL = new EmployeeDAL();
         }
 
-        public Response Register(Employee employee)
+        public Response Register(Employee employee, string password2)
         {
-            Response result = Validate(employee);
+            employee.CPF = employee.CPF.RemoveMaskCPF();
+            Response result = Validate(employee, password2);
             if (!result.Success)
                 return result;
-
 
             Response resultInsert = _employeeDAL.Insert(employee);
             if (!resultInsert.Success)
@@ -35,9 +35,9 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Funcionário cadastrado com sucesso!");
         }
 
-        public Response Update(Employee employee)
+        public Response Update(Employee employee, string password2)
         {
-            Response result = Validate(employee);
+            Response result = Validate(employee, password2);
             if (!result.Success)
                 return result;
 
@@ -78,7 +78,7 @@ namespace BusinessLogicalLayer.BLL
             return _employeeDAL.GetByRg(rg);
         }
 
-        private Response Validate(Employee employee)
+        private Response Validate(Employee employee, string passaword2)
         {
             try
             {
@@ -88,6 +88,7 @@ namespace BusinessLogicalLayer.BLL
                 ValidateCpf(employee.CPF, employee.ID, validator);
                 ValidateName(employee.Name, validator);
                 ValidatePhone(employee.Phone, validator);
+                ValidatePassword(employee.Password, passaword2, validator);
 
                 return validator.Validate();
 
@@ -113,7 +114,7 @@ namespace BusinessLogicalLayer.BLL
             {
                 validator.AddError("Email deve ser informado!");
             }
-            else if (email.IsValidEmail())
+            else if (!email.IsValidEmail())
             {
                 validator.AddError("Email inválido!");
             }
@@ -123,17 +124,16 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        private static void ValidatePhone(string phone, Validator validator)
+        private void ValidatePhone(string phone, Validator validator)
         {
             if (phone.IsNullOrWhiteSpace())
             {
                 validator.AddError("Telefone deve ser informado!");
             }
-            else if (phone.IsValidPhone())
+            else if (!phone.IsValidPhone())
             {
                 validator.AddError("Telefone inválido!");
             }
-            
         }
 
         private void ValidateRg(string rg, int id, Validator validator)
@@ -166,7 +166,7 @@ namespace BusinessLogicalLayer.BLL
             {
                 validator.AddError("CPF deve conter 11 caracteres!");
             }
-            else if (cpf.IsValidCPF())
+            else if (!cpf.IsValidCPF())
             {
                 validator.AddError("CPF inválido!");
             }
@@ -176,15 +176,31 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        private static void ValidateName(string name, Validator validator)
+        private void ValidateName(string name, Validator validator)
         {
             if (name.IsNullOrWhiteSpace())
             {
                 validator.AddError("Nome deve ser informado!");
             }
-            else if (name.IsValidName())
+            else if (!name.IsValidName())
             {
                 validator.AddError("Nome completo deve ser informado!");
+            }
+        }
+
+        public void ValidatePassword(string password1, string password2, Validator validator)
+        {
+            if (password1.IsNullOrWhiteSpace() || password2.IsNullOrWhiteSpace())
+            {
+                validator.AddError("A senha deve ser informada.");
+            }
+            else if (password1.Length < 7)
+            {
+                validator.AddError("A senha deve conter no mínimo 8 caracteres.");
+            }
+            else if (password1 != password2)
+            {
+                validator.AddError("As senhas devem ser iguais.");
             }
         }
     }
