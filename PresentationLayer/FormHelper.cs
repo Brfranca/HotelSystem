@@ -40,13 +40,13 @@ namespace PresentationLayer
                     ((RichTextBox)control.Controls[i]).Clear();
                 }
                 // LIMPA A LABEL DE ID
-                //else if (control.Controls[i] is Label)
-                //{
-                //    if (control.Controls[i].Name.ToString() == "lblID")
-                //    {
-                //        ((Label)control.Controls[i]).Text = "";
-                //    }
-                //}
+                else if (control.Controls[i] is Label)
+                {
+                    if (control.Controls[i].Name.ToString() == "lblCliIdGet")
+                    {
+                        ((Label)control.Controls[i]).Text = "";
+                    }
+                }
             }
         }
 

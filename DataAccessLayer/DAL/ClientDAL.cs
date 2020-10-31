@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using BusinessLogicalLayer.Extentions;
+using Common;
 using DataAccessLayer.DAL;
 using DataAccessLayer.Infrastructure;
 using Entities;
@@ -10,6 +11,7 @@ namespace DataAccessLayer
     {
         public QueryResponse<Client> GetByCpf(string cpf)
         {
+            cpf = cpf.RemoveMaskCPF();
             DbCommand command = DbFactory.GetCurrentCommand();
             command.CommandText = $"{_select} WHERE CPF = @CPF";
             command.Parameters.AddWithValue("@CPF", cpf);
