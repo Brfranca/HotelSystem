@@ -1,4 +1,5 @@
 ﻿using BusinessLogicalLayer.BLL;
+using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using Entities.Enums;
@@ -16,7 +17,9 @@ namespace PresentationLayer
 {
     public partial class FormRegisterEmployee : Form
     {
-        EmployeeBLL _employeeBLL;
+        private EmployeeBLL _employeeBLL;
+        private List<Employee> _employeeGrid;
+
         public FormRegisterEmployee()
         {
             InitializeComponent();
@@ -26,6 +29,8 @@ namespace PresentationLayer
         private void FormRegisterEmployee_Load(object sender, EventArgs e)
         {
             cboEmployeePosition.DataSource = Enum.GetValues(typeof(EmployeeType));
+            UpdateGrid();
+
         }
 
         private void txtEmployeeSearchName_Click(object sender, EventArgs e)
@@ -72,6 +77,49 @@ namespace PresentationLayer
             Response response = _employeeBLL.Register(employee, txtEmployeePassword2.Text);
 
             MessageBox.Show(response.Message);
+            if (response.Success)
+            {
+                UpdateGrid();
+            }
+        }
+
+        private void UpdateGrid()
+        {
+            dgvEmployee.Rows.Clear();
+            QueryResponse<List<Employee>> response = _employeeBLL.GetAll();
+
+            if (!response.Success)
+            {
+                MessageBox.Show(response.Message);
+                return;
+            }
+            _employeeGrid = new List<Employee>(response.Data);
+
+            InsertGrid(_employeeGrid);
+        }
+
+        private void InsertGrid(List<Employee> employees)
+        {
+            foreach (var item in employees)
+            {
+                dgvEmployee.Rows.Add(item.Name, item.CPF.InsertMaskCPF(), item.Phone, item.Email, item.EmployeeType);
+            }
+        }
+
+        private void txtEmployeeSearchName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmployeeSearchName.Text.Length > 0)
+            {
+                List<Employee> employeeCustomerFiltered = new List<Employee>();
+                employeeCustomerFiltered.AddRange(_employeeGrid.Where(x => x.Name.ToLower().Contains(txtEmployeeSearchName.Text.ToLower())));
+                dgvEmployee.Rows.Clear();
+
+                InsertGrid(employeeCustomerFiltered);
+            }
+            else
+            {
+                InsertGrid(_employeeGrid);
+            }
         }
     }
 }
