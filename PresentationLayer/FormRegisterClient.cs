@@ -144,6 +144,7 @@ namespace PresentationLayer
         private void btnClientClear_Click(object sender, EventArgs e)
         {
             FormHelper.ClearForm(this);
+
             if (btnClientRegister.Text == "Editar")
             {
                 btnClientRegister.Text = "Cadastrar";

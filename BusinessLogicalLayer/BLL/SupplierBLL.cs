@@ -77,7 +77,7 @@ namespace BusinessLogicalLayer.BLL
                 Validator validator = new Validator();
                 ValidateEmail(supplier.Email, supplier.ID, validator);
                 ValidateCnpj(supplier.CNPJ, supplier.ID, validator);
-                ValidateContractName(supplier.ContractName, validator);
+                ValidateContractName(supplier.ContactName, validator);
                 ValidateCompanyName(supplier.CompanyName, validator);
 
                 return validator.Validate();
@@ -119,15 +119,15 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        private void ValidateContractName(string contractName, Validator validator)
+        private void ValidateContractName(string contactName, Validator validator)
         {
-            if (contractName.IsNullOrWhiteSpace())
+            if (contactName.IsNullOrWhiteSpace())
             {
-                validator.AddError("O nome do contrato deve ser informado");
+                validator.AddError("O nome para contato deve ser informado");
             }
-            else if (contractName.IsValidName())
+            else if (!contactName.IsValidName())
             {
-                validator.AddError("O nome inválido!");
+                validator.AddError("O nome é inválido!");
             }
         }
 

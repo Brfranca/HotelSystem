@@ -46,6 +46,11 @@ namespace PresentationLayer
                     {
                         ((Label)control.Controls[i]).Text = "";
                     }
+                    else if (control.Controls[i].Name.ToString() == "lblSupIdGet")
+                    {
+                        ((Label)control.Controls[i]).Text = "";
+                    }
+                   
                 }
             }
         }

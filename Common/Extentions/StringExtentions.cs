@@ -114,6 +114,11 @@ namespace BusinessLogicalLayer.Extentions
             return cpf.Replace(".", "").Replace("-", "");
         }
 
+        public static string RemoveMaskCNPJ(this string cnpj)
+        {
+            return cnpj.Replace(".", "").Replace("-", "").Replace("/", "");
+        }
+
         public static string InsertMaskCPF(this string cpf)
         {
             return cpf.Insert(3, ".").Insert(7, ".").Insert(11,"-");
