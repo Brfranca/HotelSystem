@@ -54,21 +54,21 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 if (response.Success)
                 {
-                    FormHelper.ClearForm(this);
+                    this.ClearForm();
                     UpdateGrid();
                 }
             }
 
             else if (btnClientRegister.Text == "Editar")
             {
-                client.ID = Convert.ToInt32(lblCliIdGet.Text);
+                client.ID = Convert.ToInt32(lblID.Text);
                 Response response = _clientBLL.Update(client);
                 MessageBox.Show(response.Message);
                 btnClientRegister.Text = "Cadastrar";
                 txtClientRG.Enabled = true;
                 txtClientCPF.Enabled = true;
                 btnClientDelete.Visible = false;
-                FormHelper.ClearForm(this);
+                this.ClearForm();
                 UpdateGrid();
             }
         }
@@ -110,7 +110,7 @@ namespace PresentationLayer
             txtClientPhone1.Text = response.Data.Phone1;
             txtClientPhone2.Text = response.Data.Phone2;
             txtClientRG.Text = response.Data.RG;
-            lblCliIdGet.Text = response.Data.ID.ToString();
+            lblID.Text = response.Data.ID.ToString();
             txtClientRG.Enabled = false;
             txtClientCPF.Enabled = false;
 
@@ -120,10 +120,10 @@ namespace PresentationLayer
         private void btnClientDelete_Click(object sender, EventArgs e)
         {
             Client client = CreateClient();
-            client.ID = Convert.ToInt32(lblCliIdGet.Text);
+            client.ID = Convert.ToInt32(lblID.Text);
             Response response = _clientBLL.Delete(client);
             MessageBox.Show(response.Message);
-            FormHelper.ClearForm(this);
+            this.ClearForm();
             UpdateGrid();
             txtClientRG.Enabled = true;
             txtClientCPF.Enabled = true;
@@ -143,7 +143,7 @@ namespace PresentationLayer
 
         private void btnClientClear_Click(object sender, EventArgs e)
         {
-            FormHelper.ClearForm(this);
+            this.ClearForm();
             if (btnClientRegister.Text == "Editar")
             {
                 btnClientRegister.Text = "Cadastrar";

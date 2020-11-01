@@ -36,7 +36,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterClient));
             this.lblCadID = new System.Windows.Forms.Label();
             this.lblConsCliCod = new System.Windows.Forms.Label();
-            this.btnClientSearch = new System.Windows.Forms.Button();
             this.lblConsCliNome = new System.Windows.Forms.Label();
             this.lblConsultar = new System.Windows.Forms.Label();
             this.lblCadastrar = new System.Windows.Forms.Label();
@@ -71,7 +70,7 @@
             this.txtClientSearchCPF = new System.Windows.Forms.TextBox();
             this.txtClientPhone1 = new System.Windows.Forms.TextBox();
             this.picClientRefresh = new System.Windows.Forms.PictureBox();
-            this.lblCliIdGet = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClientClose)).BeginInit();
             this.pnlClientTopBar.SuspendLayout();
@@ -103,23 +102,6 @@
             this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
             this.lblConsCliCod.TabIndex = 152;
             this.lblConsCliCod.Text = "CPF";
-            // 
-            // btnClientSearch
-            // 
-            this.btnClientSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnClientSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClientSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnClientSearch.FlatAppearance.BorderSize = 3;
-            this.btnClientSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientSearch.ForeColor = System.Drawing.Color.White;
-            this.btnClientSearch.Location = new System.Drawing.Point(942, 102);
-            this.btnClientSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClientSearch.Name = "btnClientSearch";
-            this.btnClientSearch.Size = new System.Drawing.Size(127, 45);
-            this.btnClientSearch.TabIndex = 154;
-            this.btnClientSearch.Text = "Pesquisar";
-            this.btnClientSearch.UseVisualStyleBackColor = false;
             // 
             // lblConsCliNome
             // 
@@ -601,18 +583,17 @@
             this.picClientRefresh.TabStop = false;
             this.picClientRefresh.Click += new System.EventHandler(this.picClientRefresh_Click);
             // 
-            // lblCliIdGet
+            // lblID
             // 
-            this.lblCliIdGet.AutoSize = true;
-            this.lblCliIdGet.BackColor = System.Drawing.Color.Transparent;
-            this.lblCliIdGet.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCliIdGet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCliIdGet.Location = new System.Drawing.Point(289, 97);
-            this.lblCliIdGet.Name = "lblCliIdGet";
-            this.lblCliIdGet.Size = new System.Drawing.Size(28, 23);
-            this.lblCliIdGet.TabIndex = 193;
-            this.lblCliIdGet.Text = "ID";
-            this.lblCliIdGet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblID.AutoSize = true;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblID.Location = new System.Drawing.Point(289, 97);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 23);
+            this.lblID.TabIndex = 193;
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormRegisterClient
             // 
@@ -620,7 +601,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1100, 610);
-            this.Controls.Add(this.lblCliIdGet);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.picClientRefresh);
             this.Controls.Add(this.pnlClientCPF);
             this.Controls.Add(this.txtClientSearchCPF);
@@ -632,7 +613,6 @@
             this.Controls.Add(this.btnClientNew);
             this.Controls.Add(this.lblCadID);
             this.Controls.Add(this.lblConsCliCod);
-            this.Controls.Add(this.btnClientSearch);
             this.Controls.Add(this.lblConsCliNome);
             this.Controls.Add(this.lblConsultar);
             this.Controls.Add(this.lblCadastrar);
@@ -672,7 +652,6 @@
         #endregion
         private System.Windows.Forms.Label lblCadID;
         private System.Windows.Forms.Label lblConsCliCod;
-        private System.Windows.Forms.Button btnClientSearch;
         private System.Windows.Forms.Label lblConsCliNome;
         private System.Windows.Forms.Label lblConsultar;
         private System.Windows.Forms.Label lblCadastrar;
@@ -707,6 +686,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.PictureBox picClientRefresh;
-        private System.Windows.Forms.Label lblCliIdGet;
+        private System.Windows.Forms.Label lblID;
     }
 }

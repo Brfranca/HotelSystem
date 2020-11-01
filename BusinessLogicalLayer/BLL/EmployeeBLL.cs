@@ -38,6 +38,7 @@ namespace BusinessLogicalLayer.BLL
 
         public Response Update(Employee employee, string password2)
         {
+            employee.CPF = employee.CPF.RemoveMaskCPF();
             Response result = Validate(employee, password2);
             if (!result.Success)
                 return result;

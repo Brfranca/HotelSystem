@@ -8,10 +8,10 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public class FormHelper
+    public static class FormHelper
     {
         // MÉTODO RESPONSÁVEL POR REALIZAR A LIMPEZA DOS CAMPOS DO FORMULÁRIO
-        public static void ClearForm(Control control)
+        public static void ClearForm(this Control control)
         {
             for (int i = 0; i < control.Controls.Count; i++)
             {
@@ -42,7 +42,7 @@ namespace PresentationLayer
                 // LIMPA A LABEL DE ID
                 else if (control.Controls[i] is Label)
                 {
-                    if (control.Controls[i].Name.ToString() == "lblCliIdGet")
+                    if (control.Controls[i].Name.ToString() == "lblID")
                     {
                         ((Label)control.Controls[i]).Text = "";
                     }
