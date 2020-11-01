@@ -1,8 +1,10 @@
 ﻿using BusinessLogicalLayer.BLL;
 using BusinessLogicalLayer.Extentions;
 using Common;
+using Correios.Net;
 using Entities;
 using Entities.Enums;
+using NcMaster;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -110,6 +112,7 @@ namespace PresentationLayer
         {
             if (txtEmployeeSearchName.Text.Length > 0)
             {
+                txtEmployeeSearchCPF.Clear();
                 List<Employee> employeeCustomerFiltered = new List<Employee>();
                 employeeCustomerFiltered.AddRange(_employeeGrid.Where(x => x.Name.ToLower().Contains(txtEmployeeSearchName.Text.ToLower())));
                 dgvEmployee.Rows.Clear();
@@ -118,8 +121,44 @@ namespace PresentationLayer
             }
             else
             {
+                dgvEmployee.Rows.Clear();
                 InsertGrid(_employeeGrid);
             }
+        }
+
+        private void txtEmployeeSearchCPF_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEmployeeSearchCPF.Text.Length > 0)
+            {
+                txtEmployeeSearchName.Clear();
+                List<Employee> employeeCustomerFiltered = new List<Employee>();
+                employeeCustomerFiltered.AddRange(_employeeGrid.Where(x => x.CPF.Contains(txtEmployeeSearchCPF.Text)));
+                dgvEmployee.Rows.Clear();
+
+                InsertGrid(employeeCustomerFiltered);
+            }
+            else
+            {
+                dgvEmployee.Rows.Clear();
+                InsertGrid(_employeeGrid);
+            }
+        }
+
+        private void SearchCEP()
+        {
+            if (!string.IsNullOrWhiteSpace(mktEmployeeCEP.Text))
+            {
+                WebCEP webCEP = new WebCEP(mktEmployeeCEP.Text);
+
+                txtEmployeeCity.Text = webCEP.City;
+                txtEmployeeStreet.Text = webCEP.Street;
+                txtEmployeeDistrict.Text = webCEP.District;
+            }
+        }
+
+        private void mktEmployeeCEP_Leave(object sender, EventArgs e)
+        {
+            SearchCEP();
         }
     }
 }

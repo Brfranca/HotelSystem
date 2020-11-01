@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
@@ -89,6 +90,11 @@ namespace BusinessLogicalLayer.BLL
                 ValidateName(employee.Name, validator);
                 ValidatePhone(employee.Phone, validator);
                 ValidatePassword(employee.Password, passaword2, validator);
+                ValidateCEP(employee.CEP, validator);
+                ValidateCity(employee.City, validator);
+                ValidateStreet(employee.Street, validator);
+                ValidateNumber(employee.Number, validator);
+                ValidateDistrict(employee.District, validator);
 
                 return validator.Validate();
 
@@ -106,7 +112,6 @@ namespace BusinessLogicalLayer.BLL
                 return Response.CreateFailureException("Erro na validação do cliente!", erro);
             }
         }
-
 
         private void ValidateEmail(string email, int id, Validator validator)
         {
@@ -188,7 +193,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        public void ValidatePassword(string password1, string password2, Validator validator)
+        private void ValidatePassword(string password1, string password2, Validator validator)
         {
             if (password1.IsNullOrWhiteSpace() || password2.IsNullOrWhiteSpace())
             {
@@ -201,6 +206,74 @@ namespace BusinessLogicalLayer.BLL
             else if (password1 != password2)
             {
                 validator.AddError("As senhas devem ser iguais.");
+            }
+        }
+
+        private void ValidateCEP(string cep, Validator validator)
+        {
+            if (cep.IsNullOrWhiteSpace())
+            {
+                validator.AddError("CEP deve ser informado.");
+            }
+            else if (!Regex.IsMatch(cep, @"^\d{5}-\d{3}$"))
+            {
+                validator.AddError("CEP inválido.");
+            }
+        }
+
+        private void ValidateStreet(string street, Validator validator)
+        {
+            if (street.IsNullOrWhiteSpace())
+            {
+                validator.AddError("A rua deve ser informada.");
+            }
+            else if (street.Length > 60)
+            {
+                validator.AddError("A rua deve conter no máximo 60 caracteres.");
+            }
+        }
+
+        private void ValidateNumber(string number, Validator validator)
+        {
+            if (number.IsNullOrWhiteSpace())
+            {
+                validator.AddError("A rua deve ser informada.");
+            }
+            else if (!Regex.IsMatch(number, "^[0-9]+$"))
+            {
+                validator.AddError("O Nº deve conter apenas números.");
+            }
+        }
+
+        private void ValidateDistrict(string district, Validator validator)
+        {
+            if (district.IsNullOrWhiteSpace())
+            {
+                validator.AddError("O bairro deve ser informado.");
+            }
+            else if (district.Length > 30)
+            {
+                validator.AddError("O bairro deve conter no máximo 30 caracteres.");
+            }
+            //else if (!Regex.IsMatch(district, @"^[0-9\p{L}\p{M}' \.\-]+$"))
+            //{
+            //    validator.AddError("O bairro deve conter apenas letras e números.");
+            //}
+        }
+
+        private void ValidateCity(string city, Validator validator)
+        {
+            if (city.IsNullOrWhiteSpace())
+            {
+                validator.AddError("A cidade deve ser informada.");
+            }
+            else if (city.Length > 50)
+            {
+                validator.AddError("A cidade deve conter no máximo 50 caracteres.");
+            }
+            else if (!Regex.IsMatch(city, @"^[\p{L} \.\-]+$"))
+            {
+                validator.AddError("A cidade deve conter apenas letras.");
             }
         }
     }
