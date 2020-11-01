@@ -33,26 +33,6 @@ namespace PresentationLayer
             UpdateGrid();
         }
 
-        private void txtEmployeeSearchName_Click(object sender, EventArgs e)
-        {
-            pnlEmployeeName.BackColor = Color.FromArgb(37, 206, 15);
-        }
-
-        private void txtEmployeeSearchName_Leave(object sender, EventArgs e)
-        {
-            pnlEmployeeName.BackColor = Color.Black;
-        }
-
-        private void txtEmployeeSearchCPF_Click(object sender, EventArgs e)
-        {
-            pnlEmployeeCPF.BackColor = Color.FromArgb(37, 206, 15);
-        }
-
-        private void txtEmployeeSearchCPF_Leave(object sender, EventArgs e)
-        {
-            pnlEmployeeCPF.BackColor = Color.Black;
-        }
-
         private void picEmployeeClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -129,22 +109,12 @@ namespace PresentationLayer
             }
         }
 
-        private void txtEmployeeSearchName_TextChanged(object sender, EventArgs e)
-        {
-            FilterGrid(txtEmployeeSearchName, x => x.Name.ToLower().Contains(txtEmployeeSearchName.Text.ToLower()));
-        }
-
-        private void txtEmployeeSearchCPF_TextChanged(object sender, EventArgs e)
-        {
-            FilterGrid(txtEmployeeSearchCPF, x => x.CPF.Contains(txtEmployeeSearchCPF.Text));
-        }
-
         //método que filtra por cpf ou nome a lista da grid. Os parâmetros são um textBox e um função lambda (predicate). 
-        private void FilterGrid(TextBox textBox, Func<Employee, bool> predicate)
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Employee, bool> predicate)
         {
             if (textBox.Text.Length > 0)
             {
-                textBox.Clear();
+                textBox1.Clear();
                 List<Employee> customerFiltered = new List<Employee>();
                 customerFiltered.AddRange(_employeeGrid.Where(predicate));
                 dgvEmployee.Rows.Clear();
@@ -277,6 +247,36 @@ namespace PresentationLayer
         private void picEmployeeRefresh_Click(object sender, EventArgs e)
         {
             UpdateGrid();
+        }
+
+        private void txtEmployeeSearchCPF_Click(object sender, EventArgs e)
+        {
+            pnlEmployeeCPF.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtEmployeeSearchCPF_Leave(object sender, EventArgs e)
+        {
+            pnlEmployeeCPF.BackColor = Color.Black;
+        }
+
+        private void txtEmployeeSearchName_Click(object sender, EventArgs e)
+        {
+            pnlEmployeeName.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtEmployeeSearchName_Leave(object sender, EventArgs e)
+        {
+            pnlEmployeeName.BackColor = Color.Black;
+        }
+
+        private void txtEmployeeSearchName_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtEmployeeSearchName, txtEmployeeSearchCPF, x => x.Name.ToLower().Contains(txtEmployeeSearchName.Text.ToLower()));
+        }
+
+        private void txtEmployeeSearchCPF_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtEmployeeSearchCPF, txtEmployeeSearchName, x => x.CPF.Contains(txtEmployeeSearchCPF.Text));
         }
     }
 }

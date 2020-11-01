@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterEmployee));
             this.btnEmployeeRegister = new System.Windows.Forms.Button();
             this.lblConsCliCod = new System.Windows.Forms.Label();
@@ -77,16 +77,16 @@
             this.btnEmployeeSelect = new System.Windows.Forms.Button();
             this.picEmployeeRefresh = new System.Windows.Forms.PictureBox();
             this.chkEmployeeActive = new System.Windows.Forms.CheckBox();
-            this.txtEmployeeSearchName = new System.Windows.Forms.TextBox();
-            this.pnlEmployeeName = new System.Windows.Forms.Panel();
             this.picEmployeeClose = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.pnlEmployeeTopBar = new System.Windows.Forms.Panel();
-            this.pnlEmployeeCPF = new System.Windows.Forms.Panel();
-            this.txtEmployeeSearchCPF = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtEmployeeSearchName = new System.Windows.Forms.TextBox();
+            this.pnlEmployeeName = new System.Windows.Forms.Panel();
+            this.txtEmployeeSearchCPF = new System.Windows.Forms.TextBox();
+            this.pnlEmployeeCPF = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployeeRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEmployeeClose)).BeginInit();
@@ -178,19 +178,19 @@
             this.dgvEmployee.AllowUserToDeleteRows = false;
             this.dgvEmployee.AllowUserToResizeColumns = false;
             this.dgvEmployee.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvEmployee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvEmployee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmployee.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvEmployee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvEmployee.ColumnHeadersHeight = 29;
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -199,30 +199,30 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEmployee.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEmployee.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgvEmployee.Location = new System.Drawing.Point(370, 176);
             this.dgvEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEmployee.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgvEmployee.RowHeadersVisible = false;
             this.dgvEmployee.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvEmployee.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvEmployee.RowsDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmployee.Size = new System.Drawing.Size(755, 427);
             this.dgvEmployee.TabIndex = 19;
@@ -691,33 +691,6 @@
             this.chkEmployeeActive.Text = "Ativo";
             this.chkEmployeeActive.UseVisualStyleBackColor = false;
             // 
-            // txtEmployeeSearchName
-            // 
-            this.txtEmployeeSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
-            this.txtEmployeeSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmployeeSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeSearchName.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeSearchName.Location = new System.Drawing.Point(374, 120);
-            this.txtEmployeeSearchName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtEmployeeSearchName.MaxLength = 11;
-            this.txtEmployeeSearchName.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtEmployeeSearchName.Name = "txtEmployeeSearchName";
-            this.txtEmployeeSearchName.Size = new System.Drawing.Size(258, 27);
-            this.txtEmployeeSearchName.TabIndex = 16;
-            this.txtEmployeeSearchName.Click += new System.EventHandler(this.txtEmployeeSearchName_Click);
-            this.txtEmployeeSearchName.TextChanged += new System.EventHandler(this.txtEmployeeSearchName_TextChanged);
-            this.txtEmployeeSearchName.Leave += new System.EventHandler(this.txtEmployeeSearchName_Leave);
-            // 
-            // pnlEmployeeName
-            // 
-            this.pnlEmployeeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlEmployeeName.Location = new System.Drawing.Point(369, 141);
-            this.pnlEmployeeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlEmployeeName.MaximumSize = new System.Drawing.Size(564, 1);
-            this.pnlEmployeeName.Name = "pnlEmployeeName";
-            this.pnlEmployeeName.Size = new System.Drawing.Size(270, 1);
-            this.pnlEmployeeName.TabIndex = 221;
-            // 
             // picEmployeeClose
             // 
             this.picEmployeeClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -770,33 +743,6 @@
             this.pnlEmployeeTopBar.Size = new System.Drawing.Size(1156, 40);
             this.pnlEmployeeTopBar.TabIndex = 212;
             // 
-            // pnlEmployeeCPF
-            // 
-            this.pnlEmployeeCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.pnlEmployeeCPF.Location = new System.Drawing.Point(677, 141);
-            this.pnlEmployeeCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlEmployeeCPF.MaximumSize = new System.Drawing.Size(564, 1);
-            this.pnlEmployeeCPF.Name = "pnlEmployeeCPF";
-            this.pnlEmployeeCPF.Size = new System.Drawing.Size(206, 1);
-            this.pnlEmployeeCPF.TabIndex = 222;
-            // 
-            // txtEmployeeSearchCPF
-            // 
-            this.txtEmployeeSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
-            this.txtEmployeeSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmployeeSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeSearchCPF.ForeColor = System.Drawing.Color.Black;
-            this.txtEmployeeSearchCPF.Location = new System.Drawing.Point(681, 120);
-            this.txtEmployeeSearchCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.txtEmployeeSearchCPF.MaxLength = 11;
-            this.txtEmployeeSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtEmployeeSearchCPF.Name = "txtEmployeeSearchCPF";
-            this.txtEmployeeSearchCPF.Size = new System.Drawing.Size(188, 27);
-            this.txtEmployeeSearchCPF.TabIndex = 17;
-            this.txtEmployeeSearchCPF.Click += new System.EventHandler(this.txtEmployeeSearchCPF_Click);
-            this.txtEmployeeSearchCPF.TextChanged += new System.EventHandler(this.txtEmployeeSearchCPF_TextChanged);
-            this.txtEmployeeSearchCPF.Leave += new System.EventHandler(this.txtEmployeeSearchCPF_Leave);
-            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -822,16 +768,72 @@
             this.label7.Text = "ID:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtEmployeeSearchName
+            // 
+            this.txtEmployeeSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtEmployeeSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmployeeSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeSearchName.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeSearchName.Location = new System.Drawing.Point(376, 120);
+            this.txtEmployeeSearchName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeSearchName.MaxLength = 11;
+            this.txtEmployeeSearchName.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtEmployeeSearchName.Name = "txtEmployeeSearchName";
+            this.txtEmployeeSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtEmployeeSearchName.TabIndex = 226;
+            this.txtEmployeeSearchName.Click += new System.EventHandler(this.txtEmployeeSearchName_Click);
+            this.txtEmployeeSearchName.TextChanged += new System.EventHandler(this.txtEmployeeSearchName_TextChanged);
+            this.txtEmployeeSearchName.Leave += new System.EventHandler(this.txtEmployeeSearchName_Leave);
+            // 
+            // pnlEmployeeName
+            // 
+            this.pnlEmployeeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlEmployeeName.Location = new System.Drawing.Point(372, 141);
+            this.pnlEmployeeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlEmployeeName.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlEmployeeName.Name = "pnlEmployeeName";
+            this.pnlEmployeeName.Size = new System.Drawing.Size(270, 1);
+            this.pnlEmployeeName.TabIndex = 227;
+            // 
+            // txtEmployeeSearchCPF
+            // 
+            this.txtEmployeeSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtEmployeeSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmployeeSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeSearchCPF.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeSearchCPF.Location = new System.Drawing.Point(682, 120);
+            this.txtEmployeeSearchCPF.Margin = new System.Windows.Forms.Padding(0);
+            this.txtEmployeeSearchCPF.MaxLength = 11;
+            this.txtEmployeeSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtEmployeeSearchCPF.Name = "txtEmployeeSearchCPF";
+            this.txtEmployeeSearchCPF.Size = new System.Drawing.Size(191, 27);
+            this.txtEmployeeSearchCPF.TabIndex = 228;
+            this.txtEmployeeSearchCPF.Click += new System.EventHandler(this.txtEmployeeSearchCPF_Click);
+            this.txtEmployeeSearchCPF.TextChanged += new System.EventHandler(this.txtEmployeeSearchCPF_TextChanged);
+            this.txtEmployeeSearchCPF.Leave += new System.EventHandler(this.txtEmployeeSearchCPF_Leave);
+            // 
+            // pnlEmployeeCPF
+            // 
+            this.pnlEmployeeCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlEmployeeCPF.Location = new System.Drawing.Point(676, 141);
+            this.pnlEmployeeCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlEmployeeCPF.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlEmployeeCPF.Name = "pnlEmployeeCPF";
+            this.pnlEmployeeCPF.Size = new System.Drawing.Size(206, 1);
+            this.pnlEmployeeCPF.TabIndex = 229;
+            // 
             // FormRegisterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1156, 699);
+            this.Controls.Add(this.pnlEmployeeCPF);
+            this.Controls.Add(this.txtEmployeeSearchCPF);
+            this.Controls.Add(this.pnlEmployeeName);
+            this.Controls.Add(this.txtEmployeeSearchName);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pnlEmployeeCPF);
-            this.Controls.Add(this.pnlEmployeeName);
             this.Controls.Add(this.chkEmployeeActive);
             this.Controls.Add(this.picEmployeeRefresh);
             this.Controls.Add(this.btnEmployeeDelete);
@@ -840,8 +842,6 @@
             this.Controls.Add(this.txtEmployeeDistrict);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pnlEmployeeTopBar);
-            this.Controls.Add(this.txtEmployeeSearchCPF);
-            this.Controls.Add(this.txtEmployeeSearchName);
             this.Controls.Add(this.cboEmployeePosition);
             this.Controls.Add(this.mktEmployeeCEP);
             this.Controls.Add(this.lblCadPassFun2);
@@ -930,14 +930,10 @@
         private System.Windows.Forms.Button btnEmployeeSelect;
         private System.Windows.Forms.PictureBox picEmployeeRefresh;
         private System.Windows.Forms.CheckBox chkEmployeeActive;
-        private System.Windows.Forms.TextBox txtEmployeeSearchName;
-        private System.Windows.Forms.Panel pnlEmployeeName;
         private System.Windows.Forms.PictureBox picEmployeeClose;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Panel pnlEmployeeTopBar;
-        private System.Windows.Forms.Panel pnlEmployeeCPF;
-        private System.Windows.Forms.TextBox txtEmployeeSearchCPF;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -945,5 +941,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox txtEmployeeSearchName;
+        private System.Windows.Forms.Panel pnlEmployeeName;
+        private System.Windows.Forms.TextBox txtEmployeeSearchCPF;
+        private System.Windows.Forms.Panel pnlEmployeeCPF;
     }
 }
