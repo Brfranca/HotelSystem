@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using BusinessLogicalLayer.Extentions;
+using Common;
 using DataAccessLayer.Infrastructure;
 using Entities;
 using System;
@@ -14,6 +15,7 @@ namespace DataAccessLayer.DAL
     {
         public QueryResponse<Supplier> GetByCnpj(string cnpj)
         {
+            cnpj = cnpj.RemoveMaskCNPJ();
             DbCommand command = DbFactory.GetCurrentCommand();
             command.CommandText = $"{_select} WHERE CNPJ = @CNPJ";
             command.Parameters.AddWithValue("@CNPJ", cnpj);
