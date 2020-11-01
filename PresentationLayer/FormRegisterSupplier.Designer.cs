@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterSupplier));
             this.lblCadID = new System.Windows.Forms.Label();
             this.lblCadastrar = new System.Windows.Forms.Label();
@@ -70,13 +70,13 @@
             this.picSupplierRefresh = new System.Windows.Forms.PictureBox();
             this.btnSupplierDelete = new System.Windows.Forms.Button();
             this.lblConsSupCod = new System.Windows.Forms.Label();
-            this.btnSupplierSearch = new System.Windows.Forms.Button();
             this.lblConsSupNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlSuppCNPJ = new System.Windows.Forms.Panel();
             this.txtSuppSearchCNPJ = new System.Windows.Forms.TextBox();
             this.pnlSuppName = new System.Windows.Forms.Panel();
             this.txtSuppSearchName = new System.Windows.Forms.TextBox();
+            this.btnSupplierSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSupplierClose)).BeginInit();
@@ -195,51 +195,52 @@
             // 
             this.dgvSuppliers.AllowUserToAddRows = false;
             this.dgvSuppliers.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvSuppliers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvSuppliers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvSuppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSuppliers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSuppliers.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvSuppliers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSuppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSuppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSuppliers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCompanyName,
             this.ColumnPhone,
             this.ColumnEmail,
             this.ColumnCnpj});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSuppliers.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSuppliers.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvSuppliers.Location = new System.Drawing.Point(396, 225);
             this.dgvSuppliers.Name = "dgvSuppliers";
             this.dgvSuppliers.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSuppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSuppliers.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvSuppliers.RowHeadersVisible = false;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvSuppliers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSuppliers.Size = new System.Drawing.Size(659, 267);
             this.dgvSuppliers.TabIndex = 50;
+            this.dgvSuppliers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellClick);
             this.dgvSuppliers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliers_CellDoubleClick);
             // 
             // ColumnCompanyName
@@ -363,7 +364,7 @@
             this.txtSupplierCnpj.Mask = "00,000,000/0000-00";
             this.txtSupplierCnpj.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSupplierCnpj.Name = "txtSupplierCnpj";
-            this.txtSupplierCnpj.Size = new System.Drawing.Size(151, 24);
+            this.txtSupplierCnpj.Size = new System.Drawing.Size(151, 22);
             this.txtSupplierCnpj.TabIndex = 7;
             // 
             // pnlCadastrar
@@ -529,7 +530,7 @@
             this.btnSupplierDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplierDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplierDelete.ForeColor = System.Drawing.Color.White;
-            this.btnSupplierDelete.Location = new System.Drawing.Point(841, 526);
+            this.btnSupplierDelete.Location = new System.Drawing.Point(687, 526);
             this.btnSupplierDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSupplierDelete.Name = "btnSupplierDelete";
             this.btnSupplierDelete.Size = new System.Drawing.Size(138, 47);
@@ -549,23 +550,6 @@
             this.lblConsSupCod.Size = new System.Drawing.Size(43, 19);
             this.lblConsSupCod.TabIndex = 198;
             this.lblConsSupCod.Text = "CNPJ";
-            // 
-            // btnSupplierSearch
-            // 
-            this.btnSupplierSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnSupplierSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSupplierSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(89)))), ((int)(((byte)(82)))));
-            this.btnSupplierSearch.FlatAppearance.BorderSize = 3;
-            this.btnSupplierSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupplierSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupplierSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSupplierSearch.Location = new System.Drawing.Point(959, 117);
-            this.btnSupplierSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSupplierSearch.Name = "btnSupplierSearch";
-            this.btnSupplierSearch.Size = new System.Drawing.Size(127, 45);
-            this.btnSupplierSearch.TabIndex = 199;
-            this.btnSupplierSearch.Text = "Pesquisar";
-            this.btnSupplierSearch.UseVisualStyleBackColor = false;
             // 
             // lblConsSupNome
             // 
@@ -616,6 +600,7 @@
             this.txtSuppSearchCNPJ.Size = new System.Drawing.Size(191, 22);
             this.txtSuppSearchCNPJ.TabIndex = 203;
             this.txtSuppSearchCNPJ.Click += new System.EventHandler(this.txtSuppSearchCNPJ_Click);
+            this.txtSuppSearchCNPJ.TextChanged += new System.EventHandler(this.txtSuppSearchCNPJ_TextChanged);
             this.txtSuppSearchCNPJ.Leave += new System.EventHandler(this.txtSuppSearchCNPJ_Leave);
             // 
             // pnlSuppName
@@ -643,19 +628,38 @@
             this.txtSuppSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtSuppSearchName.TabIndex = 201;
             this.txtSuppSearchName.Click += new System.EventHandler(this.txtSuppSearchName_Click);
+            this.txtSuppSearchName.TextChanged += new System.EventHandler(this.txtSuppSearchName_TextChanged);
             this.txtSuppSearchName.Leave += new System.EventHandler(this.txtSuppSearchName_Leave);
+            // 
+            // btnSupplierSelect
+            // 
+            this.btnSupplierSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnSupplierSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSupplierSelect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnSupplierSelect.FlatAppearance.BorderSize = 3;
+            this.btnSupplierSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplierSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplierSelect.ForeColor = System.Drawing.Color.White;
+            this.btnSupplierSelect.Location = new System.Drawing.Point(848, 526);
+            this.btnSupplierSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSupplierSelect.Name = "btnSupplierSelect";
+            this.btnSupplierSelect.Size = new System.Drawing.Size(138, 47);
+            this.btnSupplierSelect.TabIndex = 204;
+            this.btnSupplierSelect.Text = "Selecionar";
+            this.btnSupplierSelect.UseVisualStyleBackColor = false;
+            this.btnSupplierSelect.Click += new System.EventHandler(this.btnSupplierSelect_Click);
             // 
             // FormRegisterSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 610);
+            this.Controls.Add(this.btnSupplierSelect);
             this.Controls.Add(this.pnlSuppCNPJ);
             this.Controls.Add(this.txtSuppSearchCNPJ);
             this.Controls.Add(this.pnlSuppName);
             this.Controls.Add(this.txtSuppSearchName);
             this.Controls.Add(this.lblConsSupCod);
-            this.Controls.Add(this.btnSupplierSearch);
             this.Controls.Add(this.lblConsSupNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.picSupplierRefresh);
@@ -714,7 +718,6 @@
         private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Button btnSupplierClear;
         private System.Windows.Forms.Label lblConsSupCod;
-        private System.Windows.Forms.Button btnSupplierSearch;
         private System.Windows.Forms.Label lblConsSupNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
@@ -727,5 +730,6 @@
         private System.Windows.Forms.TextBox txtSuppSearchName;
         private System.Windows.Forms.Label lblSupIdGet;
         private System.Windows.Forms.PictureBox picSupplierClose;
+        private System.Windows.Forms.Button btnSupplierSelect;
     }
 }

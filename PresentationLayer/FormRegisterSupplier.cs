@@ -17,6 +17,8 @@ namespace PresentationLayer
     public partial class FormRegisterSupplier : Form
     {
         private readonly SupplierBLL _supplierBLL;
+        private List<Supplier> _supplierGrid;
+        private int _currentRowGrid;
         public FormRegisterSupplier()
         {
             InitializeComponent();
@@ -86,16 +88,15 @@ namespace PresentationLayer
         {
             dgvSuppliers.Rows.Clear();
             QueryResponse<List<Supplier>> response = _supplierBLL.GetAll();
+
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);
                 return;
             }
+            _supplierGrid = new List<Supplier>(response.Data);
 
-            foreach (var item in response.Data)
-            {
-                dgvSuppliers.Rows.Add(item.CompanyName, item.Phone, item.Email, item.CNPJ);
-            }
+            InsertGrid(_supplierGrid);
         }
 
         private Supplier CreateSupplier()
@@ -111,19 +112,7 @@ namespace PresentationLayer
 
         private void dgvSuppliers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnSupplierRegister.Text = "Editar";
-            string cnpj = (string)dgvSuppliers.Rows[e.RowIndex].Cells[3].Value;
-            QueryResponse<Supplier> response = _supplierBLL.GetByCnpj(cnpj);
-            txtSupplierCnpj.Text = response.Data.CNPJ;
-            txtSupplierEmail.Text = response.Data.Email;
-            txtSupplierNomeContato.Text = response.Data.ContactName;
-            txtSupplierRazaoSocial.Text = response.Data.CompanyName;
-            txtSupplierTel.Text = response.Data.Phone;
-            lblSupIdGet.Text = response.Data.ID.ToString();
-            txtSupplierCnpj.Enabled = false;
-            txtSupplierRazaoSocial.Enabled = false;
-
-            btnSupplierDelete.Visible = true;
+            SelectDataGrid();
         }
 
         private void btnSupplierDelete_Click(object sender, EventArgs e)
@@ -155,6 +144,82 @@ namespace PresentationLayer
         private void picSupplierRefresh_Click(object sender, EventArgs e)
         {
             UpdateGrid();
+        }
+
+        private void InsertGrid(List<Supplier> suppliers)
+        {
+            foreach (var item in suppliers)
+            {
+                dgvSuppliers.Rows.Add(item.CompanyName, item.Phone, item.Email, item.CNPJ);
+            }
+        }
+
+        private void SelectDataGrid()
+        {
+            if (_currentRowGrid == -1)
+                return;
+
+            string cnpj = (string)dgvSuppliers.Rows[_currentRowGrid].Cells[3].Value;
+            QueryResponse<Supplier> response = _supplierBLL.GetByCnpj(cnpj);
+            if (response.Success)
+            {
+                txtSupplierCnpj.Text = response.Data.CNPJ;
+                txtSupplierEmail.Text = response.Data.Email;
+                txtSupplierNomeContato.Text = response.Data.ContactName;
+                txtSupplierRazaoSocial.Text = response.Data.CompanyName;
+                txtSupplierTel.Text = response.Data.Phone;
+                lblSupIdGet.Text = response.Data.ID.ToString();
+                
+                UpdateComponentsEdit();
+                return;
+            }
+            MessageBox.Show(response.GetAllMessages());
+        }
+
+        private void UpdateComponentsEdit()
+        {
+            btnSupplierRegister.Text = "Editar";
+            txtSupplierCnpj.Enabled = false;
+            txtSupplierRazaoSocial.Enabled = false;
+            btnSupplierDelete.Visible = true;
+        }
+
+        private void dgvSuppliers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
+        }
+
+        private void btnSupplierSelect_Click(object sender, EventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Supplier, bool> predicate)
+        {
+            if (textBox.Text.Length > 0)
+            {
+                textBox1.Clear();
+                List<Supplier> customerFiltered = new List<Supplier>();
+                customerFiltered.AddRange(_supplierGrid.Where(predicate));
+                dgvSuppliers.Rows.Clear();
+
+                InsertGrid(customerFiltered);
+            }
+            else
+            {
+                dgvSuppliers.Rows.Clear();
+                InsertGrid(_supplierGrid);
+            }
+        }
+
+        private void txtSuppSearchName_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtSuppSearchName, txtSuppSearchCNPJ, x => x.CompanyName.ToLower().Contains(txtSuppSearchName.Text.ToLower()));
+        }
+
+        private void txtSuppSearchCNPJ_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtSuppSearchCNPJ, txtSuppSearchName, x => x.CNPJ.Contains(txtSuppSearchCNPJ.Text));
         }
     }
 }

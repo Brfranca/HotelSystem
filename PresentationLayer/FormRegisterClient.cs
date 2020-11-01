@@ -5,6 +5,7 @@ using Entities;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -12,6 +13,8 @@ namespace PresentationLayer
     public partial class FormRegisterClient : Form
     {
         private readonly ClientBLL _clientBLL;
+        private List<Client> _clientGrid;
+        private int _currentRowGrid;
         public FormRegisterClient()
         {
             InitializeComponent();
@@ -64,10 +67,7 @@ namespace PresentationLayer
                 client.ID = Convert.ToInt32(lblID.Text);
                 Response response = _clientBLL.Update(client);
                 MessageBox.Show(response.Message);
-                btnClientRegister.Text = "Cadastrar";
-                txtClientRG.Enabled = true;
-                txtClientCPF.Enabled = true;
-                btnClientDelete.Visible = false;
+                UpdateComponentsRegister();
                 this.ClearForm();
                 UpdateGrid();
             }
@@ -87,34 +87,22 @@ namespace PresentationLayer
         {
             dgvClients.Rows.Clear();
             QueryResponse<List<Client>> response = _clientBLL.GetAll();
+
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);
                 return;
             }
-            foreach (var item in response.Data)
-            {
-                dgvClients.Rows.Add(item.Name, item.CPF.InsertMaskCPF(), item.Phone1, item.Email);
-            }
+            _clientGrid = new List<Client>(response.Data);
+
+            InsertGrid(_clientGrid);
+
+
         }
 
         private void dgvClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnClientRegister.Text = "Editar";
-
-            string cpf = (string)dgvClients.Rows[e.RowIndex].Cells[1].Value;
-            QueryResponse<Client> response = _clientBLL.GetByCpf(cpf);
-            txtClientCPF.Text = response.Data.CPF;
-            txtClientEmail.Text = response.Data.Email;
-            txtClientName.Text = response.Data.Name;
-            txtClientPhone1.Text = response.Data.Phone1;
-            txtClientPhone2.Text = response.Data.Phone2;
-            txtClientRG.Text = response.Data.RG;
-            lblID.Text = response.Data.ID.ToString();
-            txtClientRG.Enabled = false;
-            txtClientCPF.Enabled = false;
-
-            btnClientDelete.Visible = true;
+            SelectDataGrid();
         }
 
         private void btnClientDelete_Click(object sender, EventArgs e)
@@ -146,12 +134,94 @@ namespace PresentationLayer
             this.ClearForm();
             if (btnClientRegister.Text == "Editar")
             {
-                btnClientRegister.Text = "Cadastrar";
-                txtClientRG.Enabled = true;
-                txtClientCPF.Enabled = true;
-                btnClientDelete.Visible = false;
+                UpdateComponentsRegister();
             }
         }
 
+        private void UpdateComponentsRegister()
+        {
+            btnClientRegister.Text = "Cadastrar";
+            txtClientRG.Enabled = true;
+            txtClientCPF.Enabled = true;
+            btnClientDelete.Visible = false;
+        }
+
+        private void UpdateComponentsEdit()
+        {
+            btnClientRegister.Text = "Editar";
+            txtClientRG.Enabled = false;
+            txtClientCPF.Enabled = false;
+            btnClientDelete.Visible = true;
+        }
+
+        private void SelectDataGrid()
+        {
+            if (_currentRowGrid == -1)
+                return;
+
+            string cpf = (string)dgvClients.Rows[_currentRowGrid].Cells[1].Value;
+            QueryResponse<Client> response = _clientBLL.GetByCpf(cpf);
+            if (response.Success)
+            {
+                txtClientCPF.Text = response.Data.CPF;
+                txtClientEmail.Text = response.Data.Email;
+                txtClientName.Text = response.Data.Name;
+                txtClientPhone1.Text = response.Data.Phone1;
+                txtClientPhone2.Text = response.Data.Phone2;
+                txtClientRG.Text = response.Data.RG;
+                lblID.Text = response.Data.ID.ToString();
+
+                UpdateComponentsEdit();
+                return;
+            }
+            MessageBox.Show(response.GetAllMessages());
+        }
+
+
+        private void dgvClients_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
+        }
+
+        private void btnClientNew_Click(object sender, EventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Client, bool> predicate)
+        {
+            if (textBox.Text.Length > 0)
+            {
+                textBox1.Clear();
+                List<Client> customerFiltered = new List<Client>();
+                customerFiltered.AddRange(_clientGrid.Where(predicate));
+                dgvClients.Rows.Clear();
+
+                InsertGrid(customerFiltered);
+            }
+            else
+            {
+                dgvClients.Rows.Clear();
+                InsertGrid(_clientGrid);
+            }
+        }
+
+        private void InsertGrid(List<Client> clients)
+        {
+            foreach (var item in clients)
+            {
+                dgvClients.Rows.Add(item.Name, item.CPF.InsertMaskCPF(), item.Phone1, item.Email);
+            }
+        }
+
+        private void txtClientSearchName_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtClientSearchName, txtClientSearchCPF, x => x.Name.ToLower().Contains(txtClientSearchName.Text.ToLower()));
+        }
+
+        private void txtClientSearchCPF_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtClientSearchCPF, txtClientSearchName, x => x.CPF.Contains(txtClientSearchCPF.Text.ToLower()));
+        }
     }
 }

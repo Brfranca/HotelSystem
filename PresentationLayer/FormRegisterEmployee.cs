@@ -153,7 +153,7 @@ namespace PresentationLayer
         //Pega os dados da grid e passa para os componentes (textBox,...)
         private void SelectDataGrid()
         {
-            if (_currentRowGrid == 0)
+            if (_currentRowGrid == -1)
                 return;
 
             string cpf = (string)dgvEmployee.Rows[_currentRowGrid].Cells[1].Value;
