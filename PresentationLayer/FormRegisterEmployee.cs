@@ -31,6 +31,7 @@ namespace PresentationLayer
         private void FormRegisterEmployee_Load(object sender, EventArgs e)
         {
             cboEmployeePosition.DataSource = Enum.GetValues(typeof(EmployeeType));
+            btnEmployeeDelete.Visible = false;
             UpdateGrid();
 
         }
@@ -160,5 +161,32 @@ namespace PresentationLayer
         {
             SearchCEP();
         }
+
+        private void dgvEmployee_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEmployeeRegister.Text = "Editar";
+            string cpf = (string)dgvEmployee.Rows[e.RowIndex].Cells[1].Value;
+
+            QueryResponse<Employee> response = _employeeBLL.GetByCpf(cpf);
+            mktEmployeeCPF.Text = response.Data.CPF;
+            txtEmployeeEmail.Text = response.Data.Email;
+            txtEmployeeName.Text = response.Data.Name;
+            txtEmployeeRG.Text = response.Data.RG;
+            txtEmployeePhone.Text = response.Data.Phone;
+            cboEmployeePosition.SelectedIndex = (int)response.Data.EmployeeType;
+            mktEmployeeCEP.Text = response.Data.CEP;
+            txtEmployeeCity.Text = response.Data.City;
+            txtEmployeeStreet.Text = response.Data.Street;
+            txtEmployeeNumber.Text = response.Data.Number;
+            txtEmployeeDistrict.Text = response.Data.District;
+            lblEmpIdGet.Text = response.Data.ID.ToString();
+            chkEmployeeActive.Checked = response.Data.Active;
+
+            txtEmployeeRG.Enabled = false;
+            mktEmployeeCPF.Enabled = false;
+
+            btnEmployeeDelete.Visible = true;
+        }
+
     }
 }

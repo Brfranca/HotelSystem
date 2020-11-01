@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using BusinessLogicalLayer.Extentions;
+using Common;
 using DataAccessLayer.Infrastructure;
 using Entities;
 using System;
@@ -22,7 +23,7 @@ namespace DataAccessLayer.DAL
             podendo ser "SqlServerConnection", "OracleServerCOnnection"... dependendo de qual banco de dados 
             está sendo utilizado
             */
-
+            cpf = cpf.RemoveMaskCPF();
             DbCommand command = DbFactory.GetCurrentCommand();
             command.CommandText = $"{_select} WHERE CPF = @CPF";
             command.Parameters.AddWithValue("@CPF", cpf);

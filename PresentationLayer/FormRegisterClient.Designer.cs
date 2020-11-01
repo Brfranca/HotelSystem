@@ -85,9 +85,9 @@
             this.lblCadID.BackColor = System.Drawing.Color.Transparent;
             this.lblCadID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadID.Location = new System.Drawing.Point(275, 97);
+            this.lblCadID.Location = new System.Drawing.Point(263, 97);
             this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(27, 19);
+            this.lblCadID.Size = new System.Drawing.Size(33, 23);
             this.lblCadID.TabIndex = 141;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,7 +100,7 @@
             this.lblConsCliCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliCod.Location = new System.Drawing.Point(673, 97);
             this.lblConsCliCod.Name = "lblConsCliCod";
-            this.lblConsCliCod.Size = new System.Drawing.Size(34, 19);
+            this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
             this.lblConsCliCod.TabIndex = 152;
             this.lblConsCliCod.Text = "CPF";
             // 
@@ -129,7 +129,7 @@
             this.lblConsCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliNome.Location = new System.Drawing.Point(366, 98);
             this.lblConsCliNome.Name = "lblConsCliNome";
-            this.lblConsCliNome.Size = new System.Drawing.Size(122, 19);
+            this.lblConsCliNome.Size = new System.Drawing.Size(145, 23);
             this.lblConsCliNome.TabIndex = 150;
             this.lblConsCliNome.Text = "Nome do Cliente";
             // 
@@ -141,7 +141,7 @@
             this.lblConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsultar.Location = new System.Drawing.Point(364, 60);
             this.lblConsultar.Name = "lblConsultar";
-            this.lblConsultar.Size = new System.Drawing.Size(98, 25);
+            this.lblConsultar.Size = new System.Drawing.Size(125, 32);
             this.lblConsultar.TabIndex = 149;
             this.lblConsultar.Text = "Consultar";
             // 
@@ -153,7 +153,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadastrar.Location = new System.Drawing.Point(18, 60);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
+            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
             this.lblCadastrar.TabIndex = 131;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -165,7 +165,7 @@
             this.lblConsCliCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliCadastrados.Location = new System.Drawing.Point(368, 155);
             this.lblConsCliCadastrados.Name = "lblConsCliCadastrados";
-            this.lblConsCliCadastrados.Size = new System.Drawing.Size(148, 19);
+            this.lblConsCliCadastrados.Size = new System.Drawing.Size(176, 23);
             this.lblConsCliCadastrados.TabIndex = 155;
             this.lblConsCliCadastrados.Text = "Clientes Cadastrados";
             // 
@@ -263,7 +263,7 @@
             this.txtClientCPF.Mask = "000,000,000-00";
             this.txtClientCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientCPF.Name = "txtClientCPF";
-            this.txtClientCPF.Size = new System.Drawing.Size(144, 22);
+            this.txtClientCPF.Size = new System.Drawing.Size(144, 27);
             this.txtClientCPF.TabIndex = 1;
             // 
             // txtClientEmail
@@ -277,7 +277,7 @@
             this.txtClientEmail.MaxLength = 200;
             this.txtClientEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientEmail.Name = "txtClientEmail";
-            this.txtClientEmail.Size = new System.Drawing.Size(303, 22);
+            this.txtClientEmail.Size = new System.Drawing.Size(303, 27);
             this.txtClientEmail.TabIndex = 5;
             // 
             // lblCadCliEmail
@@ -288,7 +288,7 @@
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliEmail.Location = new System.Drawing.Point(20, 266);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(51, 19);
+            this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
             this.lblCadCliEmail.TabIndex = 143;
             this.lblCadCliEmail.Text = "E-mail";
             // 
@@ -303,7 +303,7 @@
             this.txtClientPhone2.MaxLength = 11;
             this.txtClientPhone2.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone2.Name = "txtClientPhone2";
-            this.txtClientPhone2.Size = new System.Drawing.Size(144, 22);
+            this.txtClientPhone2.Size = new System.Drawing.Size(144, 27);
             this.txtClientPhone2.TabIndex = 4;
             // 
             // lblCadCliTel2
@@ -314,7 +314,7 @@
             this.lblCadCliTel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliTel2.Location = new System.Drawing.Point(179, 210);
             this.lblCadCliTel2.Name = "lblCadCliTel2";
-            this.lblCadCliTel2.Size = new System.Drawing.Size(78, 19);
+            this.lblCadCliTel2.Size = new System.Drawing.Size(92, 23);
             this.lblCadCliTel2.TabIndex = 140;
             this.lblCadCliTel2.Text = "Telefone 2";
             // 
@@ -326,7 +326,7 @@
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliTel1.Location = new System.Drawing.Point(20, 210);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(78, 19);
+            this.lblCadCliTel1.Size = new System.Drawing.Size(92, 23);
             this.lblCadCliTel1.TabIndex = 138;
             this.lblCadCliTel1.Text = "Telefone 1";
             // 
@@ -341,7 +341,7 @@
             this.txtClientRG.MaxLength = 15;
             this.txtClientRG.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientRG.Name = "txtClientRG";
-            this.txtClientRG.Size = new System.Drawing.Size(144, 22);
+            this.txtClientRG.Size = new System.Drawing.Size(144, 27);
             this.txtClientRG.TabIndex = 2;
             // 
             // lblCadCliRg
@@ -352,7 +352,7 @@
             this.lblCadCliRg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliRg.Location = new System.Drawing.Point(178, 154);
             this.lblCadCliRg.Name = "lblCadCliRg";
-            this.lblCadCliRg.Size = new System.Drawing.Size(28, 19);
+            this.lblCadCliRg.Size = new System.Drawing.Size(33, 23);
             this.lblCadCliRg.TabIndex = 136;
             this.lblCadCliRg.Text = "RG";
             // 
@@ -364,7 +364,7 @@
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliCpf.Location = new System.Drawing.Point(20, 154);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(34, 19);
+            this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
             this.lblCadCliCpf.TabIndex = 134;
             this.lblCadCliCpf.Text = "CPF";
             // 
@@ -379,7 +379,7 @@
             this.txtClientName.MaxLength = 100;
             this.txtClientName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(303, 22);
+            this.txtClientName.Size = new System.Drawing.Size(303, 27);
             this.txtClientName.TabIndex = 0;
             // 
             // lblCadCliNome
@@ -390,7 +390,7 @@
             this.lblCadCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliNome.Location = new System.Drawing.Point(20, 98);
             this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(50, 19);
+            this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
             this.lblCadCliNome.TabIndex = 132;
             this.lblCadCliNome.Text = "Nome";
             // 
@@ -417,7 +417,7 @@
             this.lblNomeTabela.ForeColor = System.Drawing.Color.White;
             this.lblNomeTabela.Location = new System.Drawing.Point(34, 8);
             this.lblNomeTabela.Name = "lblNomeTabela";
-            this.lblNomeTabela.Size = new System.Drawing.Size(133, 21);
+            this.lblNomeTabela.Size = new System.Drawing.Size(167, 28);
             this.lblNomeTabela.TabIndex = 0;
             this.lblNomeTabela.Text = "Tabela de Clientes";
             // 
@@ -528,7 +528,7 @@
             this.txtClientSearchName.MaxLength = 11;
             this.txtClientSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientSearchName.Name = "txtClientSearchName";
-            this.txtClientSearchName.Size = new System.Drawing.Size(258, 22);
+            this.txtClientSearchName.Size = new System.Drawing.Size(258, 27);
             this.txtClientSearchName.TabIndex = 166;
             this.txtClientSearchName.Click += new System.EventHandler(this.txtClientSearchName_Click);
             this.txtClientSearchName.Leave += new System.EventHandler(this.txtClientSearchName_Leave);
@@ -566,7 +566,7 @@
             this.txtClientSearchCPF.MaxLength = 11;
             this.txtClientSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientSearchCPF.Name = "txtClientSearchCPF";
-            this.txtClientSearchCPF.Size = new System.Drawing.Size(191, 22);
+            this.txtClientSearchCPF.Size = new System.Drawing.Size(191, 27);
             this.txtClientSearchCPF.TabIndex = 168;
             this.txtClientSearchCPF.Click += new System.EventHandler(this.txtClientSearchCPF_Click);
             this.txtClientSearchCPF.Leave += new System.EventHandler(this.txtClientSearchCPF_Leave);
@@ -582,7 +582,7 @@
             this.txtClientPhone1.MaxLength = 11;
             this.txtClientPhone1.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone1.Name = "txtClientPhone1";
-            this.txtClientPhone1.Size = new System.Drawing.Size(144, 22);
+            this.txtClientPhone1.Size = new System.Drawing.Size(144, 27);
             this.txtClientPhone1.TabIndex = 3;
             // 
             // picClientRefresh
@@ -607,15 +607,16 @@
             this.lblCliIdGet.BackColor = System.Drawing.Color.Transparent;
             this.lblCliIdGet.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliIdGet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCliIdGet.Location = new System.Drawing.Point(308, 96);
+            this.lblCliIdGet.Location = new System.Drawing.Point(289, 97);
             this.lblCliIdGet.Name = "lblCliIdGet";
-            this.lblCliIdGet.Size = new System.Drawing.Size(0, 19);
+            this.lblCliIdGet.Size = new System.Drawing.Size(28, 23);
             this.lblCliIdGet.TabIndex = 193;
+            this.lblCliIdGet.Text = "ID";
             this.lblCliIdGet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormRegisterClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1100, 610);
