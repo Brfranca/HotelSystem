@@ -93,7 +93,8 @@ namespace DataAccessLayer.Infrastructure
             {
                 if (propriedade.GetCustomAttribute<NonEditable>() == null)
                 {
-                    if (propriedade.GetValue(item) == null || (string)propriedade.GetValue(item) == "")
+                    //Não pode ter o casting de string!
+                    if (propriedade.GetValue(item) == null || propriedade.GetValue(item) == "")
                     {
                         command.Parameters.AddWithValue("@" + propriedade.Name, DBNull.Value);
                     }
