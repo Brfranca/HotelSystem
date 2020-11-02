@@ -1,10 +1,13 @@
-﻿using System;
+﻿using BusinessLogicalLayer.BLL;
+using PresentationLayer.Load;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,16 +15,29 @@ namespace PresentationLayer
 {
     public partial class FormLogin : Form
     {
+        private readonly EmployeeBLL _employeeBLL;
         public FormLogin()
         {
             InitializeComponent();
+            _employeeBLL = new EmployeeBLL();
+
             picAttencion.Visible = false;
             lblAttencion.Visible = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            var result = Loading.Load(_employeeBLL.Login, txtUser.Text, txtPassword.Text);
+            if (!result.Success)
+            {
+                MessageBox.Show(result.GetAllMessages());
+                return;
+            }
 
+            FormRegisterClient formRegisterClient = new FormRegisterClient();
+            this.Hide();
+            formRegisterClient.ShowDialog();
+            this.Close();
         }
 
         private void txtUser_Click(object sender, EventArgs e)

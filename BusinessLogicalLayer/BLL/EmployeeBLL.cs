@@ -20,6 +20,24 @@ namespace BusinessLogicalLayer.BLL
             _employeeDAL = new EmployeeDAL();
         }
 
+        public Response Login(string email, string password)
+        {
+            if (email.IsNullOrWhiteSpace())
+                return Response.CreateFailure("Usuário deve ser informado!");
+            if (password.IsNullOrWhiteSpace())
+                return Response.CreateFailure("Senha deve ser informado!");
+
+            var employee = _employeeDAL.GetByEmail(email);
+            if ((employee?.Data?.ID ?? 0) == 0)
+                return Response.CreateFailure("Usuário inválido!");
+
+            //Colocar para comparar convertendo a senha em MD5.
+            if (employee.Data.Password != password)
+                return Response.CreateFailure("Senha inválida!");
+
+            return Response.CreateSuccess();
+        }
+
         public Response Register(Employee employee, string password2)
         {
             employee.CPF = employee.CPF.RemoveMaskCPF();

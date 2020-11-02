@@ -68,6 +68,11 @@
     <Compile Include="FormRegisterSupplier.Designer.cs">
       <DependentUpon>FormRegisterSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Load\FormLoad.cs" />
+    <Compile Include="Load\FormLoad.Designer.cs">
+      <DependentUpon>FormLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Load\Loading.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormRegisterClient.cs">
@@ -85,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterSupplier.resx">
       <DependentUpon>FormRegisterSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Load\FormLoad.resx">
+      <DependentUpon>FormLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
