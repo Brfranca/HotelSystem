@@ -18,6 +18,6 @@ namespace Entities
         public string Description { get; set; }
         public double Price { get; set; }
         //public ProductQuantity ProductQuantity { get; set; } precisa ter quantidade na tabela produto?
-        public List<int> SupplierId { get; set; }
+       
     }
 }

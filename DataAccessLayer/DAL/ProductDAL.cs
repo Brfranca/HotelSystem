@@ -10,6 +10,14 @@ namespace DataAccessLayer.DAL
 {
     public class ProductDAL : BaseDAL<Product>, IEntityCRUD<Product>
     {
-               
+        public bool ExistName(string name, int id)
+        {
+            return Exist(name, id, "NAME");
+        }
+
+        public bool ExistDescription(string description, int id)
+        {
+            return Exist(description, id, "DESCRIPTION");
+        }
     }
 }

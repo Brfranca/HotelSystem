@@ -70,6 +70,7 @@ namespace BusinessLogicalLayer.BLL
             Validator validator = new Validator();
             ValidateName(product.Name, product.ID, validator);
             ValidateDescription(product.Description, product.ID, validator);
+            ValidateNameDescription(product.Name, product.Description, product.ID, validator);
 
             return validator.Validate();
         }
@@ -96,6 +97,14 @@ namespace BusinessLogicalLayer.BLL
             else if (description.Length > 100)
             {
                 validator.AddError("A descrição do produto deve conter até 100 caracteres");
+            }
+        }
+
+        private void ValidateNameDescription(string name, string description, int id, Validator validator)
+        {
+            if (_productDAL.ExistName(name, id) && _productDAL.ExistDescription(description, id))
+            {
+                validator.AddError("Produto já cadastrado!");
             }
         }
 
