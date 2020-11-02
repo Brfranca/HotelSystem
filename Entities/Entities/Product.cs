@@ -15,9 +15,9 @@ namespace Entities
         [NonEditable]
         public int ID { get; set; }
         public string Name { get; set; }
-        public int Description { get; set; }
+        public string Description { get; set; }
         public double Price { get; set; }
-        public ProductQuantity ProductQuantity { get; set; }
+        //public ProductQuantity ProductQuantity { get; set; } precisa ter quantidade na tabela produto?
         public List<int> SupplierId { get; set; }
     }
 }

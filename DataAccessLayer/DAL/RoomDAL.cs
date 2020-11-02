@@ -1,6 +1,7 @@
 ﻿using Common;
 using DataAccessLayer.Infrastructure;
 using Entities;
+using System.Collections.Generic;
 using System.Data.Common;
 
 namespace DataAccessLayer.DAL
@@ -14,8 +15,18 @@ namespace DataAccessLayer.DAL
             command.Parameters.AddWithValue("@NUMBER", number);
 
             return new DbExecuter().GetSingleData<Room>(command);
-
         }
+
+        public QueryResponse<List<Room>> GetByAvailability()
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = $"{_select} WHERE AVAILABILITY = @AVAILABILITY";
+            command.Parameters.AddWithValue("@AVAILABILITY", true);
+
+            return new DbExecuter().GetAllData<Room>(command);
+        }
+
+        //rever se método acima funciona
 
         public bool ExistNumber(string number, int id)
         {

@@ -33,6 +33,49 @@ namespace BusinessLogicalLayer.BLL
             //rever pq eu fico chamando o CreateSuccess se ele é chamado dentro do DbExecuter().Execute()
         }
 
+        public Response Update(Room room)
+        {
+            Response result = Validate(room);
+            if (!result.Success)
+                return result;
+
+            Response resultUpdate = _roomDAL.Update(room);
+            if (!resultUpdate.Success)
+                return resultUpdate;
+
+            return Response.CreateSuccess("Quarto atualizado com sucesso!");
+        }
+
+
+        public Response Delete(Room room)
+        {
+            Response resultDelete = _roomDAL.Delete(room);
+            if (!resultDelete.Success)
+                return resultDelete;
+
+            return Response.CreateSuccess("Quarto removido com sucesso!");
+        }
+
+        public QueryResponse<List<Room>> GetAll()
+        {
+            return _roomDAL.GetAll();
+        }
+
+        public QueryResponse<Room> GetById(int id)
+        {
+            return _roomDAL.GetById(id);
+        }
+
+        public QueryResponse<Room> GetByNumber(string number)
+        {
+            return _roomDAL.GetByNumber(number);
+        }
+
+        public QueryResponse<List<Room>> GetByAvailability()
+        {
+            return _roomDAL.GetByAvailability();
+        }
+
         private Response Validate(Room room)
         {
             Validator validator = new Validator();

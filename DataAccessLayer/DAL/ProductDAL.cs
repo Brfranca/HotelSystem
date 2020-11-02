@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Common;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace DataAccessLayer.DAL
 {
     public class ProductDAL : BaseDAL<Product>, IEntityCRUD<Product>
     {
+               
     }
 }

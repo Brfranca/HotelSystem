@@ -48,9 +48,9 @@ namespace BusinessLogicalLayer
         public Response Delete(Client client)
         {
 
-            Response resultInsert = _clienteDALL.Delete(client);
-            if (!resultInsert.Success)
-                return resultInsert;
+            Response resultDelete = _clienteDALL.Delete(client);
+            if (!resultDelete.Success)
+                return resultDelete;
 
             return Response.CreateSuccess("Cliente removido com sucesso!");
         }

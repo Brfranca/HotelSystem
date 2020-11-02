@@ -18,5 +18,7 @@ namespace Entities
         public string RoomFloor { get; set; }
         public RoomType RoomType { get; set; }
         public double PricePerDay { get; set; }
+        public bool Availability { get; set; }
+
     }
 }
