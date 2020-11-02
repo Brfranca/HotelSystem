@@ -20,6 +20,24 @@ namespace BusinessLogicalLayer.BLL
             _employeeDAL = new EmployeeDAL();
         }
 
+        public Response Login(string email, string password)
+        {
+            if (email.IsNullOrWhiteSpace())
+                return Response.CreateFailure("Usuário deve ser informado!");
+            if (password.IsNullOrWhiteSpace())
+                return Response.CreateFailure("Senha deve ser informado!");
+
+            var employee = _employeeDAL.GetByEmail(email);
+            if ((employee?.Data?.ID ?? 0) == 0)
+                return Response.CreateFailure("Usuário inválido!");
+
+            //Colocar para comparar convertendo a senha em MD5.
+            if (employee.Data.Password != password)
+                return Response.CreateFailure("Senha inválida!");
+
+            return Response.CreateSuccess();
+        }
+
         public Response Register(Employee employee, string password2)
         {
             employee.CPF = employee.CPF.RemoveMaskCPF();
@@ -190,6 +208,10 @@ namespace BusinessLogicalLayer.BLL
             }
             else if (!name.IsValidName())
             {
+                validator.AddError("Nome não deve conter números e caracteres especiais!");
+            }
+            else if (!name.IsValidFullName())
+            {
                 validator.AddError("Nome completo deve ser informado!");
             }
         }
@@ -198,15 +220,15 @@ namespace BusinessLogicalLayer.BLL
         {
             if (password1.IsNullOrWhiteSpace() || password2.IsNullOrWhiteSpace())
             {
-                validator.AddError("A senha deve ser informada.");
+                validator.AddError("Senha deve ser informada!");
             }
             else if (password1.Length < 7)
             {
-                validator.AddError("A senha deve conter no mínimo 8 caracteres.");
+                validator.AddError("Senha deve conter no mínimo 8 caracteres!");
             }
             else if (password1 != password2)
             {
-                validator.AddError("As senhas devem ser iguais.");
+                validator.AddError("As senhas devem ser iguais!");
             }
         }
 
@@ -214,11 +236,11 @@ namespace BusinessLogicalLayer.BLL
         {
             if (cep.IsNullOrWhiteSpace())
             {
-                validator.AddError("CEP deve ser informado.");
+                validator.AddError("CEP deve ser informado!");
             }
-            else if (!Regex.IsMatch(cep, @"^\d{5}-\d{3}$"))
+            else if (cep.IsValidCEP())
             {
-                validator.AddError("CEP inválido.");
+                validator.AddError("CEP inválido!");
             }
         }
 
@@ -226,11 +248,11 @@ namespace BusinessLogicalLayer.BLL
         {
             if (street.IsNullOrWhiteSpace())
             {
-                validator.AddError("A rua deve ser informada.");
+                validator.AddError("Rua deve ser informada!");
             }
             else if (street.Length > 60)
             {
-                validator.AddError("A rua deve conter no máximo 60 caracteres.");
+                validator.AddError("Rua deve conter no máximo 60 caracteres!");
             }
         }
 
@@ -238,11 +260,11 @@ namespace BusinessLogicalLayer.BLL
         {
             if (number.IsNullOrWhiteSpace())
             {
-                validator.AddError("A rua deve ser informada.");
+                validator.AddError("Nº deve ser informado!");
             }
-            else if (!Regex.IsMatch(number, "^[0-9]+$"))
+            else if (!number.IsNumber())
             {
-                validator.AddError("O Nº deve conter apenas números.");
+                validator.AddError("Nº deve conter apenas números!");
             }
         }
 
@@ -250,31 +272,27 @@ namespace BusinessLogicalLayer.BLL
         {
             if (district.IsNullOrWhiteSpace())
             {
-                validator.AddError("O bairro deve ser informado.");
+                validator.AddError("Bairro deve ser informado!");
             }
             else if (district.Length > 30)
             {
-                validator.AddError("O bairro deve conter no máximo 30 caracteres.");
+                validator.AddError("Bairro deve conter no máximo 30 caracteres!");
             }
-            //else if (!Regex.IsMatch(district, @"^[0-9\p{L}\p{M}' \.\-]+$"))
-            //{
-            //    validator.AddError("O bairro deve conter apenas letras e números.");
-            //}
         }
 
         private void ValidateCity(string city, Validator validator)
         {
             if (city.IsNullOrWhiteSpace())
             {
-                validator.AddError("A cidade deve ser informada.");
+                validator.AddError("Cidade deve ser informada!");
             }
             else if (city.Length > 50)
             {
-                validator.AddError("A cidade deve conter no máximo 50 caracteres.");
+                validator.AddError("Cidade deve conter no máximo 50 caracteres!");
             }
-            else if (!Regex.IsMatch(city, @"^[\p{L} \.\-]+$"))
+            else if (!city.IsValidName())
             {
-                validator.AddError("A cidade deve conter apenas letras.");
+                validator.AddError("Cidade não deve conter números e caracteres especiais!");
             }
         }
     }

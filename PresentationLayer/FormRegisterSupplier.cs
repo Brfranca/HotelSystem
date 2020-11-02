@@ -66,7 +66,7 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 if (response.Success)
                 {
-                    FormHelper.ClearForm(this);
+                    this.ClearForm();
                     UpdateGrid();
                 }
             }
@@ -75,12 +75,12 @@ namespace PresentationLayer
                 supplier.ID = Convert.ToInt32(lblSupIdGet.Text);
                 Response response = _supplierBLL.Update(supplier);
                 MessageBox.Show(response.Message);
-                btnSupplierRegister.Text = "Cadastrar";
-                txtSupplierCnpj.Enabled = true;
-                txtSupplierRazaoSocial.Enabled = true;
-                btnSupplierDelete.Visible = false;
-                FormHelper.ClearForm(this);
-                UpdateGrid();
+                if (true)
+                {
+                    UpdateComponentsRegister();
+                    this.ClearForm();
+                    UpdateGrid();
+                }
             }
         }
 
@@ -104,7 +104,7 @@ namespace PresentationLayer
             Supplier supplier = new Supplier();
             supplier.CompanyName = txtSupplierRazaoSocial.Text;
             supplier.ContactName = txtSupplierNomeContato.Text;
-            supplier.CNPJ = txtSupplierCnpj.Text.RemoveMaskCNPJ();
+            supplier.CNPJ = txtSupplierCnpj.Text;
             supplier.Email = txtSupplierEmail.Text;
             supplier.Phone = txtSupplierTel.Text;
             return supplier;
@@ -117,20 +117,26 @@ namespace PresentationLayer
 
         private void btnSupplierDelete_Click(object sender, EventArgs e)
         {
-            Supplier supplier = CreateSupplier();
-            supplier.ID = Convert.ToInt32(lblSupIdGet.Text);
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Supplier supplier = CreateSupplier();
+                supplier.ID = Convert.ToInt32(lblSupIdGet.Text);
 
-            Response response = _supplierBLL.Delete(supplier);
-            MessageBox.Show(response.Message);
-            FormHelper.ClearForm(this);
-            UpdateGrid();
-            txtSupplierCnpj.Enabled = true;
-            txtSupplierRazaoSocial.Enabled = true;
+                Response response = _supplierBLL.Delete(supplier);
+                MessageBox.Show(response.Message);
+                if (response.Success)
+                {
+                    this.ClearForm();
+                    UpdateGrid();
+                    UpdateComponentsRegister();
+                }
+            }
         }
 
         private void btnSupplierClear_Click(object sender, EventArgs e)
         {
-            FormHelper.ClearForm(this);
+            this.ClearForm();
 
             if (btnSupplierRegister.Text == "Editar")
             {
@@ -150,7 +156,7 @@ namespace PresentationLayer
         {
             foreach (var item in suppliers)
             {
-                dgvSuppliers.Rows.Add(item.CompanyName, item.Phone, item.Email, item.CNPJ);
+                dgvSuppliers.Rows.Add(item.CompanyName, item.CNPJ.InsertMaskCNPJ(), item.Phone, item.Email);
             }
         }
 
@@ -159,7 +165,7 @@ namespace PresentationLayer
             if (_currentRowGrid == -1)
                 return;
 
-            string cnpj = (string)dgvSuppliers.Rows[_currentRowGrid].Cells[3].Value;
+            string cnpj = (string)dgvSuppliers.Rows[_currentRowGrid].Cells[1].Value;
             QueryResponse<Supplier> response = _supplierBLL.GetByCnpj(cnpj);
             if (response.Success)
             {
@@ -169,11 +175,11 @@ namespace PresentationLayer
                 txtSupplierRazaoSocial.Text = response.Data.CompanyName;
                 txtSupplierTel.Text = response.Data.Phone;
                 lblSupIdGet.Text = response.Data.ID.ToString();
-                
+
                 UpdateComponentsEdit();
                 return;
             }
-            MessageBox.Show(response.GetAllMessages());
+            MessageBox.Show(response.Message);
         }
 
         private void UpdateComponentsEdit()
@@ -182,6 +188,14 @@ namespace PresentationLayer
             txtSupplierCnpj.Enabled = false;
             txtSupplierRazaoSocial.Enabled = false;
             btnSupplierDelete.Visible = true;
+        }
+
+        private void UpdateComponentsRegister()
+        {
+            btnSupplierRegister.Text = "Cadastrar";
+            txtSupplierCnpj.Enabled = true;
+            txtSupplierRazaoSocial.Enabled = true;
+            btnSupplierDelete.Visible = false;
         }
 
         private void dgvSuppliers_CellClick(object sender, DataGridViewCellEventArgs e)

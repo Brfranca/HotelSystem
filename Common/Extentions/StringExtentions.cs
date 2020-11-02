@@ -41,6 +41,10 @@ namespace BusinessLogicalLayer.Extentions
             return cpf.EndsWith(digito);
         }
 
+        public static bool IsNumber(this string number)
+        {
+            return Regex.IsMatch(number, "^[0-9]+$");
+        }
         public static bool IsValidEmail(this string email)
         {
             return Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
@@ -91,20 +95,21 @@ namespace BusinessLogicalLayer.Extentions
             return cnpj.EndsWith(digito);
         }
 
-        public static bool IsValidName(this string nameCompleto)
+        public static bool IsValidFullName(this string fullName)
         {
-            var names = nameCompleto
-                .Split(' ')
-                .Where(d => !string.IsNullOrWhiteSpace(d))
-                .ToList();
-
+            var names = fullName.Split(' ').Where(d => !string.IsNullOrWhiteSpace(d)).ToList();
             if (names.Count <= 1)
-                return false;
-
-            foreach (var name in names)
             {
-                if (!Regex.IsMatch(name, @"^[\p{L} \.\-]+$"))
-                    return false;
+                return false;
+            }
+            return true;
+        }
+
+        public static bool IsValidName(this string fullName)
+        {
+            if (!Regex.IsMatch(fullName, @"^[\p{L} \.\-]+$"))
+            {
+                return false;
             }
             return true;
         }
@@ -119,9 +124,14 @@ namespace BusinessLogicalLayer.Extentions
             return cnpj.Replace(".", "").Replace("-", "").Replace("/", "");
         }
 
+        public static string InsertMaskCNPJ(this string cnpj)
+        {
+            return cnpj.Insert(2, ".").Insert(6, ".").Insert(10, "/").Insert(15, "-");
+        }
+
         public static string InsertMaskCPF(this string cpf)
         {
-            return cpf.Insert(3, ".").Insert(7, ".").Insert(11,"-");
+            return cpf.Insert(3, ".").Insert(7, ".").Insert(11, "-");
         }
 
         public static bool HasValue(this string value) => !string.IsNullOrWhiteSpace(value);

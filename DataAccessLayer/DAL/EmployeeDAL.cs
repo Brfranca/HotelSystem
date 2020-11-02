@@ -30,6 +30,14 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetSingleData<Employee>(command);
         }
 
+        public QueryResponse<Employee> GetByEmail(string email)
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = $"{_select} WHERE EMAIL = @EMAIL";
+            command.Parameters.AddWithValue("@EMAIL", email);
+            return new DbExecuter().GetSingleData<Employee>(command);
+        }
+
         public QueryResponse<Employee> GetByRg(string rg)
         {
             DbCommand command = DbFactory.GetCurrentCommand();

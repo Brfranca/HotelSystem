@@ -5,6 +5,7 @@ using Entities;
 using Entities.Enums;
 using NcMaster;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -109,7 +110,6 @@ namespace PresentationLayer
             }
         }
 
-        //método que filtra por cpf ou nome a lista da grid. Os parâmetros são um textBox e um função lambda (predicate). 
         private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Employee, bool> predicate)
         {
             if (textBox.Text.Length > 0)
@@ -127,7 +127,7 @@ namespace PresentationLayer
                 InsertGrid(_employeeGrid);
             }
         }
-        //método para auto completar os campos com base no CEP
+
         private void SearchCEP()
         {
             if (!string.IsNullOrWhiteSpace(mktEmployeeCEP.Text))
@@ -150,7 +150,6 @@ namespace PresentationLayer
             SelectDataGrid();
         }
 
-        //Pega os dados da grid e passa para os componentes (textBox,...)
         private void SelectDataGrid()
         {
             if (_currentRowGrid == -1)
@@ -179,7 +178,7 @@ namespace PresentationLayer
                 UpdateComponentsEdit();
                 return;
             }
-            MessageBox.Show(response.GetAllMessages());
+            MessageBox.Show(response.Message);
         }
 
         private void btnEmployeeSelect_Click(object sender, EventArgs e)
@@ -187,8 +186,6 @@ namespace PresentationLayer
             SelectDataGrid();
         }
 
-        //Esse método armazena o Index que está selecionado na DataGridView, para usar no botão selecionar
-        //o valor é armazenado numa variavel global privada
         private void dgvEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _currentRowGrid = e.RowIndex;
@@ -196,7 +193,6 @@ namespace PresentationLayer
 
         private void btnEmployeeClear_Click(object sender, EventArgs e)
         {
-            //Alterei o ClearForm para método de extensão do form.
             this.ClearForm();
             if (btnEmployeeRegister.Text == "Editar")
             {
@@ -206,23 +202,24 @@ namespace PresentationLayer
 
         private void btnEmployeeDelete_Click(object sender, EventArgs e)
         {
-            //Só precisa do ID pra deletar, não é necessário preencher todas as propriedades do employee
-            Employee employee = new Employee();
-            employee.ID = int.Parse(lblID.Text);
-
-            Response response = _employeeBLL.Delete(employee);
-            //sempre verificar o retorno do BLL
-            MessageBox.Show(response.Message);
-
-            if (response.Success)
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                this.ClearForm();
-                UpdateGrid();
-                UpdateComponentsRegister();
+                Employee employee = new Employee();
+                employee.ID = int.Parse(lblID.Text);
+
+                Response response = _employeeBLL.Delete(employee);
+                MessageBox.Show(response.Message);
+
+                if (response.Success)
+                {
+                    this.ClearForm();
+                    UpdateGrid();
+                    UpdateComponentsRegister();
+                }
             }
         }
 
-        //Atualiza os componentes para o modo "cadastrar"
         private void UpdateComponentsRegister()
         {
             btnEmployeeRegister.Text = "Cadastrar";
@@ -233,7 +230,6 @@ namespace PresentationLayer
             txtEmployeePassword2.Enabled = true;
         }
 
-        //Atualiza os componentes para o modo "editar"
         private void UpdateComponentsEdit()
         {
             btnEmployeeRegister.Text = "Editar";
