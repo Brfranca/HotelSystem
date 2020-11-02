@@ -67,9 +67,12 @@ namespace PresentationLayer
                 client.ID = Convert.ToInt32(lblID.Text);
                 Response response = _clientBLL.Update(client);
                 MessageBox.Show(response.Message);
-                UpdateComponentsRegister();
-                this.ClearForm();
-                UpdateGrid();
+                if (response.Success)
+                {
+                    UpdateComponentsRegister();
+                    this.ClearForm();
+                    UpdateGrid();
+                }
             }
         }
 
@@ -96,8 +99,6 @@ namespace PresentationLayer
             _clientGrid = new List<Client>(response.Data);
 
             InsertGrid(_clientGrid);
-
-
         }
 
         private void dgvClients_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -107,21 +108,27 @@ namespace PresentationLayer
 
         private void btnClientDelete_Click(object sender, EventArgs e)
         {
-            Client client = CreateClient();
-            client.ID = Convert.ToInt32(lblID.Text);
-            Response response = _clientBLL.Delete(client);
-            MessageBox.Show(response.Message);
-            this.ClearForm();
-            UpdateGrid();
-            txtClientRG.Enabled = true;
-            txtClientCPF.Enabled = true;
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Client client = CreateClient();
+                client.ID = Convert.ToInt32(lblID.Text);
+                Response response = _clientBLL.Delete(client);
+                MessageBox.Show(response.Message);
+                if (response.Success)
+                {
+                    this.ClearForm();
+                    UpdateGrid();
+                    UpdateComponentsRegister();
+                }
+            }
         }
 
         private Client CreateClient()
         {
             Client client = new Client();
             client.Name = txtClientName.Text;
-            client.CPF = txtClientCPF.Text.RemoveMaskCPF();
+            client.CPF = txtClientCPF.Text;
             client.RG = txtClientRG.Text;
             client.Phone1 = txtClientPhone1.Text;
             client.Phone2 = txtClientPhone2.Text;
@@ -174,7 +181,7 @@ namespace PresentationLayer
                 UpdateComponentsEdit();
                 return;
             }
-            MessageBox.Show(response.GetAllMessages());
+            MessageBox.Show(response.Message);
         }
 
 

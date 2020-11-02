@@ -23,6 +23,7 @@ namespace BusinessLogicalLayer
             if (!result.Success)
                 return result;
 
+            client.CPF = client.CPF.RemoveMaskCPF();
             Response resultInsert = _clienteDALL.Insert(client);
             if (!resultInsert.Success)
                 return resultInsert;
@@ -32,11 +33,11 @@ namespace BusinessLogicalLayer
 
         public Response Update(Client client)
         {
+            client.CPF = client.CPF.RemoveMaskCPF();
             Response result = Validate(client);
             if (!result.Success)
                 return result;
 
-            client.CPF = client.CPF.RemoveMaskCPF();
             Response resultInsert = _clienteDALL.Update(client);
             if (!resultInsert.Success)
                 return resultInsert;
@@ -154,11 +155,11 @@ namespace BusinessLogicalLayer
         {
             if (cpf.IsNullOrWhiteSpace())
             {
-                validator.AddError("Cpf deve ser informado!");
+                validator.AddError("CPF deve ser informado!");
             }
             else if (cpf.Length < 11)
             {
-                validator.AddError("Cpf deve conter 11 caracteres!");
+                validator.AddError("CPF deve conter 11 caracteres!");
             }
             else if (!cpf.IsValidCPF())
             {
@@ -177,6 +178,10 @@ namespace BusinessLogicalLayer
                 validator.AddError("Nome deve ser informado!");
             }
             else if (!name.IsValidName())
+            {
+                validator.AddError("Nome não deve conter números e caracteres especiais!");
+            }
+            else if (!name.IsValidFullName())
             {
                 validator.AddError("Nome completo deve ser informado!");
             }

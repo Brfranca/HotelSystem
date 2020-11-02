@@ -21,6 +21,7 @@ namespace BusinessLogicalLayer.BLL
 
         public Response Register(Supplier supplier)
         {
+            supplier.CNPJ = supplier.CNPJ.RemoveMaskCNPJ();
             Response result = Validate(supplier);
             if (!result.Success)
                 return result;
@@ -34,6 +35,7 @@ namespace BusinessLogicalLayer.BLL
 
         public Response Update(Supplier supplier)
         {
+            supplier.CNPJ = supplier.CNPJ.RemoveMaskCNPJ();
             Response result = Validate(supplier);
             if (!result.Success)
                 return result;
@@ -75,10 +77,11 @@ namespace BusinessLogicalLayer.BLL
             try
             {
                 Validator validator = new Validator();
-                ValidateEmail(supplier.Email, supplier.ID, validator);
-                ValidateCnpj(supplier.CNPJ, supplier.ID, validator);
-                ValidateContractName(supplier.ContactName, validator);
                 ValidateCompanyName(supplier.CompanyName, validator);
+                ValidateCnpj(supplier.CNPJ, supplier.ID, validator);
+                ValidatePhone(supplier.Phone, validator);
+                ValidateEmail(supplier.Email, supplier.ID, validator);
+                ValidateContractName(supplier.ContactName, validator);
 
                 return validator.Validate();
             }
@@ -87,6 +90,7 @@ namespace BusinessLogicalLayer.BLL
                 return Response.CreateFailureException("Erro na validação do fornecedor!", erro);
             }
         }
+
         private void ValidateEmail(string email, int id, Validator validator)
         {
             if (email.IsNullOrWhiteSpace())
@@ -99,7 +103,19 @@ namespace BusinessLogicalLayer.BLL
             }
             else if (_supplierDAL.ExistEmail(email, id))
             {
-                validator.AddError("Email já cadastrado em nossa base de dados!");
+                validator.AddError("E-mail já cadastrado em nossa base de dados!");
+            }
+        }
+
+        private void ValidatePhone(string phone, Validator validator)
+        {
+            if (phone.IsNullOrWhiteSpace())
+            {
+                validator.AddError("Telefone deve ser informado!");
+            }
+            else if (!phone.IsValidPhone())
+            {
+                validator.AddError("Telefone inválido!");
             }
         }
 
@@ -123,11 +139,11 @@ namespace BusinessLogicalLayer.BLL
         {
             if (contactName.IsNullOrWhiteSpace())
             {
-                validator.AddError("O nome para contato deve ser informado");
+                validator.AddError("Nome para contato deve ser informado!");
             }
             else if (!contactName.IsValidName())
             {
-                validator.AddError("O nome é inválido!");
+                validator.AddError("Nome para contato é inválido!");
             }
         }
 
@@ -135,7 +151,11 @@ namespace BusinessLogicalLayer.BLL
         {
             if (companyName.IsNullOrWhiteSpace())
             {
-                validator.AddError("O nome fantasia deve ser informado!");
+                validator.AddError("Razão social deve ser informado!");
+            }
+            else if (companyName.IsValidFullName())
+            {
+                validator.AddError("Razão social inválida!");
             }
         }
     }
