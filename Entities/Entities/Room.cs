@@ -15,10 +15,10 @@ namespace Entities
         [NonEditable]
         public int ID { get; set; }
         public string Number { get; set; }
-        public string RoomFloor { get; set; }
+        public RoomFloor RoomFloor { get; set; }
         public RoomType RoomType { get; set; }
         public double PricePerDay { get; set; }
-        public bool Availability { get; set; }
+        public bool RoomAvailability { get; set; }
 
     }
 }

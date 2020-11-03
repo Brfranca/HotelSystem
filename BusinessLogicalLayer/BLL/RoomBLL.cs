@@ -80,7 +80,6 @@ namespace BusinessLogicalLayer.BLL
         {
             Validator validator = new Validator();
             ValidateRoomNumber(room.Number, room.ID, validator);
-            ValidateFloor(room.RoomFloor, validator);
             ValidatePrice(room.PricePerDay, room.ID, validator);
 
             return validator.Validate();
@@ -88,6 +87,7 @@ namespace BusinessLogicalLayer.BLL
 
         private void ValidateRoomNumber(string number, int id, Validator validator)
         {
+            //ver se poderemos cadasrar numero de quarto com letras e como faremos a verificação se já existe o número ou nao considerando letras maiusculas e minisculas
             if (_roomDAL.ExistNumber(number, id))
             {
                 validator.AddError("Número de quarto já cadastrado");
@@ -98,15 +98,6 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        private void ValidateFloor(string floor, Validator validator)
-        {
-            if (floor.IsNullOrWhiteSpace())
-            {
-                validator.AddError("O andar do quarto deve ser informado!");
-            }
-
-            //Validar se o andar informado está de acordo com os andares que o prédio possui ou criar um enum?
-        }
 
         private void ValidatePrice(double pricePerDay, int id, Validator validator)
         {
