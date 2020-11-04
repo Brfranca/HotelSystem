@@ -18,11 +18,12 @@ namespace PresentationLayer
     {
         private readonly SupplierBLL _supplierBLL;
         private List<Supplier> _supplierGrid;
-        static List<Supplier> suppliers;
+        public List<Supplier> suppliers;
         public FormSearchSupplier()
         {
             InitializeComponent();
             _supplierBLL = new SupplierBLL();
+            suppliers = new List<Supplier>();
         }
 
         private void FormSearchSupplier_Load(object sender, EventArgs e)
@@ -55,7 +56,6 @@ namespace PresentationLayer
 
         private void btnSupplierSelect_Click(object sender, EventArgs e)
         {
-            suppliers = new List<Supplier>();
             foreach(DataGridViewRow row in dgvSuppliersSearch.Rows)
             {
 
@@ -66,6 +66,8 @@ namespace PresentationLayer
                     suppliers.Add(response.Data);
                 }
             }
+
+            this.Close();
         }
 
         private void picRoomClose_Click(object sender, EventArgs e)

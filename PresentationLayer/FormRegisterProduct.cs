@@ -1,4 +1,5 @@
 ﻿using BusinessLogicalLayer.BLL;
+using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using System;
@@ -219,6 +220,17 @@ namespace PresentationLayer
         private void txtProdSearchID_Leave(object sender, EventArgs e)
         {
             pnlProduID.BackColor = Color.Black;
+        }
+
+        private void btnSelecSupp_Click(object sender, EventArgs e)
+        {
+            FormSearchSupplier frmSearchSupp = new FormSearchSupplier();
+            frmSearchSupp.ShowDialog();
+            foreach (var item in frmSearchSupp.suppliers)
+            {
+                dgvSearch.Rows.Add(item.CompanyName, item.CNPJ.InsertMaskCNPJ());
+            }
+            
         }
     }
 }

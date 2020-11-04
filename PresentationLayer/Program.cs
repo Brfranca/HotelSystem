@@ -11,7 +11,7 @@ namespace PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSearchSupplier());
+            Application.Run(new FormRegisterProduct());
         }
     }
 }
