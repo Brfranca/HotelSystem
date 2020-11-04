@@ -228,7 +228,7 @@ namespace PresentationLayer
             frmSearchSupp.ShowDialog();
             foreach (var item in frmSearchSupp.suppliers)
             {
-                dgvSearch.Rows.Add(item.CompanyName, item.CNPJ.InsertMaskCNPJ());
+                dgvSearch.Rows.Add(item.CompanyName);
             }
             
         }
