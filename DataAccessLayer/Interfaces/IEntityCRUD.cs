@@ -10,7 +10,7 @@ namespace DataAccessLayer
     public interface IEntityCRUD<T>
     {
         Response Insert<T>(T item);
-        Response Update(T item);
+        Response Update<T>(T item);
         Response Delete(T item);
         QueryResponse<List<T>> GetAll();
         QueryResponse<T> GetById(int id);

@@ -27,19 +27,10 @@ namespace PresentationLayer
             btnClientDelete.Visible = false;
         }
 
-        private void txtClientSearchCPF_Click(object sender, EventArgs e)
-        {
-            pnlClientCPF.BackColor = Color.FromArgb(37, 206, 15);
-        }
-
+       
         private void txtClientSearchCPF_Leave(object sender, EventArgs e)
         {
             pnlClientCPF.BackColor = Color.Black;
-        }
-
-        private void txtClientSearchName_Click(object sender, EventArgs e)
-        {
-            pnlClientName.BackColor = Color.FromArgb(37, 206, 15);
         }
 
         private void txtClientSearchName_Leave(object sender, EventArgs e)
@@ -229,6 +220,16 @@ namespace PresentationLayer
         private void txtClientSearchCPF_TextChanged(object sender, EventArgs e)
         {
             FilterGrid(txtClientSearchCPF, txtClientSearchName, x => x.CPF.Contains(txtClientSearchCPF.Text.ToLower()));
+        }
+
+        private void txtClientSearchName_Enter(object sender, EventArgs e)
+        {
+            pnlClientName.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtClientSearchCPF_Enter(object sender, EventArgs e)
+        {
+            pnlClientCPF.BackColor = Color.FromArgb(37, 206, 15);
         }
     }
 }

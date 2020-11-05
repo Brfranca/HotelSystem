@@ -21,6 +21,10 @@ namespace Entities
         [NonEditable]
         public List<int> SuppliersID { get; set; }
         //public ProductQuantity ProductQuantity { get; set; } precisa ter quantidade na tabela produto?
-       
+
+        //public Product()
+        //{
+        //    this.SuppliersID = new List<int>();
+        //}
     }
 }

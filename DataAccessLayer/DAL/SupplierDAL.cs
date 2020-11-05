@@ -22,6 +22,13 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetSingleData<Supplier>(command);
         }
 
+        public QueryResponse<Supplier> GetByCompanyName(string companyName)
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = $"{_select} WHERE COMPANYNAME = @COMPANYNAME";
+            command.Parameters.AddWithValue("@COMPANYNAME", companyName);
+            return new DbExecuter().GetSingleData<Supplier>(command);
+        }
         public bool ExistCnpj(string cnpj, int id)
         {
             return Exist(cnpj, id, "CNPJ");

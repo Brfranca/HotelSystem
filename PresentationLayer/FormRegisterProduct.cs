@@ -2,6 +2,7 @@
 using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
+using Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,10 +21,13 @@ namespace PresentationLayer
         private readonly ProductBLL _productBLL;
         private List<Product> _productGrid;
         private int _currentRowGrid;
+        private SupplierBLL _supplierBLL;
         public FormRegisterProduct()
         {
             InitializeComponent();
             _productBLL = new ProductBLL();
+            _suppliers = new List<Supplier>();
+            _supplierBLL = new SupplierBLL();
         }
 
         private void btnProductRegister_Click(object sender, EventArgs e)
@@ -31,6 +35,7 @@ namespace PresentationLayer
             Product product = CreateProduct();
             if (btnProductRegister.Text == "Cadastrar")
             {
+                product.SuppliersID = _suppliers.Select(x => x.ID).ToList();
                 Response response = _productBLL.Register(product);
                 MessageBox.Show(response.Message);
                 if (response.Success)
@@ -43,14 +48,17 @@ namespace PresentationLayer
             else if (btnProductRegister.Text == "Editar")
             {
                 product.ID = Convert.ToInt32(lblID.Text);
+                
                 Response response = _productBLL.Update(product);
+
+
                 MessageBox.Show(response.Message);
-                if (response.Success)
-                {
-                    UpdateComponentsRegister();
-                    this.ClearForm();
-                    UpdateGrid();
-                }
+                //if (response.Success)
+                //{
+                //    UpdateComponentsRegister();
+                //    this.ClearForm();
+                //    UpdateGrid();
+                //}
             }
         }
 
@@ -71,7 +79,7 @@ namespace PresentationLayer
         {
             if (_currentRowGrid == -1)
                 return;
-
+            dgvSearch.Rows.Clear();
             int id = (int)dgvProducts.Rows[_currentRowGrid].Cells[0].Value;
             QueryResponse<Product> response = _productBLL.GetById(id);
             if (response.Success)
@@ -79,6 +87,13 @@ namespace PresentationLayer
                 txtProductName.Text = response.Data.Name;
                 txtProductDescription.Text = response.Data.Description;
                 lblID.Text = response.Data.ID.ToString();
+                QueryResponse<List<Supplier_Product>> queryResponse = _productBLL.GetAssociativeTable(id);
+                
+                foreach (Supplier_Product item in queryResponse.Data)
+                {
+                    dgvSearch.Rows.Add(_supplierBLL.GetById(item.SupplierID).Data.CompanyName);
+                    _suppliers.Add(_supplierBLL.GetById(item.SupplierID).Data);
+                }
 
                 UpdateComponentsEdit();
                 return;
@@ -91,6 +106,7 @@ namespace PresentationLayer
             product.Name = txtProductName.Text;
             product.Description = txtProductDescription.Text;
             product.SuppliersID = _suppliers.Select(x => x.ID).ToList();
+
 
             return product;
         }
@@ -138,7 +154,7 @@ namespace PresentationLayer
             DialogResult result = MessageBox.Show("Tem certeza que deseja excluir?", "", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                Product product = CreateProduct();
+                Product product = new Product();
                 product.ID = Convert.ToInt32(lblID.Text);
                 Response response = _productBLL.Delete(product);
                 MessageBox.Show(response.Message);
@@ -204,7 +220,7 @@ namespace PresentationLayer
             btnProductDelete.Visible = false;
         }
 
-        private void txtProdSearchName_Click(object sender, EventArgs e)
+        private void txtProdSearchName_Enter(object sender, EventArgs e)
         {
             pnlProduName.BackColor = Color.FromArgb(37, 206, 15);
         }
@@ -214,7 +230,7 @@ namespace PresentationLayer
             pnlProduName.BackColor = Color.Black;
         }
 
-        private void txtProdSearchID_Click(object sender, EventArgs e)
+        private void txtProdSearchID_Enter(object sender, EventArgs e)
         {
             pnlProduID.BackColor = Color.FromArgb(37, 206, 15);
         }
@@ -229,12 +245,16 @@ namespace PresentationLayer
             dgvSearch.Rows.Clear();
             FormSearchSupplier frmSearchSupp = new FormSearchSupplier();
             frmSearchSupp.ShowDialog();
-            _suppliers = frmSearchSupp.suppliers;
+            _suppliers = frmSearchSupp.suppliers; 
             foreach (var item in _suppliers)
             {
                 dgvSearch.Rows.Add(item.CompanyName);
             }
             
         }
+
+        
+
+        
     }
 }

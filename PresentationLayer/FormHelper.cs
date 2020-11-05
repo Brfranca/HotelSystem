@@ -50,7 +50,13 @@ namespace PresentationLayer
                     {
                         ((Label)control.Controls[i]).Text = "";
                     }
-                   
+                }
+                else if (control.Controls[i] is DataGridView)
+                {
+                    if (control.Controls[i].Name.ToString() == "dgvSearch")
+                    {
+                        ((DataGridView)control.Controls[i]).Rows.Clear();
+                    }
                 }
             }
         }

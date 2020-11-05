@@ -2,6 +2,7 @@
 using Common;
 using DataAccessLayer.DAL;
 using Entities;
+using Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,6 +72,7 @@ namespace BusinessLogicalLayer.BLL
             ValidateName(product.Name, product.ID, validator);
             ValidateDescription(product.Description, product.ID, validator);
             ValidateNameDescription(product.Name, product.Description, product.ID, validator);
+            ValidateSupplierID(product.SuppliersID, validator);
 
             return validator.Validate();
         }
@@ -106,6 +108,19 @@ namespace BusinessLogicalLayer.BLL
             {
                 validator.AddError("Produto já cadastrado!");
             }
+        }
+
+        private void ValidateSupplierID(List<int> supplierID, Validator validator)
+        {
+            if (supplierID.Count == 0)
+            {
+                validator.AddError("Pelo menos um fornecedor precisa ser informado!");
+            }
+        }
+
+        public QueryResponse<List<Supplier_Product>> GetAssociativeTable(int id)
+        {
+            return _productDAL.GetAssociativeTable(id);
         }
 
         

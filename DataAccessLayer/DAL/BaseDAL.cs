@@ -26,11 +26,12 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().ExecuteScalar(command);
         }
 
-        public Response Update(T entity)
+        public Response Update<T>(T entity)
         {
             DbCommand command = SqlGenerator<T>.BuildUpdateCommand(entity);
             return new DbExecuter().ExecuteQuery(command);
         }
+
 
         public Response Delete(T entity)
         {

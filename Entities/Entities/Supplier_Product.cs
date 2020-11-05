@@ -11,6 +11,8 @@ namespace Entities.Entities
     public class Supplier_Product
     {
         public int SupplierID { get; set; }
+
+        [NonEditable]
         public int ProductID { get; set; }
     }
 }

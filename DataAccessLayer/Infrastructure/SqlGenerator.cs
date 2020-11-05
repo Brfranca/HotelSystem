@@ -73,6 +73,17 @@ namespace DataAccessLayer.Infrastructure
             return command;
         }
 
+        //rever método!!!!!!
+        public static DbCommand BuildUpdateSPTable(T item)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendFormat("UPDATE SUPPLIERS_PRODUCTS SET SUPPLIERID = @SUPPLIERID WHERE PRODUCTID = @PRODUCTID");
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = sb.ToString();
+            GenerateUpdateParametersSPTable(command, item);
+            return command;
+        }
+
         private static string GetUpdateFields()
         {
             StringBuilder builder = new StringBuilder();
@@ -106,6 +117,27 @@ namespace DataAccessLayer.Infrastructure
             }
             object id = item.GetType().GetProperty("ID").GetValue(item, null);
             command.Parameters.AddWithValue("@ID", id);
+        }
+
+        private static void GenerateUpdateParametersSPTable(DbCommand command, T item)
+        {
+            foreach (PropertyInfo propriedade in typeof(T).GetProperties())
+            {
+                if (propriedade.GetCustomAttribute<NonEditable>() == null)
+                {
+                    //Não pode ter o casting de string!
+                    if (propriedade.GetValue(item) == null || propriedade.GetValue(item) == "")
+                    {
+                        command.Parameters.AddWithValue("@" + propriedade.Name, DBNull.Value);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@" + propriedade.Name, propriedade.GetValue(item));
+                    }
+                }
+            }
+            object id = item.GetType().GetProperty("PRODUCTID").GetValue(item, null);
+            command.Parameters.AddWithValue("@PRODUCTID", id);
         }
 
         public static DbCommand BuildDeleteCommand(T item)

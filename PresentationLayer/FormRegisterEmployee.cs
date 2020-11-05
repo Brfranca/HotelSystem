@@ -245,9 +245,9 @@ namespace PresentationLayer
             UpdateGrid();
         }
 
-        private void txtEmployeeSearchCPF_Click(object sender, EventArgs e)
+        private void txtEmployeeSearchName_Enter(object sender, EventArgs e)
         {
-            pnlEmployeeCPF.BackColor = Color.FromArgb(37, 206, 15);
+            pnlEmployeeName.BackColor = Color.FromArgb(37, 206, 15);
         }
 
         private void txtEmployeeSearchCPF_Leave(object sender, EventArgs e)
@@ -255,9 +255,9 @@ namespace PresentationLayer
             pnlEmployeeCPF.BackColor = Color.Black;
         }
 
-        private void txtEmployeeSearchName_Click(object sender, EventArgs e)
+        private void txtEmployeeSearchCPF_Enter(object sender, EventArgs e)
         {
-            pnlEmployeeName.BackColor = Color.FromArgb(37, 206, 15);
+            pnlEmployeeCPF.BackColor = Color.FromArgb(37, 206, 15);
         }
 
         private void txtEmployeeSearchName_Leave(object sender, EventArgs e)

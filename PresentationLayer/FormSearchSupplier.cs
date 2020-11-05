@@ -75,5 +75,55 @@ namespace PresentationLayer
         {
             this.Close();
         }
+
+        private void txtSuppSearchName_Enter(object sender, EventArgs e)
+        {
+            pnlSuppName.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtSuppSearchName_Leave(object sender, EventArgs e)
+        {
+            pnlSuppName.BackColor = Color.Black;
+        }
+
+        private void txtSuppSearchCNPJ_Enter(object sender, EventArgs e)
+        {
+            pnlSuppCNPJ.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        private void txtSuppSearchCNPJ_Leave(object sender, EventArgs e)
+        {
+            pnlSuppCNPJ.BackColor = Color.Black;
+        }
+
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Supplier, bool> predicate)
+        {
+            if (textBox.Text.Length > 0)
+            {
+                textBox1.Clear();
+                List<Supplier> customerFiltered = new List<Supplier>();
+                customerFiltered.AddRange(_supplierGrid.Where(predicate));
+                dgvSuppliersSearch.Rows.Clear();
+
+                InsertGrid(customerFiltered);
+            }
+            else
+            {
+                dgvSuppliersSearch.Rows.Clear();
+                InsertGrid(_supplierGrid);
+            }
+
+
+        }
+
+        private void txtSuppSearchName_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtSuppSearchName, txtSuppSearchCNPJ, x => x.CompanyName.ToLower().Contains(txtSuppSearchName.Text.ToLower()));
+        }
+
+        private void txtSuppSearchCNPJ_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtSuppSearchCNPJ, txtSuppSearchName, x => x.CNPJ.ToLower().Contains(txtSuppSearchCNPJ.Text.ToLower()));
+        }
     }
 }

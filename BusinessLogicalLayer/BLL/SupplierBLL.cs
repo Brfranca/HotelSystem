@@ -72,6 +72,11 @@ namespace BusinessLogicalLayer.BLL
             return _supplierDAL.GetByCnpj(cnpj);
         }
 
+        public QueryResponse<Supplier> GetByCompanyName(string companyName)
+        {
+            return _supplierDAL.GetByCompanyName(companyName);
+        }
+
         private Response Validate(Supplier supplier)
         {
             try

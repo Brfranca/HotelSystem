@@ -120,7 +120,7 @@
             this.lblConsCliCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliCod.Location = new System.Drawing.Point(673, 97);
             this.lblConsCliCod.Name = "lblConsCliCod";
-            this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
+            this.lblConsCliCod.Size = new System.Drawing.Size(34, 19);
             this.lblConsCliCod.TabIndex = 183;
             this.lblConsCliCod.Text = "CPF";
             // 
@@ -132,7 +132,7 @@
             this.lblConsCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliNome.Location = new System.Drawing.Point(366, 98);
             this.lblConsCliNome.Name = "lblConsCliNome";
-            this.lblConsCliNome.Size = new System.Drawing.Size(182, 23);
+            this.lblConsCliNome.Size = new System.Drawing.Size(154, 19);
             this.lblConsCliNome.TabIndex = 182;
             this.lblConsCliNome.Text = "Nome do Funcionário";
             // 
@@ -144,7 +144,7 @@
             this.lblConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsultar.Location = new System.Drawing.Point(364, 60);
             this.lblConsultar.Name = "lblConsultar";
-            this.lblConsultar.Size = new System.Drawing.Size(125, 32);
+            this.lblConsultar.Size = new System.Drawing.Size(98, 25);
             this.lblConsultar.TabIndex = 181;
             this.lblConsultar.Text = "Consultar";
             // 
@@ -156,7 +156,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadastrar.Location = new System.Drawing.Point(18, 60);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
+            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
             this.lblCadastrar.TabIndex = 167;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -168,7 +168,7 @@
             this.lblConsCliCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsCliCadastrados.Location = new System.Drawing.Point(368, 155);
             this.lblConsCliCadastrados.Name = "lblConsCliCadastrados";
-            this.lblConsCliCadastrados.Size = new System.Drawing.Size(213, 23);
+            this.lblConsCliCadastrados.Size = new System.Drawing.Size(180, 19);
             this.lblConsCliCadastrados.TabIndex = 186;
             this.lblConsCliCadastrados.Text = "Funcionários Cadastrados";
             // 
@@ -283,7 +283,7 @@
             this.mktEmployeeCPF.Mask = "000,000,000-00";
             this.mktEmployeeCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.mktEmployeeCPF.Name = "mktEmployeeCPF";
-            this.mktEmployeeCPF.Size = new System.Drawing.Size(144, 27);
+            this.mktEmployeeCPF.Size = new System.Drawing.Size(144, 22);
             this.mktEmployeeCPF.TabIndex = 1;
             // 
             // txtEmployeeEmail
@@ -297,7 +297,7 @@
             this.txtEmployeeEmail.MaxLength = 200;
             this.txtEmployeeEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeEmail.Name = "txtEmployeeEmail";
-            this.txtEmployeeEmail.Size = new System.Drawing.Size(303, 27);
+            this.txtEmployeeEmail.Size = new System.Drawing.Size(303, 22);
             this.txtEmployeeEmail.TabIndex = 5;
             // 
             // lblCadCliEmail
@@ -308,7 +308,7 @@
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliEmail.Location = new System.Drawing.Point(20, 266);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
+            this.lblCadCliEmail.Size = new System.Drawing.Size(51, 19);
             this.lblCadCliEmail.TabIndex = 179;
             this.lblCadCliEmail.Text = "E-mail";
             // 
@@ -320,7 +320,7 @@
             this.lblCadCliTel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliTel2.Location = new System.Drawing.Point(20, 323);
             this.lblCadCliTel2.Name = "lblCadCliTel2";
-            this.lblCadCliTel2.Size = new System.Drawing.Size(40, 23);
+            this.lblCadCliTel2.Size = new System.Drawing.Size(34, 19);
             this.lblCadCliTel2.TabIndex = 176;
             this.lblCadCliTel2.Text = "CEP";
             // 
@@ -335,7 +335,7 @@
             this.txtEmployeePhone.MaxLength = 11;
             this.txtEmployeePhone.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(144, 27);
+            this.txtEmployeePhone.Size = new System.Drawing.Size(144, 22);
             this.txtEmployeePhone.TabIndex = 3;
             // 
             // lblCadCliTel1
@@ -346,7 +346,7 @@
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliTel1.Location = new System.Drawing.Point(20, 210);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(77, 23);
+            this.lblCadCliTel1.Size = new System.Drawing.Size(66, 19);
             this.lblCadCliTel1.TabIndex = 174;
             this.lblCadCliTel1.Text = "Telefone";
             // 
@@ -361,7 +361,7 @@
             this.txtEmployeeRG.MaxLength = 15;
             this.txtEmployeeRG.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeRG.Name = "txtEmployeeRG";
-            this.txtEmployeeRG.Size = new System.Drawing.Size(144, 27);
+            this.txtEmployeeRG.Size = new System.Drawing.Size(144, 22);
             this.txtEmployeeRG.TabIndex = 2;
             // 
             // lblCadCliRg
@@ -372,7 +372,7 @@
             this.lblCadCliRg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliRg.Location = new System.Drawing.Point(178, 154);
             this.lblCadCliRg.Name = "lblCadCliRg";
-            this.lblCadCliRg.Size = new System.Drawing.Size(33, 23);
+            this.lblCadCliRg.Size = new System.Drawing.Size(28, 19);
             this.lblCadCliRg.TabIndex = 172;
             this.lblCadCliRg.Text = "RG";
             // 
@@ -384,7 +384,7 @@
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliCpf.Location = new System.Drawing.Point(20, 154);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
+            this.lblCadCliCpf.Size = new System.Drawing.Size(34, 19);
             this.lblCadCliCpf.TabIndex = 170;
             this.lblCadCliCpf.Text = "CPF";
             // 
@@ -399,7 +399,7 @@
             this.txtEmployeeName.MaxLength = 100;
             this.txtEmployeeName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(303, 27);
+            this.txtEmployeeName.Size = new System.Drawing.Size(303, 22);
             this.txtEmployeeName.TabIndex = 0;
             // 
             // lblCadCliNome
@@ -410,7 +410,7 @@
             this.lblCadCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadCliNome.Location = new System.Drawing.Point(20, 98);
             this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
+            this.lblCadCliNome.Size = new System.Drawing.Size(50, 19);
             this.lblCadCliNome.TabIndex = 168;
             this.lblCadCliNome.Text = "Nome";
             // 
@@ -425,7 +425,7 @@
             this.txtEmployeeStreet.MaxLength = 150;
             this.txtEmployeeStreet.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeStreet.Name = "txtEmployeeStreet";
-            this.txtEmployeeStreet.Size = new System.Drawing.Size(303, 27);
+            this.txtEmployeeStreet.Size = new System.Drawing.Size(303, 22);
             this.txtEmployeeStreet.TabIndex = 8;
             // 
             // label1
@@ -436,7 +436,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label1.Location = new System.Drawing.Point(20, 379);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 23);
+            this.label1.Size = new System.Drawing.Size(34, 19);
             this.label1.TabIndex = 194;
             this.label1.Text = "Rua";
             // 
@@ -451,7 +451,7 @@
             this.txtEmployeeCity.MaxLength = 100;
             this.txtEmployeeCity.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeCity.Name = "txtEmployeeCity";
-            this.txtEmployeeCity.Size = new System.Drawing.Size(170, 27);
+            this.txtEmployeeCity.Size = new System.Drawing.Size(170, 22);
             this.txtEmployeeCity.TabIndex = 7;
             // 
             // label2
@@ -462,7 +462,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label2.Location = new System.Drawing.Point(152, 323);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 23);
+            this.label2.Size = new System.Drawing.Size(56, 19);
             this.label2.TabIndex = 196;
             this.label2.Text = "Cidade";
             // 
@@ -477,7 +477,7 @@
             this.txtEmployeeNumber.MaxLength = 7;
             this.txtEmployeeNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeNumber.Name = "txtEmployeeNumber";
-            this.txtEmployeeNumber.Size = new System.Drawing.Size(62, 27);
+            this.txtEmployeeNumber.Size = new System.Drawing.Size(62, 22);
             this.txtEmployeeNumber.TabIndex = 9;
             // 
             // label3
@@ -488,7 +488,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label3.Location = new System.Drawing.Point(20, 437);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 23);
+            this.label3.Size = new System.Drawing.Size(26, 19);
             this.label3.TabIndex = 198;
             this.label3.Text = "Nº";
             // 
@@ -500,7 +500,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label4.Location = new System.Drawing.Point(179, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 23);
+            this.label4.Size = new System.Drawing.Size(56, 19);
             this.label4.TabIndex = 200;
             this.label4.Text = "Função";
             // 
@@ -512,7 +512,7 @@
             this.lblCadPassFun2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadPassFun2.Location = new System.Drawing.Point(180, 495);
             this.lblCadPassFun2.Name = "lblCadPassFun2";
-            this.lblCadPassFun2.Size = new System.Drawing.Size(122, 23);
+            this.lblCadPassFun2.Size = new System.Drawing.Size(102, 19);
             this.lblCadPassFun2.TabIndex = 204;
             this.lblCadPassFun2.Text = "Repetir Senha";
             // 
@@ -526,7 +526,7 @@
             this.txtEmployeePassword2.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeePassword2.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePassword2.Name = "txtEmployeePassword2";
-            this.txtEmployeePassword2.Size = new System.Drawing.Size(143, 27);
+            this.txtEmployeePassword2.Size = new System.Drawing.Size(143, 22);
             this.txtEmployeePassword2.TabIndex = 12;
             this.txtEmployeePassword2.UseSystemPasswordChar = true;
             // 
@@ -538,7 +538,7 @@
             this.lblCadPassFun.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadPassFun.Location = new System.Drawing.Point(20, 495);
             this.lblCadPassFun.Name = "lblCadPassFun";
-            this.lblCadPassFun.Size = new System.Drawing.Size(58, 23);
+            this.lblCadPassFun.Size = new System.Drawing.Size(49, 19);
             this.lblCadPassFun.TabIndex = 202;
             this.lblCadPassFun.Text = "Senha";
             // 
@@ -552,7 +552,7 @@
             this.txtEmployeePassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeePassword.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeePassword.Name = "txtEmployeePassword";
-            this.txtEmployeePassword.Size = new System.Drawing.Size(145, 27);
+            this.txtEmployeePassword.Size = new System.Drawing.Size(145, 22);
             this.txtEmployeePassword.TabIndex = 11;
             this.txtEmployeePassword.UseSystemPasswordChar = true;
             // 
@@ -565,7 +565,7 @@
             this.mktEmployeeCEP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mktEmployeeCEP.Mask = "00000-000";
             this.mktEmployeeCEP.Name = "mktEmployeeCEP";
-            this.mktEmployeeCEP.Size = new System.Drawing.Size(118, 27);
+            this.mktEmployeeCEP.Size = new System.Drawing.Size(118, 22);
             this.mktEmployeeCEP.TabIndex = 6;
             this.mktEmployeeCEP.Leave += new System.EventHandler(this.mktEmployeeCEP_Leave);
             // 
@@ -578,7 +578,7 @@
             this.cboEmployeePosition.Location = new System.Drawing.Point(183, 232);
             this.cboEmployeePosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboEmployeePosition.Name = "cboEmployeePosition";
-            this.cboEmployeePosition.Size = new System.Drawing.Size(144, 31);
+            this.cboEmployeePosition.Size = new System.Drawing.Size(144, 25);
             this.cboEmployeePosition.TabIndex = 4;
             // 
             // txtEmployeeDistrict
@@ -592,7 +592,7 @@
             this.txtEmployeeDistrict.MaxLength = 150;
             this.txtEmployeeDistrict.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeDistrict.Name = "txtEmployeeDistrict";
-            this.txtEmployeeDistrict.Size = new System.Drawing.Size(226, 27);
+            this.txtEmployeeDistrict.Size = new System.Drawing.Size(226, 22);
             this.txtEmployeeDistrict.TabIndex = 10;
             // 
             // label6
@@ -603,7 +603,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label6.Location = new System.Drawing.Point(98, 437);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 23);
+            this.label6.Size = new System.Drawing.Size(51, 19);
             this.label6.TabIndex = 213;
             this.label6.Text = "Bairro";
             // 
@@ -686,7 +686,7 @@
             this.chkEmployeeActive.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEmployeeActive.Location = new System.Drawing.Point(24, 560);
             this.chkEmployeeActive.Name = "chkEmployeeActive";
-            this.chkEmployeeActive.Size = new System.Drawing.Size(75, 27);
+            this.chkEmployeeActive.Size = new System.Drawing.Size(64, 23);
             this.chkEmployeeActive.TabIndex = 13;
             this.chkEmployeeActive.Text = "Ativo";
             this.chkEmployeeActive.UseVisualStyleBackColor = false;
@@ -714,7 +714,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(34, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(210, 28);
+            this.label5.Size = new System.Drawing.Size(167, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tabela de Funcionários";
             // 
@@ -751,7 +751,7 @@
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblID.Location = new System.Drawing.Point(280, 97);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 23);
+            this.lblID.Size = new System.Drawing.Size(0, 19);
             this.lblID.TabIndex = 225;
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -763,7 +763,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label7.Location = new System.Drawing.Point(263, 97);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 23);
+            this.label7.Size = new System.Drawing.Size(27, 19);
             this.label7.TabIndex = 224;
             this.label7.Text = "ID:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -779,10 +779,10 @@
             this.txtEmployeeSearchName.MaxLength = 11;
             this.txtEmployeeSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeSearchName.Name = "txtEmployeeSearchName";
-            this.txtEmployeeSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtEmployeeSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtEmployeeSearchName.TabIndex = 226;
-            this.txtEmployeeSearchName.Click += new System.EventHandler(this.txtEmployeeSearchName_Click);
             this.txtEmployeeSearchName.TextChanged += new System.EventHandler(this.txtEmployeeSearchName_TextChanged);
+            this.txtEmployeeSearchName.Enter += new System.EventHandler(this.txtEmployeeSearchName_Enter);
             this.txtEmployeeSearchName.Leave += new System.EventHandler(this.txtEmployeeSearchName_Leave);
             // 
             // pnlEmployeeName
@@ -806,10 +806,10 @@
             this.txtEmployeeSearchCPF.MaxLength = 11;
             this.txtEmployeeSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtEmployeeSearchCPF.Name = "txtEmployeeSearchCPF";
-            this.txtEmployeeSearchCPF.Size = new System.Drawing.Size(191, 27);
+            this.txtEmployeeSearchCPF.Size = new System.Drawing.Size(191, 22);
             this.txtEmployeeSearchCPF.TabIndex = 228;
-            this.txtEmployeeSearchCPF.Click += new System.EventHandler(this.txtEmployeeSearchCPF_Click);
             this.txtEmployeeSearchCPF.TextChanged += new System.EventHandler(this.txtEmployeeSearchCPF_TextChanged);
+            this.txtEmployeeSearchCPF.Enter += new System.EventHandler(this.txtEmployeeSearchCPF_Enter);
             this.txtEmployeeSearchCPF.Leave += new System.EventHandler(this.txtEmployeeSearchCPF_Leave);
             // 
             // pnlEmployeeCPF
@@ -824,7 +824,7 @@
             // 
             // FormRegisterEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1156, 699);

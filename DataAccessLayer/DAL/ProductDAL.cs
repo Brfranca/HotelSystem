@@ -1,8 +1,10 @@
 ﻿using Common;
+using DataAccessLayer.Infrastructure;
 using Entities;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace DataAccessLayer.DAL
         {
             using (TransactionScope transaction = new TransactionScope())
             {
-                var resultInsertProduct = base.InsertScalar(product);
+               Response resultInsertProduct = base.InsertScalar(product);
                 if (!resultInsertProduct.Success)
                     return resultInsertProduct;
 
@@ -34,6 +36,17 @@ namespace DataAccessLayer.DAL
                 transaction.Complete();
                 return Response.CreateSuccess();
             }
+        }
+
+
+        //Método novo, nao sei se funciona. Ass: kj
+        public QueryResponse<List<Supplier_Product>> GetAssociativeTable(int id)
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = "SELECT * FROM SUPPLIERS_PRODUCTS WHERE PRODUCTID = @PRODUCTID";
+            command.Parameters.AddWithValue("@PRODUCTID", id);
+            return new DbExecuter().GetAllData<Supplier_Product>(command);
+
         }
 
         public bool ExistName(string name, int id)
