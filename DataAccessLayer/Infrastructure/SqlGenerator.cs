@@ -27,7 +27,7 @@ namespace DataAccessLayer.Infrastructure
         {
             foreach (PropertyInfo propriedade in typeof(T).GetProperties())
             {
-                if (propriedade.Name != "ID")
+                if (propriedade.GetCustomAttribute<NonEditable>() == null)
                 {
                     if (propriedade.GetValue(item) == "" || propriedade.GetValue(item) == null)
                     {
@@ -47,7 +47,7 @@ namespace DataAccessLayer.Infrastructure
 
             foreach (var item in typeof(T).GetProperties())
             {
-                if (item.Name != "ID")
+                if (item.GetCustomAttribute<NonEditable>() == null)
                 {
                     if (isParameters)
                     {

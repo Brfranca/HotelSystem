@@ -8,27 +8,34 @@ namespace DataAccessLayer.DAL
     public class BaseDAL<T>
     {
         protected string _select;
+
         protected BaseDAL()
         {
             _select = $"SELECT * FROM {SqlGenerator<T>.GetTableName()}";
         }
 
-        public Response Insert(T entity)
+        public Response Insert<T>(T entity)
         {
             DbCommand command = SqlGenerator<T>.BuildInsertCommand(entity);
-            return new DbExecuter().Execute(command);
+            return new DbExecuter().ExecuteQuery(command);
+        }
+
+        public Response InsertScalar<T>(T entity)
+        {
+            DbCommand command = SqlGenerator<T>.BuildInsertCommand(entity);
+            return new DbExecuter().ExecuteScalar(command);
         }
 
         public Response Update(T entity)
         {
             DbCommand command = SqlGenerator<T>.BuildUpdateCommand(entity);
-            return new DbExecuter().Execute(command);
+            return new DbExecuter().ExecuteQuery(command);
         }
 
         public Response Delete(T entity)
         {
             DbCommand command = SqlGenerator<T>.BuildDeleteCommand(entity);
-            return new DbExecuter().Execute(command);
+            return new DbExecuter().ExecuteQuery(command);
         }
 
         public QueryResponse<List<T>> GetAll()

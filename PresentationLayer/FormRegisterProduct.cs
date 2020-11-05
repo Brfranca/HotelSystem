@@ -16,6 +16,7 @@ namespace PresentationLayer
 {
     public partial class FormRegisterProduct : Form
     {
+        private List<Supplier> _suppliers;
         private readonly ProductBLL _productBLL;
         private List<Product> _productGrid;
         private int _currentRowGrid;
@@ -89,6 +90,7 @@ namespace PresentationLayer
             Product product = new Product();
             product.Name = txtProductName.Text;
             product.Description = txtProductDescription.Text;
+            product.SuppliersID = _suppliers.Select(x => x.ID).ToList();
 
             return product;
         }
@@ -224,9 +226,11 @@ namespace PresentationLayer
 
         private void btnSelecSupp_Click(object sender, EventArgs e)
         {
+            dgvSearch.Rows.Clear();
             FormSearchSupplier frmSearchSupp = new FormSearchSupplier();
             frmSearchSupp.ShowDialog();
-            foreach (var item in frmSearchSupp.suppliers)
+            _suppliers = frmSearchSupp.suppliers;
+            foreach (var item in _suppliers)
             {
                 dgvSearch.Rows.Add(item.CompanyName);
             }

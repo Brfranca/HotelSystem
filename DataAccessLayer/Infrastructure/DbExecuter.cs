@@ -14,7 +14,7 @@ namespace DataAccessLayer.Infrastructure
 {
     internal class DbExecuter
     {
-        public Response Execute(DbCommand command)
+        public Response ExecuteScalar(DbCommand command)
         {
             try
             {
@@ -22,8 +22,30 @@ namespace DataAccessLayer.Infrastructure
                 {
                     connection.OpenConnection();
 
-                    int rowsAffected = command.ExecuteNonQuery();
-                    if (rowsAffected > 0)
+                    int id = Convert.ToInt32(command.ExecuteScalar());
+                    if (id > 0)
+                    {
+                        return Response.CreateSuccess("Operação efetuada com sucesso!", id);
+                    }
+                    return Response.CreateFailure("Erro ao efetuar a operação.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Response.CreateFailureException("Ocorreu um erro, contate o administrador.", ex);
+            }
+        }
+
+        public Response ExecuteQuery(DbCommand command)
+        {
+            try
+            {
+                using (DbCurrentConnection connection = new DbCurrentConnection(command))
+                {
+                    connection.OpenConnection();
+
+                    int lineAffects = command.ExecuteNonQuery();
+                    if (lineAffects > 0)
                     {
                         return Response.CreateSuccess("Operação efetuada com sucesso!");
                     }

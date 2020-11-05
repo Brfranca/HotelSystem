@@ -92,7 +92,9 @@
     <Compile Include="FormSearchSupplier.Designer.cs">
       <DependentUpon>FormSearchSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Load\FormLoad.cs" />
+    <Compile Include="Load\FormLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Load\FormLoad.Designer.cs">
       <DependentUpon>FormLoad.cs</DependentUpon>
     </Compile>
@@ -104,6 +106,12 @@
     </Compile>
     <Compile Include="FormRegisterClient.Designer.cs">
       <DependentUpon>FormRegisterClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transparency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transparency.Designer.cs">
+      <DependentUpon>Transparency.cs</DependentUpon>
     </Compile>
     <Compile Include="WebCEP.cs" />
     <EmbeddedResource Include="FormLogin.resx">
@@ -141,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="FormRegisterClient.resx">
       <DependentUpon>FormRegisterClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transparency.resx">
+      <DependentUpon>Transparency.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

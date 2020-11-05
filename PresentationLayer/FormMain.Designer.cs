@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlLeftBar = new System.Windows.Forms.Panel();
             this.pnlBottonLeftBar = new System.Windows.Forms.Panel();
@@ -44,15 +45,15 @@
             this.btnRegistrarEntrada = new System.Windows.Forms.Button();
             this.lblDot5 = new System.Windows.Forms.Label();
             this.lblDot4 = new System.Windows.Forms.Label();
-            this.lblFunNome = new System.Windows.Forms.Label();
+            this.lblEmployeeName = new System.Windows.Forms.Label();
             this.lblCadastrarConsultar = new System.Windows.Forms.Label();
             this.lblDot3 = new System.Windows.Forms.Label();
-            this.lblOla = new System.Windows.Forms.Label();
-            this.lblCadConsCliente = new System.Windows.Forms.Label();
-            this.lblCadConsFuncionario = new System.Windows.Forms.Label();
+            this.lblHello = new System.Windows.Forms.Label();
+            this.lblClient = new System.Windows.Forms.Label();
+            this.lblEmployee = new System.Windows.Forms.Label();
             this.lblDot2 = new System.Windows.Forms.Label();
-            this.lblCadConsFornecedor = new System.Windows.Forms.Label();
-            this.lblCadConsProduto = new System.Windows.Forms.Label();
+            this.lblSupplier = new System.Windows.Forms.Label();
+            this.lblProduct = new System.Windows.Forms.Label();
             this.lblCadConsLaboratorio = new System.Windows.Forms.Label();
             this.lblDot1 = new System.Windows.Forms.Label();
             this.lblCadConsCategoria = new System.Windows.Forms.Label();
@@ -60,6 +61,7 @@
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.picMainClose = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlLeftBar.SuspendLayout();
             this.pnlBottonLeftBar.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,15 +86,15 @@
             this.pnlLeftBar.Controls.Add(this.btnRegistrarEntrada);
             this.pnlLeftBar.Controls.Add(this.lblDot5);
             this.pnlLeftBar.Controls.Add(this.lblDot4);
-            this.pnlLeftBar.Controls.Add(this.lblFunNome);
+            this.pnlLeftBar.Controls.Add(this.lblEmployeeName);
             this.pnlLeftBar.Controls.Add(this.lblCadastrarConsultar);
             this.pnlLeftBar.Controls.Add(this.lblDot3);
-            this.pnlLeftBar.Controls.Add(this.lblOla);
-            this.pnlLeftBar.Controls.Add(this.lblCadConsCliente);
-            this.pnlLeftBar.Controls.Add(this.lblCadConsFuncionario);
+            this.pnlLeftBar.Controls.Add(this.lblHello);
+            this.pnlLeftBar.Controls.Add(this.lblClient);
+            this.pnlLeftBar.Controls.Add(this.lblEmployee);
             this.pnlLeftBar.Controls.Add(this.lblDot2);
-            this.pnlLeftBar.Controls.Add(this.lblCadConsFornecedor);
-            this.pnlLeftBar.Controls.Add(this.lblCadConsProduto);
+            this.pnlLeftBar.Controls.Add(this.lblSupplier);
+            this.pnlLeftBar.Controls.Add(this.lblProduct);
             this.pnlLeftBar.Controls.Add(this.lblCadConsLaboratorio);
             this.pnlLeftBar.Controls.Add(this.lblDot1);
             this.pnlLeftBar.Controls.Add(this.lblCadConsCategoria);
@@ -221,9 +223,9 @@
             this.lblHistSaidas.Location = new System.Drawing.Point(34, 282);
             this.lblHistSaidas.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblHistSaidas.Name = "lblHistSaidas";
-            this.lblHistSaidas.Size = new System.Drawing.Size(154, 23);
+            this.lblHistSaidas.Size = new System.Drawing.Size(80, 23);
             this.lblHistSaidas.TabIndex = 18;
-            this.lblHistSaidas.Text = "Histórico de Saídas";
+            this.lblHistSaidas.Text = "--";
             this.lblHistSaidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblHistEntrada
@@ -236,9 +238,9 @@
             this.lblHistEntrada.Location = new System.Drawing.Point(34, 257);
             this.lblHistEntrada.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblHistEntrada.Name = "lblHistEntrada";
-            this.lblHistEntrada.Size = new System.Drawing.Size(172, 23);
+            this.lblHistEntrada.Size = new System.Drawing.Size(80, 23);
             this.lblHistEntrada.TabIndex = 16;
-            this.lblHistEntrada.Text = "Histórico de Entradas";
+            this.lblHistEntrada.Text = "--";
             this.lblHistEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDot6
@@ -303,18 +305,18 @@
             this.lblDot4.Text = "•";
             this.lblDot4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblFunNome
+            // lblEmployeeName
             // 
-            this.lblFunNome.AutoSize = true;
-            this.lblFunNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblFunNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFunNome.ForeColor = System.Drawing.Color.White;
-            this.lblFunNome.Location = new System.Drawing.Point(12, 27);
-            this.lblFunNome.MaximumSize = new System.Drawing.Size(220, 0);
-            this.lblFunNome.Name = "lblFunNome";
-            this.lblFunNome.Size = new System.Drawing.Size(120, 23);
-            this.lblFunNome.TabIndex = 1;
-            this.lblFunNome.Text = "<funcionario>";
+            this.lblEmployeeName.AutoSize = true;
+            this.lblEmployeeName.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmployeeName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeName.ForeColor = System.Drawing.Color.White;
+            this.lblEmployeeName.Location = new System.Drawing.Point(12, 27);
+            this.lblEmployeeName.MaximumSize = new System.Drawing.Size(220, 0);
+            this.lblEmployeeName.Name = "lblEmployeeName";
+            this.lblEmployeeName.Size = new System.Drawing.Size(120, 23);
+            this.lblEmployeeName.TabIndex = 1;
+            this.lblEmployeeName.Text = "<funcionario>";
             // 
             // lblCadastrarConsultar
             // 
@@ -343,47 +345,50 @@
             this.lblDot3.Text = "•";
             this.lblDot3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblOla
+            // lblHello
             // 
-            this.lblOla.AutoSize = true;
-            this.lblOla.BackColor = System.Drawing.Color.Transparent;
-            this.lblOla.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOla.ForeColor = System.Drawing.Color.Silver;
-            this.lblOla.Location = new System.Drawing.Point(12, 8);
-            this.lblOla.Name = "lblOla";
-            this.lblOla.Size = new System.Drawing.Size(40, 23);
-            this.lblOla.TabIndex = 0;
-            this.lblOla.Text = "Olá,";
+            this.lblHello.AutoSize = true;
+            this.lblHello.BackColor = System.Drawing.Color.Transparent;
+            this.lblHello.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHello.ForeColor = System.Drawing.Color.Silver;
+            this.lblHello.Location = new System.Drawing.Point(12, 8);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(40, 23);
+            this.lblHello.TabIndex = 0;
+            this.lblHello.Text = "Olá,";
             // 
-            // lblCadConsCliente
+            // lblClient
             // 
-            this.lblCadConsCliente.AutoSize = true;
-            this.lblCadConsCliente.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadConsCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCadConsCliente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadConsCliente.ForeColor = System.Drawing.Color.White;
-            this.lblCadConsCliente.Location = new System.Drawing.Point(34, 107);
-            this.lblCadConsCliente.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblCadConsCliente.Name = "lblCadConsCliente";
-            this.lblCadConsCliente.Size = new System.Drawing.Size(80, 23);
-            this.lblCadConsCliente.TabIndex = 4;
-            this.lblCadConsCliente.Text = "Cliente";
-            this.lblCadConsCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblClient.AutoSize = true;
+            this.lblClient.BackColor = System.Drawing.Color.Transparent;
+            this.lblClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClient.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClient.ForeColor = System.Drawing.Color.White;
+            this.lblClient.Location = new System.Drawing.Point(34, 107);
+            this.lblClient.MinimumSize = new System.Drawing.Size(80, 20);
+            this.lblClient.Name = "lblClient";
+            this.lblClient.Size = new System.Drawing.Size(80, 23);
+            this.lblClient.TabIndex = 4;
+            this.lblClient.Text = "Clientes";
+            this.lblClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblClient.Click += new System.EventHandler(this.lblClient_Click);
+            this.lblClient.MouseLeave += new System.EventHandler(this.lblClient_MouseLeave);
+            this.lblClient.MouseHover += new System.EventHandler(this.lblClient_MouseHover);
             // 
-            // lblCadConsFuncionario
+            // lblEmployee
             // 
-            this.lblCadConsFuncionario.AutoSize = true;
-            this.lblCadConsFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadConsFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCadConsFuncionario.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadConsFuncionario.ForeColor = System.Drawing.Color.White;
-            this.lblCadConsFuncionario.Location = new System.Drawing.Point(34, 232);
-            this.lblCadConsFuncionario.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblCadConsFuncionario.Name = "lblCadConsFuncionario";
-            this.lblCadConsFuncionario.Size = new System.Drawing.Size(99, 23);
-            this.lblCadConsFuncionario.TabIndex = 14;
-            this.lblCadConsFuncionario.Text = "Funcionário";
-            this.lblCadConsFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEmployee.AutoSize = true;
+            this.lblEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEmployee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployee.ForeColor = System.Drawing.Color.White;
+            this.lblEmployee.Location = new System.Drawing.Point(34, 232);
+            this.lblEmployee.MinimumSize = new System.Drawing.Size(80, 20);
+            this.lblEmployee.Name = "lblEmployee";
+            this.lblEmployee.Size = new System.Drawing.Size(80, 23);
+            this.lblEmployee.TabIndex = 14;
+            this.lblEmployee.Text = "---";
+            this.lblEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDot2
             // 
@@ -400,35 +405,35 @@
             this.lblDot2.Text = "•";
             this.lblDot2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblCadConsFornecedor
+            // lblSupplier
             // 
-            this.lblCadConsFornecedor.AutoSize = true;
-            this.lblCadConsFornecedor.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadConsFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCadConsFornecedor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadConsFornecedor.ForeColor = System.Drawing.Color.White;
-            this.lblCadConsFornecedor.Location = new System.Drawing.Point(34, 182);
-            this.lblCadConsFornecedor.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblCadConsFornecedor.Name = "lblCadConsFornecedor";
-            this.lblCadConsFornecedor.Size = new System.Drawing.Size(96, 23);
-            this.lblCadConsFornecedor.TabIndex = 10;
-            this.lblCadConsFornecedor.Text = "Fornecedor";
-            this.lblCadConsFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSupplier.AutoSize = true;
+            this.lblSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.lblSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblSupplier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupplier.ForeColor = System.Drawing.Color.White;
+            this.lblSupplier.Location = new System.Drawing.Point(34, 182);
+            this.lblSupplier.MinimumSize = new System.Drawing.Size(80, 20);
+            this.lblSupplier.Name = "lblSupplier";
+            this.lblSupplier.Size = new System.Drawing.Size(112, 23);
+            this.lblSupplier.TabIndex = 10;
+            this.lblSupplier.Text = "Fornecedores";
+            this.lblSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblCadConsProduto
+            // lblProduct
             // 
-            this.lblCadConsProduto.AutoSize = true;
-            this.lblCadConsProduto.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadConsProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblCadConsProduto.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadConsProduto.ForeColor = System.Drawing.Color.White;
-            this.lblCadConsProduto.Location = new System.Drawing.Point(34, 132);
-            this.lblCadConsProduto.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblCadConsProduto.Name = "lblCadConsProduto";
-            this.lblCadConsProduto.Size = new System.Drawing.Size(80, 23);
-            this.lblCadConsProduto.TabIndex = 6;
-            this.lblCadConsProduto.Text = "Produto";
-            this.lblCadConsProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.BackColor = System.Drawing.Color.Transparent;
+            this.lblProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblProduct.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduct.ForeColor = System.Drawing.Color.White;
+            this.lblProduct.Location = new System.Drawing.Point(34, 132);
+            this.lblProduct.MinimumSize = new System.Drawing.Size(80, 20);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(80, 23);
+            this.lblProduct.TabIndex = 6;
+            this.lblProduct.Text = "Quartos";
+            this.lblProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblCadConsLaboratorio
             // 
@@ -440,9 +445,9 @@
             this.lblCadConsLaboratorio.Location = new System.Drawing.Point(34, 207);
             this.lblCadConsLaboratorio.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblCadConsLaboratorio.Name = "lblCadConsLaboratorio";
-            this.lblCadConsLaboratorio.Size = new System.Drawing.Size(98, 23);
+            this.lblCadConsLaboratorio.Size = new System.Drawing.Size(106, 23);
             this.lblCadConsLaboratorio.TabIndex = 12;
-            this.lblCadConsLaboratorio.Text = "Laboratório";
+            this.lblCadConsLaboratorio.Text = "Funcionários";
             this.lblCadConsLaboratorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblDot1
@@ -470,9 +475,9 @@
             this.lblCadConsCategoria.Location = new System.Drawing.Point(34, 157);
             this.lblCadConsCategoria.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblCadConsCategoria.Name = "lblCadConsCategoria";
-            this.lblCadConsCategoria.Size = new System.Drawing.Size(84, 23);
+            this.lblCadConsCategoria.Size = new System.Drawing.Size(80, 23);
             this.lblCadConsCategoria.TabIndex = 8;
-            this.lblCadConsCategoria.Text = "Categoria";
+            this.lblCadConsCategoria.Text = "Produtos";
             this.lblCadConsCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlTopBar
@@ -527,6 +532,12 @@
             this.picMainClose.TabStop = false;
             this.picMainClose.Click += new System.EventHandler(this.picMainClose_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -574,21 +585,22 @@
         private System.Windows.Forms.Button btnRegistrarEntrada;
         private System.Windows.Forms.Label lblDot5;
         private System.Windows.Forms.Label lblDot4;
-        private System.Windows.Forms.Label lblFunNome;
+        private System.Windows.Forms.Label lblEmployeeName;
         private System.Windows.Forms.Label lblCadastrarConsultar;
         private System.Windows.Forms.Label lblDot3;
-        private System.Windows.Forms.Label lblOla;
-        private System.Windows.Forms.Label lblCadConsCliente;
-        private System.Windows.Forms.Label lblCadConsFuncionario;
+        private System.Windows.Forms.Label lblHello;
+        private System.Windows.Forms.Label lblClient;
+        private System.Windows.Forms.Label lblEmployee;
         private System.Windows.Forms.Label lblDot2;
-        private System.Windows.Forms.Label lblCadConsFornecedor;
-        private System.Windows.Forms.Label lblCadConsProduto;
+        private System.Windows.Forms.Label lblSupplier;
+        private System.Windows.Forms.Label lblProduct;
         private System.Windows.Forms.Label lblCadConsLaboratorio;
         private System.Windows.Forms.Label lblDot1;
-        private System.Windows.Forms.Label lblCadConsCategoria;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picMainClose;
         private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Label lblNomeFarmacia;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblCadConsCategoria;
     }
 }

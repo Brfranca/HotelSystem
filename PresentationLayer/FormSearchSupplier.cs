@@ -19,6 +19,7 @@ namespace PresentationLayer
         private readonly SupplierBLL _supplierBLL;
         private List<Supplier> _supplierGrid;
         public List<Supplier> suppliers;
+
         public FormSearchSupplier()
         {
             InitializeComponent();
