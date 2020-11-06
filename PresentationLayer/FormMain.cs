@@ -72,6 +72,14 @@ namespace PresentationLayer
             transparency.Close();
         }
 
+        private void lblRooms_Click(object sender, EventArgs e)
+        {
+            Transparency transparency = new Transparency();
+            transparency.Show();
+            new FormRegisterRoom().ShowDialog();
+            transparency.Close();
+        }
+
         private void lblClient_MouseHover(object sender, EventArgs e)
         {
             lblClient.MouseHoverEvent();

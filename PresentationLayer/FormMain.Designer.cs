@@ -455,6 +455,7 @@
             this.lblRooms.TabIndex = 8;
             this.lblRooms.Text = "Quartos";
             this.lblRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRooms.Click += new System.EventHandler(this.lblRooms_Click);
             this.lblRooms.MouseLeave += new System.EventHandler(this.lblRooms_MouseLeave);
             this.lblRooms.MouseHover += new System.EventHandler(this.lblRooms_MouseHover);
             // 

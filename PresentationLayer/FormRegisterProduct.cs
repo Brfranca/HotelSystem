@@ -35,7 +35,6 @@ namespace PresentationLayer
             Product product = CreateProduct();
             if (btnProductRegister.Text == "Cadastrar")
             {
-                product.SuppliersID = _suppliers.Select(x => x.ID).ToList();
                 Response response = _productBLL.Register(product);
                 MessageBox.Show(response.Message);
                 if (response.Success)
