@@ -11,7 +11,7 @@ namespace DataAccessLayer
     {
         Response Insert<T>(T item);
         Response Update<T>(T item);
-        Response Delete(T item);
+        Response Delete<T>(T item);
         QueryResponse<List<T>> GetAll();
         QueryResponse<T> GetById(int id);
     }

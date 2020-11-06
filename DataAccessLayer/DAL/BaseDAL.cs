@@ -32,8 +32,7 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().ExecuteQuery(command);
         }
 
-
-        public Response Delete(T entity)
+        public Response Delete<T>(T entity)
         {
             DbCommand command = SqlGenerator<T>.BuildDeleteCommand(entity);
             return new DbExecuter().ExecuteQuery(command);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -61,6 +62,20 @@ namespace PresentationLayer
             }
         }
 
+
+        public static void MouseHoverEvent(this Label label)
+        {
+            label.Font = new Font(label.Font, FontStyle.Bold);
+            label.ForeColor = Color.FromArgb(246, 142, 31);
+        }
+
+        public static void MouseLeaveEvent(this Label label)
+        {
+            label.Font = new Font(label.Font, FontStyle.Regular);
+            label.ForeColor = Color.FromArgb(255, 255, 255);
+        }
+
+       
         // MÉTODO RESPONSÁVEL POR GERAR O MD5 DAS SENHAS DOS FUNCIONÁRIOS
         public static string GerarHashMd5(string input)
         {

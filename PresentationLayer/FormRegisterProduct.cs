@@ -17,7 +17,7 @@ namespace PresentationLayer
 {
     public partial class FormRegisterProduct : Form
     {
-        private List<Supplier> _suppliers;
+        public List<Supplier> _suppliers;
         private readonly ProductBLL _productBLL;
         private List<Product> _productGrid;
         private int _currentRowGrid;
@@ -50,15 +50,13 @@ namespace PresentationLayer
                 product.ID = Convert.ToInt32(lblID.Text);
                 
                 Response response = _productBLL.Update(product);
-
-
                 MessageBox.Show(response.Message);
-                //if (response.Success)
-                //{
-                //    UpdateComponentsRegister();
-                //    this.ClearForm();
-                //    UpdateGrid();
-                //}
+                if (response.Success)
+                {
+                    UpdateComponentsRegister();
+                    this.ClearForm();
+                    UpdateGrid();
+                }
             }
         }
 

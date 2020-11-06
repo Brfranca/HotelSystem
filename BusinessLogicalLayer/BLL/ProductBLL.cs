@@ -72,7 +72,7 @@ namespace BusinessLogicalLayer.BLL
             ValidateName(product.Name, product.ID, validator);
             ValidateDescription(product.Description, product.ID, validator);
             ValidateNameDescription(product.Name, product.Description, product.ID, validator);
-            ValidateSupplierID(product.SuppliersID, validator);
+            ValidateSupplierID(product.SuppliersID, product.ID, validator);
 
             return validator.Validate();
         }
@@ -110,7 +110,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        private void ValidateSupplierID(List<int> supplierID, Validator validator)
+        private void ValidateSupplierID(List<int> supplierID, int id, Validator validator)
         {
             if (supplierID.Count == 0)
             {
