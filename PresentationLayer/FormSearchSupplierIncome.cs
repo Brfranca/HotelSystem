@@ -14,20 +14,19 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public partial class FormSearchSupplier : Form
+    public partial class FormSearchSupplierIncome : Form
     {
         private readonly SupplierBLL _supplierBLL;
         private List<Supplier> _supplierGrid;
         public List<Supplier> suppliers;
-
-        public FormSearchSupplier()
+        public FormSearchSupplierIncome()
         {
             InitializeComponent();
             _supplierBLL = new SupplierBLL();
             suppliers = new List<Supplier>();
         }
 
-        private void FormSearchSupplier_Load(object sender, EventArgs e)
+        private void FormSearchSupplierIncome_Load(object sender, EventArgs e)
         {
             UpdateGrid();
         }
@@ -57,7 +56,7 @@ namespace PresentationLayer
 
         private void btnSupplierSelect_Click(object sender, EventArgs e)
         {
-            foreach(DataGridViewRow row in dgvSuppliersSearch.Rows)
+            foreach (DataGridViewRow row in dgvSuppliersSearch.Rows)
             {
                 if ((Convert.ToBoolean(row.Cells[2].Value)))
                 {
@@ -77,22 +76,22 @@ namespace PresentationLayer
 
         private void txtSuppSearchName_Enter(object sender, EventArgs e)
         {
-            pnlSuppName.BackColor = Color.FromArgb(37, 206, 15);
+            pnlSuppName.EnterEvent();
         }
 
         private void txtSuppSearchName_Leave(object sender, EventArgs e)
         {
-            pnlSuppName.BackColor = Color.Black;
+            pnlSuppName.LeaveEvent();
         }
 
         private void txtSuppSearchCNPJ_Enter(object sender, EventArgs e)
         {
-            pnlSuppCNPJ.BackColor = Color.FromArgb(37, 206, 15);
+            pnlSuppCNPJ.EnterEvent();
         }
 
         private void txtSuppSearchCNPJ_Leave(object sender, EventArgs e)
         {
-            pnlSuppCNPJ.BackColor = Color.Black;
+            pnlSuppCNPJ.LeaveEvent();
         }
 
         private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Supplier, bool> predicate)
@@ -111,8 +110,6 @@ namespace PresentationLayer
                 dgvSuppliersSearch.Rows.Clear();
                 InsertGrid(_supplierGrid);
             }
-
-
         }
 
         private void txtSuppSearchName_TextChanged(object sender, EventArgs e)
@@ -122,7 +119,35 @@ namespace PresentationLayer
 
         private void txtSuppSearchCNPJ_TextChanged(object sender, EventArgs e)
         {
-            FilterGrid(txtSuppSearchCNPJ, txtSuppSearchName, x => x.CNPJ.ToLower().Contains(txtSuppSearchCNPJ.Text.ToLower()));
+            FilterGrid(txtSuppSearchName, txtSuppSearchCNPJ, x => x.CompanyName.ToLower().Contains(txtSuppSearchName.Text.ToLower()));
+        }
+
+        //Rever método
+        private void dgvSuppliersSearch_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+            //if (e.ColumnIndex == dgvSuppliersSearch.Rows[0].Index && e.RowIndex != -1)
+            //{
+            //    DataGridViewCheckBoxCell chk = dataGridView1.Rows[e.RowIndex].Cells[0] as DataGridViewCheckBoxCell;
+
+            //    if (Convert.ToBoolean(chk.Value) == true) chkInt++;
+            //    if (Convert.ToBoolean(chk.Value) == false) chkInt--;
+            //    if (chkInt < dataGridView1.Rows.Count && chkInt > 0)
+            //    {
+            //        checkBox1.CheckState = CheckState.Indeterminate;
+            //        chked = true;
+            //    }
+            //    else if (chkInt == 0)
+            //    {
+            //        checkBox1.CheckState = CheckState.Unchecked;
+            //        chked = false;
+            //    }
+            //    else if (chkInt == dataGridView1.Rows.Count)
+            //    {
+            //        checkBox1.CheckState = CheckState.Checked;
+            //        chked = true;
+            //    }
+            //}
         }
     }
 }

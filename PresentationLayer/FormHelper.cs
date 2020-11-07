@@ -75,6 +75,16 @@ namespace PresentationLayer
             label.ForeColor = Color.FromArgb(255, 255, 255);
         }
 
+        public static void EnterEvent(this Panel panel)
+        {
+           panel.BackColor = Color.FromArgb(37, 206, 15);
+        }
+
+        public static void LeaveEvent(this Panel panel)
+        {
+            panel.BackColor = Color.Black;
+        }
+
        
         // MÉTODO RESPONSÁVEL POR GERAR O MD5 DAS SENHAS DOS FUNCIONÁRIOS
         public static string GerarHashMd5(string input)

@@ -45,6 +45,7 @@
     <Compile Include="Entities\Client.cs" />
     <Compile Include="DataAnnotations\TableName.cs" />
     <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\IncomeItem.cs" />
     <Compile Include="Entities\Supplier_Product.cs" />
     <Compile Include="Enums\EmployeeType.cs" />
     <Compile Include="Enums\RoomFloor.cs" />

@@ -68,6 +68,12 @@
     <Compile Include="FormRegisterEmployee.Designer.cs">
       <DependentUpon>FormRegisterEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegisterIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegisterIncome.Designer.cs">
+      <DependentUpon>FormRegisterIncome.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegisterProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="FormSearchSupplier.Designer.cs">
       <DependentUpon>FormSearchSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchSupplierIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchSupplierIncome.Designer.cs">
+      <DependentUpon>FormSearchSupplierIncome.cs</DependentUpon>
     </Compile>
     <Compile Include="Load\FormLoad.cs">
       <SubType>Form</SubType>
@@ -123,6 +135,9 @@
     <EmbeddedResource Include="FormRegisterEmployee.resx">
       <DependentUpon>FormRegisterEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRegisterIncome.resx">
+      <DependentUpon>FormRegisterIncome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterProduct.resx">
       <DependentUpon>FormRegisterProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchSupplier.resx">
       <DependentUpon>FormSearchSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchSupplierIncome.resx">
+      <DependentUpon>FormSearchSupplierIncome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Load\FormLoad.resx">
       <DependentUpon>FormLoad.cs</DependentUpon>
