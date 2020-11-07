@@ -40,6 +40,7 @@ namespace PresentationLayer
                 if (response.Success)
                 {
                     this.ClearForm();
+                    _suppliers.Clear();
                     UpdateGrid();
                 }
             }
@@ -54,6 +55,7 @@ namespace PresentationLayer
                 {
                     UpdateComponentsRegister();
                     this.ClearForm();
+                    _suppliers.Clear();
                     UpdateGrid();
                 }
             }
@@ -158,6 +160,7 @@ namespace PresentationLayer
                 if (response.Success)
                 {
                     this.ClearForm();
+                    _suppliers.Clear();
                     UpdateGrid();
                     UpdateComponentsRegister();
                 }
@@ -167,6 +170,7 @@ namespace PresentationLayer
         private void btnProductClear_Click(object sender, EventArgs e)
         {
             this.ClearForm();
+            _suppliers.Clear();
             if (btnProductRegister.Text == "Editar")
             {
                 UpdateComponentsRegister();
