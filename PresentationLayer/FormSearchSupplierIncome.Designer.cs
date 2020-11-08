@@ -48,7 +48,6 @@
             this.dgvSuppliersSearch = new System.Windows.Forms.DataGridView();
             this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRoomClose)).BeginInit();
@@ -148,7 +147,7 @@
             this.txtSuppSearchCNPJ.MaxLength = 11;
             this.txtSuppSearchCNPJ.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSuppSearchCNPJ.Name = "txtSuppSearchCNPJ";
-            this.txtSuppSearchCNPJ.Size = new System.Drawing.Size(191, 24);
+            this.txtSuppSearchCNPJ.Size = new System.Drawing.Size(191, 22);
             this.txtSuppSearchCNPJ.TabIndex = 240;
             this.txtSuppSearchCNPJ.TextChanged += new System.EventHandler(this.txtSuppSearchCNPJ_TextChanged);
             this.txtSuppSearchCNPJ.Enter += new System.EventHandler(this.txtSuppSearchCNPJ_Enter);
@@ -176,7 +175,7 @@
             this.txtSuppSearchName.MaxLength = 11;
             this.txtSuppSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSuppSearchName.Name = "txtSuppSearchName";
-            this.txtSuppSearchName.Size = new System.Drawing.Size(258, 24);
+            this.txtSuppSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtSuppSearchName.TabIndex = 238;
             this.txtSuppSearchName.TextChanged += new System.EventHandler(this.txtSuppSearchName_TextChanged);
             this.txtSuppSearchName.Enter += new System.EventHandler(this.txtSuppSearchName_Enter);
@@ -229,8 +228,7 @@
             this.dgvSuppliersSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSuppliersSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCompanyName,
-            this.ColumnCnpj,
-            this.Column1});
+            this.ColumnCnpj});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -241,6 +239,7 @@
             this.dgvSuppliersSearch.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSuppliersSearch.Location = new System.Drawing.Point(23, 108);
             this.dgvSuppliersSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvSuppliersSearch.MultiSelect = false;
             this.dgvSuppliersSearch.Name = "dgvSuppliersSearch";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -257,7 +256,7 @@
             this.dgvSuppliersSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSuppliersSearch.Size = new System.Drawing.Size(518, 379);
             this.dgvSuppliersSearch.TabIndex = 234;
-            this.dgvSuppliersSearch.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliersSearch_CellValueChanged);
+            this.dgvSuppliersSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliersSearch_CellClick);
             // 
             // ColumnCompanyName
             // 
@@ -273,13 +272,6 @@
             this.ColumnCnpj.MinimumWidth = 6;
             this.ColumnCnpj.Name = "ColumnCnpj";
             this.ColumnCnpj.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 30F;
-            this.Column1.HeaderText = "Selecionar";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
             // 
             // FormSearchSupplierIncome
             // 
@@ -327,6 +319,5 @@
         private System.Windows.Forms.DataGridView dgvSuppliersSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }

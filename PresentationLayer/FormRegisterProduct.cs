@@ -86,7 +86,7 @@ namespace PresentationLayer
                 txtProductName.Text = response.Data.Name;
                 txtProductDescription.Text = response.Data.Description;
                 lblID.Text = response.Data.ID.ToString();
-                QueryResponse<List<Supplier_Product>> queryResponse = _productBLL.GetAssociativeTable(id);
+                QueryResponse<List<Supplier_Product>> queryResponse = _productBLL.GetByProductId(id);
                 
                 foreach (Supplier_Product item in queryResponse.Data)
                 {

@@ -16,14 +16,17 @@ namespace PresentationLayer
 {
     public partial class FormSearchSupplierIncome : Form
     {
+        //Form para selecionar somente um fornecedor para a entrada
+
         private readonly SupplierBLL _supplierBLL;
         private List<Supplier> _supplierGrid;
-        public List<Supplier> suppliers;
+        public Supplier supplier;
+        private int _currentRowGrid;
         public FormSearchSupplierIncome()
         {
             InitializeComponent();
             _supplierBLL = new SupplierBLL();
-            suppliers = new List<Supplier>();
+            supplier = new Supplier();
         }
 
         private void FormSearchSupplierIncome_Load(object sender, EventArgs e)
@@ -56,17 +59,7 @@ namespace PresentationLayer
 
         private void btnSupplierSelect_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvSuppliersSearch.Rows)
-            {
-                if ((Convert.ToBoolean(row.Cells[2].Value)))
-                {
-                    string cnpj = (string)dgvSuppliersSearch.Rows[row.Index].Cells[1].Value;
-                    QueryResponse<Supplier> response = _supplierBLL.GetByCnpj(cnpj);
-                    suppliers.Add(response.Data);
-                }
-            }
-
-            this.Close();
+            SelectDataGrid();
         }
 
         private void picRoomClose_Click(object sender, EventArgs e)
@@ -122,32 +115,21 @@ namespace PresentationLayer
             FilterGrid(txtSuppSearchName, txtSuppSearchCNPJ, x => x.CompanyName.ToLower().Contains(txtSuppSearchName.Text.ToLower()));
         }
 
-        //Rever método
-        private void dgvSuppliersSearch_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void dgvSuppliersSearch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            _currentRowGrid = e.RowIndex;
+        }
 
-            //if (e.ColumnIndex == dgvSuppliersSearch.Rows[0].Index && e.RowIndex != -1)
-            //{
-            //    DataGridViewCheckBoxCell chk = dataGridView1.Rows[e.RowIndex].Cells[0] as DataGridViewCheckBoxCell;
+        private void SelectDataGrid()
+        {
+            if (_currentRowGrid == -1)
+                return;
 
-            //    if (Convert.ToBoolean(chk.Value) == true) chkInt++;
-            //    if (Convert.ToBoolean(chk.Value) == false) chkInt--;
-            //    if (chkInt < dataGridView1.Rows.Count && chkInt > 0)
-            //    {
-            //        checkBox1.CheckState = CheckState.Indeterminate;
-            //        chked = true;
-            //    }
-            //    else if (chkInt == 0)
-            //    {
-            //        checkBox1.CheckState = CheckState.Unchecked;
-            //        chked = false;
-            //    }
-            //    else if (chkInt == dataGridView1.Rows.Count)
-            //    {
-            //        checkBox1.CheckState = CheckState.Checked;
-            //        chked = true;
-            //    }
-            //}
+            string cnpj = (string)dgvSuppliersSearch.Rows[_currentRowGrid].Cells[1].Value;
+            QueryResponse<Supplier> response = _supplierBLL.GetByCnpj(cnpj);
+            supplier = response.Data;
+
+            this.Close();
         }
     }
 }

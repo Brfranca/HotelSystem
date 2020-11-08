@@ -83,7 +83,7 @@ namespace DataAccessLayer.DAL
         }
 
         //Método novo, nao sei se funciona. Ass: kj
-        public QueryResponse<List<Supplier_Product>> GetAssociativeTable(int id)
+        public QueryResponse<List<Supplier_Product>> GetByProductId(int id)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
             command.CommandText = "SELECT * FROM SUPPLIERS_PRODUCTS WHERE PRODUCTID = @PRODUCTID";
@@ -91,6 +91,16 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetAllData<Supplier_Product>(command);
 
         }
+
+        public QueryResponse<List<Supplier_Product>> GetBySupplierId(int id)
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = "SELECT * FROM SUPPLIERS_PRODUCTS WHERE SUPPLIERID = @SUPPLIERID";
+            command.Parameters.AddWithValue("@SUPPLIERID", id);
+            return new DbExecuter().GetAllData<Supplier_Product>(command);
+
+        }
+
 
         public bool ExistName(string name, int id)
         {

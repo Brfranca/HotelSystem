@@ -118,11 +118,15 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        public QueryResponse<List<Supplier_Product>> GetAssociativeTable(int id)
+        public QueryResponse<List<Supplier_Product>> GetByProductId(int id)
         {
-            return _productDAL.GetAssociativeTable(id);
+            return _productDAL.GetByProductId(id);
         }
 
-        
+        public QueryResponse<List<Supplier_Product>> GetBySupplierId(int id)
+        {
+            return _productDAL.GetBySupplierId(id);
+        }
+
     }
 }

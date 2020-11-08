@@ -92,6 +92,12 @@
     <Compile Include="FormRegisterSupplier.Designer.cs">
       <DependentUpon>FormRegisterSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchProduct.Designer.cs">
+      <DependentUpon>FormSearchProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSearchSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterSupplier.resx">
       <DependentUpon>FormRegisterSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchProduct.resx">
+      <DependentUpon>FormSearchProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchSupplier.resx">
       <DependentUpon>FormSearchSupplier.cs</DependentUpon>
