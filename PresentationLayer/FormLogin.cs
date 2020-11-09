@@ -1,4 +1,6 @@
 ﻿using BusinessLogicalLayer.BLL;
+using Common;
+using Entities;
 using PresentationLayer.Load;
 using System;
 using System.Collections.Generic;
@@ -16,6 +18,8 @@ namespace PresentationLayer
     public partial class FormLogin : Form
     {
         private readonly EmployeeBLL _employeeBLL;
+        //employeeID: adicionei para guardar o id do funcionário para poder utilizá-lo para o registro de entradas e saídas. Ass: kj
+        public int employeeID;
         public FormLogin()
         {
             InitializeComponent();
@@ -28,6 +32,10 @@ namespace PresentationLayer
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var result = Loading.Load(_employeeBLL.Login, txtUser.Text, txtPassword.Text);
+
+            //Utilizei o método GetByEmail para podermos identificar o usuário e registrar o ID do mesmo na variável employeeId. Ass: kj
+            QueryResponse<Employee> response = _employeeBLL.GetByEmail(txtUser.Text);
+            employeeID = response.Data.ID;
             if (!result.Success)
             {
                 MessageBox.Show(result.GetAllMessages());

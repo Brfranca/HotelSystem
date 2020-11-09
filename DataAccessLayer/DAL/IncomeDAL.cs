@@ -31,11 +31,11 @@ namespace DataAccessLayer.DAL
                             IncomeID = resultInsertIncome.Id,
                         };
                         command.Parameters.Clear();
-                        command.CommandText = "INSERT INTO INCOMEITEMS (INCOMEID, PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE)";
-                        command.Parameters.AddWithValue("@INCOMEID", income.ID);
-                        command.Parameters.AddWithValue("@PRODUCTID", incomeItem.ProductID);
-                        command.Parameters.AddWithValue("@QUANTITY", incomeItem.Quantity);
-                        command.Parameters.AddWithValue("@UNITYPRICE", incomeItem.UnityPrice);
+                        command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET STOCK += @QUANTITY WHERE ID = @PRODUCTID";
+                        command.Parameters.AddWithValue("@INCOMEID", incomeItem.IncomeID);
+                        command.Parameters.AddWithValue("@PRODUCTID", incomItemEntry.ProductID);
+                        command.Parameters.AddWithValue("@QUANTITY", incomItemEntry.Quantity);
+                        command.Parameters.AddWithValue("@UNITYPRICE", incomItemEntry.UnityPrice);
                         Response responseInsert = new DbExecuter().ExecuteQuery(command);
                         if (!responseInsert.Success)
                             return responseInsert;

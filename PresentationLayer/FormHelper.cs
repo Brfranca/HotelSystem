@@ -24,6 +24,21 @@ namespace PresentationLayer
                 if (control.Controls[i] is TextBox)
                 {
                     ((TextBox)control.Controls[i]).Clear();
+
+                    if (control.Controls[i].Name.ToString() == "txtTotalValue")
+                    {
+                        ((TextBox)control.Controls[i]).Text = "0";
+                    }
+                    else if (control.Controls[i].Name.ToString() == "txtProdQuantity")
+                    {
+                        ((TextBox)control.Controls[i]).Text = "0";
+                    }
+                    else if (control.Controls[i].Name.ToString() == "txtProdPrice")
+                    {
+                        ((TextBox)control.Controls[i]).Text = "0";
+                    }
+                    
+                    
                 }
                 // LIMPA ComboBox
                 else if (control.Controls[i] is ComboBox)
@@ -55,6 +70,10 @@ namespace PresentationLayer
                 else if (control.Controls[i] is DataGridView)
                 {
                     if (control.Controls[i].Name.ToString() == "dgvSearch")
+                    {
+                        ((DataGridView)control.Controls[i]).Rows.Clear();
+                    }
+                    else if (control.Controls[i].Name.ToString() == "dgvIncomeItems")
                     {
                         ((DataGridView)control.Controls[i]).Rows.Clear();
                     }

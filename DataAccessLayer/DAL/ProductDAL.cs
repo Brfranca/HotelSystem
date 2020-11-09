@@ -57,7 +57,7 @@ namespace DataAccessLayer.DAL
                     foreach (int id in product.SuppliersID)
                     {
                         command.Parameters.Clear();
-                        command.CommandText = "INSERT INTO SUPPLIERS_PRODUCTS (SUPPLIERID,PRODUCTID) VALUES (@SUPPLIERID,@PRODUCTID)";
+                        command.CommandText = @"INSERT INTO SUPPLIERS_PRODUCTS (SUPPLIERID,PRODUCTID) VALUES (@SUPPLIERID,@PRODUCTID)";
                         command.Parameters.AddWithValue("@PRODUCTID", product.ID);
                         command.Parameters.AddWithValue("@SUPPLIERID", id);
                         Response responseInsert = new DbExecuter().ExecuteQuery(command);

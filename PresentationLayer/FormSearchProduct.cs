@@ -17,14 +17,16 @@ namespace PresentationLayer
     public partial class FormSearchProduct : Form
     {
         private ProductBLL _productBLL;
-        public List<Product> _productGrid;
+        private List<Product> _productGrid;
         public Supplier supplier;
-
+        public Product product;
+        private int _currentRowGrid;
 
         public FormSearchProduct()
         {
             InitializeComponent();
             _productBLL = new ProductBLL();
+            product = new Product();
         }
 
         private void FormSearchProduct_Load(object sender, EventArgs e)
@@ -77,6 +79,32 @@ namespace PresentationLayer
         private void picProductClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnProductSelect_Click(object sender, EventArgs e)
+        {
+            SelectDataGrid();
+            
+        }
+
+        private void SelectDataGrid()
+        {
+            if (_currentRowGrid == -1)
+                return;
+
+            int id = (int)dgvProductSearch.Rows[_currentRowGrid].Cells[0].Value;
+            QueryResponse<Product> response = _productBLL.GetById(id);
+            if (!response.Success)
+            {
+                MessageBox.Show(response.Message);
+            }
+            product = response.Data;
+            this.Close();
+        }
+
+        private void dgvProductSearch_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
         }
     }
 }

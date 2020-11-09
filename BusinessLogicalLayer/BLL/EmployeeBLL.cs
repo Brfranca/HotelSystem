@@ -98,6 +98,11 @@ namespace BusinessLogicalLayer.BLL
             return _employeeDAL.GetByRg(rg);
         }
 
+        public QueryResponse<Employee> GetByEmail(string email)
+        {
+            return _employeeDAL.GetByEmail(email);
+        }
+        
         private Response Validate(Employee employee, string passaword2)
         {
             try

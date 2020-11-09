@@ -18,6 +18,12 @@ namespace Entities
         public DateTime EntryDate { get; set; }
         public int EmployeeID { get; set; }
         public double TotalValue { get; set; }
+        [NonEditable]
         public List<IncomeItem> IncomeItems { get; set; }
+
+        public Income()
+        {
+            IncomeItems = new List<IncomeItem>();
+        }
     }
 }

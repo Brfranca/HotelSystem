@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearchProduct));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblNomeTabela = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picProductClose = new System.Windows.Forms.PictureBox();
-            this.btnSupplierSelect = new System.Windows.Forms.Button();
+            this.btnProductSelect = new System.Windows.Forms.Button();
             this.pnlSuppCNPJ = new System.Windows.Forms.Panel();
             this.txtProduSearchID = new System.Windows.Forms.TextBox();
             this.pnlSuppName = new System.Windows.Forms.Panel();
@@ -108,22 +108,23 @@
             this.picProductClose.TabStop = false;
             this.picProductClose.Click += new System.EventHandler(this.picProductClose_Click);
             // 
-            // btnSupplierSelect
+            // btnProductSelect
             // 
-            this.btnSupplierSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnSupplierSelect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSupplierSelect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnSupplierSelect.FlatAppearance.BorderSize = 3;
-            this.btnSupplierSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupplierSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupplierSelect.ForeColor = System.Drawing.Color.White;
-            this.btnSupplierSelect.Location = new System.Drawing.Point(194, 503);
-            this.btnSupplierSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSupplierSelect.Name = "btnSupplierSelect";
-            this.btnSupplierSelect.Size = new System.Drawing.Size(189, 36);
-            this.btnSupplierSelect.TabIndex = 241;
-            this.btnSupplierSelect.Text = "Selecionar";
-            this.btnSupplierSelect.UseVisualStyleBackColor = false;
+            this.btnProductSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnProductSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProductSelect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnProductSelect.FlatAppearance.BorderSize = 3;
+            this.btnProductSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductSelect.ForeColor = System.Drawing.Color.White;
+            this.btnProductSelect.Location = new System.Drawing.Point(194, 503);
+            this.btnProductSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProductSelect.Name = "btnProductSelect";
+            this.btnProductSelect.Size = new System.Drawing.Size(189, 36);
+            this.btnProductSelect.TabIndex = 241;
+            this.btnProductSelect.Text = "Selecionar";
+            this.btnProductSelect.UseVisualStyleBackColor = false;
+            this.btnProductSelect.Click += new System.EventHandler(this.btnProductSelect_Click);
             // 
             // pnlSuppCNPJ
             // 
@@ -205,52 +206,53 @@
             this.dgvProductSearch.AllowUserToDeleteRows = false;
             this.dgvProductSearch.AllowUserToResizeColumns = false;
             this.dgvProductSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvProductSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvProductSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProductSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductSearch.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvProductSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProductSearch.ColumnHeadersHeight = 29;
             this.dgvProductSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProductSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCompanyName,
             this.ColumnCnpj,
             this.Column1});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductSearch.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductSearch.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductSearch.Location = new System.Drawing.Point(24, 116);
             this.dgvProductSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvProductSearch.Name = "dgvProductSearch";
             this.dgvProductSearch.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProductSearch.RowHeadersVisible = false;
             this.dgvProductSearch.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvProductSearch.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvProductSearch.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductSearch.Size = new System.Drawing.Size(518, 379);
             this.dgvProductSearch.TabIndex = 234;
+            this.dgvProductSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductSearch_CellClick);
             // 
             // ColumnCompanyName
             // 
@@ -279,7 +281,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 550);
-            this.Controls.Add(this.btnSupplierSelect);
+            this.Controls.Add(this.btnProductSelect);
             this.Controls.Add(this.pnlSuppCNPJ);
             this.Controls.Add(this.txtProduSearchID);
             this.Controls.Add(this.pnlSuppName);
@@ -310,7 +312,7 @@
         private System.Windows.Forms.Label lblNomeTabela;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picProductClose;
-        private System.Windows.Forms.Button btnSupplierSelect;
+        private System.Windows.Forms.Button btnProductSelect;
         private System.Windows.Forms.Panel pnlSuppCNPJ;
         private System.Windows.Forms.TextBox txtProduSearchID;
         private System.Windows.Forms.Panel pnlSuppName;
