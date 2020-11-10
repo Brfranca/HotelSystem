@@ -74,7 +74,7 @@
             this.lblNomeTabela.ForeColor = System.Drawing.Color.White;
             this.lblNomeTabela.Location = new System.Drawing.Point(34, 10);
             this.lblNomeTabela.Name = "lblNomeTabela";
-            this.lblNomeTabela.Size = new System.Drawing.Size(160, 21);
+            this.lblNomeTabela.Size = new System.Drawing.Size(202, 28);
             this.lblNomeTabela.TabIndex = 0;
             this.lblNomeTabela.Text = "Produtos cadastrados";
             // 
@@ -148,7 +148,7 @@
             this.txtProduSearchID.MaxLength = 11;
             this.txtProduSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProduSearchID.Name = "txtProduSearchID";
-            this.txtProduSearchID.Size = new System.Drawing.Size(191, 22);
+            this.txtProduSearchID.Size = new System.Drawing.Size(191, 27);
             this.txtProduSearchID.TabIndex = 240;
             // 
             // pnlSuppName
@@ -173,7 +173,7 @@
             this.txtSuppSearchName.MaxLength = 11;
             this.txtSuppSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSuppSearchName.Name = "txtSuppSearchName";
-            this.txtSuppSearchName.Size = new System.Drawing.Size(258, 22);
+            this.txtSuppSearchName.Size = new System.Drawing.Size(258, 27);
             this.txtSuppSearchName.TabIndex = 238;
             // 
             // lblConsSupCod
@@ -184,7 +184,7 @@
             this.lblConsSupCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsSupCod.Location = new System.Drawing.Point(332, 62);
             this.lblConsSupCod.Name = "lblConsSupCod";
-            this.lblConsSupCod.Size = new System.Drawing.Size(23, 19);
+            this.lblConsSupCod.Size = new System.Drawing.Size(28, 23);
             this.lblConsSupCod.TabIndex = 236;
             this.lblConsSupCod.Text = "ID";
             // 
@@ -196,7 +196,7 @@
             this.lblConsSupNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsSupNome.Location = new System.Drawing.Point(20, 62);
             this.lblConsSupNome.Name = "lblConsSupNome";
-            this.lblConsSupNome.Size = new System.Drawing.Size(50, 19);
+            this.lblConsSupNome.Size = new System.Drawing.Size(58, 23);
             this.lblConsSupNome.TabIndex = 235;
             this.lblConsSupNome.Text = "Nome";
             // 
@@ -273,13 +273,15 @@
             // Column1
             // 
             this.Column1.HeaderText = "Descrição";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // FormSearchProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(563, 550);
             this.Controls.Add(this.btnProductSelect);
             this.Controls.Add(this.pnlSuppCNPJ);

@@ -137,7 +137,7 @@ namespace PresentationLayer
 
         private void lblRegisterIncome_MouseLeave(object sender, EventArgs e)
         {
-            lblRegisterIncome.MouseHoverEvent();
+            lblRegisterIncome.MouseLeaveEvent();
         }
 
         private void lblRegisterIncome_Click(object sender, EventArgs e)

@@ -73,7 +73,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(191, 21);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(240, 28);
             this.lblNomeFarmacia.TabIndex = 0;
             this.lblNomeFarmacia.Text = "Fornecedores cadastrados";
             // 
@@ -116,7 +116,7 @@
             this.btnSupplierSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplierSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplierSelect.ForeColor = System.Drawing.Color.White;
-            this.btnSupplierSelect.Location = new System.Drawing.Point(193, 495);
+            this.btnSupplierSelect.Location = new System.Drawing.Point(193, 502);
             this.btnSupplierSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSupplierSelect.Name = "btnSupplierSelect";
             this.btnSupplierSelect.Size = new System.Drawing.Size(189, 36);
@@ -129,7 +129,7 @@
             // 
             this.pnlSuppCNPJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.pnlSuppCNPJ.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 98);
+            this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 105);
             this.pnlSuppCNPJ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSuppCNPJ.MaximumSize = new System.Drawing.Size(564, 1);
             this.pnlSuppCNPJ.Name = "pnlSuppCNPJ";
@@ -142,12 +142,12 @@
             this.txtSuppSearchCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchCNPJ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSuppSearchCNPJ.ForeColor = System.Drawing.Color.Black;
-            this.txtSuppSearchCNPJ.Location = new System.Drawing.Point(339, 77);
+            this.txtSuppSearchCNPJ.Location = new System.Drawing.Point(339, 84);
             this.txtSuppSearchCNPJ.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchCNPJ.MaxLength = 11;
             this.txtSuppSearchCNPJ.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSuppSearchCNPJ.Name = "txtSuppSearchCNPJ";
-            this.txtSuppSearchCNPJ.Size = new System.Drawing.Size(191, 22);
+            this.txtSuppSearchCNPJ.Size = new System.Drawing.Size(191, 27);
             this.txtSuppSearchCNPJ.TabIndex = 240;
             this.txtSuppSearchCNPJ.TextChanged += new System.EventHandler(this.txtSuppSearchCNPJ_TextChanged);
             this.txtSuppSearchCNPJ.Enter += new System.EventHandler(this.txtSuppSearchCNPJ_Enter);
@@ -157,7 +157,7 @@
             // 
             this.pnlSuppName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.pnlSuppName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSuppName.Location = new System.Drawing.Point(22, 97);
+            this.pnlSuppName.Location = new System.Drawing.Point(22, 104);
             this.pnlSuppName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSuppName.MaximumSize = new System.Drawing.Size(564, 1);
             this.pnlSuppName.Name = "pnlSuppName";
@@ -170,12 +170,12 @@
             this.txtSuppSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSuppSearchName.ForeColor = System.Drawing.Color.Black;
-            this.txtSuppSearchName.Location = new System.Drawing.Point(26, 76);
+            this.txtSuppSearchName.Location = new System.Drawing.Point(26, 83);
             this.txtSuppSearchName.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchName.MaxLength = 11;
             this.txtSuppSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSuppSearchName.Name = "txtSuppSearchName";
-            this.txtSuppSearchName.Size = new System.Drawing.Size(258, 22);
+            this.txtSuppSearchName.Size = new System.Drawing.Size(258, 27);
             this.txtSuppSearchName.TabIndex = 238;
             this.txtSuppSearchName.TextChanged += new System.EventHandler(this.txtSuppSearchName_TextChanged);
             this.txtSuppSearchName.Enter += new System.EventHandler(this.txtSuppSearchName_Enter);
@@ -187,9 +187,9 @@
             this.lblConsSupCod.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsSupCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsSupCod.Location = new System.Drawing.Point(331, 54);
+            this.lblConsSupCod.Location = new System.Drawing.Point(331, 61);
             this.lblConsSupCod.Name = "lblConsSupCod";
-            this.lblConsSupCod.Size = new System.Drawing.Size(43, 19);
+            this.lblConsSupCod.Size = new System.Drawing.Size(51, 23);
             this.lblConsSupCod.TabIndex = 236;
             this.lblConsSupCod.Text = "CNPJ";
             // 
@@ -199,9 +199,9 @@
             this.lblConsSupNome.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsSupNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblConsSupNome.Location = new System.Drawing.Point(19, 54);
+            this.lblConsSupNome.Location = new System.Drawing.Point(19, 61);
             this.lblConsSupNome.Name = "lblConsSupNome";
-            this.lblConsSupNome.Size = new System.Drawing.Size(94, 19);
+            this.lblConsSupNome.Size = new System.Drawing.Size(109, 23);
             this.lblConsSupNome.TabIndex = 235;
             this.lblConsSupNome.Text = "Razão Social";
             // 
@@ -237,7 +237,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSuppliersSearch.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSuppliersSearch.Location = new System.Drawing.Point(23, 108);
+            this.dgvSuppliersSearch.Location = new System.Drawing.Point(23, 115);
             this.dgvSuppliersSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSuppliersSearch.MultiSelect = false;
             this.dgvSuppliersSearch.Name = "dgvSuppliersSearch";
@@ -275,8 +275,9 @@
             // 
             // FormSearchSupplierIncome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(563, 550);
             this.Controls.Add(this.btnSupplierSelect);
             this.Controls.Add(this.pnlSuppCNPJ);

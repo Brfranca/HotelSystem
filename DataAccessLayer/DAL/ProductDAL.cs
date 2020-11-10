@@ -35,7 +35,7 @@ namespace DataAccessLayer.DAL
                         return resultInsertNs;
                 }
                 transaction.Complete();
-                return Response.CreateSuccess();
+                return Response.CreateSuccess("Operação efetuada com sucesso!");
             }
         }
 
@@ -43,28 +43,20 @@ namespace DataAccessLayer.DAL
         {
             using (TransactionScope scope = new TransactionScope())
             {
-                using (DbCommand command = DbFactory.GetCurrentCommand())
-                {
-                    command.CommandText =
-                    @"UPDATE PRODUCTS SET NAME = @NAME, DESCRIPTION = @DESCRIPTION WHERE ID = @ID; DELETE FROM SUPPLIERS_PRODUCTS WHERE PRODUCTID = @ID";
-                    command.Parameters.AddWithValue("@NAME", product.Name);
-                    command.Parameters.AddWithValue("@DESCRIPTION", product.Description);
-                    command.Parameters.AddWithValue("@ID", product.ID);
-                    Response response = new DbExecuter().ExecuteQuery(command);
-                    if (!response.Success)
-                        return response;
-                    
-                    foreach (int id in product.SuppliersID)
-                    {
-                        command.Parameters.Clear();
-                        command.CommandText = @"INSERT INTO SUPPLIERS_PRODUCTS (SUPPLIERID,PRODUCTID) VALUES (@SUPPLIERID,@PRODUCTID)";
-                        command.Parameters.AddWithValue("@PRODUCTID", product.ID);
-                        command.Parameters.AddWithValue("@SUPPLIERID", id);
-                        Response responseInsert = new DbExecuter().ExecuteQuery(command);
-                        if (!responseInsert.Success)
-                            return responseInsert;
-                    }
-                }
+                //atualizar descrição e nome produto reutilizando nosso metodo pronto
+                Response resultUpdateProduct = base.Update(product);
+                if (!resultUpdateProduct.Success)
+                    return resultUpdateProduct;
+
+                //Esse delete recebe o nome do campo e o ID para excluir. <Supplier_Product> para que a retirar a table name
+                Response resultDelete = DeleteWhereId<Supplier_Product>("PRODUCTID", product.ID);
+                if (!resultDelete.Success)
+                    return resultDelete;
+
+                Response resultInsertSupplier = InsertSupplierOfProduct(product.ID, product.SuppliersID);
+                if (!resultInsertSupplier.Success)
+                    return resultInsertSupplier;
+
                 scope.Complete();
                 return Response.CreateSuccess("Operação efetuada com sucesso!");
             }
@@ -72,14 +64,15 @@ namespace DataAccessLayer.DAL
 
         public Response Delete(Product product)
         {
-            using (DbCommand command = DbFactory.GetCurrentCommand())
-            {
-                command.CommandText =
-                @"DELETE FROM SUPPLIERS_PRODUCTS WHERE PRODUCTID = @ID; DELETE FROM PRODUCTS WHERE ID = @ID";
-                command.Parameters.AddWithValue("@ID", product.ID);
-                return new DbExecuter().ExecuteQuery(command);
-                
-            }
+            Response resultDeleteSupplier = DeleteWhereId<Supplier_Product>("PRODUCTID", product.ID);
+            if (!resultDeleteSupplier.Success)
+                return resultDeleteSupplier;
+
+            Response resultDeleteProduct = base.Delete(product);
+            if (!resultDeleteProduct.Success)
+                return resultDeleteProduct;
+
+            return Response.CreateSuccess("Operação efetuada com sucesso!");
         }
 
         //Método novo, nao sei se funciona. Ass: kj
@@ -89,7 +82,6 @@ namespace DataAccessLayer.DAL
             command.CommandText = "SELECT * FROM SUPPLIERS_PRODUCTS WHERE PRODUCTID = @PRODUCTID";
             command.Parameters.AddWithValue("@PRODUCTID", id);
             return new DbExecuter().GetAllData<Supplier_Product>(command);
-
         }
 
         public QueryResponse<List<Supplier_Product>> GetBySupplierId(int id)
@@ -98,9 +90,7 @@ namespace DataAccessLayer.DAL
             command.CommandText = "SELECT * FROM SUPPLIERS_PRODUCTS WHERE SUPPLIERID = @SUPPLIERID";
             command.Parameters.AddWithValue("@SUPPLIERID", id);
             return new DbExecuter().GetAllData<Supplier_Product>(command);
-
         }
-
 
         public bool ExistName(string name, int id)
         {
@@ -111,6 +101,27 @@ namespace DataAccessLayer.DAL
         {
             return Exist(description, id, "DESCRIPTION");
         }
-    }
 
+        public Response InsertSupplierOfProduct(int productID, List<int> suppliersID)
+        {
+            foreach (var id in suppliersID)
+            {
+                Supplier_Product suppliers_products = new Supplier_Product
+                {
+                    ProductID = productID,
+                    SupplierID = id
+                };
+                Response resultInsertNs = base.Insert(suppliers_products);
+                if (!resultInsertNs.Success)
+                    return resultInsertNs;
+            }
+            return Response.CreateSuccess();
+        }
+
+        public Response DeleteWhereId<T>(string field, int id)
+        {
+            DbCommand command = SqlGenerator<T>.BuildDeleteWhereIdCommand(field, id);
+            return new DbExecuter().ExecuteQuery(command);
+        }
+    }
 }

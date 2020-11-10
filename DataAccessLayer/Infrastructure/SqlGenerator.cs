@@ -117,5 +117,13 @@ namespace DataAccessLayer.Infrastructure
             command.Parameters.AddWithValue("@ID", id);
             return command;
         }
+
+        public static DbCommand BuildDeleteWhereIdCommand(string field, int id)
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = string.Format("DELETE FROM {0} WHERE "+ field + " = @FIELD", GetTableName());
+            command.Parameters.AddWithValue($"@FIELD", id);
+            return command;
+        }
     }
 }

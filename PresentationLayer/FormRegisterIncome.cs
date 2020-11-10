@@ -44,7 +44,7 @@ namespace PresentationLayer
             {
                 btnSelectProduct.Enabled = true;
             }
-            dgvSearchSupplier.Rows.Add(supplier.CompanyName);
+            dgvSearchSupplier.Rows.Add(supplier.CompanyName, supplier.CNPJ);
         }
 
         private void picSupplierClose_Click(object sender, EventArgs e)
@@ -62,8 +62,6 @@ namespace PresentationLayer
 
             _product = frmProduto.product;
             dgvProductsAdd.Rows.Add(_product.ID, _product.Name, _product.Description);
-
-
         }
 
         private void FormRegisterIncome_Load(object sender, EventArgs e)
@@ -97,7 +95,6 @@ namespace PresentationLayer
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-
             foreach (DataGridViewRow row in dgvProductsAdd.Rows)
             {
                 if (row.Index == -1)
@@ -130,7 +127,6 @@ namespace PresentationLayer
             txtProdPrice.Text = "0";
             UpdateGridProducts();
         }
-
 
         private void UpdateGridProducts()
         {
