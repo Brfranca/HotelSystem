@@ -118,10 +118,6 @@ namespace DataAccessLayer.DAL
             return Response.CreateSuccess();
         }
 
-        public Response DeleteWhereId<T>(string field, int id)
-        {
-            DbCommand command = SqlGenerator<T>.BuildDeleteWhereIdCommand(field, id);
-            return new DbExecuter().ExecuteQuery(command);
-        }
+        
     }
 }

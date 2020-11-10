@@ -24,6 +24,8 @@ namespace PresentationLayer
         private Product _product;
         private List<IncomeItem> _incomeItems;
         private List<Income> _incomeGrid;
+        private int _currentRowGrid;
+        private SupplierBLL _supplierBLL;
         public FormRegisterIncome()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace PresentationLayer
             _incomeBLL = new IncomeBLL();
             _product = new Product();
             _incomeItems = new List<IncomeItem>();
+            _supplierBLL = new SupplierBLL();
         }
 
         private void btnSelecSupp_Click(object sender, EventArgs e)
@@ -69,6 +72,7 @@ namespace PresentationLayer
         private void FormRegisterIncome_Load(object sender, EventArgs e)
         {
             btnSelectProduct.Enabled = false;
+            btnIncomeDelete.Visible = false;
             UpdateGrid();
         }
 
@@ -86,6 +90,33 @@ namespace PresentationLayer
                     UpdateGrid();
                 }
             }
+            else if (btnIncomeRegister.Text == "Editar")
+            {
+                income.ID = Convert.ToInt32(lblID.Text);
+                Response response = _incomeBLL.Update(income);
+                MessageBox.Show(response.Message);
+                if (response.Success)
+                {
+                    UpdateComponentsRegister();
+                    this.ClearForm();
+                    dgvSearchSupplier.Rows.Clear();
+                    UpdateGrid();
+                }
+            }
+        }
+
+        private void UpdateComponentsRegister()
+        {
+            btnIncomeRegister.Text = "Cadastrar";
+            txtProdQuantity.Text = "0";
+            txtProdPrice.Text = "0";
+            btnIncomeDelete.Visible = false;
+        }
+
+        private void UpdateComponentsEdit()
+        {
+            btnIncomeRegister.Text = "Editar";
+            btnIncomeDelete.Visible = true;
         }
 
         private Income CreateIncome()
@@ -172,6 +203,68 @@ namespace PresentationLayer
             foreach (var item in incomes)
             {
                 dgvIncomes.Rows.Add(item.SupplierID, item.EmployeeID, item.EntryDate.ToString("dd/MM/yyyy HH:mm"), item.TotalValue.ToString("C2", CultureInfo.CurrentCulture));
+            }
+        }
+
+        private void dgvIncomes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
+        }
+
+        private void btnIncomeSelect_Click(object sender, EventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void SelectDataGrid()
+        {
+            if (_currentRowGrid == -1)
+                return;
+
+            int id = (int)dgvIncomes.Rows[_currentRowGrid].Cells[0].Value;
+            QueryResponse<Income> response = _incomeBLL.GetById(id);
+            if (response.Success)
+            {
+                dgvSearchSupplier.Rows.Add(_supplierBLL.GetById(response.Data.ID).Data.CompanyName);
+                supplier = _supplierBLL.GetById(response.Data.SupplierID).Data;
+                txtTotalValue.Text = response.Data.TotalValue.ToString();
+                lblID.Text = id.ToString();
+
+                QueryResponse<List<IncomeItem>> queryResponse = _incomeBLL.GetByIncomeId(id);
+
+                foreach (IncomeItem item in queryResponse.Data)
+                {
+                    
+                    dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice);
+                    _incomeItems.Add(item);
+                }
+
+                UpdateComponentsEdit();
+                return;
+            }
+            MessageBox.Show(response.Message);
+        }
+
+        private void dgvIncomes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void btnIncomeDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Income income = CreateIncome();
+                income.ID = Convert.ToInt32(lblID.Text);
+                Response response = _incomeBLL.Delete(income);
+                MessageBox.Show(response.Message);
+                if (response.Success)
+                {
+                    this.ClearForm();
+                    UpdateGrid();
+                    UpdateComponentsRegister();
+                }
             }
         }
     }

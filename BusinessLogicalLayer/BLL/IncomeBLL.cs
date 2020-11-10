@@ -34,6 +34,29 @@ namespace BusinessLogicalLayer.BLL
 
         }
 
+        public Response Update(Income income)
+        {
+            Response result = Validate(income);
+            if (!result.Success)
+                return result;
+
+            Response resultUpdate = _incomeDAL.Update(income);
+            if (!resultUpdate.Success)
+                return resultUpdate;
+
+            return Response.CreateSuccess("Entrada de produtos atualizada com sucesso!");
+        }
+
+        public Response Delete(Income income)
+        {
+            Response resultDelete = _incomeDAL.Delete(income);
+            if (!resultDelete.Success)
+                return resultDelete;
+
+            return Response.CreateSuccess("Entrada removida com sucesso!");
+
+        }
+
         private Response Validate(Income income)
         {
             Validator validator = new Validator();
@@ -45,7 +68,10 @@ namespace BusinessLogicalLayer.BLL
         }
 
 
-        
+        public QueryResponse<Income> GetById(int id)
+        {
+            return _incomeDAL.GetById(id);
+        }
 
         private void ValidateSupplier(int supplierID, int id, Validator validator)
         {
@@ -103,6 +129,12 @@ namespace BusinessLogicalLayer.BLL
         public QueryResponse<List<Income>> GetAll()
         {
             return _incomeDAL.GetAll();
+        }
+
+
+        public QueryResponse<List<IncomeItem>> GetByIncomeId(int id)
+        {
+            return _incomeDAL.GetByIncomeId(id);
         }
     }
 }

@@ -67,5 +67,11 @@ namespace DataAccessLayer.DAL
             command.Parameters.AddWithValue($"@{columnName}", value);
             return new DbExecuter().ExistData(command);
         }
+
+        public Response DeleteWhereId<T>(string field, int id)
+        {
+            DbCommand command = SqlGenerator<T>.BuildDeleteWhereIdCommand(field, id);
+            return new DbExecuter().ExecuteQuery(command);
+        }
     }
 }
