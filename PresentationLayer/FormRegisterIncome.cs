@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace PresentationLayer
         private readonly IncomeBLL _incomeBLL;
         private Product _product;
         private List<IncomeItem> _incomeItems;
+        private List<Income> _incomeGrid;
         public FormRegisterIncome()
         {
             InitializeComponent();
@@ -44,7 +46,7 @@ namespace PresentationLayer
             {
                 btnSelectProduct.Enabled = true;
             }
-            dgvSearchSupplier.Rows.Add(supplier.CompanyName, supplier.CNPJ);
+            dgvSearchSupplier.Rows.Add(supplier.CompanyName, supplier.CNPJ.InsertMaskCNPJ());
         }
 
         private void picSupplierClose_Click(object sender, EventArgs e)
@@ -67,6 +69,7 @@ namespace PresentationLayer
         private void FormRegisterIncome_Load(object sender, EventArgs e)
         {
             btnSelectProduct.Enabled = false;
+            UpdateGrid();
         }
 
         private void btnIncomeRegister_Click(object sender, EventArgs e)
@@ -76,20 +79,25 @@ namespace PresentationLayer
             {
                 Response response = _incomeBLL.Register(income);
                 MessageBox.Show(response.Message);
+
+                if (response.Success)
+                {
+                    this.ClearForm();
+                    UpdateGrid();
+                }
             }
         }
 
         private Income CreateIncome()
         {
-            FormLogin frmLogin = new FormLogin();
             Income income = new Income();
 
-            //ADICIONEI ID DO FUNCIONÁRIO SÓ PARA TESTE, LEMBRAR DE TIRAR E PEGAR O ID AO EFETUAR O LOGIN!
-            income.EmployeeID = frmLogin.employeeID;
+            income.EmployeeID = FormMain.employee.ID;
             income.SupplierID = supplier.ID;
             income.EntryDate = DateTime.Now;
-            income.TotalValue = Convert.ToDouble(txtTotalValue.Text);
             income.IncomeItems = _incomeItems;
+            
+            income.TotalValue = Convert.ToDouble(txtTotalValue.Text);
             return income;
         }
 
@@ -104,8 +112,13 @@ namespace PresentationLayer
                 incomeItem.ProductID = (int)dgvProductsAdd.Rows[row.Index].Cells[0].Value;
                 incomeItem.Quantity = Convert.ToInt32(txtProdQuantity.Text);
                 incomeItem.UnityPrice = Convert.ToDouble(txtProdPrice.Text);
+                if (incomeItem.ProductID == 0)
+                {
+                    MessageBox.Show("Nenhum produto selecionado!");
+                    return;
+                }
                 CreateList(incomeItem);
-
+                
             }
         }
 
@@ -122,18 +135,43 @@ namespace PresentationLayer
                 return;
             }
             _incomeItems.Add(incomeItem);
-            dgvIncomeItems.Rows.Clear();
-            txtProdQuantity.Text = "0";
-            txtProdPrice.Text = "0";
+            txtTotalValue.Text = _incomeItems.Sum(x => x.UnityPrice).ToString();
             UpdateGridProducts();
         }
 
         private void UpdateGridProducts()
         {
+            dgvIncomeItems.Rows.Clear();
+            txtProdQuantity.Text = "0";
+            txtProdPrice.Text = "0";
+
             dgvProductsAdd.Rows.Clear();
             foreach (var item in _incomeItems)
             {
                 dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice);
+            }
+        }
+
+        private void UpdateGrid()
+        {
+            dgvIncomes.Rows.Clear();
+            QueryResponse<List<Income>> response = _incomeBLL.GetAll();
+
+            if (!response.Success)
+            {
+                MessageBox.Show(response.Message);
+                return;
+            }
+            _incomeGrid = new List<Income>(response.Data);
+
+            InsertGrid(_incomeGrid);
+        }
+
+        private void InsertGrid(List<Income> incomes)
+        {
+            foreach (var item in incomes)
+            {
+                dgvIncomes.Rows.Add(item.SupplierID, item.EmployeeID, item.EntryDate.ToString("dd/MM/yyyy HH:mm"), item.TotalValue.ToString("C2", CultureInfo.CurrentCulture));
             }
         }
     }

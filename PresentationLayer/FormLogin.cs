@@ -18,15 +18,14 @@ namespace PresentationLayer
     public partial class FormLogin : Form
     {
         private readonly EmployeeBLL _employeeBLL;
-        //employeeID: adicionei para guardar o id do funcionário para poder utilizá-lo para o registro de entradas e saídas. Ass: kj
-        public int employeeID;
+        public static Employee employee;
         public FormLogin()
         {
             InitializeComponent();
             _employeeBLL = new EmployeeBLL();
-
             picAttencion.Visible = false;
             lblAttencion.Visible = false;
+            employee = new Employee();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -35,7 +34,9 @@ namespace PresentationLayer
 
             //Utilizei o método GetByEmail para podermos identificar o usuário e registrar o ID do mesmo na variável employeeId. Ass: kj
             QueryResponse<Employee> response = _employeeBLL.GetByEmail(txtUser.Text);
-            employeeID = response.Data.ID;
+            employee = response.Data;
+           
+
             if (!result.Success)
             {
                 MessageBox.Show(result.GetAllMessages());
@@ -48,25 +49,24 @@ namespace PresentationLayer
             this.Close();
         }
 
-        private void txtUser_Click(object sender, EventArgs e)
+        private void txtUser_Enter(object sender, EventArgs e)
         {
-            pnlUser.BackColor = Color.FromArgb(37, 206, 15);
-
+            pnlUser.EnterEvent();
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
         {
-            pnlUser.BackColor = Color.Black;
+            pnlUser.LeaveEvent();
         }
 
-        private void txtPassword_Click(object sender, EventArgs e)
+        private void txtPassword_Enter(object sender, EventArgs e)
         {
-            pnlPassword.BackColor = Color.FromArgb(37, 206, 15);
+            pnlPassword.EnterEvent();
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
-            pnlPassword.BackColor = Color.Black;
+            pnlPassword.LeaveEvent();
         }
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
@@ -81,5 +81,7 @@ namespace PresentationLayer
         {
             this.Close();
         }
+
+        
     }
 }

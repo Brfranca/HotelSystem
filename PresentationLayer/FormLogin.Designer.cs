@@ -88,8 +88,8 @@
             this.chkShowPassword.Location = new System.Drawing.Point(106, 201);
             this.chkShowPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(143, 27);
-            this.chkShowPassword.TabIndex = 39;
+            this.chkShowPassword.Size = new System.Drawing.Size(118, 23);
+            this.chkShowPassword.TabIndex = 218;
             this.chkShowPassword.Text = "Mostrar Senha";
             this.chkShowPassword.UseVisualStyleBackColor = false;
             this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
@@ -104,9 +104,9 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(0);
             this.txtUser.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(202, 27);
+            this.txtUser.Size = new System.Drawing.Size(202, 22);
             this.txtUser.TabIndex = 35;
-            this.txtUser.Click += new System.EventHandler(this.txtUser_Click);
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // pnlEmployeeTopBar
@@ -141,7 +141,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(34, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 28);
+            this.label5.Size = new System.Drawing.Size(102, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Hotel System";
             // 
@@ -170,7 +170,7 @@
             this.lblAttencion.Location = new System.Drawing.Point(4, 83);
             this.lblAttencion.MinimumSize = new System.Drawing.Size(348, 0);
             this.lblAttencion.Name = "lblAttencion";
-            this.lblAttencion.Size = new System.Drawing.Size(348, 23);
+            this.lblAttencion.Size = new System.Drawing.Size(348, 19);
             this.lblAttencion.TabIndex = 216;
             this.lblAttencion.Text = "Dados incorretos";
             this.lblAttencion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,9 +194,9 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtPassword.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(202, 27);
-            this.txtPassword.TabIndex = 218;
-            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
+            this.txtPassword.Size = new System.Drawing.Size(202, 22);
+            this.txtPassword.TabIndex = 39;
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // picAttencion
@@ -243,7 +243,7 @@
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));

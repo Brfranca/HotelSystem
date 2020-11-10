@@ -202,7 +202,7 @@
             this.lblDot7.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblDot7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDot7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot7.Location = new System.Drawing.Point(17, 239);
+            this.lblDot7.Location = new System.Drawing.Point(13, 230);
             this.lblDot7.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot7.Name = "lblDot7";
             this.lblDot7.Size = new System.Drawing.Size(15, 19);
@@ -232,7 +232,7 @@
             this.lblRegisterIncome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegisterIncome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisterIncome.ForeColor = System.Drawing.Color.White;
-            this.lblRegisterIncome.Location = new System.Drawing.Point(38, 238);
+            this.lblRegisterIncome.Location = new System.Drawing.Point(34, 229);
             this.lblRegisterIncome.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblRegisterIncome.Name = "lblRegisterIncome";
             this.lblRegisterIncome.Size = new System.Drawing.Size(135, 20);
@@ -535,6 +535,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlLeftBar.ResumeLayout(false);
             this.pnlLeftBar.PerformLayout();
             this.pnlBottonLeftBar.ResumeLayout(false);

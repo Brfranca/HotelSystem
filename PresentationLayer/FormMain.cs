@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +15,17 @@ namespace PresentationLayer
 {
     public partial class FormMain : Form
     {
+        public static Employee employee;
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+            employee = FormLogin.employee;
+            lblEmployeeName.Text = employee.Name;
         }
 
         private void picMainClose_Click(object sender, EventArgs e)
@@ -147,5 +156,7 @@ namespace PresentationLayer
             new FormRegisterIncome().ShowDialog();
             transparency.Close();
         }
+
+
     }
 }

@@ -99,5 +99,10 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("Um ou mais produtos devem ser adicionados!");
             }
         }
+
+        public QueryResponse<List<Income>> GetAll()
+        {
+            return _incomeDAL.GetAll();
+        }
     }
 }
