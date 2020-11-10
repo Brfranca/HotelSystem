@@ -87,8 +87,9 @@ namespace PresentationLayer
             Income income = new Income();
 
             //ADICIONEI ID DO FUNCIONÁRIO SÓ PARA TESTE, LEMBRAR DE TIRAR E PEGAR O ID AO EFETUAR O LOGIN!
-            income.EmployeeID = 1;
+            income.EmployeeID = frmLogin.employeeID;
             income.SupplierID = supplier.ID;
+            income.EntryDate = DateTime.Now;
             income.TotalValue = Convert.ToDouble(txtTotalValue.Text);
             income.IncomeItems = _incomeItems;
             return income;

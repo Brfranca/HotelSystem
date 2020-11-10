@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterRoom));
             this.btnRoomClear = new System.Windows.Forms.Button();
             this.lblConsFornCadastrados = new System.Windows.Forms.Label();
             this.dgvRooms = new System.Windows.Forms.DataGridView();
+            this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFloor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAvailability = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtRoomSearchID = new System.Windows.Forms.TextBox();
             this.txtRoomSearchNumber = new System.Windows.Forms.TextBox();
             this.lblConsProdCod = new System.Windows.Forms.Label();
@@ -66,11 +71,6 @@
             this.lblID = new System.Windows.Forms.Label();
             this.picRoomRefresh = new System.Windows.Forms.PictureBox();
             this.cmbFloor = new System.Windows.Forms.ComboBox();
-            this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFloor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnRoomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnAvailability = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRoomClose)).BeginInit();
@@ -113,20 +113,20 @@
             // 
             this.dgvRooms.AllowUserToAddRows = false;
             this.dgvRooms.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRooms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRooms.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnNumber,
@@ -134,34 +134,64 @@
             this.ColumnPrice,
             this.ColumnRoomType,
             this.ColumnAvailability});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvRooms.Location = new System.Drawing.Point(415, 268);
             this.dgvRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvRooms.RowHeadersVisible = false;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRooms.Size = new System.Drawing.Size(706, 352);
             this.dgvRooms.TabIndex = 238;
             this.dgvRooms.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRooms_CellClick);
             this.dgvRooms.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRooms_CellDoubleClick);
+            // 
+            // ColumnNumber
+            // 
+            this.ColumnNumber.HeaderText = "Número";
+            this.ColumnNumber.Name = "ColumnNumber";
+            this.ColumnNumber.ReadOnly = true;
+            // 
+            // ColumnFloor
+            // 
+            this.ColumnFloor.HeaderText = "Andar";
+            this.ColumnFloor.Name = "ColumnFloor";
+            this.ColumnFloor.ReadOnly = true;
+            // 
+            // ColumnPrice
+            // 
+            this.ColumnPrice.HeaderText = "Preço diária (R$)";
+            this.ColumnPrice.Name = "ColumnPrice";
+            this.ColumnPrice.ReadOnly = true;
+            // 
+            // ColumnRoomType
+            // 
+            this.ColumnRoomType.HeaderText = "Tipo";
+            this.ColumnRoomType.Name = "ColumnRoomType";
+            this.ColumnRoomType.ReadOnly = true;
+            // 
+            // ColumnAvailability
+            // 
+            this.ColumnAvailability.HeaderText = "Disponível";
+            this.ColumnAvailability.Name = "ColumnAvailability";
+            this.ColumnAvailability.ReadOnly = true;
             // 
             // txtRoomSearchID
             // 
@@ -174,7 +204,7 @@
             this.txtRoomSearchID.MaxLength = 11;
             this.txtRoomSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomSearchID.Name = "txtRoomSearchID";
-            this.txtRoomSearchID.Size = new System.Drawing.Size(120, 24);
+            this.txtRoomSearchID.Size = new System.Drawing.Size(120, 22);
             this.txtRoomSearchID.TabIndex = 236;
             this.txtRoomSearchID.Click += new System.EventHandler(this.txtRoomSearchID_Click);
             this.txtRoomSearchID.TextChanged += new System.EventHandler(this.txtRoomSearchID_TextChanged);
@@ -191,10 +221,10 @@
             this.txtRoomSearchNumber.MaxLength = 11;
             this.txtRoomSearchNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomSearchNumber.Name = "txtRoomSearchNumber";
-            this.txtRoomSearchNumber.Size = new System.Drawing.Size(301, 24);
+            this.txtRoomSearchNumber.Size = new System.Drawing.Size(301, 22);
             this.txtRoomSearchNumber.TabIndex = 235;
-            this.txtRoomSearchNumber.Click += new System.EventHandler(this.txtRoomSearchNumber_Click);
             this.txtRoomSearchNumber.TextChanged += new System.EventHandler(this.txtRoomSearchNumber_TextChanged);
+            this.txtRoomSearchNumber.Enter += new System.EventHandler(this.txtRoomSearchNumber_Enter);
             this.txtRoomSearchNumber.Leave += new System.EventHandler(this.txtRoomSearchNumber_Leave);
             // 
             // lblConsProdCod
@@ -535,36 +565,6 @@
             this.cmbFloor.Name = "cmbFloor";
             this.cmbFloor.Size = new System.Drawing.Size(140, 25);
             this.cmbFloor.TabIndex = 256;
-            // 
-            // ColumnNumber
-            // 
-            this.ColumnNumber.HeaderText = "Número";
-            this.ColumnNumber.Name = "ColumnNumber";
-            this.ColumnNumber.ReadOnly = true;
-            // 
-            // ColumnFloor
-            // 
-            this.ColumnFloor.HeaderText = "Andar";
-            this.ColumnFloor.Name = "ColumnFloor";
-            this.ColumnFloor.ReadOnly = true;
-            // 
-            // ColumnPrice
-            // 
-            this.ColumnPrice.HeaderText = "Preço diária (R$)";
-            this.ColumnPrice.Name = "ColumnPrice";
-            this.ColumnPrice.ReadOnly = true;
-            // 
-            // ColumnRoomType
-            // 
-            this.ColumnRoomType.HeaderText = "Tipo";
-            this.ColumnRoomType.Name = "ColumnRoomType";
-            this.ColumnRoomType.ReadOnly = true;
-            // 
-            // ColumnAvailability
-            // 
-            this.ColumnAvailability.HeaderText = "Disponível";
-            this.ColumnAvailability.Name = "ColumnAvailability";
-            this.ColumnAvailability.ReadOnly = true;
             // 
             // checkBox1
             // 

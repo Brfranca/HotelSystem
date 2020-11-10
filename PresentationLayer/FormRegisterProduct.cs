@@ -223,22 +223,22 @@ namespace PresentationLayer
 
         private void txtProdSearchName_Enter(object sender, EventArgs e)
         {
-            pnlProduName.BackColor = Color.FromArgb(37, 206, 15);
+            pnlProduName.EnterEvent();
         }
 
         private void txtProdSearchName_Leave(object sender, EventArgs e)
         {
-            pnlProduName.BackColor = Color.Black;
+            pnlProduName.LeaveEvent();
         }
 
         private void txtProdSearchID_Enter(object sender, EventArgs e)
         {
-            pnlProduID.BackColor = Color.FromArgb(37, 206, 15);
+            pnlProduID.EnterEvent();
         }
 
         private void txtProdSearchID_Leave(object sender, EventArgs e)
         {
-            pnlProduID.BackColor = Color.Black;
+            pnlProduID.LeaveEvent();
         }
 
         private void btnSelecSupp_Click(object sender, EventArgs e)

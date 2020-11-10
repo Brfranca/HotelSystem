@@ -30,12 +30,12 @@ namespace PresentationLayer
        
         private void txtClientSearchCPF_Leave(object sender, EventArgs e)
         {
-            pnlClientCPF.BackColor = Color.Black;
+            pnlClientCPF.LeaveEvent();
         }
 
         private void txtClientSearchName_Leave(object sender, EventArgs e)
         {
-            pnlClientName.BackColor = Color.Black;
+            pnlClientName.LeaveEvent();
         }
 
         private void btnClientRegister_Click(object sender, EventArgs e)
@@ -224,12 +224,12 @@ namespace PresentationLayer
 
         private void txtClientSearchName_Enter(object sender, EventArgs e)
         {
-            pnlClientName.BackColor = Color.FromArgb(37, 206, 15);
+            pnlClientName.EnterEvent();
         }
 
         private void txtClientSearchCPF_Enter(object sender, EventArgs e)
         {
-            pnlClientCPF.BackColor = Color.FromArgb(37, 206, 15);
+            pnlClientCPF.EnterEvent();
         }
     }
 }

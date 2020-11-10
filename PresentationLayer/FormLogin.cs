@@ -42,9 +42,9 @@ namespace PresentationLayer
                 return;
             }
 
-            FormRegisterClient formRegisterClient = new FormRegisterClient();
+            FormMain formMain = new FormMain();
             this.Hide();
-            formRegisterClient.ShowDialog();
+            formMain.ShowDialog();
             this.Close();
         }
 

@@ -247,22 +247,22 @@ namespace PresentationLayer
 
         private void txtEmployeeSearchName_Enter(object sender, EventArgs e)
         {
-            pnlEmployeeName.BackColor = Color.FromArgb(37, 206, 15);
+            pnlEmployeeName.EnterEvent();
         }
 
         private void txtEmployeeSearchCPF_Leave(object sender, EventArgs e)
         {
-            pnlEmployeeCPF.BackColor = Color.Black;
+            pnlEmployeeCPF.LeaveEvent();
         }
 
         private void txtEmployeeSearchCPF_Enter(object sender, EventArgs e)
         {
-            pnlEmployeeCPF.BackColor = Color.FromArgb(37, 206, 15);
+            pnlEmployeeCPF.EnterEvent();
         }
 
         private void txtEmployeeSearchName_Leave(object sender, EventArgs e)
         {
-            pnlEmployeeName.BackColor = Color.Black;
+            pnlEmployeeName.LeaveEvent();
         }
 
         private void txtEmployeeSearchName_TextChanged(object sender, EventArgs e)

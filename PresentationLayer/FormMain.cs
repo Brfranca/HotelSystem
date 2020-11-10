@@ -130,6 +130,22 @@ namespace PresentationLayer
             lblEmployee.MouseLeaveEvent();
         }
 
-        
+        private void lblRegisterIncome_MouseHover(object sender, EventArgs e)
+        {
+            lblRegisterIncome.MouseHoverEvent();
+        }
+
+        private void lblRegisterIncome_MouseLeave(object sender, EventArgs e)
+        {
+            lblRegisterIncome.MouseHoverEvent();
+        }
+
+        private void lblRegisterIncome_Click(object sender, EventArgs e)
+        {
+            Transparency transparency = new Transparency();
+            transparency.Show();
+            new FormRegisterIncome().ShowDialog();
+            transparency.Close();
+        }
     }
 }

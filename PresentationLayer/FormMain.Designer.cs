@@ -40,7 +40,7 @@
             this.lblDot8 = new System.Windows.Forms.Label();
             this.lblDot7 = new System.Windows.Forms.Label();
             this.lblHistSaidas = new System.Windows.Forms.Label();
-            this.lblHistEntrada = new System.Windows.Forms.Label();
+            this.lblRegisterIncome = new System.Windows.Forms.Label();
             this.btnRegistrarEntrada = new System.Windows.Forms.Button();
             this.lblDot5 = new System.Windows.Forms.Label();
             this.lblDot4 = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             this.pnlLeftBar.Controls.Add(this.lblDot8);
             this.pnlLeftBar.Controls.Add(this.lblDot7);
             this.pnlLeftBar.Controls.Add(this.lblHistSaidas);
-            this.pnlLeftBar.Controls.Add(this.lblHistEntrada);
+            this.pnlLeftBar.Controls.Add(this.lblRegisterIncome);
             this.pnlLeftBar.Controls.Add(this.btnRegistrarEntrada);
             this.pnlLeftBar.Controls.Add(this.lblDot5);
             this.pnlLeftBar.Controls.Add(this.lblDot4);
@@ -225,20 +225,23 @@
             this.lblHistSaidas.Text = "--";
             this.lblHistSaidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblHistEntrada
+            // lblRegisterIncome
             // 
-            this.lblHistEntrada.AutoSize = true;
-            this.lblHistEntrada.BackColor = System.Drawing.Color.Transparent;
-            this.lblHistEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblHistEntrada.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistEntrada.ForeColor = System.Drawing.Color.White;
-            this.lblHistEntrada.Location = new System.Drawing.Point(38, 238);
-            this.lblHistEntrada.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblHistEntrada.Name = "lblHistEntrada";
-            this.lblHistEntrada.Size = new System.Drawing.Size(80, 20);
-            this.lblHistEntrada.TabIndex = 16;
-            this.lblHistEntrada.Text = "--";
-            this.lblHistEntrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRegisterIncome.AutoSize = true;
+            this.lblRegisterIncome.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegisterIncome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegisterIncome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisterIncome.ForeColor = System.Drawing.Color.White;
+            this.lblRegisterIncome.Location = new System.Drawing.Point(38, 238);
+            this.lblRegisterIncome.MinimumSize = new System.Drawing.Size(80, 20);
+            this.lblRegisterIncome.Name = "lblRegisterIncome";
+            this.lblRegisterIncome.Size = new System.Drawing.Size(135, 20);
+            this.lblRegisterIncome.TabIndex = 16;
+            this.lblRegisterIncome.Text = "Entrada de produtos";
+            this.lblRegisterIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRegisterIncome.Click += new System.EventHandler(this.lblRegisterIncome_Click);
+            this.lblRegisterIncome.MouseLeave += new System.EventHandler(this.lblRegisterIncome_MouseLeave);
+            this.lblRegisterIncome.MouseHover += new System.EventHandler(this.lblRegisterIncome_MouseHover);
             // 
             // btnRegistrarEntrada
             // 
@@ -559,7 +562,7 @@
         private System.Windows.Forms.Label lblDot8;
         private System.Windows.Forms.Label lblDot7;
         private System.Windows.Forms.Label lblHistSaidas;
-        private System.Windows.Forms.Label lblHistEntrada;
+        private System.Windows.Forms.Label lblRegisterIncome;
         private System.Windows.Forms.Button btnRegistrarEntrada;
         private System.Windows.Forms.Label lblDot5;
         private System.Windows.Forms.Label lblDot4;

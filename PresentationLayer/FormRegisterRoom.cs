@@ -230,9 +230,9 @@ namespace PresentationLayer
             FilterGrid(txtRoomSearchID, txtRoomSearchNumber, checkBox1, x => x.ID.ToString().Contains(txtRoomSearchID.Text));
         }
 
-        private void txtRoomSearchNumber_Click(object sender, EventArgs e)
+        private void txtRoomSearchNumber_Enter(object sender, EventArgs e)
         {
-            pnlSearchNumber.BackColor = Color.FromArgb(37, 206, 15);
+            pnlSearchNumber.EnterEvent();
         }
 
         private void txtRoomSearchNumber_Leave(object sender, EventArgs e)
@@ -265,5 +265,6 @@ namespace PresentationLayer
             FilterGrid(checkBox1, txtRoomSearchNumber, txtRoomSearchID, x => x.RoomAvailability.Equals(checkBox1.Checked));
         }
 
+        
     }
 }
