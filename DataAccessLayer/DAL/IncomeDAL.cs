@@ -83,12 +83,31 @@ namespace DataAccessLayer.DAL
                         if (!responseInsert.Success)
                             return responseInsert;
                     }
-
-                    scope.Complete();
-                    return Response.CreateSuccess("Operação efetuada com sucesso!");
                 }
+
+                scope.Complete();
+                return Response.CreateSuccess("Operação efetuada com sucesso!");
             }
         }
+
+        public Response UpdatePrice(Income income)
+        {
+            using (DbCommand command = DbFactory.GetCurrentCommand())
+            {
+                foreach (IncomeItem incomItemEntry in income.IncomeItems)
+                {
+                    command.Parameters.Clear();
+                    command.CommandText = @"UPDATE PRODUCTS SET PRICE = @PRICE WHERE ID = @ID";
+                    command.Parameters.AddWithValue("@ID", incomItemEntry.ProductID);
+                    command.Parameters.AddWithValue("@PRICE", incomItemEntry.UnityPrice);
+                    Response responseInsert = new DbExecuter().ExecuteQuery(command);
+                    if (!responseInsert.Success)
+                        return responseInsert;
+                }
+                return Response.CreateSuccess("Operação efetuada com sucesso!");
+            }
+        }
+
 
         public Response Delete(Income income)
         {

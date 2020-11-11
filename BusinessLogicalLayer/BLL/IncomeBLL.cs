@@ -5,9 +5,11 @@ using Entities;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace BusinessLogicalLayer.BLL
 {
@@ -26,13 +28,48 @@ namespace BusinessLogicalLayer.BLL
             if (!result.Success)
                 return result;
 
-            Response resultInsert = _incomeDAL.Insert(income);
-            if (!resultInsert.Success)
-                return resultInsert;
+            using (TransactionScope scope = new TransactionScope())
+            {
+                Response resultPrice = UpdatePrice(income);
+                if (!resultPrice.Success)
+                    return resultPrice;
+
+                Response resultInsert = _incomeDAL.Insert(income);
+                if (!resultInsert.Success)
+                    return resultInsert;
+
+                
+
+               
+
+                scope.Complete();
+            }
 
             return Response.CreateSuccess("A entrada foi cadastrada com sucesso!");
 
         }
+        private Response UpdatePrice(Income income)
+        {
+            foreach (var item in income.IncomeItems)
+            {
+                Product product = new ProductBLL().GetById(item.ProductID).Data;
+
+                double stockDouble = Convert.ToDouble(product.Stock);
+                double quantityDouble = Convert.ToDouble(item.Quantity);
+                double totalDouble = Convert.ToDouble(product.Stock + item.Quantity);
+                double currentPrice = stockDouble * product.Price;
+                double newPrice = quantityDouble * (item.UnityPrice * 1.5);
+
+               item.UnityPrice = (currentPrice + newPrice) / totalDouble;
+
+                Response response = _incomeDAL.UpdatePrice(income);
+                if (!response.Success)
+                    return response;
+            }
+
+            return Response.CreateSuccess("Operação efetuada com sucesso!");
+        }
+
 
         public Response Update(Income income)
         {

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -129,7 +130,7 @@ namespace PresentationLayer
         {
             foreach (var item in products)
             {
-                dgvProducts.Rows.Add(item.ID, item.Name, item.Description, item.Price, item.Stock);
+                dgvProducts.Rows.Add(item.ID, item.Name, item.Description, item.Price.ToString("C2", CultureInfo.CurrentCulture), item.Stock);
             }
         }
 
