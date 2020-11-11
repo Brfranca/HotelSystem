@@ -69,6 +69,7 @@
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).BeginInit();
+            this.pnlDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeftBar
@@ -104,7 +105,6 @@
             this.pnlLeftBar.Name = "pnlLeftBar";
             this.pnlLeftBar.Size = new System.Drawing.Size(300, 548);
             this.pnlLeftBar.TabIndex = 3;
-            this.pnlLeftBar.Click += new System.EventHandler(this.pnlLeftBar_Click);
             // 
             // pnlBottonLeftBar
             // 
@@ -525,6 +525,7 @@
             // 
             // pnlDisplay
             // 
+            this.pnlDisplay.Controls.Add(this.flpDisplay);
             this.pnlDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplay.Location = new System.Drawing.Point(300, 40);
             this.pnlDisplay.Name = "pnlDisplay";
@@ -533,11 +534,10 @@
             // 
             // flpDisplay
             // 
-            this.flpDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.flpDisplay.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flpDisplay.Location = new System.Drawing.Point(973, 40);
+            this.flpDisplay.BackColor = System.Drawing.Color.White;
+            this.flpDisplay.Location = new System.Drawing.Point(0, 0);
             this.flpDisplay.Name = "flpDisplay";
-            this.flpDisplay.Size = new System.Drawing.Size(299, 548);
+            this.flpDisplay.Size = new System.Drawing.Size(972, 548);
             this.flpDisplay.TabIndex = 0;
             // 
             // FormMain
@@ -546,7 +546,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1272, 588);
-            this.Controls.Add(this.flpDisplay);
             this.Controls.Add(this.pnlDisplay);
             this.Controls.Add(this.pnlLeftBar);
             this.Controls.Add(this.pnlTopBar);
@@ -569,6 +568,7 @@
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).EndInit();
+            this.pnlDisplay.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

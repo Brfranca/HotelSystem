@@ -253,9 +253,5 @@ namespace PresentationLayer
             }
             
         }
-
-        
-
-        
     }
 }

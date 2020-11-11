@@ -19,6 +19,11 @@ namespace PresentationLayer
         public FormMain()
         {
             InitializeComponent();
+            //for (int i = 0; i <= 12; i++)
+            //{
+            //    Label l = AddLabel(i);
+            //    flpDisplay.Controls.Add(l);
+            //}
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -64,7 +69,7 @@ namespace PresentationLayer
             l.BackColor = Color.FromArgb(19, 127, 75);
             l.Font = new Font("Segoe", 10, FontStyle.Bold);
             l.Width = 250;
-            l.Height = 20;
+            l.Height = 40;
             //l.Location = new Point(start, end);
             l.TextAlign = ContentAlignment.MiddleCenter;
             l.Margin = new Padding(5);
@@ -83,51 +88,27 @@ namespace PresentationLayer
 
         private void lblClient_Click(object sender, EventArgs e)
         {
-            Transparency transparency = new Transparency();
-            transparency.Show();
-            new FormRegisterClient().ShowDialog();
-            transparency.Close();
+            OpenChildForm(new FormRegisterClient());
         }
 
         private void lblProduct_Click(object sender, EventArgs e)
         {
-            Transparency transparency = new Transparency();
-            transparency.Show();
-            new FormRegisterProduct().ShowDialog();
-            transparency.Close();
-        }
-
-        private void pnlLeftBar_Click(object sender, EventArgs e)
-        {
-
-            Transparency transparency = new Transparency();
-            transparency.Show();
-            new FormRegisterRoom().ShowDialog();
-            transparency.Close();
+            OpenChildForm(new FormRegisterProduct());
         }
 
         private void lblSupplier_Click(object sender, EventArgs e)
         {
-            Transparency transparency = new Transparency();
-            transparency.Show();
-            new FormRegisterSupplier().ShowDialog();
-            transparency.Close();
+            OpenChildForm(new FormRegisterSupplier());
         }
 
         private void lblEmployee_Click(object sender, EventArgs e)
         {
-            Transparency transparency = new Transparency();
-            transparency.Show();
-            new FormRegisterEmployee().ShowDialog();
-            transparency.Close();
+            OpenChildForm(new FormRegisterEmployee());
         }
 
         private void lblRooms_Click(object sender, EventArgs e)
         {
-            Transparency transparency = new Transparency();
-            transparency.Show();
-            new FormRegisterRoom().ShowDialog();
-            transparency.Close();
+            OpenChildForm(new FormRegisterRoom());
         }
 
         private void lblClient_MouseHover(object sender, EventArgs e)
@@ -192,20 +173,12 @@ namespace PresentationLayer
 
         private void lblRegisterIncome_Click(object sender, EventArgs e)
         {
-            Transparency transparency = new Transparency();
-            transparency.Show();
-            new FormRegisterIncome().ShowDialog();
-            transparency.Close();
+            OpenChildForm(new FormRegisterIncome());
         }
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormCheckIn());
-            for (int i = 0; i <= 12; i++)
-            {
-                Label l = AddLabel(i);
-                flpDisplay.Controls.Add(l);
-            }
         }
     }
 }
