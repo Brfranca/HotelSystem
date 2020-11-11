@@ -87,6 +87,7 @@ namespace PresentationLayer
                 if (response.Success)
                 {
                     this.ClearForm();
+                    dgvSearchSupplier.Rows.Clear();
                     UpdateGrid();
                 }
             }
@@ -166,7 +167,14 @@ namespace PresentationLayer
                 return;
             }
             _incomeItems.Add(incomeItem);
-            txtTotalValue.Text = _incomeItems.Sum(x => x.UnityPrice).ToString();
+
+            double totalValue = 0.0;
+            foreach (var item in _incomeItems)
+            {
+                totalValue += item.UnityPrice * ((double)item.Quantity);
+            }
+            
+            txtTotalValue.Text = totalValue.ToString();
             UpdateGridProducts();
         }
 
@@ -202,7 +210,7 @@ namespace PresentationLayer
         {
             foreach (var item in incomes)
             {
-                dgvIncomes.Rows.Add(item.SupplierID, item.EmployeeID, item.EntryDate.ToString("dd/MM/yyyy HH:mm"), item.TotalValue.ToString("C2", CultureInfo.CurrentCulture));
+                dgvIncomes.Rows.Add(item.ID, item.SupplierID, item.EntryDate.ToString("dd/MM/yyyy HH:mm"), item.TotalValue.ToString("C2", CultureInfo.CurrentCulture));
             }
         }
 
@@ -225,8 +233,9 @@ namespace PresentationLayer
             QueryResponse<Income> response = _incomeBLL.GetById(id);
             if (response.Success)
             {
-                dgvSearchSupplier.Rows.Add(_supplierBLL.GetById(response.Data.ID).Data.CompanyName);
-                supplier = _supplierBLL.GetById(response.Data.SupplierID).Data;
+
+                QueryResponse<Supplier> responseSupplier = _supplierBLL.GetById(response.Data.SupplierID);
+                dgvSearchSupplier.Rows.Add(responseSupplier.Data.CompanyName);
                 txtTotalValue.Text = response.Data.TotalValue.ToString();
                 lblID.Text = id.ToString();
 
@@ -262,6 +271,7 @@ namespace PresentationLayer
                 if (response.Success)
                 {
                     this.ClearForm();
+                    dgvSearchSupplier.Rows.Clear();
                     UpdateGrid();
                     UpdateComponentsRegister();
                 }

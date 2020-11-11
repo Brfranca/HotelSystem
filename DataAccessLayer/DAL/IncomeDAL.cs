@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -30,8 +31,11 @@ namespace DataAccessLayer.DAL
                         {
                             IncomeID = resultInsertIncome.Id,
                         };
+
+                        //ver como atualizar o preço!
+
                         command.Parameters.Clear();
-                        command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET STOCK += @QUANTITY WHERE ID = @PRODUCTID";
+                        command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET PRICE = @UNITYPRICE, STOCK += @QUANTITY WHERE ID = @PRODUCTID";
                         command.Parameters.AddWithValue("@INCOMEID", incomeItem.IncomeID);
                         command.Parameters.AddWithValue("@PRODUCTID", incomItemEntry.ProductID);
                         command.Parameters.AddWithValue("@QUANTITY", incomItemEntry.Quantity);
