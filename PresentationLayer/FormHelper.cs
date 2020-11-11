@@ -77,6 +77,10 @@ namespace PresentationLayer
                     {
                         ((DataGridView)control.Controls[i]).Rows.Clear();
                     }
+                    else if (control.Controls[i].Name.ToString() == "dgvSearchSupplier")
+                    {
+                        ((DataGridView)control.Controls[i]).Rows.Clear();
+                    }
                 }
             }
         }

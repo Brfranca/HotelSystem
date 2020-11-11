@@ -16,7 +16,7 @@ namespace BusinessLogicalLayer.BLL
     public class IncomeBLL
     {
         private readonly IncomeDAL _incomeDAL;
-
+        private List<IncomeItem> _incomeItems;
         public IncomeBLL()
         {
             _incomeDAL = new IncomeDAL();
@@ -34,13 +34,14 @@ namespace BusinessLogicalLayer.BLL
                 if (!resultPrice.Success)
                     return resultPrice;
 
+                income.IncomeItems = _incomeItems;
                 Response resultInsert = _incomeDAL.Insert(income);
                 if (!resultInsert.Success)
                     return resultInsert;
 
-                
 
-               
+
+
 
                 scope.Complete();
             }
@@ -60,7 +61,7 @@ namespace BusinessLogicalLayer.BLL
                 double currentPrice = stockDouble * product.Price;
                 double newPrice = quantityDouble * (item.UnityPrice * 1.5);
 
-               item.UnityPrice = (currentPrice + newPrice) / totalDouble;
+                item.UnityPrice = (currentPrice + newPrice) / totalDouble;
 
                 Response response = _incomeDAL.UpdatePrice(income);
                 if (!response.Success)
@@ -99,8 +100,8 @@ namespace BusinessLogicalLayer.BLL
             Validator validator = new Validator();
             ValidateSupplier(income.SupplierID, income.ID, validator);
             ValidateTotalValue(income.TotalValue, income.ID, validator);
-            ValidateList(income.IncomeItems, income.ID, validator);
-            
+            ValidateListIncomeItems(income.IncomeItems, income.ID, validator);
+
             return validator.Validate();
         }
 
@@ -113,7 +114,7 @@ namespace BusinessLogicalLayer.BLL
         private void ValidateSupplier(int supplierID, int id, Validator validator)
         {
             string idString = supplierID.ToString();
-            
+
             if (idString.IsNullOrWhiteSpace())
             {
                 validator.AddError("O ID do fornecedor deve ser informado!");
@@ -121,22 +122,6 @@ namespace BusinessLogicalLayer.BLL
             else if (supplierID == 0)
             {
                 validator.AddError("O ID do fornecedor deve ser informado!");
-            }
-        }
-
-        private void ValidateQuantiy(int quantity, Validator validator)
-        {
-            if (quantity <= 0)
-            {
-                validator.AddError("O valor total da entrada deve ser maior que zero!");
-            }
-        }
-
-        private void ValidatePrice(double price, Validator validator)
-        {
-            if (price <= 0)
-            {
-                validator.AddError("O valor total da entrada deve ser maior que zero!");
             }
         }
 
@@ -155,11 +140,75 @@ namespace BusinessLogicalLayer.BLL
         }
 
 
-        private void ValidateList(List<IncomeItem> incomeItems, int id, Validator validator)
+        private void ValidateListIncomeItems(List<IncomeItem> incomeItems, int id, Validator validator)
         {
             if (incomeItems.Count == 0)
             {
                 validator.AddError("Um ou mais produtos devem ser adicionados!");
+            }
+        }
+
+
+        public Response CreateIncomeItem(int id, string price, string quantity)
+        {
+            Validator validator = new Validator();
+            ValidatePrice(price, validator);
+            ValidateQuantity(quantity, validator);
+            ValidateProductId(id, validator);
+
+            Response result = validator.Validate();
+            if (result.Success)
+            {
+                result.ProductId = id;
+                result.ProductPrice = Convert.ToDouble(price);
+                result.ProductQuantity = Convert.ToInt32(quantity);
+            }
+            return result;
+        }
+
+        private void ValidatePrice(string price, Validator validate)
+        {
+            char[] priceChar = price.ToCharArray();
+
+
+            if (price.IsNullOrWhiteSpace())
+            {
+                validate.AddError("O preço deve ser informado!");
+            }
+            else if (priceChar.Any(x => char.IsLetter(x)))
+            {
+                validate.AddError("O preço deve conter apenar números!");
+            }
+            else if (Convert.ToDouble(price) <= 0)
+            {
+                validate.AddError("O preço unitário deve ser maior que zero!");
+            }
+        }
+
+        public void ValidateQuantity(string quantity, Validator validate)
+        {
+
+            char[] quantityChar = quantity.ToCharArray();
+
+            if (quantity.IsNullOrWhiteSpace())
+            {
+                validate.AddError("A quantidade deve ser informada!");
+            }
+            else if (quantityChar.Any(x => char.IsLetter(x)))
+            {
+                validate.AddError("Quantidade deve conter apenar números!");
+            }
+            else if (Convert.ToInt32(quantity) <= 0)
+            {
+                validate.AddError("A quantidade deve ser maior que zero!");
+            }
+        }
+
+        private void ValidateProductId(int id, Validator validator)
+        {
+            if (id == 0)
+            {
+                validator.AddError("Nenhum produto selecionado!");
             }
         }
 

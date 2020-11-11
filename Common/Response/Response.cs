@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 
 namespace Common
 {
@@ -9,6 +10,9 @@ namespace Common
         public string ExceptionError { get; set; }
         public string StackTrace { get; set; }
         public int Id { get; set; }
+        public int ProductId { get; set; }
+        public double ProductPrice { get; set; }
+        public int ProductQuantity { get; set; }
 
         public string GetAllMessages()
             => $"Message: {Message}. ExceptionError: {ExceptionError}. StackTrace: {StackTrace}";

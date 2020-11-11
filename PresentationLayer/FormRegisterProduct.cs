@@ -254,5 +254,10 @@ namespace PresentationLayer
             }
             
         }
+
+        private void picProductRefresh_Click_1(object sender, EventArgs e)
+        {
+            UpdateGrid();
+        }
     }
 }

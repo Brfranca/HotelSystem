@@ -84,7 +84,7 @@
             this.lblCadID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadID.Location = new System.Drawing.Point(282, 109);
             this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(33, 23);
+            this.lblCadID.Size = new System.Drawing.Size(27, 19);
             this.lblCadID.TabIndex = 107;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -109,7 +109,7 @@
             this.lblCadDescricaoProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadDescricaoProd.Location = new System.Drawing.Point(39, 166);
             this.lblCadDescricaoProd.Name = "lblCadDescricaoProd";
-            this.lblCadDescricaoProd.Size = new System.Drawing.Size(182, 23);
+            this.lblCadDescricaoProd.Size = new System.Drawing.Size(155, 19);
             this.lblCadDescricaoProd.TabIndex = 108;
             this.lblCadDescricaoProd.Text = "Descrição do Produto";
             // 
@@ -121,7 +121,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblCadastrar.Location = new System.Drawing.Point(37, 72);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
+            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
             this.lblCadastrar.TabIndex = 104;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -133,7 +133,7 @@
             this.lblProdName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblProdName.Location = new System.Drawing.Point(39, 110);
             this.lblProdName.Name = "lblProdName";
-            this.lblProdName.Size = new System.Drawing.Size(58, 23);
+            this.lblProdName.Size = new System.Drawing.Size(50, 19);
             this.lblProdName.TabIndex = 105;
             this.lblProdName.Text = "Nome";
             // 
@@ -148,7 +148,7 @@
             this.txtProductName.MaxLength = 100;
             this.txtProductName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(300, 27);
+            this.txtProductName.Size = new System.Drawing.Size(300, 22);
             this.txtProductName.TabIndex = 106;
             // 
             // btnProductRegister
@@ -216,7 +216,7 @@
             this.txtProdSearchID.MaxLength = 11;
             this.txtProdSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchID.Name = "txtProdSearchID";
-            this.txtProdSearchID.Size = new System.Drawing.Size(103, 27);
+            this.txtProdSearchID.Size = new System.Drawing.Size(103, 22);
             this.txtProdSearchID.TabIndex = 215;
             this.txtProdSearchID.TextChanged += new System.EventHandler(this.txtProdSearchID_TextChanged);
             this.txtProdSearchID.Enter += new System.EventHandler(this.txtProdSearchID_Enter);
@@ -233,7 +233,7 @@
             this.txtProdSearchName.MaxLength = 11;
             this.txtProdSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchName.Name = "txtProdSearchName";
-            this.txtProdSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtProdSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtProdSearchName.TabIndex = 214;
             this.txtProdSearchName.TextChanged += new System.EventHandler(this.txtProdSearchName_TextChanged);
             this.txtProdSearchName.Enter += new System.EventHandler(this.txtProdSearchName_Enter);
@@ -247,7 +247,7 @@
             this.lblConsProdCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsProdCod.Location = new System.Drawing.Point(692, 109);
             this.lblConsProdCod.Name = "lblConsProdCod";
-            this.lblConsProdCod.Size = new System.Drawing.Size(28, 23);
+            this.lblConsProdCod.Size = new System.Drawing.Size(23, 19);
             this.lblConsProdCod.TabIndex = 213;
             this.lblConsProdCod.Text = "ID";
             // 
@@ -259,7 +259,7 @@
             this.lblSearchName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblSearchName.Location = new System.Drawing.Point(385, 110);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(154, 23);
+            this.lblSearchName.Size = new System.Drawing.Size(131, 19);
             this.lblSearchName.TabIndex = 212;
             this.lblSearchName.Text = "Nome do Produto";
             // 
@@ -271,7 +271,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label2.Location = new System.Drawing.Point(383, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 32);
+            this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 211;
             this.label2.Text = "Consultar";
             // 
@@ -283,7 +283,7 @@
             this.lblConsFornCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblConsFornCadastrados.Location = new System.Drawing.Point(387, 167);
             this.lblConsFornCadastrados.Name = "lblConsFornCadastrados";
-            this.lblConsFornCadastrados.Size = new System.Drawing.Size(182, 23);
+            this.lblConsFornCadastrados.Size = new System.Drawing.Size(155, 19);
             this.lblConsFornCadastrados.TabIndex = 216;
             this.lblConsFornCadastrados.Text = "Produtos cadastrados";
             // 
@@ -409,7 +409,7 @@
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.lblID.Location = new System.Drawing.Point(309, 108);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 23);
+            this.lblID.Size = new System.Drawing.Size(0, 19);
             this.lblID.TabIndex = 220;
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -443,6 +443,7 @@
             this.picProductRefresh.Size = new System.Drawing.Size(42, 38);
             this.picProductRefresh.TabIndex = 223;
             this.picProductRefresh.TabStop = false;
+            this.picProductRefresh.Click += new System.EventHandler(this.picProductRefresh_Click_1);
             // 
             // label1
             // 
@@ -452,7 +453,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.label1.Location = new System.Drawing.Point(39, 239);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(100, 19);
             this.label1.TabIndex = 224;
             this.label1.Text = "Fornecedores";
             // 
@@ -542,7 +543,7 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 27);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(26, 35);
+            this.lblDot1.Size = new System.Drawing.Size(20, 28);
             this.lblDot1.TabIndex = 228;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -555,13 +556,13 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
             this.label3.Location = new System.Drawing.Point(37, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 35);
+            this.label3.Size = new System.Drawing.Size(97, 28);
             this.label3.TabIndex = 227;
             this.label3.Text = "Produtos";
             // 
             // FormRegisterProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1141, 650);

@@ -41,6 +41,13 @@ namespace PresentationLayer
             this.ClearForm();
             dgvSearchSupplier.Rows.Clear();
             _incomeItems.Clear();
+
+            CreateSupplier();
+            
+        }
+
+        private void CreateSupplier()
+        {
             FormSearchSupplierIncome frmSearchSupp = new FormSearchSupplierIncome();
             frmSearchSupp.ShowDialog();
 
@@ -51,8 +58,6 @@ namespace PresentationLayer
             }
 
             dgvSearchSupplier.Rows.Add(supplier.CompanyName, supplier.CNPJ.InsertMaskCNPJ());
-            
-            
         }
 
         private void picSupplierClose_Click(object sender, EventArgs e)
@@ -63,6 +68,11 @@ namespace PresentationLayer
         private void btnSelectProduct_Click(object sender, EventArgs e)
         {
             dgvProductsAdd.Rows.Clear();
+            SearchProductsBySupplier();
+        }
+
+        private void SearchProductsBySupplier()
+        {
             FormSearchProduct frmProduto = new FormSearchProduct();
             frmProduto.supplier = supplier;
 
@@ -86,15 +96,11 @@ namespace PresentationLayer
             {
                 Response response = _incomeBLL.Register(income);
 
-                
-                
-
                 MessageBox.Show(response.Message);
 
                 if (response.Success)
                 {
                     this.ClearForm();
-                    dgvSearchSupplier.Rows.Clear();
                     UpdateGrid();
                 }
             }
@@ -108,7 +114,6 @@ namespace PresentationLayer
                 {
                     UpdateComponentsRegister();
                     this.ClearForm();
-                    dgvSearchSupplier.Rows.Clear();
                     UpdateGrid();
                 }
             }
@@ -149,42 +154,34 @@ namespace PresentationLayer
                     return;
 
                 IncomeItem incomeItem = new IncomeItem();
-                incomeItem.ProductID = (int)dgvProductsAdd.Rows[row.Index].Cells[0].Value;
-                incomeItem.Quantity = Convert.ToInt32(txtProdQuantity.Text);
-                incomeItem.UnityPrice = Convert.ToDouble(txtProdPrice.Text);
-                if (incomeItem.ProductID == 0)
+                int idProduct = (int)dgvProductsAdd.Rows[row.Index].Cells[0].Value;
+                Response response = _incomeBLL.CreateIncomeItem(idProduct, txtProdPrice.Text, txtProdQuantity.Text);
+                if (!response.Success)
                 {
-                    MessageBox.Show("Nenhum produto selecionado!");
+                    MessageBox.Show(response.Message);
                     return;
                 }
-                CreateList(incomeItem);
-                
+                incomeItem.ProductID = response.ProductId;
+                incomeItem.Quantity = response.ProductQuantity;
+                incomeItem.UnityPrice = response.ProductPrice;
+                _incomeItems.Add(incomeItem);
+
+                UpdateToTalValue();
             }
         }
 
-        private void CreateList(IncomeItem incomeItem)
+        private void UpdateToTalValue()
         {
-            if (incomeItem.Quantity <= 0)
-            {
-                MessageBox.Show("A quantidade deve ser maior que zero!");
-                return;
-            }
-            else if (incomeItem.UnityPrice <= 0)
-            {
-                MessageBox.Show("O preço unitário deve ser maior que zero!");
-                return;
-            }
-            _incomeItems.Add(incomeItem);
-
             double totalValue = 0.0;
             foreach (var item in _incomeItems)
             {
                 totalValue += item.UnityPrice * ((double)item.Quantity);
             }
-            
+
             txtTotalValue.Text = totalValue.ToString();
             UpdateGridProducts();
         }
+
 
         private void UpdateGridProducts()
         {
@@ -236,30 +233,47 @@ namespace PresentationLayer
         {
             if (_currentRowGrid == -1)
                 return;
-
+            this.ClearForm();
             int id = (int)dgvIncomes.Rows[_currentRowGrid].Cells[0].Value;
             QueryResponse<Income> response = _incomeBLL.GetById(id);
             if (response.Success)
             {
+                GetSupplierById(response.Data.SupplierID);
 
-                QueryResponse<Supplier> responseSupplier = _supplierBLL.GetById(response.Data.SupplierID);
-                dgvSearchSupplier.Rows.Add(responseSupplier.Data.CompanyName);
                 txtTotalValue.Text = response.Data.TotalValue.ToString();
                 lblID.Text = id.ToString();
 
-                QueryResponse<List<IncomeItem>> queryResponse = _incomeBLL.GetByIncomeId(id);
-
-                foreach (IncomeItem item in queryResponse.Data)
-                {
-                    
-                    dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice);
-                    _incomeItems.Add(item);
-                }
-
-                UpdateComponentsEdit();
+                GetListIncomeItems(id);
                 return;
             }
+
             MessageBox.Show(response.Message);
+        }
+
+
+        private void GetListIncomeItems(int id)
+        {
+            QueryResponse<List<IncomeItem>> queryResponse = _incomeBLL.GetByIncomeId(id);
+
+            foreach (IncomeItem item in queryResponse.Data)
+            {
+
+                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice);
+                _incomeItems.Add(item);
+            }
+
+            UpdateComponentsEdit();
+            return;
+        }
+        private void GetSupplierById(int supplierID)
+        {
+            QueryResponse<Supplier> responseSupplier = _supplierBLL.GetById(supplierID);
+            if (!responseSupplier.Success)
+            {
+                MessageBox.Show(responseSupplier.Message);
+                return;
+            }
+            dgvSearchSupplier.Rows.Add(responseSupplier.Data.CompanyName);
         }
 
         private void dgvIncomes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -284,6 +298,16 @@ namespace PresentationLayer
                     UpdateComponentsRegister();
                 }
             }
+        }
+
+        private void btnProductClear_Click(object sender, EventArgs e)
+        {
+            this.ClearForm();
+        }
+
+        private void picProductRefresh_Click(object sender, EventArgs e)
+        {
+            UpdateGrid();
         }
     }
 }
