@@ -22,12 +22,23 @@ namespace Common
         }
 
         public static new QueryResponse<T> CreateFailureException(string message, Exception error)
-            => (QueryResponse<T>)Response.CreateFailureException(message, error);
-
-        public static new QueryResponse<T> CreateSuccess(string message = "")
-            => (QueryResponse<T>)Response.CreateSuccess(message);
+        {
+            return new QueryResponse<T>
+            {
+                Success = false,
+                Message = message,
+                ExceptionError = error.Message,
+                StackTrace = error.StackTrace
+            };
+        }
+        public static new QueryResponse<T> CreateSuccess(string message = "", int id = 0)
+        {
+            return new QueryResponse<T> { Success = true, Message = message, Id = id };
+        }
 
         public static new QueryResponse<T> CreateFailure(string message)
-            => (QueryResponse<T>)Response.CreateFailure(message);
+        {
+            return new QueryResponse<T> { Success = false, Message = message };
+        }
     }
 }

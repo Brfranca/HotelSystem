@@ -41,7 +41,7 @@
             this.lblDot7 = new System.Windows.Forms.Label();
             this.lblHistSaidas = new System.Windows.Forms.Label();
             this.lblRegisterIncome = new System.Windows.Forms.Label();
-            this.btnRegistrarEntrada = new System.Windows.Forms.Button();
+            this.btnCheckIn = new System.Windows.Forms.Button();
             this.lblDot5 = new System.Windows.Forms.Label();
             this.lblDot4 = new System.Windows.Forms.Label();
             this.lblEmployeeName = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.picMainClose = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pnlDisplay = new System.Windows.Forms.Panel();
+            this.flpDisplay = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlLeftBar.SuspendLayout();
             this.pnlBottonLeftBar.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -80,7 +82,7 @@
             this.pnlLeftBar.Controls.Add(this.lblDot7);
             this.pnlLeftBar.Controls.Add(this.lblHistSaidas);
             this.pnlLeftBar.Controls.Add(this.lblRegisterIncome);
-            this.pnlLeftBar.Controls.Add(this.btnRegistrarEntrada);
+            this.pnlLeftBar.Controls.Add(this.btnCheckIn);
             this.pnlLeftBar.Controls.Add(this.lblDot5);
             this.pnlLeftBar.Controls.Add(this.lblDot4);
             this.pnlLeftBar.Controls.Add(this.lblEmployeeName);
@@ -124,7 +126,7 @@
             this.lblDateTime.Location = new System.Drawing.Point(1, 15);
             this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(298, 19);
+            this.lblDateTime.Size = new System.Drawing.Size(298, 23);
             this.lblDateTime.TabIndex = 0;
             this.lblDateTime.Text = "<hora>";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -139,7 +141,7 @@
             this.lblLogout.Location = new System.Drawing.Point(96, 47);
             this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
             this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(114, 19);
+            this.lblLogout.Size = new System.Drawing.Size(127, 23);
             this.lblLogout.TabIndex = 21;
             this.lblLogout.Text = "Sair do Sistema";
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,7 +165,7 @@
             this.label5.Location = new System.Drawing.Point(1, 12);
             this.label5.MinimumSize = new System.Drawing.Size(298, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(298, 19);
+            this.label5.Size = new System.Drawing.Size(309, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,7 +192,7 @@
             this.lblDot8.Location = new System.Drawing.Point(17, 264);
             this.lblDot8.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot8.Name = "lblDot8";
-            this.lblDot8.Size = new System.Drawing.Size(15, 19);
+            this.lblDot8.Size = new System.Drawing.Size(17, 23);
             this.lblDot8.TabIndex = 17;
             this.lblDot8.Text = "•";
             this.lblDot8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,7 +207,7 @@
             this.lblDot7.Location = new System.Drawing.Point(13, 230);
             this.lblDot7.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot7.Name = "lblDot7";
-            this.lblDot7.Size = new System.Drawing.Size(15, 19);
+            this.lblDot7.Size = new System.Drawing.Size(17, 23);
             this.lblDot7.TabIndex = 15;
             this.lblDot7.Text = "•";
             this.lblDot7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +222,7 @@
             this.lblHistSaidas.Location = new System.Drawing.Point(38, 263);
             this.lblHistSaidas.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblHistSaidas.Name = "lblHistSaidas";
-            this.lblHistSaidas.Size = new System.Drawing.Size(80, 20);
+            this.lblHistSaidas.Size = new System.Drawing.Size(80, 23);
             this.lblHistSaidas.TabIndex = 18;
             this.lblHistSaidas.Text = "--";
             this.lblHistSaidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,7 +237,7 @@
             this.lblRegisterIncome.Location = new System.Drawing.Point(34, 229);
             this.lblRegisterIncome.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblRegisterIncome.Name = "lblRegisterIncome";
-            this.lblRegisterIncome.Size = new System.Drawing.Size(135, 20);
+            this.lblRegisterIncome.Size = new System.Drawing.Size(167, 23);
             this.lblRegisterIncome.TabIndex = 16;
             this.lblRegisterIncome.Text = "Entrada de produtos";
             this.lblRegisterIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,22 +245,23 @@
             this.lblRegisterIncome.MouseLeave += new System.EventHandler(this.lblRegisterIncome_MouseLeave);
             this.lblRegisterIncome.MouseHover += new System.EventHandler(this.lblRegisterIncome_MouseHover);
             // 
-            // btnRegistrarEntrada
+            // btnCheckIn
             // 
-            this.btnRegistrarEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnRegistrarEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.btnRegistrarEntrada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrarEntrada.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.btnRegistrarEntrada.FlatAppearance.BorderSize = 3;
-            this.btnRegistrarEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarEntrada.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarEntrada.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarEntrada.Location = new System.Drawing.Point(42, 371);
-            this.btnRegistrarEntrada.Name = "btnRegistrarEntrada";
-            this.btnRegistrarEntrada.Size = new System.Drawing.Size(220, 50);
-            this.btnRegistrarEntrada.TabIndex = 19;
-            this.btnRegistrarEntrada.Text = "Registrar Nova Entrada";
-            this.btnRegistrarEntrada.UseVisualStyleBackColor = false;
+            this.btnCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCheckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.btnCheckIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.btnCheckIn.FlatAppearance.BorderSize = 3;
+            this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckIn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckIn.ForeColor = System.Drawing.Color.White;
+            this.btnCheckIn.Location = new System.Drawing.Point(42, 371);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Size = new System.Drawing.Size(220, 50);
+            this.btnCheckIn.TabIndex = 19;
+            this.btnCheckIn.Text = "Check In";
+            this.btnCheckIn.UseVisualStyleBackColor = false;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // lblDot5
             // 
@@ -270,7 +273,7 @@
             this.lblDot5.Location = new System.Drawing.Point(13, 208);
             this.lblDot5.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot5.Name = "lblDot5";
-            this.lblDot5.Size = new System.Drawing.Size(15, 19);
+            this.lblDot5.Size = new System.Drawing.Size(17, 23);
             this.lblDot5.TabIndex = 11;
             this.lblDot5.Text = "•";
             this.lblDot5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,7 +288,7 @@
             this.lblDot4.Location = new System.Drawing.Point(13, 183);
             this.lblDot4.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot4.Name = "lblDot4";
-            this.lblDot4.Size = new System.Drawing.Size(15, 19);
+            this.lblDot4.Size = new System.Drawing.Size(17, 23);
             this.lblDot4.TabIndex = 9;
             this.lblDot4.Text = "•";
             this.lblDot4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -299,7 +302,7 @@
             this.lblEmployeeName.Location = new System.Drawing.Point(12, 27);
             this.lblEmployeeName.MaximumSize = new System.Drawing.Size(220, 0);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(97, 19);
+            this.lblEmployeeName.Size = new System.Drawing.Size(120, 23);
             this.lblEmployeeName.TabIndex = 1;
             this.lblEmployeeName.Text = "<funcionario>";
             // 
@@ -311,7 +314,7 @@
             this.lblCadastrarConsultar.ForeColor = System.Drawing.Color.White;
             this.lblCadastrarConsultar.Location = new System.Drawing.Point(12, 70);
             this.lblCadastrarConsultar.Name = "lblCadastrarConsultar";
-            this.lblCadastrarConsultar.Size = new System.Drawing.Size(228, 28);
+            this.lblCadastrarConsultar.Size = new System.Drawing.Size(282, 35);
             this.lblCadastrarConsultar.TabIndex = 2;
             this.lblCadastrarConsultar.Text = "Cadastrar ou Consultar";
             // 
@@ -325,7 +328,7 @@
             this.lblDot3.Location = new System.Drawing.Point(13, 158);
             this.lblDot3.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot3.Name = "lblDot3";
-            this.lblDot3.Size = new System.Drawing.Size(15, 19);
+            this.lblDot3.Size = new System.Drawing.Size(17, 23);
             this.lblDot3.TabIndex = 7;
             this.lblDot3.Text = "•";
             this.lblDot3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -338,7 +341,7 @@
             this.lblHello.ForeColor = System.Drawing.Color.Silver;
             this.lblHello.Location = new System.Drawing.Point(12, 8);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(33, 19);
+            this.lblHello.Size = new System.Drawing.Size(40, 23);
             this.lblHello.TabIndex = 0;
             this.lblHello.Text = "Olá,";
             // 
@@ -352,7 +355,7 @@
             this.lblClient.Location = new System.Drawing.Point(34, 107);
             this.lblClient.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(80, 20);
+            this.lblClient.Size = new System.Drawing.Size(80, 23);
             this.lblClient.TabIndex = 4;
             this.lblClient.Text = "Clientes";
             this.lblClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,7 +373,7 @@
             this.lblDot2.Location = new System.Drawing.Point(13, 133);
             this.lblDot2.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot2.Name = "lblDot2";
-            this.lblDot2.Size = new System.Drawing.Size(15, 19);
+            this.lblDot2.Size = new System.Drawing.Size(17, 23);
             this.lblDot2.TabIndex = 5;
             this.lblDot2.Text = "•";
             this.lblDot2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,7 +388,7 @@
             this.lblSupplier.Location = new System.Drawing.Point(34, 182);
             this.lblSupplier.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(91, 20);
+            this.lblSupplier.Size = new System.Drawing.Size(112, 23);
             this.lblSupplier.TabIndex = 10;
             this.lblSupplier.Text = "Fornecedores";
             this.lblSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,7 +406,7 @@
             this.lblProduct.Location = new System.Drawing.Point(34, 132);
             this.lblProduct.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(80, 20);
+            this.lblProduct.Size = new System.Drawing.Size(80, 23);
             this.lblProduct.TabIndex = 6;
             this.lblProduct.Text = "Produtos";
             this.lblProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -421,7 +424,7 @@
             this.lblEmployee.Location = new System.Drawing.Point(34, 207);
             this.lblEmployee.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(86, 20);
+            this.lblEmployee.Size = new System.Drawing.Size(106, 23);
             this.lblEmployee.TabIndex = 12;
             this.lblEmployee.Text = "Funcionários";
             this.lblEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -439,7 +442,7 @@
             this.lblDot1.Location = new System.Drawing.Point(13, 108);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(15, 19);
+            this.lblDot1.Size = new System.Drawing.Size(17, 23);
             this.lblDot1.TabIndex = 3;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -454,7 +457,7 @@
             this.lblRooms.Location = new System.Drawing.Point(34, 157);
             this.lblRooms.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblRooms.Name = "lblRooms";
-            this.lblRooms.Size = new System.Drawing.Size(80, 20);
+            this.lblRooms.Size = new System.Drawing.Size(80, 23);
             this.lblRooms.TabIndex = 8;
             this.lblRooms.Text = "Quartos";
             this.lblRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -494,7 +497,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(102, 21);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(127, 28);
             this.lblNomeFarmacia.TabIndex = 174;
             this.lblNomeFarmacia.Text = "Hotel System";
             // 
@@ -520,12 +523,31 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pnlDisplay
+            // 
+            this.pnlDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDisplay.Location = new System.Drawing.Point(300, 40);
+            this.pnlDisplay.Name = "pnlDisplay";
+            this.pnlDisplay.Size = new System.Drawing.Size(972, 548);
+            this.pnlDisplay.TabIndex = 4;
+            // 
+            // flpDisplay
+            // 
+            this.flpDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.flpDisplay.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flpDisplay.Location = new System.Drawing.Point(973, 40);
+            this.flpDisplay.Name = "flpDisplay";
+            this.flpDisplay.Size = new System.Drawing.Size(299, 548);
+            this.flpDisplay.TabIndex = 0;
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1272, 588);
+            this.Controls.Add(this.flpDisplay);
+            this.Controls.Add(this.pnlDisplay);
             this.Controls.Add(this.pnlLeftBar);
             this.Controls.Add(this.pnlTopBar);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -564,7 +586,7 @@
         private System.Windows.Forms.Label lblDot7;
         private System.Windows.Forms.Label lblHistSaidas;
         private System.Windows.Forms.Label lblRegisterIncome;
-        private System.Windows.Forms.Button btnRegistrarEntrada;
+        private System.Windows.Forms.Button btnCheckIn;
         private System.Windows.Forms.Label lblDot5;
         private System.Windows.Forms.Label lblDot4;
         private System.Windows.Forms.Label lblEmployeeName;
@@ -583,5 +605,7 @@
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblRooms;
+        private System.Windows.Forms.Panel pnlDisplay;
+        private System.Windows.Forms.FlowLayoutPanel flpDisplay;
     }
 }

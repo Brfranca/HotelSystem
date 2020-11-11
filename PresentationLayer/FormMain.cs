@@ -23,9 +23,52 @@ namespace PresentationLayer
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-
             employee = FormLogin.employee;
             lblEmployeeName.Text = employee.Name;
+
+
+            //TESTE DE CRIAÇÃO DE COMPONENTES
+            //int startPosition = 600;
+            //int endPosition = 60;
+            //for (int i = 0; i <= 25; i++)
+            //{
+            //    Label l = AddLabel(i);
+            //    flpComponents.Controls.Add(l);
+            //    //endPosition += 100;
+            //}
+        }
+
+        // CRIAR FORM DENTRO DE UM PAINEL 
+        private Form activeForm = null;
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlDisplay.Controls.Add(childForm);
+            pnlDisplay.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        // CRIAR COMPONENTES EM TEMPO DE EXECUÇÃO
+        Label AddLabel(int i)
+        {
+            Label l = new Label();
+            l.Name = "Room" + i.ToString();
+            l.Text = "Room" + i.ToString() + " disponível";
+            l.ForeColor = Color.White;
+            l.BackColor = Color.FromArgb(19, 127, 75);
+            l.Font = new Font("Segoe", 10, FontStyle.Bold);
+            l.Width = 250;
+            l.Height = 20;
+            //l.Location = new Point(start, end);
+            l.TextAlign = ContentAlignment.MiddleCenter;
+            l.Margin = new Padding(5);
+            return l;
         }
 
         private void picMainClose_Click(object sender, EventArgs e)
@@ -40,10 +83,8 @@ namespace PresentationLayer
 
         private void lblClient_Click(object sender, EventArgs e)
         {
-            //da pra criar um metodo pra transparencia
             Transparency transparency = new Transparency();
             transparency.Show();
-            //----
             new FormRegisterClient().ShowDialog();
             transparency.Close();
         }
@@ -157,6 +198,14 @@ namespace PresentationLayer
             transparency.Close();
         }
 
-
+        private void btnCheckIn_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormCheckIn());
+            for (int i = 0; i <= 12; i++)
+            {
+                Label l = AddLabel(i);
+                flpDisplay.Controls.Add(l);
+            }
+        }
     }
 }
