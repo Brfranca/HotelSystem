@@ -49,7 +49,10 @@ namespace PresentationLayer
             {
                 btnSelectProduct.Enabled = true;
             }
+
             dgvSearchSupplier.Rows.Add(supplier.CompanyName, supplier.CNPJ.InsertMaskCNPJ());
+            
+            
         }
 
         private void picSupplierClose_Click(object sender, EventArgs e)
@@ -82,6 +85,10 @@ namespace PresentationLayer
             if (btnIncomeRegister.Text == "Cadastrar")
             {
                 Response response = _incomeBLL.Register(income);
+
+                
+                
+
                 MessageBox.Show(response.Message);
 
                 if (response.Success)
@@ -95,6 +102,7 @@ namespace PresentationLayer
             {
                 income.ID = Convert.ToInt32(lblID.Text);
                 Response response = _incomeBLL.Update(income);
+                
                 MessageBox.Show(response.Message);
                 if (response.Success)
                 {
