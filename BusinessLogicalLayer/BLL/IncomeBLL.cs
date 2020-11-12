@@ -67,28 +67,7 @@ namespace BusinessLogicalLayer.BLL
         }
 
 
-        public Response Update(Income income)
-        {
-            Response result = Validate(income);
-            if (!result.Success)
-                return result;
-
-            Response resultUpdate = _incomeDAL.Update(income);
-            if (!resultUpdate.Success)
-                return resultUpdate;
-
-            return Response.CreateSuccess("Entrada de produtos atualizada com sucesso!");
-        }
-
-        public Response Delete(Income income)
-        {
-            Response resultDelete = _incomeDAL.Delete(income);
-            if (!resultDelete.Success)
-                return resultDelete;
-
-            return Response.CreateSuccess("Entrada removida com sucesso!");
-
-        }
+        //Não precisa fazer o update e delete no income!
 
         private Response Validate(Income income)
         {

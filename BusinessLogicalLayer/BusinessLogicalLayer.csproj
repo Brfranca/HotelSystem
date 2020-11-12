@@ -49,6 +49,7 @@
     <Compile Include="BLL\IncomeBLL.cs" />
     <Compile Include="BLL\ProductBLL.cs" />
     <Compile Include="BLL\RoomBLL.cs" />
+    <Compile Include="BLL\SaleBLL.cs" />
     <Compile Include="BLL\SupplierBLL.cs" />
     <Compile Include="Utils\Validator.cs" />
     <Compile Include="BLL\ClientBLL.cs" />

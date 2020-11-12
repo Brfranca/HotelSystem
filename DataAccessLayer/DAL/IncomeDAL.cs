@@ -134,5 +134,7 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetAllData<IncomeItem>(command);
         }
 
+
+
     }
 }

@@ -68,10 +68,10 @@ namespace PresentationLayer
         private void btnSelectProduct_Click(object sender, EventArgs e)
         {
             dgvProductsAdd.Rows.Clear();
-            SearchProductsBySupplier();
+            SearchProductBySupplier();
         }
 
-        private void SearchProductsBySupplier()
+        private void SearchProductBySupplier()
         {
             FormSearchProduct frmProduto = new FormSearchProduct();
             frmProduto.supplier = supplier;
@@ -86,38 +86,22 @@ namespace PresentationLayer
         private void FormRegisterIncome_Load(object sender, EventArgs e)
         {
             btnSelectProduct.Enabled = false;
-            btnIncomeDelete.Visible = false;
             UpdateGrid();
         }
 
         private void btnIncomeRegister_Click(object sender, EventArgs e)
         {
             Income income = CreateIncome();
-            if (btnIncomeRegister.Text == "Cadastrar")
+
+            Response response = _incomeBLL.Register(income);
+
+            MessageBox.Show(response.Message);
+
+            if (response.Success)
             {
-                Response response = _incomeBLL.Register(income);
-
-                MessageBox.Show(response.Message);
-
-                if (response.Success)
-                {
-                    this.ClearForm();
-                    UpdateTextBoxValue();
-                    UpdateGrid();
-                }
-            }
-            else if (btnIncomeRegister.Text == "Editar")
-            {
-                income.ID = Convert.ToInt32(lblID.Text);
-                Response response = _incomeBLL.Update(income);
-
-                MessageBox.Show(response.Message);
-                if (response.Success)
-                {
-                    UpdateComponentsRegister();
-                    this.ClearForm();
-                    UpdateGrid();
-                }
+                this.ClearForm();
+                UpdateTextBoxValue();
+                UpdateGrid();
             }
         }
 
@@ -125,15 +109,9 @@ namespace PresentationLayer
         {
             btnIncomeRegister.Text = "Cadastrar";
             UpdateTextBoxValue();
-            btnIncomeDelete.Visible = false;
         }
 
-        private void UpdateComponentsEdit()
-        {
-            btnIncomeRegister.Text = "Editar";
-            UpdateTextBoxValue();
-            btnIncomeDelete.Visible = true;
-        }
+
 
         private Income CreateIncome()
         {
@@ -252,7 +230,6 @@ namespace PresentationLayer
                 lblID.Text = id.ToString();
 
                 GetListIncomeItems(id);
-                UpdateComponentsEdit();
                 return;
             }
 
@@ -289,24 +266,7 @@ namespace PresentationLayer
             SelectDataGrid();
         }
 
-        private void btnIncomeDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir?", "", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                Income income = CreateIncome();
-                income.ID = Convert.ToInt32(lblID.Text);
-                Response response = _incomeBLL.Delete(income);
-                MessageBox.Show(response.Message);
-                if (response.Success)
-                {
-                    this.ClearForm();
-                    dgvSearchSupplier.Rows.Clear();
-                    UpdateGrid();
-                    UpdateComponentsRegister();
-                }
-            }
-        }
+
 
         private void btnProductClear_Click(object sender, EventArgs e)
         {
@@ -317,6 +277,26 @@ namespace PresentationLayer
         private void picProductRefresh_Click(object sender, EventArgs e)
         {
             UpdateGrid();
+        }
+
+        private void txtSearchIncomeBySupp_Enter(object sender, EventArgs e)
+        {
+            pnlProduName.EnterEvent();
+        }
+
+        private void txtSearchIncomeBySupp_Leave(object sender, EventArgs e)
+        {
+            pnlProduName.LeaveEvent();
+        }
+
+        private void txtProdSearchID_Enter(object sender, EventArgs e)
+        {
+            pnlProduID.EnterEvent();
+        }
+
+        private void txtProdSearchID_Leave(object sender, EventArgs e)
+        {
+            pnlProduID.LeaveEvent();
         }
     }
 }
