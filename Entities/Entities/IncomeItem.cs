@@ -14,5 +14,6 @@ namespace Entities.Entities
         public int ProductID { get; set; }
         public int Quantity { get; set; }
         public double UnityPrice { get; set; }
+        public double Profit { get; set; }
     }
 }

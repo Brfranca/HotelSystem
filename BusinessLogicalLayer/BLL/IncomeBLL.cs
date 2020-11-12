@@ -16,7 +16,6 @@ namespace BusinessLogicalLayer.BLL
     public class IncomeBLL
     {
         private readonly IncomeDAL _incomeDAL;
-        private List<IncomeItem> _incomeItems;
         public IncomeBLL()
         {
             _incomeDAL = new IncomeDAL();
@@ -34,14 +33,9 @@ namespace BusinessLogicalLayer.BLL
                 if (!resultPrice.Success)
                     return resultPrice;
 
-                income.IncomeItems = _incomeItems;
                 Response resultInsert = _incomeDAL.Insert(income);
                 if (!resultInsert.Success)
                     return resultInsert;
-
-
-
-
 
                 scope.Complete();
             }
@@ -59,7 +53,8 @@ namespace BusinessLogicalLayer.BLL
                 double quantityDouble = Convert.ToDouble(item.Quantity);
                 double totalDouble = Convert.ToDouble(product.Stock + item.Quantity);
                 double currentPrice = stockDouble * product.Price;
-                double newPrice = quantityDouble * (item.UnityPrice * 1.5);
+                double profit = (item.Profit / 100) + 1.0; 
+                double newPrice = quantityDouble * (item.UnityPrice * profit);
 
                 item.UnityPrice = (currentPrice + newPrice) / totalDouble;
 
@@ -149,12 +144,13 @@ namespace BusinessLogicalLayer.BLL
         }
 
 
-        public Response CreateIncomeItem(int id, string price, string quantity)
+        public Response ValidateIncomeItem(int id, string price, string quantity, string profit)
         {
             Validator validator = new Validator();
             ValidatePrice(price, validator);
             ValidateQuantity(quantity, validator);
             ValidateProductId(id, validator);
+            ValidateProfit(profit, validator);
 
             Response result = validator.Validate();
             if (result.Success)
@@ -162,6 +158,7 @@ namespace BusinessLogicalLayer.BLL
                 result.ProductId = id;
                 result.ProductPrice = Convert.ToDouble(price);
                 result.ProductQuantity = Convert.ToInt32(quantity);
+                result.ProdcutProfit = Convert.ToInt32(profit);
             }
             return result;
         }
@@ -182,6 +179,25 @@ namespace BusinessLogicalLayer.BLL
             else if (Convert.ToDouble(price) <= 0)
             {
                 validate.AddError("O preço unitário deve ser maior que zero!");
+            }
+        }
+
+        private void ValidateProfit(string profit, Validator validate)
+        {
+            char[] profitChar = profit.ToCharArray();
+
+
+            if (profit.IsNullOrWhiteSpace())
+            {
+                validate.AddError("O lucro deve ser informado!");
+            }
+            else if (profitChar.Any(x => char.IsLetter(x)))
+            {
+                validate.AddError("O lucro deve conter apenar números!");
+            }
+            else if (Convert.ToDouble(profit) <= 0 || Convert.ToDouble(profit) > 100)
+            {
+                validate.AddError("O lucro deve ser maior que zero e no máximo cem!");
             }
         }
 

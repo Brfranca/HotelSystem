@@ -37,9 +37,12 @@ namespace PresentationLayer
                     {
                         ((TextBox)control.Controls[i]).Text = "0";
                     }
-                    
-                    
+                    else if (control.Controls[i].Name.ToString() == "txtProductProfit")
+                    {
+                        ((TextBox)control.Controls[i]).Text = "0";
+                    }
                 }
+
                 // LIMPA ComboBox
                 else if (control.Controls[i] is ComboBox)
                 {

@@ -35,11 +35,13 @@ namespace DataAccessLayer.DAL
                         //ver como atualizar o preço!
 
                         command.Parameters.Clear();
-                        command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET PRICE = @UNITYPRICE, STOCK += @QUANTITY WHERE ID = @PRODUCTID";
+                        command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE,PROFIT) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE,@PROFIT); UPDATE PRODUCTS SET PRICE = @UNITYPRICE, STOCK += @QUANTITY WHERE ID = @PRODUCTID";
                         command.Parameters.AddWithValue("@INCOMEID", incomeItem.IncomeID);
                         command.Parameters.AddWithValue("@PRODUCTID", incomItemEntry.ProductID);
                         command.Parameters.AddWithValue("@QUANTITY", incomItemEntry.Quantity);
                         command.Parameters.AddWithValue("@UNITYPRICE", incomItemEntry.UnityPrice);
+                        command.Parameters.AddWithValue("@PROFIT", incomItemEntry.Profit);
+
                         Response responseInsert = new DbExecuter().ExecuteQuery(command);
                         if (!responseInsert.Success)
                             return responseInsert;
@@ -61,6 +63,7 @@ namespace DataAccessLayer.DAL
                     return resultUpdateIncome;
 
                 //Esse delete recebe o nome do campo e o ID para excluir. <IncomeItem> para que a retirar a table name
+                //esse método não altera o valor do produto, rever!!!!
                 Response resultDelete = DeleteWhereId<IncomeItem>("INCOMEID", income.ID);
                 if (!resultDelete.Success)
                     return resultDelete;

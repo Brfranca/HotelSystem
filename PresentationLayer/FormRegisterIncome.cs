@@ -43,7 +43,7 @@ namespace PresentationLayer
             _incomeItems.Clear();
 
             CreateSupplier();
-            
+
         }
 
         private void CreateSupplier()
@@ -80,6 +80,7 @@ namespace PresentationLayer
 
             _product = frmProduto.product;
             dgvProductsAdd.Rows.Add(_product.ID, _product.Name, _product.Description);
+
         }
 
         private void FormRegisterIncome_Load(object sender, EventArgs e)
@@ -101,6 +102,7 @@ namespace PresentationLayer
                 if (response.Success)
                 {
                     this.ClearForm();
+                    UpdateTextBoxValue();
                     UpdateGrid();
                 }
             }
@@ -108,7 +110,7 @@ namespace PresentationLayer
             {
                 income.ID = Convert.ToInt32(lblID.Text);
                 Response response = _incomeBLL.Update(income);
-                
+
                 MessageBox.Show(response.Message);
                 if (response.Success)
                 {
@@ -122,14 +124,14 @@ namespace PresentationLayer
         private void UpdateComponentsRegister()
         {
             btnIncomeRegister.Text = "Cadastrar";
-            txtProdQuantity.Text = "0";
-            txtProdPrice.Text = "0";
+            UpdateTextBoxValue();
             btnIncomeDelete.Visible = false;
         }
 
         private void UpdateComponentsEdit()
         {
             btnIncomeRegister.Text = "Editar";
+            UpdateTextBoxValue();
             btnIncomeDelete.Visible = true;
         }
 
@@ -141,33 +143,34 @@ namespace PresentationLayer
             income.SupplierID = supplier.ID;
             income.EntryDate = DateTime.Now;
             income.IncomeItems = _incomeItems;
-            
+
             income.TotalValue = Convert.ToDouble(txtTotalValue.Text);
             return income;
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dgvProductsAdd.Rows)
+            CreateIncomeItem();
+            UpdateTextBoxValue();
+        }
+
+        private void CreateIncomeItem()
+        {
+            IncomeItem incomeItem = new IncomeItem();
+            Response response = _incomeBLL.ValidateIncomeItem(_product.ID, txtProdPrice.Text, txtProdQuantity.Text, txtProductProfit.Text);
+            if (!response.Success)
             {
-                if (row.Index == -1)
-                    return;
-
-                IncomeItem incomeItem = new IncomeItem();
-                int idProduct = (int)dgvProductsAdd.Rows[row.Index].Cells[0].Value;
-                Response response = _incomeBLL.CreateIncomeItem(idProduct, txtProdPrice.Text, txtProdQuantity.Text);
-                if (!response.Success)
-                {
-                    MessageBox.Show(response.Message);
-                    return;
-                }
-                incomeItem.ProductID = response.ProductId;
-                incomeItem.Quantity = response.ProductQuantity;
-                incomeItem.UnityPrice = response.ProductPrice;
-                _incomeItems.Add(incomeItem);
-
-                UpdateToTalValue();
+                MessageBox.Show(response.Message);
+                return;
             }
+            incomeItem.ProductID = response.ProductId;
+            incomeItem.Quantity = response.ProductQuantity;
+            incomeItem.UnityPrice = response.ProductPrice;
+            incomeItem.Profit = response.ProdcutProfit;
+
+            _incomeItems.Add(incomeItem);
+
+            UpdateToTalValue();
         }
 
         private void UpdateToTalValue()
@@ -182,17 +185,22 @@ namespace PresentationLayer
             UpdateGridProducts();
         }
 
+        private void UpdateTextBoxValue()
+        {
+            txtProdQuantity.Text = "0";
+            txtProdPrice.Text = "0";
+            txtProductProfit.Text = "0";
+        }
 
         private void UpdateGridProducts()
         {
-            dgvIncomeItems.Rows.Clear();
-            txtProdQuantity.Text = "0";
-            txtProdPrice.Text = "0";
+            UpdateTextBoxValue();
 
             dgvProductsAdd.Rows.Clear();
+            dgvIncomeItems.Rows.Clear();
             foreach (var item in _incomeItems)
             {
-                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice);
+                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice, item.Profit.ToString() + "%");
             }
         }
 
@@ -244,6 +252,7 @@ namespace PresentationLayer
                 lblID.Text = id.ToString();
 
                 GetListIncomeItems(id);
+                UpdateComponentsEdit();
                 return;
             }
 
@@ -258,11 +267,10 @@ namespace PresentationLayer
             foreach (IncomeItem item in queryResponse.Data)
             {
 
-                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice);
+                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice, item.Profit.ToString() + "%");
                 _incomeItems.Add(item);
             }
 
-            UpdateComponentsEdit();
             return;
         }
         private void GetSupplierById(int supplierID)
@@ -303,6 +311,7 @@ namespace PresentationLayer
         private void btnProductClear_Click(object sender, EventArgs e)
         {
             this.ClearForm();
+            UpdateComponentsRegister();
         }
 
         private void picProductRefresh_Click(object sender, EventArgs e)

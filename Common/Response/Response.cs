@@ -13,6 +13,7 @@ namespace Common
         public int ProductId { get; set; }
         public double ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
+        public double ProdcutProfit { get; set; }
 
         public string GetAllMessages()
             => $"Message: {Message}. ExceptionError: {ExceptionError}. StackTrace: {StackTrace}";
