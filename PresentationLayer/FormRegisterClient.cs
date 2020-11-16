@@ -169,6 +169,7 @@ namespace PresentationLayer
                 txtClientRG.Text = response.Data.RG;
                 lblID.Text = response.Data.ID.ToString();
 
+
                 UpdateComponentsEdit();
                 return;
             }
@@ -231,5 +232,7 @@ namespace PresentationLayer
         {
             pnlClientCPF.EnterEvent();
         }
+
+       
     }
 }
