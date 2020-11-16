@@ -91,25 +91,6 @@ namespace PresentationLayer
             OpenChildForm(new FormRegisterClient());
         }
 
-        private void lblProduct_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormRegisterProduct());
-        }
-
-        private void lblSupplier_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormRegisterSupplier());
-        }
-
-        private void lblEmployee_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormRegisterEmployee());
-        }
-
-        private void lblRooms_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormRegisterRoom());
-        }
 
         private void lblClient_MouseHover(object sender, EventArgs e)
         {
@@ -121,64 +102,86 @@ namespace PresentationLayer
             lblClient.MouseLeaveEvent();
         }
 
-        private void lblSupplier_MouseHover(object sender, EventArgs e)
-        {
-            lblSupplier.MouseHoverEvent();
-        }
-
-        private void lblSupplier_MouseLeave(object sender, EventArgs e)
-        {
-            lblSupplier.MouseLeaveEvent();
-        }
-
-        private void lblProduct_MouseHover(object sender, EventArgs e)
-        {
-            lblProduct.MouseHoverEvent();
-        }
-
-        private void lblProduct_MouseLeave(object sender, EventArgs e)
-        {
-            lblProduct.MouseLeaveEvent();
-        }
-
-        private void lblRooms_MouseHover(object sender, EventArgs e)
-        {
-            lblRooms.MouseHoverEvent();
-        }
-
-        private void lblRooms_MouseLeave(object sender, EventArgs e)
-        {
-            lblRooms.MouseLeaveEvent();
-        }
-
-        private void lblEmployee_MouseHover(object sender, EventArgs e)
-        {
-            lblEmployee.MouseHoverEvent();
-        }
-
-        private void lblEmployee_MouseLeave(object sender, EventArgs e)
-        {
-            lblEmployee.MouseLeaveEvent();
-        }
-
-        private void lblRegisterIncome_MouseHover(object sender, EventArgs e)
-        {
-            lblRegisterIncome.MouseHoverEvent();
-        }
-
-        private void lblRegisterIncome_MouseLeave(object sender, EventArgs e)
-        {
-            lblRegisterIncome.MouseLeaveEvent();
-        }
-
-        private void lblRegisterIncome_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormRegisterIncome());
-        }
+        
 
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormCheckIn());
+        }
+
+        private void btnProduc_MouseHover(object sender, EventArgs e)
+        {
+            btnProduc.MouseHoverEvent();
+        }
+
+        private void btnProduc_MouseLeave(object sender, EventArgs e)
+        {
+            btnProduc.MouseLeaveEvent();
+        }
+
+        private void btnProduc_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterProduct());
+        }
+
+        private void btnRoom_MouseHover(object sender, EventArgs e)
+        {
+            btnRoom.MouseHoverEvent();
+        }
+
+        private void btnRoom_MouseLeave(object sender, EventArgs e)
+        {
+            btnRoom.MouseLeaveEvent();
+        }
+
+        private void btnRoom_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterRoom());
+        }
+
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterSupplier());
+        }
+
+        private void btnSupplier_MouseHover(object sender, EventArgs e)
+        {
+            btnSupplier.MouseHoverEvent();
+        }
+
+        private void btnSupplier_MouseLeave(object sender, EventArgs e)
+        {
+            btnSupplier.MouseLeaveEvent();
+        }
+
+        private void btnEmployee_MouseHover(object sender, EventArgs e)
+        {
+            btnEmployee.MouseHoverEvent();
+        }
+
+        private void btnEmployee_MouseLeave(object sender, EventArgs e)
+        {
+            btnEmployee.MouseLeaveEvent();
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterEmployee());
+        }
+
+        private void btnIncome_MouseHover(object sender, EventArgs e)
+        {
+            btnIncome.MouseHoverEvent();
+        }
+
+        private void btnIncome_MouseLeave(object sender, EventArgs e)
+        {
+            btnIncome.MouseLeaveEvent();
+        }
+
+        private void btnIncome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterIncome());
         }
     }
 }
