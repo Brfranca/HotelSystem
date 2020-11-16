@@ -31,30 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlLeftBar = new System.Windows.Forms.Panel();
-            this.pnlBottonLeftBar = new System.Windows.Forms.Panel();
+            this.btnIncome = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnSupplier = new System.Windows.Forms.Button();
+            this.btnRoom = new System.Windows.Forms.Button();
+            this.btnProduc = new System.Windows.Forms.Button();
+            this.btnBegining = new System.Windows.Forms.Button();
             this.lblDateTime = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblDot8 = new System.Windows.Forms.Label();
-            this.lblDot7 = new System.Windows.Forms.Label();
-            this.lblHistSaidas = new System.Windows.Forms.Label();
-            this.lblRegisterIncome = new System.Windows.Forms.Label();
-            this.btnCheckIn = new System.Windows.Forms.Button();
-            this.lblDot5 = new System.Windows.Forms.Label();
-            this.lblDot4 = new System.Windows.Forms.Label();
             this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.lblCadastrarConsultar = new System.Windows.Forms.Label();
-            this.lblDot3 = new System.Windows.Forms.Label();
             this.lblHello = new System.Windows.Forms.Label();
             this.lblClient = new System.Windows.Forms.Label();
-            this.lblDot2 = new System.Windows.Forms.Label();
-            this.lblSupplier = new System.Windows.Forms.Label();
-            this.lblProduct = new System.Windows.Forms.Label();
-            this.lblEmployee = new System.Windows.Forms.Label();
             this.lblDot1 = new System.Windows.Forms.Label();
-            this.lblRooms = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
@@ -63,9 +52,6 @@
             this.pnlDisplay = new System.Windows.Forms.Panel();
             this.flpDisplay = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlLeftBar.SuspendLayout();
-            this.pnlBottonLeftBar.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).BeginInit();
@@ -76,27 +62,19 @@
             // 
             this.pnlLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
             this.pnlLeftBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLeftBar.BackgroundImage")));
-            this.pnlLeftBar.Controls.Add(this.pnlBottonLeftBar);
-            this.pnlLeftBar.Controls.Add(this.panel3);
-            this.pnlLeftBar.Controls.Add(this.pictureBox1);
-            this.pnlLeftBar.Controls.Add(this.lblDot8);
-            this.pnlLeftBar.Controls.Add(this.lblDot7);
-            this.pnlLeftBar.Controls.Add(this.lblHistSaidas);
-            this.pnlLeftBar.Controls.Add(this.lblRegisterIncome);
-            this.pnlLeftBar.Controls.Add(this.btnCheckIn);
-            this.pnlLeftBar.Controls.Add(this.lblDot5);
-            this.pnlLeftBar.Controls.Add(this.lblDot4);
+            this.pnlLeftBar.Controls.Add(this.label5);
+            this.pnlLeftBar.Controls.Add(this.lblLogout);
+            this.pnlLeftBar.Controls.Add(this.lblDateTime);
+            this.pnlLeftBar.Controls.Add(this.btnIncome);
+            this.pnlLeftBar.Controls.Add(this.btnEmployee);
+            this.pnlLeftBar.Controls.Add(this.btnSupplier);
+            this.pnlLeftBar.Controls.Add(this.btnRoom);
+            this.pnlLeftBar.Controls.Add(this.btnProduc);
+            this.pnlLeftBar.Controls.Add(this.btnBegining);
             this.pnlLeftBar.Controls.Add(this.lblEmployeeName);
-            this.pnlLeftBar.Controls.Add(this.lblCadastrarConsultar);
-            this.pnlLeftBar.Controls.Add(this.lblDot3);
             this.pnlLeftBar.Controls.Add(this.lblHello);
             this.pnlLeftBar.Controls.Add(this.lblClient);
-            this.pnlLeftBar.Controls.Add(this.lblDot2);
-            this.pnlLeftBar.Controls.Add(this.lblSupplier);
-            this.pnlLeftBar.Controls.Add(this.lblProduct);
-            this.pnlLeftBar.Controls.Add(this.lblEmployee);
             this.pnlLeftBar.Controls.Add(this.lblDot1);
-            this.pnlLeftBar.Controls.Add(this.lblRooms);
             this.pnlLeftBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlLeftBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeftBar.Location = new System.Drawing.Point(0, 40);
@@ -106,27 +84,134 @@
             this.pnlLeftBar.Size = new System.Drawing.Size(300, 548);
             this.pnlLeftBar.TabIndex = 3;
             // 
-            // pnlBottonLeftBar
+            // btnIncome
             // 
-            this.pnlBottonLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.pnlBottonLeftBar.Controls.Add(this.lblDateTime);
-            this.pnlBottonLeftBar.Controls.Add(this.lblLogout);
-            this.pnlBottonLeftBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottonLeftBar.Location = new System.Drawing.Point(0, 428);
-            this.pnlBottonLeftBar.Name = "pnlBottonLeftBar";
-            this.pnlBottonLeftBar.Size = new System.Drawing.Size(300, 80);
-            this.pnlBottonLeftBar.TabIndex = 20;
+            this.btnIncome.BackColor = System.Drawing.Color.Transparent;
+            this.btnIncome.FlatAppearance.BorderSize = 0;
+            this.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncome.ForeColor = System.Drawing.Color.White;
+            this.btnIncome.Image = ((System.Drawing.Image)(resources.GetObject("btnIncome.Image")));
+            this.btnIncome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIncome.Location = new System.Drawing.Point(16, 301);
+            this.btnIncome.Name = "btnIncome";
+            this.btnIncome.Size = new System.Drawing.Size(197, 42);
+            this.btnIncome.TabIndex = 28;
+            this.btnIncome.Text = "Entrada de produtos";
+            this.btnIncome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIncome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIncome.UseVisualStyleBackColor = false;
+            this.btnIncome.Click += new System.EventHandler(this.btnIncome_Click);
+            this.btnIncome.MouseLeave += new System.EventHandler(this.btnIncome_MouseLeave);
+            this.btnIncome.MouseHover += new System.EventHandler(this.btnIncome_MouseHover);
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(16, 221);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(197, 42);
+            this.btnEmployee.TabIndex = 27;
+            this.btnEmployee.Text = "Funcionários";
+            this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmployee.UseVisualStyleBackColor = false;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
+            this.btnEmployee.MouseLeave += new System.EventHandler(this.btnEmployee_MouseLeave);
+            this.btnEmployee.MouseHover += new System.EventHandler(this.btnEmployee_MouseHover);
+            // 
+            // btnSupplier
+            // 
+            this.btnSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.btnSupplier.FlatAppearance.BorderSize = 0;
+            this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplier.ForeColor = System.Drawing.Color.White;
+            this.btnSupplier.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplier.Image")));
+            this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupplier.Location = new System.Drawing.Point(16, 261);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Size = new System.Drawing.Size(197, 42);
+            this.btnSupplier.TabIndex = 26;
+            this.btnSupplier.Text = "Fornecedores";
+            this.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSupplier.UseVisualStyleBackColor = false;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
+            this.btnSupplier.MouseLeave += new System.EventHandler(this.btnSupplier_MouseLeave);
+            this.btnSupplier.MouseHover += new System.EventHandler(this.btnSupplier_MouseHover);
+            // 
+            // btnRoom
+            // 
+            this.btnRoom.BackColor = System.Drawing.Color.Transparent;
+            this.btnRoom.FlatAppearance.BorderSize = 0;
+            this.btnRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoom.ForeColor = System.Drawing.Color.White;
+            this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
+            this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoom.Location = new System.Drawing.Point(16, 181);
+            this.btnRoom.Name = "btnRoom";
+            this.btnRoom.Size = new System.Drawing.Size(197, 42);
+            this.btnRoom.TabIndex = 25;
+            this.btnRoom.Text = "Quartos";
+            this.btnRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRoom.UseVisualStyleBackColor = false;
+            this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
+            this.btnRoom.MouseLeave += new System.EventHandler(this.btnRoom_MouseLeave);
+            this.btnRoom.MouseHover += new System.EventHandler(this.btnRoom_MouseHover);
+            // 
+            // btnProduc
+            // 
+            this.btnProduc.BackColor = System.Drawing.Color.Transparent;
+            this.btnProduc.FlatAppearance.BorderSize = 0;
+            this.btnProduc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduc.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduc.ForeColor = System.Drawing.Color.White;
+            this.btnProduc.Image = ((System.Drawing.Image)(resources.GetObject("btnProduc.Image")));
+            this.btnProduc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduc.Location = new System.Drawing.Point(16, 141);
+            this.btnProduc.Name = "btnProduc";
+            this.btnProduc.Size = new System.Drawing.Size(197, 38);
+            this.btnProduc.TabIndex = 24;
+            this.btnProduc.Text = "Produtos";
+            this.btnProduc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProduc.UseVisualStyleBackColor = false;
+            this.btnProduc.Click += new System.EventHandler(this.btnProduc_Click);
+            this.btnProduc.MouseLeave += new System.EventHandler(this.btnProduc_MouseLeave);
+            this.btnProduc.MouseHover += new System.EventHandler(this.btnProduc_MouseHover);
+            // 
+            // btnBegining
+            // 
+            this.btnBegining.BackColor = System.Drawing.Color.Transparent;
+            this.btnBegining.FlatAppearance.BorderSize = 0;
+            this.btnBegining.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBegining.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBegining.ForeColor = System.Drawing.Color.White;
+            this.btnBegining.Image = ((System.Drawing.Image)(resources.GetObject("btnBegining.Image")));
+            this.btnBegining.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBegining.Location = new System.Drawing.Point(16, 91);
+            this.btnBegining.Name = "btnBegining";
+            this.btnBegining.Size = new System.Drawing.Size(197, 42);
+            this.btnBegining.TabIndex = 23;
+            this.btnBegining.Text = "Início";
+            this.btnBegining.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBegining.UseVisualStyleBackColor = false;
             // 
             // lblDateTime
             // 
             this.lblDateTime.AutoSize = true;
-            this.lblDateTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.lblDateTime.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateTime.ForeColor = System.Drawing.Color.White;
-            this.lblDateTime.Location = new System.Drawing.Point(1, 15);
+            this.lblDateTime.Location = new System.Drawing.Point(3, 435);
             this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(298, 23);
+            this.lblDateTime.Size = new System.Drawing.Size(298, 17);
             this.lblDateTime.TabIndex = 0;
             this.lblDateTime.Text = "<hora>";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,213 +220,54 @@
             // 
             this.lblLogout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.Transparent;
             this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(20)))), ((int)(((byte)(25)))));
-            this.lblLogout.Location = new System.Drawing.Point(96, 47);
+            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.lblLogout.Location = new System.Drawing.Point(95, 474);
             this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
             this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(127, 23);
+            this.lblLogout.Size = new System.Drawing.Size(114, 17);
             this.lblLogout.TabIndex = 21;
             this.lblLogout.Text = "Sair do Sistema";
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 508);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(300, 40);
-            this.panel3.TabIndex = 22;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(1, 12);
+            this.label5.Location = new System.Drawing.Point(2, 520);
             this.label5.MinimumSize = new System.Drawing.Size(298, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(309, 23);
+            this.label5.Size = new System.Drawing.Size(298, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(246, 79);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblDot8
-            // 
-            this.lblDot8.AutoSize = true;
-            this.lblDot8.BackColor = System.Drawing.Color.Transparent;
-            this.lblDot8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblDot8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDot8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot8.Location = new System.Drawing.Point(17, 264);
-            this.lblDot8.MinimumSize = new System.Drawing.Size(5, 10);
-            this.lblDot8.Name = "lblDot8";
-            this.lblDot8.Size = new System.Drawing.Size(17, 23);
-            this.lblDot8.TabIndex = 17;
-            this.lblDot8.Text = "•";
-            this.lblDot8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDot7
-            // 
-            this.lblDot7.AutoSize = true;
-            this.lblDot7.BackColor = System.Drawing.Color.Transparent;
-            this.lblDot7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblDot7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDot7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot7.Location = new System.Drawing.Point(13, 230);
-            this.lblDot7.MinimumSize = new System.Drawing.Size(5, 10);
-            this.lblDot7.Name = "lblDot7";
-            this.lblDot7.Size = new System.Drawing.Size(17, 23);
-            this.lblDot7.TabIndex = 15;
-            this.lblDot7.Text = "•";
-            this.lblDot7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblHistSaidas
-            // 
-            this.lblHistSaidas.AutoSize = true;
-            this.lblHistSaidas.BackColor = System.Drawing.Color.Transparent;
-            this.lblHistSaidas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblHistSaidas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHistSaidas.ForeColor = System.Drawing.Color.White;
-            this.lblHistSaidas.Location = new System.Drawing.Point(38, 263);
-            this.lblHistSaidas.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblHistSaidas.Name = "lblHistSaidas";
-            this.lblHistSaidas.Size = new System.Drawing.Size(80, 23);
-            this.lblHistSaidas.TabIndex = 18;
-            this.lblHistSaidas.Text = "--";
-            this.lblHistSaidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblRegisterIncome
-            // 
-            this.lblRegisterIncome.AutoSize = true;
-            this.lblRegisterIncome.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegisterIncome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRegisterIncome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterIncome.ForeColor = System.Drawing.Color.White;
-            this.lblRegisterIncome.Location = new System.Drawing.Point(34, 229);
-            this.lblRegisterIncome.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblRegisterIncome.Name = "lblRegisterIncome";
-            this.lblRegisterIncome.Size = new System.Drawing.Size(167, 23);
-            this.lblRegisterIncome.TabIndex = 16;
-            this.lblRegisterIncome.Text = "Entrada de produtos";
-            this.lblRegisterIncome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblRegisterIncome.Click += new System.EventHandler(this.lblRegisterIncome_Click);
-            this.lblRegisterIncome.MouseLeave += new System.EventHandler(this.lblRegisterIncome_MouseLeave);
-            this.lblRegisterIncome.MouseHover += new System.EventHandler(this.lblRegisterIncome_MouseHover);
-            // 
-            // btnCheckIn
-            // 
-            this.btnCheckIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCheckIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.btnCheckIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCheckIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.btnCheckIn.FlatAppearance.BorderSize = 3;
-            this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheckIn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckIn.ForeColor = System.Drawing.Color.White;
-            this.btnCheckIn.Location = new System.Drawing.Point(42, 371);
-            this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.Size = new System.Drawing.Size(220, 50);
-            this.btnCheckIn.TabIndex = 19;
-            this.btnCheckIn.Text = "Check In";
-            this.btnCheckIn.UseVisualStyleBackColor = false;
-            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
-            // 
-            // lblDot5
-            // 
-            this.lblDot5.AutoSize = true;
-            this.lblDot5.BackColor = System.Drawing.Color.Transparent;
-            this.lblDot5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblDot5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDot5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot5.Location = new System.Drawing.Point(13, 208);
-            this.lblDot5.MinimumSize = new System.Drawing.Size(5, 10);
-            this.lblDot5.Name = "lblDot5";
-            this.lblDot5.Size = new System.Drawing.Size(17, 23);
-            this.lblDot5.TabIndex = 11;
-            this.lblDot5.Text = "•";
-            this.lblDot5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDot4
-            // 
-            this.lblDot4.AutoSize = true;
-            this.lblDot4.BackColor = System.Drawing.Color.Transparent;
-            this.lblDot4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblDot4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDot4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot4.Location = new System.Drawing.Point(13, 183);
-            this.lblDot4.MinimumSize = new System.Drawing.Size(5, 10);
-            this.lblDot4.Name = "lblDot4";
-            this.lblDot4.Size = new System.Drawing.Size(17, 23);
-            this.lblDot4.TabIndex = 9;
-            this.lblDot4.Text = "•";
-            this.lblDot4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblEmployeeName
             // 
             this.lblEmployeeName.AutoSize = true;
             this.lblEmployeeName.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmployeeName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeName.ForeColor = System.Drawing.Color.White;
             this.lblEmployeeName.Location = new System.Drawing.Point(12, 27);
             this.lblEmployeeName.MaximumSize = new System.Drawing.Size(220, 0);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(120, 23);
+            this.lblEmployeeName.Size = new System.Drawing.Size(110, 20);
             this.lblEmployeeName.TabIndex = 1;
             this.lblEmployeeName.Text = "<funcionario>";
-            // 
-            // lblCadastrarConsultar
-            // 
-            this.lblCadastrarConsultar.AutoSize = true;
-            this.lblCadastrarConsultar.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastrarConsultar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblCadastrarConsultar.ForeColor = System.Drawing.Color.White;
-            this.lblCadastrarConsultar.Location = new System.Drawing.Point(12, 70);
-            this.lblCadastrarConsultar.Name = "lblCadastrarConsultar";
-            this.lblCadastrarConsultar.Size = new System.Drawing.Size(282, 35);
-            this.lblCadastrarConsultar.TabIndex = 2;
-            this.lblCadastrarConsultar.Text = "Cadastrar ou Consultar";
-            // 
-            // lblDot3
-            // 
-            this.lblDot3.AutoSize = true;
-            this.lblDot3.BackColor = System.Drawing.Color.Transparent;
-            this.lblDot3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblDot3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDot3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot3.Location = new System.Drawing.Point(13, 158);
-            this.lblDot3.MinimumSize = new System.Drawing.Size(5, 10);
-            this.lblDot3.Name = "lblDot3";
-            this.lblDot3.Size = new System.Drawing.Size(17, 23);
-            this.lblDot3.TabIndex = 7;
-            this.lblDot3.Text = "•";
-            this.lblDot3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblHello
             // 
             this.lblHello.AutoSize = true;
             this.lblHello.BackColor = System.Drawing.Color.Transparent;
-            this.lblHello.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHello.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHello.ForeColor = System.Drawing.Color.Silver;
             this.lblHello.Location = new System.Drawing.Point(12, 8);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(40, 23);
+            this.lblHello.Size = new System.Drawing.Size(39, 20);
             this.lblHello.TabIndex = 0;
             this.lblHello.Text = "Olá,";
             // 
@@ -352,85 +278,16 @@
             this.lblClient.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblClient.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClient.ForeColor = System.Drawing.Color.White;
-            this.lblClient.Location = new System.Drawing.Point(34, 107);
+            this.lblClient.Location = new System.Drawing.Point(49, 218);
             this.lblClient.MinimumSize = new System.Drawing.Size(80, 20);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(80, 23);
+            this.lblClient.Size = new System.Drawing.Size(80, 20);
             this.lblClient.TabIndex = 4;
             this.lblClient.Text = "Clientes";
             this.lblClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblClient.Click += new System.EventHandler(this.lblClient_Click);
             this.lblClient.MouseLeave += new System.EventHandler(this.lblClient_MouseLeave);
             this.lblClient.MouseHover += new System.EventHandler(this.lblClient_MouseHover);
-            // 
-            // lblDot2
-            // 
-            this.lblDot2.AutoSize = true;
-            this.lblDot2.BackColor = System.Drawing.Color.Transparent;
-            this.lblDot2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblDot2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDot2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot2.Location = new System.Drawing.Point(13, 133);
-            this.lblDot2.MinimumSize = new System.Drawing.Size(5, 10);
-            this.lblDot2.Name = "lblDot2";
-            this.lblDot2.Size = new System.Drawing.Size(17, 23);
-            this.lblDot2.TabIndex = 5;
-            this.lblDot2.Text = "•";
-            this.lblDot2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblSupplier
-            // 
-            this.lblSupplier.AutoSize = true;
-            this.lblSupplier.BackColor = System.Drawing.Color.Transparent;
-            this.lblSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblSupplier.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSupplier.ForeColor = System.Drawing.Color.White;
-            this.lblSupplier.Location = new System.Drawing.Point(34, 182);
-            this.lblSupplier.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblSupplier.Name = "lblSupplier";
-            this.lblSupplier.Size = new System.Drawing.Size(112, 23);
-            this.lblSupplier.TabIndex = 10;
-            this.lblSupplier.Text = "Fornecedores";
-            this.lblSupplier.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblSupplier.Click += new System.EventHandler(this.lblSupplier_Click);
-            this.lblSupplier.MouseLeave += new System.EventHandler(this.lblSupplier_MouseLeave);
-            this.lblSupplier.MouseHover += new System.EventHandler(this.lblSupplier_MouseHover);
-            // 
-            // lblProduct
-            // 
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.BackColor = System.Drawing.Color.Transparent;
-            this.lblProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblProduct.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduct.ForeColor = System.Drawing.Color.White;
-            this.lblProduct.Location = new System.Drawing.Point(34, 132);
-            this.lblProduct.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(80, 23);
-            this.lblProduct.TabIndex = 6;
-            this.lblProduct.Text = "Produtos";
-            this.lblProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblProduct.Click += new System.EventHandler(this.lblProduct_Click);
-            this.lblProduct.MouseLeave += new System.EventHandler(this.lblProduct_MouseLeave);
-            this.lblProduct.MouseHover += new System.EventHandler(this.lblProduct_MouseHover);
-            // 
-            // lblEmployee
-            // 
-            this.lblEmployee.AutoSize = true;
-            this.lblEmployee.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblEmployee.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployee.ForeColor = System.Drawing.Color.White;
-            this.lblEmployee.Location = new System.Drawing.Point(34, 207);
-            this.lblEmployee.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(106, 23);
-            this.lblEmployee.TabIndex = 12;
-            this.lblEmployee.Text = "Funcionários";
-            this.lblEmployee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmployee.Click += new System.EventHandler(this.lblEmployee_Click);
-            this.lblEmployee.MouseLeave += new System.EventHandler(this.lblEmployee_MouseLeave);
-            this.lblEmployee.MouseHover += new System.EventHandler(this.lblEmployee_MouseHover);
             // 
             // lblDot1
             // 
@@ -439,31 +296,13 @@
             this.lblDot1.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblDot1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDot1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblDot1.Location = new System.Drawing.Point(13, 108);
+            this.lblDot1.Location = new System.Drawing.Point(28, 219);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(17, 23);
+            this.lblDot1.Size = new System.Drawing.Size(15, 19);
             this.lblDot1.TabIndex = 3;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblRooms
-            // 
-            this.lblRooms.AutoSize = true;
-            this.lblRooms.BackColor = System.Drawing.Color.Transparent;
-            this.lblRooms.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRooms.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRooms.ForeColor = System.Drawing.Color.White;
-            this.lblRooms.Location = new System.Drawing.Point(34, 157);
-            this.lblRooms.MinimumSize = new System.Drawing.Size(80, 20);
-            this.lblRooms.Name = "lblRooms";
-            this.lblRooms.Size = new System.Drawing.Size(80, 23);
-            this.lblRooms.TabIndex = 8;
-            this.lblRooms.Text = "Quartos";
-            this.lblRooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblRooms.Click += new System.EventHandler(this.lblRooms_Click);
-            this.lblRooms.MouseLeave += new System.EventHandler(this.lblRooms_MouseLeave);
-            this.lblRooms.MouseHover += new System.EventHandler(this.lblRooms_MouseHover);
             // 
             // pnlTopBar
             // 
@@ -497,7 +336,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(127, 28);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(102, 21);
             this.lblNomeFarmacia.TabIndex = 174;
             this.lblNomeFarmacia.Text = "Hotel System";
             // 
@@ -542,7 +381,7 @@
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1272, 588);
@@ -559,11 +398,6 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlLeftBar.ResumeLayout(false);
             this.pnlLeftBar.PerformLayout();
-            this.pnlBottonLeftBar.ResumeLayout(false);
-            this.pnlBottonLeftBar.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
@@ -576,36 +410,25 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlLeftBar;
-        private System.Windows.Forms.Panel pnlBottonLeftBar;
         private System.Windows.Forms.Label lblDateTime;
         private System.Windows.Forms.Label lblLogout;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblDot8;
-        private System.Windows.Forms.Label lblDot7;
-        private System.Windows.Forms.Label lblHistSaidas;
-        private System.Windows.Forms.Label lblRegisterIncome;
-        private System.Windows.Forms.Button btnCheckIn;
-        private System.Windows.Forms.Label lblDot5;
-        private System.Windows.Forms.Label lblDot4;
         private System.Windows.Forms.Label lblEmployeeName;
-        private System.Windows.Forms.Label lblCadastrarConsultar;
-        private System.Windows.Forms.Label lblDot3;
         private System.Windows.Forms.Label lblHello;
         private System.Windows.Forms.Label lblClient;
-        private System.Windows.Forms.Label lblDot2;
-        private System.Windows.Forms.Label lblSupplier;
-        private System.Windows.Forms.Label lblProduct;
-        private System.Windows.Forms.Label lblEmployee;
         private System.Windows.Forms.Label lblDot1;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picMainClose;
         private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label lblRooms;
         private System.Windows.Forms.Panel pnlDisplay;
         private System.Windows.Forms.FlowLayoutPanel flpDisplay;
+        private System.Windows.Forms.Button btnBegining;
+        private System.Windows.Forms.Button btnProduc;
+        private System.Windows.Forms.Button btnRoom;
+        private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.Button btnIncome;
     }
 }

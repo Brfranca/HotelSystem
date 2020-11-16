@@ -233,7 +233,7 @@
             this.txtProdSearchName.MaxLength = 11;
             this.txtProdSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchName.Name = "txtProdSearchName";
-            this.txtProdSearchName.Size = new System.Drawing.Size(258, 22);
+            this.txtProdSearchName.Size = new System.Drawing.Size(258, 24);
             this.txtProdSearchName.TabIndex = 214;
             this.txtProdSearchName.TextChanged += new System.EventHandler(this.txtProdSearchName_TextChanged);
             this.txtProdSearchName.Enter += new System.EventHandler(this.txtProdSearchName_Enter);

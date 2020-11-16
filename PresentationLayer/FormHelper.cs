@@ -95,10 +95,22 @@ namespace PresentationLayer
             label.ForeColor = Color.FromArgb(246, 142, 31);
         }
 
+        public static void MouseHoverEvent(this Button button)
+        {
+            button.Font = new Font(button.Font, FontStyle.Bold);
+           button.ForeColor = Color.FromArgb(246, 142, 31);
+        }
+
         public static void MouseLeaveEvent(this Label label)
         {
             label.Font = new Font(label.Font, FontStyle.Regular);
             label.ForeColor = Color.FromArgb(255, 255, 255);
+        }
+
+        public static void MouseLeaveEvent(this Button button)
+        {
+            button.Font = new Font(button.Font, FontStyle.Regular);
+            button.ForeColor = Color.FromArgb(255, 255, 255);
         }
 
         public static void EnterEvent(this Panel panel)
