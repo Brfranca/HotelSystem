@@ -30,12 +30,13 @@ namespace PresentationLayer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var result = Loading.Load(_employeeBLL.Login, txtUser.Text, txtPassword.Text);
+            var result = _employeeBLL.Login(txtUser.Text, txtPassword.Text);
 
             //Utilizei o método GetByEmail para podermos identificar o usuário e registrar o ID do mesmo na variável employeeId. Ass: kj
             QueryResponse<Employee> response = _employeeBLL.GetByEmail(txtUser.Text);
+            if (result.Success && response.Data == null)
+                response = new QueryResponse<Employee> { Data = new Employee { Name = "Administrador" } };
             employee = response.Data;
-           
 
             if (!result.Success)
             {
@@ -82,6 +83,6 @@ namespace PresentationLayer
             this.Close();
         }
 
-        
+
     }
 }
