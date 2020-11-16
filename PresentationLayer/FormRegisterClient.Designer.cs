@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterClient));
             this.lblCadID = new System.Windows.Forms.Label();
             this.lblConsCliCod = new System.Windows.Forms.Label();
@@ -79,10 +79,10 @@
             this.lblCadID.AutoSize = true;
             this.lblCadID.BackColor = System.Drawing.Color.Transparent;
             this.lblCadID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblCadID.Location = new System.Drawing.Point(282, 109);
+            this.lblCadID.ForeColor = System.Drawing.Color.White;
+            this.lblCadID.Location = new System.Drawing.Point(264, 99);
             this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(33, 23);
+            this.lblCadID.Size = new System.Drawing.Size(27, 19);
             this.lblCadID.TabIndex = 141;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -92,10 +92,10 @@
             this.lblConsCliCod.AutoSize = true;
             this.lblConsCliCod.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsCliCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblConsCliCod.ForeColor = System.Drawing.Color.White;
             this.lblConsCliCod.Location = new System.Drawing.Point(692, 109);
             this.lblConsCliCod.Name = "lblConsCliCod";
-            this.lblConsCliCod.Size = new System.Drawing.Size(40, 23);
+            this.lblConsCliCod.Size = new System.Drawing.Size(34, 19);
             this.lblConsCliCod.TabIndex = 152;
             this.lblConsCliCod.Text = "CPF";
             // 
@@ -104,10 +104,10 @@
             this.lblConsCliNome.AutoSize = true;
             this.lblConsCliNome.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblConsCliNome.ForeColor = System.Drawing.Color.White;
             this.lblConsCliNome.Location = new System.Drawing.Point(385, 110);
             this.lblConsCliNome.Name = "lblConsCliNome";
-            this.lblConsCliNome.Size = new System.Drawing.Size(145, 23);
+            this.lblConsCliNome.Size = new System.Drawing.Size(122, 19);
             this.lblConsCliNome.TabIndex = 150;
             this.lblConsCliNome.Text = "Nome do Cliente";
             // 
@@ -116,10 +116,10 @@
             this.lblConsultar.AutoSize = true;
             this.lblConsultar.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblConsultar.Location = new System.Drawing.Point(383, 72);
             this.lblConsultar.Name = "lblConsultar";
-            this.lblConsultar.Size = new System.Drawing.Size(125, 32);
+            this.lblConsultar.Size = new System.Drawing.Size(98, 25);
             this.lblConsultar.TabIndex = 149;
             this.lblConsultar.Text = "Consultar";
             // 
@@ -128,10 +128,10 @@
             this.lblCadastrar.AutoSize = true;
             this.lblCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.lblCadastrar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblCadastrar.Location = new System.Drawing.Point(37, 72);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
+            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
             this.lblCadastrar.TabIndex = 131;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -140,10 +140,10 @@
             this.lblConsCliCadastrados.AutoSize = true;
             this.lblConsCliCadastrados.BackColor = System.Drawing.Color.Transparent;
             this.lblConsCliCadastrados.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsCliCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblConsCliCadastrados.ForeColor = System.Drawing.Color.White;
             this.lblConsCliCadastrados.Location = new System.Drawing.Point(387, 167);
             this.lblConsCliCadastrados.Name = "lblConsCliCadastrados";
-            this.lblConsCliCadastrados.Size = new System.Drawing.Size(176, 23);
+            this.lblConsCliCadastrados.Size = new System.Drawing.Size(148, 19);
             this.lblConsCliCadastrados.TabIndex = 155;
             this.lblConsCliCadastrados.Text = "Clientes Cadastrados";
             // 
@@ -153,19 +153,19 @@
             this.dgvClients.AllowUserToDeleteRows = false;
             this.dgvClients.AllowUserToResizeColumns = false;
             this.dgvClients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvClients.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvClients.ColumnHeadersHeight = 29;
             this.dgvClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvClients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -173,30 +173,30 @@
             this.CPF,
             this.Phone1,
             this.Email});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClients.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvClients.Location = new System.Drawing.Point(389, 188);
             this.dgvClients.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvClients.Name = "dgvClients";
             this.dgvClients.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClients.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvClients.RowHeadersVisible = false;
             this.dgvClients.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvClients.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvClients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClients.Size = new System.Drawing.Size(700, 344);
             this.dgvClients.TabIndex = 156;
@@ -236,20 +236,21 @@
             // 
             // txtClientCPF
             // 
-            this.txtClientCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
+            this.txtClientCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.txtClientCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtClientCPF.ForeColor = System.Drawing.Color.Black;
             this.txtClientCPF.Location = new System.Drawing.Point(43, 188);
             this.txtClientCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtClientCPF.Mask = "000,000,000-00";
             this.txtClientCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientCPF.Name = "txtClientCPF";
-            this.txtClientCPF.Size = new System.Drawing.Size(144, 27);
+            this.txtClientCPF.Size = new System.Drawing.Size(144, 22);
             this.txtClientCPF.TabIndex = 1;
             // 
             // txtClientEmail
             // 
-            this.txtClientEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(236)))));
+            this.txtClientEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.txtClientEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientEmail.ForeColor = System.Drawing.Color.Black;
@@ -258,7 +259,7 @@
             this.txtClientEmail.MaxLength = 200;
             this.txtClientEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientEmail.Name = "txtClientEmail";
-            this.txtClientEmail.Size = new System.Drawing.Size(303, 27);
+            this.txtClientEmail.Size = new System.Drawing.Size(303, 22);
             this.txtClientEmail.TabIndex = 5;
             // 
             // lblCadCliEmail
@@ -266,16 +267,16 @@
             this.lblCadCliEmail.AutoSize = true;
             this.lblCadCliEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCadCliEmail.ForeColor = System.Drawing.Color.White;
             this.lblCadCliEmail.Location = new System.Drawing.Point(39, 278);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
+            this.lblCadCliEmail.Size = new System.Drawing.Size(51, 19);
             this.lblCadCliEmail.TabIndex = 143;
             this.lblCadCliEmail.Text = "E-mail";
             // 
             // txtClientPhone2
             // 
-            this.txtClientPhone2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(235)))));
+            this.txtClientPhone2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.txtClientPhone2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientPhone2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientPhone2.ForeColor = System.Drawing.Color.Black;
@@ -284,7 +285,7 @@
             this.txtClientPhone2.MaxLength = 11;
             this.txtClientPhone2.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone2.Name = "txtClientPhone2";
-            this.txtClientPhone2.Size = new System.Drawing.Size(144, 27);
+            this.txtClientPhone2.Size = new System.Drawing.Size(144, 22);
             this.txtClientPhone2.TabIndex = 4;
             // 
             // lblCadCliTel2
@@ -292,10 +293,10 @@
             this.lblCadCliTel2.AutoSize = true;
             this.lblCadCliTel2.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliTel2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliTel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCadCliTel2.ForeColor = System.Drawing.Color.White;
             this.lblCadCliTel2.Location = new System.Drawing.Point(198, 222);
             this.lblCadCliTel2.Name = "lblCadCliTel2";
-            this.lblCadCliTel2.Size = new System.Drawing.Size(92, 23);
+            this.lblCadCliTel2.Size = new System.Drawing.Size(78, 19);
             this.lblCadCliTel2.TabIndex = 140;
             this.lblCadCliTel2.Text = "Telefone 2";
             // 
@@ -304,16 +305,16 @@
             this.lblCadCliTel1.AutoSize = true;
             this.lblCadCliTel1.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliTel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliTel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCadCliTel1.ForeColor = System.Drawing.Color.White;
             this.lblCadCliTel1.Location = new System.Drawing.Point(39, 222);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(92, 23);
+            this.lblCadCliTel1.Size = new System.Drawing.Size(78, 19);
             this.lblCadCliTel1.TabIndex = 138;
             this.lblCadCliTel1.Text = "Telefone 1";
             // 
             // txtClientRG
             // 
-            this.txtClientRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
+            this.txtClientRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.txtClientRG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientRG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientRG.ForeColor = System.Drawing.Color.Black;
@@ -322,7 +323,7 @@
             this.txtClientRG.MaxLength = 15;
             this.txtClientRG.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientRG.Name = "txtClientRG";
-            this.txtClientRG.Size = new System.Drawing.Size(144, 27);
+            this.txtClientRG.Size = new System.Drawing.Size(155, 22);
             this.txtClientRG.TabIndex = 2;
             // 
             // lblCadCliRg
@@ -330,10 +331,10 @@
             this.lblCadCliRg.AutoSize = true;
             this.lblCadCliRg.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliRg.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliRg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCadCliRg.ForeColor = System.Drawing.Color.White;
             this.lblCadCliRg.Location = new System.Drawing.Point(197, 166);
             this.lblCadCliRg.Name = "lblCadCliRg";
-            this.lblCadCliRg.Size = new System.Drawing.Size(33, 23);
+            this.lblCadCliRg.Size = new System.Drawing.Size(28, 19);
             this.lblCadCliRg.TabIndex = 136;
             this.lblCadCliRg.Text = "RG";
             // 
@@ -342,10 +343,10 @@
             this.lblCadCliCpf.AutoSize = true;
             this.lblCadCliCpf.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliCpf.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCadCliCpf.ForeColor = System.Drawing.Color.White;
             this.lblCadCliCpf.Location = new System.Drawing.Point(39, 166);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
+            this.lblCadCliCpf.Size = new System.Drawing.Size(34, 19);
             this.lblCadCliCpf.TabIndex = 134;
             this.lblCadCliCpf.Text = "CPF";
             // 
@@ -360,7 +361,7 @@
             this.txtClientName.MaxLength = 100;
             this.txtClientName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(303, 27);
+            this.txtClientName.Size = new System.Drawing.Size(269, 22);
             this.txtClientName.TabIndex = 0;
             // 
             // lblCadCliNome
@@ -368,64 +369,70 @@
             this.lblCadCliNome.AutoSize = true;
             this.lblCadCliNome.BackColor = System.Drawing.Color.Transparent;
             this.lblCadCliNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblCadCliNome.ForeColor = System.Drawing.Color.White;
             this.lblCadCliNome.Location = new System.Drawing.Point(39, 110);
             this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
+            this.lblCadCliNome.Size = new System.Drawing.Size(50, 19);
             this.lblCadCliNome.TabIndex = 132;
             this.lblCadCliNome.Text = "Nome";
             // 
             // btnClientNew
             // 
-            this.btnClientNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnClientNew.BackColor = System.Drawing.Color.Transparent;
             this.btnClientNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClientNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnClientNew.FlatAppearance.BorderSize = 3;
+            this.btnClientNew.FlatAppearance.BorderSize = 0;
             this.btnClientNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientNew.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientNew.ForeColor = System.Drawing.Color.White;
+            this.btnClientNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnClientNew.Image = ((System.Drawing.Image)(resources.GetObject("btnClientNew.Image")));
             this.btnClientNew.Location = new System.Drawing.Point(898, 558);
             this.btnClientNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientNew.Name = "btnClientNew";
             this.btnClientNew.Size = new System.Drawing.Size(138, 47);
             this.btnClientNew.TabIndex = 158;
             this.btnClientNew.Text = "Selecionar";
+            this.btnClientNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientNew.UseVisualStyleBackColor = false;
             this.btnClientNew.Click += new System.EventHandler(this.btnClientNew_Click);
             // 
             // btnClientRegister
             // 
-            this.btnClientRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnClientRegister.BackColor = System.Drawing.Color.Transparent;
             this.btnClientRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClientRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnClientRegister.FlatAppearance.BorderSize = 3;
+            this.btnClientRegister.FlatAppearance.BorderSize = 0;
             this.btnClientRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientRegister.ForeColor = System.Drawing.Color.White;
+            this.btnClientRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnClientRegister.Image = ((System.Drawing.Image)(resources.GetObject("btnClientRegister.Image")));
             this.btnClientRegister.Location = new System.Drawing.Point(102, 552);
             this.btnClientRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientRegister.Name = "btnClientRegister";
             this.btnClientRegister.Size = new System.Drawing.Size(189, 53);
             this.btnClientRegister.TabIndex = 6;
             this.btnClientRegister.Text = "Cadastrar";
+            this.btnClientRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientRegister.UseVisualStyleBackColor = false;
             this.btnClientRegister.Click += new System.EventHandler(this.btnClientRegister_Click);
             // 
             // btnClientDelete
             // 
-            this.btnClientDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnClientDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnClientDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClientDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnClientDelete.FlatAppearance.BorderSize = 3;
+            this.btnClientDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnClientDelete.FlatAppearance.BorderSize = 0;
             this.btnClientDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientDelete.ForeColor = System.Drawing.Color.White;
+            this.btnClientDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnClientDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnClientDelete.Image")));
             this.btnClientDelete.Location = new System.Drawing.Point(748, 558);
             this.btnClientDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientDelete.Name = "btnClientDelete";
             this.btnClientDelete.Size = new System.Drawing.Size(138, 47);
             this.btnClientDelete.TabIndex = 161;
             this.btnClientDelete.Text = "Excluir";
+            this.btnClientDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientDelete.UseVisualStyleBackColor = false;
             this.btnClientDelete.Click += new System.EventHandler(this.btnClientDelete_Click);
             // 
@@ -434,31 +441,33 @@
             this.btnClientClear.BackColor = System.Drawing.Color.Transparent;
             this.btnClientClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClientClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClientClear.FlatAppearance.BorderSize = 3;
+            this.btnClientClear.FlatAppearance.BorderSize = 0;
             this.btnClientClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClientClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnClientClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClientClear.Image")));
             this.btnClientClear.Location = new System.Drawing.Point(248, 348);
             this.btnClientClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientClear.Name = "btnClientClear";
             this.btnClientClear.Size = new System.Drawing.Size(98, 36);
             this.btnClientClear.TabIndex = 7;
             this.btnClientClear.Text = "Limpar";
+            this.btnClientClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientClear.UseVisualStyleBackColor = false;
             this.btnClientClear.Click += new System.EventHandler(this.btnClientClear_Click);
             // 
             // txtClientSearchName
             // 
-            this.txtClientSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtClientSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtClientSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientSearchName.ForeColor = System.Drawing.Color.Black;
+            this.txtClientSearchName.ForeColor = System.Drawing.Color.White;
             this.txtClientSearchName.Location = new System.Drawing.Point(393, 132);
             this.txtClientSearchName.Margin = new System.Windows.Forms.Padding(0);
             this.txtClientSearchName.MaxLength = 11;
             this.txtClientSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientSearchName.Name = "txtClientSearchName";
-            this.txtClientSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtClientSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtClientSearchName.TabIndex = 166;
             this.txtClientSearchName.TextChanged += new System.EventHandler(this.txtClientSearchName_TextChanged);
             this.txtClientSearchName.Enter += new System.EventHandler(this.txtClientSearchName_Enter);
@@ -466,7 +475,7 @@
             // 
             // pnlClientName
             // 
-            this.pnlClientName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlClientName.BackColor = System.Drawing.Color.White;
             this.pnlClientName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pnlClientName.Location = new System.Drawing.Point(388, 153);
             this.pnlClientName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -477,7 +486,7 @@
             // 
             // pnlClientCPF
             // 
-            this.pnlClientCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlClientCPF.BackColor = System.Drawing.Color.White;
             this.pnlClientCPF.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pnlClientCPF.Location = new System.Drawing.Point(696, 153);
             this.pnlClientCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -488,16 +497,16 @@
             // 
             // txtClientSearchCPF
             // 
-            this.txtClientSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtClientSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtClientSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientSearchCPF.ForeColor = System.Drawing.Color.Black;
+            this.txtClientSearchCPF.ForeColor = System.Drawing.Color.White;
             this.txtClientSearchCPF.Location = new System.Drawing.Point(700, 132);
             this.txtClientSearchCPF.Margin = new System.Windows.Forms.Padding(0);
             this.txtClientSearchCPF.MaxLength = 11;
             this.txtClientSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientSearchCPF.Name = "txtClientSearchCPF";
-            this.txtClientSearchCPF.Size = new System.Drawing.Size(191, 27);
+            this.txtClientSearchCPF.Size = new System.Drawing.Size(191, 22);
             this.txtClientSearchCPF.TabIndex = 168;
             this.txtClientSearchCPF.TextChanged += new System.EventHandler(this.txtClientSearchCPF_TextChanged);
             this.txtClientSearchCPF.Enter += new System.EventHandler(this.txtClientSearchCPF_Enter);
@@ -505,7 +514,7 @@
             // 
             // txtClientPhone1
             // 
-            this.txtClientPhone1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(235)))));
+            this.txtClientPhone1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.txtClientPhone1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtClientPhone1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientPhone1.ForeColor = System.Drawing.Color.Black;
@@ -514,7 +523,7 @@
             this.txtClientPhone1.MaxLength = 11;
             this.txtClientPhone1.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone1.Name = "txtClientPhone1";
-            this.txtClientPhone1.Size = new System.Drawing.Size(144, 27);
+            this.txtClientPhone1.Size = new System.Drawing.Size(144, 22);
             this.txtClientPhone1.TabIndex = 3;
             // 
             // picClientRefresh
@@ -523,6 +532,7 @@
             this.picClientRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClientRefresh.BackgroundImage")));
             this.picClientRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picClientRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClientRefresh.InitialImage = ((System.Drawing.Image)(resources.GetObject("picClientRefresh.InitialImage")));
             this.picClientRefresh.Location = new System.Drawing.Point(1042, 562);
             this.picClientRefresh.Margin = new System.Windows.Forms.Padding(0);
             this.picClientRefresh.Name = "picClientRefresh";
@@ -536,10 +546,10 @@
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblID.Location = new System.Drawing.Point(308, 109);
+            this.lblID.ForeColor = System.Drawing.Color.White;
+            this.lblID.Location = new System.Drawing.Point(297, 99);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 23);
+            this.lblID.Size = new System.Drawing.Size(0, 19);
             this.lblID.TabIndex = 193;
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -548,10 +558,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label1.Location = new System.Drawing.Point(37, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 35);
+            this.label1.Size = new System.Drawing.Size(87, 28);
             this.label1.TabIndex = 194;
             this.label1.Text = "Clientes";
             // 
@@ -563,7 +573,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
             this.label2.Location = new System.Drawing.Point(515, 300);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 35);
+            this.label2.Size = new System.Drawing.Size(0, 28);
             this.label2.TabIndex = 195;
             // 
             // lblDot1
@@ -576,16 +586,16 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 27);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(26, 35);
+            this.lblDot1.Size = new System.Drawing.Size(20, 28);
             this.lblDot1.TabIndex = 196;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormRegisterClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);
             this.Controls.Add(this.lblDot1);
             this.Controls.Add(this.label2);

@@ -121,7 +121,7 @@ namespace PresentationLayer
 
         private void btnProduc_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormRegisterProduct());
+            OpenChildForm(new FormProdMain());
         }
 
         private void btnRoom_MouseHover(object sender, EventArgs e)
@@ -169,19 +169,19 @@ namespace PresentationLayer
             OpenChildForm(new FormRegisterEmployee());
         }
 
-        private void btnIncome_MouseHover(object sender, EventArgs e)
+        private void btnClients_Click(object sender, EventArgs e)
         {
-            btnIncome.MouseHoverEvent();
+            OpenChildForm(new FormRegisterClient());
         }
 
-        private void btnIncome_MouseLeave(object sender, EventArgs e)
+        private void btnClients_MouseHover(object sender, EventArgs e)
         {
-            btnIncome.MouseLeaveEvent();
+            btnClients.MouseHoverEvent();
         }
 
-        private void btnIncome_Click(object sender, EventArgs e)
+        private void btnClients_MouseLeave(object sender, EventArgs e)
         {
-            OpenChildForm(new FormRegisterIncome());
+            btnClients.MouseLeaveEvent();
         }
     }
 }

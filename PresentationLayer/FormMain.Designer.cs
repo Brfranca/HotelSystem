@@ -34,12 +34,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
-            this.btnIncome = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnSupplier = new System.Windows.Forms.Button();
             this.btnRoom = new System.Windows.Forms.Button();
             this.btnProduc = new System.Windows.Forms.Button();
-            this.btnBegining = new System.Windows.Forms.Button();
+            this.btnClients = new System.Windows.Forms.Button();
             this.lblEmployeeName = new System.Windows.Forms.Label();
             this.lblHello = new System.Windows.Forms.Label();
             this.lblClient = new System.Windows.Forms.Label();
@@ -62,12 +61,11 @@
             this.pnlLeftBar.Controls.Add(this.label5);
             this.pnlLeftBar.Controls.Add(this.lblLogout);
             this.pnlLeftBar.Controls.Add(this.lblDateTime);
-            this.pnlLeftBar.Controls.Add(this.btnIncome);
             this.pnlLeftBar.Controls.Add(this.btnEmployee);
             this.pnlLeftBar.Controls.Add(this.btnSupplier);
             this.pnlLeftBar.Controls.Add(this.btnRoom);
             this.pnlLeftBar.Controls.Add(this.btnProduc);
-            this.pnlLeftBar.Controls.Add(this.btnBegining);
+            this.pnlLeftBar.Controls.Add(this.btnClients);
             this.pnlLeftBar.Controls.Add(this.lblEmployeeName);
             this.pnlLeftBar.Controls.Add(this.lblHello);
             this.pnlLeftBar.Controls.Add(this.lblClient);
@@ -85,6 +83,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label5.Location = new System.Drawing.Point(2, 520);
@@ -124,27 +123,6 @@
             this.lblDateTime.TabIndex = 0;
             this.lblDateTime.Text = "<hora>";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnIncome
-            // 
-            this.btnIncome.BackColor = System.Drawing.Color.Transparent;
-            this.btnIncome.FlatAppearance.BorderSize = 0;
-            this.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncome.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncome.ForeColor = System.Drawing.Color.White;
-            this.btnIncome.Image = ((System.Drawing.Image)(resources.GetObject("btnIncome.Image")));
-            this.btnIncome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIncome.Location = new System.Drawing.Point(16, 301);
-            this.btnIncome.Name = "btnIncome";
-            this.btnIncome.Size = new System.Drawing.Size(197, 42);
-            this.btnIncome.TabIndex = 28;
-            this.btnIncome.Text = "Entrada de produtos";
-            this.btnIncome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIncome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIncome.UseVisualStyleBackColor = false;
-            this.btnIncome.Click += new System.EventHandler(this.btnIncome_Click);
-            this.btnIncome.MouseLeave += new System.EventHandler(this.btnIncome_MouseLeave);
-            this.btnIncome.MouseHover += new System.EventHandler(this.btnIncome_MouseHover);
             // 
             // btnEmployee
             // 
@@ -226,22 +204,25 @@
             this.btnProduc.MouseLeave += new System.EventHandler(this.btnProduc_MouseLeave);
             this.btnProduc.MouseHover += new System.EventHandler(this.btnProduc_MouseHover);
             // 
-            // btnBegining
+            // btnClients
             // 
-            this.btnBegining.BackColor = System.Drawing.Color.Transparent;
-            this.btnBegining.FlatAppearance.BorderSize = 0;
-            this.btnBegining.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBegining.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBegining.ForeColor = System.Drawing.Color.White;
-            this.btnBegining.Image = ((System.Drawing.Image)(resources.GetObject("btnBegining.Image")));
-            this.btnBegining.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBegining.Location = new System.Drawing.Point(16, 91);
-            this.btnBegining.Name = "btnBegining";
-            this.btnBegining.Size = new System.Drawing.Size(197, 42);
-            this.btnBegining.TabIndex = 23;
-            this.btnBegining.Text = "Início";
-            this.btnBegining.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBegining.UseVisualStyleBackColor = false;
+            this.btnClients.BackColor = System.Drawing.Color.Transparent;
+            this.btnClients.FlatAppearance.BorderSize = 0;
+            this.btnClients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClients.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClients.ForeColor = System.Drawing.Color.White;
+            this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
+            this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClients.Location = new System.Drawing.Point(16, 91);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Size = new System.Drawing.Size(197, 42);
+            this.btnClients.TabIndex = 23;
+            this.btnClients.Text = "Clientes";
+            this.btnClients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClients.UseVisualStyleBackColor = false;
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
+            this.btnClients.MouseLeave += new System.EventHandler(this.btnClients_MouseLeave);
+            this.btnClients.MouseHover += new System.EventHandler(this.btnClients_MouseHover);
             // 
             // lblEmployeeName
             // 
@@ -411,11 +392,10 @@
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel pnlDisplay;
-        private System.Windows.Forms.Button btnBegining;
+        private System.Windows.Forms.Button btnClients;
         private System.Windows.Forms.Button btnProduc;
         private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Button btnSupplier;
         private System.Windows.Forms.Button btnEmployee;
-        private System.Windows.Forms.Button btnIncome;
     }
 }
