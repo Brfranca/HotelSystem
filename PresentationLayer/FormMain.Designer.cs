@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlLeftBar = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.lblDateTime = new System.Windows.Forms.Label();
             this.btnIncome = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.btnSupplier = new System.Windows.Forms.Button();
             this.btnRoom = new System.Windows.Forms.Button();
             this.btnProduc = new System.Windows.Forms.Button();
             this.btnBegining = new System.Windows.Forms.Button();
-            this.lblDateTime = new System.Windows.Forms.Label();
-            this.lblLogout = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblEmployeeName = new System.Windows.Forms.Label();
             this.lblHello = new System.Windows.Forms.Label();
             this.lblClient = new System.Windows.Forms.Label();
@@ -50,18 +50,15 @@
             this.picMainClose = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlDisplay = new System.Windows.Forms.Panel();
-            this.flpDisplay = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlLeftBar.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).BeginInit();
-            this.pnlDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeftBar
             // 
-            this.pnlLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.pnlLeftBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlLeftBar.BackgroundImage")));
+            this.pnlLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlLeftBar.Controls.Add(this.label5);
             this.pnlLeftBar.Controls.Add(this.lblLogout);
             this.pnlLeftBar.Controls.Add(this.lblDateTime);
@@ -83,6 +80,50 @@
             this.pnlLeftBar.Name = "pnlLeftBar";
             this.pnlLeftBar.Size = new System.Drawing.Size(300, 548);
             this.pnlLeftBar.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(2, 520);
+            this.label5.MinimumSize = new System.Drawing.Size(298, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(298, 17);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLogout
+            // 
+            this.lblLogout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.lblLogout.Location = new System.Drawing.Point(95, 474);
+            this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(114, 17);
+            this.lblLogout.TabIndex = 21;
+            this.lblLogout.Text = "Sair do Sistema";
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDateTime
+            // 
+            this.lblDateTime.AutoSize = true;
+            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTime.ForeColor = System.Drawing.Color.White;
+            this.lblDateTime.Location = new System.Drawing.Point(3, 435);
+            this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.Size = new System.Drawing.Size(298, 17);
+            this.lblDateTime.TabIndex = 0;
+            this.lblDateTime.Text = "<hora>";
+            this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnIncome
             // 
@@ -202,50 +243,6 @@
             this.btnBegining.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBegining.UseVisualStyleBackColor = false;
             // 
-            // lblDateTime
-            // 
-            this.lblDateTime.AutoSize = true;
-            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTime.ForeColor = System.Drawing.Color.White;
-            this.lblDateTime.Location = new System.Drawing.Point(3, 435);
-            this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
-            this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(298, 17);
-            this.lblDateTime.TabIndex = 0;
-            this.lblDateTime.Text = "<hora>";
-            this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLogout
-            // 
-            this.lblLogout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblLogout.AutoSize = true;
-            this.lblLogout.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblLogout.Location = new System.Drawing.Point(95, 474);
-            this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
-            this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(114, 17);
-            this.lblLogout.TabIndex = 21;
-            this.lblLogout.Text = "Sair do Sistema";
-            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(2, 520);
-            this.label5.MinimumSize = new System.Drawing.Size(298, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(298, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblEmployeeName
             // 
             this.lblEmployeeName.AutoSize = true;
@@ -306,7 +303,7 @@
             // 
             // pnlTopBar
             // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
+            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlTopBar.Controls.Add(this.picIcone);
             this.pnlTopBar.Controls.Add(this.lblNomeFarmacia);
             this.pnlTopBar.Controls.Add(this.picMainClose);
@@ -364,20 +361,12 @@
             // 
             // pnlDisplay
             // 
-            this.pnlDisplay.Controls.Add(this.flpDisplay);
+            this.pnlDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.pnlDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplay.Location = new System.Drawing.Point(300, 40);
             this.pnlDisplay.Name = "pnlDisplay";
             this.pnlDisplay.Size = new System.Drawing.Size(972, 548);
             this.pnlDisplay.TabIndex = 4;
-            // 
-            // flpDisplay
-            // 
-            this.flpDisplay.BackColor = System.Drawing.Color.White;
-            this.flpDisplay.Location = new System.Drawing.Point(0, 0);
-            this.flpDisplay.Name = "flpDisplay";
-            this.flpDisplay.Size = new System.Drawing.Size(972, 548);
-            this.flpDisplay.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -402,7 +391,6 @@
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).EndInit();
-            this.pnlDisplay.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -423,7 +411,6 @@
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel pnlDisplay;
-        private System.Windows.Forms.FlowLayoutPanel flpDisplay;
         private System.Windows.Forms.Button btnBegining;
         private System.Windows.Forms.Button btnProduc;
         private System.Windows.Forms.Button btnRoom;
