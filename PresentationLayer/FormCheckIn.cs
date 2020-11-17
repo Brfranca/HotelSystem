@@ -1,4 +1,5 @@
 ﻿using BusinessLogicalLayer;
+using BusinessLogicalLayer.BLL;
 using BusinessLogicalLayer.Extentions;
 using Entities;
 using System;
@@ -15,7 +16,7 @@ namespace PresentationLayer
 {
     public partial class FormCheckIn : Form
     {
-        private ClientBLL _clientBLL;
+        private CheckInBLL _checkInBLL;
         private Client _client;
         private Room _room;
 
@@ -23,7 +24,7 @@ namespace PresentationLayer
         public FormCheckIn()
         {
             InitializeComponent();
-            _clientBLL = new ClientBLL();
+            _checkInBLL = new CheckInBLL();
         }
 
         private void FormCheckIn_Load(object sender, EventArgs e)
@@ -66,6 +67,18 @@ namespace PresentationLayer
         }
 
         private void btnClientClear_Click(object sender, EventArgs e)
+        {
+            this.ClearForm();
+            ClearId();
+        }
+
+        private void ClearId()
+        {
+            lblRoom.Text = "Quarto:";
+            lblClient.Text = "Cliente:";
+        }
+
+        private void btnClientRegister_Click(object sender, EventArgs e)
         {
 
         }

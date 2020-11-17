@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Entities.DataAnnotations;
+using System;
 
 namespace Entities.Entities
 {
+    [TableName("CHECKINS")]
     public class CheckIn
     {
-
+        [NonEditable]
+        public int ID { get; set; }
+        public int ClientID { get; set; }
+        public int RoomID { get; set; }
+        public DateTime EntryDate { get; set; }
+        public DateTime DepartureDate { get; set; }
+        public bool Active { get; set; }
     }
 }
