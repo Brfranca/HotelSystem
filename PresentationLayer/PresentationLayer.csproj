@@ -68,12 +68,6 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProdMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProdMain.Designer.cs">
-      <DependentUpon>FormProdMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormRegisterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,9 +152,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProdMain.resx">
-      <DependentUpon>FormProdMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterEmployee.resx">
       <DependentUpon>FormRegisterEmployee.cs</DependentUpon>

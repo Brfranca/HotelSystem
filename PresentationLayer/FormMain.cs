@@ -19,12 +19,48 @@ namespace PresentationLayer
         public FormMain()
         {
             InitializeComponent();
+            CustomizedDesign();
+        }
+
+
+        private void CustomizedDesign()
+        {
+            pnlSubClient.Visible = false;
+            pnlProdSubMenu.Visible = false;
+            pnlEmpSubMenu.Visible = false;
+        }
+
+        private void HideSubMenu()
+        {
+            if (pnlSubClient.Visible)
+                pnlSubClient.Visible = false;
+            if (pnlProdSubMenu.Visible)
+                pnlProdSubMenu.Visible = false;
+            if (pnlEmpSubMenu.Visible)
+                pnlEmpSubMenu.Visible = false;
+        }
+
+        private void ShowSubMenu(Panel subMenu)
+        {
+            if (!subMenu.Visible)
+            {
+                HideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+            {
+                subMenu.Visible = false;
+            }
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
             employee = FormLogin.employee;
             lblEmployeeName.Text = employee.Name;
+
+
+            HideSubMenu();
+       
 
         }
 
@@ -71,24 +107,6 @@ namespace PresentationLayer
             lblDateTime.Text = DateTime.Now.ToString("G");
         }
 
-        private void lblClient_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormRegisterClient());
-        }
-
-
-        private void lblClient_MouseHover(object sender, EventArgs e)
-        {
-            lblClient.MouseHoverEvent();
-        }
-
-        private void lblClient_MouseLeave(object sender, EventArgs e)
-        {
-            lblClient.MouseLeaveEvent();
-        }
-
-        
-
         private void btnCheckIn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormCheckIn());
@@ -104,29 +122,85 @@ namespace PresentationLayer
             btnProduc.MouseLeaveEvent();
         }
 
-        private void btnProduc_Click(object sender, EventArgs e)
+        private void btnEmployee_MouseHover(object sender, EventArgs e)
         {
-            OpenChildForm(new FormProdMain());
+            btnEmployee.MouseHoverEvent();
         }
 
-        private void btnRoom_MouseHover(object sender, EventArgs e)
+        private void btnEmployee_MouseLeave(object sender, EventArgs e)
         {
-            btnRoom.MouseHoverEvent();
+            btnEmployee.MouseLeaveEvent();
         }
 
-        private void btnRoom_MouseLeave(object sender, EventArgs e)
+        private void btnClients_Click(object sender, EventArgs e)
         {
-            btnRoom.MouseLeaveEvent();
+            ShowSubMenu(pnlSubClient);
         }
 
-        private void btnRoom_Click(object sender, EventArgs e)
+        private void btnRegisterClient_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormRegisterRoom());
+            OpenChildForm(new FormRegisterClient());
+            HideSubMenu();
+        }
+
+        private void btnRegisterClient_MouseHover(object sender, EventArgs e)
+        {
+            btnRegisterClient.MouseHoverEvent();
+        }
+
+        private void btnRegisterClient_MouseLeave(object sender, EventArgs e)
+        {
+            btnRegisterClient.MouseLeaveEvent();
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlEmpSubMenu);
+        }
+
+        private void btnProduc_Click_1(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlProdSubMenu);
+        }
+
+        private void btnCadProd_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterProduct());
+            HideSubMenu();
+        }
+
+        private void btnCadIncome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterIncome());
+            HideSubMenu();
+        }
+
+        
+
+        private void btnCadProd_MouseHover(object sender, EventArgs e)
+        {
+            btnCadProd.MouseHoverEvent();
+        }
+
+        private void btnCadProd_MouseLeave(object sender, EventArgs e)
+        {
+            btnCadProd.MouseLeaveEvent();
+        }
+
+        private void btnCadIncome_MouseHover(object sender, EventArgs e)
+        {
+            btnCadIncome.MouseHoverEvent();
+        }
+
+        private void btnCadIncome_MouseLeave(object sender, EventArgs e)
+        {
+            btnCadIncome.MouseLeaveEvent();
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormRegisterSupplier());
+            HideSubMenu();
         }
 
         private void btnSupplier_MouseHover(object sender, EventArgs e)
@@ -139,34 +213,36 @@ namespace PresentationLayer
             btnSupplier.MouseLeaveEvent();
         }
 
-        private void btnEmployee_MouseHover(object sender, EventArgs e)
-        {
-            btnEmployee.MouseHoverEvent();
-        }
-
-        private void btnEmployee_MouseLeave(object sender, EventArgs e)
-        {
-            btnEmployee.MouseLeaveEvent();
-        }
-
-        private void btnEmployee_Click(object sender, EventArgs e)
+        private void btnCadEmp_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormRegisterEmployee());
+            HideSubMenu();
         }
 
-        private void btnClients_Click(object sender, EventArgs e)
+        private void btnCadEmp_MouseHover(object sender, EventArgs e)
         {
-            OpenChildForm(new FormRegisterClient());
+            btnCadEmp.MouseHoverEvent();
         }
 
-        private void btnClients_MouseHover(object sender, EventArgs e)
+        private void btnCadEmp_MouseLeave(object sender, EventArgs e)
         {
-            btnClients.MouseHoverEvent();
+            btnCadEmp.MouseLeaveEvent();
         }
 
-        private void btnClients_MouseLeave(object sender, EventArgs e)
+        private void btnChangePassword_MouseHover(object sender, EventArgs e)
         {
-            btnClients.MouseLeaveEvent();
+            btnChangePassword.MouseHoverEvent();
+        }
+
+        private void btnChangePassword_MouseLeave(object sender, EventArgs e)
+        {
+            btnChangePassword.MouseLeaveEvent();
+        }
+
+        private void btnRoom_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterRoom());
+            HideSubMenu();
         }
     }
 }
