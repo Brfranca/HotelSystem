@@ -10,10 +10,10 @@ namespace BusinessLogicalLayer
 {
     public class ClientBLL
     {
-        private readonly ClientDAL _clienteDALL;
+        private readonly ClientDAL _clienteDAL;
         public ClientBLL()
         {
-            _clienteDALL = new ClientDAL();
+            _clienteDAL = new ClientDAL();
         }
 
         public Response Register(Client client)
@@ -24,7 +24,7 @@ namespace BusinessLogicalLayer
                 return result;
 
             client.CPF = client.CPF.RemoveMaskCPF();
-            Response resultInsert = _clienteDALL.Insert(client);
+            Response resultInsert = _clienteDAL.Insert(client);
             if (!resultInsert.Success)
                 return resultInsert;
 
@@ -38,7 +38,7 @@ namespace BusinessLogicalLayer
             if (!result.Success)
                 return result;
 
-            Response resultInsert = _clienteDALL.Update(client);
+            Response resultInsert = _clienteDAL.Update(client);
             if (!resultInsert.Success)
                 return resultInsert;
 
@@ -48,7 +48,7 @@ namespace BusinessLogicalLayer
         public Response Delete(Client client)
         {
 
-            Response resultDelete = _clienteDALL.Delete(client);
+            Response resultDelete = _clienteDAL.Delete(client);
             if (!resultDelete.Success)
                 return resultDelete;
 
@@ -57,22 +57,22 @@ namespace BusinessLogicalLayer
 
         public QueryResponse<List<Client>> GetAll()
         {
-            return _clienteDALL.GetAll();
+            return _clienteDAL.GetAll();
         }
 
         public QueryResponse<Client> GetByCpf(string cpf)
         {
-            return _clienteDALL.GetByCpf(cpf);
+            return _clienteDAL.GetByCpf(cpf);
         }
 
         public QueryResponse<Client> GetById(int id)
         {
-            return _clienteDALL.GetById(id);
+            return _clienteDAL.GetById(id);
         }
 
         public QueryResponse<Client> GetByRg(string rg)
         {
-            return _clienteDALL.GetByRg(rg);
+            return _clienteDAL.GetByRg(rg);
         }
 
         public Response Validate(Client client)
@@ -105,7 +105,7 @@ namespace BusinessLogicalLayer
             {
                 validator.AddError("Email inválido!");
             }
-            else if (_clienteDALL.ExistEmail(email, id))
+            else if (_clienteDAL.ExistEmail(email, id))
             {
                 validator.AddError("Email já cadastrado em nossa base de dados!");
             }
@@ -145,7 +145,7 @@ namespace BusinessLogicalLayer
             {
                 validator.AddError("RG deve conter apenas números!");
             }
-            else if (_clienteDALL.ExistRg(rg, id))
+            else if (_clienteDAL.ExistRg(rg, id))
             {
                 validator.AddError("RG já cadastrados em nossa base de dados!");
             }
@@ -165,7 +165,7 @@ namespace BusinessLogicalLayer
             {
                 validator.AddError("CPF inválido!");
             }
-            else if (_clienteDALL.ExistCpf(cpf, id))
+            else if (_clienteDAL.ExistCpf(cpf, id))
             {
                 validator.AddError("CPF já cadastrado em nossa base de dados!");
             }

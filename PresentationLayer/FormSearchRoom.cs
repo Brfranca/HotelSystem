@@ -122,12 +122,6 @@ namespace PresentationLayer
             pnlType.LeaveEvent();
         }
 
-        private void dgvSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            _currentRowGrid = e.RowIndex;
-            SelectDataGrid();
-        }
-
         private void picClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -136,6 +130,12 @@ namespace PresentationLayer
         private void txtSearchNumber_TextChanged_1(object sender, EventArgs e)
         {
             FilterGrid(txtSearchNumber, txtSearchType, x => x.Number.ToLower().Contains(txtSearchNumber.Text.ToLower()));
+        }
+
+        private void dgvSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
+            SelectDataGrid();
         }
     }
 }

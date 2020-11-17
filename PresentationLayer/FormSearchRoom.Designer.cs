@@ -42,13 +42,13 @@
             this.lblConsSupCod = new System.Windows.Forms.Label();
             this.lblConsSupNome = new System.Windows.Forms.Label();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -97,7 +97,7 @@
             this.txtSearchType.MaxLength = 11;
             this.txtSearchType.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchType.Name = "txtSearchType";
-            this.txtSearchType.Size = new System.Drawing.Size(191, 22);
+            this.txtSearchType.Size = new System.Drawing.Size(191, 27);
             this.txtSearchType.TabIndex = 249;
             this.txtSearchType.TextChanged += new System.EventHandler(this.txtSearchType_TextChanged);
             this.txtSearchType.Enter += new System.EventHandler(this.txtSearchType_Enter);
@@ -125,7 +125,7 @@
             this.txtSearchNumber.MaxLength = 11;
             this.txtSearchNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchNumber.Name = "txtSearchNumber";
-            this.txtSearchNumber.Size = new System.Drawing.Size(258, 22);
+            this.txtSearchNumber.Size = new System.Drawing.Size(258, 27);
             this.txtSearchNumber.TabIndex = 247;
             this.txtSearchNumber.TextChanged += new System.EventHandler(this.txtSearchNumber_TextChanged_1);
             this.txtSearchNumber.Enter += new System.EventHandler(this.txtSearchNumber_Enter);
@@ -139,7 +139,7 @@
             this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
             this.lblConsSupCod.Location = new System.Drawing.Point(331, 67);
             this.lblConsSupCod.Name = "lblConsSupCod";
-            this.lblConsSupCod.Size = new System.Drawing.Size(39, 19);
+            this.lblConsSupCod.Size = new System.Drawing.Size(46, 23);
             this.lblConsSupCod.TabIndex = 245;
             this.lblConsSupCod.Text = "Tipo";
             // 
@@ -151,7 +151,7 @@
             this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
             this.lblConsSupNome.Location = new System.Drawing.Point(19, 67);
             this.lblConsSupNome.Name = "lblConsSupNome";
-            this.lblConsSupNome.Size = new System.Drawing.Size(64, 19);
+            this.lblConsSupNome.Size = new System.Drawing.Size(75, 23);
             this.lblConsSupNome.TabIndex = 244;
             this.lblConsSupNome.Text = "Número";
             // 
@@ -209,7 +209,31 @@
             this.dgvSearch.Size = new System.Drawing.Size(518, 379);
             this.dgvSearch.TabIndex = 243;
             this.dgvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellClick);
-            this.dgvSearch.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellContentDoubleClick);
+            this.dgvSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 30F;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // ColumnCompanyName
+            // 
+            this.ColumnCompanyName.FillWeight = 70F;
+            this.ColumnCompanyName.HeaderText = "Número";
+            this.ColumnCompanyName.MinimumWidth = 6;
+            this.ColumnCompanyName.Name = "ColumnCompanyName";
+            this.ColumnCompanyName.ReadOnly = true;
+            // 
+            // ColumnCnpj
+            // 
+            this.ColumnCnpj.FillWeight = 60F;
+            this.ColumnCnpj.HeaderText = "Tipo";
+            this.ColumnCnpj.MinimumWidth = 6;
+            this.ColumnCnpj.Name = "ColumnCnpj";
+            this.ColumnCnpj.ReadOnly = true;
             // 
             // pnlTopBar
             // 
@@ -261,37 +285,13 @@
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(34, 10);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(153, 21);
+            this.lblName.Size = new System.Drawing.Size(192, 28);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Quartos cadastrados";
             // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 30F;
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // ColumnCompanyName
-            // 
-            this.ColumnCompanyName.FillWeight = 70F;
-            this.ColumnCompanyName.HeaderText = "Número";
-            this.ColumnCompanyName.MinimumWidth = 6;
-            this.ColumnCompanyName.Name = "ColumnCompanyName";
-            this.ColumnCompanyName.ReadOnly = true;
-            // 
-            // ColumnCnpj
-            // 
-            this.ColumnCnpj.FillWeight = 60F;
-            this.ColumnCnpj.HeaderText = "Tipo";
-            this.ColumnCnpj.MinimumWidth = 6;
-            this.ColumnCnpj.Name = "ColumnCnpj";
-            this.ColumnCnpj.ReadOnly = true;
-            // 
             // FormSearchRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(563, 550);
