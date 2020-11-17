@@ -19,11 +19,6 @@ namespace PresentationLayer
         public FormMain()
         {
             InitializeComponent();
-            //for (int i = 0; i <= 12; i++)
-            //{
-            //    Label l = AddLabel(i);
-            //    flpDisplay.Controls.Add(l);
-            //}
         }
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -31,16 +26,6 @@ namespace PresentationLayer
             employee = FormLogin.employee;
             lblEmployeeName.Text = employee.Name;
 
-
-            //TESTE DE CRIAÇÃO DE COMPONENTES
-            //int startPosition = 600;
-            //int endPosition = 60;
-            //for (int i = 0; i <= 25; i++)
-            //{
-            //    Label l = AddLabel(i);
-            //    flpComponents.Controls.Add(l);
-            //    //endPosition += 100;
-            //}
         }
 
         // CRIAR FORM DENTRO DE UM PAINEL 
