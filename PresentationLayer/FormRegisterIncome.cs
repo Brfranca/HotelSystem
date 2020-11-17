@@ -39,11 +39,17 @@ namespace PresentationLayer
         private void btnSelecSupp_Click(object sender, EventArgs e)
         {
             this.ClearForm();
-            dgvSearchSupplier.Rows.Clear();
+            RenewLabelSupplier();
             _incomeItems.Clear();
 
             CreateSupplier();
 
+        }
+
+        private void RenewLabelSupplier()
+        {
+            lblCompanyName.Text = "Razão social: ";
+            lblCNPJ.Text = "CNPJ: ";
         }
 
         private void CreateSupplier()
@@ -57,7 +63,8 @@ namespace PresentationLayer
                 btnSelectProduct.Enabled = true;
             }
 
-            dgvSearchSupplier.Rows.Add(supplier.CompanyName, supplier.CNPJ.InsertMaskCNPJ());
+            lblCompanyName.Text += supplier.CompanyName;
+            lblCNPJ.Text += supplier.CNPJ.InsertMaskCNPJ();
         }
 
         private void picSupplierClose_Click(object sender, EventArgs e)
@@ -67,7 +74,7 @@ namespace PresentationLayer
 
         private void btnSelectProduct_Click(object sender, EventArgs e)
         {
-            dgvProductsAdd.Rows.Clear();
+            RenewLabelProduct();
             SearchProductBySupplier();
         }
 
@@ -79,8 +86,10 @@ namespace PresentationLayer
             frmProduto.ShowDialog();
 
             _product = frmProduto.product;
-            dgvProductsAdd.Rows.Add(_product.ID, _product.Name, _product.Description);
 
+            lblProdID.Text += _product.ID.ToString();
+            lblProdName.Text += _product.Name;
+            lblProdDesc.Text += _product.Description;
         }
 
         private void FormRegisterIncome_Load(object sender, EventArgs e)
@@ -100,7 +109,9 @@ namespace PresentationLayer
             if (response.Success)
             {
                 this.ClearForm();
-                UpdateTextBoxValue();
+                RenewTextBoxValue();
+                RenewLabelSupplier();
+                RenewLabelProduct();
                 UpdateGrid();
             }
         }
@@ -108,7 +119,7 @@ namespace PresentationLayer
         private void UpdateComponentsRegister()
         {
             btnIncomeRegister.Text = "Cadastrar";
-            UpdateTextBoxValue();
+            RenewTextBoxValue();
         }
 
 
@@ -129,7 +140,7 @@ namespace PresentationLayer
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             CreateIncomeItem();
-            UpdateTextBoxValue();
+            RenewTextBoxValue();
         }
 
         private void CreateIncomeItem()
@@ -163,18 +174,23 @@ namespace PresentationLayer
             UpdateGridProducts();
         }
 
-        private void UpdateTextBoxValue()
+        private void RenewTextBoxValue()
         {
             txtProdQuantity.Text = "0";
             txtProdPrice.Text = "0";
             txtProductProfit.Text = "0";
         }
 
+        private void RenewLabelProduct()
+        {
+            lblProdDesc.Text = "Descrição: ";
+            lblProdID.Text = "ID: ";
+            lblProdName.Text = "Nome: ";
+        }
         private void UpdateGridProducts()
         {
-            UpdateTextBoxValue();
-
-            dgvProductsAdd.Rows.Clear();
+            RenewTextBoxValue();
+            RenewLabelProduct();
             dgvIncomeItems.Rows.Clear();
             foreach (var item in _incomeItems)
             {
@@ -257,8 +273,12 @@ namespace PresentationLayer
             {
                 MessageBox.Show(responseSupplier.Message);
                 return;
+
+                
             }
-            dgvSearchSupplier.Rows.Add(responseSupplier.Data.CompanyName);
+
+            lblCompanyName.Text += responseSupplier.Data.CompanyName;
+            lblCNPJ.Text += responseSupplier.Data.CNPJ;
         }
 
         private void dgvIncomes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -271,6 +291,8 @@ namespace PresentationLayer
         private void btnProductClear_Click(object sender, EventArgs e)
         {
             this.ClearForm();
+            RenewLabelProduct();
+            RenewLabelSupplier();
             UpdateComponentsRegister();
         }
 

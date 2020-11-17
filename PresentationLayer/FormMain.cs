@@ -256,5 +256,11 @@ namespace PresentationLayer
         {
             ShowSubMenu(pnlProdSubMenu);
         }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormChangePassword());
+            HideSubMenu();
+        }
     }
 }
