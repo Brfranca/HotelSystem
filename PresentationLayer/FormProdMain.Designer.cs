@@ -41,9 +41,9 @@
             this.btnCadProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.btnCadProd.Location = new System.Drawing.Point(201, 227);
             this.btnCadProd.Name = "btnCadProd";
-            this.btnCadProd.Size = new System.Drawing.Size(194, 161);
+            this.btnCadProd.Size = new System.Drawing.Size(272, 138);
             this.btnCadProd.TabIndex = 0;
-            this.btnCadProd.Text = "Cadastrar produto";
+            this.btnCadProd.Text = "Cadastrar/pesquisar produto";
             this.btnCadProd.UseVisualStyleBackColor = false;
             this.btnCadProd.Click += new System.EventHandler(this.btnCadProd_Click);
             // 
@@ -58,7 +58,7 @@
             this.btnCadIncome.Name = "btnCadIncome";
             this.btnCadIncome.Size = new System.Drawing.Size(272, 138);
             this.btnCadIncome.TabIndex = 1;
-            this.btnCadIncome.Text = "Cadastrar entrada de produto";
+            this.btnCadIncome.Text = "Cadastrar/pesquisar entrada de produto";
             this.btnCadIncome.UseVisualStyleBackColor = false;
             this.btnCadIncome.Click += new System.EventHandler(this.btnCadIncome_Click);
             // 
