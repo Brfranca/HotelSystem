@@ -1,5 +1,7 @@
 ﻿using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace BusinessLogicalLayer.Extentions
@@ -132,6 +134,20 @@ namespace BusinessLogicalLayer.Extentions
         public static string InsertMaskCPF(this string cpf)
         {
             return cpf.Insert(3, ".").Insert(7, ".").Insert(11, "-");
+        }
+
+        public static string GenerateHash(this string password)
+        {
+            MD5 md5Hash = MD5.Create();
+            byte[] vec = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < vec.Length; i++)
+            {
+                stringBuilder.Append(vec[i].ToString("x2"));
+            }
+
+            return stringBuilder.ToString();
         }
 
         public static bool HasValue(this string value) => !string.IsNullOrWhiteSpace(value);

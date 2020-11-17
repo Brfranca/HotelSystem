@@ -1,16 +1,8 @@
 ﻿using BusinessLogicalLayer.BLL;
 using Common;
 using Entities;
-using PresentationLayer.Load;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -32,7 +24,6 @@ namespace PresentationLayer
         {
             var result = _employeeBLL.Login(txtUser.Text, txtPassword.Text);
 
-            //Utilizei o método GetByEmail para podermos identificar o usuário e registrar o ID do mesmo na variável employeeId. Ass: kj
             QueryResponse<Employee> response = _employeeBLL.GetByEmail(txtUser.Text);
             if (result.Success && response.Data == null)
                 response = new QueryResponse<Employee> { Data = new Employee { Name = "Administrador" } };
@@ -40,7 +31,8 @@ namespace PresentationLayer
 
             if (!result.Success)
             {
-                MessageBox.Show(result.GetAllMessages());
+                picAttencion.Visible = true;
+                lblAttencion.Visible = true;
                 return;
             }
 
@@ -83,6 +75,14 @@ namespace PresentationLayer
             this.Close();
         }
 
+        private void btnLogin_MouseHover(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.DarkGray;
+        }
 
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.Transparent;
+        }
     }
 }

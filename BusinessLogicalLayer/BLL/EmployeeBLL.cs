@@ -33,7 +33,7 @@ namespace BusinessLogicalLayer.BLL
                 return Response.CreateFailure("Usuário inválido!");
 
             //Colocar para comparar convertendo a senha em MD5.
-            if (employee.Data.Password != password)
+            if (employee.Data.Password != password.GenerateHash())
                 return Response.CreateFailure("Senha inválida!");
 
             return Response.CreateSuccess();
@@ -46,11 +46,11 @@ namespace BusinessLogicalLayer.BLL
             if (!result.Success)
                 return result;
 
+            employee.Password = employee.Password.GenerateHash();
             Response resultInsert = _employeeDAL.Insert(employee);
             if (!resultInsert.Success)
                 return resultInsert;
 
-            //_employee.Insert(employee) vem do BaseDAL 
 
             return Response.CreateSuccess("Funcionário cadastrado com sucesso!");
         }
