@@ -33,7 +33,7 @@ namespace BusinessLogicalLayer.BLL
                 return Response.CreateFailure("Usuário inválido!");
 
             //Colocar para comparar convertendo a senha em MD5.
-            if (employee.Data.Password != password)
+            if (employee.Data.Password != password.GenerateHash())
                 return Response.CreateFailure("Senha inválida!");
 
             return Response.CreateSuccess();
