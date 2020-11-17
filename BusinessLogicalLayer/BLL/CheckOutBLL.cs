@@ -11,8 +11,15 @@ namespace BusinessLogicalLayer.BLL
 {
     public class CheckOutBLL
     {
-        private readonly CheckOutDAL _checkOutDAL;
-        private readonly CheckInBLL _checkInBLL;
+        private CheckOutDAL _checkOutDAL;
+        private CheckInBLL _checkInBLL;
+        private SaleBLL _saleBLL;
+        public CheckOutBLL()
+        {
+            _checkOutDAL = new CheckOutDAL();
+            _checkInBLL = new CheckInBLL();
+            _saleBLL = new SaleBLL();
+        }
         public Response Insert(CheckOut checkOut)
         {
             Response resultValidate = Validate(checkOut);
@@ -26,10 +33,15 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("CheckOut realizado com sucesso!");
         }
 
-        public double CalculateTotalValue(CheckOut checkOut)
+        public Response CalculateTotalValue(CheckOut checkOut)
         {
 
             Response response = _checkInBLL.GetById(checkOut.CheckInID);
+            if (response.Success)
+                return response;
+
+            Response responseSale = _saleBLL.
+                
 
         }
 
