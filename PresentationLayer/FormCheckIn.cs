@@ -1,7 +1,9 @@
 ﻿using BusinessLogicalLayer;
 using BusinessLogicalLayer.BLL;
 using BusinessLogicalLayer.Extentions;
+using Common;
 using Entities;
+using Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +32,19 @@ namespace PresentationLayer
         private void FormCheckIn_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private CheckIn CreateCheckIn()
+        {
+            CheckIn checkIn = new CheckIn();
+            checkIn.ClientID = _client.ID;
+            checkIn.RoomID = _room.ID;
+            checkIn.RoomPrice = _room.PricePerDay;
+            checkIn.EntryDate = dtCheckIn.Value;
+            checkIn.DepartureDate = dtCheckOut.Value;
+            checkIn.Active = true;
+
+            return checkIn;
         }
 
         private void btnSelectRoom_Click(object sender, EventArgs e)
@@ -80,7 +95,15 @@ namespace PresentationLayer
 
         private void btnClientRegister_Click(object sender, EventArgs e)
         {
+            CheckIn checkIn = CreateCheckIn();
 
+            Response response = _checkInBLL.Register(checkIn);
+            MessageBox.Show(response.Message);
+            if (response.Success)
+            {
+                this.ClearForm();
+                ClearId();
+            }
         }
     }
 }
