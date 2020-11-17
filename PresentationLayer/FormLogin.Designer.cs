@@ -110,7 +110,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(0);
             this.txtUser.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(202, 26);
+            this.txtUser.Size = new System.Drawing.Size(202, 22);
             this.txtUser.TabIndex = 35;
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
@@ -201,7 +201,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtPassword.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(202, 26);
+            this.txtPassword.Size = new System.Drawing.Size(202, 22);
             this.txtPassword.TabIndex = 39;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -251,6 +251,7 @@
             // 
             // FormLogin
             // 
+            this.AccessibleName = "";
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
@@ -268,6 +269,7 @@
             this.Controls.Add(this.txtUser);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
