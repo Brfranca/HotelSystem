@@ -127,6 +127,26 @@
         Qp3FFaIQ6iyuEIVQZ3GFKIQ6S+diIN4V62/zHnZwqJ8f6CCKnuzxm0s4xGbtAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnChangePassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAPtJREFUSEvt
+        kE0KwjAQhbtSN6KCK3+aIoILDyNexIV6gO60oCl4KkHxZyXiHfyl3cZJeUohEWKlCOIHj5KZNy+TWr+P
+        mDWzoc+GIWcb+h4jcbYmDYTbzsCWjJDXqhS0IgmtfLYMvHoF9vcQrpOjkC3C9gF3OtdJpSxF5y7pgN5K
+        vhJj5oRT1kfA7uQ7RZSfnEd2iXr7yDO1eyibQ4MLOSw3R0mB+vIlcok5SubQ0E0OC6+VR0nhOG4UpCfg
+        7IKSOdhM4PgSU59C6hekwmObT4U4FZ05iRD3BXTbxAWbsU9BZ44LtuQXpI5um7hg+/+iz4U4FZ05iRD3
+        E1jWHZsg7DizUvtaAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnCadEmp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQJJREFUOE/V
+        kr9OwzAQh/MADCwda18fg39tQSoLlLUbAwt9mPrMwnOw8D6o6oBEKyFa2VcGWn52rgMDSbog8Umn5Hz3
+        OTknxf8hensU2L5EtlN56HR1uRlJEKYl5C/EBjHTUj0QexDmkSniusVbbKKzr1quRjz1k7zmzqVw+0y8
+        XWlcaMvviLPnWZ6YQc4xxm6z3FBFYDNE8yJ6c5Jzb6+SLBNzmhuqCK5980N25jrJu7wSlec4pOMy30PW
+        GRdp9pyXZ/DW6MASwvYZzXf5HlKWdbNa3j0d4vt+4LNRYBqXT6a+lusRZ24hfSKWmP8p/bZaakZwdB8d
+        jbaPrQNd+iuK4hvH6JsOuXLYGQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnEmployee.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAATFJREFUSEvt

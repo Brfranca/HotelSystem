@@ -19,11 +19,7 @@ namespace PresentationLayer
         public FormMain()
         {
             InitializeComponent();
-            //for (int i = 0; i <= 12; i++)
-            //{
-            //    Label l = AddLabel(i);
-            //    flpDisplay.Controls.Add(l);
-            //}
+            CustomizedDesign();
         }
 
 
@@ -31,6 +27,7 @@ namespace PresentationLayer
         {
             pnlSubClient.Visible = false;
             pnlProdSubMenu.Visible = false;
+            pnlEmpSubMenu.Visible = false;
         }
 
         private void HideSubMenu()
@@ -39,12 +36,15 @@ namespace PresentationLayer
                 pnlSubClient.Visible = false;
             if (pnlProdSubMenu.Visible)
                 pnlProdSubMenu.Visible = false;
+            if (pnlEmpSubMenu.Visible)
+                pnlEmpSubMenu.Visible = false;
         }
 
         private void ShowSubMenu(Panel subMenu)
         {
             if (!subMenu.Visible)
             {
+                HideSubMenu();
                 subMenu.Visible = true;
             }
             else
@@ -58,16 +58,10 @@ namespace PresentationLayer
             employee = FormLogin.employee;
             lblEmployeeName.Text = employee.Name;
 
+
             HideSubMenu();
-            //TESTE DE CRIAÇÃO DE COMPONENTES
-            //int startPosition = 600;
-            //int endPosition = 60;
-            //for (int i = 0; i <= 25; i++)
-            //{
-            //    Label l = AddLabel(i);
-            //    flpComponents.Controls.Add(l);
-            //    //endPosition += 100;
-            //}
+       
+
         }
 
         // CRIAR FORM DENTRO DE UM PAINEL 
@@ -128,11 +122,6 @@ namespace PresentationLayer
             btnProduc.MouseLeaveEvent();
         }
 
-        private void btnProduc_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormProdMain());
-        }
-
         private void btnEmployee_MouseHover(object sender, EventArgs e)
         {
             btnEmployee.MouseHoverEvent();
@@ -166,8 +155,7 @@ namespace PresentationLayer
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormRegisterEmployee());
-            HideSubMenu();
+            ShowSubMenu(pnlEmpSubMenu);
         }
 
         private void btnProduc_Click_1(object sender, EventArgs e)
@@ -209,22 +197,6 @@ namespace PresentationLayer
             btnCadIncome.MouseLeaveEvent();
         }
 
-        private void btnRoom_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormRegisterRoom());
-            HideSubMenu();
-        }
-
-        private void btnRoom_MouseHover(object sender, EventArgs e)
-        {
-            btnRoom.MouseHoverEvent();
-        }
-
-        private void btnRoom_MouseLeave(object sender, EventArgs e)
-        {
-            btnRoom.MouseLeaveEvent();
-        }
-
         private void btnSupplier_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormRegisterSupplier());
@@ -239,6 +211,38 @@ namespace PresentationLayer
         private void btnSupplier_MouseLeave(object sender, EventArgs e)
         {
             btnSupplier.MouseLeaveEvent();
+        }
+
+        private void btnCadEmp_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterEmployee());
+            HideSubMenu();
+        }
+
+        private void btnCadEmp_MouseHover(object sender, EventArgs e)
+        {
+            btnCadEmp.MouseHoverEvent();
+        }
+
+        private void btnCadEmp_MouseLeave(object sender, EventArgs e)
+        {
+            btnCadEmp.MouseLeaveEvent();
+        }
+
+        private void btnChangePassword_MouseHover(object sender, EventArgs e)
+        {
+            btnChangePassword.MouseHoverEvent();
+        }
+
+        private void btnChangePassword_MouseLeave(object sender, EventArgs e)
+        {
+            btnChangePassword.MouseLeaveEvent();
+        }
+
+        private void btnRoom_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterRoom());
+            HideSubMenu();
         }
     }
 }

@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlLeftBar = new System.Windows.Forms.Panel();
             this.btnRoom = new System.Windows.Forms.Button();
+            this.pnlEmpSubMenu = new System.Windows.Forms.Panel();
+            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.btnCadEmp = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
             this.pnlProdSubMenu = new System.Windows.Forms.Panel();
             this.btnSupplier = new System.Windows.Forms.Button();
@@ -54,6 +57,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlDisplay = new System.Windows.Forms.Panel();
             this.pnlLeftBar.SuspendLayout();
+            this.pnlEmpSubMenu.SuspendLayout();
             this.pnlProdSubMenu.SuspendLayout();
             this.pnlSubClient.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
@@ -65,6 +69,7 @@
             // 
             this.pnlLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlLeftBar.Controls.Add(this.btnRoom);
+            this.pnlLeftBar.Controls.Add(this.pnlEmpSubMenu);
             this.pnlLeftBar.Controls.Add(this.btnEmployee);
             this.pnlLeftBar.Controls.Add(this.pnlProdSubMenu);
             this.pnlLeftBar.Controls.Add(this.btnProduc);
@@ -94,17 +99,67 @@
             this.btnRoom.ForeColor = System.Drawing.Color.White;
             this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
             this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoom.Location = new System.Drawing.Point(0, 365);
+            this.btnRoom.Location = new System.Drawing.Point(0, 427);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRoom.Size = new System.Drawing.Size(300, 42);
+            this.btnRoom.Size = new System.Drawing.Size(300, 39);
             this.btnRoom.TabIndex = 38;
             this.btnRoom.Text = "Quartos";
             this.btnRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRoom.UseVisualStyleBackColor = true;
             this.btnRoom.Click += new System.EventHandler(this.btnRoom_Click);
-            this.btnRoom.MouseLeave += new System.EventHandler(this.btnRoom_MouseLeave);
-            this.btnRoom.MouseHover += new System.EventHandler(this.btnRoom_MouseHover);
+            // 
+            // pnlEmpSubMenu
+            // 
+            this.pnlEmpSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
+            this.pnlEmpSubMenu.Controls.Add(this.btnChangePassword);
+            this.pnlEmpSubMenu.Controls.Add(this.btnCadEmp);
+            this.pnlEmpSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEmpSubMenu.Location = new System.Drawing.Point(0, 349);
+            this.pnlEmpSubMenu.Name = "pnlEmpSubMenu";
+            this.pnlEmpSubMenu.Size = new System.Drawing.Size(300, 78);
+            this.pnlEmpSubMenu.TabIndex = 37;
+            // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePassword.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
+            this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChangePassword.Location = new System.Drawing.Point(0, 39);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnChangePassword.Size = new System.Drawing.Size(300, 39);
+            this.btnChangePassword.TabIndex = 1;
+            this.btnChangePassword.Text = "Alterar senha";
+            this.btnChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.MouseLeave += new System.EventHandler(this.btnChangePassword_MouseLeave);
+            this.btnChangePassword.MouseHover += new System.EventHandler(this.btnChangePassword_MouseHover);
+            // 
+            // btnCadEmp
+            // 
+            this.btnCadEmp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadEmp.FlatAppearance.BorderSize = 0;
+            this.btnCadEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadEmp.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnCadEmp.ForeColor = System.Drawing.Color.White;
+            this.btnCadEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnCadEmp.Image")));
+            this.btnCadEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadEmp.Location = new System.Drawing.Point(0, 0);
+            this.btnCadEmp.Name = "btnCadEmp";
+            this.btnCadEmp.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCadEmp.Size = new System.Drawing.Size(300, 39);
+            this.btnCadEmp.TabIndex = 0;
+            this.btnCadEmp.Text = "Cadastrar/editar";
+            this.btnCadEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadEmp.UseVisualStyleBackColor = true;
+            this.btnCadEmp.Click += new System.EventHandler(this.btnCadEmp_Click);
+            this.btnCadEmp.MouseLeave += new System.EventHandler(this.btnCadEmp_MouseLeave);
+            this.btnCadEmp.MouseHover += new System.EventHandler(this.btnCadEmp_MouseHover);
             // 
             // btnEmployee
             // 
@@ -115,8 +170,9 @@
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 323);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 307);
             this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEmployee.Size = new System.Drawing.Size(300, 42);
             this.btnEmployee.TabIndex = 36;
             this.btnEmployee.Text = "Funcionários";
@@ -131,7 +187,7 @@
             this.pnlProdSubMenu.Controls.Add(this.btnCadIncome);
             this.pnlProdSubMenu.Controls.Add(this.btnCadProd);
             this.pnlProdSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProdSubMenu.Location = new System.Drawing.Point(0, 206);
+            this.pnlProdSubMenu.Location = new System.Drawing.Point(0, 190);
             this.pnlProdSubMenu.Name = "pnlProdSubMenu";
             this.pnlProdSubMenu.Size = new System.Drawing.Size(300, 117);
             this.pnlProdSubMenu.TabIndex = 35;
@@ -202,7 +258,7 @@
             this.btnProduc.ForeColor = System.Drawing.Color.White;
             this.btnProduc.Image = ((System.Drawing.Image)(resources.GetObject("btnProduc.Image")));
             this.btnProduc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduc.Location = new System.Drawing.Point(0, 164);
+            this.btnProduc.Location = new System.Drawing.Point(0, 148);
             this.btnProduc.Name = "btnProduc";
             this.btnProduc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnProduc.Size = new System.Drawing.Size(300, 42);
@@ -217,7 +273,7 @@
             this.pnlSubClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
             this.pnlSubClient.Controls.Add(this.btnRegisterClient);
             this.pnlSubClient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubClient.Location = new System.Drawing.Point(0, 125);
+            this.pnlSubClient.Location = new System.Drawing.Point(0, 109);
             this.pnlSubClient.Name = "pnlSubClient";
             this.pnlSubClient.Size = new System.Drawing.Size(300, 39);
             this.pnlSubClient.TabIndex = 33;
@@ -252,7 +308,7 @@
             this.btnClients.ForeColor = System.Drawing.Color.White;
             this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
             this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClients.Location = new System.Drawing.Point(0, 83);
+            this.btnClients.Location = new System.Drawing.Point(0, 67);
             this.btnClients.Name = "btnClients";
             this.btnClients.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnClients.Size = new System.Drawing.Size(300, 42);
@@ -267,7 +323,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 43);
+            this.panel1.Size = new System.Drawing.Size(300, 27);
             this.panel1.TabIndex = 31;
             // 
             // label5
@@ -427,6 +483,7 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlLeftBar.ResumeLayout(false);
             this.pnlLeftBar.PerformLayout();
+            this.pnlEmpSubMenu.ResumeLayout(false);
             this.pnlProdSubMenu.ResumeLayout(false);
             this.pnlSubClient.ResumeLayout(false);
             this.pnlTopBar.ResumeLayout(false);
@@ -459,8 +516,11 @@
         private System.Windows.Forms.Button btnCadIncome;
         private System.Windows.Forms.Button btnCadProd;
         private System.Windows.Forms.Button btnProduc;
-        private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.Panel pnlEmpSubMenu;
+        private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Button btnCadEmp;
+        private System.Windows.Forms.Button btnRoom;
     }
 }
