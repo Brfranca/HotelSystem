@@ -45,17 +45,18 @@
             this.btnRegisterClient = new System.Windows.Forms.Button();
             this.btnClients = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblEmployeeName = new System.Windows.Forms.Label();
+            this.lblHello = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
             this.lblDateTime = new System.Windows.Forms.Label();
-            this.lblEmployeeName = new System.Windows.Forms.Label();
-            this.lblHello = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.picMainClose = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlDisplay = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnlLeftBar.SuspendLayout();
             this.pnlEmpSubMenu.SuspendLayout();
             this.pnlProdSubMenu.SuspendLayout();
@@ -63,11 +64,13 @@
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeftBar
             // 
             this.pnlLeftBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.pnlLeftBar.Controls.Add(this.panel3);
             this.pnlLeftBar.Controls.Add(this.btnRoom);
             this.pnlLeftBar.Controls.Add(this.pnlEmpSubMenu);
             this.pnlLeftBar.Controls.Add(this.btnEmployee);
@@ -76,9 +79,6 @@
             this.pnlLeftBar.Controls.Add(this.pnlSubClient);
             this.pnlLeftBar.Controls.Add(this.btnClients);
             this.pnlLeftBar.Controls.Add(this.panel1);
-            this.pnlLeftBar.Controls.Add(this.label5);
-            this.pnlLeftBar.Controls.Add(this.lblLogout);
-            this.pnlLeftBar.Controls.Add(this.lblDateTime);
             this.pnlLeftBar.Controls.Add(this.lblEmployeeName);
             this.pnlLeftBar.Controls.Add(this.lblHello);
             this.pnlLeftBar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -99,7 +99,7 @@
             this.btnRoom.ForeColor = System.Drawing.Color.White;
             this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
             this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoom.Location = new System.Drawing.Point(0, 427);
+            this.btnRoom.Location = new System.Drawing.Point(0, 431);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnRoom.Size = new System.Drawing.Size(300, 39);
@@ -115,7 +115,7 @@
             this.pnlEmpSubMenu.Controls.Add(this.btnChangePassword);
             this.pnlEmpSubMenu.Controls.Add(this.btnCadEmp);
             this.pnlEmpSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpSubMenu.Location = new System.Drawing.Point(0, 349);
+            this.pnlEmpSubMenu.Location = new System.Drawing.Point(0, 353);
             this.pnlEmpSubMenu.Name = "pnlEmpSubMenu";
             this.pnlEmpSubMenu.Size = new System.Drawing.Size(300, 78);
             this.pnlEmpSubMenu.TabIndex = 37;
@@ -170,7 +170,7 @@
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 307);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 311);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEmployee.Size = new System.Drawing.Size(300, 42);
@@ -187,7 +187,7 @@
             this.pnlProdSubMenu.Controls.Add(this.btnCadIncome);
             this.pnlProdSubMenu.Controls.Add(this.btnCadProd);
             this.pnlProdSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProdSubMenu.Location = new System.Drawing.Point(0, 190);
+            this.pnlProdSubMenu.Location = new System.Drawing.Point(0, 194);
             this.pnlProdSubMenu.Name = "pnlProdSubMenu";
             this.pnlProdSubMenu.Size = new System.Drawing.Size(300, 117);
             this.pnlProdSubMenu.TabIndex = 35;
@@ -258,7 +258,7 @@
             this.btnProduc.ForeColor = System.Drawing.Color.White;
             this.btnProduc.Image = ((System.Drawing.Image)(resources.GetObject("btnProduc.Image")));
             this.btnProduc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduc.Location = new System.Drawing.Point(0, 148);
+            this.btnProduc.Location = new System.Drawing.Point(0, 152);
             this.btnProduc.Name = "btnProduc";
             this.btnProduc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnProduc.Size = new System.Drawing.Size(300, 42);
@@ -273,7 +273,7 @@
             this.pnlSubClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
             this.pnlSubClient.Controls.Add(this.btnRegisterClient);
             this.pnlSubClient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubClient.Location = new System.Drawing.Point(0, 109);
+            this.pnlSubClient.Location = new System.Drawing.Point(0, 113);
             this.pnlSubClient.Name = "pnlSubClient";
             this.pnlSubClient.Size = new System.Drawing.Size(300, 39);
             this.pnlSubClient.TabIndex = 33;
@@ -308,7 +308,7 @@
             this.btnClients.ForeColor = System.Drawing.Color.White;
             this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
             this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClients.Location = new System.Drawing.Point(0, 67);
+            this.btnClients.Location = new System.Drawing.Point(0, 71);
             this.btnClients.Name = "btnClients";
             this.btnClients.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnClients.Size = new System.Drawing.Size(300, 42);
@@ -321,54 +321,10 @@
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 27);
             this.panel1.TabIndex = 31;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(2, 520);
-            this.label5.MinimumSize = new System.Drawing.Size(298, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(298, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLogout
-            // 
-            this.lblLogout.AutoSize = true;
-            this.lblLogout.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblLogout.Location = new System.Drawing.Point(95, 474);
-            this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
-            this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(114, 17);
-            this.lblLogout.TabIndex = 21;
-            this.lblLogout.Text = "Sair do Sistema";
-            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDateTime
-            // 
-            this.lblDateTime.AutoSize = true;
-            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTime.ForeColor = System.Drawing.Color.White;
-            this.lblDateTime.Location = new System.Drawing.Point(3, 474);
-            this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
-            this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(298, 17);
-            this.lblDateTime.TabIndex = 0;
-            this.lblDateTime.Text = "<hora>";
-            this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEmployeeName
             // 
@@ -377,10 +333,10 @@
             this.lblEmployeeName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblEmployeeName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeName.ForeColor = System.Drawing.Color.White;
-            this.lblEmployeeName.Location = new System.Drawing.Point(0, 20);
+            this.lblEmployeeName.Location = new System.Drawing.Point(0, 22);
             this.lblEmployeeName.MaximumSize = new System.Drawing.Size(220, 0);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(110, 20);
+            this.lblEmployeeName.Size = new System.Drawing.Size(137, 22);
             this.lblEmployeeName.TabIndex = 1;
             this.lblEmployeeName.Text = "<funcionario>";
             // 
@@ -393,9 +349,56 @@
             this.lblHello.ForeColor = System.Drawing.Color.Silver;
             this.lblHello.Location = new System.Drawing.Point(0, 0);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(39, 20);
+            this.lblHello.Size = new System.Drawing.Size(48, 22);
             this.lblHello.TabIndex = 0;
             this.lblHello.Text = "Olá,";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(3, 98);
+            this.label5.MinimumSize = new System.Drawing.Size(298, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(338, 21);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLogout
+            // 
+            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.lblLogout.Location = new System.Drawing.Point(89, 48);
+            this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(144, 22);
+            this.lblLogout.TabIndex = 21;
+            this.lblLogout.Text = "Sair do Sistema";
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDateTime
+            // 
+            this.lblDateTime.AutoSize = true;
+            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.lblDateTime.ForeColor = System.Drawing.Color.White;
+            this.lblDateTime.Location = new System.Drawing.Point(0, 14);
+            this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.Size = new System.Drawing.Size(298, 22);
+            this.lblDateTime.TabIndex = 0;
+            this.lblDateTime.Text = "<hora>";
+            this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlTopBar
             // 
@@ -429,7 +432,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(102, 21);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(127, 28);
             this.lblNomeFarmacia.TabIndex = 174;
             this.lblNomeFarmacia.Text = "Hotel System";
             // 
@@ -464,9 +467,20 @@
             this.pnlDisplay.Size = new System.Drawing.Size(972, 548);
             this.pnlDisplay.TabIndex = 4;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblLogout);
+            this.panel3.Controls.Add(this.lblDateTime);
+            this.panel3.Location = new System.Drawing.Point(2, 419);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(298, 127);
+            this.panel3.TabIndex = 39;
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1272, 588);
@@ -490,6 +504,8 @@
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +538,6 @@
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnCadEmp;
         private System.Windows.Forms.Button btnRoom;
+        private System.Windows.Forms.Panel panel3;
     }
 }

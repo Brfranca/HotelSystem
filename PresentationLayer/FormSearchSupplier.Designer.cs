@@ -80,7 +80,7 @@
             // 
             // pnlTopBar
             // 
-            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
+            this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlTopBar.Controls.Add(this.picRoomClose);
             this.pnlTopBar.Controls.Add(this.picIcone);
             this.pnlTopBar.Controls.Add(this.lblNomeFarmacia);
@@ -184,7 +184,7 @@
             // 
             // pnlSuppCNPJ
             // 
-            this.pnlSuppCNPJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlSuppCNPJ.BackColor = System.Drawing.Color.White;
             this.pnlSuppCNPJ.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 105);
             this.pnlSuppCNPJ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -195,10 +195,10 @@
             // 
             // txtSuppSearchCNPJ
             // 
-            this.txtSuppSearchCNPJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtSuppSearchCNPJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtSuppSearchCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchCNPJ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuppSearchCNPJ.ForeColor = System.Drawing.Color.Black;
+            this.txtSuppSearchCNPJ.ForeColor = System.Drawing.Color.White;
             this.txtSuppSearchCNPJ.Location = new System.Drawing.Point(339, 84);
             this.txtSuppSearchCNPJ.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchCNPJ.MaxLength = 11;
@@ -212,7 +212,7 @@
             // 
             // pnlSuppName
             // 
-            this.pnlSuppName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlSuppName.BackColor = System.Drawing.Color.White;
             this.pnlSuppName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pnlSuppName.Location = new System.Drawing.Point(22, 104);
             this.pnlSuppName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -223,10 +223,10 @@
             // 
             // txtSuppSearchName
             // 
-            this.txtSuppSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtSuppSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtSuppSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSuppSearchName.ForeColor = System.Drawing.Color.Black;
+            this.txtSuppSearchName.ForeColor = System.Drawing.Color.White;
             this.txtSuppSearchName.Location = new System.Drawing.Point(26, 83);
             this.txtSuppSearchName.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchName.MaxLength = 11;
@@ -243,7 +243,7 @@
             this.lblConsSupCod.AutoSize = true;
             this.lblConsSupCod.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsSupCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
             this.lblConsSupCod.Location = new System.Drawing.Point(331, 61);
             this.lblConsSupCod.Name = "lblConsSupCod";
             this.lblConsSupCod.Size = new System.Drawing.Size(51, 23);
@@ -255,7 +255,7 @@
             this.lblConsSupNome.AutoSize = true;
             this.lblConsSupNome.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsSupNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
             this.lblConsSupNome.Location = new System.Drawing.Point(19, 61);
             this.lblConsSupNome.Name = "lblConsSupNome";
             this.lblConsSupNome.Size = new System.Drawing.Size(109, 23);
@@ -264,19 +264,21 @@
             // 
             // btnSupplierSelect
             // 
-            this.btnSupplierSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnSupplierSelect.BackColor = System.Drawing.Color.Transparent;
             this.btnSupplierSelect.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSupplierSelect.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnSupplierSelect.FlatAppearance.BorderSize = 3;
+            this.btnSupplierSelect.FlatAppearance.BorderSize = 0;
             this.btnSupplierSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupplierSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupplierSelect.ForeColor = System.Drawing.Color.White;
+            this.btnSupplierSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnSupplierSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplierSelect.Image")));
             this.btnSupplierSelect.Location = new System.Drawing.Point(193, 502);
             this.btnSupplierSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSupplierSelect.Name = "btnSupplierSelect";
             this.btnSupplierSelect.Size = new System.Drawing.Size(189, 36);
             this.btnSupplierSelect.TabIndex = 233;
             this.btnSupplierSelect.Text = "Selecionar";
+            this.btnSupplierSelect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSupplierSelect.UseVisualStyleBackColor = false;
             this.btnSupplierSelect.Click += new System.EventHandler(this.btnSupplierSelect_Click);
             // 
@@ -284,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(563, 550);
             this.Controls.Add(this.btnSupplierSelect);
             this.Controls.Add(this.pnlSuppCNPJ);

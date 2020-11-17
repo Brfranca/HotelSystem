@@ -724,7 +724,7 @@
             this.txtEmployeeSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtEmployeeSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeSearchName.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeSearchName.ForeColor = System.Drawing.Color.White;
             this.txtEmployeeSearchName.Location = new System.Drawing.Point(395, 132);
             this.txtEmployeeSearchName.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeeSearchName.MaxLength = 11;
@@ -752,7 +752,7 @@
             this.txtEmployeeSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtEmployeeSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmployeeSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeSearchCPF.ForeColor = System.Drawing.Color.Black;
+            this.txtEmployeeSearchCPF.ForeColor = System.Drawing.Color.White;
             this.txtEmployeeSearchCPF.Location = new System.Drawing.Point(701, 132);
             this.txtEmployeeSearchCPF.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeeSearchCPF.MaxLength = 11;
