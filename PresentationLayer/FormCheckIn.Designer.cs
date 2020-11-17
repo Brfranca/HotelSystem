@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCheckIn));
-            this.lblID = new System.Windows.Forms.Label();
             this.btnClientClear = new System.Windows.Forms.Button();
-            this.lblCadID = new System.Windows.Forms.Label();
             this.txtClientCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtClientEmail = new System.Windows.Forms.TextBox();
             this.lblCadCliEmail = new System.Windows.Forms.Label();
@@ -40,18 +38,17 @@
             this.lblCadCliCpf = new System.Windows.Forms.Label();
             this.txtClientName = new System.Windows.Forms.TextBox();
             this.lblCadCliNome = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSelecSupp = new System.Windows.Forms.Button();
+            this.lblClient = new System.Windows.Forms.Label();
+            this.btnSelectClient = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRoomPrice = new System.Windows.Forms.TextBox();
             this.lblRoomPrice = new System.Windows.Forms.Label();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.lblRoomFloor = new System.Windows.Forms.Label();
             this.txtRoomNumber = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnSelectRoom = new System.Windows.Forms.Button();
+            this.lblRoom = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,18 +59,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.lblID.Location = new System.Drawing.Point(309, 117);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 23);
-            this.lblID.TabIndex = 209;
-            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnClientClear
             // 
@@ -94,23 +79,11 @@
             this.btnClientClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientClear.UseVisualStyleBackColor = false;
             // 
-            // lblCadID
-            // 
-            this.lblCadID.AutoSize = true;
-            this.lblCadID.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadID.ForeColor = System.Drawing.Color.White;
-            this.lblCadID.Location = new System.Drawing.Point(117, 86);
-            this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(50, 23);
-            this.lblCadID.TabIndex = 207;
-            this.lblCadID.Text = "<id>";
-            this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // txtClientCPF
             // 
             this.txtClientCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
             this.txtClientCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClientCPF.Enabled = false;
             this.txtClientCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtClientCPF.Location = new System.Drawing.Point(44, 196);
             this.txtClientCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -124,6 +97,7 @@
             // 
             this.txtClientEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(236)))));
             this.txtClientEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClientEmail.Enabled = false;
             this.txtClientEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientEmail.ForeColor = System.Drawing.Color.Black;
             this.txtClientEmail.Location = new System.Drawing.Point(44, 254);
@@ -150,6 +124,7 @@
             // 
             this.txtClientPhone1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(241)))), ((int)(((byte)(235)))));
             this.txtClientPhone1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClientPhone1.Enabled = false;
             this.txtClientPhone1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientPhone1.ForeColor = System.Drawing.Color.Black;
             this.txtClientPhone1.Location = new System.Drawing.Point(203, 196);
@@ -188,6 +163,7 @@
             // 
             this.txtClientName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.txtClientName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtClientName.Enabled = false;
             this.txtClientName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtClientName.ForeColor = System.Drawing.Color.Black;
             this.txtClientName.Location = new System.Drawing.Point(44, 140);
@@ -210,36 +186,37 @@
             this.lblCadCliNome.TabIndex = 202;
             this.lblCadCliNome.Text = "Nome";
             // 
-            // label1
+            // lblClient
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.label1.Location = new System.Drawing.Point(38, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 28);
-            this.label1.TabIndex = 210;
-            this.label1.Text = "Cliente:";
+            this.lblClient.AutoSize = true;
+            this.lblClient.BackColor = System.Drawing.Color.Transparent;
+            this.lblClient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.lblClient.Location = new System.Drawing.Point(38, 81);
+            this.lblClient.Name = "lblClient";
+            this.lblClient.Size = new System.Drawing.Size(83, 28);
+            this.lblClient.TabIndex = 210;
+            this.lblClient.Text = "Cliente:";
             // 
-            // btnSelecSupp
+            // btnSelectClient
             // 
-            this.btnSelecSupp.BackColor = System.Drawing.Color.Transparent;
-            this.btnSelecSupp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelecSupp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnSelecSupp.FlatAppearance.BorderSize = 0;
-            this.btnSelecSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelecSupp.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelecSupp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
-            this.btnSelecSupp.Image = ((System.Drawing.Image)(resources.GetObject("btnSelecSupp.Image")));
-            this.btnSelecSupp.Location = new System.Drawing.Point(178, 81);
-            this.btnSelecSupp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSelecSupp.Name = "btnSelecSupp";
-            this.btnSelecSupp.Size = new System.Drawing.Size(185, 35);
-            this.btnSelecSupp.TabIndex = 231;
-            this.btnSelecSupp.Text = "Selecionar Cliente";
-            this.btnSelecSupp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSelecSupp.UseVisualStyleBackColor = false;
+            this.btnSelectClient.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelectClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectClient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnSelectClient.FlatAppearance.BorderSize = 0;
+            this.btnSelectClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectClient.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnSelectClient.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectClient.Image")));
+            this.btnSelectClient.Location = new System.Drawing.Point(178, 81);
+            this.btnSelectClient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSelectClient.Name = "btnSelectClient";
+            this.btnSelectClient.Size = new System.Drawing.Size(185, 35);
+            this.btnSelectClient.TabIndex = 231;
+            this.btnSelectClient.Text = "Selecionar Cliente";
+            this.btnSelectClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSelectClient.UseVisualStyleBackColor = false;
+            this.btnSelectClient.Click += new System.EventHandler(this.btnSelectClient_Click);
             // 
             // label3
             // 
@@ -257,6 +234,7 @@
             // 
             this.txtRoomPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(230)))), ((int)(((byte)(229)))));
             this.txtRoomPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRoomPrice.Enabled = false;
             this.txtRoomPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomPrice.ForeColor = System.Drawing.Color.Black;
             this.txtRoomPrice.Location = new System.Drawing.Point(701, 206);
@@ -307,6 +285,7 @@
             // 
             this.txtRoomNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.txtRoomNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRoomNumber.Enabled = false;
             this.txtRoomNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomNumber.ForeColor = System.Drawing.Color.Black;
             this.txtRoomNumber.Location = new System.Drawing.Point(512, 147);
@@ -317,36 +296,37 @@
             this.txtRoomNumber.Size = new System.Drawing.Size(144, 27);
             this.txtRoomNumber.TabIndex = 259;
             // 
-            // button1
+            // btnSelectRoom
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(646, 87);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 35);
-            this.button1.TabIndex = 274;
-            this.button1.Text = "Selecionar Quarto";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSelectRoom.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelectRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectRoom.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnSelectRoom.FlatAppearance.BorderSize = 0;
+            this.btnSelectRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectRoom.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnSelectRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectRoom.Image")));
+            this.btnSelectRoom.Location = new System.Drawing.Point(646, 87);
+            this.btnSelectRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSelectRoom.Name = "btnSelectRoom";
+            this.btnSelectRoom.Size = new System.Drawing.Size(187, 35);
+            this.btnSelectRoom.TabIndex = 274;
+            this.btnSelectRoom.Text = "Selecionar Quarto";
+            this.btnSelectRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSelectRoom.UseVisualStyleBackColor = false;
+            this.btnSelectRoom.Click += new System.EventHandler(this.btnSelectRoom_Click);
             // 
-            // label5
+            // lblRoom
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.label5.Location = new System.Drawing.Point(506, 88);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 28);
-            this.label5.TabIndex = 273;
-            this.label5.Text = "Quarto:";
+            this.lblRoom.AutoSize = true;
+            this.lblRoom.BackColor = System.Drawing.Color.Transparent;
+            this.lblRoom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.lblRoom.Location = new System.Drawing.Point(506, 88);
+            this.lblRoom.Name = "lblRoom";
+            this.lblRoom.Size = new System.Drawing.Size(84, 28);
+            this.lblRoom.TabIndex = 273;
+            this.lblRoom.Text = "Quarto:";
             // 
             // label8
             // 
@@ -360,23 +340,11 @@
             this.label8.TabIndex = 270;
             this.label8.Text = "Nome";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(585, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 23);
-            this.label2.TabIndex = 275;
-            this.label2.Text = "<id>";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(671, 147);
@@ -391,6 +359,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
             this.textBox2.Location = new System.Drawing.Point(511, 206);
@@ -500,9 +469,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnSelectRoom);
+            this.Controls.Add(this.lblRoom);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtRoomPrice);
@@ -510,11 +478,9 @@
             this.Controls.Add(this.lblRoomType);
             this.Controls.Add(this.lblRoomFloor);
             this.Controls.Add(this.txtRoomNumber);
-            this.Controls.Add(this.btnSelecSupp);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.btnSelectClient);
+            this.Controls.Add(this.lblClient);
             this.Controls.Add(this.btnClientClear);
-            this.Controls.Add(this.lblCadID);
             this.Controls.Add(this.txtClientCPF);
             this.Controls.Add(this.txtClientEmail);
             this.Controls.Add(this.lblCadCliEmail);
@@ -535,10 +501,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnClientClear;
-        private System.Windows.Forms.Label lblCadID;
         private System.Windows.Forms.MaskedTextBox txtClientCPF;
         private System.Windows.Forms.TextBox txtClientEmail;
         private System.Windows.Forms.Label lblCadCliEmail;
@@ -547,18 +510,17 @@
         private System.Windows.Forms.Label lblCadCliCpf;
         private System.Windows.Forms.TextBox txtClientName;
         private System.Windows.Forms.Label lblCadCliNome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSelecSupp;
+        private System.Windows.Forms.Label lblClient;
+        private System.Windows.Forms.Button btnSelectClient;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRoomPrice;
         private System.Windows.Forms.Label lblRoomPrice;
         private System.Windows.Forms.Label lblRoomType;
         private System.Windows.Forms.Label lblRoomFloor;
         private System.Windows.Forms.TextBox txtRoomNumber;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnSelectRoom;
+        private System.Windows.Forms.Label lblRoom;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;

@@ -108,11 +108,23 @@
     <Compile Include="FormRegisterSupplier.Designer.cs">
       <DependentUpon>FormRegisterSupplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchClient.Designer.cs">
+      <DependentUpon>FormSearchClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSearchProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSearchProduct.Designer.cs">
       <DependentUpon>FormSearchProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchRoom.Designer.cs">
+      <DependentUpon>FormSearchRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSearchSupplier.cs">
       <SubType>Form</SubType>
@@ -126,13 +138,6 @@
     <Compile Include="FormSearchSupplierIncome.Designer.cs">
       <DependentUpon>FormSearchSupplierIncome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Load\FormLoad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Load\FormLoad.Designer.cs">
-      <DependentUpon>FormLoad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Load\Loading.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormRegisterClient.cs">
@@ -169,17 +174,20 @@
     <EmbeddedResource Include="FormRegisterSupplier.resx">
       <DependentUpon>FormRegisterSupplier.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchClient.resx">
+      <DependentUpon>FormSearchClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSearchProduct.resx">
       <DependentUpon>FormSearchProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchRoom.resx">
+      <DependentUpon>FormSearchRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchSupplier.resx">
       <DependentUpon>FormSearchSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchSupplierIncome.resx">
       <DependentUpon>FormSearchSupplierIncome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Load\FormLoad.resx">
-      <DependentUpon>FormLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

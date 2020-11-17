@@ -112,7 +112,7 @@ namespace PresentationLayer
 
         private void txtSuppSearchCNPJ_TextChanged(object sender, EventArgs e)
         {
-            FilterGrid(txtSuppSearchName, txtSuppSearchCNPJ, x => x.CompanyName.ToLower().Contains(txtSuppSearchName.Text.ToLower()));
+            FilterGrid(txtSuppSearchCNPJ, txtSuppSearchName, x => x.CNPJ.ToLower().Contains(txtSuppSearchCNPJ.Text.ToLower()));
         }
 
         private void dgvSuppliersSearch_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -77,22 +77,23 @@ namespace PresentationLayer
 
         private void txtSuppSearchName_Enter(object sender, EventArgs e)
         {
-            pnlSuppName.BackColor = Color.FromArgb(37, 206, 15);
+
+            pnlSuppName.EnterEvent();
         }
 
         private void txtSuppSearchName_Leave(object sender, EventArgs e)
         {
-            pnlSuppName.BackColor = Color.Black;
+            pnlSuppName.LeaveEvent();
         }
 
         private void txtSuppSearchCNPJ_Enter(object sender, EventArgs e)
         {
-            pnlSuppCNPJ.BackColor = Color.FromArgb(37, 206, 15);
+            pnlSuppCNPJ.EnterEvent();
         }
 
         private void txtSuppSearchCNPJ_Leave(object sender, EventArgs e)
         {
-            pnlSuppCNPJ.BackColor = Color.Black;
+            pnlSuppCNPJ.LeaveEvent();
         }
 
         private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Supplier, bool> predicate)
@@ -111,8 +112,6 @@ namespace PresentationLayer
                 dgvSuppliersSearch.Rows.Clear();
                 InsertGrid(_supplierGrid);
             }
-
-
         }
 
         private void txtSuppSearchName_TextChanged(object sender, EventArgs e)
