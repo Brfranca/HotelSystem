@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlLeftBar = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
+            this.lblDateTime = new System.Windows.Forms.Label();
             this.btnRoom = new System.Windows.Forms.Button();
             this.pnlEmpSubMenu = new System.Windows.Forms.Panel();
             this.btnChangePassword = new System.Windows.Forms.Button();
@@ -47,24 +51,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblEmployeeName = new System.Windows.Forms.Label();
             this.lblHello = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblLogout = new System.Windows.Forms.Label();
-            this.lblDateTime = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.picMainClose = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnlDisplay = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCheckIn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlLeftBar.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnlEmpSubMenu.SuspendLayout();
             this.pnlProdSubMenu.SuspendLayout();
             this.pnlSubClient.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.pnlDisplay.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeftBar
@@ -89,6 +95,64 @@
             this.pnlLeftBar.Name = "pnlLeftBar";
             this.pnlLeftBar.Size = new System.Drawing.Size(300, 548);
             this.pnlLeftBar.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblLogout);
+            this.panel3.Controls.Add(this.lblDateTime);
+            this.panel3.Location = new System.Drawing.Point(2, 419);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(298, 127);
+            this.panel3.TabIndex = 39;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.label5.Location = new System.Drawing.Point(3, 98);
+            this.label5.MinimumSize = new System.Drawing.Size(298, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(338, 21);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblLogout
+            // 
+            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.BackColor = System.Drawing.Color.Transparent;
+            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.lblLogout.Location = new System.Drawing.Point(89, 48);
+            this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(144, 22);
+            this.lblLogout.TabIndex = 21;
+            this.lblLogout.Text = "Sair do Sistema";
+            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDateTime
+            // 
+            this.lblDateTime.AutoSize = true;
+            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.lblDateTime.ForeColor = System.Drawing.Color.White;
+            this.lblDateTime.Location = new System.Drawing.Point(0, 14);
+            this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.Size = new System.Drawing.Size(298, 22);
+            this.lblDateTime.TabIndex = 0;
+            this.lblDateTime.Text = "<hora>";
+            this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRoom
             // 
@@ -353,53 +417,6 @@
             this.lblHello.TabIndex = 0;
             this.lblHello.Text = "Olá,";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(3, 98);
-            this.label5.MinimumSize = new System.Drawing.Size(298, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(338, 21);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblLogout
-            // 
-            this.lblLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLogout.AutoSize = true;
-            this.lblLogout.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLogout.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.lblLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblLogout.Location = new System.Drawing.Point(89, 48);
-            this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
-            this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(144, 22);
-            this.lblLogout.TabIndex = 21;
-            this.lblLogout.Text = "Sair do Sistema";
-            this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDateTime
-            // 
-            this.lblDateTime.AutoSize = true;
-            this.lblDateTime.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateTime.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.lblDateTime.ForeColor = System.Drawing.Color.White;
-            this.lblDateTime.Location = new System.Drawing.Point(0, 14);
-            this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
-            this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(298, 22);
-            this.lblDateTime.TabIndex = 0;
-            this.lblDateTime.Text = "<hora>";
-            this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlTopBar
             // 
             this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
@@ -461,22 +478,76 @@
             // pnlDisplay
             // 
             this.pnlDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
+            this.pnlDisplay.Controls.Add(this.panel2);
             this.pnlDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplay.Location = new System.Drawing.Point(300, 40);
             this.pnlDisplay.Name = "pnlDisplay";
             this.pnlDisplay.Size = new System.Drawing.Size(972, 548);
             this.pnlDisplay.TabIndex = 4;
             // 
-            // panel3
+            // panel2
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.lblLogout);
-            this.panel3.Controls.Add(this.lblDateTime);
-            this.panel3.Location = new System.Drawing.Point(2, 419);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(298, 127);
-            this.panel3.TabIndex = 39;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnCheckIn);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 419);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(972, 129);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnCheckIn
+            // 
+            this.btnCheckIn.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCheckIn.FlatAppearance.BorderSize = 0;
+            this.btnCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckIn.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.btnCheckIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnCheckIn.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckIn.Image")));
+            this.btnCheckIn.Location = new System.Drawing.Point(0, 0);
+            this.btnCheckIn.Name = "btnCheckIn";
+            this.btnCheckIn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCheckIn.Size = new System.Drawing.Size(323, 129);
+            this.btnCheckIn.TabIndex = 33;
+            this.btnCheckIn.Text = "Check In";
+            this.btnCheckIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCheckIn.UseVisualStyleBackColor = true;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(323, 0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(323, 129);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Vendas";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 18F);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(646, 0);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(323, 129);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Check Out";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -497,6 +568,8 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlLeftBar.ResumeLayout(false);
             this.pnlLeftBar.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.pnlEmpSubMenu.ResumeLayout(false);
             this.pnlProdSubMenu.ResumeLayout(false);
             this.pnlSubClient.ResumeLayout(false);
@@ -504,8 +577,8 @@
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlDisplay.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -539,5 +612,9 @@
         private System.Windows.Forms.Button btnCadEmp;
         private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnCheckIn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -244,5 +244,11 @@ namespace PresentationLayer
             OpenChildForm(new FormRegisterRoom());
             HideSubMenu();
         }
+
+        private void btnCheckIn_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormCheckIn());
+            HideSubMenu();
+        }
     }
 }

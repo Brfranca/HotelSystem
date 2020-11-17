@@ -634,20 +634,20 @@
   </data>
   <data name="picRoomClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAC0SURBVEhL7ZHBCoMwEETzJdYfTK+9euwPN9eWyCwMO0vWBr35YMCsbyeg5eYvHq1+zwjqlEie
-        CeqUVCC40AeKkgoEF/pAUVKB4EIfKMpIWFp94XGHC32gKCOhz9fPc8Pxmgt67BI7R9kXIrzAS5x+STS3
-        YF3xAi9x1lbf0dyCdWUk2LtTPxHT55f+ZC7vcKEPFCUVCC70gaKkAsGFPlCUVCC40AeKEskzQZ0SyTNB
-        3c0RSvkB0UgtDMJNLoMAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAALRJREFUSEvt
+        kcEKgzAQRPMl1h9Mr7167A8315bILAw7S9YGvflgwKxvJ6Dl5i8erX7PCOqUSJ4J6pRUILjQB4qSCgQX
+        +kBRUoHgQh8oykhYWn3hcYcLfaAoI6HP189zw/GaC3rsEjtH2RcivMBLnH5JNLdgXfECL3HWVt/R3IJ1
+        ZSTYu1M/EdPnl/5kLu9woQ8UJRUILvSBoqQCwYU+UJRUILjQB4oSyTNBnRLJM0HdzRFK+QHRSC0Mwk0u
+        gwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnSupplierSelect.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADBSURBVEhL7ZJNCsIwEEZzBF34g6CJ6OFa7ajnVFeiC0+h0KZdar4wStCI1GQj5EEWkwlvyMeI
-        RKIV85J6ShcZl3Gx8oYOsqab0pTzdRzGuhgZ8dnKa9qqy6bDrXCS3IsrN2fXSo41w0Zw+Ya7LbKh46zM
-        +tz6jtSrpf2yEfiGBMkBvoovW4GJAFFwKywWF9+QV/nkmnf5+W9Mq/VAajpBiEiesZg79PhZGO6Q6PIH
-        iMLI9zjBsXxCVYshDpeJv0OIO38vsojsbo3cAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAMFJREFUSEvt
+        kk0KwjAQRnMEXfiDoIno4VrtqOdUV6ILT6HQpl1qvjBK0IjUZCPkQRaTCW/Ix4hEohXzknpKFxmXcbHy
+        hg6yppvSlPN1HMa6GBnx2cpr2qrLpsOtcJLciys3Z9dKjjXDRnD5hrstsqHjrMz63PqO1Kul/bIR+IYE
+        yQG+ii9bgYkAUXArLBYX35BX+eSad/n5b0yr9UBqOkGISJ6xmDv0+FkY7pDo8geIwsj3OMGxfEJViyEO
+        l4m/Q4g7fy+yiOxujdwAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="ColumnCompanyName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
