@@ -235,7 +235,7 @@
             this.btnSelecSupp.Location = new System.Drawing.Point(178, 81);
             this.btnSelecSupp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSelecSupp.Name = "btnSelecSupp";
-            this.btnSelecSupp.Size = new System.Drawing.Size(169, 35);
+            this.btnSelecSupp.Size = new System.Drawing.Size(185, 35);
             this.btnSelecSupp.TabIndex = 231;
             this.btnSelecSupp.Text = "Selecionar Cliente";
             this.btnSelecSupp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
