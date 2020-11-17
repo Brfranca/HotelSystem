@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\BaseDAL.cs" />
+    <Compile Include="DAL\CheckInDAL.cs" />
     <Compile Include="DAL\ClientDAL.cs" />
     <Compile Include="DAL\EmployeeDAL.cs" />
     <Compile Include="DAL\IncomeDAL.cs" />

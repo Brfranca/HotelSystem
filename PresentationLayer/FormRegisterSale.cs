@@ -19,6 +19,7 @@ namespace PresentationLayer
         public FormRegisterSale()
         {
             InitializeComponent();
+            _clientBLL = new ClientBLL();
         }
 
         private void btnSearchCliente_Click(object sender, EventArgs e)

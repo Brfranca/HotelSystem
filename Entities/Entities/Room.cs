@@ -18,7 +18,6 @@ namespace Entities
         public RoomFloor RoomFloor { get; set; }
         public RoomType RoomType { get; set; }
         public double PricePerDay { get; set; }
-        public bool RoomAvailability { get; set; }
-
+        public RoomStatus RoomStatus { get; set; }
     }
 }

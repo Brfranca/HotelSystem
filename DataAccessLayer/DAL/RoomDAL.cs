@@ -1,6 +1,7 @@
 ﻿using Common;
 using DataAccessLayer.Infrastructure;
 using Entities;
+using Entities.Enums;
 using System.Collections.Generic;
 using System.Data.Common;
 
@@ -17,16 +18,14 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetSingleData<Room>(command);
         }
 
-        public QueryResponse<List<Room>> GetByAvailability()
+        public QueryResponse<List<Room>> GetByStatus()
         {
             DbCommand command = DbFactory.GetCurrentCommand();
-            command.CommandText = $"{_select} WHERE AVAILABILITY = @AVAILABILITY";
-            command.Parameters.AddWithValue("@AVAILABILITY", true);
+            command.CommandText = $"{_select} WHERE ROOMSTATUS != @ROOMSTATUS";
+            command.Parameters.AddWithValue("@ROOMSTATUS", RoomStatus.Ocupado);
 
             return new DbExecuter().GetAllData<Room>(command);
         }
-
-        //rever se método acima funciona
 
         public bool ExistNumber(string number, int id)
         {

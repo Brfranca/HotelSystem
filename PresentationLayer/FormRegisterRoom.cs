@@ -31,6 +31,8 @@ namespace PresentationLayer
             cmbFloor.DataSource = Enum.GetValues(typeof(RoomFloor));
             UpdateGrid();
             btnRoomDelete.Visible = false;
+            cmbRoomStatus.DataSource = Enum.GetValues(typeof(RoomStatus));
+            cmbRoomStatus.SelectedIndex = -1;
 
         }
 
@@ -69,7 +71,7 @@ namespace PresentationLayer
             room.RoomFloor = (RoomFloor)cmbFloor.SelectedIndex;
             room.RoomType = (RoomType)cmbRoomType.SelectedIndex;
             room.PricePerDay = Convert.ToDouble(txtRoomPrice.Text);
-            room.RoomAvailability = ckAvailability.Checked;
+            room.RoomStatus = RoomStatus.Disponível;
             return room;
         }
 
@@ -92,15 +94,7 @@ namespace PresentationLayer
         {
             foreach (var item in rooms)
             {
-                if (item.RoomAvailability)
-                {
-                    dgvRooms.Rows.Add(item.Number, item.RoomFloor, item.PricePerDay, item.RoomType, "Sim");
-                }
-                else
-                {
-                    dgvRooms.Rows.Add(item.Number, item.RoomFloor, item.PricePerDay, item.RoomType, "Não");
-                }
-                
+                dgvRooms.Rows.Add(item.Number, item.RoomFloor, item.PricePerDay, item.RoomType, item.RoomStatus.ToString());
             }
         }
 
@@ -122,7 +116,6 @@ namespace PresentationLayer
                 cmbFloor.Text = response.Data.RoomFloor.ToString();
                 cmbRoomType.Text = response.Data.RoomType.ToString();
                 txtRoomPrice.Text = response.Data.PricePerDay.ToString();
-                ckAvailability.Checked = response.Data.RoomAvailability;
                 lblID.Text = response.Data.ID.ToString();
 
                 UpdateComponentsEdit();
@@ -182,12 +175,12 @@ namespace PresentationLayer
             SelectDataGrid();
         }
 
-        private void FilterGrid(TextBox textBox, TextBox textBox1, CheckBox checkBox, Func<Room, bool> predicate)
+        private void FilterGrid(TextBox textBox, TextBox textBox1, ComboBox cmb, Func<Room, bool> predicate)
         {
             if (textBox.Text.Length > 0)
             {
                 textBox1.Clear();
-                checkBox.CheckState = CheckState.Unchecked;
+                cmb.SelectedIndex = -1;
                 List<Room> customerFiltered = new List<Room>();
                 customerFiltered.AddRange(_roomGrid.Where(predicate));
                 dgvRooms.Rows.Clear();
@@ -201,9 +194,9 @@ namespace PresentationLayer
             }
         }
 
-        private void FilterGrid(CheckBox checkBox, TextBox textBox, TextBox textBox1, Func<Room, bool> predicate)
+        private void FilterGrid(ComboBox cmb, TextBox textBox, TextBox textBox1, Func<Room, bool> predicate)
         {
-            if (checkBox.Checked)
+            if (cmb.SelectedIndex != -1)
             {
                 textBox.Clear();
                 textBox1.Clear();
@@ -222,12 +215,12 @@ namespace PresentationLayer
 
         private void txtRoomSearchNumber_TextChanged(object sender, EventArgs e)
         {
-            FilterGrid(txtRoomSearchNumber, txtRoomSearchID, checkBox1, x => x.Number.ToLower().Contains(txtRoomSearchNumber.Text.ToLower()));
+            FilterGrid(txtRoomSearchNumber, txtRoomSearchID, cmbRoomStatus, x => x.Number.ToLower().Contains(txtRoomSearchNumber.Text.ToLower()));
         }
 
         private void txtRoomSearchID_TextChanged(object sender, EventArgs e)
         {
-            FilterGrid(txtRoomSearchID, txtRoomSearchNumber, checkBox1, x => x.ID.ToString().Contains(txtRoomSearchID.Text));
+            FilterGrid(txtRoomSearchID, txtRoomSearchNumber, cmbRoomStatus, x => x.ID.ToString().Contains(txtRoomSearchID.Text));
         }
 
         private void txtRoomSearchNumber_Enter(object sender, EventArgs e)
@@ -237,17 +230,12 @@ namespace PresentationLayer
 
         private void txtRoomSearchNumber_Leave(object sender, EventArgs e)
         {
-            pnlSearchNumber.BackColor = Color.Black;
-        }
-
-        private void txtRoomSearchID_Click(object sender, EventArgs e)
-        {
-            pnlsearchID.BackColor = Color.FromArgb(37, 206, 15);
+            pnlSearchNumber.LeaveEvent();
         }
 
         private void txtRoomSearchID_Leave(object sender, EventArgs e)
         {
-            pnlsearchID.BackColor = Color.Black;
+            pnlsearchID.LeaveEvent();
         }
 
         private void picRoomClose_Click(object sender, EventArgs e)
@@ -260,11 +248,14 @@ namespace PresentationLayer
             UpdateGrid();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void cmbRoomStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FilterGrid(checkBox1, txtRoomSearchNumber, txtRoomSearchID, x => x.RoomAvailability.Equals(checkBox1.Checked));
+            FilterGrid(cmbRoomStatus, txtRoomSearchNumber, txtRoomSearchID, x => x.RoomStatus.Equals(cmbRoomStatus.SelectedIndex));
         }
 
-        
+        private void txtRoomSearchID_Enter(object sender, EventArgs e)
+        {
+            pnlsearchID.EnterEvent();
+        }
     }
 }

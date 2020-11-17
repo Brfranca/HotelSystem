@@ -35,7 +35,8 @@ namespace PresentationLayer
         {
             FormSearchRoom frmSearchRoom = new FormSearchRoom();
             frmSearchRoom.ShowDialog();
-            _room = 
+            _room = frmSearchRoom.room;
+            SelectRoom();
         }
 
         private void btnSelectClient_Click(object sender, EventArgs e)
@@ -53,6 +54,20 @@ namespace PresentationLayer
             txtClientEmail.Text = _client.Email;
             txtClientPhone1.Text = _client.Phone1;
             lblClient.Text = "Cliente: " + Convert.ToString(_client.ID);
+        }
+
+        private void SelectRoom()
+        {
+            txtRoomNumber.Text = _room.Number;
+            txtRoomPrice.Text = Convert.ToString(_room.PricePerDay);
+            txtRoomType.Text = _room.RoomType.ToString();
+            txtRoomFloor.Text = _room.RoomFloor.ToString();
+            lblRoom.Text = "Quarto: " + Convert.ToString(_room.ID);
+        }
+
+        private void btnClientClear_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -49,15 +49,15 @@
             this.btnSelectRoom = new System.Windows.Forms.Button();
             this.lblRoom = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRoomFloor = new System.Windows.Forms.TextBox();
+            this.txtRoomType = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnClientRegister = new System.Windows.Forms.Button();
             this.lblDot1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtCheckIn = new System.Windows.Forms.DateTimePicker();
+            this.dtCheckOut = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnClientClear
@@ -78,6 +78,7 @@
             this.btnClientClear.Text = "Limpar";
             this.btnClientClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientClear.UseVisualStyleBackColor = false;
+            this.btnClientClear.Click += new System.EventHandler(this.btnClientClear_Click);
             // 
             // txtClientCPF
             // 
@@ -90,7 +91,7 @@
             this.txtClientCPF.Mask = "000,000,000-00";
             this.txtClientCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientCPF.Name = "txtClientCPF";
-            this.txtClientCPF.Size = new System.Drawing.Size(144, 27);
+            this.txtClientCPF.Size = new System.Drawing.Size(144, 22);
             this.txtClientCPF.TabIndex = 195;
             // 
             // txtClientEmail
@@ -105,7 +106,7 @@
             this.txtClientEmail.MaxLength = 200;
             this.txtClientEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientEmail.Name = "txtClientEmail";
-            this.txtClientEmail.Size = new System.Drawing.Size(303, 27);
+            this.txtClientEmail.Size = new System.Drawing.Size(303, 22);
             this.txtClientEmail.TabIndex = 199;
             // 
             // lblCadCliEmail
@@ -116,7 +117,7 @@
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.White;
             this.lblCadCliEmail.Location = new System.Drawing.Point(40, 231);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
+            this.lblCadCliEmail.Size = new System.Drawing.Size(51, 19);
             this.lblCadCliEmail.TabIndex = 208;
             this.lblCadCliEmail.Text = "E-mail";
             // 
@@ -132,7 +133,7 @@
             this.txtClientPhone1.MaxLength = 11;
             this.txtClientPhone1.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone1.Name = "txtClientPhone1";
-            this.txtClientPhone1.Size = new System.Drawing.Size(144, 27);
+            this.txtClientPhone1.Size = new System.Drawing.Size(144, 22);
             this.txtClientPhone1.TabIndex = 197;
             // 
             // lblCadCliTel1
@@ -143,7 +144,7 @@
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.White;
             this.lblCadCliTel1.Location = new System.Drawing.Point(199, 173);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(77, 23);
+            this.lblCadCliTel1.Size = new System.Drawing.Size(66, 19);
             this.lblCadCliTel1.TabIndex = 205;
             this.lblCadCliTel1.Text = "Telefone";
             // 
@@ -155,7 +156,7 @@
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.White;
             this.lblCadCliCpf.Location = new System.Drawing.Point(40, 174);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
+            this.lblCadCliCpf.Size = new System.Drawing.Size(34, 19);
             this.lblCadCliCpf.TabIndex = 203;
             this.lblCadCliCpf.Text = "CPF";
             // 
@@ -171,7 +172,7 @@
             this.txtClientName.MaxLength = 100;
             this.txtClientName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(303, 27);
+            this.txtClientName.Size = new System.Drawing.Size(303, 22);
             this.txtClientName.TabIndex = 194;
             // 
             // lblCadCliNome
@@ -182,7 +183,7 @@
             this.lblCadCliNome.ForeColor = System.Drawing.Color.White;
             this.lblCadCliNome.Location = new System.Drawing.Point(40, 118);
             this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
+            this.lblCadCliNome.Size = new System.Drawing.Size(50, 19);
             this.lblCadCliNome.TabIndex = 202;
             this.lblCadCliNome.Text = "Nome";
             // 
@@ -194,7 +195,7 @@
             this.lblClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblClient.Location = new System.Drawing.Point(38, 81);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(83, 28);
+            this.lblClient.Size = new System.Drawing.Size(68, 21);
             this.lblClient.TabIndex = 210;
             this.lblClient.Text = "Cliente:";
             // 
@@ -226,7 +227,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(667, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 23);
+            this.label3.Size = new System.Drawing.Size(26, 19);
             this.label3.TabIndex = 265;
             this.label3.Text = "R$";
             // 
@@ -242,7 +243,7 @@
             this.txtRoomPrice.MaxLength = 100;
             this.txtRoomPrice.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomPrice.Name = "txtRoomPrice";
-            this.txtRoomPrice.Size = new System.Drawing.Size(114, 27);
+            this.txtRoomPrice.Size = new System.Drawing.Size(114, 22);
             this.txtRoomPrice.TabIndex = 264;
             // 
             // lblRoomPrice
@@ -253,7 +254,7 @@
             this.lblRoomPrice.ForeColor = System.Drawing.Color.White;
             this.lblRoomPrice.Location = new System.Drawing.Point(667, 183);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(105, 23);
+            this.lblRoomPrice.Size = new System.Drawing.Size(91, 19);
             this.lblRoomPrice.TabIndex = 263;
             this.lblRoomPrice.Text = "Preço diária";
             // 
@@ -265,7 +266,7 @@
             this.lblRoomType.ForeColor = System.Drawing.Color.White;
             this.lblRoomType.Location = new System.Drawing.Point(508, 183);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(130, 23);
+            this.lblRoomType.Size = new System.Drawing.Size(109, 19);
             this.lblRoomType.TabIndex = 261;
             this.lblRoomType.Text = "Tipo de quarto";
             // 
@@ -277,7 +278,7 @@
             this.lblRoomFloor.ForeColor = System.Drawing.Color.White;
             this.lblRoomFloor.Location = new System.Drawing.Point(667, 125);
             this.lblRoomFloor.Name = "lblRoomFloor";
-            this.lblRoomFloor.Size = new System.Drawing.Size(59, 23);
+            this.lblRoomFloor.Size = new System.Drawing.Size(50, 19);
             this.lblRoomFloor.TabIndex = 260;
             this.lblRoomFloor.Text = "Andar";
             // 
@@ -293,7 +294,7 @@
             this.txtRoomNumber.MaxLength = 100;
             this.txtRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomNumber.Name = "txtRoomNumber";
-            this.txtRoomNumber.Size = new System.Drawing.Size(144, 27);
+            this.txtRoomNumber.Size = new System.Drawing.Size(144, 22);
             this.txtRoomNumber.TabIndex = 259;
             // 
             // btnSelectRoom
@@ -324,7 +325,7 @@
             this.lblRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblRoom.Location = new System.Drawing.Point(506, 88);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(84, 28);
+            this.lblRoom.Size = new System.Drawing.Size(67, 21);
             this.lblRoom.TabIndex = 273;
             this.lblRoom.Text = "Quarto:";
             // 
@@ -336,39 +337,39 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(508, 124);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 23);
+            this.label8.Size = new System.Drawing.Size(64, 19);
             this.label8.TabIndex = 270;
-            this.label8.Text = "Nome";
+            this.label8.Text = "Número";
             // 
-            // textBox1
+            // txtRoomFloor
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(671, 147);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.MinimumSize = new System.Drawing.Size(0, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 27);
-            this.textBox1.TabIndex = 276;
+            this.txtRoomFloor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
+            this.txtRoomFloor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRoomFloor.Enabled = false;
+            this.txtRoomFloor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomFloor.ForeColor = System.Drawing.Color.Black;
+            this.txtRoomFloor.Location = new System.Drawing.Point(671, 147);
+            this.txtRoomFloor.Margin = new System.Windows.Forms.Padding(0);
+            this.txtRoomFloor.MaxLength = 100;
+            this.txtRoomFloor.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtRoomFloor.Name = "txtRoomFloor";
+            this.txtRoomFloor.Size = new System.Drawing.Size(144, 22);
+            this.txtRoomFloor.TabIndex = 276;
             // 
-            // textBox2
+            // txtRoomType
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(511, 206);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.MinimumSize = new System.Drawing.Size(0, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 27);
-            this.textBox2.TabIndex = 277;
+            this.txtRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
+            this.txtRoomType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRoomType.Enabled = false;
+            this.txtRoomType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRoomType.ForeColor = System.Drawing.Color.Black;
+            this.txtRoomType.Location = new System.Drawing.Point(511, 206);
+            this.txtRoomType.Margin = new System.Windows.Forms.Padding(0);
+            this.txtRoomType.MaxLength = 100;
+            this.txtRoomType.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtRoomType.Name = "txtRoomType";
+            this.txtRoomType.Size = new System.Drawing.Size(144, 22);
+            this.txtRoomType.TabIndex = 277;
             // 
             // label4
             // 
@@ -378,7 +379,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(38, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 28);
+            this.label4.Size = new System.Drawing.Size(136, 21);
             this.label4.TabIndex = 281;
             this.label4.Text = "Data de Entrada:";
             // 
@@ -390,7 +391,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(40, 431);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 28);
+            this.label10.Size = new System.Drawing.Size(119, 21);
             this.label10.TabIndex = 288;
             this.label10.Text = "Data de Saída:";
             // 
@@ -423,7 +424,7 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 27);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(26, 35);
+            this.lblDot1.Size = new System.Drawing.Size(20, 28);
             this.lblDot1.TabIndex = 294;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,39 +437,39 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label12.Location = new System.Drawing.Point(37, 30);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 35);
+            this.label12.Size = new System.Drawing.Size(92, 28);
             this.label12.TabIndex = 293;
             this.label12.Text = "Check In";
             // 
-            // dateTimePicker1
+            // dtCheckIn
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(45, 385);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(389, 30);
-            this.dateTimePicker1.TabIndex = 295;
+            this.dtCheckIn.Location = new System.Drawing.Point(45, 385);
+            this.dtCheckIn.Name = "dtCheckIn";
+            this.dtCheckIn.Size = new System.Drawing.Size(389, 25);
+            this.dtCheckIn.TabIndex = 295;
             // 
-            // dateTimePicker2
+            // dtCheckOut
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(45, 462);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(389, 30);
-            this.dateTimePicker2.TabIndex = 296;
+            this.dtCheckOut.Location = new System.Drawing.Point(45, 462);
+            this.dtCheckOut.Name = "dtCheckOut";
+            this.dtCheckOut.Size = new System.Drawing.Size(389, 25);
+            this.dtCheckOut.TabIndex = 296;
             // 
             // FormCheckIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtCheckOut);
+            this.Controls.Add(this.dtCheckIn);
             this.Controls.Add(this.lblDot1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnClientRegister);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRoomType);
+            this.Controls.Add(this.txtRoomFloor);
             this.Controls.Add(this.btnSelectRoom);
             this.Controls.Add(this.lblRoom);
             this.Controls.Add(this.label8);
@@ -521,14 +522,14 @@
         private System.Windows.Forms.Button btnSelectRoom;
         private System.Windows.Forms.Label lblRoom;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRoomFloor;
+        private System.Windows.Forms.TextBox txtRoomType;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnClientRegister;
         private System.Windows.Forms.Label lblDot1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtCheckIn;
+        private System.Windows.Forms.DateTimePicker dtCheckOut;
     }
 }

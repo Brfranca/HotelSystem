@@ -28,6 +28,7 @@ namespace PresentationLayer
             pnlSubClient.Visible = false;
             pnlProdSubMenu.Visible = false;
             pnlEmpSubMenu.Visible = false;
+            pnlRoomSubMenu.Visible = false;
         }
 
         private void HideSubMenu()
@@ -38,6 +39,8 @@ namespace PresentationLayer
                 pnlProdSubMenu.Visible = false;
             if (pnlEmpSubMenu.Visible)
                 pnlEmpSubMenu.Visible = false;
+            if (pnlRoomSubMenu.Visible)
+                pnlRoomSubMenu.Visible = false;
         }
 
         private void ShowSubMenu(Panel subMenu)
@@ -58,10 +61,7 @@ namespace PresentationLayer
             employee = FormLogin.employee;
             lblEmployeeName.Text = employee.Name;
 
-
             HideSubMenu();
-       
-
         }
 
         // CRIAR FORM DENTRO DE UM PAINEL 
@@ -231,8 +231,7 @@ namespace PresentationLayer
 
         private void btnRoom_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormRegisterRoom());
-            HideSubMenu();
+            ShowSubMenu(pnlRoomSubMenu);
         }
 
         private void picMinimize_Click(object sender, EventArgs e)
@@ -260,6 +259,22 @@ namespace PresentationLayer
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormChangePassword());
+            HideSubMenu();
+        }
+
+        private void btnCadRoom_MouseHover(object sender, EventArgs e)
+        {
+            btnCadRoom.MouseHoverEvent();
+        }
+
+        private void btnCadRoom_MouseLeave(object sender, EventArgs e)
+        {
+            btnCadRoom.MouseLeaveEvent();
+        }
+
+        private void btnCadRoom_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterRoom());
             HideSubMenu();
         }
     }

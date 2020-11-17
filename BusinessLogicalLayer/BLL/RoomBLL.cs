@@ -73,7 +73,7 @@ namespace BusinessLogicalLayer.BLL
 
         public QueryResponse<List<Room>> GetByAvailability()
         {
-            return _roomDAL.GetByAvailability();
+            return _roomDAL.GetByStatus();
         }
 
         private Response Validate(Room room)

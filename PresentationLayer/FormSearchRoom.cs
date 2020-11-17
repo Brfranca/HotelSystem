@@ -34,7 +34,7 @@ namespace PresentationLayer
         private void UpdateGrid()
         {
             dgvSearch.Rows.Clear();
-            QueryResponse<List<Room>> response = _roomBLL.GetAll();
+            QueryResponse<List<Room>> response = _roomBLL.GetByAvailability();
 
             if (!response.Success)
             {
@@ -50,8 +50,7 @@ namespace PresentationLayer
         {
             foreach (var item in room)
             {
-                //ver o enum se precisa converter
-                dgvSearch.Rows.Add(item.Number, item.RoomType, item.RoomAvailability);
+                dgvSearch.Rows.Add(item.ID, item.Number, item.RoomType.ToString());
             }
         }
 
@@ -80,14 +79,9 @@ namespace PresentationLayer
             _currentRowGrid = e.RowIndex;
         }
 
-        private void txtSearchNumber_TextChanged(object sender, EventArgs e)
-        {
-            FilterGrid(txtSearchNumber, txtSearchType, x => x.Number.ToLower().Contains(txtSearchNumber.Text.ToLower()));
-        }
-
         private void txtSearchType_TextChanged(object sender, EventArgs e)
         {
-            //FilterGrid(txtSearchType, txtSearchNumber, x => x.RoomType.ToLower().Contains(txtSearchType.Text.ToLower()));
+            FilterGrid(txtSearchType, txtSearchNumber, x => x.RoomType.ToString().ToLower().Contains(txtSearchType.Text.ToLower()));
         }
 
         private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Room, bool> predicate)
@@ -106,6 +100,42 @@ namespace PresentationLayer
                 dgvSearch.Rows.Clear();
                 InsertGrid(_roomGrid);
             }
+        }
+
+        private void txtSearchNumber_Enter(object sender, EventArgs e)
+        {
+            pnlNumber.EnterEvent();
+        }
+
+        private void txtSearchNumber_Leave(object sender, EventArgs e)
+        {
+            pnlNumber.LeaveEvent();
+        }
+
+        private void txtSearchType_Enter(object sender, EventArgs e)
+        {
+            pnlType.EnterEvent();
+        }
+
+        private void txtSearchType_Leave(object sender, EventArgs e)
+        {
+            pnlType.LeaveEvent();
+        }
+
+        private void dgvSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
+            SelectDataGrid();
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtSearchNumber_TextChanged_1(object sender, EventArgs e)
+        {
+            FilterGrid(txtSearchNumber, txtSearchType, x => x.Number.ToLower().Contains(txtSearchNumber.Text.ToLower()));
         }
     }
 }

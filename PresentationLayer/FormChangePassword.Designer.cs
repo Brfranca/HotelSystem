@@ -39,12 +39,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.chkShowPassword2 = new System.Windows.Forms.CheckBox();
-            this.chkShowPassword3 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCurrentPass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +79,7 @@
             this.picPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPassword.BackgroundImage")));
             this.picPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picPassword.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.picPassword.Location = new System.Drawing.Point(43, 213);
+            this.picPassword.Location = new System.Drawing.Point(117, 236);
             this.picPassword.Margin = new System.Windows.Forms.Padding(0);
             this.picPassword.Name = "picPassword";
             this.picPassword.Size = new System.Drawing.Size(29, 37);
@@ -92,7 +89,7 @@
             // pnlPassword
             // 
             this.pnlPassword.BackColor = System.Drawing.Color.White;
-            this.pnlPassword.Location = new System.Drawing.Point(85, 249);
+            this.pnlPassword.Location = new System.Drawing.Point(159, 272);
             this.pnlPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(208, 1);
@@ -104,18 +101,18 @@
             this.txtNewPass2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNewPass2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass2.ForeColor = System.Drawing.Color.White;
-            this.txtNewPass2.Location = new System.Drawing.Point(87, 223);
+            this.txtNewPass2.Location = new System.Drawing.Point(161, 246);
             this.txtNewPass2.Margin = new System.Windows.Forms.Padding(0);
             this.txtNewPass2.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtNewPass2.Name = "txtNewPass2";
-            this.txtNewPass2.Size = new System.Drawing.Size(202, 22);
+            this.txtNewPass2.Size = new System.Drawing.Size(202, 26);
             this.txtNewPass2.TabIndex = 225;
             this.txtNewPass2.UseSystemPasswordChar = true;
             // 
             // pnlUser
             // 
             this.pnlUser.BackColor = System.Drawing.Color.White;
-            this.pnlUser.Location = new System.Drawing.Point(87, 197);
+            this.pnlUser.Location = new System.Drawing.Point(161, 220);
             this.pnlUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlUser.Name = "pnlUser";
             this.pnlUser.Size = new System.Drawing.Size(208, 1);
@@ -127,11 +124,11 @@
             this.txtNewPass1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNewPass1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass1.ForeColor = System.Drawing.Color.White;
-            this.txtNewPass1.Location = new System.Drawing.Point(89, 173);
+            this.txtNewPass1.Location = new System.Drawing.Point(163, 196);
             this.txtNewPass1.Margin = new System.Windows.Forms.Padding(0);
             this.txtNewPass1.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtNewPass1.Name = "txtNewPass1";
-            this.txtNewPass1.Size = new System.Drawing.Size(202, 22);
+            this.txtNewPass1.Size = new System.Drawing.Size(202, 26);
             this.txtNewPass1.TabIndex = 223;
             // 
             // pictureBox1
@@ -140,7 +137,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 162);
+            this.pictureBox1.Location = new System.Drawing.Point(117, 185);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 37);
@@ -152,7 +149,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(117, 136);
+            this.label2.Location = new System.Drawing.Point(191, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 234;
@@ -168,7 +165,7 @@
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
-            this.btnChangePassword.Location = new System.Drawing.Point(151, 324);
+            this.btnChangePassword.Location = new System.Drawing.Point(163, 328);
             this.btnChangePassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(189, 53);
@@ -177,38 +174,6 @@
             this.btnChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChangePassword.UseVisualStyleBackColor = false;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
-            // chkShowPassword2
-            // 
-            this.chkShowPassword2.AutoSize = true;
-            this.chkShowPassword2.BackColor = System.Drawing.Color.Transparent;
-            this.chkShowPassword2.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.chkShowPassword2.FlatAppearance.BorderSize = 2;
-            this.chkShowPassword2.ForeColor = System.Drawing.Color.White;
-            this.chkShowPassword2.Location = new System.Drawing.Point(341, 175);
-            this.chkShowPassword2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chkShowPassword2.Name = "chkShowPassword2";
-            this.chkShowPassword2.Size = new System.Drawing.Size(118, 23);
-            this.chkShowPassword2.TabIndex = 237;
-            this.chkShowPassword2.Text = "Mostrar Senha";
-            this.chkShowPassword2.UseVisualStyleBackColor = false;
-            this.chkShowPassword2.CheckedChanged += new System.EventHandler(this.chkShowPassword2_CheckedChanged);
-            // 
-            // chkShowPassword3
-            // 
-            this.chkShowPassword3.AutoSize = true;
-            this.chkShowPassword3.BackColor = System.Drawing.Color.Transparent;
-            this.chkShowPassword3.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.chkShowPassword3.FlatAppearance.BorderSize = 2;
-            this.chkShowPassword3.ForeColor = System.Drawing.Color.White;
-            this.chkShowPassword3.Location = new System.Drawing.Point(341, 227);
-            this.chkShowPassword3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chkShowPassword3.Name = "chkShowPassword3";
-            this.chkShowPassword3.Size = new System.Drawing.Size(118, 23);
-            this.chkShowPassword3.TabIndex = 238;
-            this.chkShowPassword3.Text = "Mostrar Senha";
-            this.chkShowPassword3.UseVisualStyleBackColor = false;
-            this.chkShowPassword3.CheckedChanged += new System.EventHandler(this.chkShowPassword3_CheckedChanged);
             // 
             // label1
             // 
@@ -244,31 +209,12 @@
             this.panel1.Size = new System.Drawing.Size(208, 1);
             this.panel1.TabIndex = 231;
             // 
-            // chkShowPassword
-            // 
-            this.chkShowPassword.AutoSize = true;
-            this.chkShowPassword.BackColor = System.Drawing.Color.Transparent;
-            this.chkShowPassword.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.chkShowPassword.FlatAppearance.BorderSize = 2;
-            this.chkShowPassword.ForeColor = System.Drawing.Color.White;
-            this.chkShowPassword.Location = new System.Drawing.Point(386, 71);
-            this.chkShowPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(118, 23);
-            this.chkShowPassword.TabIndex = 236;
-            this.chkShowPassword.Text = "Mostrar Senha";
-            this.chkShowPassword.UseVisualStyleBackColor = false;
-            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
-            // 
             // FormChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(638, 394);
-            this.Controls.Add(this.chkShowPassword3);
-            this.Controls.Add(this.chkShowPassword2);
-            this.Controls.Add(this.chkShowPassword);
+            this.ClientSize = new System.Drawing.Size(484, 386);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -307,11 +253,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.CheckBox chkShowPassword2;
-        private System.Windows.Forms.CheckBox chkShowPassword3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCurrentPass;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }

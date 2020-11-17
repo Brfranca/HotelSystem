@@ -45,30 +45,5 @@ namespace PresentationLayer
                 this.ClearForm();
             }
         }
-
-        private void chkShowPassword2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkShowPassword2.Checked)
-                txtNewPass1.UseSystemPasswordChar = false;
-            else
-                txtNewPass1.UseSystemPasswordChar = true;
-        }
-
-        private void chkShowPassword3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkShowPassword3.Checked)
-                txtNewPass2.UseSystemPasswordChar = false;
-            else
-                txtNewPass2.UseSystemPasswordChar = true;
-        }
-
-        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
-        {
-
-            if (chkShowPassword.Checked)
-                txtCurrentPass.UseSystemPasswordChar = false;
-            else
-                txtCurrentPass.UseSystemPasswordChar = true;
-        }
     }
 }

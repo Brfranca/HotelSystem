@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAnnotations\NonEditable.cs" />
+    <Compile Include="Entities\CheckIn.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="DataAnnotations\TableName.cs" />
     <Compile Include="Entities\Employee.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Entities\Supplier_Product.cs" />
     <Compile Include="Enums\EmployeeType.cs" />
     <Compile Include="Enums\RoomFloor.cs" />
+    <Compile Include="Enums\RoomStatus.cs" />
     <Compile Include="Enums\RoomType.cs" />
     <Compile Include="Entities\Income.cs" />
     <Compile Include="Interface\IEntity.cs" />

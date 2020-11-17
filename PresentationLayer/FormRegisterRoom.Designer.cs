@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterRoom));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRoomClear = new System.Windows.Forms.Button();
             this.lblConsFornCadastrados = new System.Windows.Forms.Label();
             this.dgvRooms = new System.Windows.Forms.DataGridView();
@@ -59,16 +59,16 @@
             this.lblRoomPrice = new System.Windows.Forms.Label();
             this.txtRoomPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ckAvailability = new System.Windows.Forms.CheckBox();
             this.pnlSearchNumber = new System.Windows.Forms.Panel();
             this.pnlsearchID = new System.Windows.Forms.Panel();
             this.lblCadID = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.cmbFloor = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.picRoomRefresh = new System.Windows.Forms.PictureBox();
             this.lblDot1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbRoomStatus = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRoomRefresh)).BeginInit();
             this.SuspendLayout();
@@ -101,7 +101,7 @@
             this.lblConsFornCadastrados.ForeColor = System.Drawing.Color.White;
             this.lblConsFornCadastrados.Location = new System.Drawing.Point(387, 167);
             this.lblConsFornCadastrados.Name = "lblConsFornCadastrados";
-            this.lblConsFornCadastrados.Size = new System.Drawing.Size(173, 23);
+            this.lblConsFornCadastrados.Size = new System.Drawing.Size(147, 19);
             this.lblConsFornCadastrados.TabIndex = 237;
             this.lblConsFornCadastrados.Text = "Quartos cadastrados";
             // 
@@ -111,19 +111,19 @@
             this.dgvRooms.AllowUserToDeleteRows = false;
             this.dgvRooms.AllowUserToResizeColumns = false;
             this.dgvRooms.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRooms.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvRooms.ColumnHeadersHeight = 29;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -132,30 +132,30 @@
             this.ColumnPrice,
             this.ColumnRoomType,
             this.ColumnAvailability});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvRooms.Location = new System.Drawing.Point(389, 188);
             this.dgvRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.dgvRooms.RowHeadersVisible = false;
             this.dgvRooms.RowHeadersWidth = 51;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRooms.Size = new System.Drawing.Size(700, 344);
             this.dgvRooms.TabIndex = 238;
@@ -192,7 +192,7 @@
             // 
             // ColumnAvailability
             // 
-            this.ColumnAvailability.HeaderText = "Disponível";
+            this.ColumnAvailability.HeaderText = "Status";
             this.ColumnAvailability.MinimumWidth = 6;
             this.ColumnAvailability.Name = "ColumnAvailability";
             this.ColumnAvailability.ReadOnly = true;
@@ -208,10 +208,10 @@
             this.txtRoomSearchID.MaxLength = 11;
             this.txtRoomSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomSearchID.Name = "txtRoomSearchID";
-            this.txtRoomSearchID.Size = new System.Drawing.Size(145, 27);
+            this.txtRoomSearchID.Size = new System.Drawing.Size(145, 22);
             this.txtRoomSearchID.TabIndex = 236;
-            this.txtRoomSearchID.Click += new System.EventHandler(this.txtRoomSearchID_Click);
             this.txtRoomSearchID.TextChanged += new System.EventHandler(this.txtRoomSearchID_TextChanged);
+            this.txtRoomSearchID.Enter += new System.EventHandler(this.txtRoomSearchID_Enter);
             this.txtRoomSearchID.Leave += new System.EventHandler(this.txtRoomSearchID_Leave);
             // 
             // txtRoomSearchNumber
@@ -225,7 +225,7 @@
             this.txtRoomSearchNumber.MaxLength = 11;
             this.txtRoomSearchNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomSearchNumber.Name = "txtRoomSearchNumber";
-            this.txtRoomSearchNumber.Size = new System.Drawing.Size(195, 27);
+            this.txtRoomSearchNumber.Size = new System.Drawing.Size(195, 22);
             this.txtRoomSearchNumber.TabIndex = 235;
             this.txtRoomSearchNumber.TextChanged += new System.EventHandler(this.txtRoomSearchNumber_TextChanged);
             this.txtRoomSearchNumber.Enter += new System.EventHandler(this.txtRoomSearchNumber_Enter);
@@ -239,7 +239,7 @@
             this.lblConsProdCod.ForeColor = System.Drawing.Color.White;
             this.lblConsProdCod.Location = new System.Drawing.Point(635, 109);
             this.lblConsProdCod.Name = "lblConsProdCod";
-            this.lblConsProdCod.Size = new System.Drawing.Size(28, 23);
+            this.lblConsProdCod.Size = new System.Drawing.Size(23, 19);
             this.lblConsProdCod.TabIndex = 234;
             this.lblConsProdCod.Text = "ID";
             // 
@@ -251,7 +251,7 @@
             this.lblSearchNumero.ForeColor = System.Drawing.Color.White;
             this.lblSearchNumero.Location = new System.Drawing.Point(385, 110);
             this.lblSearchNumero.Name = "lblSearchNumero";
-            this.lblSearchNumero.Size = new System.Drawing.Size(75, 23);
+            this.lblSearchNumero.Size = new System.Drawing.Size(64, 19);
             this.lblSearchNumero.TabIndex = 233;
             this.lblSearchNumero.Text = "Número";
             // 
@@ -263,7 +263,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.label2.Location = new System.Drawing.Point(383, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 32);
+            this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 232;
             this.label2.Text = "Consultar";
             // 
@@ -315,7 +315,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblCadastrar.Location = new System.Drawing.Point(37, 72);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
+            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
             this.lblCadastrar.TabIndex = 224;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -326,7 +326,7 @@
             this.lblRoomNumber.ForeColor = System.Drawing.Color.White;
             this.lblRoomNumber.Location = new System.Drawing.Point(39, 110);
             this.lblRoomNumber.Name = "lblRoomNumber";
-            this.lblRoomNumber.Size = new System.Drawing.Size(75, 23);
+            this.lblRoomNumber.Size = new System.Drawing.Size(64, 19);
             this.lblRoomNumber.TabIndex = 225;
             this.lblRoomNumber.Text = "Número";
             // 
@@ -341,7 +341,7 @@
             this.txtRoomNumber.MaxLength = 100;
             this.txtRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomNumber.Name = "txtRoomNumber";
-            this.txtRoomNumber.Size = new System.Drawing.Size(233, 27);
+            this.txtRoomNumber.Size = new System.Drawing.Size(233, 22);
             this.txtRoomNumber.TabIndex = 226;
             // 
             // btnRoomDelete
@@ -372,7 +372,7 @@
             this.lblRoomFloor.ForeColor = System.Drawing.Color.White;
             this.lblRoomFloor.Location = new System.Drawing.Point(39, 166);
             this.lblRoomFloor.Name = "lblRoomFloor";
-            this.lblRoomFloor.Size = new System.Drawing.Size(59, 23);
+            this.lblRoomFloor.Size = new System.Drawing.Size(50, 19);
             this.lblRoomFloor.TabIndex = 241;
             this.lblRoomFloor.Text = "Andar";
             // 
@@ -384,7 +384,7 @@
             this.lblRoomType.ForeColor = System.Drawing.Color.White;
             this.lblRoomType.Location = new System.Drawing.Point(39, 222);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(130, 23);
+            this.lblRoomType.Size = new System.Drawing.Size(109, 19);
             this.lblRoomType.TabIndex = 243;
             this.lblRoomType.Text = "Tipo de quarto";
             // 
@@ -395,7 +395,7 @@
             this.cmbRoomType.Location = new System.Drawing.Point(43, 245);
             this.cmbRoomType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbRoomType.Name = "cmbRoomType";
-            this.cmbRoomType.Size = new System.Drawing.Size(233, 31);
+            this.cmbRoomType.Size = new System.Drawing.Size(233, 25);
             this.cmbRoomType.TabIndex = 244;
             // 
             // lblRoomPrice
@@ -406,7 +406,7 @@
             this.lblRoomPrice.ForeColor = System.Drawing.Color.White;
             this.lblRoomPrice.Location = new System.Drawing.Point(39, 278);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(105, 23);
+            this.lblRoomPrice.Size = new System.Drawing.Size(91, 19);
             this.lblRoomPrice.TabIndex = 245;
             this.lblRoomPrice.Text = "Preço diária";
             // 
@@ -421,7 +421,7 @@
             this.txtRoomPrice.MaxLength = 100;
             this.txtRoomPrice.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomPrice.Name = "txtRoomPrice";
-            this.txtRoomPrice.Size = new System.Drawing.Size(203, 27);
+            this.txtRoomPrice.Size = new System.Drawing.Size(203, 22);
             this.txtRoomPrice.TabIndex = 246;
             // 
             // label1
@@ -432,22 +432,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(39, 304);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 23);
+            this.label1.Size = new System.Drawing.Size(26, 19);
             this.label1.TabIndex = 247;
             this.label1.Text = "R$";
-            // 
-            // ckAvailability
-            // 
-            this.ckAvailability.AutoSize = true;
-            this.ckAvailability.BackColor = System.Drawing.Color.Transparent;
-            this.ckAvailability.ForeColor = System.Drawing.Color.White;
-            this.ckAvailability.Location = new System.Drawing.Point(43, 332);
-            this.ckAvailability.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ckAvailability.Name = "ckAvailability";
-            this.ckAvailability.Size = new System.Drawing.Size(110, 27);
-            this.ckAvailability.TabIndex = 249;
-            this.ckAvailability.Text = "Disponível";
-            this.ckAvailability.UseVisualStyleBackColor = false;
             // 
             // pnlSearchNumber
             // 
@@ -479,7 +466,7 @@
             this.lblCadID.ForeColor = System.Drawing.Color.White;
             this.lblCadID.Location = new System.Drawing.Point(196, 109);
             this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(33, 23);
+            this.lblCadID.Size = new System.Drawing.Size(27, 19);
             this.lblCadID.TabIndex = 252;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -490,7 +477,7 @@
             this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(229, 109);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 23);
+            this.lblID.Size = new System.Drawing.Size(0, 19);
             this.lblID.TabIndex = 253;
             // 
             // cmbFloor
@@ -500,22 +487,8 @@
             this.cmbFloor.Location = new System.Drawing.Point(43, 188);
             this.cmbFloor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbFloor.Name = "cmbFloor";
-            this.cmbFloor.Size = new System.Drawing.Size(233, 31);
+            this.cmbFloor.Size = new System.Drawing.Size(233, 25);
             this.cmbFloor.TabIndex = 256;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(816, 132);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(181, 27);
-            this.checkBox1.TabIndex = 258;
-            this.checkBox1.Text = "Quartos disponíveis";
-            this.checkBox1.UseVisualStyleBackColor = false;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // picRoomRefresh
             // 
@@ -540,7 +513,7 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 27);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(26, 35);
+            this.lblDot1.Size = new System.Drawing.Size(20, 28);
             this.lblDot1.TabIndex = 264;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -553,26 +526,48 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label3.Location = new System.Drawing.Point(37, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 35);
+            this.label3.Size = new System.Drawing.Size(88, 28);
             this.label3.TabIndex = 263;
             this.label3.Text = "Quartos";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(853, 109);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 19);
+            this.label6.TabIndex = 265;
+            this.label6.Text = "Status";
+            // 
+            // cmbRoomStatus
+            // 
+            this.cmbRoomStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoomStatus.FormattingEnabled = true;
+            this.cmbRoomStatus.Location = new System.Drawing.Point(857, 132);
+            this.cmbRoomStatus.Name = "cmbRoomStatus";
+            this.cmbRoomStatus.Size = new System.Drawing.Size(121, 25);
+            this.cmbRoomStatus.TabIndex = 266;
+            this.cmbRoomStatus.SelectedIndexChanged += new System.EventHandler(this.cmbRoomStatus_SelectedIndexChanged);
+            // 
             // FormRegisterRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);
+            this.Controls.Add(this.cmbRoomStatus);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblDot1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.picRoomRefresh);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmbFloor);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.lblCadID);
             this.Controls.Add(this.pnlsearchID);
             this.Controls.Add(this.pnlSearchNumber);
-            this.Controls.Add(this.ckAvailability);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtRoomPrice);
             this.Controls.Add(this.lblRoomPrice);
@@ -629,20 +624,20 @@
         private System.Windows.Forms.Label lblRoomPrice;
         private System.Windows.Forms.TextBox txtRoomPrice;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox ckAvailability;
         private System.Windows.Forms.Panel pnlSearchNumber;
         private System.Windows.Forms.Panel pnlsearchID;
         private System.Windows.Forms.Label lblCadID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.ComboBox cmbFloor;
+        private System.Windows.Forms.PictureBox picRoomRefresh;
+        private System.Windows.Forms.Label lblDot1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFloor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRoomType;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAvailability;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.PictureBox picRoomRefresh;
-        private System.Windows.Forms.Label lblDot1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbRoomStatus;
     }
 }

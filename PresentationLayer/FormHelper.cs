@@ -120,7 +120,7 @@ namespace PresentationLayer
 
         public static void LeaveEvent(this Panel panel)
         {
-            panel.BackColor = Color.LightGray;
+            panel.BackColor = Color.White;
         }
 
        
