@@ -70,6 +70,20 @@ namespace BusinessLogicalLayer.BLL
         }
 
 
+        public Response UpdatePassword(Employee employee, string password2)
+        {
+            Response result = ValidatePassword(employee, password2);
+            if (!result.Success)
+                return result;
+
+            employee.Password = employee.Password.GenerateHash();
+            Response resultUpdate = _employeeDAL.Update(employee);
+            if (!resultUpdate.Success)
+                return resultUpdate;
+
+            return Response.CreateSuccess("Senha atualizada com sucesso!");
+        }
+
         public Response Delete(Employee employee)
         {
             Response resultDelete = _employeeDAL.Delete(employee);
@@ -136,6 +150,13 @@ namespace BusinessLogicalLayer.BLL
             {
                 return Response.CreateFailureException("Erro na validação do funcionário!", erro);
             }
+        }
+
+        private Response ValidatePassword(Employee employee, string passaword2)
+        {
+            Validator validator = new Validator();
+            ValidatePassword(employee.Password, passaword2, validator);
+            return validator.Validate();
         }
 
         private void ValidateEmail(string email, int id, Validator validator)

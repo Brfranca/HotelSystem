@@ -206,6 +206,7 @@
             this.btnChangePassword.Text = "Alterar senha";
             this.btnChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             this.btnChangePassword.MouseLeave += new System.EventHandler(this.btnChangePassword_MouseLeave);
             this.btnChangePassword.MouseHover += new System.EventHandler(this.btnChangePassword_MouseHover);
             // 
