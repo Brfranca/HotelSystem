@@ -36,9 +36,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSelect = new System.Windows.Forms.Button();
             this.pnlType = new System.Windows.Forms.Panel();
-            this.txtSearchCNPJ = new System.Windows.Forms.TextBox();
+            this.txtSearchType = new System.Windows.Forms.TextBox();
             this.pnlName = new System.Windows.Forms.Panel();
-            this.txtSearchName = new System.Windows.Forms.TextBox();
+            this.txtSearchNumber = new System.Windows.Forms.TextBox();
             this.lblConsSupCod = new System.Windows.Forms.Label();
             this.lblConsSupNome = new System.Windows.Forms.Label();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
@@ -46,6 +46,7 @@
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Disponível = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,6 +74,7 @@
             this.btnSelect.Text = "Selecionar";
             this.btnSelect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // pnlType
             // 
@@ -85,19 +87,20 @@
             this.pnlType.Size = new System.Drawing.Size(206, 1);
             this.pnlType.TabIndex = 248;
             // 
-            // txtSearchCNPJ
+            // txtSearchType
             // 
-            this.txtSearchCNPJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txtSearchCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchCNPJ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCNPJ.ForeColor = System.Drawing.Color.White;
-            this.txtSearchCNPJ.Location = new System.Drawing.Point(339, 90);
-            this.txtSearchCNPJ.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchCNPJ.MaxLength = 11;
-            this.txtSearchCNPJ.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchCNPJ.Name = "txtSearchCNPJ";
-            this.txtSearchCNPJ.Size = new System.Drawing.Size(191, 27);
-            this.txtSearchCNPJ.TabIndex = 249;
+            this.txtSearchType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtSearchType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchType.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchType.ForeColor = System.Drawing.Color.White;
+            this.txtSearchType.Location = new System.Drawing.Point(339, 90);
+            this.txtSearchType.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchType.MaxLength = 11;
+            this.txtSearchType.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtSearchType.Name = "txtSearchType";
+            this.txtSearchType.Size = new System.Drawing.Size(191, 27);
+            this.txtSearchType.TabIndex = 249;
+            this.txtSearchType.TextChanged += new System.EventHandler(this.txtSearchType_TextChanged);
             // 
             // pnlName
             // 
@@ -110,19 +113,20 @@
             this.pnlName.Size = new System.Drawing.Size(270, 1);
             this.pnlName.TabIndex = 246;
             // 
-            // txtSearchName
+            // txtSearchNumber
             // 
-            this.txtSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txtSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.ForeColor = System.Drawing.Color.White;
-            this.txtSearchName.Location = new System.Drawing.Point(26, 89);
-            this.txtSearchName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchName.MaxLength = 11;
-            this.txtSearchName.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(258, 27);
-            this.txtSearchName.TabIndex = 247;
+            this.txtSearchNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtSearchNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchNumber.ForeColor = System.Drawing.Color.White;
+            this.txtSearchNumber.Location = new System.Drawing.Point(26, 89);
+            this.txtSearchNumber.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchNumber.MaxLength = 11;
+            this.txtSearchNumber.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtSearchNumber.Name = "txtSearchNumber";
+            this.txtSearchNumber.Size = new System.Drawing.Size(258, 27);
+            this.txtSearchNumber.TabIndex = 247;
+            this.txtSearchNumber.TextChanged += new System.EventHandler(this.txtSearchName_TextChanged);
             // 
             // lblConsSupCod
             // 
@@ -170,6 +174,7 @@
             this.dgvSearch.ColumnHeadersHeight = 29;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.ColumnCompanyName,
             this.ColumnCnpj,
             this.Disponível});
@@ -200,6 +205,7 @@
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearch.Size = new System.Drawing.Size(518, 379);
             this.dgvSearch.TabIndex = 243;
+            this.dgvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellClick);
             // 
             // pnlTopBar
             // 
@@ -254,8 +260,16 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Quartos cadastrados";
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 30F;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            // 
             // ColumnCompanyName
             // 
+            this.ColumnCompanyName.FillWeight = 70F;
             this.ColumnCompanyName.HeaderText = "Número";
             this.ColumnCompanyName.MinimumWidth = 6;
             this.ColumnCompanyName.Name = "ColumnCompanyName";
@@ -263,7 +277,7 @@
             // 
             // ColumnCnpj
             // 
-            this.ColumnCnpj.FillWeight = 75F;
+            this.ColumnCnpj.FillWeight = 60F;
             this.ColumnCnpj.HeaderText = "Tipo";
             this.ColumnCnpj.MinimumWidth = 6;
             this.ColumnCnpj.Name = "ColumnCnpj";
@@ -284,9 +298,9 @@
             this.ClientSize = new System.Drawing.Size(563, 550);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.pnlType);
-            this.Controls.Add(this.txtSearchCNPJ);
+            this.Controls.Add(this.txtSearchType);
             this.Controls.Add(this.pnlName);
-            this.Controls.Add(this.txtSearchName);
+            this.Controls.Add(this.txtSearchNumber);
             this.Controls.Add(this.lblConsSupCod);
             this.Controls.Add(this.lblConsSupNome);
             this.Controls.Add(this.dgvSearch);
@@ -296,6 +310,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchRoom";
             this.Text = "FormSearchRoom";
+            this.Load += new System.EventHandler(this.FormSearchRoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
@@ -310,9 +325,9 @@
 
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Panel pnlType;
-        private System.Windows.Forms.TextBox txtSearchCNPJ;
+        private System.Windows.Forms.TextBox txtSearchType;
         private System.Windows.Forms.Panel pnlName;
-        private System.Windows.Forms.TextBox txtSearchName;
+        private System.Windows.Forms.TextBox txtSearchNumber;
         private System.Windows.Forms.Label lblConsSupCod;
         private System.Windows.Forms.Label lblConsSupNome;
         private System.Windows.Forms.DataGridView dgvSearch;
@@ -320,6 +335,7 @@
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn Disponível;
