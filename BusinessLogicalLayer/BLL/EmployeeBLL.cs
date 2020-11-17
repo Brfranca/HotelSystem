@@ -46,11 +46,11 @@ namespace BusinessLogicalLayer.BLL
             if (!result.Success)
                 return result;
 
+            employee.Password = employee.Password.GenerateHash();
             Response resultInsert = _employeeDAL.Insert(employee);
             if (!resultInsert.Success)
                 return resultInsert;
 
-            //_employee.Insert(employee) vem do BaseDAL 
 
             return Response.CreateSuccess("Funcionário cadastrado com sucesso!");
         }

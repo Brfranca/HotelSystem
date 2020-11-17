@@ -53,7 +53,7 @@
             // 
             // pnlUser
             // 
-            this.pnlUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlUser.BackColor = System.Drawing.Color.White;
             this.pnlUser.Location = new System.Drawing.Point(84, 132);
             this.pnlUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlUser.Name = "pnlUser";
@@ -97,7 +97,7 @@
             // txtUser
             // 
             this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(240)))), ((int)(((byte)(238)))));
+            this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(86, 108);
@@ -111,7 +111,7 @@
             // 
             // pnlEmployeeTopBar
             // 
-            this.pnlEmployeeTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(85)))), ((int)(((byte)(77)))));
+            this.pnlEmployeeTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlEmployeeTopBar.Controls.Add(this.picIcone);
             this.pnlEmployeeTopBar.Controls.Add(this.label5);
             this.pnlEmployeeTopBar.Controls.Add(this.picLoginClose);
@@ -177,7 +177,7 @@
             // 
             // pnlPassword
             // 
-            this.pnlPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.pnlPassword.BackColor = System.Drawing.Color.White;
             this.pnlPassword.Location = new System.Drawing.Point(85, 191);
             this.pnlPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlPassword.Name = "pnlPassword";
@@ -187,7 +187,7 @@
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))));
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(87, 165);
@@ -245,8 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(234)))), ((int)(((byte)(233)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(350, 350);
             this.Controls.Add(this.picAttencion);
             this.Controls.Add(this.picPassword);
