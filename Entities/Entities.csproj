@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DataAnnotations\NonEditable.cs" />
     <Compile Include="Entities\CheckIn.cs" />
+    <Compile Include="Entities\CheckOut.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="DataAnnotations\TableName.cs" />
     <Compile Include="Entities\Employee.cs" />

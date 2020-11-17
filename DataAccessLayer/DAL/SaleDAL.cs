@@ -29,10 +29,11 @@ namespace DataAccessLayer.DAL
                             SaleId = resultInsert.Id
                         };
 
-                        cmd.CommandText = @"INSERT INTO SALEITEMS (SALEID,PRODUCTID,QUANTITY) VALUES (@SALEID,@PRODUCTID,@QUANTITY) WHERE SALEID = @SALEID; UPDATE PRODUCTS SET STOCK -= @QUANTITY WHERE ID = @PRODUCTID";
+                        cmd.CommandText = @"INSERT INTO SALEITEMS (SALEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@SALEID,@PRODUCTID,@QUANTITY,@UNITYPRICE) WHERE SALEID = @SALEID; UPDATE PRODUCTS SET STOCK -= @QUANTITY WHERE ID = @PRODUCTID";
                         cmd.Parameters.AddWithValue("@SALEID", item.SaleId);
                         cmd.Parameters.AddWithValue("@PRODUCTID", item.ProductId);
                         cmd.Parameters.AddWithValue("@QUANTITY", item.Quantity);
+                        cmd.Parameters.AddWithValue("@UNITYPRICE", item.UnityPrice);
 
                         Response responseInsertSale = new DbExecuter().ExecuteQuery(cmd);
                         if (!responseInsertSale.Success)
