@@ -107,10 +107,7 @@ namespace PresentationLayer
             lblDateTime.Text = DateTime.Now.ToString("G");
         }
 
-        private void btnCheckIn_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FormCheckIn());
-        }
+        
 
         private void btnProduc_MouseHover(object sender, EventArgs e)
         {
@@ -158,11 +155,6 @@ namespace PresentationLayer
             ShowSubMenu(pnlEmpSubMenu);
         }
 
-        private void btnProduc_Click_1(object sender, EventArgs e)
-        {
-            ShowSubMenu(pnlProdSubMenu);
-        }
-
         private void btnCadProd_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormRegisterProduct());
@@ -174,8 +166,6 @@ namespace PresentationLayer
             OpenChildForm(new FormRegisterIncome());
             HideSubMenu();
         }
-
-        
 
         private void btnCadProd_MouseHover(object sender, EventArgs e)
         {
@@ -245,10 +235,26 @@ namespace PresentationLayer
             HideSubMenu();
         }
 
-        private void btnCheckIn_Click_1(object sender, EventArgs e)
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormRegisterSale());
+            HideSubMenu();
+        }
+
+        private void btnCheckIn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormCheckIn());
             HideSubMenu();
+        }
+
+        private void btnProduc_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(pnlProdSubMenu);
         }
     }
 }

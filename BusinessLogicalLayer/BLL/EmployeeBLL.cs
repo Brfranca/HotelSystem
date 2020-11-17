@@ -134,7 +134,7 @@ namespace BusinessLogicalLayer.BLL
             }
             catch (Exception erro)
             {
-                return Response.CreateFailureException("Erro na validação do cliente!", erro);
+                return Response.CreateFailureException("Erro na validação do funcionário!", erro);
             }
         }
 
