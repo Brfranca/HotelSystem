@@ -180,6 +180,16 @@
         mRJ7ZEtse+H6vZjw+r9IrLDthev3cjq6VG6KwtJHzfB/ClF0BG+6ObB9AOgHAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnRegisterClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQJJREFUOE/V
+        kr9OwzAQh/MADCwda18fg39tQSoLlLUbAwt9mPrMwnOw8D6o6oBEKyFa2VcGWn52rgMDSbog8Umn5Hz3
+        OTknxf8hensU2L5EtlN56HR1uRlJEKYl5C/EBjHTUj0QexDmkSniusVbbKKzr1quRjz1k7zmzqVw+0y8
+        XWlcaMvviLPnWZ6YQc4xxm6z3FBFYDNE8yJ6c5Jzb6+SLBNzmhuqCK5980N25jrJu7wSlec4pOMy30PW
+        GRdp9pyXZ/DW6MASwvYZzXf5HlKWdbNa3j0d4vt+4LNRYBqXT6a+lusRZ24hfSKWmP8p/bZaakZwdB8d
+        jbaPrQNd+iuK4hvH6JsOuXLYGQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnClients.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAclJREFUSEvt
@@ -191,16 +201,6 @@
         G4trhPPla7cwQYYPvjHpTrzNkFaL2NJsri+RyS3pN2DqS8RuaC0v0s/ejbZsyD2aXncBk1jR9nceu/em
         Bd800qSVxIsG7emQG3jTiYP+tUdRw+Pkcv0A7ZKouQ34jbhVRuLcdho/iwK3pE8hlBlxjIJxBaEwOGHK
         T1dT9lOmVOxhL3C8fUWDilPmC62MDSVLrMP/0bQ/XeIKSEyjQlEAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnRegisterClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAQJJREFUOE/V
-        kr9OwzAQh/MADCwda18fg39tQSoLlLUbAwt9mPrMwnOw8D6o6oBEKyFa2VcGWn52rgMDSbog8Umn5Hz3
-        OTknxf8hensU2L5EtlN56HR1uRlJEKYl5C/EBjHTUj0QexDmkSniusVbbKKzr1quRjz1k7zmzqVw+0y8
-        XWlcaMvviLPnWZ6YQc4xxm6z3FBFYDNE8yJ6c5Jzb6+SLBNzmhuqCK5980N25jrJu7wSlec4pOMy30PW
-        GRdp9pyXZ/DW6MASwvYZzXf5HlKWdbNa3j0d4vt+4LNRYBqXT6a+lusRZ24hfSKWmP8p/bZaakZwdB8d
-        jbaPrQNd+iuK4hvH6JsOuXLYGQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="picIcone.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
