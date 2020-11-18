@@ -83,6 +83,7 @@
     <Compile Include="DAL\EmployeeDAL.cs" />
     <Compile Include="DAL\IncomeDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="DAL\ReservationDAL.cs" />
     <Compile Include="DAL\RoomDAL.cs" />
     <Compile Include="DAL\SaleDAL.cs" />
     <Compile Include="DAL\SupplierDAL.cs" />

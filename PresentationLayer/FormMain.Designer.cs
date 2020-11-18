@@ -102,7 +102,7 @@
             this.pnlLeftBar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLeftBar.MinimumSize = new System.Drawing.Size(80, 20);
             this.pnlLeftBar.Name = "pnlLeftBar";
-            this.pnlLeftBar.Size = new System.Drawing.Size(300, 774);
+            this.pnlLeftBar.Size = new System.Drawing.Size(300, 709);
             this.pnlLeftBar.TabIndex = 3;
             // 
             // pnlRoomSubMenu
@@ -142,7 +142,7 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lblLogout);
             this.panel3.Controls.Add(this.lblDateTime);
-            this.panel3.Location = new System.Drawing.Point(2, 645);
+            this.panel3.Location = new System.Drawing.Point(2, 580);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(298, 127);
             this.panel3.TabIndex = 39;
@@ -557,7 +557,7 @@
             this.pnlDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDisplay.Location = new System.Drawing.Point(300, 40);
             this.pnlDisplay.Name = "pnlDisplay";
-            this.pnlDisplay.Size = new System.Drawing.Size(1020, 774);
+            this.pnlDisplay.Size = new System.Drawing.Size(1020, 709);
             this.pnlDisplay.TabIndex = 4;
             // 
             // panel2
@@ -568,7 +568,7 @@
             this.panel2.Controls.Add(this.btnSale);
             this.panel2.Controls.Add(this.btnCheckIn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 645);
+            this.panel2.Location = new System.Drawing.Point(0, 580);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1020, 129);
             this.panel2.TabIndex = 0;
@@ -650,7 +650,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1320, 814);
+            this.ClientSize = new System.Drawing.Size(1320, 749);
             this.Controls.Add(this.pnlDisplay);
             this.Controls.Add(this.pnlLeftBar);
             this.Controls.Add(this.pnlTopBar);

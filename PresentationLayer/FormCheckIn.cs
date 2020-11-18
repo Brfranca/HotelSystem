@@ -24,7 +24,6 @@ namespace PresentationLayer
         private Client _client;
         private Room _room;
 
-
         public FormCheckIn()
         {
             InitializeComponent();

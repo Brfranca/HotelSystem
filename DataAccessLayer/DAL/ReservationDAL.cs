@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.DAL
 {
-    public class CheckInDAL : BaseDAL<CheckIn>
+    public class ReservationDAL : BaseDAL<Reservation>
     {
         public QueryResponse<List<CheckIn>> GetByActiveState()
         {

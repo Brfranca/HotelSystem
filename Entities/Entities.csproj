@@ -48,6 +48,7 @@
     <Compile Include="DataAnnotations\TableName.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\IncomeItem.cs" />
+    <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\Sale.cs" />
     <Compile Include="Entities\SaleItem.cs" />
     <Compile Include="Entities\Supplier_Product.cs" />

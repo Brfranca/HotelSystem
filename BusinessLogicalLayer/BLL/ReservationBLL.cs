@@ -10,38 +10,38 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
 {
-    public class CheckInBLL
+    public class ReservationBLL
     {
-        private CheckInDAL _checkInDAL;
-        public CheckInBLL()
+        private ReservationDAL _reservationDAL;
+        public ReservationBLL()
         {
-            _checkInDAL = new CheckInDAL();
+            _reservationDAL = new ReservationDAL();
         }
 
-        public Response Register(CheckIn checkIn)
+        public Response Register(Reservation reservation)
         {
-            Response result = Validate(checkIn);
+            Response result = Validate(reservation);
             if (!result.Success)
                 return result;
 
-            Response resultInsert = _checkInDAL.Insert(checkIn);
+            Response resultInsert = _reservationDAL.Insert(reservation);
             if (!resultInsert.Success)
                 return resultInsert;
 
-            return Response.CreateSuccess("Check in realizado com sucesso!");
+            return Response.CreateSuccess("Reserva realizada com sucesso!");
         }
 
-        public Response Validate(CheckIn checkIn)
+        public Response Validate(Reservation reservation)
         {
             try
             {
                 Validator validator = new Validator();
 
-                ValidateClientID(checkIn.ClientID, validator);
-                ValidateRoomID(checkIn.RoomID, validator);
-                ValidateEntryDate(checkIn.EntryDate, validator);
-                ValidateDepartureDate(checkIn.DepartureDate, validator);
-                ValidateRoomPrice(checkIn.RoomPrice, validator);
+                ValidateClientID(reservation.ClientID, validator);
+                ValidateRoomID(reservation.RoomID, validator);
+                ValidateEntryDate(reservation.EntryDate, validator);
+                ValidateDepartureDate(reservation.DepartureDate, validator);
+                ValidateRoomPrice(reservation.RoomPrice, validator);
 
                 return validator.Validate();
             }
@@ -94,7 +94,7 @@ namespace BusinessLogicalLayer.BLL
 
         public QueryResponse<List<CheckIn>> GetByActiveState()
         {
-            return _checkInDAL.GetByActiveState();
+            return _reservationDAL.GetByActiveState();
         }
 
         private void ValidateRoomID(int roomID, Validator validator)
@@ -122,14 +122,15 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        public QueryResponse<CheckIn> GetById(int id)
-        {
-            return _checkInDAL.GetById(id);
-        }
+        //public QueryResponse<CheckIn> GetById(int id)
+        //{
+        //    return _checkInDAL.GetById(id);
+        //}
 
-        public QueryResponse<List<CheckIn>> GetAll()
-        {
-            return _checkInDAL.GetAll();
-        }
+        //public QueryResponse<List<CheckIn>> GetAll()
+        //{
+        //    return _checkInDAL.GetAll();
+        //}
+
     }
 }

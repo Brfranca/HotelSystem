@@ -34,21 +34,22 @@
             this.btnClientRegister = new System.Windows.Forms.Button();
             this.btnSelectRoom = new System.Windows.Forms.Button();
             this.lblRoom = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblRoomNumber = new System.Windows.Forms.Label();
             this.lblRoomPrice = new System.Windows.Forms.Label();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.lblRoomFloor = new System.Windows.Forms.Label();
             this.btnSelectClient = new System.Windows.Forms.Button();
             this.lblClient = new System.Windows.Forms.Label();
-            this.btnClientClear = new System.Windows.Forms.Button();
-            this.lblCadCliEmail = new System.Windows.Forms.Label();
-            this.lblCadCliTel1 = new System.Windows.Forms.Label();
-            this.lblCadCliCpf = new System.Windows.Forms.Label();
-            this.lblCadCliNome = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.lblClientEmail = new System.Windows.Forms.Label();
+            this.lblClientPhone = new System.Windows.Forms.Label();
+            this.lblClientCpf = new System.Windows.Forms.Label();
+            this.lblClientName = new System.Windows.Forms.Label();
             this.dtCheckOut = new System.Windows.Forms.DateTimePicker();
             this.dtCheckIn = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnSeachReservation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDot1
@@ -88,7 +89,7 @@
             this.btnClientRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnClientRegister.Image = ((System.Drawing.Image)(resources.GetObject("btnClientRegister.Image")));
-            this.btnClientRegister.Location = new System.Drawing.Point(147, 444);
+            this.btnClientRegister.Location = new System.Drawing.Point(147, 449);
             this.btnClientRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientRegister.Name = "btnClientRegister";
             this.btnClientRegister.Size = new System.Drawing.Size(189, 53);
@@ -96,6 +97,7 @@
             this.btnClientRegister.Text = "Cadastrar";
             this.btnClientRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientRegister.UseVisualStyleBackColor = false;
+            this.btnClientRegister.Click += new System.EventHandler(this.btnClientRegister_Click);
             // 
             // btnSelectRoom
             // 
@@ -115,6 +117,7 @@
             this.btnSelectRoom.Text = "Selecionar Quarto";
             this.btnSelectRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSelectRoom.UseVisualStyleBackColor = false;
+            this.btnSelectRoom.Click += new System.EventHandler(this.btnSelectRoom_Click);
             // 
             // lblRoom
             // 
@@ -128,17 +131,17 @@
             this.lblRoom.TabIndex = 315;
             this.lblRoom.Text = "Quarto:";
             // 
-            // label8
+            // lblRoomNumber
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(485, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 19);
-            this.label8.TabIndex = 314;
-            this.label8.Text = "Número: ";
+            this.lblRoomNumber.AutoSize = true;
+            this.lblRoomNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblRoomNumber.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomNumber.ForeColor = System.Drawing.Color.White;
+            this.lblRoomNumber.Location = new System.Drawing.Point(485, 120);
+            this.lblRoomNumber.Name = "lblRoomNumber";
+            this.lblRoomNumber.Size = new System.Drawing.Size(72, 19);
+            this.lblRoomNumber.TabIndex = 314;
+            this.lblRoomNumber.Text = "Número: ";
             // 
             // lblRoomPrice
             // 
@@ -160,9 +163,9 @@
             this.lblRoomType.ForeColor = System.Drawing.Color.White;
             this.lblRoomType.Location = new System.Drawing.Point(485, 181);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(113, 19);
+            this.lblRoomType.Size = new System.Drawing.Size(114, 19);
             this.lblRoomType.TabIndex = 310;
-            this.lblRoomType.Text = "Tipo de quarto:";
+            this.lblRoomType.Text = "Tipo do quarto:";
             // 
             // lblRoomFloor
             // 
@@ -194,6 +197,7 @@
             this.btnSelectClient.Text = "Selecionar Cliente";
             this.btnSelectClient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSelectClient.UseVisualStyleBackColor = false;
+            this.btnSelectClient.Click += new System.EventHandler(this.btnSelectClient_Click);
             // 
             // lblClient
             // 
@@ -207,72 +211,73 @@
             this.lblClient.TabIndex = 306;
             this.lblClient.Text = "Cliente:";
             // 
-            // btnClientClear
+            // btnClear
             // 
-            this.btnClientClear.BackColor = System.Drawing.Color.Transparent;
-            this.btnClientClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClientClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
-            this.btnClientClear.FlatAppearance.BorderSize = 0;
-            this.btnClientClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
-            this.btnClientClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClientClear.Image")));
-            this.btnClientClear.Location = new System.Drawing.Point(518, 383);
-            this.btnClientClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClientClear.Name = "btnClientClear";
-            this.btnClientClear.Size = new System.Drawing.Size(98, 36);
-            this.btnClientClear.TabIndex = 301;
-            this.btnClientClear.Text = "Limpar";
-            this.btnClientClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientClear.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(92)))), ((int)(((byte)(94)))));
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
+            this.btnClear.Location = new System.Drawing.Point(342, 415);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(98, 36);
+            this.btnClear.TabIndex = 301;
+            this.btnClear.Text = "Limpar";
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // lblCadCliEmail
+            // lblClientEmail
             // 
-            this.lblCadCliEmail.AutoSize = true;
-            this.lblCadCliEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCliEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliEmail.ForeColor = System.Drawing.Color.White;
-            this.lblCadCliEmail.Location = new System.Drawing.Point(40, 212);
-            this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(55, 19);
-            this.lblCadCliEmail.TabIndex = 305;
-            this.lblCadCliEmail.Text = "E-mail:";
+            this.lblClientEmail.AutoSize = true;
+            this.lblClientEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblClientEmail.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientEmail.ForeColor = System.Drawing.Color.White;
+            this.lblClientEmail.Location = new System.Drawing.Point(40, 212);
+            this.lblClientEmail.Name = "lblClientEmail";
+            this.lblClientEmail.Size = new System.Drawing.Size(55, 19);
+            this.lblClientEmail.TabIndex = 305;
+            this.lblClientEmail.Text = "E-mail:";
             // 
-            // lblCadCliTel1
+            // lblClientPhone
             // 
-            this.lblCadCliTel1.AutoSize = true;
-            this.lblCadCliTel1.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCliTel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliTel1.ForeColor = System.Drawing.Color.White;
-            this.lblCadCliTel1.Location = new System.Drawing.Point(40, 182);
-            this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(70, 19);
-            this.lblCadCliTel1.TabIndex = 304;
-            this.lblCadCliTel1.Text = "Telefone:";
+            this.lblClientPhone.AutoSize = true;
+            this.lblClientPhone.BackColor = System.Drawing.Color.Transparent;
+            this.lblClientPhone.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientPhone.ForeColor = System.Drawing.Color.White;
+            this.lblClientPhone.Location = new System.Drawing.Point(40, 182);
+            this.lblClientPhone.Name = "lblClientPhone";
+            this.lblClientPhone.Size = new System.Drawing.Size(70, 19);
+            this.lblClientPhone.TabIndex = 304;
+            this.lblClientPhone.Text = "Telefone:";
             // 
-            // lblCadCliCpf
+            // lblClientCpf
             // 
-            this.lblCadCliCpf.AutoSize = true;
-            this.lblCadCliCpf.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCliCpf.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliCpf.ForeColor = System.Drawing.Color.White;
-            this.lblCadCliCpf.Location = new System.Drawing.Point(40, 152);
-            this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(38, 19);
-            this.lblCadCliCpf.TabIndex = 303;
-            this.lblCadCliCpf.Text = "CPF:";
+            this.lblClientCpf.AutoSize = true;
+            this.lblClientCpf.BackColor = System.Drawing.Color.Transparent;
+            this.lblClientCpf.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientCpf.ForeColor = System.Drawing.Color.White;
+            this.lblClientCpf.Location = new System.Drawing.Point(40, 152);
+            this.lblClientCpf.Name = "lblClientCpf";
+            this.lblClientCpf.Size = new System.Drawing.Size(38, 19);
+            this.lblClientCpf.TabIndex = 303;
+            this.lblClientCpf.Text = "CPF:";
             // 
-            // lblCadCliNome
+            // lblClientName
             // 
-            this.lblCadCliNome.AutoSize = true;
-            this.lblCadCliNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCliNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliNome.ForeColor = System.Drawing.Color.White;
-            this.lblCadCliNome.Location = new System.Drawing.Point(40, 122);
-            this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(58, 19);
-            this.lblCadCliNome.TabIndex = 302;
-            this.lblCadCliNome.Text = "Nome: ";
+            this.lblClientName.AutoSize = true;
+            this.lblClientName.BackColor = System.Drawing.Color.Transparent;
+            this.lblClientName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientName.ForeColor = System.Drawing.Color.White;
+            this.lblClientName.Location = new System.Drawing.Point(40, 122);
+            this.lblClientName.Name = "lblClientName";
+            this.lblClientName.Size = new System.Drawing.Size(58, 19);
+            this.lblClientName.TabIndex = 302;
+            this.lblClientName.Text = "Nome: ";
             // 
             // dtCheckOut
             // 
@@ -315,12 +320,32 @@
             this.label4.TabIndex = 324;
             this.label4.Text = "Data de Entrada:";
             // 
+            // btnSeachReservation
+            // 
+            this.btnSeachReservation.BackColor = System.Drawing.Color.Transparent;
+            this.btnSeachReservation.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSeachReservation.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnSeachReservation.FlatAppearance.BorderSize = 0;
+            this.btnSeachReservation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeachReservation.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeachReservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
+            this.btnSeachReservation.Image = ((System.Drawing.Image)(resources.GetObject("btnSeachReservation.Image")));
+            this.btnSeachReservation.Location = new System.Drawing.Point(553, 449);
+            this.btnSeachReservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSeachReservation.Name = "btnSeachReservation";
+            this.btnSeachReservation.Size = new System.Drawing.Size(189, 53);
+            this.btnSeachReservation.TabIndex = 328;
+            this.btnSeachReservation.Text = "Selecionar Reservas";
+            this.btnSeachReservation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSeachReservation.UseVisualStyleBackColor = false;
+            // 
             // FormReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);
+            this.Controls.Add(this.btnSeachReservation);
             this.Controls.Add(this.dtCheckOut);
             this.Controls.Add(this.dtCheckIn);
             this.Controls.Add(this.label10);
@@ -330,22 +355,23 @@
             this.Controls.Add(this.btnClientRegister);
             this.Controls.Add(this.btnSelectRoom);
             this.Controls.Add(this.lblRoom);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblRoomNumber);
             this.Controls.Add(this.lblRoomPrice);
             this.Controls.Add(this.lblRoomType);
             this.Controls.Add(this.lblRoomFloor);
             this.Controls.Add(this.btnSelectClient);
             this.Controls.Add(this.lblClient);
-            this.Controls.Add(this.btnClientClear);
-            this.Controls.Add(this.lblCadCliEmail);
-            this.Controls.Add(this.lblCadCliTel1);
-            this.Controls.Add(this.lblCadCliCpf);
-            this.Controls.Add(this.lblCadCliNome);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.lblClientEmail);
+            this.Controls.Add(this.lblClientPhone);
+            this.Controls.Add(this.lblClientCpf);
+            this.Controls.Add(this.lblClientName);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormReservation";
             this.Text = "FomReservation";
+            this.Load += new System.EventHandler(this.FormReservation_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,20 +383,21 @@
         private System.Windows.Forms.Button btnClientRegister;
         private System.Windows.Forms.Button btnSelectRoom;
         private System.Windows.Forms.Label lblRoom;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblRoomNumber;
         private System.Windows.Forms.Label lblRoomPrice;
         private System.Windows.Forms.Label lblRoomType;
         private System.Windows.Forms.Label lblRoomFloor;
         private System.Windows.Forms.Button btnSelectClient;
         private System.Windows.Forms.Label lblClient;
-        private System.Windows.Forms.Button btnClientClear;
-        private System.Windows.Forms.Label lblCadCliEmail;
-        private System.Windows.Forms.Label lblCadCliTel1;
-        private System.Windows.Forms.Label lblCadCliCpf;
-        private System.Windows.Forms.Label lblCadCliNome;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lblClientEmail;
+        private System.Windows.Forms.Label lblClientPhone;
+        private System.Windows.Forms.Label lblClientCpf;
+        private System.Windows.Forms.Label lblClientName;
         private System.Windows.Forms.DateTimePicker dtCheckOut;
         private System.Windows.Forms.DateTimePicker dtCheckIn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSeachReservation;
     }
 }
