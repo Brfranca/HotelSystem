@@ -117,7 +117,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        public Response GetById(int id)
+        public QueryResponse<CheckIn> GetById(int id)
         {
             return _checkInDAL.GetById(id);
         }

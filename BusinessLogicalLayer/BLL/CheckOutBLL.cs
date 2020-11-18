@@ -33,22 +33,36 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("CheckOut realizado com sucesso!");
         }
 
-        public Response CalculateTotalValue(CheckOut checkOut)
+        public double CalculateTotalValue(CheckOut checkOut)
         {
 
-            Response response = _checkInBLL.GetById(checkOut.CheckInID);
-            if (!response.Success)
-                return response;
-            CheckIn ck = new CheckIn
-            {
-                ID = checkOut.CheckInID
-            };
+            checkOut.TotalValue = CalculateTotalSale(checkOut.CheckInID) + CalculateRoomFeed(checkOut);
 
-            QueryResponse<List<Sale>> responseSale = _saleBLL.GetByClientId(ck.ClientID);
+            return checkOut.TotalValue; 
+
+        }
+
+        private double CalculateTotalSale(int checkInId)
+        {
+            QueryResponse<List<Sale>> responseSale = _saleBLL.GetByClientId(checkInId);
             double totalSales = responseSale.Data.Sum(x => x.TotalValue);
+            return totalSales;
+        }
 
-                
-
+        private double CalculateRoomFeed(CheckOut checkOut)
+        {
+            QueryResponse<CheckIn> response = _checkInBLL.GetById(checkOut.CheckInID);
+            TimeSpan duration = checkOut.ExitDay.Subtract(response.Data.EntryDate);
+            double payment = 0.0;
+            if (checkOut.ExitDay.Hour > 12)
+            {
+                payment = response.Data.RoomPrice * Math.Ceiling(duration.TotalDays);
+            }
+            else
+            {
+                payment = response.Data.RoomPrice * duration.TotalDays;
+            }
+            return payment;
         }
 
         private Response Validate(CheckOut checkOut)
