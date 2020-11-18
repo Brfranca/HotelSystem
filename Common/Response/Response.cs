@@ -9,7 +9,7 @@ namespace Common
         public string Message { get; set; }
         public string ExceptionError { get; set; }
         public string StackTrace { get; set; }
-        public int Id { get; set; }
+        public int GeneratedId { get; set; }
         public int ProductId { get; set; }
         public double ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
@@ -20,7 +20,7 @@ namespace Common
 
         public static Response CreateSuccess(string message = "", int id = 0)
         {
-            return new Response { Success = true, Message = message, Id = id };
+            return new Response { Success = true, Message = message, GeneratedId = id };
         }
 
         public static Response CreateFailure(string message)

@@ -158,7 +158,7 @@ namespace BusinessLogicalLayer.BLL
             {
                 validator.AddError("Razão social deve ser informado!");
             }
-            else if (companyName.IsValidFullName())
+            else if (!companyName.IsValidFullName())
             {
                 validator.AddError("Razão social inválida!");
             }

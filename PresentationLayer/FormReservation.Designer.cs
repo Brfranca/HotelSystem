@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReservation));
-            this.dtCheckOut = new System.Windows.Forms.DateTimePicker();
-            this.dtCheckIn = new System.Windows.Forms.DateTimePicker();
             this.lblDot1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnClientRegister = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnSelectRoom = new System.Windows.Forms.Button();
             this.lblRoom = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,26 +45,11 @@
             this.lblCadCliTel1 = new System.Windows.Forms.Label();
             this.lblCadCliCpf = new System.Windows.Forms.Label();
             this.lblCadCliNome = new System.Windows.Forms.Label();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.dtCheckOut = new System.Windows.Forms.DateTimePicker();
+            this.dtCheckIn = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // dtCheckOut
-            // 
-            this.dtCheckOut.Location = new System.Drawing.Point(595, 152);
-            this.dtCheckOut.MinDate = new System.DateTime(2020, 11, 17, 0, 0, 0, 0);
-            this.dtCheckOut.Name = "dtCheckOut";
-            this.dtCheckOut.Size = new System.Drawing.Size(389, 30);
-            this.dtCheckOut.TabIndex = 325;
-            // 
-            // dtCheckIn
-            // 
-            this.dtCheckIn.Enabled = false;
-            this.dtCheckIn.Location = new System.Drawing.Point(595, 75);
-            this.dtCheckIn.Name = "dtCheckIn";
-            this.dtCheckIn.Size = new System.Drawing.Size(389, 30);
-            this.dtCheckIn.TabIndex = 324;
-            this.dtCheckIn.Value = new System.DateTime(2020, 11, 17, 17, 54, 37, 0);
             // 
             // lblDot1
             // 
@@ -81,7 +61,7 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 27);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(26, 35);
+            this.lblDot1.Size = new System.Drawing.Size(20, 28);
             this.lblDot1.TabIndex = 323;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -94,7 +74,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label12.Location = new System.Drawing.Point(37, 30);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(118, 35);
+            this.label12.Size = new System.Drawing.Size(96, 28);
             this.label12.TabIndex = 322;
             this.label12.Text = "Reservas";
             // 
@@ -108,7 +88,7 @@
             this.btnClientRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnClientRegister.Image = ((System.Drawing.Image)(resources.GetObject("btnClientRegister.Image")));
-            this.btnClientRegister.Location = new System.Drawing.Point(694, 211);
+            this.btnClientRegister.Location = new System.Drawing.Point(147, 444);
             this.btnClientRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientRegister.Name = "btnClientRegister";
             this.btnClientRegister.Size = new System.Drawing.Size(189, 53);
@@ -116,30 +96,6 @@
             this.btnClientRegister.Text = "Cadastrar";
             this.btnClientRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientRegister.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(590, 121);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 28);
-            this.label10.TabIndex = 320;
-            this.label10.Text = "Data de Saída:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(675, 34);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 28);
-            this.label4.TabIndex = 319;
-            this.label4.Text = "Data de Entrada:";
             // 
             // btnSelectRoom
             // 
@@ -151,7 +107,7 @@
             this.btnSelectRoom.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnSelectRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectRoom.Image")));
-            this.btnSelectRoom.Location = new System.Drawing.Point(187, 255);
+            this.btnSelectRoom.Location = new System.Drawing.Point(632, 75);
             this.btnSelectRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSelectRoom.Name = "btnSelectRoom";
             this.btnSelectRoom.Size = new System.Drawing.Size(186, 35);
@@ -166,9 +122,9 @@
             this.lblRoom.BackColor = System.Drawing.Color.Transparent;
             this.lblRoom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
-            this.lblRoom.Location = new System.Drawing.Point(38, 261);
+            this.lblRoom.Location = new System.Drawing.Point(483, 81);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(84, 28);
+            this.lblRoom.Size = new System.Drawing.Size(67, 21);
             this.lblRoom.TabIndex = 315;
             this.lblRoom.Text = "Quarto:";
             // 
@@ -178,9 +134,9 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(40, 300);
+            this.label8.Location = new System.Drawing.Point(485, 120);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 23);
+            this.label8.Size = new System.Drawing.Size(72, 19);
             this.label8.TabIndex = 314;
             this.label8.Text = "Número: ";
             // 
@@ -190,9 +146,9 @@
             this.lblRoomPrice.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomPrice.ForeColor = System.Drawing.Color.White;
-            this.lblRoomPrice.Location = new System.Drawing.Point(40, 391);
+            this.lblRoomPrice.Location = new System.Drawing.Point(485, 211);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(110, 23);
+            this.lblRoomPrice.Size = new System.Drawing.Size(95, 19);
             this.lblRoomPrice.TabIndex = 311;
             this.lblRoomPrice.Text = "Preço diária:";
             // 
@@ -202,9 +158,9 @@
             this.lblRoomType.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomType.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomType.ForeColor = System.Drawing.Color.White;
-            this.lblRoomType.Location = new System.Drawing.Point(40, 361);
+            this.lblRoomType.Location = new System.Drawing.Point(485, 181);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(135, 23);
+            this.lblRoomType.Size = new System.Drawing.Size(113, 19);
             this.lblRoomType.TabIndex = 310;
             this.lblRoomType.Text = "Tipo de quarto:";
             // 
@@ -214,9 +170,9 @@
             this.lblRoomFloor.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomFloor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomFloor.ForeColor = System.Drawing.Color.White;
-            this.lblRoomFloor.Location = new System.Drawing.Point(40, 331);
+            this.lblRoomFloor.Location = new System.Drawing.Point(485, 151);
             this.lblRoomFloor.Name = "lblRoomFloor";
-            this.lblRoomFloor.Size = new System.Drawing.Size(65, 23);
+            this.lblRoomFloor.Size = new System.Drawing.Size(55, 19);
             this.lblRoomFloor.TabIndex = 309;
             this.lblRoomFloor.Text = "Andar:";
             // 
@@ -247,7 +203,7 @@
             this.lblClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblClient.Location = new System.Drawing.Point(38, 81);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(83, 28);
+            this.lblClient.Size = new System.Drawing.Size(68, 21);
             this.lblClient.TabIndex = 306;
             this.lblClient.Text = "Cliente:";
             // 
@@ -261,7 +217,7 @@
             this.btnClientClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnClientClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClientClear.Image")));
-            this.btnClientClear.Location = new System.Drawing.Point(43, 477);
+            this.btnClientClear.Location = new System.Drawing.Point(518, 383);
             this.btnClientClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientClear.Name = "btnClientClear";
             this.btnClientClear.Size = new System.Drawing.Size(98, 36);
@@ -278,7 +234,7 @@
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.White;
             this.lblCadCliEmail.Location = new System.Drawing.Point(40, 212);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(66, 23);
+            this.lblCadCliEmail.Size = new System.Drawing.Size(55, 19);
             this.lblCadCliEmail.TabIndex = 305;
             this.lblCadCliEmail.Text = "E-mail:";
             // 
@@ -290,7 +246,7 @@
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.White;
             this.lblCadCliTel1.Location = new System.Drawing.Point(40, 182);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(82, 23);
+            this.lblCadCliTel1.Size = new System.Drawing.Size(70, 19);
             this.lblCadCliTel1.TabIndex = 304;
             this.lblCadCliTel1.Text = "Telefone:";
             // 
@@ -302,7 +258,7 @@
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.White;
             this.lblCadCliCpf.Location = new System.Drawing.Point(40, 152);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(45, 23);
+            this.lblCadCliCpf.Size = new System.Drawing.Size(38, 19);
             this.lblCadCliCpf.TabIndex = 303;
             this.lblCadCliCpf.Text = "CPF:";
             // 
@@ -314,23 +270,64 @@
             this.lblCadCliNome.ForeColor = System.Drawing.Color.White;
             this.lblCadCliNome.Location = new System.Drawing.Point(40, 122);
             this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(68, 23);
+            this.lblCadCliNome.Size = new System.Drawing.Size(58, 19);
             this.lblCadCliNome.TabIndex = 302;
             this.lblCadCliNome.Text = "Nome: ";
             // 
+            // dtCheckOut
+            // 
+            this.dtCheckOut.Location = new System.Drawing.Point(45, 383);
+            this.dtCheckOut.MinDate = new System.DateTime(2020, 11, 18, 0, 0, 0, 0);
+            this.dtCheckOut.Name = "dtCheckOut";
+            this.dtCheckOut.Size = new System.Drawing.Size(389, 25);
+            this.dtCheckOut.TabIndex = 327;
+            // 
+            // dtCheckIn
+            // 
+            this.dtCheckIn.Enabled = false;
+            this.dtCheckIn.Location = new System.Drawing.Point(45, 306);
+            this.dtCheckIn.Name = "dtCheckIn";
+            this.dtCheckIn.Size = new System.Drawing.Size(389, 25);
+            this.dtCheckIn.TabIndex = 326;
+            this.dtCheckIn.Value = new System.DateTime(2020, 11, 18, 0, 0, 0, 0);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(40, 352);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 21);
+            this.label10.TabIndex = 325;
+            this.label10.Text = "Data de Saída:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(38, 275);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 21);
+            this.label4.TabIndex = 324;
+            this.label4.Text = "Data de Entrada:";
+            // 
             // FormReservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);
             this.Controls.Add(this.dtCheckOut);
             this.Controls.Add(this.dtCheckIn);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblDot1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnClientRegister);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSelectRoom);
             this.Controls.Add(this.lblRoom);
             this.Controls.Add(this.label8);
@@ -349,21 +346,15 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormReservation";
             this.Text = "FomReservation";
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dtCheckOut;
-        private System.Windows.Forms.DateTimePicker dtCheckIn;
         private System.Windows.Forms.Label lblDot1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnClientRegister;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSelectRoom;
         private System.Windows.Forms.Label lblRoom;
         private System.Windows.Forms.Label label8;
@@ -377,6 +368,9 @@
         private System.Windows.Forms.Label lblCadCliTel1;
         private System.Windows.Forms.Label lblCadCliCpf;
         private System.Windows.Forms.Label lblCadCliNome;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DateTimePicker dtCheckOut;
+        private System.Windows.Forms.DateTimePicker dtCheckIn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
     }
 }

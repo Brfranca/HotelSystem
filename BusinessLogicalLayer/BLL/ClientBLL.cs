@@ -23,7 +23,6 @@ namespace BusinessLogicalLayer
             if (!result.Success)
                 return result;
 
-            client.CPF = client.CPF.RemoveMaskCPF();
             Response resultInsert = _clienteDAL.Insert(client);
             if (!resultInsert.Success)
                 return resultInsert;

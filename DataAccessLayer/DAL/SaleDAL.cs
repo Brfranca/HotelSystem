@@ -27,7 +27,7 @@ namespace DataAccessLayer.DAL
                     {
                         SaleItem saleItem = new SaleItem
                         {
-                            SaleID = resultInsert.Id
+                            SaleID = resultInsert.GeneratedId
                         };
                         cmd.Parameters.Clear();
                         cmd.CommandText = @"INSERT INTO SALEITEMS (SALEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@SALEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET STOCK -= @QUANTITY WHERE ID = @PRODUCTID";

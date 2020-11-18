@@ -33,7 +33,7 @@ namespace Common
         }
         public static new QueryResponse<T> CreateSuccess(string message = "", int id = 0)
         {
-            return new QueryResponse<T> { Success = true, Message = message, Id = id };
+            return new QueryResponse<T> { Success = true, Message = message, GeneratedId = id };
         }
 
         public static new QueryResponse<T> CreateFailure(string message)
