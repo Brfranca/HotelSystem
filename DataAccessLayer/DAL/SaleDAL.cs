@@ -20,18 +20,19 @@ namespace DataAccessLayer.DAL
                 Response resultInsert = base.InsertScalar(sale);
                 if (!resultInsert.Success)
                     return resultInsert;
+
                 using (DbCommand cmd = DbFactory.GetCurrentCommand())
                 {
                     foreach (var item in sale.SaleItems)
                     {
                         SaleItem saleItem = new SaleItem
                         {
-                            SaleId = resultInsert.Id
+                            SaleID = resultInsert.Id
                         };
-
-                        cmd.CommandText = @"INSERT INTO SALEITEMS (SALEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@SALEID,@PRODUCTID,@QUANTITY,@UNITYPRICE) WHERE SALEID = @SALEID; UPDATE PRODUCTS SET STOCK -= @QUANTITY WHERE ID = @PRODUCTID";
-                        cmd.Parameters.AddWithValue("@SALEID", item.SaleId);
-                        cmd.Parameters.AddWithValue("@PRODUCTID", item.ProductId);
+                        cmd.Parameters.Clear();
+                        cmd.CommandText = @"INSERT INTO SALEITEMS (SALEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@SALEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET STOCK -= @QUANTITY WHERE ID = @PRODUCTID";
+                        cmd.Parameters.AddWithValue("@SALEID", saleItem.SaleID);
+                        cmd.Parameters.AddWithValue("@PRODUCTID", item.ProductID);
                         cmd.Parameters.AddWithValue("@QUANTITY", item.Quantity);
                         cmd.Parameters.AddWithValue("@UNITYPRICE", item.UnityPrice);
 
