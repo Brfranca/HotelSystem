@@ -47,7 +47,7 @@
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
-            this.dgvRooms = new System.Windows.Forms.DataGridView();
+            this.dgvSales = new System.Windows.Forms.DataGridView();
             this.ColumnNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFloor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,13 @@
             this.btnSalesSelect = new System.Windows.Forms.Button();
             this.lblTotalValue = new System.Windows.Forms.Label();
             this.lblTotalValueInsert = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).BeginInit();
+            this.lblNomeInsert = new System.Windows.Forms.Label();
+            this.lblCPFInsert = new System.Windows.Forms.Label();
+            this.lblPhoneInsert = new System.Windows.Forms.Label();
+            this.lblNumberInsert = new System.Windows.Forms.Label();
+            this.lblRoomTypeInsert = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).BeginInit();
             this.SuspendLayout();
             // 
             // dtCheckOut
@@ -199,6 +205,7 @@
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblPhone
             // 
@@ -236,17 +243,17 @@
             this.lblNome.TabIndex = 302;
             this.lblNome.Text = "Nome: ";
             // 
-            // dgvRooms
+            // dgvSales
             // 
-            this.dgvRooms.AllowUserToAddRows = false;
-            this.dgvRooms.AllowUserToDeleteRows = false;
-            this.dgvRooms.AllowUserToResizeColumns = false;
-            this.dgvRooms.AllowUserToResizeRows = false;
+            this.dgvSales.AllowUserToAddRows = false;
+            this.dgvSales.AllowUserToDeleteRows = false;
+            this.dgvSales.AllowUserToResizeColumns = false;
+            this.dgvSales.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvRooms.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRooms.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgvRooms.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSales.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSales.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvSales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -254,10 +261,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvRooms.ColumnHeadersHeight = 29;
-            this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvRooms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSales.ColumnHeadersHeight = 29;
+            this.dgvSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvSales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnNumber,
             this.ColumnFloor,
             this.ColumnPrice});
@@ -268,11 +275,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRooms.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvRooms.Location = new System.Drawing.Point(453, 105);
-            this.dgvRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvRooms.Name = "dgvRooms";
-            this.dgvRooms.ReadOnly = true;
+            this.dgvSales.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSales.Location = new System.Drawing.Point(453, 105);
+            this.dgvSales.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvSales.Name = "dgvSales";
+            this.dgvSales.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -280,15 +287,16 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRooms.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvRooms.RowHeadersVisible = false;
-            this.dgvRooms.RowHeadersWidth = 51;
+            this.dgvSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvSales.RowHeadersVisible = false;
+            this.dgvSales.RowHeadersWidth = 51;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvRooms.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvRooms.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvRooms.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRooms.Size = new System.Drawing.Size(444, 381);
-            this.dgvRooms.TabIndex = 326;
+            this.dgvSales.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSales.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvSales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSales.Size = new System.Drawing.Size(444, 381);
+            this.dgvSales.TabIndex = 326;
+            this.dgvSales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSales_CellClick);
             // 
             // ColumnNumber
             // 
@@ -366,7 +374,79 @@
             this.lblTotalValueInsert.Name = "lblTotalValueInsert";
             this.lblTotalValueInsert.Size = new System.Drawing.Size(64, 19);
             this.lblTotalValueInsert.TabIndex = 330;
-            this.lblTotalValueInsert.Text = "<Valor>";
+            this.lblTotalValueInsert.Text = "<valor>";
+            // 
+            // lblNomeInsert
+            // 
+            this.lblNomeInsert.AutoSize = true;
+            this.lblNomeInsert.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeInsert.ForeColor = System.Drawing.Color.White;
+            this.lblNomeInsert.Location = new System.Drawing.Point(123, 108);
+            this.lblNomeInsert.Name = "lblNomeInsert";
+            this.lblNomeInsert.Size = new System.Drawing.Size(66, 19);
+            this.lblNomeInsert.TabIndex = 331;
+            this.lblNomeInsert.Text = "<name>";
+            // 
+            // lblCPFInsert
+            // 
+            this.lblCPFInsert.AutoSize = true;
+            this.lblCPFInsert.BackColor = System.Drawing.Color.Transparent;
+            this.lblCPFInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPFInsert.ForeColor = System.Drawing.Color.White;
+            this.lblCPFInsert.Location = new System.Drawing.Point(111, 138);
+            this.lblCPFInsert.Name = "lblCPFInsert";
+            this.lblCPFInsert.Size = new System.Drawing.Size(54, 19);
+            this.lblCPFInsert.TabIndex = 332;
+            this.lblCPFInsert.Text = "<CPF>";
+            // 
+            // lblPhoneInsert
+            // 
+            this.lblPhoneInsert.AutoSize = true;
+            this.lblPhoneInsert.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneInsert.ForeColor = System.Drawing.Color.White;
+            this.lblPhoneInsert.Location = new System.Drawing.Point(126, 173);
+            this.lblPhoneInsert.Name = "lblPhoneInsert";
+            this.lblPhoneInsert.Size = new System.Drawing.Size(71, 19);
+            this.lblPhoneInsert.TabIndex = 333;
+            this.lblPhoneInsert.Text = "<phone>";
+            // 
+            // lblNumberInsert
+            // 
+            this.lblNumberInsert.AutoSize = true;
+            this.lblNumberInsert.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumberInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberInsert.ForeColor = System.Drawing.Color.White;
+            this.lblNumberInsert.Location = new System.Drawing.Point(135, 202);
+            this.lblNumberInsert.Name = "lblNumberInsert";
+            this.lblNumberInsert.Size = new System.Drawing.Size(81, 19);
+            this.lblNumberInsert.TabIndex = 334;
+            this.lblNumberInsert.Text = "<number>";
+            // 
+            // lblRoomTypeInsert
+            // 
+            this.lblRoomTypeInsert.AutoSize = true;
+            this.lblRoomTypeInsert.BackColor = System.Drawing.Color.Transparent;
+            this.lblRoomTypeInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoomTypeInsert.ForeColor = System.Drawing.Color.White;
+            this.lblRoomTypeInsert.Location = new System.Drawing.Point(171, 230);
+            this.lblRoomTypeInsert.Name = "lblRoomTypeInsert";
+            this.lblRoomTypeInsert.Size = new System.Drawing.Size(101, 19);
+            this.lblRoomTypeInsert.TabIndex = 335;
+            this.lblRoomTypeInsert.Text = "<RoomType>";
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.White;
+            this.lblPrice.Location = new System.Drawing.Point(167, 263);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(63, 19);
+            this.lblPrice.TabIndex = 336;
+            this.lblPrice.Text = "<price>";
             // 
             // FormCheckOut
             // 
@@ -374,11 +454,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(933, 588);
+            this.Controls.Add(this.lblPrice);
+            this.Controls.Add(this.lblRoomTypeInsert);
+            this.Controls.Add(this.lblNumberInsert);
+            this.Controls.Add(this.lblPhoneInsert);
+            this.Controls.Add(this.lblCPFInsert);
+            this.Controls.Add(this.lblNomeInsert);
             this.Controls.Add(this.lblTotalValueInsert);
             this.Controls.Add(this.lblTotalValue);
             this.Controls.Add(this.btnSalesSelect);
             this.Controls.Add(this.lblConsFornCadastrados);
-            this.Controls.Add(this.dgvRooms);
+            this.Controls.Add(this.dgvSales);
             this.Controls.Add(this.dtCheckOut);
             this.Controls.Add(this.lblDot1);
             this.Controls.Add(this.label12);
@@ -397,7 +483,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormCheckOut";
             this.Text = "FormCheckOut";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRooms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -418,7 +504,7 @@
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.DataGridView dgvRooms;
+        private System.Windows.Forms.DataGridView dgvSales;
         private System.Windows.Forms.Label lblConsFornCadastrados;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFloor;
@@ -426,5 +512,11 @@
         private System.Windows.Forms.Button btnSalesSelect;
         private System.Windows.Forms.Label lblTotalValue;
         private System.Windows.Forms.Label lblTotalValueInsert;
+        private System.Windows.Forms.Label lblNomeInsert;
+        private System.Windows.Forms.Label lblCPFInsert;
+        private System.Windows.Forms.Label lblPhoneInsert;
+        private System.Windows.Forms.Label lblNumberInsert;
+        private System.Windows.Forms.Label lblRoomTypeInsert;
+        private System.Windows.Forms.Label lblPrice;
     }
 }

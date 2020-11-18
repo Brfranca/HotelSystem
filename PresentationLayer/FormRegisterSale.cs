@@ -27,6 +27,7 @@ namespace PresentationLayer
         private SaleBLL _saleBLL;
         private Product _product;
         private List<SaleItem> _saleItems;
+        private List<Product> _productGrid;
 
         public FormRegisterSale()
         {
@@ -70,12 +71,14 @@ namespace PresentationLayer
         {
             SelectDataGrid();
             CreateSaleItem();
+            RenewTextBoxValue();
         }
 
         private void SelectDataGrid()
         {
             if (_currentRowGrid == -1)
                 return;
+
             int id = (int)dgvProducts.Rows[_currentRowGrid].Cells[0].Value;
             QueryResponse<Product> response = _productBLL.GetById(id);
             if (!response.Success)
@@ -83,8 +86,7 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 return;
             }
-            _product.ID = response.Data.ID;
-            _product.Price = response.Data.Price;
+            _product = response.Data;
         }
 
         private void CreateSaleItem()
@@ -112,8 +114,8 @@ namespace PresentationLayer
                 {
                     ID = item.ProductID
                 };
-
-                dgvIncomeItems.Rows.Add(product.ID, product.Name, item.Quantity, item.UnityPrice.ToString("C2"));
+                QueryResponse<Product> response = _productBLL.GetById(product.ID);
+                dgvIncomeItems.Rows.Add(product.ID, response.Data.Name, item.Quantity, item.UnityPrice.ToString("C2"));
             }
 
             UpdateToTalValue();
@@ -136,12 +138,32 @@ namespace PresentationLayer
 
         private void FormRegisterSale_Load(object sender, EventArgs e)
         {
+            UpdateGrid();
+
+        }
+        private void UpdateGrid()
+        {
+            dgvProducts.Rows.Clear();
             QueryResponse<List<Product>> response = _productBLL.GetAll();
-            foreach (var item in response.Data)
+
+            if (!response.Success)
+            {
+                MessageBox.Show(response.Message);
+                return;
+            }
+            _productGrid = new List<Product>(response.Data);
+
+            InsertGrid(_productGrid);
+        }
+        private void InsertGrid(List<Product> products)
+        {
+            foreach (var item in products)
             {
                 dgvProducts.Rows.Add(item.ID, item.Name, item.Description, item.Price, item.Stock);
             }
         }
+
+
 
         private void btnSaleRegister_Click(object sender, EventArgs e)
         {
@@ -166,6 +188,11 @@ namespace PresentationLayer
             sale.ClientID = _checkIn.ClientID;
             sale.TotalValue = Convert.ToDouble(txtTotalValue.Text);
             return sale;
+        }
+
+        private void dgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
         }
     }
 }

@@ -110,7 +110,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        public Response GetById(int id)
+        public QueryResponse<Sale> GetById(int id)
         {
             return _saleDAL.GetById(id);
         }
@@ -118,6 +118,11 @@ namespace BusinessLogicalLayer.BLL
         public QueryResponse<List<Sale>> GetByClientId(int id)
         {
             return _saleDAL.GetByClientId(id);
+        }
+
+        public QueryResponse<List<SaleItem>> GetBySaleId(int id)
+        {
+            return _saleDAL.GetBySaleId(id);
         }
     }
 }
