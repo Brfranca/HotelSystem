@@ -96,7 +96,7 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 return;
             }
-            saleItem.ProductId = response.ProductId;
+            saleItem.ProductID = response.ProductId;
             saleItem.Quantity = response.ProductQuantity;
             saleItem.UnityPrice = response.ProductPrice;
 
@@ -110,7 +110,7 @@ namespace PresentationLayer
             {
                 Product product = new Product
                 {
-                    ID = item.ProductId
+                    ID = item.ProductID
                 };
 
                 dgvIncomeItems.Rows.Add(product.ID, product.Name, item.Quantity, item.UnityPrice.ToString("C2"));
