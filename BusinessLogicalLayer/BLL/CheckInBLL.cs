@@ -121,5 +121,10 @@ namespace BusinessLogicalLayer.BLL
         {
             return _checkInDAL.GetById(id);
         }
+
+        public QueryResponse<List<CheckIn>> GetAll()
+        {
+            return _checkInDAL.GetAll();
+        }
     }
 }
