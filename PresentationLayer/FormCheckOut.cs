@@ -60,7 +60,7 @@ namespace PresentationLayer
             lblRoomPrice.Text = _checkIn.RoomPrice.ToString();
             lblRoomType.Text += responseRoom.Data.RoomType.ToString();
             lblNumber.Text += responseRoom.Data.Number;
-            lblTotalValue.Text += _checkOutBLL.CalculateTotalValue();
+            //lblTotalValue.Text += _checkOutBLL.CalculateTotalValue();
         }
     }
 }

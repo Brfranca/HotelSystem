@@ -10,6 +10,6 @@ namespace DataAccessLayer.DAL
     //Usar interface??
     public class CheckInDAL : BaseDAL<CheckIn>
     {
-
+        //implementar metodos de busca
     }
 }

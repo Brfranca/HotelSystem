@@ -63,7 +63,8 @@ namespace PresentationLayer
             FormSearchClient frmSearchClient = new FormSearchClient();
             frmSearchClient.ShowDialog();
             _client = frmSearchClient.client;
-            SelectClient();
+            if (_client.ID != 0)
+                SelectClient();
         }
 
         private void SelectClient()

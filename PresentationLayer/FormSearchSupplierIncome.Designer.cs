@@ -34,9 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
+            this.picIcone = new System.Windows.Forms.PictureBox();
             this.picRoomClose = new System.Windows.Forms.PictureBox();
             this.btnSupplierSelect = new System.Windows.Forms.Button();
             this.pnlSuppCNPJ = new System.Windows.Forms.Panel();
@@ -48,30 +48,18 @@
             this.dgvSuppliersSearch = new System.Windows.Forms.DataGridView();
             this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             this.pnlTopBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRoomClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliersSearch)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picIcone
-            // 
-            this.picIcone.BackColor = System.Drawing.Color.Transparent;
-            this.picIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIcone.BackgroundImage")));
-            this.picIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picIcone.Location = new System.Drawing.Point(3, 8);
-            this.picIcone.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.picIcone.Name = "picIcone";
-            this.picIcone.Size = new System.Drawing.Size(32, 25);
-            this.picIcone.TabIndex = 171;
-            this.picIcone.TabStop = false;
             // 
             // lblNomeFarmacia
             // 
             this.lblNomeFarmacia.AutoSize = true;
             this.lblNomeFarmacia.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
-            this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
+            this.lblNomeFarmacia.Location = new System.Drawing.Point(43, 9);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
             this.lblNomeFarmacia.Size = new System.Drawing.Size(240, 28);
             this.lblNomeFarmacia.TabIndex = 0;
@@ -81,8 +69,8 @@
             // 
             this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlTopBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlTopBar.Controls.Add(this.picRoomClose);
             this.pnlTopBar.Controls.Add(this.picIcone);
+            this.pnlTopBar.Controls.Add(this.picRoomClose);
             this.pnlTopBar.Controls.Add(this.lblNomeFarmacia);
             this.pnlTopBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -92,6 +80,17 @@
             this.pnlTopBar.Size = new System.Drawing.Size(563, 40);
             this.pnlTopBar.TabIndex = 225;
             // 
+            // picIcone
+            // 
+            this.picIcone.BackColor = System.Drawing.Color.Transparent;
+            this.picIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIcone.BackgroundImage")));
+            this.picIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picIcone.Location = new System.Drawing.Point(3, 3);
+            this.picIcone.Name = "picIcone";
+            this.picIcone.Size = new System.Drawing.Size(43, 35);
+            this.picIcone.TabIndex = 180;
+            this.picIcone.TabStop = false;
+            // 
             // picRoomClose
             // 
             this.picRoomClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -100,10 +99,10 @@
             this.picRoomClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picRoomClose.BackgroundImage")));
             this.picRoomClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picRoomClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRoomClose.Location = new System.Drawing.Point(521, 8);
+            this.picRoomClose.Location = new System.Drawing.Point(521, 2);
             this.picRoomClose.Margin = new System.Windows.Forms.Padding(0);
             this.picRoomClose.Name = "picRoomClose";
-            this.picRoomClose.Size = new System.Drawing.Size(29, 22);
+            this.picRoomClose.Size = new System.Drawing.Size(26, 36);
             this.picRoomClose.TabIndex = 172;
             this.picRoomClose.TabStop = false;
             this.picRoomClose.Click += new System.EventHandler(this.picRoomClose_Click);
@@ -118,7 +117,7 @@
             this.btnSupplierSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplierSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnSupplierSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplierSelect.Image")));
-            this.btnSupplierSelect.Location = new System.Drawing.Point(193, 502);
+            this.btnSupplierSelect.Location = new System.Drawing.Point(193, 508);
             this.btnSupplierSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSupplierSelect.Name = "btnSupplierSelect";
             this.btnSupplierSelect.Size = new System.Drawing.Size(189, 36);
@@ -132,7 +131,7 @@
             // 
             this.pnlSuppCNPJ.BackColor = System.Drawing.Color.White;
             this.pnlSuppCNPJ.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 105);
+            this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 111);
             this.pnlSuppCNPJ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSuppCNPJ.MaximumSize = new System.Drawing.Size(564, 1);
             this.pnlSuppCNPJ.Name = "pnlSuppCNPJ";
@@ -145,7 +144,7 @@
             this.txtSuppSearchCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchCNPJ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSuppSearchCNPJ.ForeColor = System.Drawing.Color.White;
-            this.txtSuppSearchCNPJ.Location = new System.Drawing.Point(339, 84);
+            this.txtSuppSearchCNPJ.Location = new System.Drawing.Point(339, 90);
             this.txtSuppSearchCNPJ.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchCNPJ.MaxLength = 11;
             this.txtSuppSearchCNPJ.MinimumSize = new System.Drawing.Size(0, 24);
@@ -160,7 +159,7 @@
             // 
             this.pnlSuppName.BackColor = System.Drawing.Color.White;
             this.pnlSuppName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSuppName.Location = new System.Drawing.Point(22, 104);
+            this.pnlSuppName.Location = new System.Drawing.Point(22, 110);
             this.pnlSuppName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSuppName.MaximumSize = new System.Drawing.Size(564, 1);
             this.pnlSuppName.Name = "pnlSuppName";
@@ -173,7 +172,7 @@
             this.txtSuppSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSuppSearchName.ForeColor = System.Drawing.Color.White;
-            this.txtSuppSearchName.Location = new System.Drawing.Point(26, 83);
+            this.txtSuppSearchName.Location = new System.Drawing.Point(26, 89);
             this.txtSuppSearchName.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchName.MaxLength = 11;
             this.txtSuppSearchName.MinimumSize = new System.Drawing.Size(0, 24);
@@ -190,7 +189,7 @@
             this.lblConsSupCod.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupCod.Location = new System.Drawing.Point(331, 61);
+            this.lblConsSupCod.Location = new System.Drawing.Point(331, 67);
             this.lblConsSupCod.Name = "lblConsSupCod";
             this.lblConsSupCod.Size = new System.Drawing.Size(51, 23);
             this.lblConsSupCod.TabIndex = 236;
@@ -202,7 +201,7 @@
             this.lblConsSupNome.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupNome.Location = new System.Drawing.Point(19, 61);
+            this.lblConsSupNome.Location = new System.Drawing.Point(19, 67);
             this.lblConsSupNome.Name = "lblConsSupNome";
             this.lblConsSupNome.Size = new System.Drawing.Size(109, 23);
             this.lblConsSupNome.TabIndex = 235;
@@ -240,7 +239,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSuppliersSearch.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSuppliersSearch.Location = new System.Drawing.Point(23, 115);
+            this.dgvSuppliersSearch.Location = new System.Drawing.Point(23, 121);
             this.dgvSuppliersSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSuppliersSearch.MultiSelect = false;
             this.dgvSuppliersSearch.Name = "dgvSuppliersSearch";
@@ -298,9 +297,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchSupplierIncome";
             this.Load += new System.EventHandler(this.FormSearchSupplierIncome_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRoomClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliersSearch)).EndInit();
             this.ResumeLayout(false);
@@ -309,8 +308,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picRoomClose;
@@ -324,5 +321,6 @@
         private System.Windows.Forms.DataGridView dgvSuppliersSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
+        private System.Windows.Forms.PictureBox picIcone;
     }
 }

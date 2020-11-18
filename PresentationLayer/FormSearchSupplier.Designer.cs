@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearchSupplier));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.picIcone = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picRoomClose = new System.Windows.Forms.PictureBox();
@@ -49,30 +48,19 @@
             this.lblConsSupCod = new System.Windows.Forms.Label();
             this.lblConsSupNome = new System.Windows.Forms.Label();
             this.btnSupplierSelect = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRoomClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliersSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picIcone
-            // 
-            this.picIcone.BackColor = System.Drawing.Color.Transparent;
-            this.picIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIcone.BackgroundImage")));
-            this.picIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picIcone.Location = new System.Drawing.Point(3, 8);
-            this.picIcone.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.picIcone.Name = "picIcone";
-            this.picIcone.Size = new System.Drawing.Size(32, 25);
-            this.picIcone.TabIndex = 171;
-            this.picIcone.TabStop = false;
             // 
             // lblNomeFarmacia
             // 
             this.lblNomeFarmacia.AutoSize = true;
             this.lblNomeFarmacia.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
-            this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
+            this.lblNomeFarmacia.Location = new System.Drawing.Point(43, 9);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
             this.lblNomeFarmacia.Size = new System.Drawing.Size(240, 28);
             this.lblNomeFarmacia.TabIndex = 0;
@@ -83,7 +71,6 @@
             this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlTopBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlTopBar.Controls.Add(this.picRoomClose);
-            this.pnlTopBar.Controls.Add(this.picIcone);
             this.pnlTopBar.Controls.Add(this.lblNomeFarmacia);
             this.pnlTopBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -101,10 +88,10 @@
             this.picRoomClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picRoomClose.BackgroundImage")));
             this.picRoomClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picRoomClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRoomClose.Location = new System.Drawing.Point(521, 8);
+            this.picRoomClose.Location = new System.Drawing.Point(521, 2);
             this.picRoomClose.Margin = new System.Windows.Forms.Padding(0);
             this.picRoomClose.Name = "picRoomClose";
-            this.picRoomClose.Size = new System.Drawing.Size(29, 22);
+            this.picRoomClose.Size = new System.Drawing.Size(26, 36);
             this.picRoomClose.TabIndex = 172;
             this.picRoomClose.TabStop = false;
             this.picRoomClose.Click += new System.EventHandler(this.picRoomClose_Click);
@@ -115,48 +102,48 @@
             this.dgvSuppliersSearch.AllowUserToDeleteRows = false;
             this.dgvSuppliersSearch.AllowUserToResizeColumns = false;
             this.dgvSuppliersSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvSuppliersSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvSuppliersSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSuppliersSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSuppliersSearch.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvSuppliersSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSuppliersSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSuppliersSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSuppliersSearch.ColumnHeadersHeight = 29;
             this.dgvSuppliersSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSuppliersSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCompanyName,
             this.ColumnCnpj,
             this.Column1});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSuppliersSearch.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvSuppliersSearch.Location = new System.Drawing.Point(23, 115);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSuppliersSearch.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSuppliersSearch.Location = new System.Drawing.Point(23, 121);
             this.dgvSuppliersSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSuppliersSearch.Name = "dgvSuppliersSearch";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSuppliersSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSuppliersSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSuppliersSearch.RowHeadersVisible = false;
             this.dgvSuppliersSearch.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvSuppliersSearch.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvSuppliersSearch.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSuppliersSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSuppliersSearch.Size = new System.Drawing.Size(518, 379);
             this.dgvSuppliersSearch.TabIndex = 225;
@@ -187,7 +174,7 @@
             // 
             this.pnlSuppCNPJ.BackColor = System.Drawing.Color.White;
             this.pnlSuppCNPJ.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 105);
+            this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 111);
             this.pnlSuppCNPJ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSuppCNPJ.MaximumSize = new System.Drawing.Size(564, 1);
             this.pnlSuppCNPJ.Name = "pnlSuppCNPJ";
@@ -200,7 +187,7 @@
             this.txtSuppSearchCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchCNPJ.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSuppSearchCNPJ.ForeColor = System.Drawing.Color.White;
-            this.txtSuppSearchCNPJ.Location = new System.Drawing.Point(339, 84);
+            this.txtSuppSearchCNPJ.Location = new System.Drawing.Point(339, 90);
             this.txtSuppSearchCNPJ.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchCNPJ.MaxLength = 11;
             this.txtSuppSearchCNPJ.MinimumSize = new System.Drawing.Size(0, 24);
@@ -215,7 +202,7 @@
             // 
             this.pnlSuppName.BackColor = System.Drawing.Color.White;
             this.pnlSuppName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSuppName.Location = new System.Drawing.Point(22, 104);
+            this.pnlSuppName.Location = new System.Drawing.Point(22, 110);
             this.pnlSuppName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSuppName.MaximumSize = new System.Drawing.Size(564, 1);
             this.pnlSuppName.Name = "pnlSuppName";
@@ -228,7 +215,7 @@
             this.txtSuppSearchName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSuppSearchName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSuppSearchName.ForeColor = System.Drawing.Color.White;
-            this.txtSuppSearchName.Location = new System.Drawing.Point(26, 83);
+            this.txtSuppSearchName.Location = new System.Drawing.Point(26, 89);
             this.txtSuppSearchName.Margin = new System.Windows.Forms.Padding(0);
             this.txtSuppSearchName.MaxLength = 11;
             this.txtSuppSearchName.MinimumSize = new System.Drawing.Size(0, 24);
@@ -245,7 +232,7 @@
             this.lblConsSupCod.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupCod.Location = new System.Drawing.Point(331, 61);
+            this.lblConsSupCod.Location = new System.Drawing.Point(331, 67);
             this.lblConsSupCod.Name = "lblConsSupCod";
             this.lblConsSupCod.Size = new System.Drawing.Size(51, 23);
             this.lblConsSupCod.TabIndex = 228;
@@ -257,7 +244,7 @@
             this.lblConsSupNome.BackColor = System.Drawing.Color.Transparent;
             this.lblConsSupNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupNome.Location = new System.Drawing.Point(19, 61);
+            this.lblConsSupNome.Location = new System.Drawing.Point(19, 67);
             this.lblConsSupNome.Name = "lblConsSupNome";
             this.lblConsSupNome.Size = new System.Drawing.Size(109, 23);
             this.lblConsSupNome.TabIndex = 227;
@@ -273,7 +260,7 @@
             this.btnSupplierSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplierSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnSupplierSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSupplierSelect.Image")));
-            this.btnSupplierSelect.Location = new System.Drawing.Point(193, 502);
+            this.btnSupplierSelect.Location = new System.Drawing.Point(193, 508);
             this.btnSupplierSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSupplierSelect.Name = "btnSupplierSelect";
             this.btnSupplierSelect.Size = new System.Drawing.Size(189, 36);
@@ -283,12 +270,24 @@
             this.btnSupplierSelect.UseVisualStyleBackColor = false;
             this.btnSupplierSelect.Click += new System.EventHandler(this.btnSupplierSelect_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 35);
+            this.pictureBox1.TabIndex = 252;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormSearchSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(563, 550);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSupplierSelect);
             this.Controls.Add(this.pnlSuppCNPJ);
             this.Controls.Add(this.txtSuppSearchCNPJ);
@@ -305,19 +304,17 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchSupplier";
             this.Load += new System.EventHandler(this.FormSearchSupplier_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picRoomClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliersSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picRoomClose;
@@ -332,5 +329,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

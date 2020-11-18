@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
@@ -49,32 +48,21 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picIcone
-            // 
-            this.picIcone.BackColor = System.Drawing.Color.Transparent;
-            this.picIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIcone.BackgroundImage")));
-            this.picIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picIcone.Location = new System.Drawing.Point(3, 8);
-            this.picIcone.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.picIcone.Name = "picIcone";
-            this.picIcone.Size = new System.Drawing.Size(32, 25);
-            this.picIcone.TabIndex = 171;
-            this.picIcone.TabStop = false;
             // 
             // lblNomeFarmacia
             // 
             this.lblNomeFarmacia.AutoSize = true;
             this.lblNomeFarmacia.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
-            this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
+            this.lblNomeFarmacia.Location = new System.Drawing.Point(43, 9);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(69, 21);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(85, 28);
             this.lblNomeFarmacia.TabIndex = 0;
             this.lblNomeFarmacia.Text = "Check In";
             // 
@@ -83,7 +71,6 @@
             this.pnlTopBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.pnlTopBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlTopBar.Controls.Add(this.picClose);
-            this.pnlTopBar.Controls.Add(this.picIcone);
             this.pnlTopBar.Controls.Add(this.lblNomeFarmacia);
             this.pnlTopBar.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlTopBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -101,10 +88,10 @@
             this.picClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClose.BackgroundImage")));
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Location = new System.Drawing.Point(521, 8);
+            this.picClose.Location = new System.Drawing.Point(521, 2);
             this.picClose.Margin = new System.Windows.Forms.Padding(0);
             this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(29, 22);
+            this.picClose.Size = new System.Drawing.Size(26, 36);
             this.picClose.TabIndex = 172;
             this.picClose.TabStop = false;
             // 
@@ -149,7 +136,7 @@
             this.txtSearchCPF.MaxLength = 11;
             this.txtSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchCPF.Name = "txtSearchCPF";
-            this.txtSearchCPF.Size = new System.Drawing.Size(191, 24);
+            this.txtSearchCPF.Size = new System.Drawing.Size(191, 27);
             this.txtSearchCPF.TabIndex = 257;
             // 
             // pnlName
@@ -174,7 +161,7 @@
             this.txtSearchRoomNumber.MaxLength = 11;
             this.txtSearchRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchRoomNumber.Name = "txtSearchRoomNumber";
-            this.txtSearchRoomNumber.Size = new System.Drawing.Size(258, 24);
+            this.txtSearchRoomNumber.Size = new System.Drawing.Size(258, 27);
             this.txtSearchRoomNumber.TabIndex = 255;
             // 
             // lblConsSupCod
@@ -185,7 +172,7 @@
             this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
             this.lblConsSupCod.Location = new System.Drawing.Point(330, 67);
             this.lblConsSupCod.Name = "lblConsSupCod";
-            this.lblConsSupCod.Size = new System.Drawing.Size(38, 19);
+            this.lblConsSupCod.Size = new System.Drawing.Size(45, 23);
             this.lblConsSupCod.TabIndex = 253;
             this.lblConsSupCod.Text = "CPF ";
             // 
@@ -197,7 +184,7 @@
             this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
             this.lblConsSupNome.Location = new System.Drawing.Point(18, 67);
             this.lblConsSupNome.Name = "lblConsSupNome";
-            this.lblConsSupNome.Size = new System.Drawing.Size(135, 19);
+            this.lblConsSupNome.Size = new System.Drawing.Size(160, 23);
             this.lblConsSupNome.TabIndex = 252;
             this.lblConsSupNome.Text = "Número do quarto";
             // 
@@ -259,6 +246,7 @@
             // 
             this.Column1.FillWeight = 40F;
             this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -277,12 +265,24 @@
             this.ColumnCnpj.Name = "ColumnCnpj";
             this.ColumnCnpj.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 35);
+            this.pictureBox1.TabIndex = 259;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormSearchCheckIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(563, 550);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.pnlCpf);
             this.Controls.Add(this.txtSearchCPF);
@@ -297,19 +297,17 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchCheckIn";
             this.Text = "FormSearchCheckIn";
-            ((System.ComponentModel.ISupportInitialize)(this.picIcone)).EndInit();
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picIcone;
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picClose;
@@ -324,5 +322,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

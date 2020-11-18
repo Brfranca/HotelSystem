@@ -93,7 +93,7 @@
             this.chkShowPassword.Location = new System.Drawing.Point(106, 203);
             this.chkShowPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(118, 23);
+            this.chkShowPassword.Size = new System.Drawing.Size(143, 27);
             this.chkShowPassword.TabIndex = 218;
             this.chkShowPassword.Text = "Mostrar Senha";
             this.chkShowPassword.UseVisualStyleBackColor = false;
@@ -110,7 +110,7 @@
             this.txtUser.Margin = new System.Windows.Forms.Padding(0);
             this.txtUser.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(202, 22);
+            this.txtUser.Size = new System.Drawing.Size(202, 27);
             this.txtUser.TabIndex = 35;
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
@@ -134,20 +134,20 @@
             this.picIcone.BackColor = System.Drawing.Color.Transparent;
             this.picIcone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picIcone.BackgroundImage")));
             this.picIcone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picIcone.Location = new System.Drawing.Point(3, 8);
+            this.picIcone.Location = new System.Drawing.Point(3, 3);
             this.picIcone.Name = "picIcone";
-            this.picIcone.Size = new System.Drawing.Size(32, 25);
+            this.picIcone.Size = new System.Drawing.Size(43, 35);
             this.picIcone.TabIndex = 169;
             this.picIcone.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label5.Font = new System.Drawing.Font("Gabriola", 14F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(34, 10);
+            this.label5.Location = new System.Drawing.Point(40, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 21);
+            this.label5.Size = new System.Drawing.Size(115, 45);
             this.label5.TabIndex = 0;
             this.label5.Text = "Hotel System";
             // 
@@ -176,7 +176,7 @@
             this.lblAttencion.Location = new System.Drawing.Point(4, 82);
             this.lblAttencion.MinimumSize = new System.Drawing.Size(348, 0);
             this.lblAttencion.Name = "lblAttencion";
-            this.lblAttencion.Size = new System.Drawing.Size(348, 19);
+            this.lblAttencion.Size = new System.Drawing.Size(348, 23);
             this.lblAttencion.TabIndex = 216;
             this.lblAttencion.Text = "Dados incorretos";
             this.lblAttencion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,7 +201,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtPassword.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(202, 22);
+            this.txtPassword.Size = new System.Drawing.Size(202, 27);
             this.txtPassword.TabIndex = 39;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -252,7 +252,7 @@
             // FormLogin
             // 
             this.AccessibleName = "";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(350, 350);

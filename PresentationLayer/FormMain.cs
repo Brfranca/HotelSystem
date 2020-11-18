@@ -277,5 +277,11 @@ namespace PresentationLayer
             OpenChildForm(new FormRegisterRoom());
             HideSubMenu();
         }
+
+        private void btnReservation_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormReservation());
+            HideSubMenu();
+        }
     }
 }

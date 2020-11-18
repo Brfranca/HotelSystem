@@ -4,7 +4,6 @@ using Common;
 using Entities;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -26,7 +25,6 @@ namespace PresentationLayer
             UpdateGrid();
             btnClientDelete.Visible = false;
         }
-
        
         private void txtClientSearchCPF_Leave(object sender, EventArgs e)
         {
@@ -232,7 +230,5 @@ namespace PresentationLayer
         {
             pnlClientCPF.EnterEvent();
         }
-
-       
     }
 }
