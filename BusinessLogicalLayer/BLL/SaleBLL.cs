@@ -36,23 +36,25 @@ namespace BusinessLogicalLayer.BLL
         private Response Validate(Sale sale)
         {
             Validator validator = new Validator();
-            ValidateClientId(sale.ClientId, validator);
+            ValidateClientId(sale.ClientID, validator);
             ValidateTotalValute(sale.TotalValue, validator);
 
             return validator.Validate();
         }
 
-        private Response ValidateSaleItem(int productId, string quantity)
+        public  Response ValidateSaleItem(int productId, string quantity, double price)
         {
             Validator validator = new Validator();
             ValidateProductId(productId, validator);
             ValidateQuantity(quantity, validator);
+            ValidatePrice(price, validator);
 
             Response result = validator.Validate();
             if (result.Success)
             {
                 result.ProductId = productId;
                 result.ProductQuantity = Convert.ToInt32(quantity);
+                result.ProductPrice = price;
             }
             return result;
             
@@ -95,7 +97,16 @@ namespace BusinessLogicalLayer.BLL
             }
             else if (Convert.ToInt32(quantity) <= 0)
             {
-                validator.AddError("Quantdade do produto deve ser maior que zero!");
+                validator.AddError("Quantidade do produto deve ser maior que zero!");
+            }
+        }
+
+        private void ValidatePrice(double price, Validator validator)
+        {
+            
+            if (price <= 0)
+            {
+                validator.AddError("Preço do produto deve ser maior que zero!");
             }
         }
 

@@ -286,8 +286,6 @@ namespace PresentationLayer
             SelectDataGrid();
         }
 
-
-
         private void btnProductClear_Click(object sender, EventArgs e)
         {
             this.ClearForm();
