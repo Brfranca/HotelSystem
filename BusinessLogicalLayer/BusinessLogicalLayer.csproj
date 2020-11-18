@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\CheckInBLL.cs" />
+    <Compile Include="BLL\CheckOutBLL.cs" />
     <Compile Include="BLL\EmployeeBLL.cs" />
     <Compile Include="BLL\IncomeBLL.cs" />
     <Compile Include="BLL\ProductBLL.cs" />

@@ -93,5 +93,10 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("Quantdade do produto deve ser maior que zero!");
             }
         }
+
+        public Response GetById(int id)
+        {
+            return _saleDAL.GetById(id);
+        }
     }
 }

@@ -116,5 +116,10 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("Cliente deve ser informado!");
             }
         }
+
+        public Response GetById(int id)
+        {
+            return _checkInDAL.GetById(id);
+        }
     }
 }
