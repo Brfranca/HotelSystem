@@ -144,6 +144,12 @@
     <Compile Include="FormSearchProduct.Designer.cs">
       <DependentUpon>FormSearchProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchReservation.Designer.cs">
+      <DependentUpon>FormSearchReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSearchRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchProduct.resx">
       <DependentUpon>FormSearchProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchReservation.resx">
+      <DependentUpon>FormSearchReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchRoom.resx">
       <DependentUpon>FormSearchRoom.cs</DependentUpon>

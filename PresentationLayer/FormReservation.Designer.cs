@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReservation));
             this.lblDot1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnClientRegister = new System.Windows.Forms.Button();
+            this.btnReservationRegister = new System.Windows.Forms.Button();
             this.btnSelectRoom = new System.Windows.Forms.Button();
             this.lblRoom = new System.Windows.Forms.Label();
             this.lblRoomNumber = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSeachReservation = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDot1
@@ -79,25 +80,25 @@
             this.label12.TabIndex = 322;
             this.label12.Text = "Reservas";
             // 
-            // btnClientRegister
+            // btnReservationRegister
             // 
-            this.btnClientRegister.BackColor = System.Drawing.Color.Transparent;
-            this.btnClientRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClientRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnClientRegister.FlatAppearance.BorderSize = 0;
-            this.btnClientRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
-            this.btnClientRegister.Image = ((System.Drawing.Image)(resources.GetObject("btnClientRegister.Image")));
-            this.btnClientRegister.Location = new System.Drawing.Point(147, 449);
-            this.btnClientRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClientRegister.Name = "btnClientRegister";
-            this.btnClientRegister.Size = new System.Drawing.Size(189, 53);
-            this.btnClientRegister.TabIndex = 321;
-            this.btnClientRegister.Text = "Cadastrar";
-            this.btnClientRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientRegister.UseVisualStyleBackColor = false;
-            this.btnClientRegister.Click += new System.EventHandler(this.btnClientRegister_Click);
+            this.btnReservationRegister.BackColor = System.Drawing.Color.Transparent;
+            this.btnReservationRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReservationRegister.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnReservationRegister.FlatAppearance.BorderSize = 0;
+            this.btnReservationRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservationRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservationRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnReservationRegister.Image = ((System.Drawing.Image)(resources.GetObject("btnReservationRegister.Image")));
+            this.btnReservationRegister.Location = new System.Drawing.Point(127, 449);
+            this.btnReservationRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReservationRegister.Name = "btnReservationRegister";
+            this.btnReservationRegister.Size = new System.Drawing.Size(189, 53);
+            this.btnReservationRegister.TabIndex = 321;
+            this.btnReservationRegister.Text = "Cadastrar";
+            this.btnReservationRegister.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReservationRegister.UseVisualStyleBackColor = false;
+            this.btnReservationRegister.Click += new System.EventHandler(this.btnReservationRegister_Click);
             // 
             // btnSelectRoom
             // 
@@ -221,7 +222,7 @@
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
-            this.btnClear.Location = new System.Drawing.Point(342, 415);
+            this.btnClear.Location = new System.Drawing.Point(482, 380);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(98, 36);
@@ -339,12 +340,34 @@
             this.btnSeachReservation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSeachReservation.UseVisualStyleBackColor = false;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(322, 449);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(189, 53);
+            this.btnDelete.TabIndex = 329;
+            this.btnDelete.Text = "Deletar";
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FormReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSeachReservation);
             this.Controls.Add(this.dtCheckOut);
             this.Controls.Add(this.dtCheckIn);
@@ -352,7 +375,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblDot1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.btnClientRegister);
+            this.Controls.Add(this.btnReservationRegister);
             this.Controls.Add(this.btnSelectRoom);
             this.Controls.Add(this.lblRoom);
             this.Controls.Add(this.lblRoomNumber);
@@ -380,7 +403,7 @@
         #endregion
         private System.Windows.Forms.Label lblDot1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnClientRegister;
+        private System.Windows.Forms.Button btnReservationRegister;
         private System.Windows.Forms.Button btnSelectRoom;
         private System.Windows.Forms.Label lblRoom;
         private System.Windows.Forms.Label lblRoomNumber;
@@ -399,5 +422,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSeachReservation;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

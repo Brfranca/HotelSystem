@@ -31,6 +31,28 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Reserva realizada com sucesso!");
         }
 
+        public Response Update(Reservation reservation)
+        {
+            Response result = Validate(reservation);
+            if (!result.Success)
+                return result;
+
+            Response resultInsert = _reservationDAL.Update(reservation);
+            if (!resultInsert.Success)
+                return resultInsert;
+
+            return Response.CreateSuccess("Reserva atualizada com sucesso!");
+        }
+
+        public Response Delete(Reservation reservation)
+        {
+            Response resultDelete = _reservationDAL.Delete(reservation);
+            if (!resultDelete.Success)
+                return resultDelete;
+
+            return Response.CreateSuccess("Reserva removida com sucesso!");
+        }
+
         public Response Validate(Reservation reservation)
         {
             try
@@ -40,14 +62,14 @@ namespace BusinessLogicalLayer.BLL
                 ValidateClientID(reservation.ClientID, validator);
                 ValidateRoomID(reservation.RoomID, validator);
                 ValidateEntryDate(reservation.EntryDate, validator);
-                ValidateDepartureDate(reservation.DepartureDate, validator);
+                ValidateDepartureDate(reservation.DepartureDate, reservation.EntryDate, validator);
                 ValidateRoomPrice(reservation.RoomPrice, validator);
 
                 return validator.Validate();
             }
             catch (Exception erro)
             {
-                return Response.CreateFailureException("Erro na validação do check in, contate o administrador.", erro);
+                return Response.CreateFailureException("Erro na validação da reserva, contate o administrador.", erro);
             }
         }
 
@@ -64,19 +86,19 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        private void ValidateDepartureDate(DateTime departureDate, Validator validator)
+        private void ValidateDepartureDate(DateTime departureDate, DateTime entryDate, Validator validator)
         {
             if (departureDate == null)
             {
                 validator.AddError("Data de saída deve ser informada!");
             }
-            else if (departureDate.Date == DateTime.Today)
+            else if (departureDate.Date == entryDate.Date)
             {
-                validator.AddError("Data de saída deve ser diferente da data do check in!");
+                validator.AddError("Data de saída deve ser diferente da data de entrada !");
             }
-            else if (departureDate.Date < DateTime.Today)
+            else if (departureDate.Date <entryDate.Date)
             {
-                validator.AddError("Data de saída deve ser depois da data do check in!");
+                validator.AddError("Data de saída deve ser depois da data de entrada!");
             }
         }
 
@@ -86,9 +108,9 @@ namespace BusinessLogicalLayer.BLL
             {
                 validator.AddError("Data de entrada deve ser informada!");
             }
-            else if (entryDate.Date != DateTime.Today)
+            else if (entryDate.Date >= DateTime.Today)
             {
-                validator.AddError("Data de entrada deve corresponder à data atual!");
+                validator.AddError("Data de entrada deve ser uma data futura!");
             }
         }
 
