@@ -27,7 +27,7 @@ namespace DataAccessLayer.DAL
                 {
                     Supplier_Product suppliers_products = new Supplier_Product
                     {
-                        ProductID = resultInsertProduct.Id,
+                        ProductID = resultInsertProduct.GeneratedId,
                         SupplierID = id
                     };
                     Response resultInsertNs = base.Insert(suppliers_products);
