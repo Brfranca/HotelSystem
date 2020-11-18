@@ -98,5 +98,10 @@ namespace BusinessLogicalLayer.BLL
         {
             return _saleDAL.GetById(id);
         }
+
+        public QueryResponse<List<Sale>> GetByClientId(int id)
+        {
+            return _saleDAL.GetByClientId(id);
+        }
     }
 }

@@ -37,10 +37,16 @@ namespace BusinessLogicalLayer.BLL
         {
 
             Response response = _checkInBLL.GetById(checkOut.CheckInID);
-            if (response.Success)
+            if (!response.Success)
                 return response;
+            CheckIn ck = new CheckIn
+            {
+                ID = checkOut.CheckInID
+            };
 
-            Response responseSale = _saleBLL.
+            QueryResponse<List<Sale>> responseSale = _saleBLL.GetByClientId(ck.ClientID);
+            double totalSales = responseSale.Data.Sum(x => x.TotalValue);
+
                 
 
         }
