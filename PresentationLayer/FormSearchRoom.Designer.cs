@@ -42,13 +42,14 @@
             this.lblConsSupCod = new System.Windows.Forms.Label();
             this.lblConsSupNome = new System.Windows.Forms.Label();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picIcone = new System.Windows.Forms.PictureBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -179,7 +180,8 @@
             this.dgvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.ColumnCompanyName,
-            this.ColumnCnpj});
+            this.ColumnCnpj,
+            this.Column2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -210,30 +212,6 @@
             this.dgvSearch.TabIndex = 243;
             this.dgvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellClick);
             this.dgvSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 30F;
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // ColumnCompanyName
-            // 
-            this.ColumnCompanyName.FillWeight = 70F;
-            this.ColumnCompanyName.HeaderText = "Número";
-            this.ColumnCompanyName.MinimumWidth = 6;
-            this.ColumnCompanyName.Name = "ColumnCompanyName";
-            this.ColumnCompanyName.ReadOnly = true;
-            // 
-            // ColumnCnpj
-            // 
-            this.ColumnCnpj.FillWeight = 60F;
-            this.ColumnCnpj.HeaderText = "Tipo";
-            this.ColumnCnpj.MinimumWidth = 6;
-            this.ColumnCnpj.Name = "ColumnCnpj";
-            this.ColumnCnpj.ReadOnly = true;
             // 
             // pnlTopBar
             // 
@@ -289,6 +267,38 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Quartos cadastrados";
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 30F;
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // ColumnCompanyName
+            // 
+            this.ColumnCompanyName.FillWeight = 70F;
+            this.ColumnCompanyName.HeaderText = "Número";
+            this.ColumnCompanyName.MinimumWidth = 6;
+            this.ColumnCompanyName.Name = "ColumnCompanyName";
+            this.ColumnCompanyName.ReadOnly = true;
+            // 
+            // ColumnCnpj
+            // 
+            this.ColumnCnpj.FillWeight = 60F;
+            this.ColumnCnpj.HeaderText = "Tipo";
+            this.ColumnCnpj.MinimumWidth = 6;
+            this.ColumnCnpj.Name = "ColumnCnpj";
+            this.ColumnCnpj.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 60F;
+            this.Column2.HeaderText = "Price";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // FormSearchRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -308,6 +318,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchRoom";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchRoom";
             this.Load += new System.EventHandler(this.FormSearchRoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
@@ -337,5 +348,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

@@ -296,6 +296,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchClient";
             this.Load += new System.EventHandler(this.FormSearchClient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();

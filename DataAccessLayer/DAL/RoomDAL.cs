@@ -18,11 +18,11 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetSingleData<Room>(command);
         }
 
-        public QueryResponse<List<Room>> GetByStatus()
+        public QueryResponse<List<Room>> GetByStatus(RoomStatus roomStatus)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
-            command.CommandText = $"{_select} WHERE ROOMSTATUS != @ROOMSTATUS";
-            command.Parameters.AddWithValue("@ROOMSTATUS", RoomStatus.Ocupado);
+            command.CommandText = $"{_select} WHERE ROOMSTATUS = @ROOMSTATUS";
+            command.Parameters.AddWithValue("@ROOMSTATUS", roomStatus);
 
             return new DbExecuter().GetAllData<Room>(command);
         }

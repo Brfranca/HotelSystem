@@ -1,6 +1,7 @@
 ﻿using BusinessLogicalLayer.BLL;
 using Common;
 using Entities;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,7 +35,7 @@ namespace PresentationLayer
         private void UpdateGrid()
         {
             dgvSearch.Rows.Clear();
-            QueryResponse<List<Room>> response = _roomBLL.GetByAvailability();
+            QueryResponse<List<Room>> response = _roomBLL.GetByAvailability(RoomStatus.Disponível);
 
             if (!response.Success)
             {
@@ -50,7 +51,7 @@ namespace PresentationLayer
         {
             foreach (var item in room)
             {
-                dgvSearch.Rows.Add(item.ID, item.Number, item.RoomType.ToString());
+                dgvSearch.Rows.Add(item.ID, item.Number, item.RoomType.ToString(), item.PricePerDay);
             }
         }
 

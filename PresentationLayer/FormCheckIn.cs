@@ -4,6 +4,7 @@ using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using Entities.Entities;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace PresentationLayer
     public partial class FormCheckIn : Form
     {
         private CheckInBLL _checkInBLL;
+        private RoomBLL _roomBLL;
         private Client _client;
         private Room _room;
 
@@ -27,11 +29,12 @@ namespace PresentationLayer
         {
             InitializeComponent();
             _checkInBLL = new CheckInBLL();
+            _roomBLL = new RoomBLL();
         }
 
         private void FormCheckIn_Load(object sender, EventArgs e)
         {
-
+            this.ClearForm();
         }
 
         private CheckIn CreateCheckIn()
@@ -103,6 +106,8 @@ namespace PresentationLayer
             {
                 this.ClearForm();
                 ClearId();
+                _room.RoomStatus = RoomStatus.Ocupado;
+                _roomBLL.Update(_room);
             }
         }
     }

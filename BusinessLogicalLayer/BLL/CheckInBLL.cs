@@ -104,7 +104,6 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("Quarto deve ser informado!");
             }
         }
-
         private void ValidateClientID(int clientID, Validator validator)
         {
             string client = clientID.ToString();
