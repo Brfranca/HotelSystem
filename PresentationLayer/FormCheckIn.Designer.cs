@@ -91,7 +91,7 @@
             this.txtClientCPF.Mask = "000,000,000-00";
             this.txtClientCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientCPF.Name = "txtClientCPF";
-            this.txtClientCPF.Size = new System.Drawing.Size(144, 27);
+            this.txtClientCPF.Size = new System.Drawing.Size(144, 22);
             this.txtClientCPF.TabIndex = 195;
             // 
             // txtClientEmail
@@ -106,7 +106,7 @@
             this.txtClientEmail.MaxLength = 200;
             this.txtClientEmail.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientEmail.Name = "txtClientEmail";
-            this.txtClientEmail.Size = new System.Drawing.Size(303, 27);
+            this.txtClientEmail.Size = new System.Drawing.Size(303, 22);
             this.txtClientEmail.TabIndex = 199;
             // 
             // lblCadCliEmail
@@ -117,7 +117,7 @@
             this.lblCadCliEmail.ForeColor = System.Drawing.Color.White;
             this.lblCadCliEmail.Location = new System.Drawing.Point(40, 231);
             this.lblCadCliEmail.Name = "lblCadCliEmail";
-            this.lblCadCliEmail.Size = new System.Drawing.Size(61, 23);
+            this.lblCadCliEmail.Size = new System.Drawing.Size(51, 19);
             this.lblCadCliEmail.TabIndex = 208;
             this.lblCadCliEmail.Text = "E-mail";
             // 
@@ -133,7 +133,7 @@
             this.txtClientPhone1.MaxLength = 11;
             this.txtClientPhone1.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientPhone1.Name = "txtClientPhone1";
-            this.txtClientPhone1.Size = new System.Drawing.Size(144, 27);
+            this.txtClientPhone1.Size = new System.Drawing.Size(144, 22);
             this.txtClientPhone1.TabIndex = 197;
             // 
             // lblCadCliTel1
@@ -144,7 +144,7 @@
             this.lblCadCliTel1.ForeColor = System.Drawing.Color.White;
             this.lblCadCliTel1.Location = new System.Drawing.Point(199, 173);
             this.lblCadCliTel1.Name = "lblCadCliTel1";
-            this.lblCadCliTel1.Size = new System.Drawing.Size(77, 23);
+            this.lblCadCliTel1.Size = new System.Drawing.Size(66, 19);
             this.lblCadCliTel1.TabIndex = 205;
             this.lblCadCliTel1.Text = "Telefone";
             // 
@@ -156,7 +156,7 @@
             this.lblCadCliCpf.ForeColor = System.Drawing.Color.White;
             this.lblCadCliCpf.Location = new System.Drawing.Point(40, 174);
             this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(40, 23);
+            this.lblCadCliCpf.Size = new System.Drawing.Size(34, 19);
             this.lblCadCliCpf.TabIndex = 203;
             this.lblCadCliCpf.Text = "CPF";
             // 
@@ -172,7 +172,7 @@
             this.txtClientName.MaxLength = 100;
             this.txtClientName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtClientName.Name = "txtClientName";
-            this.txtClientName.Size = new System.Drawing.Size(303, 27);
+            this.txtClientName.Size = new System.Drawing.Size(303, 22);
             this.txtClientName.TabIndex = 194;
             // 
             // lblCadCliNome
@@ -183,7 +183,7 @@
             this.lblCadCliNome.ForeColor = System.Drawing.Color.White;
             this.lblCadCliNome.Location = new System.Drawing.Point(40, 118);
             this.lblCadCliNome.Name = "lblCadCliNome";
-            this.lblCadCliNome.Size = new System.Drawing.Size(58, 23);
+            this.lblCadCliNome.Size = new System.Drawing.Size(50, 19);
             this.lblCadCliNome.TabIndex = 202;
             this.lblCadCliNome.Text = "Nome";
             // 
@@ -195,7 +195,7 @@
             this.lblClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblClient.Location = new System.Drawing.Point(38, 81);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(83, 28);
+            this.lblClient.Size = new System.Drawing.Size(68, 21);
             this.lblClient.TabIndex = 210;
             this.lblClient.Text = "Cliente:";
             // 
@@ -227,7 +227,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(667, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 23);
+            this.label3.Size = new System.Drawing.Size(26, 19);
             this.label3.TabIndex = 265;
             this.label3.Text = "R$";
             // 
@@ -243,7 +243,7 @@
             this.txtRoomPrice.MaxLength = 100;
             this.txtRoomPrice.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomPrice.Name = "txtRoomPrice";
-            this.txtRoomPrice.Size = new System.Drawing.Size(114, 27);
+            this.txtRoomPrice.Size = new System.Drawing.Size(114, 22);
             this.txtRoomPrice.TabIndex = 264;
             // 
             // lblRoomPrice
@@ -254,7 +254,7 @@
             this.lblRoomPrice.ForeColor = System.Drawing.Color.White;
             this.lblRoomPrice.Location = new System.Drawing.Point(667, 183);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(105, 23);
+            this.lblRoomPrice.Size = new System.Drawing.Size(91, 19);
             this.lblRoomPrice.TabIndex = 263;
             this.lblRoomPrice.Text = "Preço diária";
             // 
@@ -266,7 +266,7 @@
             this.lblRoomType.ForeColor = System.Drawing.Color.White;
             this.lblRoomType.Location = new System.Drawing.Point(508, 183);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(130, 23);
+            this.lblRoomType.Size = new System.Drawing.Size(109, 19);
             this.lblRoomType.TabIndex = 261;
             this.lblRoomType.Text = "Tipo de quarto";
             // 
@@ -278,7 +278,7 @@
             this.lblRoomFloor.ForeColor = System.Drawing.Color.White;
             this.lblRoomFloor.Location = new System.Drawing.Point(667, 125);
             this.lblRoomFloor.Name = "lblRoomFloor";
-            this.lblRoomFloor.Size = new System.Drawing.Size(59, 23);
+            this.lblRoomFloor.Size = new System.Drawing.Size(50, 19);
             this.lblRoomFloor.TabIndex = 260;
             this.lblRoomFloor.Text = "Andar";
             // 
@@ -294,7 +294,7 @@
             this.txtRoomNumber.MaxLength = 100;
             this.txtRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomNumber.Name = "txtRoomNumber";
-            this.txtRoomNumber.Size = new System.Drawing.Size(144, 27);
+            this.txtRoomNumber.Size = new System.Drawing.Size(144, 22);
             this.txtRoomNumber.TabIndex = 259;
             // 
             // btnSelectRoom
@@ -325,7 +325,7 @@
             this.lblRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblRoom.Location = new System.Drawing.Point(506, 88);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(84, 28);
+            this.lblRoom.Size = new System.Drawing.Size(67, 21);
             this.lblRoom.TabIndex = 273;
             this.lblRoom.Text = "Quarto:";
             // 
@@ -337,7 +337,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(508, 124);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 23);
+            this.label8.Size = new System.Drawing.Size(64, 19);
             this.label8.TabIndex = 270;
             this.label8.Text = "Número";
             // 
@@ -353,7 +353,7 @@
             this.txtRoomFloor.MaxLength = 100;
             this.txtRoomFloor.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomFloor.Name = "txtRoomFloor";
-            this.txtRoomFloor.Size = new System.Drawing.Size(144, 27);
+            this.txtRoomFloor.Size = new System.Drawing.Size(144, 22);
             this.txtRoomFloor.TabIndex = 276;
             // 
             // txtRoomType
@@ -368,7 +368,7 @@
             this.txtRoomType.MaxLength = 100;
             this.txtRoomType.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtRoomType.Name = "txtRoomType";
-            this.txtRoomType.Size = new System.Drawing.Size(144, 27);
+            this.txtRoomType.Size = new System.Drawing.Size(144, 22);
             this.txtRoomType.TabIndex = 277;
             // 
             // label4
@@ -379,7 +379,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(38, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(170, 28);
+            this.label4.Size = new System.Drawing.Size(136, 21);
             this.label4.TabIndex = 281;
             this.label4.Text = "Data de Entrada:";
             // 
@@ -391,7 +391,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(40, 431);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(148, 28);
+            this.label10.Size = new System.Drawing.Size(119, 21);
             this.label10.TabIndex = 288;
             this.label10.Text = "Data de Saída:";
             // 
@@ -425,7 +425,7 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 27);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(26, 35);
+            this.lblDot1.Size = new System.Drawing.Size(20, 28);
             this.lblDot1.TabIndex = 294;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,7 +438,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label12.Location = new System.Drawing.Point(37, 30);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 35);
+            this.label12.Size = new System.Drawing.Size(92, 28);
             this.label12.TabIndex = 293;
             this.label12.Text = "Check In";
             // 
@@ -447,21 +447,21 @@
             this.dtCheckIn.Enabled = false;
             this.dtCheckIn.Location = new System.Drawing.Point(45, 385);
             this.dtCheckIn.Name = "dtCheckIn";
-            this.dtCheckIn.Size = new System.Drawing.Size(389, 30);
+            this.dtCheckIn.Size = new System.Drawing.Size(389, 25);
             this.dtCheckIn.TabIndex = 295;
-            this.dtCheckIn.Value = new System.DateTime(2020, 11, 17, 17, 54, 37, 0);
+            this.dtCheckIn.Value = new System.DateTime(2020, 11, 18, 0, 0, 0, 0);
             // 
             // dtCheckOut
             // 
             this.dtCheckOut.Location = new System.Drawing.Point(45, 462);
-            this.dtCheckOut.MinDate = new System.DateTime(2020, 11, 17, 0, 0, 0, 0);
+            this.dtCheckOut.MinDate = new System.DateTime(2020, 11, 18, 0, 0, 0, 0);
             this.dtCheckOut.Name = "dtCheckOut";
-            this.dtCheckOut.Size = new System.Drawing.Size(389, 30);
+            this.dtCheckOut.Size = new System.Drawing.Size(389, 25);
             this.dtCheckOut.TabIndex = 296;
             // 
             // FormCheckIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);

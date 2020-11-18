@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entities.DataAnnotations;
+using Entities.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    public class Sale
+    [TableName("SALES")]
+    public class Sale: IEntity
     {
+        [NonEditable]
         public int ID { get; set; }
         public int ClientId { get; set; }
         public DateTime SaleDate { get; set; }

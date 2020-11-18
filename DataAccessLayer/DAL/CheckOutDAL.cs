@@ -1,6 +1,7 @@
 ﻿using Common;
 using DataAccessLayer.Infrastructure;
 using Entities.Entities;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -27,9 +28,10 @@ namespace DataAccessLayer.DAL
                         ID = checkOut.CheckInID
                     };
                     command.Parameters.Clear();
-                    command.CommandText = @"UPDATE CHECKINS SET ACTIVE = @ACTIVE WHERE ID = @CHECKINID";
+                    command.CommandText = @"UPDATE CHECKINS SET ACTIVE = @ACTIVE WHERE ID = @CHECKINID; UPDATE ROOMS SET ROOMSTATUS = @ROOMSTATUS";
                     command.Parameters.AddWithValue("@CHECKINID", checkOut.CheckInID);
                     command.Parameters.AddWithValue("@ACTIVE", false);
+                    command.Parameters.AddWithValue("@ROOMSTATUS", RoomStatus.Disponível);
 
                     Response responseInsert = new DbExecuter().ExecuteQuery(command);
                     if (!responseInsert.Success)

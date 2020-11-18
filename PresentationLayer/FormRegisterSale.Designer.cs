@@ -38,6 +38,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterSale));
             this.pnlProduID = new System.Windows.Forms.Panel();
             this.pnlProduName = new System.Windows.Forms.Panel();
             this.lblConsFornCadastrados = new System.Windows.Forms.Label();
@@ -52,15 +53,10 @@
             this.lblConsProdCod = new System.Windows.Forms.Label();
             this.lblSearchName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtClientCPF = new System.Windows.Forms.MaskedTextBox();
-            this.lblCadCliCpf = new System.Windows.Forms.Label();
             this.btnClientRegister = new System.Windows.Forms.Button();
             this.btnClientNew = new System.Windows.Forms.Button();
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtClientRG = new System.Windows.Forms.TextBox();
-            this.lblCadCliRg = new System.Windows.Forms.Label();
-            this.btnSearchCliente = new System.Windows.Forms.Button();
             this.lblRoomNumber = new System.Windows.Forms.Label();
             this.lblRoomFloor = new System.Windows.Forms.Label();
             this.dgvIncomeItems = new System.Windows.Forms.DataGridView();
@@ -80,6 +76,8 @@
             this.lblDateCheckIn = new System.Windows.Forms.Label();
             this.lblDot1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.btnSelectCheckIn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomeItems)).BeginInit();
             this.SuspendLayout();
@@ -220,7 +218,7 @@
             this.txtProdSearchID.MaxLength = 11;
             this.txtProdSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchID.Name = "txtProdSearchID";
-            this.txtProdSearchID.Size = new System.Drawing.Size(103, 24);
+            this.txtProdSearchID.Size = new System.Drawing.Size(103, 22);
             this.txtProdSearchID.TabIndex = 224;
             // 
             // txtProdSearchName
@@ -234,7 +232,7 @@
             this.txtProdSearchName.MaxLength = 11;
             this.txtProdSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchName.Name = "txtProdSearchName";
-            this.txtProdSearchName.Size = new System.Drawing.Size(258, 24);
+            this.txtProdSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtProdSearchName.TabIndex = 223;
             // 
             // lblConsProdCod
@@ -273,32 +271,6 @@
             this.label2.TabIndex = 220;
             this.label2.Text = "Produtos";
             // 
-            // txtClientCPF
-            // 
-            this.txtClientCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(235)))));
-            this.txtClientCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClientCPF.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtClientCPF.Location = new System.Drawing.Point(710, 123);
-            this.txtClientCPF.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtClientCPF.Mask = "000,000,000-00";
-            this.txtClientCPF.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtClientCPF.Name = "txtClientCPF";
-            this.txtClientCPF.Size = new System.Drawing.Size(144, 24);
-            this.txtClientCPF.TabIndex = 229;
-            this.txtClientCPF.TextChanged += new System.EventHandler(this.txtClientCPF_TextChanged);
-            // 
-            // lblCadCliCpf
-            // 
-            this.lblCadCliCpf.AutoSize = true;
-            this.lblCadCliCpf.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCliCpf.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliCpf.ForeColor = System.Drawing.Color.White;
-            this.lblCadCliCpf.Location = new System.Drawing.Point(706, 99);
-            this.lblCadCliCpf.Name = "lblCadCliCpf";
-            this.lblCadCliCpf.Size = new System.Drawing.Size(34, 19);
-            this.lblCadCliCpf.TabIndex = 230;
-            this.lblCadCliCpf.Text = "CPF";
-            // 
             // btnClientRegister
             // 
             this.btnClientRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
@@ -308,7 +280,7 @@
             this.btnClientRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientRegister.ForeColor = System.Drawing.Color.White;
-            this.btnClientRegister.Location = new System.Drawing.Point(844, 636);
+            this.btnClientRegister.Location = new System.Drawing.Point(761, 642);
             this.btnClientRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClientRegister.Name = "btnClientRegister";
             this.btnClientRegister.Size = new System.Drawing.Size(189, 53);
@@ -351,56 +323,11 @@
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(681, 175);
+            this.lblName.Location = new System.Drawing.Point(706, 111);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(58, 19);
             this.lblName.TabIndex = 235;
             this.lblName.Text = "Nome: ";
-            // 
-            // txtClientRG
-            // 
-            this.txtClientRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(250)))), ((int)(((byte)(246)))));
-            this.txtClientRG.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtClientRG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClientRG.ForeColor = System.Drawing.Color.Black;
-            this.txtClientRG.Location = new System.Drawing.Point(905, 119);
-            this.txtClientRG.Margin = new System.Windows.Forms.Padding(0);
-            this.txtClientRG.MaxLength = 15;
-            this.txtClientRG.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtClientRG.Name = "txtClientRG";
-            this.txtClientRG.Size = new System.Drawing.Size(144, 24);
-            this.txtClientRG.TabIndex = 236;
-            this.txtClientRG.TextChanged += new System.EventHandler(this.txtClientRG_TextChanged);
-            // 
-            // lblCadCliRg
-            // 
-            this.lblCadCliRg.AutoSize = true;
-            this.lblCadCliRg.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCliRg.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadCliRg.ForeColor = System.Drawing.Color.White;
-            this.lblCadCliRg.Location = new System.Drawing.Point(885, 99);
-            this.lblCadCliRg.Name = "lblCadCliRg";
-            this.lblCadCliRg.Size = new System.Drawing.Size(28, 19);
-            this.lblCadCliRg.TabIndex = 237;
-            this.lblCadCliRg.Text = "RG";
-            // 
-            // btnSearchCliente
-            // 
-            this.btnSearchCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnSearchCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchCliente.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
-            this.btnSearchCliente.FlatAppearance.BorderSize = 3;
-            this.btnSearchCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchCliente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchCliente.ForeColor = System.Drawing.Color.White;
-            this.btnSearchCliente.Location = new System.Drawing.Point(1131, 107);
-            this.btnSearchCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSearchCliente.Name = "btnSearchCliente";
-            this.btnSearchCliente.Size = new System.Drawing.Size(105, 37);
-            this.btnSearchCliente.TabIndex = 238;
-            this.btnSearchCliente.Text = "Pesquisar";
-            this.btnSearchCliente.UseVisualStyleBackColor = false;
-            this.btnSearchCliente.Click += new System.EventHandler(this.btnSearchCliente_Click);
             // 
             // lblRoomNumber
             // 
@@ -408,11 +335,11 @@
             this.lblRoomNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomNumber.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomNumber.ForeColor = System.Drawing.Color.White;
-            this.lblRoomNumber.Location = new System.Drawing.Point(681, 209);
+            this.lblRoomNumber.Location = new System.Drawing.Point(707, 179);
             this.lblRoomNumber.Name = "lblRoomNumber";
-            this.lblRoomNumber.Size = new System.Drawing.Size(121, 19);
+            this.lblRoomNumber.Size = new System.Drawing.Size(125, 19);
             this.lblRoomNumber.TabIndex = 240;
-            this.lblRoomNumber.Text = "Número quarto: ";
+            this.lblRoomNumber.Text = "Número quarto:  ";
             // 
             // lblRoomFloor
             // 
@@ -420,7 +347,7 @@
             this.lblRoomFloor.BackColor = System.Drawing.Color.Transparent;
             this.lblRoomFloor.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomFloor.ForeColor = System.Drawing.Color.White;
-            this.lblRoomFloor.Location = new System.Drawing.Point(990, 209);
+            this.lblRoomFloor.Location = new System.Drawing.Point(1013, 179);
             this.lblRoomFloor.Name = "lblRoomFloor";
             this.lblRoomFloor.Size = new System.Drawing.Size(59, 19);
             this.lblRoomFloor.TabIndex = 242;
@@ -461,7 +388,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvIncomeItems.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvIncomeItems.Location = new System.Drawing.Point(696, 308);
+            this.dgvIncomeItems.Location = new System.Drawing.Point(696, 322);
             this.dgvIncomeItems.Name = "dgvIncomeItems";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
@@ -511,7 +438,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(706, 276);
+            this.label5.Location = new System.Drawing.Point(706, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 19);
             this.label5.TabIndex = 264;
@@ -545,7 +472,7 @@
             this.txtProdQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.txtProdQuantity.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdQuantity.Name = "txtProdQuantity";
-            this.txtProdQuantity.Size = new System.Drawing.Size(112, 24);
+            this.txtProdQuantity.Size = new System.Drawing.Size(112, 22);
             this.txtProdQuantity.TabIndex = 268;
             this.txtProdQuantity.Text = "0";
             // 
@@ -606,7 +533,7 @@
             this.txtTotalValue.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtTotalValue.Name = "txtTotalValue";
             this.txtTotalValue.ReadOnly = true;
-            this.txtTotalValue.Size = new System.Drawing.Size(106, 24);
+            this.txtTotalValue.Size = new System.Drawing.Size(106, 22);
             this.txtTotalValue.TabIndex = 272;
             this.txtTotalValue.Text = "0";
             // 
@@ -616,7 +543,7 @@
             this.lblDateCheckIn.BackColor = System.Drawing.Color.Transparent;
             this.lblDateCheckIn.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateCheckIn.ForeColor = System.Drawing.Color.White;
-            this.lblDateCheckIn.Location = new System.Drawing.Point(982, 175);
+            this.lblDateCheckIn.Location = new System.Drawing.Point(707, 145);
             this.lblDateCheckIn.Name = "lblDateCheckIn";
             this.lblDateCheckIn.Size = new System.Drawing.Size(102, 19);
             this.lblDateCheckIn.TabIndex = 274;
@@ -649,12 +576,46 @@
             this.label3.TabIndex = 275;
             this.label3.Text = "Vendas";
             // 
+            // lblCPF
+            // 
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.BackColor = System.Drawing.Color.Transparent;
+            this.lblCPF.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.ForeColor = System.Drawing.Color.White;
+            this.lblCPF.Location = new System.Drawing.Point(1004, 108);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(42, 19);
+            this.lblCPF.TabIndex = 277;
+            this.lblCPF.Text = "CPF: ";
+            // 
+            // btnSelectCheckIn
+            // 
+            this.btnSelectCheckIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnSelectCheckIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelectCheckIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
+            this.btnSelectCheckIn.FlatAppearance.BorderSize = 0;
+            this.btnSelectCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectCheckIn.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectCheckIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
+            this.btnSelectCheckIn.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectCheckIn.Image")));
+            this.btnSelectCheckIn.Location = new System.Drawing.Point(1038, 49);
+            this.btnSelectCheckIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSelectCheckIn.Name = "btnSelectCheckIn";
+            this.btnSelectCheckIn.Size = new System.Drawing.Size(185, 35);
+            this.btnSelectCheckIn.TabIndex = 308;
+            this.btnSelectCheckIn.Text = "Selecionar CheckIn";
+            this.btnSelectCheckIn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSelectCheckIn.UseVisualStyleBackColor = false;
+            this.btnSelectCheckIn.Click += new System.EventHandler(this.btnSelectCheckIn_Click);
+            // 
             // FormRegisterSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1271, 722);
+            this.Controls.Add(this.btnSelectCheckIn);
+            this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.lblDot1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblDateCheckIn);
@@ -670,15 +631,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblRoomFloor);
             this.Controls.Add(this.lblRoomNumber);
-            this.Controls.Add(this.btnSearchCliente);
-            this.Controls.Add(this.txtClientRG);
-            this.Controls.Add(this.lblCadCliRg);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.btnClientRegister);
             this.Controls.Add(this.btnClientNew);
-            this.Controls.Add(this.txtClientCPF);
-            this.Controls.Add(this.lblCadCliCpf);
             this.Controls.Add(this.pnlProduID);
             this.Controls.Add(this.pnlProduName);
             this.Controls.Add(this.lblConsFornCadastrados);
@@ -716,15 +672,10 @@
         private System.Windows.Forms.Label lblConsProdCod;
         private System.Windows.Forms.Label lblSearchName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox txtClientCPF;
-        private System.Windows.Forms.Label lblCadCliCpf;
         private System.Windows.Forms.Button btnClientRegister;
         private System.Windows.Forms.Button btnClientNew;
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtClientRG;
-        private System.Windows.Forms.Label lblCadCliRg;
-        private System.Windows.Forms.Button btnSearchCliente;
         private System.Windows.Forms.Label lblRoomNumber;
         private System.Windows.Forms.Label lblRoomFloor;
         private System.Windows.Forms.DataGridView dgvIncomeItems;
@@ -744,5 +695,7 @@
         private System.Windows.Forms.Label lblDateCheckIn;
         private System.Windows.Forms.Label lblDot1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCPF;
+        private System.Windows.Forms.Button btnSelectCheckIn;
     }
 }

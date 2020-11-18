@@ -92,6 +92,11 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        public QueryResponse<List<CheckIn>> GetByActiveState()
+        {
+            return _checkInDAL.GetByActiveState();
+        }
+
         private void ValidateRoomID(int roomID, Validator validator)
         {
             string room = roomID.ToString();

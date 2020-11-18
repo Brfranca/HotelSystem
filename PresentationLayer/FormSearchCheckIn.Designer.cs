@@ -62,7 +62,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(43, 9);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(85, 28);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(69, 21);
             this.lblNomeFarmacia.TabIndex = 0;
             this.lblNomeFarmacia.Text = "Check In";
             // 
@@ -94,6 +94,7 @@
             this.picClose.Size = new System.Drawing.Size(26, 36);
             this.picClose.TabIndex = 172;
             this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // btnSelect
             // 
@@ -113,6 +114,7 @@
             this.btnSelect.Text = "Selecionar";
             this.btnSelect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // pnlCpf
             // 
@@ -136,7 +138,7 @@
             this.txtSearchCPF.MaxLength = 11;
             this.txtSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchCPF.Name = "txtSearchCPF";
-            this.txtSearchCPF.Size = new System.Drawing.Size(191, 27);
+            this.txtSearchCPF.Size = new System.Drawing.Size(191, 22);
             this.txtSearchCPF.TabIndex = 257;
             // 
             // pnlName
@@ -161,7 +163,7 @@
             this.txtSearchRoomNumber.MaxLength = 11;
             this.txtSearchRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchRoomNumber.Name = "txtSearchRoomNumber";
-            this.txtSearchRoomNumber.Size = new System.Drawing.Size(258, 27);
+            this.txtSearchRoomNumber.Size = new System.Drawing.Size(258, 22);
             this.txtSearchRoomNumber.TabIndex = 255;
             // 
             // lblConsSupCod
@@ -172,7 +174,7 @@
             this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
             this.lblConsSupCod.Location = new System.Drawing.Point(330, 67);
             this.lblConsSupCod.Name = "lblConsSupCod";
-            this.lblConsSupCod.Size = new System.Drawing.Size(45, 23);
+            this.lblConsSupCod.Size = new System.Drawing.Size(38, 19);
             this.lblConsSupCod.TabIndex = 253;
             this.lblConsSupCod.Text = "CPF ";
             // 
@@ -184,7 +186,7 @@
             this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
             this.lblConsSupNome.Location = new System.Drawing.Point(18, 67);
             this.lblConsSupNome.Name = "lblConsSupNome";
-            this.lblConsSupNome.Size = new System.Drawing.Size(160, 23);
+            this.lblConsSupNome.Size = new System.Drawing.Size(135, 19);
             this.lblConsSupNome.TabIndex = 252;
             this.lblConsSupNome.Text = "Número do quarto";
             // 
@@ -278,7 +280,7 @@
             // 
             // FormSearchCheckIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(563, 550);
@@ -297,6 +299,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchCheckIn";
             this.Text = "FormSearchCheckIn";
+            this.Load += new System.EventHandler(this.FormSearchCheckIn_Load);
             this.pnlTopBar.ResumeLayout(false);
             this.pnlTopBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();

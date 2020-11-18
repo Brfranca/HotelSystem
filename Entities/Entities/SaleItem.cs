@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.DataAnnotations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
+    [TableName("SALEITEMS")]
     public class SaleItem
     {
         public int SaleId { get; set; }

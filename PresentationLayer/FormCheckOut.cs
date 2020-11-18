@@ -1,5 +1,6 @@
 ﻿using BusinessLogicalLayer;
 using BusinessLogicalLayer.BLL;
+using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using Entities.Entities;
@@ -33,6 +34,8 @@ namespace PresentationLayer
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             CheckOut checkOut = CreateCheckOut();
+            Response response = _checkOutBLL.Insert(checkOut);
+            MessageBox.Show(response.Message);
         }
 
         private void btnSelectCheckIn_Click(object sender, EventArgs e)
@@ -40,6 +43,11 @@ namespace PresentationLayer
             FormSearchCheckIn frm = new FormSearchCheckIn();
             frm.ShowDialog();
             _checkIn = frm.checkIn;
+            if (_checkIn.ID == 0)
+            {
+                MessageBox.Show("Nenhum checkin selecionado!");
+                return;
+            }
             SelectCheckIn();
         }
         private CheckOut CreateCheckOut()
@@ -47,7 +55,7 @@ namespace PresentationLayer
             CheckOut checkOut = new CheckOut();
             checkOut.CheckInID = _checkIn.ID;
             checkOut.ExitDay = DateTime.Now;
-            checkOut.TotalValue = Convert.ToDouble(lblTotalValue.Text);
+            checkOut.TotalValue = Convert.ToDouble(lblTotalValueInsert.Text);
             return checkOut;
         }
         private void SelectCheckIn()
@@ -55,12 +63,17 @@ namespace PresentationLayer
             QueryResponse<Client> responseClient = _clientBLL.GetById(_checkIn.ClientID);
             QueryResponse<Room> responseRoom = _roomBLL.GetById(_checkIn.RoomID);
             lblNome.Text += responseClient.Data.Name;
-            lblCPF.Text += responseClient.Data.CPF;
+            lblCPF.Text += responseClient.Data.CPF.InsertMaskCPF();
             lblPhone.Text += responseClient.Data.Phone1;
-            lblRoomPrice.Text = _checkIn.RoomPrice.ToString();
+            lblRoomPrice.Text += _checkIn.RoomPrice.ToString();
             lblRoomType.Text += responseRoom.Data.RoomType.ToString();
             lblNumber.Text += responseRoom.Data.Number;
-            //lblTotalValue.Text += _checkOutBLL.CalculateTotalValue();
+            lblTotalValueInsert.Text = _checkOutBLL.CalculateTotalValue(_checkIn.ID, DateTime.Now).ToString();
+        }
+
+        private void btnSalesSelect_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -36,7 +36,7 @@ namespace PresentationLayer
         private void UpdateGrid()
         {
             dgvSearch.Rows.Clear();
-            QueryResponse<List<CheckIn>> response = _checkInBLL.GetAll();
+            QueryResponse<List<CheckIn>> response = _checkInBLL.GetByActiveState();
 
             if (!response.Success)
             {
@@ -58,10 +58,7 @@ namespace PresentationLayer
             }
         }
 
-        private void btnSelect_Click(object sender, EventArgs e)
-        {
-            SelectDataGrid();
-        }
+        
 
         private void SelectDataGrid()
         {
@@ -82,6 +79,23 @@ namespace PresentationLayer
         {
             _currentRowGrid = e.RowIndex;
         }
+
+        private void FormSearchCheckIn_Load(object sender, EventArgs e)
+        {
+            UpdateGrid();
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+
 
         //private void txtSearchName_TextChanged(object sender, EventArgs e)
         //{

@@ -14,6 +14,11 @@ namespace BusinessLogicalLayer.BLL
     {
         private readonly SaleDAL _saleDAL;
 
+        public SaleBLL()
+        {
+            _saleDAL = new SaleDAL();
+        }
+
         public Response Register(Sale sale)
         {
             Response result = Validate(sale);

@@ -33,12 +33,12 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("CheckOut realizado com sucesso!");
         }
 
-        public double CalculateTotalValue(CheckOut checkOut)
+        public double CalculateTotalValue(int checkInId, DateTime dtNow)
         {
 
-            checkOut.TotalValue = CalculateTotalSale(checkOut.CheckInID) + CalculateRoomFeed(checkOut);
+            double totalValue = CalculateTotalSale(checkInId) + CalculateRoomFeed(dtNow, checkInId);
 
-            return checkOut.TotalValue; 
+            return totalValue;
 
         }
 
@@ -49,19 +49,14 @@ namespace BusinessLogicalLayer.BLL
             return totalSales;
         }
 
-        private double CalculateRoomFeed(CheckOut checkOut)
+        private double CalculateRoomFeed(DateTime dtNow, int checkInId)
         {
-            QueryResponse<CheckIn> response = _checkInBLL.GetById(checkOut.CheckInID);
-            TimeSpan duration = checkOut.ExitDay.Subtract(response.Data.EntryDate);
-            double payment = 0.0;
-            if (checkOut.ExitDay.Hour > 12)
-            {
-                payment = response.Data.RoomPrice * Math.Ceiling(duration.TotalDays);
-            }
-            else
-            {
-                payment = response.Data.RoomPrice * duration.TotalDays;
-            }
+            QueryResponse<CheckIn> response = _checkInBLL.GetById(checkInId);
+            TimeSpan duration = dtNow.Subtract(response.Data.EntryDate);
+
+            double payment = response.Data.RoomPrice * Math.Ceiling(duration.TotalDays);
+
+
             return payment;
         }
 
@@ -89,6 +84,6 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("O preço total precisa ser informado!");
             }
         }
-        
+
     }
 }
