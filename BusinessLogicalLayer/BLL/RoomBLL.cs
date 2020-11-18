@@ -2,6 +2,7 @@
 using Common;
 using DataAccessLayer.DAL;
 using Entities;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,9 +72,9 @@ namespace BusinessLogicalLayer.BLL
             return _roomDAL.GetByNumber(number);
         }
 
-        public QueryResponse<List<Room>> GetByAvailability()
+        public QueryResponse<List<Room>> GetByAvailability(RoomStatus status)
         {
-            return _roomDAL.GetByStatus();
+            return _roomDAL.GetByStatus(status);
         }
 
         private Response Validate(Room room)

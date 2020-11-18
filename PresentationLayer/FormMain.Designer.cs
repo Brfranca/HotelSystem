@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlLeftBar = new System.Windows.Forms.Panel();
+            this.pnlRoomSubMenu = new System.Windows.Forms.Panel();
+            this.btnCadRoom = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
@@ -63,9 +65,8 @@
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.btnSale = new System.Windows.Forms.Button();
             this.btnCheckIn = new System.Windows.Forms.Button();
-            this.pnlRoomSubMenu = new System.Windows.Forms.Panel();
-            this.btnCadRoom = new System.Windows.Forms.Button();
             this.pnlLeftBar.SuspendLayout();
+            this.pnlRoomSubMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlEmpSubMenu.SuspendLayout();
             this.pnlProdSubMenu.SuspendLayout();
@@ -78,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).BeginInit();
             this.pnlDisplay.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.pnlRoomSubMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeftBar
@@ -105,6 +105,37 @@
             this.pnlLeftBar.Size = new System.Drawing.Size(300, 774);
             this.pnlLeftBar.TabIndex = 3;
             // 
+            // pnlRoomSubMenu
+            // 
+            this.pnlRoomSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
+            this.pnlRoomSubMenu.Controls.Add(this.btnCadRoom);
+            this.pnlRoomSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlRoomSubMenu.Location = new System.Drawing.Point(0, 563);
+            this.pnlRoomSubMenu.Name = "pnlRoomSubMenu";
+            this.pnlRoomSubMenu.Size = new System.Drawing.Size(300, 39);
+            this.pnlRoomSubMenu.TabIndex = 40;
+            // 
+            // btnCadRoom
+            // 
+            this.btnCadRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadRoom.FlatAppearance.BorderSize = 0;
+            this.btnCadRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.btnCadRoom.ForeColor = System.Drawing.Color.White;
+            this.btnCadRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnCadRoom.Image")));
+            this.btnCadRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadRoom.Location = new System.Drawing.Point(0, 0);
+            this.btnCadRoom.Name = "btnCadRoom";
+            this.btnCadRoom.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCadRoom.Size = new System.Drawing.Size(300, 39);
+            this.btnCadRoom.TabIndex = 0;
+            this.btnCadRoom.Text = "Cadastrar/editar";
+            this.btnCadRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadRoom.UseVisualStyleBackColor = true;
+            this.btnCadRoom.Click += new System.EventHandler(this.btnCadRoom_Click);
+            this.btnCadRoom.MouseLeave += new System.EventHandler(this.btnCadRoom_MouseLeave);
+            this.btnCadRoom.MouseHover += new System.EventHandler(this.btnCadRoom_MouseHover);
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -126,7 +157,7 @@
             this.label5.Location = new System.Drawing.Point(3, 98);
             this.label5.MinimumSize = new System.Drawing.Size(298, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(298, 17);
+            this.label5.Size = new System.Drawing.Size(338, 21);
             this.label5.TabIndex = 0;
             this.label5.Text = "Desenvolvido por Beatriz e Kátia • 2020";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,7 +175,7 @@
             this.lblLogout.Location = new System.Drawing.Point(89, 48);
             this.lblLogout.MinimumSize = new System.Drawing.Size(114, 0);
             this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(116, 20);
+            this.lblLogout.Size = new System.Drawing.Size(144, 22);
             this.lblLogout.TabIndex = 21;
             this.lblLogout.Text = "Sair do Sistema";
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,7 +189,7 @@
             this.lblDateTime.Location = new System.Drawing.Point(0, 14);
             this.lblDateTime.MinimumSize = new System.Drawing.Size(298, 0);
             this.lblDateTime.Name = "lblDateTime";
-            this.lblDateTime.Size = new System.Drawing.Size(298, 20);
+            this.lblDateTime.Size = new System.Drawing.Size(298, 22);
             this.lblDateTime.TabIndex = 0;
             this.lblDateTime.Text = "<hora>";
             this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,7 +203,7 @@
             this.btnRoom.ForeColor = System.Drawing.Color.White;
             this.btnRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnRoom.Image")));
             this.btnRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoom.Location = new System.Drawing.Point(0, 520);
+            this.btnRoom.Location = new System.Drawing.Point(0, 524);
             this.btnRoom.Name = "btnRoom";
             this.btnRoom.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnRoom.Size = new System.Drawing.Size(300, 39);
@@ -188,7 +219,7 @@
             this.pnlEmpSubMenu.Controls.Add(this.btnChangePassword);
             this.pnlEmpSubMenu.Controls.Add(this.btnCadEmp);
             this.pnlEmpSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlEmpSubMenu.Location = new System.Drawing.Point(0, 442);
+            this.pnlEmpSubMenu.Location = new System.Drawing.Point(0, 446);
             this.pnlEmpSubMenu.Name = "pnlEmpSubMenu";
             this.pnlEmpSubMenu.Size = new System.Drawing.Size(300, 78);
             this.pnlEmpSubMenu.TabIndex = 37;
@@ -244,7 +275,7 @@
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(0, 400);
+            this.btnEmployee.Location = new System.Drawing.Point(0, 404);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEmployee.Size = new System.Drawing.Size(300, 42);
@@ -261,7 +292,7 @@
             this.pnlProdSubMenu.Controls.Add(this.btnCadIncome);
             this.pnlProdSubMenu.Controls.Add(this.btnCadProd);
             this.pnlProdSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlProdSubMenu.Location = new System.Drawing.Point(0, 283);
+            this.pnlProdSubMenu.Location = new System.Drawing.Point(0, 287);
             this.pnlProdSubMenu.Name = "pnlProdSubMenu";
             this.pnlProdSubMenu.Size = new System.Drawing.Size(300, 117);
             this.pnlProdSubMenu.TabIndex = 35;
@@ -332,7 +363,7 @@
             this.btnProduc.ForeColor = System.Drawing.Color.White;
             this.btnProduc.Image = ((System.Drawing.Image)(resources.GetObject("btnProduc.Image")));
             this.btnProduc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduc.Location = new System.Drawing.Point(0, 241);
+            this.btnProduc.Location = new System.Drawing.Point(0, 245);
             this.btnProduc.Name = "btnProduc";
             this.btnProduc.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnProduc.Size = new System.Drawing.Size(300, 42);
@@ -347,7 +378,7 @@
             this.pnlSubClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
             this.pnlSubClient.Controls.Add(this.btnRegisterClient);
             this.pnlSubClient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubClient.Location = new System.Drawing.Point(0, 202);
+            this.pnlSubClient.Location = new System.Drawing.Point(0, 206);
             this.pnlSubClient.Name = "pnlSubClient";
             this.pnlSubClient.Size = new System.Drawing.Size(300, 39);
             this.pnlSubClient.TabIndex = 33;
@@ -382,7 +413,7 @@
             this.btnClients.ForeColor = System.Drawing.Color.White;
             this.btnClients.Image = ((System.Drawing.Image)(resources.GetObject("btnClients.Image")));
             this.btnClients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClients.Location = new System.Drawing.Point(0, 160);
+            this.btnClients.Location = new System.Drawing.Point(0, 164);
             this.btnClients.Name = "btnClients";
             this.btnClients.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnClients.Size = new System.Drawing.Size(300, 42);
@@ -396,7 +427,7 @@
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 120);
             this.panel1.TabIndex = 31;
@@ -423,10 +454,10 @@
             this.lblEmployeeName.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblEmployeeName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeName.ForeColor = System.Drawing.Color.White;
-            this.lblEmployeeName.Location = new System.Drawing.Point(0, 20);
+            this.lblEmployeeName.Location = new System.Drawing.Point(0, 22);
             this.lblEmployeeName.MaximumSize = new System.Drawing.Size(220, 0);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(110, 20);
+            this.lblEmployeeName.Size = new System.Drawing.Size(137, 22);
             this.lblEmployeeName.TabIndex = 1;
             this.lblEmployeeName.Text = "<funcionario>";
             // 
@@ -439,7 +470,7 @@
             this.lblHello.ForeColor = System.Drawing.Color.Silver;
             this.lblHello.Location = new System.Drawing.Point(0, 0);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(39, 20);
+            this.lblHello.Size = new System.Drawing.Size(48, 22);
             this.lblHello.TabIndex = 0;
             this.lblHello.Text = "Olá,";
             // 
@@ -492,7 +523,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(34, 10);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(102, 21);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(127, 28);
             this.lblNomeFarmacia.TabIndex = 174;
             this.lblNomeFarmacia.Text = "Hotel System";
             // 
@@ -593,40 +624,9 @@
             this.btnCheckIn.UseVisualStyleBackColor = true;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
-            // pnlRoomSubMenu
-            // 
-            this.pnlRoomSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(50)))), ((int)(((byte)(59)))));
-            this.pnlRoomSubMenu.Controls.Add(this.btnCadRoom);
-            this.pnlRoomSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlRoomSubMenu.Location = new System.Drawing.Point(0, 559);
-            this.pnlRoomSubMenu.Name = "pnlRoomSubMenu";
-            this.pnlRoomSubMenu.Size = new System.Drawing.Size(300, 39);
-            this.pnlRoomSubMenu.TabIndex = 40;
-            // 
-            // btnCadRoom
-            // 
-            this.btnCadRoom.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCadRoom.FlatAppearance.BorderSize = 0;
-            this.btnCadRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadRoom.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.btnCadRoom.ForeColor = System.Drawing.Color.White;
-            this.btnCadRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnCadRoom.Image")));
-            this.btnCadRoom.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadRoom.Location = new System.Drawing.Point(0, 0);
-            this.btnCadRoom.Name = "btnCadRoom";
-            this.btnCadRoom.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCadRoom.Size = new System.Drawing.Size(300, 39);
-            this.btnCadRoom.TabIndex = 0;
-            this.btnCadRoom.Text = "Cadastrar/editar";
-            this.btnCadRoom.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadRoom.UseVisualStyleBackColor = true;
-            this.btnCadRoom.Click += new System.EventHandler(this.btnCadRoom_Click);
-            this.btnCadRoom.MouseLeave += new System.EventHandler(this.btnCadRoom_MouseLeave);
-            this.btnCadRoom.MouseHover += new System.EventHandler(this.btnCadRoom_MouseHover);
-            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1320, 814);
@@ -644,6 +644,7 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.pnlLeftBar.ResumeLayout(false);
             this.pnlLeftBar.PerformLayout();
+            this.pnlRoomSubMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.pnlEmpSubMenu.ResumeLayout(false);
@@ -658,7 +659,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMainClose)).EndInit();
             this.pnlDisplay.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.pnlRoomSubMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
