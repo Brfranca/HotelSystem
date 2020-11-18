@@ -53,5 +53,13 @@ namespace DataAccessLayer.DAL
             command.Parameters.AddWithValue("@CLIENTID", id);
             return new DbExecuter().GetAllData<Sale>(command);
         }
+
+        public QueryResponse<List<SaleItem>> GetBySaleId(int id)
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = @"SELECT * FROM SALEITEMS WHERE SALEID = @SALEID";
+            command.Parameters.AddWithValue("@SALEID", id);
+            return new DbExecuter().GetAllData<SaleItem>(command);
+        }
     }
 }

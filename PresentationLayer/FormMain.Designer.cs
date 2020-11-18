@@ -179,6 +179,7 @@
             this.lblLogout.TabIndex = 21;
             this.lblLogout.Text = "Sair do Sistema";
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
             // 
             // lblDateTime
             // 

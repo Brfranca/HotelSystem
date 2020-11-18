@@ -60,8 +60,21 @@ namespace PresentationLayer
         {
             employee = FormLogin.employee;
             lblEmployeeName.Text = employee.Name;
-
+            AdmRestriction();
             HideSubMenu();
+        }
+
+        private void AdmRestriction()
+        {
+            if (employee.ID == 0)
+            {
+                btnProduc.Enabled = false;
+                btnCheckIn.Enabled = false;
+                btnCheckOut.Enabled = false;
+                btnReservation.Enabled = false;
+                btnSale.Enabled = false;
+                btnChangePassword.Enabled = false;
+            }
         }
 
         // CRIAR FORM DENTRO DE UM PAINEL 
@@ -288,6 +301,11 @@ namespace PresentationLayer
         {
             OpenChildForm(new FormCheckOut());
             HideSubMenu();
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
