@@ -38,17 +38,22 @@
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.btnSelect = new System.Windows.Forms.Button();
+            this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlName = new System.Windows.Forms.Panel();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlCpf = new System.Windows.Forms.Panel();
             this.txtSearchCPF = new System.Windows.Forms.TextBox();
-            this.pnlName = new System.Windows.Forms.Panel();
+            this.pnlNumber = new System.Windows.Forms.Panel();
             this.txtSearchRoomNumber = new System.Windows.Forms.TextBox();
             this.lblConsSupCod = new System.Windows.Forms.Label();
             this.lblConsSupNome = new System.Windows.Forms.Label();
-            this.dgvSearch = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlTopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
@@ -62,7 +67,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(43, 9);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(69, 21);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(85, 28);
             this.lblNomeFarmacia.TabIndex = 0;
             this.lblNomeFarmacia.Text = "Check In";
             // 
@@ -77,8 +82,8 @@
             this.pnlTopBar.Location = new System.Drawing.Point(0, 0);
             this.pnlTopBar.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(563, 40);
-            this.pnlTopBar.TabIndex = 243;
+            this.pnlTopBar.Size = new System.Drawing.Size(624, 40);
+            this.pnlTopBar.TabIndex = 5;
             // 
             // picClose
             // 
@@ -88,7 +93,7 @@
             this.picClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picClose.BackgroundImage")));
             this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Location = new System.Drawing.Point(521, 2);
+            this.picClose.Location = new System.Drawing.Point(582, 2);
             this.picClose.Margin = new System.Windows.Forms.Padding(0);
             this.picClose.Name = "picClose";
             this.picClose.Size = new System.Drawing.Size(26, 36);
@@ -106,89 +111,15 @@
             this.btnSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnSelect.Image = ((System.Drawing.Image)(resources.GetObject("btnSelect.Image")));
-            this.btnSelect.Location = new System.Drawing.Point(192, 508);
+            this.btnSelect.Location = new System.Drawing.Point(220, 508);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(189, 36);
-            this.btnSelect.TabIndex = 258;
+            this.btnSelect.TabIndex = 4;
             this.btnSelect.Text = "Selecionar";
             this.btnSelect.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
-            // 
-            // pnlCpf
-            // 
-            this.pnlCpf.BackColor = System.Drawing.Color.White;
-            this.pnlCpf.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlCpf.Location = new System.Drawing.Point(334, 111);
-            this.pnlCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlCpf.MaximumSize = new System.Drawing.Size(564, 1);
-            this.pnlCpf.Name = "pnlCpf";
-            this.pnlCpf.Size = new System.Drawing.Size(206, 1);
-            this.pnlCpf.TabIndex = 256;
-            // 
-            // txtSearchCPF
-            // 
-            this.txtSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txtSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCPF.ForeColor = System.Drawing.Color.White;
-            this.txtSearchCPF.Location = new System.Drawing.Point(338, 90);
-            this.txtSearchCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchCPF.MaxLength = 11;
-            this.txtSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchCPF.Name = "txtSearchCPF";
-            this.txtSearchCPF.Size = new System.Drawing.Size(191, 22);
-            this.txtSearchCPF.TabIndex = 257;
-            // 
-            // pnlName
-            // 
-            this.pnlName.BackColor = System.Drawing.Color.White;
-            this.pnlName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlName.Location = new System.Drawing.Point(21, 110);
-            this.pnlName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlName.MaximumSize = new System.Drawing.Size(564, 1);
-            this.pnlName.Name = "pnlName";
-            this.pnlName.Size = new System.Drawing.Size(270, 1);
-            this.pnlName.TabIndex = 254;
-            // 
-            // txtSearchRoomNumber
-            // 
-            this.txtSearchRoomNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txtSearchRoomNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchRoomNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchRoomNumber.ForeColor = System.Drawing.Color.White;
-            this.txtSearchRoomNumber.Location = new System.Drawing.Point(25, 89);
-            this.txtSearchRoomNumber.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchRoomNumber.MaxLength = 11;
-            this.txtSearchRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchRoomNumber.Name = "txtSearchRoomNumber";
-            this.txtSearchRoomNumber.Size = new System.Drawing.Size(258, 22);
-            this.txtSearchRoomNumber.TabIndex = 255;
-            // 
-            // lblConsSupCod
-            // 
-            this.lblConsSupCod.AutoSize = true;
-            this.lblConsSupCod.BackColor = System.Drawing.Color.Transparent;
-            this.lblConsSupCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupCod.Location = new System.Drawing.Point(330, 67);
-            this.lblConsSupCod.Name = "lblConsSupCod";
-            this.lblConsSupCod.Size = new System.Drawing.Size(38, 19);
-            this.lblConsSupCod.TabIndex = 253;
-            this.lblConsSupCod.Text = "CPF ";
-            // 
-            // lblConsSupNome
-            // 
-            this.lblConsSupNome.AutoSize = true;
-            this.lblConsSupNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblConsSupNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupNome.Location = new System.Drawing.Point(18, 67);
-            this.lblConsSupNome.Name = "lblConsSupNome";
-            this.lblConsSupNome.Size = new System.Drawing.Size(135, 19);
-            this.lblConsSupNome.TabIndex = 252;
-            this.lblConsSupNome.Text = "Número do quarto";
             // 
             // dgvSearch
             // 
@@ -213,8 +144,10 @@
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column2,
+            this.ColumnCnpj,
             this.ColumnCompanyName,
-            this.ColumnCnpj});
+            this.Column3});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -241,24 +174,26 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.dgvSearch.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(518, 379);
-            this.dgvSearch.TabIndex = 251;
+            this.dgvSearch.Size = new System.Drawing.Size(571, 379);
+            this.dgvSearch.TabIndex = 3;
             this.dgvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellClick);
+            this.dgvSearch.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellContentDoubleClick);
             // 
             // Column1
             // 
-            this.Column1.FillWeight = 40F;
+            this.Column1.FillWeight = 25F;
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // ColumnCompanyName
+            // Column2
             // 
-            this.ColumnCompanyName.HeaderText = "Número do quarto";
-            this.ColumnCompanyName.MinimumWidth = 6;
-            this.ColumnCompanyName.Name = "ColumnCompanyName";
-            this.ColumnCompanyName.ReadOnly = true;
+            this.Column2.FillWeight = 75F;
+            this.Column2.HeaderText = "Nome";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // ColumnCnpj
             // 
@@ -267,6 +202,22 @@
             this.ColumnCnpj.MinimumWidth = 6;
             this.ColumnCnpj.Name = "ColumnCnpj";
             this.ColumnCnpj.ReadOnly = true;
+            // 
+            // ColumnCompanyName
+            // 
+            this.ColumnCompanyName.FillWeight = 45F;
+            this.ColumnCompanyName.HeaderText = "Nº Quarto";
+            this.ColumnCompanyName.MinimumWidth = 6;
+            this.ColumnCompanyName.Name = "ColumnCompanyName";
+            this.ColumnCompanyName.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 55F;
+            this.Column3.HeaderText = "Check In";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // pictureBox1
             // 
@@ -279,26 +230,150 @@
             this.pictureBox1.TabIndex = 259;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlName
+            // 
+            this.pnlName.BackColor = System.Drawing.Color.White;
+            this.pnlName.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pnlName.Location = new System.Drawing.Point(23, 111);
+            this.pnlName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlName.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlName.Name = "pnlName";
+            this.pnlName.Size = new System.Drawing.Size(200, 1);
+            this.pnlName.TabIndex = 280;
+            // 
+            // txtName
+            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(27, 90);
+            this.txtName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtName.MaxLength = 11;
+            this.txtName.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(193, 27);
+            this.txtName.TabIndex = 0;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 23);
+            this.label1.TabIndex = 279;
+            this.label1.Text = "Nome do Cliente";
+            // 
+            // pnlCpf
+            // 
+            this.pnlCpf.BackColor = System.Drawing.Color.White;
+            this.pnlCpf.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pnlCpf.Location = new System.Drawing.Point(244, 111);
+            this.pnlCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlCpf.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlCpf.Name = "pnlCpf";
+            this.pnlCpf.Size = new System.Drawing.Size(150, 1);
+            this.pnlCpf.TabIndex = 277;
+            // 
+            // txtSearchCPF
+            // 
+            this.txtSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchCPF.ForeColor = System.Drawing.Color.White;
+            this.txtSearchCPF.Location = new System.Drawing.Point(248, 90);
+            this.txtSearchCPF.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchCPF.MaxLength = 11;
+            this.txtSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtSearchCPF.Name = "txtSearchCPF";
+            this.txtSearchCPF.Size = new System.Drawing.Size(146, 27);
+            this.txtSearchCPF.TabIndex = 1;
+            this.txtSearchCPF.TextChanged += new System.EventHandler(this.txtSearchCPF_TextChanged);
+            this.txtSearchCPF.Enter += new System.EventHandler(this.txtSearchCPF_Enter);
+            this.txtSearchCPF.Leave += new System.EventHandler(this.txtSearchCPF_Leave);
+            // 
+            // pnlNumber
+            // 
+            this.pnlNumber.BackColor = System.Drawing.Color.White;
+            this.pnlNumber.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pnlNumber.Location = new System.Drawing.Point(425, 110);
+            this.pnlNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlNumber.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlNumber.Name = "pnlNumber";
+            this.pnlNumber.Size = new System.Drawing.Size(150, 1);
+            this.pnlNumber.TabIndex = 275;
+            // 
+            // txtSearchRoomNumber
+            // 
+            this.txtSearchRoomNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.txtSearchRoomNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSearchRoomNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRoomNumber.ForeColor = System.Drawing.Color.White;
+            this.txtSearchRoomNumber.Location = new System.Drawing.Point(429, 89);
+            this.txtSearchRoomNumber.Margin = new System.Windows.Forms.Padding(0);
+            this.txtSearchRoomNumber.MaxLength = 11;
+            this.txtSearchRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
+            this.txtSearchRoomNumber.Name = "txtSearchRoomNumber";
+            this.txtSearchRoomNumber.Size = new System.Drawing.Size(146, 27);
+            this.txtSearchRoomNumber.TabIndex = 2;
+            this.txtSearchRoomNumber.TextChanged += new System.EventHandler(this.txtSearchRoomNumber_TextChanged);
+            this.txtSearchRoomNumber.Enter += new System.EventHandler(this.txtSearchRoomNumber_Enter);
+            this.txtSearchRoomNumber.Leave += new System.EventHandler(this.txtSearchRoomNumber_Leave);
+            // 
+            // lblConsSupCod
+            // 
+            this.lblConsSupCod.AutoSize = true;
+            this.lblConsSupCod.BackColor = System.Drawing.Color.Transparent;
+            this.lblConsSupCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
+            this.lblConsSupCod.Location = new System.Drawing.Point(240, 67);
+            this.lblConsSupCod.Name = "lblConsSupCod";
+            this.lblConsSupCod.Size = new System.Drawing.Size(45, 23);
+            this.lblConsSupCod.TabIndex = 274;
+            this.lblConsSupCod.Text = "CPF ";
+            // 
+            // lblConsSupNome
+            // 
+            this.lblConsSupNome.AutoSize = true;
+            this.lblConsSupNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblConsSupNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
+            this.lblConsSupNome.Location = new System.Drawing.Point(422, 67);
+            this.lblConsSupNome.Name = "lblConsSupNome";
+            this.lblConsSupNome.Size = new System.Drawing.Size(160, 23);
+            this.lblConsSupNome.TabIndex = 273;
+            this.lblConsSupNome.Text = "Número do quarto";
+            // 
             // FormSearchCheckIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(563, 550);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSelect);
+            this.ClientSize = new System.Drawing.Size(624, 550);
+            this.Controls.Add(this.pnlName);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCpf);
             this.Controls.Add(this.txtSearchCPF);
-            this.Controls.Add(this.pnlName);
+            this.Controls.Add(this.pnlNumber);
             this.Controls.Add(this.txtSearchRoomNumber);
             this.Controls.Add(this.lblConsSupCod);
             this.Controls.Add(this.lblConsSupNome);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.dgvSearch);
             this.Controls.Add(this.pnlTopBar);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchCheckIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchCheckIn";
             this.Load += new System.EventHandler(this.FormSearchCheckIn_Load);
             this.pnlTopBar.ResumeLayout(false);
@@ -316,16 +391,21 @@
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picClose;
         private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlCpf;
         private System.Windows.Forms.TextBox txtSearchCPF;
-        private System.Windows.Forms.Panel pnlName;
+        private System.Windows.Forms.Panel pnlNumber;
         private System.Windows.Forms.TextBox txtSearchRoomNumber;
         private System.Windows.Forms.Label lblConsSupCod;
         private System.Windows.Forms.Label lblConsSupNome;
-        private System.Windows.Forms.DataGridView dgvSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

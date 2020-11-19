@@ -7,12 +7,9 @@ using Entities.Entities;
 using PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -161,7 +158,6 @@ namespace PresentationLayer
         private void txtSearchRoomNumber_TextChanged(object sender, EventArgs e)
         {
             FilterGrid(txtSearchRoomNumber, txtSearchCPF,txtName, x => x.RoomNumber.ToString().ToLower().Contains(txtSearchRoomNumber.Text.ToLower()));
-
         }
 
         private void txtSearchCPF_TextChanged(object sender, EventArgs e)

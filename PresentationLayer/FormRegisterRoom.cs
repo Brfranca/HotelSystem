@@ -31,8 +31,6 @@ namespace PresentationLayer
             cmbFloor.DataSource = Enum.GetValues(typeof(RoomFloor));
             UpdateGrid();
             btnRoomDelete.Visible = false;
-            cmbRoomStatus.DataSource = Enum.GetValues(typeof(RoomStatus));
-            cmbRoomStatus.SelectedIndex = -1;
 
         }
 
@@ -94,7 +92,7 @@ namespace PresentationLayer
         {
             foreach (var item in rooms)
             {
-                dgvRooms.Rows.Add(item.Number, item.RoomFloor, item.PricePerDay, item.RoomType, item.RoomStatus.ToString());
+                dgvRooms.Rows.Add(item.ID,item.Number, item.RoomFloor, item.PricePerDay, item.RoomType, item.RoomStatus.ToString());
             }
         }
 
@@ -108,7 +106,7 @@ namespace PresentationLayer
             if (_currentRowGrid == -1)
                 return;
 
-            string number = (string)dgvRooms.Rows[_currentRowGrid].Cells[0].Value;
+            string number = (string)dgvRooms.Rows[_currentRowGrid].Cells[1].Value;
             QueryResponse<Room> response = _roomBLL.GetByNumber(number);
             if (response.Success)
             {
@@ -175,12 +173,11 @@ namespace PresentationLayer
             SelectDataGrid();
         }
 
-        private void FilterGrid(TextBox textBox, TextBox textBox1, ComboBox cmb, Func<Room, bool> predicate)
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Room, bool> predicate)
         {
             if (textBox.Text.Length > 0)
             {
                 textBox1.Clear();
-                cmb.SelectedIndex = -1;
                 List<Room> customerFiltered = new List<Room>();
                 customerFiltered.AddRange(_roomGrid.Where(predicate));
                 dgvRooms.Rows.Clear();
@@ -215,12 +212,12 @@ namespace PresentationLayer
 
         private void txtRoomSearchNumber_TextChanged(object sender, EventArgs e)
         {
-            FilterGrid(txtRoomSearchNumber, txtRoomSearchID, cmbRoomStatus, x => x.Number.ToLower().Contains(txtRoomSearchNumber.Text.ToLower()));
+            FilterGrid(txtRoomSearchNumber, txtRoomSearchID, x => x.Number.ToLower().Contains(txtRoomSearchNumber.Text.ToLower()));
         }
 
         private void txtRoomSearchID_TextChanged(object sender, EventArgs e)
         {
-            FilterGrid(txtRoomSearchID, txtRoomSearchNumber, cmbRoomStatus, x => x.ID.ToString().Contains(txtRoomSearchID.Text));
+            FilterGrid(txtRoomSearchID, txtRoomSearchNumber, x => x.ID.ToString().Contains(txtRoomSearchID.Text));
         }
 
         private void txtRoomSearchNumber_Enter(object sender, EventArgs e)
@@ -246,11 +243,6 @@ namespace PresentationLayer
         private void picRoomRefresh_Click(object sender, EventArgs e)
         {
             UpdateGrid();
-        }
-
-        private void cmbRoomStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FilterGrid(cmbRoomStatus, txtRoomSearchNumber, txtRoomSearchID, x => x.RoomStatus.Equals(cmbRoomStatus.SelectedIndex));
         }
 
         private void txtRoomSearchID_Enter(object sender, EventArgs e)
