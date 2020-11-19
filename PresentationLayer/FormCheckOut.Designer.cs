@@ -55,12 +55,6 @@
             this.btnSalesSelect = new System.Windows.Forms.Button();
             this.lblTotalValue = new System.Windows.Forms.Label();
             this.lblTotalValueInsert = new System.Windows.Forms.Label();
-            this.lblNomeInsert = new System.Windows.Forms.Label();
-            this.lblCPFInsert = new System.Windows.Forms.Label();
-            this.lblPhoneInsert = new System.Windows.Forms.Label();
-            this.lblNumberInsert = new System.Windows.Forms.Label();
-            this.lblRoomTypeInsert = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSales)).BeginInit();
             this.SuspendLayout();
             // 
@@ -372,81 +366,8 @@
             this.lblTotalValueInsert.ForeColor = System.Drawing.Color.White;
             this.lblTotalValueInsert.Location = new System.Drawing.Point(174, 409);
             this.lblTotalValueInsert.Name = "lblTotalValueInsert";
-            this.lblTotalValueInsert.Size = new System.Drawing.Size(64, 19);
+            this.lblTotalValueInsert.Size = new System.Drawing.Size(0, 19);
             this.lblTotalValueInsert.TabIndex = 330;
-            this.lblTotalValueInsert.Text = "<valor>";
-            // 
-            // lblNomeInsert
-            // 
-            this.lblNomeInsert.AutoSize = true;
-            this.lblNomeInsert.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeInsert.ForeColor = System.Drawing.Color.White;
-            this.lblNomeInsert.Location = new System.Drawing.Point(123, 108);
-            this.lblNomeInsert.Name = "lblNomeInsert";
-            this.lblNomeInsert.Size = new System.Drawing.Size(66, 19);
-            this.lblNomeInsert.TabIndex = 331;
-            this.lblNomeInsert.Text = "<name>";
-            // 
-            // lblCPFInsert
-            // 
-            this.lblCPFInsert.AutoSize = true;
-            this.lblCPFInsert.BackColor = System.Drawing.Color.Transparent;
-            this.lblCPFInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPFInsert.ForeColor = System.Drawing.Color.White;
-            this.lblCPFInsert.Location = new System.Drawing.Point(111, 138);
-            this.lblCPFInsert.Name = "lblCPFInsert";
-            this.lblCPFInsert.Size = new System.Drawing.Size(54, 19);
-            this.lblCPFInsert.TabIndex = 332;
-            this.lblCPFInsert.Text = "<CPF>";
-            // 
-            // lblPhoneInsert
-            // 
-            this.lblPhoneInsert.AutoSize = true;
-            this.lblPhoneInsert.BackColor = System.Drawing.Color.Transparent;
-            this.lblPhoneInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneInsert.ForeColor = System.Drawing.Color.White;
-            this.lblPhoneInsert.Location = new System.Drawing.Point(126, 173);
-            this.lblPhoneInsert.Name = "lblPhoneInsert";
-            this.lblPhoneInsert.Size = new System.Drawing.Size(71, 19);
-            this.lblPhoneInsert.TabIndex = 333;
-            this.lblPhoneInsert.Text = "<phone>";
-            // 
-            // lblNumberInsert
-            // 
-            this.lblNumberInsert.AutoSize = true;
-            this.lblNumberInsert.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumberInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumberInsert.ForeColor = System.Drawing.Color.White;
-            this.lblNumberInsert.Location = new System.Drawing.Point(135, 202);
-            this.lblNumberInsert.Name = "lblNumberInsert";
-            this.lblNumberInsert.Size = new System.Drawing.Size(81, 19);
-            this.lblNumberInsert.TabIndex = 334;
-            this.lblNumberInsert.Text = "<number>";
-            // 
-            // lblRoomTypeInsert
-            // 
-            this.lblRoomTypeInsert.AutoSize = true;
-            this.lblRoomTypeInsert.BackColor = System.Drawing.Color.Transparent;
-            this.lblRoomTypeInsert.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomTypeInsert.ForeColor = System.Drawing.Color.White;
-            this.lblRoomTypeInsert.Location = new System.Drawing.Point(171, 230);
-            this.lblRoomTypeInsert.Name = "lblRoomTypeInsert";
-            this.lblRoomTypeInsert.Size = new System.Drawing.Size(101, 19);
-            this.lblRoomTypeInsert.TabIndex = 335;
-            this.lblRoomTypeInsert.Text = "<RoomType>";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.White;
-            this.lblPrice.Location = new System.Drawing.Point(167, 263);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(63, 19);
-            this.lblPrice.TabIndex = 336;
-            this.lblPrice.Text = "<price>";
             // 
             // FormCheckOut
             // 
@@ -454,12 +375,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(933, 588);
-            this.Controls.Add(this.lblPrice);
-            this.Controls.Add(this.lblRoomTypeInsert);
-            this.Controls.Add(this.lblNumberInsert);
-            this.Controls.Add(this.lblPhoneInsert);
-            this.Controls.Add(this.lblCPFInsert);
-            this.Controls.Add(this.lblNomeInsert);
             this.Controls.Add(this.lblTotalValueInsert);
             this.Controls.Add(this.lblTotalValue);
             this.Controls.Add(this.btnSalesSelect);
@@ -512,11 +427,5 @@
         private System.Windows.Forms.Button btnSalesSelect;
         private System.Windows.Forms.Label lblTotalValue;
         private System.Windows.Forms.Label lblTotalValueInsert;
-        private System.Windows.Forms.Label lblNomeInsert;
-        private System.Windows.Forms.Label lblCPFInsert;
-        private System.Windows.Forms.Label lblPhoneInsert;
-        private System.Windows.Forms.Label lblNumberInsert;
-        private System.Windows.Forms.Label lblRoomTypeInsert;
-        private System.Windows.Forms.Label lblPrice;
     }
 }

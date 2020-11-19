@@ -28,12 +28,12 @@ namespace PresentationLayer
         public FormCheckOut()
         {
             InitializeComponent();
-            _checkIn = new CheckIn();
             _checkOutBLL = new CheckOutBLL();
             _clientBLL = new ClientBLL();
             _roomBLL = new RoomBLL();
             _saleBLL = new SaleBLL();
             sale = new Sale();
+            _checkIn = new CheckIn();
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -51,12 +51,12 @@ namespace PresentationLayer
 
         private void btnSelectCheckIn_Click(object sender, EventArgs e)
         {
-            ClearLabel();
             CreateCheckIn();
         }
 
         private void CreateCheckIn()
         {
+            ClearLabel();
             FormSearchCheckIn frm = new FormSearchCheckIn();
             frm.ShowDialog();
             _checkIn = frm.checkIn;
@@ -80,6 +80,7 @@ namespace PresentationLayer
         private CheckOut CreateCheckOut()
         {
             CheckOut checkOut = new CheckOut();
+            checkOut.EmployeeID = FormLogin.employee.ID;
             checkOut.CheckInID = _checkIn.ID;
             checkOut.ExitDay = dtCheckOut.Value;
             checkOut.TotalValue = Convert.ToDouble(lblTotalValueInsert.Text);
@@ -89,12 +90,12 @@ namespace PresentationLayer
         {
             QueryResponse<Client> responseClient = _clientBLL.GetById(_checkIn.ClientID);
             QueryResponse<Room> responseRoom = _roomBLL.GetById(_checkIn.RoomID);
-            lblNomeInsert.Text = responseClient.Data.Name;
-            lblCPFInsert.Text = responseClient.Data.CPF.InsertMaskCPF();
-            lblPhoneInsert.Text = responseClient.Data.Phone1;
-            lblPrice.Text = _checkIn.RoomPrice.ToString();
-            lblRoomTypeInsert.Text = responseRoom.Data.RoomType.ToString();
-            lblNumberInsert.Text = responseRoom.Data.Number;
+            lblNome.Text += responseClient.Data.Name;
+            lblCPF.Text += responseClient.Data.CPF.InsertMaskCPF();
+            lblPhone.Text += responseClient.Data.Phone1;
+            lblRoomPrice.Text += _checkIn.RoomPrice.ToString();
+            lblRoomType.Text += responseRoom.Data.RoomType.ToString();
+            lblNumber.Text += responseRoom.Data.Number;
             lblTotalValueInsert.Text = _checkOutBLL.CalculateTotalValue(_checkIn, DateTime.Now).ToString();
         }
 
@@ -105,13 +106,13 @@ namespace PresentationLayer
 
         private void ClearLabel()
         {
-            lblNomeInsert.Text = "<name>";
-            lblCPFInsert.Text = "<CPF>";
-            lblPhoneInsert.Text = "<phone>";
-            lblPrice.Text = "<price>";
-            lblRoomTypeInsert.Text = "<roomtype>";
-            lblNumberInsert.Text = "<number>";
-            lblTotalValueInsert.Text = "<valor>";
+            lblNome.Text = "Nome: ";
+            lblCPF.Text = "CPF: ";
+            lblPhone.Text = "Telefone: ";
+            lblRoomPrice.Text = "Preço diária: R$";
+            lblRoomType.Text = "Tipo de quarto: ";
+            lblNumber.Text = "Número: ";
+            lblTotalValueInsert.Text = "";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -131,6 +132,7 @@ namespace PresentationLayer
             if (_currentRowGrid == -1)
                 return;
 
+            dgvSales.Rows.Clear();
             int id = (int)dgvSales.Rows[_currentRowGrid].Cells[0].Value;
             QueryResponse<Sale> response = _saleBLL.GetById(id);
             if (!response.Success)

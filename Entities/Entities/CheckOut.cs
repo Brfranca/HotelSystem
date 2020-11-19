@@ -15,5 +15,6 @@ namespace Entities.Entities
         public int CheckInID { get; set; }
         public double TotalValue { get; set; }
         public DateTime ExitDay { get; set; }
+        public int EmployeeID { get; set; }
     }
 }

@@ -73,10 +73,7 @@ namespace PresentationLayer
             this.Close();
         }
 
-        private void dgvSearch_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            _currentRowGrid = e.RowIndex;
-        }
+       
 
         private void FormSearchCheckIn_Load(object sender, EventArgs e)
         {
@@ -89,6 +86,11 @@ namespace PresentationLayer
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void dgvSearch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectDataGrid();
         }

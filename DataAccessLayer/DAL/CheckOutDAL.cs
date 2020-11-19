@@ -28,9 +28,10 @@ namespace DataAccessLayer.DAL
                         ID = checkOut.CheckInID
                     };
                     command.Parameters.Clear();
-                    command.CommandText = @"UPDATE CHECKINS SET ACTIVE = @ACTIVE WHERE ID = @CHECKINID; UPDATE ROOMS SET ROOMSTATUS = @ROOMSTATUS";
+                    command.CommandText = @"UPDATE CHECKINS SET ACTIVE = @ACTIVE WHERE ID = @CHECKINID; UPDATE ROOMS SET ROOMSTATUS = @ROOMSTATUS WHERE ID = @ROOMID";
                     command.Parameters.AddWithValue("@CHECKINID", checkOut.CheckInID);
                     command.Parameters.AddWithValue("@ACTIVE", false);
+                    command.Parameters.AddWithValue("@ROOMID", checkIn.RoomID);
                     command.Parameters.AddWithValue("@ROOMSTATUS", RoomStatus.Disponível);
 
                     Response responseInsert = new DbExecuter().ExecuteQuery(command);
