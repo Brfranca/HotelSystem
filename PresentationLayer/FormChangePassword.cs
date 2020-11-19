@@ -3,13 +3,6 @@ using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -44,6 +37,36 @@ namespace PresentationLayer
             {
                 this.ClearForm();
             }
+        }
+
+        private void txtCurrentPass_Leave(object sender, EventArgs e)
+        {
+            pnlActual.LeaveEvent();
+        }
+
+        private void txtCurrentPass_Enter(object sender, EventArgs e)
+        {
+            pnlActual.EnterEvent();
+        }
+
+        private void txtNewPass1_Enter(object sender, EventArgs e)
+        {
+            pnlNewPassword1.EnterEvent();
+        }
+
+        private void txtNewPass1_Leave(object sender, EventArgs e)
+        {
+            pnlNewPassword1.LeaveEvent();
+        }
+
+        private void txtNewPass2_Enter(object sender, EventArgs e)
+        {
+            pnlNewPassword2.EnterEvent();
+        }
+
+        private void txtNewPass2_Leave(object sender, EventArgs e)
+        {
+            pnlNewPassword2.LeaveEvent();
         }
     }
 }

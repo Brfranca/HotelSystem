@@ -131,5 +131,10 @@ namespace BusinessLogicalLayer.BLL
         {
             return _checkInDAL.GetAll();
         }
+
+        public bool ExistClient(string clientId, int id = 0)
+        {
+            return _checkInDAL.ExistClient(clientId, id);
+        }
     }
 }

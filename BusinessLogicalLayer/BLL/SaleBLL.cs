@@ -42,20 +42,15 @@ namespace BusinessLogicalLayer.BLL
             return validator.Validate();
         }
 
-        public  Response ValidateSaleItem(int productId, string quantity, double price)
+        public  Response ValidateSaleItem(SaleItem saleItem)
         {
             Validator validator = new Validator();
-            ValidateProductId(productId, validator);
-            ValidateQuantity(quantity, validator);
-            ValidatePrice(price, validator);
+            ValidateProductId(saleItem.ProductID, validator);
+            ValidateQuantity(saleItem.Quantity.ToString(), validator);
+            ValidatePrice(saleItem.UnityPrice, validator);
 
             Response result = validator.Validate();
-            if (result.Success)
-            {
-                result.ProductId = productId;
-                result.ProductQuantity = Convert.ToInt32(quantity);
-                result.ProductPrice = price;
-            }
+
             return result;
             
         }
@@ -93,7 +88,7 @@ namespace BusinessLogicalLayer.BLL
             }
             else if (quantityChar.Any(x => char.IsLetter(x)))
             {
-                validator.AddError("A quantidade deve conter apensar números");
+                validator.AddError("A quantidade deve conter apenas números");
             }
             else if (Convert.ToInt32(quantity) <= 0)
             {

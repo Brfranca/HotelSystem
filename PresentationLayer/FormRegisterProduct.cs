@@ -74,7 +74,6 @@ namespace PresentationLayer
             btnProductDelete.Visible = true;
         }
 
-
         private void SelectDataGrid()
         {
             if (_currentRowGrid == -1)

@@ -20,5 +20,10 @@ namespace DataAccessLayer.DAL
 
             return new DbExecuter().GetAllData<CheckIn>(command);
         }
+
+        public bool ExistClient(string clientId, int id)
+        {
+            return Exist(clientId, id, "CLIENTID");
+        }
     }
 }

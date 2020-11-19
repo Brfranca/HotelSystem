@@ -32,16 +32,16 @@
             this.lblEmployeeName = new System.Windows.Forms.Label();
             this.lblHello = new System.Windows.Forms.Label();
             this.picPassword = new System.Windows.Forms.PictureBox();
-            this.pnlPassword = new System.Windows.Forms.Panel();
+            this.pnlNewPassword2 = new System.Windows.Forms.Panel();
             this.txtNewPass2 = new System.Windows.Forms.TextBox();
-            this.pnlUser = new System.Windows.Forms.Panel();
+            this.pnlNewPassword1 = new System.Windows.Forms.Panel();
             this.txtNewPass1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCurrentPass = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlActual = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,14 +88,14 @@
             this.picPassword.TabIndex = 231;
             this.picPassword.TabStop = false;
             // 
-            // pnlPassword
+            // pnlNewPassword2
             // 
-            this.pnlPassword.BackColor = System.Drawing.Color.White;
-            this.pnlPassword.Location = new System.Drawing.Point(209, 221);
-            this.pnlPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlPassword.Name = "pnlPassword";
-            this.pnlPassword.Size = new System.Drawing.Size(208, 1);
-            this.pnlPassword.TabIndex = 229;
+            this.pnlNewPassword2.BackColor = System.Drawing.Color.White;
+            this.pnlNewPassword2.Location = new System.Drawing.Point(209, 221);
+            this.pnlNewPassword2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlNewPassword2.Name = "pnlNewPassword2";
+            this.pnlNewPassword2.Size = new System.Drawing.Size(208, 1);
+            this.pnlNewPassword2.TabIndex = 229;
             // 
             // txtNewPass2
             // 
@@ -108,17 +108,19 @@
             this.txtNewPass2.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtNewPass2.Name = "txtNewPass2";
             this.txtNewPass2.Size = new System.Drawing.Size(202, 27);
-            this.txtNewPass2.TabIndex = 225;
+            this.txtNewPass2.TabIndex = 2;
             this.txtNewPass2.UseSystemPasswordChar = true;
+            this.txtNewPass2.Enter += new System.EventHandler(this.txtNewPass2_Enter);
+            this.txtNewPass2.Leave += new System.EventHandler(this.txtNewPass2_Leave);
             // 
-            // pnlUser
+            // pnlNewPassword1
             // 
-            this.pnlUser.BackColor = System.Drawing.Color.White;
-            this.pnlUser.Location = new System.Drawing.Point(209, 169);
-            this.pnlUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlUser.Name = "pnlUser";
-            this.pnlUser.Size = new System.Drawing.Size(208, 1);
-            this.pnlUser.TabIndex = 224;
+            this.pnlNewPassword1.BackColor = System.Drawing.Color.White;
+            this.pnlNewPassword1.Location = new System.Drawing.Point(209, 169);
+            this.pnlNewPassword1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlNewPassword1.Name = "pnlNewPassword1";
+            this.pnlNewPassword1.Size = new System.Drawing.Size(208, 1);
+            this.pnlNewPassword1.TabIndex = 224;
             // 
             // txtNewPass1
             // 
@@ -131,7 +133,10 @@
             this.txtNewPass1.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtNewPass1.Name = "txtNewPass1";
             this.txtNewPass1.Size = new System.Drawing.Size(206, 27);
-            this.txtNewPass1.TabIndex = 223;
+            this.txtNewPass1.TabIndex = 1;
+            this.txtNewPass1.UseSystemPasswordChar = true;
+            this.txtNewPass1.Enter += new System.EventHandler(this.txtNewPass1_Enter);
+            this.txtNewPass1.Leave += new System.EventHandler(this.txtNewPass1_Leave);
             // 
             // pictureBox1
             // 
@@ -171,7 +176,7 @@
             this.btnChangePassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(189, 53);
-            this.btnChangePassword.TabIndex = 235;
+            this.btnChangePassword.TabIndex = 3;
             this.btnChangePassword.Text = "Alterar senha";
             this.btnChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnChangePassword.UseVisualStyleBackColor = false;
@@ -199,17 +204,19 @@
             this.txtCurrentPass.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtCurrentPass.Name = "txtCurrentPass";
             this.txtCurrentPass.Size = new System.Drawing.Size(202, 27);
-            this.txtCurrentPass.TabIndex = 230;
+            this.txtCurrentPass.TabIndex = 0;
             this.txtCurrentPass.UseSystemPasswordChar = true;
+            this.txtCurrentPass.Enter += new System.EventHandler(this.txtCurrentPass_Enter);
+            this.txtCurrentPass.Leave += new System.EventHandler(this.txtCurrentPass_Leave);
             // 
-            // panel1
+            // pnlActual
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(209, 99);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(208, 1);
-            this.panel1.TabIndex = 231;
+            this.pnlActual.BackColor = System.Drawing.Color.White;
+            this.pnlActual.Location = new System.Drawing.Point(209, 99);
+            this.pnlActual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlActual.Name = "pnlActual";
+            this.pnlActual.Size = new System.Drawing.Size(208, 1);
+            this.pnlActual.TabIndex = 231;
             // 
             // pictureBox2
             // 
@@ -233,14 +240,14 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlActual);
             this.Controls.Add(this.txtCurrentPass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picPassword);
-            this.Controls.Add(this.pnlPassword);
+            this.Controls.Add(this.pnlNewPassword2);
             this.Controls.Add(this.txtNewPass2);
-            this.Controls.Add(this.pnlUser);
+            this.Controls.Add(this.pnlNewPassword1);
             this.Controls.Add(this.txtNewPass1);
             this.Controls.Add(this.lblEmployeeName);
             this.Controls.Add(this.lblHello);
@@ -263,16 +270,16 @@
         private System.Windows.Forms.Label lblEmployeeName;
         private System.Windows.Forms.Label lblHello;
         private System.Windows.Forms.PictureBox picPassword;
-        private System.Windows.Forms.Panel pnlPassword;
+        private System.Windows.Forms.Panel pnlNewPassword2;
         private System.Windows.Forms.TextBox txtNewPass2;
-        private System.Windows.Forms.Panel pnlUser;
+        private System.Windows.Forms.Panel pnlNewPassword1;
         private System.Windows.Forms.TextBox txtNewPass1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCurrentPass;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlActual;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

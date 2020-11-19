@@ -6,12 +6,8 @@ using Entities;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -40,37 +36,39 @@ namespace PresentationLayer
             _saleBLL = new SaleBLL();
             _product = new Product();
             _saleItems = new List<SaleItem>();
+            ClearNameProduct();
         }
 
+        private void ClearNameProduct()
+        {
+            lblSelectName.Text = "";
+        }
 
         private void SelectCheckIn()
         {
             QueryResponse<Client> responseClient = _clientBLL.GetById(_checkIn.ClientID);
             QueryResponse<Room> responseRoom = _roomBLL.GetById(_checkIn.RoomID);
-            lblName.Text += responseClient.Data.Name;
-            lblCPF.Text += responseClient.Data.CPF.InsertMaskCPF();
-            lblDateCheckIn.Text += _checkIn.EntryDate.ToString("dd/MM/yyyy");
-            lblRoomFloor.Text += responseRoom.Data.RoomFloor;
-            lblRoomNumber.Text += responseRoom.Data.Number;
+            lblName.Text = "Nome: " + responseClient.Data.Name;
+            lblCPF.Text = "CPF: " + responseClient.Data.CPF.InsertMaskCPF();
+            lblDateCheckIn.Text = "Data CheckIn: " + _checkIn.EntryDate.ToString("dd/MM/yyyy");
+            lblRoomFloor.Text = "Andar: " + responseRoom.Data.RoomFloor;
+            lblRoomNumber.Text = "Número do quarto: " + responseRoom.Data.Number;
         }
 
         private void btnSelectCheckIn_Click(object sender, EventArgs e)
         {
             FormSearchCheckIn frm = new FormSearchCheckIn();
             frm.ShowDialog();
-            _checkIn = frm.checkIn;
-            if (_checkIn.ID == 0)
+            if (frm.checkIn.ID != 0)
             {
-                MessageBox.Show("Nenhum checkin selecionado!");
-                return;
+                _checkIn = frm.checkIn;
+                SelectCheckIn();
             }
-            SelectCheckIn();
         }
 
         private void btnAddSaleItem_Click(object sender, EventArgs e)
         {
-            SelectDataGrid();
-            CreateSaleItem();
+            InsertSaleItem();
             RenewTextBoxValue();
         }
 
@@ -87,22 +85,36 @@ namespace PresentationLayer
                 return;
             }
             _product = response.Data;
+            lblSelectName.Text = _product.Name + " - " + _product.Description;
         }
 
-        private void CreateSaleItem()
+        private SaleItem CreateSaleItem()
         {
             SaleItem saleItem = new SaleItem();
-            Response response = _saleBLL.ValidateSaleItem(_product.ID, txtProdQuantity.Text, _product.Price);
+            saleItem.ProductID = _product.ID;
+            saleItem.Quantity = Convert.ToInt32(txtProdQuantity.Text);
+            saleItem.UnityPrice = _product.Price;
+
+            return saleItem;
+        }
+
+        private void InsertSaleItem()
+        {
+            SaleItem saleItem = CreateSaleItem();
+            Response response = _saleBLL.ValidateSaleItem(saleItem);
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);
                 return;
             }
-            saleItem.ProductID = response.ProductId;
-            saleItem.Quantity = response.ProductQuantity;
-            saleItem.UnityPrice = response.ProductPrice;
-
+            if (_product.Stock < saleItem.Quantity)
+            {
+                MessageBox.Show("Estoque insuficiente.");
+                return;
+            }
             _saleItems.Add(saleItem);
+            Console.Beep();
+            ClearNameProduct();
             UpdateGridProducts();
         }
         private void UpdateGridProducts()
@@ -110,12 +122,12 @@ namespace PresentationLayer
             dgvIncomeItems.Rows.Clear();
             foreach (var item in _saleItems)
             {
-                Product product = new Product
+                QueryResponse<Product> response = _productBLL.GetById(item.ProductID);
+                if (!response.Success)
                 {
-                    ID = item.ProductID
-                };
-                QueryResponse<Product> response = _productBLL.GetById(product.ID);
-                dgvIncomeItems.Rows.Add(product.ID, response.Data.Name, item.Quantity, item.UnityPrice.ToString("C2"));
+                    MessageBox.Show(response.Message);
+                }
+                dgvIncomeItems.Rows.Add(item.ProductID, response.Data.Name, item.Quantity, item.UnityPrice.ToString("C2"));
             }
 
             UpdateToTalValue();
@@ -139,7 +151,6 @@ namespace PresentationLayer
         private void FormRegisterSale_Load(object sender, EventArgs e)
         {
             UpdateGrid();
-
         }
         private void UpdateGrid()
         {
@@ -151,7 +162,7 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 return;
             }
-            _productGrid = new List<Product>(response.Data);
+            _productGrid = new List<Product>(response.Data.Where(x => x.Stock > 0));
 
             InsertGrid(_productGrid);
         }
@@ -163,8 +174,6 @@ namespace PresentationLayer
             }
         }
 
-
-
         private void btnSaleRegister_Click(object sender, EventArgs e)
         {
             Sale sale = CreateSale();
@@ -174,7 +183,9 @@ namespace PresentationLayer
             if (response.Success)
             {
                 this.ClearForm();
+                Console.Beep();
                 RenewTextBoxValue();
+                UpdateGrid();
             }
         }
 
@@ -193,6 +204,74 @@ namespace PresentationLayer
         private void dgvProducts_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _currentRowGrid = e.RowIndex;
+        }
+
+        private void dgvProducts_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void btnSelectProduct_Click(object sender, EventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void txtProdSearchName_Enter(object sender, EventArgs e)
+        {
+            pnlProduName.EnterEvent();
+        }
+
+        private void txtProdSearchName_Leave(object sender, EventArgs e)
+        {
+            pnlProduName.LeaveEvent();
+        }
+
+        private void txtProdSearchID_Enter(object sender, EventArgs e)
+        {
+            pnlProduID.EnterEvent();
+        }
+
+        private void txtProdSearchID_Leave(object sender, EventArgs e)
+        {
+            pnlProduID.LeaveEvent();
+        }
+
+        private void txtProdQuantity_Enter(object sender, EventArgs e)
+        {
+            pnlEntradaProdQtd.EnterEvent();
+        }
+
+        private void txtProdQuantity_Leave(object sender, EventArgs e)
+        {
+            pnlEntradaProdQtd.LeaveEvent();
+        }
+
+        private void txtProdSearchName_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtProdSearchName, txtProdSearchID, x => x.Name.ToLower().Contains(txtProdSearchName.Text.ToLower()));
+        }
+
+        private void txtProdSearchID_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtProdSearchID, txtProdSearchName, x => x.ID.ToString().ToLower().Contains(txtProdSearchID.Text.ToLower()));
+        }
+
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Product, bool> predicate)
+        {
+            if (textBox.Text.Length > 0)
+            {
+                textBox1.Clear();
+                List<Product> customerFiltered = new List<Product>();
+                customerFiltered.AddRange(_productGrid.Where(predicate));
+                dgvProducts.Rows.Clear();
+
+                InsertGrid(customerFiltered);
+            }
+            else
+            {
+                dgvProducts.Rows.Clear();
+                InsertGrid(_productGrid);
+            }
         }
     }
 }
