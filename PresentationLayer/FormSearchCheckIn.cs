@@ -95,6 +95,51 @@ namespace PresentationLayer
             SelectDataGrid();
         }
 
+        private void txtSearchRoomNumber_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchRoomNumber_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchRoomNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchCPF_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSearchCPF_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
         //private void txtSearchName_TextChanged(object sender, EventArgs e)
