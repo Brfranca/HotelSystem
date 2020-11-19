@@ -48,7 +48,6 @@ namespace PresentationLayer
             }
 
         }
-
         private void btnSelectCheckIn_Click(object sender, EventArgs e)
         {
             CreateCheckIn();

@@ -43,7 +43,6 @@ namespace PresentationLayer
             _incomeItems.Clear();
 
             CreateSupplier();
-
         }
 
         private void RenewLabelSupplier()
@@ -58,13 +57,12 @@ namespace PresentationLayer
             frmSearchSupp.ShowDialog();
 
             supplier = frmSearchSupp.supplier;
-            if (supplier != null)
+            if (supplier.ID != 0)
             {
                 btnSelectProduct.Enabled = true;
+                lblCompanyName.Text += supplier.CompanyName;
+                lblCNPJ.Text += supplier.CNPJ.InsertMaskCNPJ();
             }
-
-            lblCompanyName.Text += supplier.CompanyName;
-            lblCNPJ.Text += supplier.CNPJ.InsertMaskCNPJ();
         }
 
         private void picSupplierClose_Click(object sender, EventArgs e)

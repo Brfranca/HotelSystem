@@ -4,12 +4,9 @@ using Common;
 using Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -39,22 +36,12 @@ namespace PresentationLayer
 
         private void txtSuppSearchName_Leave(object sender, EventArgs e)
         {
-            pnlSuppName.BackColor = Color.Black;
-        }
-
-        private void txtSuppSearchCNPJ_Click(object sender, EventArgs e)
-        {
-            pnlSuppCNPJ.BackColor = Color.FromArgb(37, 206, 15);
+            pnlSuppName.LeaveEvent();
         }
 
         private void txtSuppSearchCNPJ_Leave(object sender, EventArgs e)
         {
-            pnlSuppCNPJ.BackColor = Color.Black;
-        }
-
-        private void picSupplierClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            pnlSuppCNPJ.LeaveEvent();
         }
 
         private void btnSupplierRegister_Click(object sender, EventArgs e)
@@ -72,7 +59,7 @@ namespace PresentationLayer
             }
             else if (btnSupplierRegister.Text == "Editar")
             {
-                supplier.ID = Convert.ToInt32(lblSupIdGet.Text);
+                supplier.ID = Convert.ToInt32(lblID.Text);
                 Response response = _supplierBLL.Update(supplier);
                 MessageBox.Show(response.Message);
                 if (true)
@@ -121,7 +108,7 @@ namespace PresentationLayer
             if (result == DialogResult.Yes)
             {
                 Supplier supplier = CreateSupplier();
-                supplier.ID = Convert.ToInt32(lblSupIdGet.Text);
+                supplier.ID = Convert.ToInt32(lblID.Text);
 
                 Response response = _supplierBLL.Delete(supplier);
                 MessageBox.Show(response.Message);
@@ -174,7 +161,7 @@ namespace PresentationLayer
                 txtSupplierNomeContato.Text = response.Data.ContactName;
                 txtSupplierRazaoSocial.Text = response.Data.CompanyName;
                 txtSupplierTel.Text = response.Data.Phone;
-                lblSupIdGet.Text = response.Data.ID.ToString();
+                lblID.Text = response.Data.ID.ToString();
 
                 UpdateComponentsEdit();
                 return;
@@ -234,6 +221,21 @@ namespace PresentationLayer
         private void txtSuppSearchCNPJ_TextChanged(object sender, EventArgs e)
         {
             FilterGrid(txtSuppSearchCNPJ, txtSuppSearchName, x => x.CNPJ.Contains(txtSuppSearchCNPJ.Text));
+        }
+
+        private void btnSupplierClear_Click_1(object sender, EventArgs e)
+        {
+            this.ClearForm();
+        }
+
+        private void txtSuppSearchName_Enter(object sender, EventArgs e)
+        {
+            pnlSuppName.EnterEvent();
+        }
+
+        private void txtSuppSearchCNPJ_Enter(object sender, EventArgs e)
+        {
+            pnlSuppCNPJ.EnterEvent();
         }
     }
 }

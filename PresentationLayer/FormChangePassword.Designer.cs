@@ -42,8 +42,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCurrentPass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEmployeeName
@@ -53,10 +55,10 @@
             this.lblEmployeeName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblEmployeeName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeeName.ForeColor = System.Drawing.Color.White;
-            this.lblEmployeeName.Location = new System.Drawing.Point(39, 0);
+            this.lblEmployeeName.Location = new System.Drawing.Point(48, 0);
             this.lblEmployeeName.MaximumSize = new System.Drawing.Size(220, 0);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(110, 20);
+            this.lblEmployeeName.Size = new System.Drawing.Size(137, 22);
             this.lblEmployeeName.TabIndex = 3;
             this.lblEmployeeName.Text = "<funcionario>";
             // 
@@ -69,7 +71,7 @@
             this.lblHello.ForeColor = System.Drawing.Color.Silver;
             this.lblHello.Location = new System.Drawing.Point(0, 0);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(39, 20);
+            this.lblHello.Size = new System.Drawing.Size(48, 22);
             this.lblHello.TabIndex = 2;
             this.lblHello.Text = "Olá,";
             // 
@@ -79,7 +81,7 @@
             this.picPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPassword.BackgroundImage")));
             this.picPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picPassword.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.picPassword.Location = new System.Drawing.Point(117, 236);
+            this.picPassword.Location = new System.Drawing.Point(165, 189);
             this.picPassword.Margin = new System.Windows.Forms.Padding(0);
             this.picPassword.Name = "picPassword";
             this.picPassword.Size = new System.Drawing.Size(29, 37);
@@ -89,7 +91,7 @@
             // pnlPassword
             // 
             this.pnlPassword.BackColor = System.Drawing.Color.White;
-            this.pnlPassword.Location = new System.Drawing.Point(159, 272);
+            this.pnlPassword.Location = new System.Drawing.Point(209, 221);
             this.pnlPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(208, 1);
@@ -101,18 +103,18 @@
             this.txtNewPass2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNewPass2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass2.ForeColor = System.Drawing.Color.White;
-            this.txtNewPass2.Location = new System.Drawing.Point(161, 246);
+            this.txtNewPass2.Location = new System.Drawing.Point(215, 195);
             this.txtNewPass2.Margin = new System.Windows.Forms.Padding(0);
             this.txtNewPass2.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtNewPass2.Name = "txtNewPass2";
-            this.txtNewPass2.Size = new System.Drawing.Size(202, 26);
+            this.txtNewPass2.Size = new System.Drawing.Size(202, 27);
             this.txtNewPass2.TabIndex = 225;
             this.txtNewPass2.UseSystemPasswordChar = true;
             // 
             // pnlUser
             // 
             this.pnlUser.BackColor = System.Drawing.Color.White;
-            this.pnlUser.Location = new System.Drawing.Point(161, 220);
+            this.pnlUser.Location = new System.Drawing.Point(209, 169);
             this.pnlUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlUser.Name = "pnlUser";
             this.pnlUser.Size = new System.Drawing.Size(208, 1);
@@ -124,11 +126,11 @@
             this.txtNewPass1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNewPass1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass1.ForeColor = System.Drawing.Color.White;
-            this.txtNewPass1.Location = new System.Drawing.Point(163, 196);
+            this.txtNewPass1.Location = new System.Drawing.Point(211, 145);
             this.txtNewPass1.Margin = new System.Windows.Forms.Padding(0);
             this.txtNewPass1.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtNewPass1.Name = "txtNewPass1";
-            this.txtNewPass1.Size = new System.Drawing.Size(202, 26);
+            this.txtNewPass1.Size = new System.Drawing.Size(206, 27);
             this.txtNewPass1.TabIndex = 223;
             // 
             // pictureBox1
@@ -137,7 +139,7 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(117, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(165, 139);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 37);
@@ -149,9 +151,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(191, 159);
+            this.label2.Location = new System.Drawing.Point(18, 150);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(133, 22);
             this.label2.TabIndex = 234;
             this.label2.Text = "Senha nova: ";
             // 
@@ -165,7 +167,7 @@
             this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
-            this.btnChangePassword.Location = new System.Drawing.Point(163, 328);
+            this.btnChangePassword.Location = new System.Drawing.Point(160, 298);
             this.btnChangePassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(189, 53);
@@ -182,7 +184,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(18, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
+            this.label1.Size = new System.Drawing.Size(126, 22);
             this.label1.TabIndex = 233;
             this.label1.Text = "Senha atual:";
             // 
@@ -192,29 +194,43 @@
             this.txtCurrentPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCurrentPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCurrentPass.ForeColor = System.Drawing.Color.White;
-            this.txtCurrentPass.Location = new System.Drawing.Point(138, 71);
+            this.txtCurrentPass.Location = new System.Drawing.Point(211, 73);
             this.txtCurrentPass.Margin = new System.Windows.Forms.Padding(0);
             this.txtCurrentPass.MinimumSize = new System.Drawing.Size(0, 26);
             this.txtCurrentPass.Name = "txtCurrentPass";
-            this.txtCurrentPass.Size = new System.Drawing.Size(202, 22);
+            this.txtCurrentPass.Size = new System.Drawing.Size(202, 27);
             this.txtCurrentPass.TabIndex = 230;
             this.txtCurrentPass.UseSystemPasswordChar = true;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(136, 97);
+            this.panel1.Location = new System.Drawing.Point(209, 99);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(208, 1);
             this.panel1.TabIndex = 231;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox2.Location = new System.Drawing.Point(165, 68);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 37);
+            this.pictureBox2.TabIndex = 236;
+            this.pictureBox2.TabStop = false;
+            // 
             // FormChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(484, 386);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -236,6 +252,7 @@
             this.Load += new System.EventHandler(this.FormChangePassword_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +273,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCurrentPass;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

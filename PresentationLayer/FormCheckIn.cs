@@ -67,7 +67,7 @@ namespace PresentationLayer
 
             if (_reservationBLL.ExistClient(_client.ID.ToString()))
             {
-                DialogResult result =MessageBox.Show("Você possui uma reserva, deseja fazer o check in dessa reserva?","", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("Você possui uma reserva, deseja fazer o check in dessa reserva?", "", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     FormSearchReservation frmSearchReservation = new FormSearchReservation(_client.CPF);
@@ -84,7 +84,10 @@ namespace PresentationLayer
 
         private void SelectDate()
         {
-            dtCheckOut.Value = _reservation.DepartureDate;
+            if (_reservation.ID != 0)
+            {
+                dtCheckOut.Value = _reservation.DepartureDate;
+            }
         }
 
         private void SelectClient()
@@ -158,7 +161,7 @@ namespace PresentationLayer
 
         private void btnSeachReservation_Click(object sender, EventArgs e)
         {
-            FormSearchReservation frmSearchReservation = new FormSearchReservation(_client.CPF);
+            FormSearchReservation frmSearchReservation = new FormSearchReservation();
             frmSearchReservation.ShowDialog();
             _room = frmSearchReservation.room;
             _client = frmSearchReservation.client;
