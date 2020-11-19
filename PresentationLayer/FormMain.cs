@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,13 +61,13 @@ namespace PresentationLayer
         {
             employee = FormLogin.employee;
             lblEmployeeName.Text = employee.Name;
-            AdmRestriction();
+            RestrictionAccess();
             HideSubMenu();
         }
 
-        private void AdmRestriction()
+        private void RestrictionAccess()
         {
-            if (employee.ID == 0)
+            if (employee.ID == 0 || employee.EmployeeType == EmployeeType.Recepcionista)
             {
                 btnProduc.Enabled = false;
                 btnCheckIn.Enabled = false;
