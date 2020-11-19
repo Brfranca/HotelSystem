@@ -73,11 +73,11 @@
             this.btnSelectCheckIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Phone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomeItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
@@ -299,7 +299,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -369,7 +369,7 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Location = new System.Drawing.Point(661, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 663);
+            this.panel1.Size = new System.Drawing.Size(1, 663);
             this.panel1.TabIndex = 266;
             // 
             // pnlEntradaProdQtd
@@ -439,7 +439,7 @@
             this.txtTotalValue.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtTotalValue.Name = "txtTotalValue";
             this.txtTotalValue.ReadOnly = true;
-            this.txtTotalValue.Size = new System.Drawing.Size(106, 24);
+            this.txtTotalValue.Size = new System.Drawing.Size(106, 22);
             this.txtTotalValue.TabIndex = 272;
             this.txtTotalValue.Text = "0";
             // 
@@ -557,7 +557,7 @@
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -586,26 +586,13 @@
             this.dgvProducts.TabIndex = 310;
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
             // 
-            // Column1
+            // Name1
             // 
-            this.Column1.HeaderText = "Estoque";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "Preço";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Phone1
-            // 
-            this.Phone1.FillWeight = 68F;
-            this.Phone1.HeaderText = "Descrição";
-            this.Phone1.MinimumWidth = 6;
-            this.Phone1.Name = "Phone1";
-            this.Phone1.ReadOnly = true;
+            this.Name1.FillWeight = 40F;
+            this.Name1.HeaderText = "ID";
+            this.Name1.MinimumWidth = 6;
+            this.Name1.Name = "Name1";
+            this.Name1.ReadOnly = true;
             // 
             // CPF
             // 
@@ -615,13 +602,26 @@
             this.CPF.Name = "CPF";
             this.CPF.ReadOnly = true;
             // 
-            // Name1
+            // Phone1
             // 
-            this.Name1.FillWeight = 40F;
-            this.Name1.HeaderText = "ID";
-            this.Name1.MinimumWidth = 6;
-            this.Name1.Name = "Name1";
-            this.Name1.ReadOnly = true;
+            this.Phone1.FillWeight = 68F;
+            this.Phone1.HeaderText = "Descrição";
+            this.Phone1.MinimumWidth = 6;
+            this.Phone1.Name = "Phone1";
+            this.Phone1.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "Preço";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Estoque";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // FormRegisterSale
             // 
