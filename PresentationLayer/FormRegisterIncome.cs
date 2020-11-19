@@ -87,7 +87,6 @@ namespace PresentationLayer
 
             _product = frmProduto.product;
 
-            lblProdID.Text += _product.ID.ToString();
             lblProdName.Text += _product.Name;
             lblProdDesc.Text += _product.Description;
         }
@@ -184,7 +183,6 @@ namespace PresentationLayer
         private void RenewLabelProduct()
         {
             lblProdDesc.Text = "Descrição: ";
-            lblProdID.Text = "ID: ";
             lblProdName.Text = "Nome: ";
         }
         private void UpdateGridProducts()
