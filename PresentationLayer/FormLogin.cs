@@ -22,24 +22,7 @@ namespace PresentationLayer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var result = _employeeBLL.Login(txtUser.Text, txtPassword.Text);
-
-            QueryResponse<Employee> response = _employeeBLL.GetByEmail(txtUser.Text);
-            if (result.Success && response.Data == null)
-                response = new QueryResponse<Employee> { Data = new Employee { Name = "Administrador" } };
-            employee = response.Data;
-
-            if (!result.Success)
-            {
-                picAttencion.Visible = true;
-                lblAttencion.Visible = true;
-                return;
-            }
-
-            FormMain formMain = new FormMain();
-            this.Hide();
-            formMain.ShowDialog();
-            this.Close();
+            Startlogin();
         }
 
         private void txtUser_Enter(object sender, EventArgs e)
@@ -83,6 +66,44 @@ namespace PresentationLayer
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         {
             btnLogin.BackColor = Color.Transparent;
+        }
+
+        private void Startlogin()
+        {
+            var result = _employeeBLL.Login(txtUser.Text, txtPassword.Text);
+
+            QueryResponse<Employee> response = _employeeBLL.GetByEmail(txtUser.Text);
+            if (result.Success && response.Data == null)
+                response = new QueryResponse<Employee> { Data = new Employee { Name = "Administrador" } };
+            employee = response.Data;
+
+            if (!result.Success)
+            {
+                picAttencion.Visible = true;
+                lblAttencion.Visible = true;
+                return;
+            }
+
+            FormMain formMain = new FormMain();
+            this.Hide();
+            formMain.ShowDialog();
+            this.Close();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Startlogin();
+            }
+        }
+
+        private void txtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Startlogin();
+            }
         }
     }
 }

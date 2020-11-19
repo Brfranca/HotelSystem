@@ -113,6 +113,7 @@
             this.txtUser.Size = new System.Drawing.Size(202, 27);
             this.txtUser.TabIndex = 35;
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // pnlEmployeeTopBar
@@ -205,6 +206,7 @@
             this.txtPassword.TabIndex = 39;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // picAttencion
