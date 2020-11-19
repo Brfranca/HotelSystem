@@ -112,6 +112,11 @@ namespace PresentationLayer
                 MessageBox.Show("Estoque insuficiente.");
                 return;
             }
+            if (_saleItems.Any(x => x.ProductID == saleItem.ProductID))
+            {
+                MessageBox.Show("Produto já adicionado à venda. Caso queira alterar a quantidade, remova o item da venda com dois cliques e insira o produto novamente.");
+                return;
+            }
             _saleItems.Add(saleItem);
             Console.Beep();
             ClearNameProduct();
@@ -272,6 +277,18 @@ namespace PresentationLayer
                 dgvProducts.Rows.Clear();
                 InsertGrid(_productGrid);
             }
+        }
+
+        private void dgvIncomeItems_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dgvProducts.Rows[_currentRowGrid].Cells[0].Value;
+            RemoveItem(id);
+            UpdateGridProducts();
+        }
+
+        private void RemoveItem(int id)
+        {
+            _saleItems.Remove(_saleItems.FirstOrDefault(d => d.ProductID == id));
         }
     }
 }
