@@ -92,7 +92,7 @@ namespace PresentationLayer
 
         private void dgvSearch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            SelectDataGrid();
+            _currentRowGrid = e.RowIndex;
         }
 
 
