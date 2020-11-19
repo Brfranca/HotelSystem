@@ -57,6 +57,7 @@ namespace PresentationLayer
         private void CreateCheckIn()
         {
             ClearLabel();
+            dgvSales.Rows.Clear();
             FormSearchCheckIn frm = new FormSearchCheckIn();
             frm.ShowDialog();
             _checkIn = frm.checkIn;
