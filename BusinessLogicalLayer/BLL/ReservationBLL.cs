@@ -114,11 +114,6 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        public QueryResponse<List<CheckIn>> GetByActiveState()
-        {
-            return _reservationDAL.GetByActiveState();
-        }
-
         private void ValidateRoomID(int roomID, Validator validator)
         {
             string room = roomID.ToString();
@@ -152,6 +147,11 @@ namespace BusinessLogicalLayer.BLL
         public QueryResponse<List<Reservation>> GetAll()
         {
             return _reservationDAL.GetAll();
+        }
+
+        public bool ExistClient(string clientId, int id = 0)
+        {
+            return _reservationDAL.ExistClient(clientId, id);
         }
 
     }

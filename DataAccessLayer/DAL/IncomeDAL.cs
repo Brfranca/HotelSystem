@@ -28,16 +28,15 @@ namespace DataAccessLayer.DAL
                     foreach (IncomeItem incomeItem in income.IncomeItems)
                     {
                         incomeItem.IncomeID = resultInsertIncome.GeneratedId;
+                        command.Parameters.Clear();
+                        command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE,PROFIT) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE,@PROFIT); UPDATE PRODUCTS SET PRICE = @UNITYPRICE, STOCK += @QUANTITY WHERE ID = @PRODUCTID";
+                        command.Parameters.AddWithValue("@INCOMEID", incomeItem.IncomeID);
+                        command.Parameters.AddWithValue("@PRODUCTID", incomeItem.ProductID);
+                        command.Parameters.AddWithValue("@QUANTITY", incomeItem.Quantity);
+                        command.Parameters.AddWithValue("@UNITYPRICE", incomeItem.UnityPrice);
+                        command.Parameters.AddWithValue("@PROFIT", incomeItem.Profit);
 
-                        //command.Parameters.Clear();
-                        //command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE,PROFIT) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE,@PROFIT); UPDATE PRODUCTS SET PRICE = @UNITYPRICE, STOCK += @QUANTITY WHERE ID = @PRODUCTID";
-                        //command.Parameters.AddWithValue("@INCOMEID", incomeItem.IncomeID);
-                        //command.Parameters.AddWithValue("@PRODUCTID", incomeItem.ProductID);
-                        //command.Parameters.AddWithValue("@QUANTITY", incomeItem.Quantity);
-                        //command.Parameters.AddWithValue("@UNITYPRICE", incomeItem.UnityPrice);
-                        //command.Parameters.AddWithValue("@PROFIT", incomeItem.Profit);
-
-                        Response responseInsert = Insert(incomeItem);
+                        Response responseInsert = new DbExecuter().ExecuteQuery(command);
                         if (!responseInsert.Success)
                             return responseInsert;
                     }
@@ -65,20 +64,16 @@ namespace DataAccessLayer.DAL
 
                 using (DbCommand command = DbFactory.GetCurrentCommand())
                 {
-                    foreach (IncomeItem incomItemEntry in income.IncomeItems)
+                    foreach (IncomeItem incomeItemEntry in income.IncomeItems)
                     {
-                        incomItemEntry.IncomeID = income.ID;
-                        //IncomeItem incomeItem = new IncomeItem
-                        //{
-                        //    IncomeID = income.ID,
-                        //};
-                        //command.Parameters.Clear();
-                        //command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET STOCK += @QUANTITY WHERE ID = @PRODUCTID";
-                        //command.Parameters.AddWithValue("@INCOMEID", incomeItem.IncomeID);
-                        //command.Parameters.AddWithValue("@PRODUCTID", incomItemEntry.ProductID);
-                        //command.Parameters.AddWithValue("@QUANTITY", incomItemEntry.Quantity);
-                        //command.Parameters.AddWithValue("@UNITYPRICE", incomItemEntry.UnityPrice);
-                        Response responseInsert = Insert(incomItemEntry);
+                        incomeItemEntry.IncomeID = income.ID;
+                        command.Parameters.Clear();
+                        command.CommandText = @"INSERT INTO INCOMEITEMS (INCOMEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@INCOMEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET STOCK += @QUANTITY WHERE ID = @PRODUCTID";
+                        command.Parameters.AddWithValue("@INCOMEID", incomeItemEntry.IncomeID);
+                        command.Parameters.AddWithValue("@PRODUCTID", incomeItemEntry.ProductID);
+                        command.Parameters.AddWithValue("@QUANTITY", incomeItemEntry.Quantity);
+                        command.Parameters.AddWithValue("@UNITYPRICE", incomeItemEntry.UnityPrice);
+                        Response responseInsert = new DbExecuter().ExecuteQuery(command);
                         if (!responseInsert.Success)
                             return responseInsert;
                     }

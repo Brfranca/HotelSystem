@@ -25,13 +25,11 @@ namespace DataAccessLayer.DAL
                 {
                     foreach (var item in sale.SaleItems)
                     {
-                        SaleItem saleItem = new SaleItem
-                        {
-                            SaleID = resultInsert.GeneratedId
-                        };
+                        item.SaleID = resultInsert.GeneratedId;
+
                         cmd.Parameters.Clear();
                         cmd.CommandText = @"INSERT INTO SALEITEMS (SALEID,PRODUCTID,QUANTITY,UNITYPRICE) VALUES (@SALEID,@PRODUCTID,@QUANTITY,@UNITYPRICE); UPDATE PRODUCTS SET STOCK -= @QUANTITY WHERE ID = @PRODUCTID";
-                        cmd.Parameters.AddWithValue("@SALEID", saleItem.SaleID);
+                        cmd.Parameters.AddWithValue("@SALEID", item.SaleID);
                         cmd.Parameters.AddWithValue("@PRODUCTID", item.ProductID);
                         cmd.Parameters.AddWithValue("@QUANTITY", item.Quantity);
                         cmd.Parameters.AddWithValue("@UNITYPRICE", item.UnityPrice);

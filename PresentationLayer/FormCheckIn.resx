@@ -163,10 +163,16 @@
         YII=
 </value>
   </data>
-  <metadata name="dtCheckIn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dtCheckOut.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="btnSeachReservation.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAYVJREFUSEvd
+        lc1Kw0AUhX0BEReibmYmIrhz4Wu4E3XnM6j4B67c+YOZCfoy6kbRreAbuBDFRW0ptJkgCvXO9GQ0P02T
+        4EY/ODBz75l7mjRpR/4foeKLWvJHUq9QPtvDkWpoyZ5yB+apTkh8GNtcqN8kfdYKKRlgPG80/MOsQ18c
+        oDWcCgEk1qgcUi2gRkh8ENtcvoc7NeI1LIMpbUzx9wPah2ycXtIFbAdTN6A0VQLoCVrVit+RWlZS3GrF
+        ltHOp2wAec5jb1YigC1LbMI2F/vJ+76Q1uvRqceNtC82qKZtT/El2JPgYHGAuS3WJzZRclB9CzNuUEqC
+        5pAr4F3j6Z6IKZQc9CRNY0YHpSRolgsIvEmUHD8CmiglQbPkLeI7KDnMzzd61yglocYzDBlFku/3Pe5L
+        fqew7c7Z7IQRPaK7tma8iq3ZgWnsX6biLxiQ1mvveG7U+Ghd8JiSFL83b7cdWhf3okke0dW1Q8ku6Rat
+        0P7BhIRKXMH6u7SOZsYin110A2/+Cxvqy2i2wgBZAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

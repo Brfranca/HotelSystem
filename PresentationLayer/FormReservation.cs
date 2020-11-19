@@ -20,7 +20,6 @@ namespace PresentationLayer
     public partial class FormReservation : Form
     {
         private ReservationBLL _reservationBLL;
-        private RoomBLL _roomBLL;
         private Client _client;
         private Room _room;
         private Reservation _reservation;
@@ -29,7 +28,6 @@ namespace PresentationLayer
         {
             InitializeComponent();
             _reservationBLL = new ReservationBLL();
-            _roomBLL = new RoomBLL();
         }
 
         private void FormReservation_Load(object sender, EventArgs e)
@@ -61,6 +59,7 @@ namespace PresentationLayer
         {
             if (_room != null)
             {
+                lblRoom.Text = "Quarto: " + _room.ID;
                 lblRoomNumber.Text = "Número: " + _room.Number;
                 lblRoomPrice.Text = "Preço diária: " + _room.PricePerDay.ToString("F2");
                 lblRoomType.Text = "Tipo do quarto: " + _room.RoomType.ToString();
@@ -82,6 +81,7 @@ namespace PresentationLayer
         {
             if (_client != null)
             {
+                lblClient.Text = "Cliente: " + _client.ID;
                 lblClientName.Text = "Nome: " + _client.Name;
                 lblClientCpf.Text = "CPF: " + _client.CPF.InsertMaskCPF();
                 lblClientEmail.Text = "E-mail: " + _client.Email;
@@ -98,6 +98,8 @@ namespace PresentationLayer
 
         private void ClearData()
         {
+            lblClient.Text = "Cliente: ";
+            lblRoom.Text = "Quarto: ";
             lblClientName.Text = "Nome: ";
             lblClientCpf.Text = "CPF: ";
             lblClientEmail.Text = "E-mail: ";
@@ -155,14 +157,18 @@ namespace PresentationLayer
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Response response = _reservationBLL.Delete(_reservation);
-            MessageBox.Show(response.Message);
-            if (response.Success)
+            DialogResult result = MessageBox.Show("Tem certeza que deseja excluir?", "", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
             {
-                this.ClearForm();
-                ClearData();
-                btnReservationRegister.Text = "Cadastrar";
-                btnDelete.Visible = false;
+                Response response = _reservationBLL.Delete(_reservation);
+                MessageBox.Show(response.Message);
+                if (response.Success)
+                {
+                    this.ClearForm();
+                    ClearData();
+                    btnReservationRegister.Text = "Cadastrar";
+                    btnDelete.Visible = false;
+                }
             }
         }
 

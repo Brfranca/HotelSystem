@@ -7,12 +7,6 @@ using Entities.Entities;
 using Entities.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -21,12 +15,16 @@ namespace PresentationLayer
     {
         private CheckInBLL _checkInBLL;
         private RoomBLL _roomBLL;
+        private ReservationBLL _reservationBLL;
         private Client _client;
         private Room _room;
+        private Reservation _reservation;
 
         public FormCheckIn()
         {
             InitializeComponent();
+
+            _reservationBLL = new ReservationBLL();
             _checkInBLL = new CheckInBLL();
             _roomBLL = new RoomBLL();
         }
@@ -46,6 +44,7 @@ namespace PresentationLayer
             checkIn.EntryDate = dtCheckIn.Value;
             checkIn.DepartureDate = dtCheckOut.Value;
             checkIn.Active = true;
+            checkIn.EmployeeID = FormLogin.employee.ID;
 
             return checkIn;
         }
@@ -65,36 +64,81 @@ namespace PresentationLayer
             _client = frmSearchClient.client;
             if (_client.ID != 0)
                 SelectClient();
+
+            if (_reservationBLL.ExistClient(_client.ID.ToString()))
+            {
+                DialogResult result =MessageBox.Show("Você possui uma reserva, deseja fazer o check in dessa reserva?","", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    FormSearchReservation frmSearchReservation = new FormSearchReservation(_client.CPF);
+                    frmSearchReservation.ShowDialog();
+                    _room = frmSearchReservation.room;
+                    _client = frmSearchReservation.client;
+                    _reservation = frmSearchReservation.reservation;
+                    SelectClient();
+                    SelectRoom();
+                    SelectDate();
+                }
+            }
+        }
+
+        private void SelectDate()
+        {
+            dtCheckOut.Value = _reservation.DepartureDate;
         }
 
         private void SelectClient()
         {
-            txtClientName.Text = _client.Name;
-            txtClientCPF.Text = _client.CPF.InsertMaskCPF();
-            txtClientEmail.Text = _client.Email;
-            txtClientPhone1.Text = _client.Phone1;
-            lblClient.Text = "Cliente: " + Convert.ToString(_client.ID);
+            if (_client != null)
+            {
+                lblClientName.Text = "Nome: " + _client.Name;
+                lblClientCpf.Text = "CPF: " + _client.CPF.InsertMaskCPF();
+                lblClientEmail.Text = "E-mail: " + _client.Email;
+                lblClientPhone.Text = "Telefone: " + _client.Phone1;
+                lblClient.Text = "Cliente: " + Convert.ToString(_client.ID);
+            }
         }
 
         private void SelectRoom()
         {
-            txtRoomNumber.Text = _room.Number;
-            txtRoomPrice.Text = Convert.ToString(_room.PricePerDay);
-            txtRoomType.Text = _room.RoomType.ToString();
-            txtRoomFloor.Text = _room.RoomFloor.ToString();
-            lblRoom.Text = "Quarto: " + Convert.ToString(_room.ID);
+            if (_room != null)
+            {
+                lblRoom.Text = "Quarto: " + _room.ID;
+                lblRoomNumber.Text = "Número: " + _room.Number;
+                lblRoomPrice.Text = "Preço diária: " + _room.PricePerDay.ToString("F2");
+                lblRoomType.Text = "Tipo do quarto: " + _room.RoomType.ToString();
+                lblRoomFloor.Text = "Andar: " + _room.RoomFloor.ToString();
+                lblRoom.Text = "Quarto: " + Convert.ToString(_room.ID);
+            }
         }
 
         private void btnClientClear_Click(object sender, EventArgs e)
         {
             this.ClearForm();
-            ClearId();
+            ClearData();
         }
 
-        private void ClearId()
+        private void ClearData()
         {
-            lblRoom.Text = "Quarto:";
-            lblClient.Text = "Cliente:";
+            lblClient.Text = "Cliente: ";
+            lblRoom.Text = "Quarto: ";
+            lblClientName.Text = "Nome: ";
+            lblClientCpf.Text = "CPF: ";
+            lblClientEmail.Text = "E-mail: ";
+            lblClientPhone.Text = "Telefone: ";
+            lblClient.Text = "Cliente: ";
+            lblRoomNumber.Text = "Número: ";
+            lblRoomPrice.Text = "Preço diária: ";
+            lblRoomType.Text = "Tipo do quarto: ";
+            lblRoomFloor.Text = "Andar: ";
+            lblRoom.Text = "Quarto: ";
+            ClearDate();
+        }
+
+        private void ClearDate()
+        {
+            dtCheckIn.Value = DateTime.Now.Date;
+            dtCheckOut.Value = DateTime.Now.Date;
         }
 
         private void btnClientRegister_Click(object sender, EventArgs e)
@@ -106,7 +150,7 @@ namespace PresentationLayer
             if (response.Success)
             {
                 this.ClearForm();
-                ClearId();
+                ClearData();
                 _room.RoomStatus = RoomStatus.Ocupado;
                 _roomBLL.Update(_room);
             }

@@ -24,18 +24,18 @@ namespace PresentationLayer
         private ClientBLL _clientBLL;
         private List<ReservationGrid> _reservationsGrid;
         private int _currentRowGrid;
-
+        private string filterClient;
         public Client client;
         public Room room;
         public Reservation reservation;
-        public FormSearchReservation()
+        public FormSearchReservation(string clientCpf = "")
         {
             InitializeComponent();
+            filterClient = clientCpf;
             _reservationBLL = new ReservationBLL();
             _roomBLL = new RoomBLL();
             _clientBLL = new ClientBLL();
             _reservationsGrid = new List<ReservationGrid>();
-
             reservation = new Reservation();
         }
 
@@ -144,6 +144,7 @@ namespace PresentationLayer
         private void FormSearchReservation_Load(object sender, EventArgs e)
         {
             UpdateGrid();
+            txtSearchCPF.Text = filterClient;
         }
 
         private void dgvSearch_CellClick(object sender, DataGridViewCellEventArgs e)

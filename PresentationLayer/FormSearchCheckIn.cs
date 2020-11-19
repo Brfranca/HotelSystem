@@ -58,8 +58,6 @@ namespace PresentationLayer
             }
         }
 
-        
-
         private void SelectDataGrid()
         {
             if (_currentRowGrid == -1)

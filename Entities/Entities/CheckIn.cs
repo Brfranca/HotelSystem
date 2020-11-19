@@ -14,5 +14,6 @@ namespace Entities.Entities
         public DateTime EntryDate { get; set; }
         public DateTime DepartureDate { get; set; }
         public bool Active { get; set; }
+        public int EmployeeID { get; set; }
     }
 }
