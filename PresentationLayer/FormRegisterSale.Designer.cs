@@ -332,7 +332,7 @@
             this.dgvIncomeItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvIncomeItems.Size = new System.Drawing.Size(563, 254);
             this.dgvIncomeItems.TabIndex = 265;
-            this.dgvIncomeItems.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIncomeItems_CellContentDoubleClick);
+            this.dgvIncomeItems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIncomeItems_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -600,7 +600,7 @@
             this.dgvProducts.Size = new System.Drawing.Size(526, 303);
             this.dgvProducts.TabIndex = 310;
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
-            this.dgvProducts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellContentDoubleClick);
+            this.dgvProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellDoubleClick);
             // 
             // Name1
             // 

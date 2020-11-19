@@ -259,6 +259,7 @@
             this.dgvSuppliersSearch.Size = new System.Drawing.Size(518, 379);
             this.dgvSuppliersSearch.TabIndex = 234;
             this.dgvSuppliersSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliersSearch_CellClick);
+            this.dgvSuppliersSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliersSearch_CellDoubleClick);
             // 
             // ColumnCompanyName
             // 

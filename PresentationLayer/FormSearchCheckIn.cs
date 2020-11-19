@@ -213,7 +213,7 @@ namespace PresentationLayer
             }
         }
 
-        private void dgvSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             _currentRowGrid = e.RowIndex;
             SelectDataGrid();

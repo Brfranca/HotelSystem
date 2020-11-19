@@ -177,7 +177,7 @@
             this.dgvSearch.Size = new System.Drawing.Size(571, 379);
             this.dgvSearch.TabIndex = 3;
             this.dgvSearch.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellClick);
-            this.dgvSearch.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellContentDoubleClick);
+            this.dgvSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellDoubleClick);
             // 
             // Column1
             // 

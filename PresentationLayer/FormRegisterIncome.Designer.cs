@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisterIncome));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblID = new System.Windows.Forms.Label();
             this.lblCadID = new System.Windows.Forms.Label();
             this.lblCadastrar = new System.Windows.Forms.Label();
@@ -84,11 +84,11 @@
             this.lblCNPJ = new System.Windows.Forms.Label();
             this.lblProdName = new System.Windows.Forms.Label();
             this.lblProdDesc = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomeItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProductRefresh)).BeginInit();
@@ -101,7 +101,7 @@
             this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(445, 74);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 19);
+            this.lblID.Size = new System.Drawing.Size(0, 23);
             this.lblID.TabIndex = 225;
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -113,7 +113,7 @@
             this.lblCadID.ForeColor = System.Drawing.Color.White;
             this.lblCadID.Location = new System.Drawing.Point(409, 74);
             this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(27, 19);
+            this.lblCadID.Size = new System.Drawing.Size(33, 23);
             this.lblCadID.TabIndex = 224;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,7 +126,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblCadastrar.Location = new System.Drawing.Point(38, 51);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
+            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
             this.lblCadastrar.TabIndex = 221;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -158,7 +158,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(38, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 19);
+            this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 228;
             this.label1.Text = "Fornecedor";
             // 
@@ -210,7 +210,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(38, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
+            this.label2.Size = new System.Drawing.Size(80, 23);
             this.label2.TabIndex = 233;
             this.label2.Text = "Produto ";
             // 
@@ -222,7 +222,7 @@
             this.lblRs.ForeColor = System.Drawing.Color.Red;
             this.lblRs.Location = new System.Drawing.Point(373, 573);
             this.lblRs.Name = "lblRs";
-            this.lblRs.Size = new System.Drawing.Size(26, 19);
+            this.lblRs.Size = new System.Drawing.Size(31, 23);
             this.lblRs.TabIndex = 237;
             this.lblRs.Text = "R$";
             this.lblRs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -244,7 +244,7 @@
             this.lblEntradaValor.ForeColor = System.Drawing.Color.White;
             this.lblEntradaValor.Location = new System.Drawing.Point(275, 573);
             this.lblEntradaValor.Name = "lblEntradaValor";
-            this.lblEntradaValor.Size = new System.Drawing.Size(85, 19);
+            this.lblEntradaValor.Size = new System.Drawing.Size(100, 23);
             this.lblEntradaValor.TabIndex = 236;
             this.lblEntradaValor.Text = "Valor Total:";
             // 
@@ -259,7 +259,7 @@
             this.txtTotalValue.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtTotalValue.Name = "txtTotalValue";
             this.txtTotalValue.ReadOnly = true;
-            this.txtTotalValue.Size = new System.Drawing.Size(106, 24);
+            this.txtTotalValue.Size = new System.Drawing.Size(106, 27);
             this.txtTotalValue.TabIndex = 238;
             this.txtTotalValue.Text = "0";
             // 
@@ -294,7 +294,7 @@
             this.lblConsFornCadastrados.ForeColor = System.Drawing.Color.White;
             this.lblConsFornCadastrados.Location = new System.Drawing.Point(621, 150);
             this.lblConsFornCadastrados.Name = "lblConsFornCadastrados";
-            this.lblConsFornCadastrados.Size = new System.Drawing.Size(152, 19);
+            this.lblConsFornCadastrados.Size = new System.Drawing.Size(181, 23);
             this.lblConsFornCadastrados.TabIndex = 247;
             this.lblConsFornCadastrados.Text = "Entradas Cadastradas";
             // 
@@ -304,19 +304,19 @@
             this.dgvIncomes.AllowUserToDeleteRows = false;
             this.dgvIncomes.AllowUserToResizeColumns = false;
             this.dgvIncomes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvIncomes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvIncomes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvIncomes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIncomes.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvIncomes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncomes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncomes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvIncomes.ColumnHeadersHeight = 29;
             this.dgvIncomes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvIncomes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -324,29 +324,29 @@
             this.ColumnID,
             this.ColumnEmail,
             this.ColumnPrice});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIncomes.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIncomes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvIncomes.Location = new System.Drawing.Point(625, 182);
             this.dgvIncomes.Name = "dgvIncomes";
             this.dgvIncomes.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncomes.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncomes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvIncomes.RowHeadersVisible = false;
             this.dgvIncomes.RowHeadersWidth = 51;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvIncomes.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvIncomes.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvIncomes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvIncomes.Size = new System.Drawing.Size(504, 384);
             this.dgvIncomes.TabIndex = 248;
@@ -364,7 +364,7 @@
             this.txtProdSearchID.MaxLength = 11;
             this.txtProdSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchID.Name = "txtProdSearchID";
-            this.txtProdSearchID.Size = new System.Drawing.Size(130, 24);
+            this.txtProdSearchID.Size = new System.Drawing.Size(130, 27);
             this.txtProdSearchID.TabIndex = 9;
             this.txtProdSearchID.Enter += new System.EventHandler(this.txtProdSearchID_Enter);
             this.txtProdSearchID.Leave += new System.EventHandler(this.txtProdSearchID_Leave);
@@ -380,7 +380,7 @@
             this.txtSearchIncomeBySupp.MaxLength = 11;
             this.txtSearchIncomeBySupp.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchIncomeBySupp.Name = "txtSearchIncomeBySupp";
-            this.txtSearchIncomeBySupp.Size = new System.Drawing.Size(258, 24);
+            this.txtSearchIncomeBySupp.Size = new System.Drawing.Size(258, 27);
             this.txtSearchIncomeBySupp.TabIndex = 8;
             this.txtSearchIncomeBySupp.Enter += new System.EventHandler(this.txtSearchIncomeBySupp_Enter);
             this.txtSearchIncomeBySupp.Leave += new System.EventHandler(this.txtSearchIncomeBySupp_Leave);
@@ -393,7 +393,7 @@
             this.lblConsProdCod.ForeColor = System.Drawing.Color.White;
             this.lblConsProdCod.Location = new System.Drawing.Point(929, 84);
             this.lblConsProdCod.Name = "lblConsProdCod";
-            this.lblConsProdCod.Size = new System.Drawing.Size(23, 19);
+            this.lblConsProdCod.Size = new System.Drawing.Size(28, 23);
             this.lblConsProdCod.TabIndex = 244;
             this.lblConsProdCod.Text = "ID";
             // 
@@ -405,7 +405,7 @@
             this.lblSearchName.ForeColor = System.Drawing.Color.White;
             this.lblSearchName.Location = new System.Drawing.Point(617, 84);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(86, 19);
+            this.lblSearchName.Size = new System.Drawing.Size(100, 23);
             this.lblSearchName.TabIndex = 243;
             this.lblSearchName.Text = "Fornecedor";
             // 
@@ -417,7 +417,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.label4.Location = new System.Drawing.Point(615, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 25);
+            this.label4.Size = new System.Drawing.Size(125, 32);
             this.label4.TabIndex = 242;
             this.label4.Text = "Consultar";
             // 
@@ -469,7 +469,7 @@
             this.lblRs2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRs2.Location = new System.Drawing.Point(186, 310);
             this.lblRs2.Name = "lblRs2";
-            this.lblRs2.Size = new System.Drawing.Size(26, 19);
+            this.lblRs2.Size = new System.Drawing.Size(31, 23);
             this.lblRs2.TabIndex = 258;
             this.lblRs2.Text = "R$";
             this.lblRs2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -482,7 +482,7 @@
             this.lblEntradaValorUni.ForeColor = System.Drawing.Color.White;
             this.lblEntradaValorUni.Location = new System.Drawing.Point(185, 284);
             this.lblEntradaValorUni.Name = "lblEntradaValorUni";
-            this.lblEntradaValorUni.Size = new System.Drawing.Size(102, 19);
+            this.lblEntradaValorUni.Size = new System.Drawing.Size(121, 23);
             this.lblEntradaValorUni.TabIndex = 257;
             this.lblEntradaValorUni.Text = "Valor Unitário";
             // 
@@ -496,7 +496,7 @@
             this.txtProdQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.txtProdQuantity.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdQuantity.Name = "txtProdQuantity";
-            this.txtProdQuantity.Size = new System.Drawing.Size(112, 24);
+            this.txtProdQuantity.Size = new System.Drawing.Size(112, 27);
             this.txtProdQuantity.TabIndex = 2;
             this.txtProdQuantity.Text = "0";
             // 
@@ -508,7 +508,7 @@
             this.lblEntradaProdQtd.ForeColor = System.Drawing.Color.White;
             this.lblEntradaProdQtd.Location = new System.Drawing.Point(50, 281);
             this.lblEntradaProdQtd.Name = "lblEntradaProdQtd";
-            this.lblEntradaProdQtd.Size = new System.Drawing.Size(87, 19);
+            this.lblEntradaProdQtd.Size = new System.Drawing.Size(104, 23);
             this.lblEntradaProdQtd.TabIndex = 254;
             this.lblEntradaProdQtd.Text = "Quantidade";
             // 
@@ -538,19 +538,19 @@
             this.dgvIncomeItems.AllowUserToDeleteRows = false;
             this.dgvIncomeItems.AllowUserToResizeColumns = false;
             this.dgvIncomeItems.AllowUserToResizeRows = false;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvIncomeItems.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvIncomeItems.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvIncomeItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvIncomeItems.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvIncomeItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncomeItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncomeItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvIncomeItems.ColumnHeadersHeight = 29;
             this.dgvIncomeItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvIncomeItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -558,28 +558,28 @@
             this.Column3,
             this.Column4,
             this.Column7});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvIncomeItems.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvIncomeItems.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvIncomeItems.Location = new System.Drawing.Point(40, 382);
             this.dgvIncomeItems.Name = "dgvIncomeItems";
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvIncomeItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIncomeItems.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvIncomeItems.RowHeadersVisible = false;
             this.dgvIncomeItems.RowHeadersWidth = 51;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
-            this.dgvIncomeItems.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
+            this.dgvIncomeItems.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvIncomeItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvIncomeItems.Size = new System.Drawing.Size(497, 172);
             this.dgvIncomeItems.TabIndex = 263;
@@ -618,7 +618,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(36, 360);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 19);
+            this.label5.Size = new System.Drawing.Size(187, 23);
             this.label5.TabIndex = 262;
             this.label5.Text = "Produtos adicionados ";
             // 
@@ -632,7 +632,7 @@
             this.txtProdPrice.Margin = new System.Windows.Forms.Padding(0);
             this.txtProdPrice.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdPrice.Name = "txtProdPrice";
-            this.txtProdPrice.Size = new System.Drawing.Size(95, 24);
+            this.txtProdPrice.Size = new System.Drawing.Size(95, 27);
             this.txtProdPrice.TabIndex = 3;
             this.txtProdPrice.Text = "0";
             // 
@@ -660,7 +660,7 @@
             this.txtProductProfit.Margin = new System.Windows.Forms.Padding(0);
             this.txtProductProfit.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProductProfit.Name = "txtProductProfit";
-            this.txtProductProfit.Size = new System.Drawing.Size(95, 24);
+            this.txtProductProfit.Size = new System.Drawing.Size(95, 27);
             this.txtProductProfit.TabIndex = 4;
             this.txtProductProfit.Text = "0";
             // 
@@ -672,7 +672,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(315, 284);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 19);
+            this.label7.Size = new System.Drawing.Size(54, 23);
             this.label7.TabIndex = 266;
             this.label7.Text = "Lucro";
             // 
@@ -684,7 +684,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(439, 310);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 19);
+            this.label6.Size = new System.Drawing.Size(25, 23);
             this.label6.TabIndex = 270;
             this.label6.Text = "%";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -699,7 +699,7 @@
             this.lblDot1.Location = new System.Drawing.Point(19, 6);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(20, 28);
+            this.lblDot1.Size = new System.Drawing.Size(26, 35);
             this.lblDot1.TabIndex = 272;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -712,7 +712,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label8.Location = new System.Drawing.Point(38, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(205, 28);
+            this.label8.Size = new System.Drawing.Size(253, 35);
             this.label8.TabIndex = 271;
             this.label8.Text = "Entrada de Produtos";
             // 
@@ -723,7 +723,7 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.White;
             this.lblCompanyName.Location = new System.Drawing.Point(39, 110);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(108, 20);
+            this.lblCompanyName.Size = new System.Drawing.Size(133, 22);
             this.lblCompanyName.TabIndex = 273;
             this.lblCompanyName.Text = "Razão social: ";
             // 
@@ -734,7 +734,7 @@
             this.lblCNPJ.ForeColor = System.Drawing.Color.White;
             this.lblCNPJ.Location = new System.Drawing.Point(41, 139);
             this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(56, 20);
+            this.lblCNPJ.Size = new System.Drawing.Size(69, 22);
             this.lblCNPJ.TabIndex = 274;
             this.lblCNPJ.Text = "CNPJ: ";
             // 
@@ -745,7 +745,7 @@
             this.lblProdName.ForeColor = System.Drawing.Color.White;
             this.lblProdName.Location = new System.Drawing.Point(44, 208);
             this.lblProdName.Name = "lblProdName";
-            this.lblProdName.Size = new System.Drawing.Size(61, 20);
+            this.lblProdName.Size = new System.Drawing.Size(75, 22);
             this.lblProdName.TabIndex = 277;
             this.lblProdName.Text = "Nome: ";
             // 
@@ -756,13 +756,21 @@
             this.lblProdDesc.ForeColor = System.Drawing.Color.White;
             this.lblProdDesc.Location = new System.Drawing.Point(45, 241);
             this.lblProdDesc.Name = "lblProdDesc";
-            this.lblProdDesc.Size = new System.Drawing.Size(92, 20);
+            this.lblProdDesc.Size = new System.Drawing.Size(111, 22);
             this.lblProdDesc.TabIndex = 278;
             this.lblProdDesc.Text = "Descrição: ";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Location = new System.Drawing.Point(42, 168);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(559, 1);
+            this.panel1.TabIndex = 279;
+            // 
             // Column6
             // 
-            this.Column6.FillWeight = 20F;
+            this.Column6.FillWeight = 25F;
             this.Column6.HeaderText = "ID";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
@@ -770,8 +778,8 @@
             // 
             // ColumnID
             // 
-            this.ColumnID.FillWeight = 30F;
-            this.ColumnID.HeaderText = "ID Fornecedor";
+            this.ColumnID.FillWeight = 60F;
+            this.ColumnID.HeaderText = "Fornecedor";
             this.ColumnID.MinimumWidth = 6;
             this.ColumnID.Name = "ColumnID";
             this.ColumnID.ReadOnly = true;
@@ -786,23 +794,15 @@
             // 
             // ColumnPrice
             // 
-            this.ColumnPrice.FillWeight = 40F;
+            this.ColumnPrice.FillWeight = 35F;
             this.ColumnPrice.HeaderText = "Valor total ";
             this.ColumnPrice.MinimumWidth = 6;
             this.ColumnPrice.Name = "ColumnPrice";
             this.ColumnPrice.ReadOnly = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Location = new System.Drawing.Point(42, 168);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(559, 1);
-            this.panel1.TabIndex = 279;
-            // 
             // FormRegisterIncome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);
@@ -909,10 +909,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPrice;
-        private System.Windows.Forms.Panel panel1;
     }
 }

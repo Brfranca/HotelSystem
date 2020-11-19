@@ -123,5 +123,15 @@ namespace PresentationLayer
         {
             FilterGrid(txtSuppSearchCNPJ, txtSuppSearchName, x => x.CNPJ.ToLower().Contains(txtSuppSearchCNPJ.Text.ToLower()));
         }
+
+        private void dgvSuppliersSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvSuppliersSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

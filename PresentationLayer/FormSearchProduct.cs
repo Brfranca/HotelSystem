@@ -34,13 +34,11 @@ namespace PresentationLayer
             UpdateGrid();
         }
 
-
         private void UpdateGrid()
         {
             List<Product> products = new List<Product>();
             dgvProductSearch.Rows.Clear();
 
-            //Pesquisa na tabela associativa todos os produtos associados a este fornecedor.
             QueryResponse<List<Supplier_Product>> response = _productBLL.GetBySupplierId(supplier.ID);
 
             if (!response.Success)
@@ -50,7 +48,6 @@ namespace PresentationLayer
             }
             foreach (var item in response.Data)
             {
-                //Pesquisa pelo id do produto presente na tabela associativa e adiciona na lista products para inserir em _productGrid
                 Product product = _productBLL.GetById(item.ProductID).Data;
                 products.Add(product);
             }
@@ -64,8 +61,6 @@ namespace PresentationLayer
                 MessageBox.Show("Nenhum produto cadastrado para este fornecedor!");
                 this.Dispose();
             }
-            
-
         }
 
         private void InsertGrid(List<Product> products)
@@ -105,6 +100,11 @@ namespace PresentationLayer
         private void dgvProductSearch_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _currentRowGrid = e.RowIndex;
+        }
+
+        private void dgvProductSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectDataGrid();
         }
     }
 }

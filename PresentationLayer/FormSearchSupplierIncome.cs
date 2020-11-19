@@ -131,5 +131,10 @@ namespace PresentationLayer
 
             this.Close();
         }
+
+        private void dgvSuppliersSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectDataGrid();
+        }
     }
 }

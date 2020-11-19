@@ -123,22 +123,15 @@ namespace BusinessLogicalLayer.BLL
         }
 
 
-        public Response ValidateIncomeItem(int id, string price, string quantity, string profit)
+        public Response ValidateIncomeItem(IncomeItem incomeitem)
         {
             Validator validator = new Validator();
-            ValidatePrice(price, validator);
-            ValidateQuantity(quantity, validator);
-            ValidateProductId(id, validator);
-            ValidateProfit(profit, validator);
+            ValidatePrice(incomeitem.UnityPrice.ToString(), validator);
+            ValidateQuantity(incomeitem.Quantity.ToString(), validator);
+            ValidateProductId(incomeitem.ProductID, validator);
+            ValidateProfit(incomeitem.Profit.ToString(), validator);
 
             Response result = validator.Validate();
-            if (result.Success)
-            {
-                result.ProductId = id;
-                result.ProductPrice = Convert.ToDouble(price);
-                result.ProductQuantity = Convert.ToInt32(quantity);
-                result.ProdcutProfit = Convert.ToInt32(profit);
-            }
             return result;
         }
 

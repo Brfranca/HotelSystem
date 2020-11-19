@@ -211,11 +211,6 @@ namespace PresentationLayer
             _currentRowGrid = e.RowIndex;
         }
 
-        private void dgvProducts_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            SelectDataGrid();
-        }
-
         private void btnSelectProduct_Click(object sender, EventArgs e)
         {
             SelectDataGrid();
@@ -279,16 +274,21 @@ namespace PresentationLayer
             }
         }
 
-        private void dgvIncomeItems_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void RemoveItem(int id)
+        {
+            _saleItems.Remove(_saleItems.FirstOrDefault(d => d.ProductID == id));
+        }
+
+        private void dgvProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectDataGrid();
+        }
+
+        private void dgvIncomeItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int id = (int)dgvProducts.Rows[_currentRowGrid].Cells[0].Value;
             RemoveItem(id);
             UpdateGridProducts();
-        }
-
-        private void RemoveItem(int id)
-        {
-            _saleItems.Remove(_saleItems.FirstOrDefault(d => d.ProductID == id));
         }
     }
 }

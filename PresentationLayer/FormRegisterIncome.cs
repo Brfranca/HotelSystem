@@ -119,8 +119,6 @@ namespace PresentationLayer
             RenewTextBoxValue();
         }
 
-
-
         private Income CreateIncome()
         {
             Income income = new Income();
@@ -136,24 +134,29 @@ namespace PresentationLayer
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            CreateIncomeItem();
+            InsertIncomeItem();
             RenewTextBoxValue();
         }
 
-        private void CreateIncomeItem()
+        private IncomeItem CreateIncomeItem()
         {
             IncomeItem incomeItem = new IncomeItem();
-            Response response = _incomeBLL.ValidateIncomeItem(_product.ID, txtProdPrice.Text, txtProdQuantity.Text, txtProductProfit.Text);
+            incomeItem.ProductID = _product.ID;
+            incomeItem.Quantity = Convert.ToInt32(txtProdQuantity.Text);
+            incomeItem.UnityPrice = Convert.ToDouble(txtProdPrice.Text);
+            incomeItem.Profit = Convert.ToDouble(txtProductProfit.Text);
+
+            return incomeItem;
+        }
+        private void InsertIncomeItem()
+        {
+            IncomeItem incomeItem = CreateIncomeItem();
+            Response response = _incomeBLL.ValidateIncomeItem(incomeItem);
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);
                 return;
             }
-            incomeItem.ProductID = response.ProductId;
-            incomeItem.Quantity = response.ProductQuantity;
-            incomeItem.UnityPrice = response.ProductPrice;
-            incomeItem.Profit = response.ProdcutProfit;
-
             _incomeItems.Add(incomeItem);
 
             UpdateToTalValue();
