@@ -194,7 +194,7 @@ namespace PresentationLayer
             dgvIncomeItems.Rows.Clear();
             foreach (var item in _incomeItems)
             {
-                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice, item.Profit.ToString() + "%");
+                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice.ToString("C2"), item.Profit.ToString() + "%");
             }
         }
 
@@ -236,6 +236,8 @@ namespace PresentationLayer
             if (_currentRowGrid == -1)
                 return;
             this.ClearForm();
+            lblCompanyName.Text = "Razão social: ";
+            lblCNPJ.Text = "CNPJ: ";
             int id = (int)dgvIncomes.Rows[_currentRowGrid].Cells[0].Value;
             QueryResponse<Income> response = _incomeBLL.GetById(id);
             if (response.Success)
@@ -260,7 +262,7 @@ namespace PresentationLayer
             foreach (IncomeItem item in queryResponse.Data)
             {
 
-                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice, item.Profit.ToString() + "%");
+                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice.ToString("C2"), item.Profit.ToString() + "%");
                 _incomeItems.Add(item);
             }
 
@@ -278,7 +280,7 @@ namespace PresentationLayer
             }
 
             lblCompanyName.Text += responseSupplier.Data.CompanyName;
-            lblCNPJ.Text += responseSupplier.Data.CNPJ;
+            lblCNPJ.Text += responseSupplier.Data.CNPJ.InsertMaskCNPJ();
         }
 
         private void dgvIncomes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

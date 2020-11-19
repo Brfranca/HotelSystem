@@ -74,10 +74,6 @@
             this.lblEntradaProdQtd = new System.Windows.Forms.Label();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.dgvIncomeItems = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtProdPrice = new System.Windows.Forms.TextBox();
             this.picProductRefresh = new System.Windows.Forms.PictureBox();
@@ -91,6 +87,10 @@
             this.lblProdName = new System.Windows.Forms.Label();
             this.lblProdID = new System.Windows.Forms.Label();
             this.lblProdDesc = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomeItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProductRefresh)).BeginInit();
@@ -636,32 +636,6 @@
             this.dgvIncomeItems.Size = new System.Drawing.Size(605, 227);
             this.dgvIncomeItems.TabIndex = 263;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.FillWeight = 40F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Quantidade";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Preço unitário (R$)";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Lucro";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -823,6 +797,32 @@
             this.lblProdDesc.TabIndex = 278;
             this.lblProdDesc.Text = "Descrição: ";
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Quantidade";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Preço unitário ";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Lucro";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
             // FormRegisterIncome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -930,10 +930,6 @@
         private System.Windows.Forms.TextBox txtProductProfit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label lblDot1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblCompanyName;
@@ -941,5 +937,9 @@
         private System.Windows.Forms.Label lblProdName;
         private System.Windows.Forms.Label lblProdID;
         private System.Windows.Forms.Label lblProdDesc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

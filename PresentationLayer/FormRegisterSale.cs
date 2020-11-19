@@ -159,7 +159,7 @@ namespace PresentationLayer
         {
             foreach (var item in products)
             {
-                dgvProducts.Rows.Add(item.ID, item.Name, item.Description, item.Price, item.Stock);
+                dgvProducts.Rows.Add(item.ID, item.Name, item.Description, item.Price.ToString("C2"), item.Stock);
             }
         }
 
