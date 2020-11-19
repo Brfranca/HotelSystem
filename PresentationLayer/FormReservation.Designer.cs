@@ -63,7 +63,7 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 27);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(20, 28);
+            this.lblDot1.Size = new System.Drawing.Size(26, 35);
             this.lblDot1.TabIndex = 323;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -76,7 +76,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label12.Location = new System.Drawing.Point(37, 30);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 28);
+            this.label12.Size = new System.Drawing.Size(118, 35);
             this.label12.TabIndex = 322;
             this.label12.Text = "Reservas";
             // 
@@ -128,7 +128,7 @@
             this.lblRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblRoom.Location = new System.Drawing.Point(483, 81);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(67, 21);
+            this.lblRoom.Size = new System.Drawing.Size(84, 28);
             this.lblRoom.TabIndex = 315;
             this.lblRoom.Text = "Quarto:";
             // 
@@ -140,7 +140,7 @@
             this.lblRoomNumber.ForeColor = System.Drawing.Color.White;
             this.lblRoomNumber.Location = new System.Drawing.Point(485, 120);
             this.lblRoomNumber.Name = "lblRoomNumber";
-            this.lblRoomNumber.Size = new System.Drawing.Size(72, 19);
+            this.lblRoomNumber.Size = new System.Drawing.Size(85, 23);
             this.lblRoomNumber.TabIndex = 314;
             this.lblRoomNumber.Text = "Número: ";
             // 
@@ -152,7 +152,7 @@
             this.lblRoomPrice.ForeColor = System.Drawing.Color.White;
             this.lblRoomPrice.Location = new System.Drawing.Point(485, 211);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(95, 19);
+            this.lblRoomPrice.Size = new System.Drawing.Size(110, 23);
             this.lblRoomPrice.TabIndex = 311;
             this.lblRoomPrice.Text = "Preço diária:";
             // 
@@ -164,7 +164,7 @@
             this.lblRoomType.ForeColor = System.Drawing.Color.White;
             this.lblRoomType.Location = new System.Drawing.Point(485, 181);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(114, 19);
+            this.lblRoomType.Size = new System.Drawing.Size(136, 23);
             this.lblRoomType.TabIndex = 310;
             this.lblRoomType.Text = "Tipo do quarto:";
             // 
@@ -176,7 +176,7 @@
             this.lblRoomFloor.ForeColor = System.Drawing.Color.White;
             this.lblRoomFloor.Location = new System.Drawing.Point(485, 151);
             this.lblRoomFloor.Name = "lblRoomFloor";
-            this.lblRoomFloor.Size = new System.Drawing.Size(55, 19);
+            this.lblRoomFloor.Size = new System.Drawing.Size(65, 23);
             this.lblRoomFloor.TabIndex = 309;
             this.lblRoomFloor.Text = "Andar:";
             // 
@@ -208,7 +208,7 @@
             this.lblClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblClient.Location = new System.Drawing.Point(38, 81);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(68, 21);
+            this.lblClient.Size = new System.Drawing.Size(83, 28);
             this.lblClient.TabIndex = 306;
             this.lblClient.Text = "Cliente:";
             // 
@@ -240,7 +240,7 @@
             this.lblClientEmail.ForeColor = System.Drawing.Color.White;
             this.lblClientEmail.Location = new System.Drawing.Point(40, 212);
             this.lblClientEmail.Name = "lblClientEmail";
-            this.lblClientEmail.Size = new System.Drawing.Size(55, 19);
+            this.lblClientEmail.Size = new System.Drawing.Size(66, 23);
             this.lblClientEmail.TabIndex = 305;
             this.lblClientEmail.Text = "E-mail:";
             // 
@@ -252,7 +252,7 @@
             this.lblClientPhone.ForeColor = System.Drawing.Color.White;
             this.lblClientPhone.Location = new System.Drawing.Point(40, 182);
             this.lblClientPhone.Name = "lblClientPhone";
-            this.lblClientPhone.Size = new System.Drawing.Size(70, 19);
+            this.lblClientPhone.Size = new System.Drawing.Size(82, 23);
             this.lblClientPhone.TabIndex = 304;
             this.lblClientPhone.Text = "Telefone:";
             // 
@@ -264,7 +264,7 @@
             this.lblClientCpf.ForeColor = System.Drawing.Color.White;
             this.lblClientCpf.Location = new System.Drawing.Point(40, 152);
             this.lblClientCpf.Name = "lblClientCpf";
-            this.lblClientCpf.Size = new System.Drawing.Size(38, 19);
+            this.lblClientCpf.Size = new System.Drawing.Size(45, 23);
             this.lblClientCpf.TabIndex = 303;
             this.lblClientCpf.Text = "CPF:";
             // 
@@ -276,7 +276,7 @@
             this.lblClientName.ForeColor = System.Drawing.Color.White;
             this.lblClientName.Location = new System.Drawing.Point(40, 122);
             this.lblClientName.Name = "lblClientName";
-            this.lblClientName.Size = new System.Drawing.Size(58, 19);
+            this.lblClientName.Size = new System.Drawing.Size(68, 23);
             this.lblClientName.TabIndex = 302;
             this.lblClientName.Text = "Nome: ";
             // 
@@ -285,17 +285,16 @@
             this.dtCheckOut.Location = new System.Drawing.Point(45, 383);
             this.dtCheckOut.MinDate = new System.DateTime(2020, 11, 18, 0, 0, 0, 0);
             this.dtCheckOut.Name = "dtCheckOut";
-            this.dtCheckOut.Size = new System.Drawing.Size(389, 25);
+            this.dtCheckOut.Size = new System.Drawing.Size(389, 30);
             this.dtCheckOut.TabIndex = 327;
             // 
             // dtCheckIn
             // 
-            this.dtCheckIn.Enabled = false;
             this.dtCheckIn.Location = new System.Drawing.Point(45, 306);
             this.dtCheckIn.Name = "dtCheckIn";
-            this.dtCheckIn.Size = new System.Drawing.Size(389, 25);
+            this.dtCheckIn.Size = new System.Drawing.Size(389, 30);
             this.dtCheckIn.TabIndex = 326;
-            this.dtCheckIn.Value = new System.DateTime(2020, 11, 18, 0, 0, 0, 0);
+            this.dtCheckIn.Value = new System.DateTime(2020, 11, 19, 0, 0, 0, 0);
             // 
             // label10
             // 
@@ -305,7 +304,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(40, 352);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 21);
+            this.label10.Size = new System.Drawing.Size(148, 28);
             this.label10.TabIndex = 325;
             this.label10.Text = "Data de Saída:";
             // 
@@ -317,7 +316,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(38, 275);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 21);
+            this.label4.Size = new System.Drawing.Size(170, 28);
             this.label4.TabIndex = 324;
             this.label4.Text = "Data de Entrada:";
             // 
@@ -334,17 +333,17 @@
             this.btnSeachReservation.Location = new System.Drawing.Point(553, 449);
             this.btnSeachReservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSeachReservation.Name = "btnSeachReservation";
-            this.btnSeachReservation.Size = new System.Drawing.Size(189, 53);
+            this.btnSeachReservation.Size = new System.Drawing.Size(209, 53);
             this.btnSeachReservation.TabIndex = 328;
             this.btnSeachReservation.Text = "Selecionar Reservas";
             this.btnSeachReservation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSeachReservation.UseVisualStyleBackColor = false;
+            this.btnSeachReservation.Click += new System.EventHandler(this.btnSeachReservation_Click_1);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Enabled = false;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(127)))), ((int)(((byte)(75)))));
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -359,11 +358,12 @@
             this.btnDelete.Text = "Deletar";
             this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormReservation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1141, 650);

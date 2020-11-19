@@ -108,7 +108,7 @@ namespace BusinessLogicalLayer.BLL
             {
                 validator.AddError("Data de entrada deve ser informada!");
             }
-            else if (entryDate.Date >= DateTime.Today)
+            else if (entryDate.Date <= DateTime.Today)
             {
                 validator.AddError("Data de entrada deve ser uma data futura!");
             }
@@ -144,15 +144,15 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-        //public QueryResponse<CheckIn> GetById(int id)
-        //{
-        //    return _checkInDAL.GetById(id);
-        //}
+        public QueryResponse<Reservation> GetById(int id)
+        {
+            return _reservationDAL.GetById(id);
+        }
 
-        //public QueryResponse<List<CheckIn>> GetAll()
-        //{
-        //    return _checkInDAL.GetAll();
-        //}
+        public QueryResponse<List<Reservation>> GetAll()
+        {
+            return _reservationDAL.GetAll();
+        }
 
     }
 }

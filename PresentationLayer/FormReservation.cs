@@ -21,7 +21,6 @@ namespace PresentationLayer
     {
         private ReservationBLL _reservationBLL;
         private RoomBLL _roomBLL;
-        private ClientBLL _clientBLL;
         private Client _client;
         private Room _room;
         private Reservation _reservation;
@@ -60,11 +59,14 @@ namespace PresentationLayer
         }
         private void SelectRoom()
         {
-            lblRoomNumber.Text = "Número: " + _room.Number;
-            lblRoomPrice.Text = "Preço diária: " + Convert.ToString(_room.PricePerDay);
-            lblRoomType.Text = "Tipo do quarto: " + _room.RoomType.ToString();
-            lblRoomFloor.Text = "Andar: " + _room.RoomFloor.ToString();
-            lblRoom.Text = "Quarto: " + Convert.ToString(_room.ID);
+            if (_room != null)
+            {
+                lblRoomNumber.Text = "Número: " + _room.Number;
+                lblRoomPrice.Text = "Preço diária: " + _room.PricePerDay.ToString("F2");
+                lblRoomType.Text = "Tipo do quarto: " + _room.RoomType.ToString();
+                lblRoomFloor.Text = "Andar: " + _room.RoomFloor.ToString();
+                lblRoom.Text = "Quarto: " + Convert.ToString(_room.ID);
+            }
         }
 
         private void btnSelectClient_Click(object sender, EventArgs e)
@@ -78,11 +80,14 @@ namespace PresentationLayer
 
         private void SelectClient()
         {
-            lblClientName.Text = "Nome: " + _client.Name;
-            lblClientCpf.Text = "CPF: " + _client.CPF.InsertMaskCPF();
-            lblClientEmail.Text = "E-mail: " + _client.Email;
-            lblClientPhone.Text = "Telefone: " + _client.Phone1;
-            lblClient.Text = "Cliente: " + Convert.ToString(_client.ID);
+            if (_client != null)
+            {
+                lblClientName.Text = "Nome: " + _client.Name;
+                lblClientCpf.Text = "CPF: " + _client.CPF.InsertMaskCPF();
+                lblClientEmail.Text = "E-mail: " + _client.Email;
+                lblClientPhone.Text = "Telefone: " + _client.Phone1;
+                lblClient.Text = "Cliente: " + Convert.ToString(_client.ID);
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -103,6 +108,7 @@ namespace PresentationLayer
             lblRoomType.Text = "Tipo do quarto: ";
             lblRoomFloor.Text = "Andar: ";
             lblRoom.Text = "Quarto: ";
+            ClearDate();
         }
 
         private void btnReservationRegister_Click(object sender, EventArgs e)
@@ -116,12 +122,11 @@ namespace PresentationLayer
                 {
                     this.ClearForm();
                     ClearData();
-                    _room.RoomStatus = RoomStatus.Reservado;
-                    _roomBLL.Update(_room);
                 }
             }
             else if (btnReservationRegister.Text == "Editar")
             {
+                reservation.ID = _reservation.ID;
                 Response response = _reservationBLL.Update(reservation);
                 MessageBox.Show(response.Message);
                 if (response.Success)
@@ -129,36 +134,23 @@ namespace PresentationLayer
                     this.ClearForm();
                     ClearData();
                     btnReservationRegister.Text = "Cadastrar";
-                    btnDelete.Enabled = false;
+                    btnDelete.Visible = false;
                 }
             }
         }
 
-        private void btnSeachReservation_Click(object sender, EventArgs e)
-        {
-            FormSearchReservation frmSearchReservation = new FormSearchReservation();
-            frmSearchReservation.ShowDialog();
-            _reservation = frmSearchReservation.reservation;
-            QueryResponse<Room> responseRoom = _roomBLL.GetById(_reservation.RoomID);
-            _room = responseRoom.Data;
-            QueryResponse<Client> responseClient = _clientBLL.GetById(_reservation.ClientID);
-            _client = responseClient.Data;
-            if (!responseRoom.Success || !responseClient.Success)
-            {
-                MessageBox.Show("Erro ao localizar a reserva.");
-                return;
-            }
-            SelectRoom();
-            SelectClient();
-            SelectDate();
-            btnReservationRegister.Text = "Editar";
-            btnDelete.Enabled = true;
-        }
-
         private void SelectDate()
         {
-            dtCheckIn.Value = _reservation.EntryDate;
-            dtCheckOut.Value = _reservation.DepartureDate;
+            if (_reservation.ID != 0)
+            {
+                dtCheckIn.Value = _reservation.EntryDate;
+                dtCheckOut.Value = _reservation.DepartureDate;
+            }
+        }
+        private void ClearDate()
+        {
+            dtCheckIn.Value = DateTime.Now.Date;
+            dtCheckOut.Value = DateTime.Now.Date;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -167,8 +159,27 @@ namespace PresentationLayer
             MessageBox.Show(response.Message);
             if (response.Success)
             {
-
+                this.ClearForm();
+                ClearData();
+                btnReservationRegister.Text = "Cadastrar";
+                btnDelete.Visible = false;
             }
+        }
+
+        private void btnSeachReservation_Click_1(object sender, EventArgs e)
+        {
+            FormSearchReservation frmSearchReservation = new FormSearchReservation();
+            frmSearchReservation.ShowDialog();
+            _reservation = frmSearchReservation.reservation;
+            _room = frmSearchReservation.room;
+            _client = frmSearchReservation.client;
+            if (_reservation.ID == 0)
+                return;
+            SelectRoom();
+            SelectClient();
+            SelectDate();
+            btnReservationRegister.Text = "Editar";
+            btnDelete.Visible = true;
         }
     }
 }

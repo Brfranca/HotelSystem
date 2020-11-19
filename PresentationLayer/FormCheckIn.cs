@@ -34,6 +34,7 @@ namespace PresentationLayer
         private void FormCheckIn_Load(object sender, EventArgs e)
         {
             this.ClearForm();
+            dtCheckIn.Value = DateTime.Now;
         }
 
         private CheckIn CreateCheckIn()
