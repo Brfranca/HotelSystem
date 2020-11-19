@@ -74,6 +74,10 @@
             this.lblEntradaProdQtd = new System.Windows.Forms.Label();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.dgvIncomeItems = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtProdPrice = new System.Windows.Forms.TextBox();
             this.picProductRefresh = new System.Windows.Forms.PictureBox();
@@ -87,10 +91,6 @@
             this.lblProdName = new System.Windows.Forms.Label();
             this.lblProdID = new System.Windows.Forms.Label();
             this.lblProdDesc = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIncomeItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picProductRefresh)).BeginInit();
@@ -103,7 +103,7 @@
             this.lblID.ForeColor = System.Drawing.Color.White;
             this.lblID.Location = new System.Drawing.Point(375, 85);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 19);
+            this.lblID.Size = new System.Drawing.Size(0, 23);
             this.lblID.TabIndex = 225;
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -115,7 +115,7 @@
             this.lblCadID.ForeColor = System.Drawing.Color.White;
             this.lblCadID.Location = new System.Drawing.Point(339, 85);
             this.lblCadID.Name = "lblCadID";
-            this.lblCadID.Size = new System.Drawing.Size(27, 19);
+            this.lblCadID.Size = new System.Drawing.Size(33, 23);
             this.lblCadID.TabIndex = 224;
             this.lblCadID.Text = "ID:";
             this.lblCadID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -128,7 +128,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblCadastrar.Location = new System.Drawing.Point(38, 51);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(97, 25);
+            this.lblCadastrar.Size = new System.Drawing.Size(124, 32);
             this.lblCadastrar.TabIndex = 221;
             this.lblCadastrar.Text = "Cadastrar";
             // 
@@ -160,7 +160,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(38, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 19);
+            this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 228;
             this.label1.Text = "Fornecedor";
             // 
@@ -212,7 +212,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(38, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 19);
+            this.label2.Size = new System.Drawing.Size(80, 23);
             this.label2.TabIndex = 233;
             this.label2.Text = "Produto ";
             // 
@@ -224,7 +224,7 @@
             this.lblRs.ForeColor = System.Drawing.Color.Red;
             this.lblRs.Location = new System.Drawing.Point(511, 633);
             this.lblRs.Name = "lblRs";
-            this.lblRs.Size = new System.Drawing.Size(26, 19);
+            this.lblRs.Size = new System.Drawing.Size(31, 23);
             this.lblRs.TabIndex = 237;
             this.lblRs.Text = "R$";
             this.lblRs.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -246,7 +246,7 @@
             this.lblEntradaValor.ForeColor = System.Drawing.Color.White;
             this.lblEntradaValor.Location = new System.Drawing.Point(413, 633);
             this.lblEntradaValor.Name = "lblEntradaValor";
-            this.lblEntradaValor.Size = new System.Drawing.Size(85, 19);
+            this.lblEntradaValor.Size = new System.Drawing.Size(100, 23);
             this.lblEntradaValor.TabIndex = 236;
             this.lblEntradaValor.Text = "Valor Total:";
             // 
@@ -261,7 +261,7 @@
             this.txtTotalValue.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtTotalValue.Name = "txtTotalValue";
             this.txtTotalValue.ReadOnly = true;
-            this.txtTotalValue.Size = new System.Drawing.Size(106, 22);
+            this.txtTotalValue.Size = new System.Drawing.Size(106, 27);
             this.txtTotalValue.TabIndex = 238;
             this.txtTotalValue.Text = "0";
             // 
@@ -296,7 +296,7 @@
             this.lblConsFornCadastrados.ForeColor = System.Drawing.Color.White;
             this.lblConsFornCadastrados.Location = new System.Drawing.Point(688, 170);
             this.lblConsFornCadastrados.Name = "lblConsFornCadastrados";
-            this.lblConsFornCadastrados.Size = new System.Drawing.Size(152, 19);
+            this.lblConsFornCadastrados.Size = new System.Drawing.Size(181, 23);
             this.lblConsFornCadastrados.TabIndex = 247;
             this.lblConsFornCadastrados.Text = "Entradas Cadastradas";
             // 
@@ -398,7 +398,7 @@
             this.txtProdSearchID.MaxLength = 11;
             this.txtProdSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchID.Name = "txtProdSearchID";
-            this.txtProdSearchID.Size = new System.Drawing.Size(130, 22);
+            this.txtProdSearchID.Size = new System.Drawing.Size(130, 27);
             this.txtProdSearchID.TabIndex = 9;
             this.txtProdSearchID.Enter += new System.EventHandler(this.txtProdSearchID_Enter);
             this.txtProdSearchID.Leave += new System.EventHandler(this.txtProdSearchID_Leave);
@@ -414,7 +414,7 @@
             this.txtSearchIncomeBySupp.MaxLength = 11;
             this.txtSearchIncomeBySupp.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtSearchIncomeBySupp.Name = "txtSearchIncomeBySupp";
-            this.txtSearchIncomeBySupp.Size = new System.Drawing.Size(258, 22);
+            this.txtSearchIncomeBySupp.Size = new System.Drawing.Size(258, 27);
             this.txtSearchIncomeBySupp.TabIndex = 8;
             this.txtSearchIncomeBySupp.Enter += new System.EventHandler(this.txtSearchIncomeBySupp_Enter);
             this.txtSearchIncomeBySupp.Leave += new System.EventHandler(this.txtSearchIncomeBySupp_Leave);
@@ -427,7 +427,7 @@
             this.lblConsProdCod.ForeColor = System.Drawing.Color.White;
             this.lblConsProdCod.Location = new System.Drawing.Point(1000, 110);
             this.lblConsProdCod.Name = "lblConsProdCod";
-            this.lblConsProdCod.Size = new System.Drawing.Size(23, 19);
+            this.lblConsProdCod.Size = new System.Drawing.Size(28, 23);
             this.lblConsProdCod.TabIndex = 244;
             this.lblConsProdCod.Text = "ID";
             // 
@@ -439,7 +439,7 @@
             this.lblSearchName.ForeColor = System.Drawing.Color.White;
             this.lblSearchName.Location = new System.Drawing.Point(688, 110);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(86, 19);
+            this.lblSearchName.Size = new System.Drawing.Size(100, 23);
             this.lblSearchName.TabIndex = 243;
             this.lblSearchName.Text = "Fornecedor";
             // 
@@ -451,7 +451,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.label4.Location = new System.Drawing.Point(686, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 25);
+            this.label4.Size = new System.Drawing.Size(125, 32);
             this.label4.TabIndex = 242;
             this.label4.Text = "Consultar";
             // 
@@ -503,7 +503,7 @@
             this.lblRs2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblRs2.Location = new System.Drawing.Point(190, 333);
             this.lblRs2.Name = "lblRs2";
-            this.lblRs2.Size = new System.Drawing.Size(26, 19);
+            this.lblRs2.Size = new System.Drawing.Size(31, 23);
             this.lblRs2.TabIndex = 258;
             this.lblRs2.Text = "R$";
             this.lblRs2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -534,7 +534,7 @@
             this.lblEntradaValorUni.ForeColor = System.Drawing.Color.White;
             this.lblEntradaValorUni.Location = new System.Drawing.Point(189, 307);
             this.lblEntradaValorUni.Name = "lblEntradaValorUni";
-            this.lblEntradaValorUni.Size = new System.Drawing.Size(102, 19);
+            this.lblEntradaValorUni.Size = new System.Drawing.Size(121, 23);
             this.lblEntradaValorUni.TabIndex = 257;
             this.lblEntradaValorUni.Text = "Valor Unitário";
             // 
@@ -548,7 +548,7 @@
             this.txtProdQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.txtProdQuantity.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdQuantity.Name = "txtProdQuantity";
-            this.txtProdQuantity.Size = new System.Drawing.Size(112, 22);
+            this.txtProdQuantity.Size = new System.Drawing.Size(112, 27);
             this.txtProdQuantity.TabIndex = 2;
             this.txtProdQuantity.Text = "0";
             // 
@@ -560,7 +560,7 @@
             this.lblEntradaProdQtd.ForeColor = System.Drawing.Color.White;
             this.lblEntradaProdQtd.Location = new System.Drawing.Point(44, 307);
             this.lblEntradaProdQtd.Name = "lblEntradaProdQtd";
-            this.lblEntradaProdQtd.Size = new System.Drawing.Size(87, 19);
+            this.lblEntradaProdQtd.Size = new System.Drawing.Size(104, 23);
             this.lblEntradaProdQtd.TabIndex = 254;
             this.lblEntradaProdQtd.Text = "Quantidade";
             // 
@@ -636,6 +636,32 @@
             this.dgvIncomeItems.Size = new System.Drawing.Size(605, 227);
             this.dgvIncomeItems.TabIndex = 263;
             // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Quantidade";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Preço unitário ";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Lucro";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -644,7 +670,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(43, 381);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 19);
+            this.label5.Size = new System.Drawing.Size(187, 23);
             this.label5.TabIndex = 262;
             this.label5.Text = "Produtos adicionados ";
             // 
@@ -658,7 +684,7 @@
             this.txtProdPrice.Margin = new System.Windows.Forms.Padding(0);
             this.txtProdPrice.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdPrice.Name = "txtProdPrice";
-            this.txtProdPrice.Size = new System.Drawing.Size(95, 22);
+            this.txtProdPrice.Size = new System.Drawing.Size(95, 27);
             this.txtProdPrice.TabIndex = 3;
             this.txtProdPrice.Text = "0";
             // 
@@ -686,7 +712,7 @@
             this.txtProductProfit.Margin = new System.Windows.Forms.Padding(0);
             this.txtProductProfit.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProductProfit.Name = "txtProductProfit";
-            this.txtProductProfit.Size = new System.Drawing.Size(95, 22);
+            this.txtProductProfit.Size = new System.Drawing.Size(95, 27);
             this.txtProductProfit.TabIndex = 4;
             this.txtProductProfit.Text = "0";
             // 
@@ -698,7 +724,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(344, 307);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 19);
+            this.label7.Size = new System.Drawing.Size(54, 23);
             this.label7.TabIndex = 266;
             this.label7.Text = "Lucro";
             // 
@@ -710,7 +736,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(468, 333);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 19);
+            this.label6.Size = new System.Drawing.Size(25, 23);
             this.label6.TabIndex = 270;
             this.label6.Text = "%";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -725,7 +751,7 @@
             this.lblDot1.Location = new System.Drawing.Point(19, 6);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(20, 28);
+            this.lblDot1.Size = new System.Drawing.Size(26, 35);
             this.lblDot1.TabIndex = 272;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -738,9 +764,9 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label8.Location = new System.Drawing.Point(38, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 28);
+            this.label8.Size = new System.Drawing.Size(253, 35);
             this.label8.TabIndex = 271;
-            this.label8.Text = "Fornecedores";
+            this.label8.Text = "Entrada de Produtos";
             // 
             // lblCompanyName
             // 
@@ -749,7 +775,7 @@
             this.lblCompanyName.ForeColor = System.Drawing.Color.White;
             this.lblCompanyName.Location = new System.Drawing.Point(39, 110);
             this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(108, 20);
+            this.lblCompanyName.Size = new System.Drawing.Size(133, 22);
             this.lblCompanyName.TabIndex = 273;
             this.lblCompanyName.Text = "Razão social: ";
             // 
@@ -760,7 +786,7 @@
             this.lblCNPJ.ForeColor = System.Drawing.Color.White;
             this.lblCNPJ.Location = new System.Drawing.Point(44, 138);
             this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(56, 20);
+            this.lblCNPJ.Size = new System.Drawing.Size(69, 22);
             this.lblCNPJ.TabIndex = 274;
             this.lblCNPJ.Text = "CNPJ: ";
             // 
@@ -771,7 +797,7 @@
             this.lblProdName.ForeColor = System.Drawing.Color.White;
             this.lblProdName.Location = new System.Drawing.Point(44, 234);
             this.lblProdName.Name = "lblProdName";
-            this.lblProdName.Size = new System.Drawing.Size(61, 20);
+            this.lblProdName.Size = new System.Drawing.Size(75, 22);
             this.lblProdName.TabIndex = 277;
             this.lblProdName.Text = "Nome: ";
             // 
@@ -782,7 +808,7 @@
             this.lblProdID.ForeColor = System.Drawing.Color.White;
             this.lblProdID.Location = new System.Drawing.Point(40, 205);
             this.lblProdID.Name = "lblProdID";
-            this.lblProdID.Size = new System.Drawing.Size(33, 20);
+            this.lblProdID.Size = new System.Drawing.Size(39, 22);
             this.lblProdID.TabIndex = 276;
             this.lblProdID.Text = "ID: ";
             // 
@@ -793,39 +819,13 @@
             this.lblProdDesc.ForeColor = System.Drawing.Color.White;
             this.lblProdDesc.Location = new System.Drawing.Point(45, 265);
             this.lblProdDesc.Name = "lblProdDesc";
-            this.lblProdDesc.Size = new System.Drawing.Size(92, 20);
+            this.lblProdDesc.Size = new System.Drawing.Size(111, 22);
             this.lblProdDesc.TabIndex = 278;
             this.lblProdDesc.Text = "Descrição: ";
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.FillWeight = 40F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Quantidade";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Preço unitário ";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Lucro";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            // 
             // FormRegisterIncome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1300, 720);

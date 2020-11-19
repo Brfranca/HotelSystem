@@ -155,5 +155,17 @@ namespace PresentationLayer
                 _roomBLL.Update(_room);
             }
         }
+
+        private void btnSeachReservation_Click(object sender, EventArgs e)
+        {
+            FormSearchReservation frmSearchReservation = new FormSearchReservation(_client.CPF);
+            frmSearchReservation.ShowDialog();
+            _room = frmSearchReservation.room;
+            _client = frmSearchReservation.client;
+            _reservation = frmSearchReservation.reservation;
+            SelectClient();
+            SelectRoom();
+            SelectDate();
+        }
     }
 }

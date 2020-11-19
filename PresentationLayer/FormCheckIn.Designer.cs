@@ -338,6 +338,7 @@
             this.btnSeachReservation.Text = "Selecionar Reservas";
             this.btnSeachReservation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSeachReservation.UseVisualStyleBackColor = false;
+            this.btnSeachReservation.Click += new System.EventHandler(this.btnSeachReservation_Click);
             // 
             // FormCheckIn
             // 
