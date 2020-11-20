@@ -25,6 +25,7 @@ namespace PresentationLayer
         private SaleBLL _saleBLL;
         private int _currentRowGrid;
         public static Sale sale;
+        private List<Sale> _sales;
         public FormCheckOut()
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace PresentationLayer
             _saleBLL = new SaleBLL();
             sale = new Sale();
             _checkIn = new CheckIn();
+            _sales = new List<Sale>();
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -72,6 +74,7 @@ namespace PresentationLayer
         private void UpdateSalesCheckIn()
         {
             QueryResponse<List<Sale>> response = _saleBLL.GetByClientId(_checkIn.ClientID);
+            _sales = response.Data;
             foreach (var item in response.Data)
             {
                 dgvSales.Rows.Add(item.ID, item.SaleDate.ToString("dd/MM/yyyy"), item.TotalValue);
@@ -101,7 +104,10 @@ namespace PresentationLayer
 
         private void btnSalesSelect_Click(object sender, EventArgs e)
         {
-            SelectSale();
+            if (_sales.Count > 0)
+            {
+                SelectSale();
+            }
         }
 
         private void ClearLabel()
@@ -132,7 +138,6 @@ namespace PresentationLayer
             if (_currentRowGrid == -1)
                 return;
 
-            dgvSales.Rows.Clear();
             int id = (int)dgvSales.Rows[_currentRowGrid].Cells[0].Value;
             QueryResponse<Sale> response = _saleBLL.GetById(id);
             if (!response.Success)
@@ -143,6 +148,14 @@ namespace PresentationLayer
             sale = response.Data;
             FormSearchSale frm = new FormSearchSale();
             frm.ShowDialog();
+        }
+
+        private void dgvSales_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (_sales.Count > 0)
+            {
+                SelectSale();
+            }
         }
     }
 }

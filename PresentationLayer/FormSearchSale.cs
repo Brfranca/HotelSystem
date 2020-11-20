@@ -32,7 +32,7 @@ namespace PresentationLayer
             foreach (var item in responseSaleItem.Data)
             {
                 QueryResponse<Product> response = _productBLL.GetById(item.ProductID);
-                dgvSearch.Rows.Add(response.Data.Name, response.Data.Description, response.Data.Price, item.Quantity);
+                dgvSearch.Rows.Add(response.Data.Name, response.Data.Description, response.Data.Price.ToString("C2"), item.Quantity);
             }
         }
 

@@ -63,7 +63,7 @@
             this.dtCheckOut.Location = new System.Drawing.Point(52, 330);
             this.dtCheckOut.MinDate = new System.DateTime(2020, 11, 17, 0, 0, 0, 0);
             this.dtCheckOut.Name = "dtCheckOut";
-            this.dtCheckOut.Size = new System.Drawing.Size(261, 25);
+            this.dtCheckOut.Size = new System.Drawing.Size(261, 30);
             this.dtCheckOut.TabIndex = 325;
             // 
             // lblDot1
@@ -76,7 +76,7 @@
             this.lblDot1.Location = new System.Drawing.Point(26, 17);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(20, 28);
+            this.lblDot1.Size = new System.Drawing.Size(26, 35);
             this.lblDot1.TabIndex = 323;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -89,7 +89,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label12.Location = new System.Drawing.Point(45, 20);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 28);
+            this.label12.Size = new System.Drawing.Size(137, 35);
             this.label12.TabIndex = 322;
             this.label12.Text = "Check Out";
             // 
@@ -103,7 +103,7 @@
             this.btnCheckOut.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnCheckOut.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Image")));
-            this.btnCheckOut.Location = new System.Drawing.Point(188, 520);
+            this.btnCheckOut.Location = new System.Drawing.Point(142, 512);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(189, 53);
@@ -121,7 +121,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(47, 299);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 19);
+            this.label10.Size = new System.Drawing.Size(127, 23);
             this.label10.TabIndex = 320;
             this.label10.Text = "Data de Saída:";
             // 
@@ -133,7 +133,7 @@
             this.lblNumber.ForeColor = System.Drawing.Color.White;
             this.lblNumber.Location = new System.Drawing.Point(45, 202);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(72, 19);
+            this.lblNumber.Size = new System.Drawing.Size(85, 23);
             this.lblNumber.TabIndex = 314;
             this.lblNumber.Text = "Número: ";
             // 
@@ -145,7 +145,7 @@
             this.lblRoomPrice.ForeColor = System.Drawing.Color.White;
             this.lblRoomPrice.Location = new System.Drawing.Point(45, 263);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(116, 19);
+            this.lblRoomPrice.Size = new System.Drawing.Size(136, 23);
             this.lblRoomPrice.TabIndex = 311;
             this.lblRoomPrice.Text = "Preço diária: R$";
             // 
@@ -157,7 +157,7 @@
             this.lblRoomType.ForeColor = System.Drawing.Color.White;
             this.lblRoomType.Location = new System.Drawing.Point(46, 230);
             this.lblRoomType.Name = "lblRoomType";
-            this.lblRoomType.Size = new System.Drawing.Size(117, 19);
+            this.lblRoomType.Size = new System.Drawing.Size(140, 23);
             this.lblRoomType.TabIndex = 310;
             this.lblRoomType.Text = "Tipo de quarto: ";
             // 
@@ -191,7 +191,7 @@
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
-            this.btnClear.Location = new System.Drawing.Point(12, 520);
+            this.btnClear.Location = new System.Drawing.Point(18, 466);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(98, 36);
@@ -209,7 +209,7 @@
             this.lblPhone.ForeColor = System.Drawing.Color.White;
             this.lblPhone.Location = new System.Drawing.Point(46, 173);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(74, 19);
+            this.lblPhone.Size = new System.Drawing.Size(87, 23);
             this.lblPhone.TabIndex = 304;
             this.lblPhone.Text = "Telefone: ";
             // 
@@ -221,7 +221,7 @@
             this.lblCPF.ForeColor = System.Drawing.Color.White;
             this.lblCPF.Location = new System.Drawing.Point(48, 138);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(42, 19);
+            this.lblCPF.Size = new System.Drawing.Size(50, 23);
             this.lblCPF.TabIndex = 303;
             this.lblCPF.Text = "CPF: ";
             // 
@@ -233,7 +233,7 @@
             this.lblNome.ForeColor = System.Drawing.Color.White;
             this.lblNome.Location = new System.Drawing.Point(48, 108);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(58, 19);
+            this.lblNome.Size = new System.Drawing.Size(68, 23);
             this.lblNome.TabIndex = 302;
             this.lblNome.Text = "Nome: ";
             // 
@@ -291,6 +291,7 @@
             this.dgvSales.Size = new System.Drawing.Size(444, 381);
             this.dgvSales.TabIndex = 326;
             this.dgvSales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSales_CellClick);
+            this.dgvSales.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSales_CellDoubleClick);
             // 
             // ColumnNumber
             // 
@@ -322,7 +323,7 @@
             this.lblConsFornCadastrados.ForeColor = System.Drawing.Color.White;
             this.lblConsFornCadastrados.Location = new System.Drawing.Point(449, 71);
             this.lblConsFornCadastrados.Name = "lblConsFornCadastrados";
-            this.lblConsFornCadastrados.Size = new System.Drawing.Size(209, 19);
+            this.lblConsFornCadastrados.Size = new System.Drawing.Size(248, 23);
             this.lblConsFornCadastrados.TabIndex = 327;
             this.lblConsFornCadastrados.Text = "Serviços/produtos adquiridos";
             // 
@@ -354,7 +355,7 @@
             this.lblTotalValue.ForeColor = System.Drawing.Color.White;
             this.lblTotalValue.Location = new System.Drawing.Point(48, 409);
             this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.Size = new System.Drawing.Size(106, 19);
+            this.lblTotalValue.Size = new System.Drawing.Size(126, 23);
             this.lblTotalValue.TabIndex = 329;
             this.lblTotalValue.Text = "Valor Total: R$";
             // 
@@ -366,12 +367,12 @@
             this.lblTotalValueInsert.ForeColor = System.Drawing.Color.White;
             this.lblTotalValueInsert.Location = new System.Drawing.Point(174, 409);
             this.lblTotalValueInsert.Name = "lblTotalValueInsert";
-            this.lblTotalValueInsert.Size = new System.Drawing.Size(0, 19);
+            this.lblTotalValueInsert.Size = new System.Drawing.Size(0, 23);
             this.lblTotalValueInsert.TabIndex = 330;
             // 
             // FormCheckOut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(933, 588);

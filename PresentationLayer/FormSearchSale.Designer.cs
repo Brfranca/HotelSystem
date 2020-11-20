@@ -38,12 +38,6 @@
             this.lblNomeFarmacia = new System.Windows.Forms.Label();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picClose = new System.Windows.Forms.PictureBox();
-            this.pnlCpf = new System.Windows.Forms.Panel();
-            this.txtSearchCPF = new System.Windows.Forms.TextBox();
-            this.pnlName = new System.Windows.Forms.Panel();
-            this.txtSearchRoomNumber = new System.Windows.Forms.TextBox();
-            this.lblConsSupCod = new System.Windows.Forms.Label();
-            this.lblConsSupNome = new System.Windows.Forms.Label();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.ColumnCompanyName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +67,7 @@
             this.lblNomeFarmacia.ForeColor = System.Drawing.Color.White;
             this.lblNomeFarmacia.Location = new System.Drawing.Point(65, 8);
             this.lblNomeFarmacia.Name = "lblNomeFarmacia";
-            this.lblNomeFarmacia.Size = new System.Drawing.Size(53, 21);
+            this.lblNomeFarmacia.Size = new System.Drawing.Size(66, 28);
             this.lblNomeFarmacia.TabIndex = 0;
             this.lblNomeFarmacia.Text = "Venda";
             // 
@@ -107,80 +101,6 @@
             this.picClose.TabIndex = 172;
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
-            // pnlCpf
-            // 
-            this.pnlCpf.BackColor = System.Drawing.Color.White;
-            this.pnlCpf.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlCpf.Location = new System.Drawing.Point(342, 106);
-            this.pnlCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlCpf.MaximumSize = new System.Drawing.Size(564, 1);
-            this.pnlCpf.Name = "pnlCpf";
-            this.pnlCpf.Size = new System.Drawing.Size(206, 1);
-            this.pnlCpf.TabIndex = 266;
-            // 
-            // txtSearchCPF
-            // 
-            this.txtSearchCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txtSearchCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchCPF.ForeColor = System.Drawing.Color.White;
-            this.txtSearchCPF.Location = new System.Drawing.Point(346, 85);
-            this.txtSearchCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchCPF.MaxLength = 11;
-            this.txtSearchCPF.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchCPF.Name = "txtSearchCPF";
-            this.txtSearchCPF.Size = new System.Drawing.Size(191, 24);
-            this.txtSearchCPF.TabIndex = 267;
-            // 
-            // pnlName
-            // 
-            this.pnlName.BackColor = System.Drawing.Color.White;
-            this.pnlName.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlName.Location = new System.Drawing.Point(29, 105);
-            this.pnlName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlName.MaximumSize = new System.Drawing.Size(564, 1);
-            this.pnlName.Name = "pnlName";
-            this.pnlName.Size = new System.Drawing.Size(270, 1);
-            this.pnlName.TabIndex = 264;
-            // 
-            // txtSearchRoomNumber
-            // 
-            this.txtSearchRoomNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.txtSearchRoomNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearchRoomNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchRoomNumber.ForeColor = System.Drawing.Color.White;
-            this.txtSearchRoomNumber.Location = new System.Drawing.Point(33, 84);
-            this.txtSearchRoomNumber.Margin = new System.Windows.Forms.Padding(0);
-            this.txtSearchRoomNumber.MaxLength = 11;
-            this.txtSearchRoomNumber.MinimumSize = new System.Drawing.Size(0, 24);
-            this.txtSearchRoomNumber.Name = "txtSearchRoomNumber";
-            this.txtSearchRoomNumber.Size = new System.Drawing.Size(258, 24);
-            this.txtSearchRoomNumber.TabIndex = 265;
-            // 
-            // lblConsSupCod
-            // 
-            this.lblConsSupCod.AutoSize = true;
-            this.lblConsSupCod.BackColor = System.Drawing.Color.Transparent;
-            this.lblConsSupCod.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsSupCod.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupCod.Location = new System.Drawing.Point(338, 62);
-            this.lblConsSupCod.Name = "lblConsSupCod";
-            this.lblConsSupCod.Size = new System.Drawing.Size(38, 19);
-            this.lblConsSupCod.TabIndex = 263;
-            this.lblConsSupCod.Text = "CPF ";
-            // 
-            // lblConsSupNome
-            // 
-            this.lblConsSupNome.AutoSize = true;
-            this.lblConsSupNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblConsSupNome.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsSupNome.ForeColor = System.Drawing.Color.White;
-            this.lblConsSupNome.Location = new System.Drawing.Point(26, 62);
-            this.lblConsSupNome.Name = "lblConsSupNome";
-            this.lblConsSupNome.Size = new System.Drawing.Size(135, 19);
-            this.lblConsSupNome.TabIndex = 262;
-            this.lblConsSupNome.Text = "Número do quarto";
             // 
             // dgvSearch
             // 
@@ -216,7 +136,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSearch.Location = new System.Drawing.Point(12, 125);
+            this.dgvSearch.Location = new System.Drawing.Point(12, 69);
             this.dgvSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSearch.MultiSelect = false;
             this.dgvSearch.Name = "dgvSearch";
@@ -234,12 +154,12 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(39)))), ((int)(((byte)(49)))));
             this.dgvSearch.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(536, 400);
+            this.dgvSearch.Size = new System.Drawing.Size(536, 456);
             this.dgvSearch.TabIndex = 261;
             // 
             // ColumnCompanyName
             // 
-            this.ColumnCompanyName.FillWeight = 50F;
+            this.ColumnCompanyName.FillWeight = 60F;
             this.ColumnCompanyName.HeaderText = "Nome";
             this.ColumnCompanyName.MinimumWidth = 6;
             this.ColumnCompanyName.Name = "ColumnCompanyName";
@@ -255,8 +175,9 @@
             // 
             // Column1
             // 
-            this.Column1.FillWeight = 70F;
+            this.Column1.FillWeight = 45F;
             this.Column1.HeaderText = "Preço unitário";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -264,27 +185,23 @@
             // 
             this.Column2.FillWeight = 40F;
             this.Column2.HeaderText = "Quantidade";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // FormSearchSale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(563, 550);
-            this.Controls.Add(this.pnlCpf);
-            this.Controls.Add(this.txtSearchCPF);
-            this.Controls.Add(this.pnlName);
-            this.Controls.Add(this.txtSearchRoomNumber);
-            this.Controls.Add(this.lblConsSupCod);
-            this.Controls.Add(this.lblConsSupNome);
             this.Controls.Add(this.dgvSearch);
             this.Controls.Add(this.pnlTopBar);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSearchSale";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchSale";
             this.Load += new System.EventHandler(this.FormSearchSale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -293,7 +210,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -303,12 +219,6 @@
         private System.Windows.Forms.Label lblNomeFarmacia;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picClose;
-        private System.Windows.Forms.Panel pnlCpf;
-        private System.Windows.Forms.TextBox txtSearchCPF;
-        private System.Windows.Forms.Panel pnlName;
-        private System.Windows.Forms.TextBox txtSearchRoomNumber;
-        private System.Windows.Forms.Label lblConsSupCod;
-        private System.Windows.Forms.Label lblConsSupNome;
         private System.Windows.Forms.DataGridView dgvSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCompanyName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCnpj;
