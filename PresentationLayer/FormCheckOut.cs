@@ -4,14 +4,9 @@ using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using Entities.Entities;
+using Entities.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -46,10 +41,29 @@ namespace PresentationLayer
             if (response.Success)
             {
                 ClearLabel();
+                dgvSales.Rows.Clear();
                 this.ClearForm();
+                UpdateRoomStatus();
+            }
+        }
+
+        private void UpdateRoomStatus()
+        {
+            QueryResponse<Room> response = _roomBLL.GetById(_checkIn.RoomID);
+            if (!response.Success)
+            {
+                MessageBox.Show(response.Message);
+                return;
             }
 
+            response.Data.RoomStatus = RoomStatus.Disponível;
+            Response rspUpdate = _roomBLL.Update(response.Data);
+            if (!rspUpdate.Success)
+            {
+                MessageBox.Show(rspUpdate.Message);
+            }
         }
+
         private void btnSelectCheckIn_Click(object sender, EventArgs e)
         {
             CreateCheckIn();

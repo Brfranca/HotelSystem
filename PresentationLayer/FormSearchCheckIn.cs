@@ -48,7 +48,8 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 return;
             }
-            _checkIns = new List<CheckIn>(response.Data);
+            _checkIns = new List<CheckIn>();
+            _checkIns.AddRange(response.Data.Where(x => x.Active == true));
             InsertCheckInGrid(_checkIns);
 
             InsertGrid(_checkInsGrid);
