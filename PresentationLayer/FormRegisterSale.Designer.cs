@@ -114,7 +114,7 @@
             this.lblConsFornCadastrados.ForeColor = System.Drawing.Color.White;
             this.lblConsFornCadastrados.Location = new System.Drawing.Point(28, 250);
             this.lblConsFornCadastrados.Name = "lblConsFornCadastrados";
-            this.lblConsFornCadastrados.Size = new System.Drawing.Size(182, 23);
+            this.lblConsFornCadastrados.Size = new System.Drawing.Size(155, 19);
             this.lblConsFornCadastrados.TabIndex = 225;
             this.lblConsFornCadastrados.Text = "Produtos cadastrados";
             // 
@@ -129,7 +129,7 @@
             this.txtProdSearchID.MaxLength = 11;
             this.txtProdSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchID.Name = "txtProdSearchID";
-            this.txtProdSearchID.Size = new System.Drawing.Size(125, 27);
+            this.txtProdSearchID.Size = new System.Drawing.Size(125, 22);
             this.txtProdSearchID.TabIndex = 224;
             this.txtProdSearchID.TextChanged += new System.EventHandler(this.txtProdSearchID_TextChanged);
             this.txtProdSearchID.Enter += new System.EventHandler(this.txtProdSearchID_Enter);
@@ -146,7 +146,7 @@
             this.txtProdSearchName.MaxLength = 11;
             this.txtProdSearchName.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdSearchName.Name = "txtProdSearchName";
-            this.txtProdSearchName.Size = new System.Drawing.Size(258, 27);
+            this.txtProdSearchName.Size = new System.Drawing.Size(258, 22);
             this.txtProdSearchName.TabIndex = 223;
             this.txtProdSearchName.TextChanged += new System.EventHandler(this.txtProdSearchName_TextChanged);
             this.txtProdSearchName.Enter += new System.EventHandler(this.txtProdSearchName_Enter);
@@ -160,7 +160,7 @@
             this.lblConsProdCod.ForeColor = System.Drawing.Color.White;
             this.lblConsProdCod.Location = new System.Drawing.Point(353, 95);
             this.lblConsProdCod.Name = "lblConsProdCod";
-            this.lblConsProdCod.Size = new System.Drawing.Size(28, 23);
+            this.lblConsProdCod.Size = new System.Drawing.Size(23, 19);
             this.lblConsProdCod.TabIndex = 222;
             this.lblConsProdCod.Text = "ID";
             // 
@@ -172,7 +172,7 @@
             this.lblSearchName.ForeColor = System.Drawing.Color.White;
             this.lblSearchName.Location = new System.Drawing.Point(29, 96);
             this.lblSearchName.Name = "lblSearchName";
-            this.lblSearchName.Size = new System.Drawing.Size(154, 23);
+            this.lblSearchName.Size = new System.Drawing.Size(131, 19);
             this.lblSearchName.TabIndex = 221;
             this.lblSearchName.Text = "Nome do Produto";
             // 
@@ -184,7 +184,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.label2.Location = new System.Drawing.Point(27, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 32);
+            this.label2.Size = new System.Drawing.Size(95, 25);
             this.label2.TabIndex = 220;
             this.label2.Text = "Produtos";
             // 
@@ -220,7 +220,7 @@
             this.btnAddSaleItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnAddSaleItem.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSaleItem.Image")));
             this.btnAddSaleItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddSaleItem.Location = new System.Drawing.Point(344, 220);
+            this.btnAddSaleItem.Location = new System.Drawing.Point(344, 600);
             this.btnAddSaleItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddSaleItem.Name = "btnAddSaleItem";
             this.btnAddSaleItem.Size = new System.Drawing.Size(214, 37);
@@ -238,7 +238,7 @@
             this.lblCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblCadastrar.Location = new System.Drawing.Point(610, 56);
             this.lblCadastrar.Name = "lblCadastrar";
-            this.lblCadastrar.Size = new System.Drawing.Size(94, 32);
+            this.lblCadastrar.Size = new System.Drawing.Size(73, 25);
             this.lblCadastrar.TabIndex = 233;
             this.lblCadastrar.Text = "Cliente";
             // 
@@ -250,7 +250,7 @@
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(612, 113);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(68, 23);
+            this.lblName.Size = new System.Drawing.Size(58, 19);
             this.lblName.TabIndex = 235;
             this.lblName.Text = "Nome: ";
             // 
@@ -262,7 +262,7 @@
             this.lblRoomNumber.ForeColor = System.Drawing.Color.White;
             this.lblRoomNumber.Location = new System.Drawing.Point(612, 181);
             this.lblRoomNumber.Name = "lblRoomNumber";
-            this.lblRoomNumber.Size = new System.Drawing.Size(175, 23);
+            this.lblRoomNumber.Size = new System.Drawing.Size(147, 19);
             this.lblRoomNumber.TabIndex = 240;
             this.lblRoomNumber.Text = "Número do quarto:  ";
             // 
@@ -274,7 +274,7 @@
             this.lblRoomFloor.ForeColor = System.Drawing.Color.White;
             this.lblRoomFloor.Location = new System.Drawing.Point(912, 181);
             this.lblRoomFloor.Name = "lblRoomFloor";
-            this.lblRoomFloor.Size = new System.Drawing.Size(70, 23);
+            this.lblRoomFloor.Size = new System.Drawing.Size(59, 19);
             this.lblRoomFloor.TabIndex = 242;
             this.lblRoomFloor.Text = "Andar: ";
             // 
@@ -371,7 +371,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(613, 250);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 23);
+            this.label5.Size = new System.Drawing.Size(159, 19);
             this.label5.TabIndex = 264;
             this.label5.Text = "Produtos adicionados ";
             // 
@@ -403,7 +403,7 @@
             this.txtProdQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.txtProdQuantity.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProdQuantity.Name = "txtProdQuantity";
-            this.txtProdQuantity.Size = new System.Drawing.Size(71, 27);
+            this.txtProdQuantity.Size = new System.Drawing.Size(71, 22);
             this.txtProdQuantity.TabIndex = 268;
             this.txtProdQuantity.Text = "0";
             this.txtProdQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -418,7 +418,7 @@
             this.lblEntradaProdQtd.ForeColor = System.Drawing.Color.White;
             this.lblEntradaProdQtd.Location = new System.Drawing.Point(29, 160);
             this.lblEntradaProdQtd.Name = "lblEntradaProdQtd";
-            this.lblEntradaProdQtd.Size = new System.Drawing.Size(104, 23);
+            this.lblEntradaProdQtd.Size = new System.Drawing.Size(87, 19);
             this.lblEntradaProdQtd.TabIndex = 267;
             this.lblEntradaProdQtd.Text = "Quantidade";
             // 
@@ -439,7 +439,7 @@
             this.lblEntradaValor.ForeColor = System.Drawing.Color.White;
             this.lblEntradaValor.Location = new System.Drawing.Point(1037, 557);
             this.lblEntradaValor.Name = "lblEntradaValor";
-            this.lblEntradaValor.Size = new System.Drawing.Size(100, 23);
+            this.lblEntradaValor.Size = new System.Drawing.Size(85, 19);
             this.lblEntradaValor.TabIndex = 270;
             this.lblEntradaValor.Text = "Valor Total:";
             // 
@@ -454,7 +454,7 @@
             this.txtTotalValue.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtTotalValue.Name = "txtTotalValue";
             this.txtTotalValue.ReadOnly = true;
-            this.txtTotalValue.Size = new System.Drawing.Size(106, 27);
+            this.txtTotalValue.Size = new System.Drawing.Size(106, 22);
             this.txtTotalValue.TabIndex = 272;
             this.txtTotalValue.Text = "0";
             // 
@@ -466,7 +466,7 @@
             this.lblDateCheckIn.ForeColor = System.Drawing.Color.White;
             this.lblDateCheckIn.Location = new System.Drawing.Point(612, 147);
             this.lblDateCheckIn.Name = "lblDateCheckIn";
-            this.lblDateCheckIn.Size = new System.Drawing.Size(123, 23);
+            this.lblDateCheckIn.Size = new System.Drawing.Size(102, 19);
             this.lblDateCheckIn.TabIndex = 274;
             this.lblDateCheckIn.Text = "Data checkIn: ";
             // 
@@ -480,7 +480,7 @@
             this.lblDot1.Location = new System.Drawing.Point(18, 6);
             this.lblDot1.MinimumSize = new System.Drawing.Size(5, 10);
             this.lblDot1.Name = "lblDot1";
-            this.lblDot1.Size = new System.Drawing.Size(26, 35);
+            this.lblDot1.Size = new System.Drawing.Size(20, 28);
             this.lblDot1.TabIndex = 276;
             this.lblDot1.Text = "•";
             this.lblDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -493,7 +493,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.label3.Location = new System.Drawing.Point(37, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 35);
+            this.label3.Size = new System.Drawing.Size(79, 28);
             this.label3.TabIndex = 275;
             this.label3.Text = "Vendas";
             // 
@@ -505,7 +505,7 @@
             this.lblCPF.ForeColor = System.Drawing.Color.White;
             this.lblCPF.Location = new System.Drawing.Point(912, 112);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(50, 23);
+            this.lblCPF.Size = new System.Drawing.Size(42, 19);
             this.lblCPF.TabIndex = 277;
             this.lblCPF.Text = "CPF: ";
             // 
@@ -537,7 +537,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(1033, 579);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 23);
+            this.label1.Size = new System.Drawing.Size(30, 19);
             this.label1.TabIndex = 309;
             this.label1.Text = "R$ ";
             // 
@@ -652,7 +652,7 @@
             this.btnSelectProduct.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(246)))), ((int)(((byte)(109)))));
             this.btnSelectProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectProduct.Image")));
-            this.btnSelectProduct.Location = new System.Drawing.Point(354, 588);
+            this.btnSelectProduct.Location = new System.Drawing.Point(353, 208);
             this.btnSelectProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSelectProduct.Name = "btnSelectProduct";
             this.btnSelectProduct.Size = new System.Drawing.Size(200, 35);
@@ -670,13 +670,13 @@
             this.lblSelectName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(142)))), ((int)(((byte)(31)))));
             this.lblSelectName.Location = new System.Drawing.Point(160, 184);
             this.lblSelectName.Name = "lblSelectName";
-            this.lblSelectName.Size = new System.Drawing.Size(187, 25);
+            this.lblSelectName.Size = new System.Drawing.Size(148, 19);
             this.lblSelectName.TabIndex = 312;
             this.lblSelectName.Text = "<nome do produto>";
             // 
             // FormRegisterSale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(64)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(1200, 720);

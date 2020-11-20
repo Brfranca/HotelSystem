@@ -88,12 +88,19 @@ namespace PresentationLayer
         private void UpdateSalesCheckIn()
         {
             QueryResponse<List<Sale>> response = _saleBLL.GetByClientId(_checkIn.ClientID);
-            _sales = response.Data;
             foreach (var item in response.Data)
             {
-                dgvSales.Rows.Add(item.ID, item.SaleDate.ToString("dd/MM/yyyy"), item.TotalValue);
+                if (item.SaleDate >= _checkIn.EntryDate)
+                {
+                    _sales.Add(item);
+                    foreach (var sale in _sales)
+                    {
+                        dgvSales.Rows.Add(sale.ID, sale.SaleDate.ToString("dd/MM/yyyy"), sale.TotalValue);
+                    }
+                }
             }
         }
+
         private CheckOut CreateCheckOut()
         {
             CheckOut checkOut = new CheckOut();

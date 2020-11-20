@@ -190,8 +190,18 @@ namespace PresentationLayer
                 this.ClearForm();
                 Console.Beep();
                 RenewTextBoxValue();
+                RenewLabel();
                 UpdateGrid();
             }
+        }
+
+        private void RenewLabel()
+        {
+            lblName.Text = "Nome: ";
+            lblCPF.Text = "CPF: ";
+            lblDateCheckIn.Text = "Data CheckIn: ";
+            lblRoomFloor.Text = "Andar: ";
+            lblRoomNumber.Text = "Número do quarto: ";
         }
 
         private Sale CreateSale()

@@ -83,10 +83,10 @@ namespace BusinessLogicalLayer.BLL
             {
                 validator.AddError("Data de entrada deve ser informada!");
             }
-            //else if (entryDate.Date != DateTime.Today)
-            //{
-            //    validator.AddError("Data de entrada deve corresponder à data atual!");
-            //}
+            else if (entryDate.Date != DateTime.Today)
+            {
+                validator.AddError("Data de entrada deve corresponder à data atual!");
+            }
         }
 
         public QueryResponse<List<CheckIn>> GetByActiveState()

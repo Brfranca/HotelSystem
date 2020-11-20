@@ -19,14 +19,14 @@ namespace PresentationLayer
             InitializeComponent();
             CustomizedDesign();
             _reservationBLL = new ReservationBLL();
-            System.Timers.Timer timer = new System.Timers.Timer(TimeSpan.FromMinutes(60).TotalMinutes);
+            System.Timers.Timer timer = new System.Timers.Timer(TimeSpan.FromHours(12).TotalHours);
             timer.AutoReset = true;
             timer.Elapsed += new System.Timers.ElapsedEventHandler(VerifyReservation);
             timer.Start();
         }
         public static void VerifyReservation(object sender, ElapsedEventArgs e)
         {
-            QueryResponse<List<Reservation>> response = _reservationBLL.GetAll();
+            QueryResponse<List<Reservation>> response = _reservationBLL.GetByActiveState();
             {
                 foreach (var reservation in response.Data)
                 {
