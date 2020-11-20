@@ -50,6 +50,11 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Reserva removida com sucesso!");
         }
 
+        public QueryResponse<List<Reservation>> GetByActiveState()
+        {
+            return _reservationDAL.GetByActiveState();
+        }
+
         public Response Validate(Reservation reservation)
         {
             try

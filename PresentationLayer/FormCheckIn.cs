@@ -71,22 +71,26 @@ namespace PresentationLayer
 
             if (_client.ID != 0)
                 SelectClient();
-
-            if (_reservationBLL.ExistClient(_client.ID.ToString()))
+            for (int i = 0; i < _reservationBLL.GetByActiveState().Data.Count; i++)
             {
-                DialogResult result = MessageBox.Show("Você possui uma reserva, deseja fazer o check in dessa reserva?", "", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                if (_reservationBLL.GetByActiveState().Data[i].ClientID == _client.ID)
                 {
-                    FormSearchReservation frmSearchReservation = new FormSearchReservation(_client.CPF);
-                    frmSearchReservation.ShowDialog();
-                    _room = frmSearchReservation.room;
-                    _client = frmSearchReservation.client;
-                    _reservation = frmSearchReservation.reservation;
-                    SelectClient();
-                    SelectRoom();
-                    SelectDate();
+                    DialogResult result = MessageBox.Show("Você possui uma reserva, deseja fazer o check in dessa reserva?", "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        FormSearchReservation frmSearchReservation = new FormSearchReservation(_client.CPF);
+                        frmSearchReservation.ShowDialog();
+                        _room = frmSearchReservation.room;
+                        _client = frmSearchReservation.client;
+                        _reservation = frmSearchReservation.reservation;
+                        SelectClient();
+                        SelectRoom();
+                        SelectDate();
+                    }
                 }
             }
+            
+            
         }
 
         private void SelectDate()

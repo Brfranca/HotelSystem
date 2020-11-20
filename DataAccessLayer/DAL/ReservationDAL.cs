@@ -21,5 +21,14 @@ namespace DataAccessLayer.DAL
         {
             return Exist(clientId, id, "CLIENTID");
         }
+
+        public QueryResponse<List<Reservation>> GetByActiveState()
+        {
+            DbCommand command = DbFactory.GetCurrentCommand();
+            command.CommandText = $"{_select} WHERE ACTIVE = @ACTIVE";
+            command.Parameters.AddWithValue("@ACTIVE", true);
+
+            return new DbExecuter().GetAllData<Reservation>(command);
+        }
     }
 }
