@@ -8,6 +8,7 @@ namespace DataAccessLayer.DAL
 {
     public class CheckInDAL : BaseDAL<CheckIn>
     {
+        //Método que recupera a lista de checkins ativos
         public QueryResponse<List<CheckIn>> GetByActiveState()
         {
             DbCommand command = DbFactory.GetCurrentCommand();
@@ -16,7 +17,7 @@ namespace DataAccessLayer.DAL
 
             return new DbExecuter().GetAllData<CheckIn>(command);
         }
-
+        //Método que verifica se dado cliente já fez algum checkin
         public bool ExistClient(string clientId, int id)
         {
             return Exist(clientId, id, "CLIENTID");

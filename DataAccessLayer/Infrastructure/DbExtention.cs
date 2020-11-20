@@ -9,6 +9,7 @@ namespace DataAccessLayer.Infrastructure
 {
     public static class DbExtensions
     {
+        //Método que simula o AddWithValue do sql command para um banco de dados genérico
         public static void AddWithValue(this DbParameterCollection collection, string nome, object valor)
         {
             DbParameter parametro = DbFactory.GetCurrentCommand().CreateParameter();
@@ -17,6 +18,7 @@ namespace DataAccessLayer.Infrastructure
             collection.Add(parametro);
         }
 
+        //Converte a DataTable para uma lista genérica
         public static List<T> ConvertDataTable<T>(this DataTable dt)
         {
             List<T> data = new List<T>();
@@ -28,6 +30,7 @@ namespace DataAccessLayer.Infrastructure
             return data;
         }
 
+        //Retorna um item genérico de uma linha da datatable
         public static T GetItem<T>(this DataRow dr)
         {
             Type temp = typeof(T);

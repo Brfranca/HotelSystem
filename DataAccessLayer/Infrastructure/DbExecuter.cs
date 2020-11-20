@@ -9,6 +9,7 @@ namespace DataAccessLayer.Infrastructure
 {
     internal class DbExecuter
     {
+        //Executa a consulta e retorna a primeira coluna da primeira linha no conjunto de resultados retornado pela consulta.
         public Response ExecuteScalar(DbCommand command)
         {
             try
@@ -31,6 +32,7 @@ namespace DataAccessLayer.Infrastructure
             }
         }
 
+        //executa a instrução no banco de dados e caso o numero de linhas afetados nao seja maior que zero retorna um response de erro
         public Response ExecuteQuery(DbCommand command)
         {
             try
@@ -53,6 +55,7 @@ namespace DataAccessLayer.Infrastructure
             }
         }
 
+        //Retorna uma lista de genérica com todos os dados de uma dada tabela
         public QueryResponse<List<T>> GetAllData<T>(DbCommand command)
         {
             try
@@ -80,6 +83,7 @@ namespace DataAccessLayer.Infrastructure
             }
         }
 
+        //Retorna os dados de uma linha específica na tabela de banco de dados
         public QueryResponse<T> GetSingleData<T>(DbCommand command)
         {
             try
@@ -105,6 +109,7 @@ namespace DataAccessLayer.Infrastructure
             }
         }
 
+        //verifica se um determinado dado já existe no banco de dados
         public bool ExistData(DbCommand command)
         {
             try

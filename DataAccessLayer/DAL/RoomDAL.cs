@@ -9,6 +9,7 @@ namespace DataAccessLayer.DAL
 {
     public class RoomDAL : BaseDAL<Room>, IEntityCRUD<Room>
     {
+        //Retorna o quarto que corresponde ao dado número
         public QueryResponse<Room> GetByNumber(string number)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
@@ -17,6 +18,8 @@ namespace DataAccessLayer.DAL
 
             return new DbExecuter().GetSingleData<Room>(command);
         }
+
+        //retorna uma lista de quartos de acordo com o status
 
         public QueryResponse<List<Room>> GetByStatus(RoomStatus roomStatus)
         {
@@ -27,6 +30,7 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetAllData<Room>(command);
         }
 
+        //verifica se o número já foi cadastrado
         public bool ExistNumber(string number, int id)
         {
             return Exist(number, id, "NUMBER");

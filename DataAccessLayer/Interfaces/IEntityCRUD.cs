@@ -9,6 +9,7 @@ namespace DataAccessLayer
 {
     public interface IEntityCRUD<T>
     {
+        //interface utilizada para que as classes que representam tabela no banco de dados realizem o CRUDe  outros métodos básicos 
         Response Insert<T>(T item);
         Response Update<T>(T item);
         Response Delete<T>(T item);

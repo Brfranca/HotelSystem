@@ -8,6 +8,7 @@ namespace DataAccessLayer.DAL
 {
     public class ReservationDAL : BaseDAL<Reservation>
     {
+        //Retorna uma lista de reservas de acordo com o ID do cliente
         public QueryResponse<List<Reservation>> GetByIdClient(int id)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
@@ -17,11 +18,13 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetAllData<Reservation>(command);
         }
 
+        //Verifica se o cliente já tem uma reserva
         public bool ExistClient(string clientId, int id)
         {
             return Exist(clientId, id, "CLIENTID");
         }
 
+        //Retorna uma lista de reservas ativas
         public QueryResponse<List<Reservation>> GetByActiveState()
         {
             DbCommand command = DbFactory.GetCurrentCommand();

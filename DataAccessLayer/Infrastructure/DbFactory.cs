@@ -9,6 +9,7 @@ namespace DataAccessLayer.Infrastructure
         private readonly string _connectionString;
         private readonly DbProviderFactory _provider;
 
+        //Construtor que retorna qual o banco de dados a ser tulizado de acordo com os dados do APP.config, já recuperando a connectionstring
         private DbFactory()
         {
             string currentConnection = ConfigurationManager.AppSettings["CurrentConnection"];
@@ -19,6 +20,7 @@ namespace DataAccessLayer.Infrastructure
         }
 
         private static DbFactory _instance;
+        //se a classe Db factory ainda está nula ele instancia novamente e recupera os dados do construtor
         private static DbFactory GetInstance()
         {
             if (_instance == null)
@@ -27,11 +29,13 @@ namespace DataAccessLayer.Infrastructure
             return _instance;
         }
 
+        //Cria o comando que representa uma instrução ou procedimento armazenado para execução em um banco de dados
         public static DbCommand GetCurrentCommand()
         {
             return GetInstance()._provider.CreateCommand();
         }
 
+        //Retorna a conexão com o banco de dados de acordo com o priverName e a connectionString do construtor
         public static DbConnection GetCurrentConnection()
         {
             DbFactory factory = GetInstance();

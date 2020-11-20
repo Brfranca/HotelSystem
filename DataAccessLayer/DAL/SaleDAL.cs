@@ -9,6 +9,7 @@ namespace DataAccessLayer.DAL
 {
     public class SaleDAL : BaseDAL<Sale>, IEntityCRUD<Sale>
     {
+        //Inserena tabela de sales e recupera o ID gerado e faze update no estoque de products
         public Response Insert(Sale sale)
         {
             using (TransactionScope scope = new TransactionScope())
@@ -40,6 +41,8 @@ namespace DataAccessLayer.DAL
                 return Response.CreateSuccess("Operação efetuada com sucesso");
             }
         }
+
+        //retorna uma lista de vendas de acordo com o id do cliente
         public QueryResponse<List<Sale>> GetByClientId(int id)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
@@ -48,6 +51,7 @@ namespace DataAccessLayer.DAL
             return new DbExecuter().GetAllData<Sale>(command);
         }
 
+        //retorna uma lista de itens da venda de acordo com o id da venda
         public QueryResponse<List<SaleItem>> GetBySaleId(int id)
         {
             DbCommand command = DbFactory.GetCurrentCommand();

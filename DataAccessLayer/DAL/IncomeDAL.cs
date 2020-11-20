@@ -10,6 +10,7 @@ namespace DataAccessLayer.DAL
 {
     public class IncomeDAL : BaseDAL<Income>, IEntityCRUD<Income>
     {
+        //Insere na tabela de incomes no banco de dados e atualiza o estoque de produtos
         public Response Insert(Income income)
         {
             using (TransactionScope scope = new TransactionScope())
@@ -41,7 +42,7 @@ namespace DataAccessLayer.DAL
             }
         }
 
-
+        //atualiza 
         public Response Update(Income income)
         {
             using (TransactionScope scope = new TransactionScope())
@@ -76,6 +77,7 @@ namespace DataAccessLayer.DAL
             }
         }
 
+        //Autalia o preço dos produtos de acordo com a entrada 
         public Response UpdatePrice(Income income)
         {
             using (DbCommand command = DbFactory.GetCurrentCommand())
@@ -93,7 +95,6 @@ namespace DataAccessLayer.DAL
                 return Response.CreateSuccess("Operação efetuada com sucesso!");
             }
         }
-
         public Response Delete(Income income)
         {
             Response resultDeleteIncomeItems = DeleteWhereId<IncomeItem>("INCOMEID", income.ID);
@@ -106,6 +107,8 @@ namespace DataAccessLayer.DAL
 
             return Response.CreateSuccess("Operação efetuada com sucesso!");
         }
+
+        //Retorna uma lista de incomeitems de acordo com o id do income
 
         public QueryResponse<List<IncomeItem>> GetByIncomeId(int id)
         {

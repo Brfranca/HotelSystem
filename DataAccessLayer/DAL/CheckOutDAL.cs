@@ -9,6 +9,7 @@ namespace DataAccessLayer.DAL
 {
     public class CheckOutDAL : BaseDAL<CheckOut>, IEntityCRUD<CheckOut>
     {
+        //Método que insere na tabela de checkout no banco de dados e junto atualiza o checkin para inativo e atualiza o status do quarto para disponível
         public Response Insert(CheckOut checkOut)
         {
             using (TransactionScope scope = new TransactionScope())

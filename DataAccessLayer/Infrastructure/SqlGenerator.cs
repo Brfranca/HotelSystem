@@ -8,11 +8,13 @@ namespace DataAccessLayer.Infrastructure
 {
     public class SqlGenerator<T>
     {
+        //Método que recupera o nome na tabela no banco de dados de acordo com a classe utilizada
         public static string GetTableName()
         {
             return typeof(T).GetCustomAttribute<TableName>().Text;
         }
 
+        //Cria o comando de insert no banco de dados, aonde {0] pega o nome da tabela como primeiro item a ser adicionado no comando, os campos que serão inseridos e depois os valores que os dados campos irão receber
         public static DbCommand BuildInsertCommand(T item)
         {
             StringBuilder command = new StringBuilder();
@@ -23,6 +25,7 @@ namespace DataAccessLayer.Infrastructure
             return dbCommand;
         }
 
+        //Cria a sintaxe que o command.AddWithValue recebe para inserir os valores na tabela de banco de dados, que só ocorrerá se a propriedade nao tiver o NonEdiTable 
         private static void GenerateInsertParameters(DbCommand command, T item)
         {
             foreach (PropertyInfo propriedade in typeof(T).GetProperties())
@@ -41,6 +44,7 @@ namespace DataAccessLayer.Infrastructure
             }
         }
 
+        //Método que cria a sintaxe para informar quais colunas receberão valores ou quais valores serão inserido, se o parametro for false indica a coluna, se for true indica os valores a serem inseridos
         private static string GetInsertFields(bool isParameters)
         {
             StringBuilder builder = new StringBuilder();
@@ -63,6 +67,8 @@ namespace DataAccessLayer.Infrastructure
             return builder.ToString();
         }
 
+        //Método genérico que cria o comando de update no banco de dados, aonde {0} pega o nome da tabela como primeiro item a ser adicionado no comando e depois os campos que serão inseridos
+
         public static DbCommand BuildUpdateCommand(T item)
         {
             StringBuilder builder = new StringBuilder();
@@ -73,7 +79,7 @@ namespace DataAccessLayer.Infrastructure
             return command;
         }
 
-
+        //Método genérico que cria a sintaxe do comando a ser inserido para atualizar uma dada tabela no banco de daos
         private static string GetUpdateFields()
         {
             StringBuilder builder = new StringBuilder();
@@ -86,6 +92,8 @@ namespace DataAccessLayer.Infrastructure
             }
             return builder.ToString(0, builder.Length - 1);
         }
+
+        //Cria a sintaxe que o command.AddWithValue recebe para atualizar os valores na tabela de banco de dados, que só ocorrerá se a propriedade nao tiver o NonEdiTable 
 
         private static void GenerateUpdateParameters(DbCommand command, T item)
         {
@@ -107,6 +115,7 @@ namespace DataAccessLayer.Infrastructure
             command.Parameters.AddWithValue("@ID", id);
         }
 
+        //Método genérico que cria o comando de delete no banco de dados, aonde {0} pega o nome da tabela como primeiro item a ser adicionado no comando
         public static DbCommand BuildDeleteCommand(T item)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
@@ -116,6 +125,7 @@ namespace DataAccessLayer.Infrastructure
             return command;
         }
 
+        //Método genérico que deleta uma dada tabela associativa
         public static DbCommand BuildDeleteWhereIdCommand(string field, int id)
         {
             DbCommand command = DbFactory.GetCurrentCommand();
