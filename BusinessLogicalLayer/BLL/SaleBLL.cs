@@ -15,7 +15,7 @@ namespace BusinessLogicalLayer.BLL
         {
             _saleDAL = new SaleDAL();
         }
-
+        //valida a venda e depois insere 
         public Response Register(Sale sale)
         {
             Response result = Validate(sale);
@@ -28,7 +28,7 @@ namespace BusinessLogicalLayer.BLL
 
             return Response.CreateSuccess("Venda efetuada com sucesso!");
         }
-
+        //verifica todas as validações
         private Response Validate(Sale sale)
         {
             Validator validator = new Validator();
@@ -38,6 +38,7 @@ namespace BusinessLogicalLayer.BLL
             return validator.Validate();
         }
 
+        //valida o item de venda
         public  Response ValidateSaleItem(SaleItem saleItem)
         {
             Validator validator = new Validator();
@@ -51,6 +52,7 @@ namespace BusinessLogicalLayer.BLL
             
         }
 
+        //valida o id do cliente
         private void ValidateClientId(int clientId, Validator validator)
         {
             if (clientId <= 0)
@@ -59,6 +61,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o valor total
         private void ValidateTotalValute(double totalValue, Validator validator)
         {
             if (totalValue <= 0)
@@ -67,6 +70,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o id do produto
         private void ValidateProductId(int id, Validator validator)
         {
             if (id == 0 || (id.ToString().IsNullOrWhiteSpace()))
@@ -75,6 +79,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida a quantidade
         private void ValidateQuantity(string quantity, Validator validator)
         {
             char[] quantityChar = quantity.ToCharArray();
@@ -92,6 +97,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o preço
         private void ValidatePrice(double price, Validator validator)
         {
             
@@ -101,15 +107,19 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //retorna a venda de acordo com o id
         public QueryResponse<Sale> GetById(int id)
         {
             return _saleDAL.GetById(id);
         }
 
+        //retorna uma lista de vendas de acordo com o id do cliente
         public QueryResponse<List<Sale>> GetByClientId(int id)
         {
             return _saleDAL.GetByClientId(id);
         }
+
+        //retorna uma lista de itens de venda de acordo com o id da venda
 
         public QueryResponse<List<SaleItem>> GetBySaleId(int id)
         {

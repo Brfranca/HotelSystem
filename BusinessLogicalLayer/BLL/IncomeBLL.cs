@@ -18,6 +18,7 @@ namespace BusinessLogicalLayer.BLL
             _incomeDAL = new IncomeDAL();
         }
 
+        //valida o income, atualiza o preço do produto e insere na tabela de income
         public Response Register(Income income)
         {
             Response result = Validate(income);
@@ -39,6 +40,8 @@ namespace BusinessLogicalLayer.BLL
 
             return Response.CreateSuccess("A entrada foi cadastrada com sucesso!");
         }
+
+        //atualiza o preço do produto
         private Response UpdatePrice(Income income)
         {
             foreach (var item in income.IncomeItems)
@@ -62,6 +65,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Operação efetuada com sucesso!");
         }
 
+        //verifica as validações
         private Response Validate(Income income)
         {
             Validator validator = new Validator();
@@ -72,11 +76,13 @@ namespace BusinessLogicalLayer.BLL
             return validator.Validate();
         }
 
+        //retorna um income de acordo com o id
         public QueryResponse<Income> GetById(int id)
         {
             return _incomeDAL.GetById(id);
         }
 
+        //valida o fornecedor
         private void ValidateSupplier(int supplierID, int id, Validator validator)
         {
             string idString = supplierID.ToString();
@@ -91,6 +97,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o valor total
         private void ValidateTotalValue(double totalValue, int id, Validator validator)
         {
             string totalValueString = totalValue.ToString();
@@ -105,6 +112,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o incomeitems
         private void ValidateListIncomeItems(List<IncomeItem> incomeItems, int id, Validator validator)
         {
             if (incomeItems.Count == 0)

@@ -16,6 +16,7 @@ namespace BusinessLogicalLayer.BLL
             _supplierDAL = new SupplierDAL();
         }
 
+        //Verifica a validação do fornecedor e depois insere da tabela 
         public Response Register(Supplier supplier)
         {
             supplier.CNPJ = supplier.CNPJ.RemoveMaskCNPJ();
@@ -30,6 +31,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Fornecedor cadastrado com sucesso!");
         }
 
+        //Verifica a validação do fornecedor e depois atualiza a tabela 
         public Response Update(Supplier supplier)
         {
             supplier.CNPJ = supplier.CNPJ.RemoveMaskCNPJ();
@@ -44,6 +46,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Fornecedor atualizado com sucesso!");
         }
 
+        //deleta os dados de um dado fornecedor na tabela
         public Response Delete(Supplier supplier)
         {
             Response resultDelete = _supplierDAL.Delete(supplier);
@@ -53,26 +56,33 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Fornecedor removido com sucesso!");
         }
 
+        //retorna uma lista com todos os fornecedores
         public QueryResponse<List<Supplier>> GetAll()
         {
             return _supplierDAL.GetAll();
         }
 
+        //retorna um fornecedor de acordo como o id
         public QueryResponse<Supplier> GetById(int id)
         {
             return _supplierDAL.GetById(id);
         }
+
+        //retorna um fornecedor de acordo como o cnpj
 
         public QueryResponse<Supplier> GetByCnpj(string cnpj)
         {
             return _supplierDAL.GetByCnpj(cnpj);
         }
 
+        //retorna um fornecedor de acordo como a razão social
+
         public QueryResponse<Supplier> GetByCompanyName(string companyName)
         {
             return _supplierDAL.GetByCompanyName(companyName);
         }
 
+        //verifica todas as validações do fornecedor
         private Response Validate(Supplier supplier)
         {
             try
@@ -92,6 +102,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o email
         private void ValidateEmail(string email, int id, Validator validator)
         {
             if (email.IsNullOrWhiteSpace())
@@ -108,6 +119,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o telefone
         private void ValidatePhone(string phone, Validator validator)
         {
             if (phone.IsNullOrWhiteSpace())
@@ -119,6 +131,8 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("Telefone inválido!");
             }
         }
+
+        //valida o cnpj
 
         private void ValidateCnpj(string cnpj, int id, Validator validator)
         {
@@ -136,6 +150,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o nome de contato
         private void ValidateContractName(string contactName, Validator validator)
         {
             if (contactName.IsNullOrWhiteSpace())
@@ -148,6 +163,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida a razao social
         private void ValidateCompanyName(string companyName, Validator validator)
         {
             if (companyName.IsNullOrWhiteSpace())

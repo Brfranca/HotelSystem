@@ -19,6 +19,7 @@ namespace BusinessLogicalLayer.BLL
             _roomDAL = new RoomDAL();
         }
 
+        //valida e insere na tabela
         public Response Register(Room room)
         {
             Response result = Validate(room);
@@ -33,6 +34,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Quarto cadastrado com sucesso");
         }
 
+        //valida e atualiza a tabela
         public Response Update(Room room)
         {
             Response result = Validate(room);
@@ -46,6 +48,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Quarto atualizado com sucesso!");
         }
 
+        //deleta os dados de uma dada tabela de acordo com o quarto inserido como parametro
         public Response Delete(Room room)
         {
             Response resultDelete = _roomDAL.Delete(room);
@@ -55,26 +58,31 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Quarto removido com sucesso!");
         }
 
+        //retorna uma lista com todos os quartos
         public QueryResponse<List<Room>> GetAll()
         {
             return _roomDAL.GetAll();
         }
 
+        //retorna um quarto de acordo com o id
         public QueryResponse<Room> GetById(int id)
         {
             return _roomDAL.GetById(id);
         }
 
+        //retorna um quarto de acordo com o numero
         public QueryResponse<Room> GetByNumber(string number)
         {
             return _roomDAL.GetByNumber(number);
         }
 
+        //retorna uma lista de quartos de acordo com o status
         public QueryResponse<List<Room>> GetByAvailability(RoomStatus status)
         {
             return _roomDAL.GetByStatus(status);
         }
 
+        // valida o quarto
         private Response Validate(Room room)
         {
             Validator validator = new Validator();
@@ -84,6 +92,7 @@ namespace BusinessLogicalLayer.BLL
             return validator.Validate();
         }
 
+        //valida o numero do quarto
         private void ValidateRoomNumber(string number, int id, Validator validator)
         {
             if (_roomDAL.ExistNumber(number, id))
@@ -95,6 +104,8 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("O número do quarto deve ser informado!");
             }
         }
+
+        //valida o preço do quarto
 
         private void ValidatePrice(double pricePerDay, int id, Validator validator)
         {

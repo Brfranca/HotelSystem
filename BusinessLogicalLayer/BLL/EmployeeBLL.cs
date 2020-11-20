@@ -17,6 +17,7 @@ namespace BusinessLogicalLayer.BLL
             _employeeDAL = new EmployeeDAL();
         }
 
+        //verifica se o login é válido
         public Response Login(string email, string password)
         {
             if (email.IsNullOrWhiteSpace())
@@ -35,6 +36,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess();
         }
 
+        //valida e insere na tabela
         public Response Register(Employee employee, string password2)
         {
             employee.CPF = employee.CPF.RemoveMaskCPF();
@@ -50,6 +52,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Funcionário cadastrado com sucesso!");
         }
 
+        //valida e atualiza a tabela
         public Response Update(Employee employee, string password2)
         {
             employee.CPF = employee.CPF.RemoveMaskCPF();
@@ -64,6 +67,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Funcionário atualizado com sucesso!");
         }
 
+        //muda  a senha
         public Response UpdatePassword(Employee employee, string password2)
         {
             Response result = ValidatePassword(employee, password2);
@@ -78,6 +82,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Senha atualizada com sucesso!");
         }
 
+        //deleta um conjunto de dados na tabela
         public Response Delete(Employee employee)
         {
             Response resultDelete = _employeeDAL.Delete(employee);
@@ -87,16 +92,19 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Funcionário removido com sucesso!");
         }
 
+        //retorna uma lista com todos os funcionarios
         public QueryResponse<List<Employee>> GetAll()
         {
             return _employeeDAL.GetAll();
         }
 
+        //retorna o funcionario de acordo com  o id
         public QueryResponse<Employee> GetById(int id)
         {
             return _employeeDAL.GetById(id);
         }
 
+        //retorna o funcionario de acordo com o cpf
         public QueryResponse<Employee> GetByCpf(string cpf)
         {
             return _employeeDAL.GetByCpf(cpf);
@@ -107,11 +115,13 @@ namespace BusinessLogicalLayer.BLL
             return _employeeDAL.GetByRg(rg);
         }
 
+        //retorna o funcionario de acordo com o email
         public QueryResponse<Employee> GetByEmail(string email)
         {
             return _employeeDAL.GetByEmail(email);
         }
         
+        //verifica as validações
         private Response Validate(Employee employee, string passaword2)
         {
             try
@@ -137,6 +147,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida a senha
         private Response ValidatePassword(Employee employee, string passaword2)
         {
             Validator validator = new Validator();
@@ -144,6 +155,7 @@ namespace BusinessLogicalLayer.BLL
             return validator.Validate();
         }
 
+        //valida o email
         private void ValidateEmail(string email, int id, Validator validator)
         {
             if (email.IsNullOrWhiteSpace())
@@ -160,6 +172,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o telefone
         private void ValidatePhone(string phone, Validator validator)
         {
             if (phone.IsNullOrWhiteSpace())
@@ -172,6 +185,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o rg
         private void ValidateRg(string rg, int id, Validator validator)
         {
             if (rg.IsNullOrWhiteSpace())
@@ -192,6 +206,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o cpf
         private void ValidateCpf(string cpf, int id, Validator validator)
         {
             if (cpf.IsNullOrWhiteSpace())
@@ -212,6 +227,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o nome
         private void ValidateName(string name, Validator validator)
         {
             if (name.IsNullOrWhiteSpace())
@@ -228,6 +244,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida a senha
         private void ValidatePassword(string password1, string password2, Validator validator)
         {
             if (password1.IsNullOrWhiteSpace() || password2.IsNullOrWhiteSpace())
@@ -244,6 +261,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o cep
         private void ValidateCEP(string cep, Validator validator)
         {
             if (cep.IsNullOrWhiteSpace())

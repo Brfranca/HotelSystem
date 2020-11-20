@@ -15,6 +15,8 @@ namespace BusinessLogicalLayer.BLL
         {
             _productDAL = new ProductDAL();
         }
+
+        //valida e inserete na tabela
         public Response Register(Product product)
         {
             Response result = Validate(product);
@@ -28,6 +30,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("O produto foi cadastrado com sucesso!");
         }
 
+        //valida e atualiza a tabela
         public Response Update(Product product)
         {
             Response result = Validate(product);
@@ -41,6 +44,7 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("O produto atualizado com sucesso!");
         }
 
+        //deleta um conjunto de dados na tabela
         public Response Delete(Product product)
         {
             Response resultDelete = _productDAL.Delete(product);
@@ -51,6 +55,7 @@ namespace BusinessLogicalLayer.BLL
 
         }
 
+        //retorna um lista com todos os produtos
         public QueryResponse<List<Product>> GetAll()
         {
             return _productDAL.GetAll();
@@ -61,6 +66,7 @@ namespace BusinessLogicalLayer.BLL
             return _productDAL.GetById(id);
         }
 
+        //verifica todas as validações
         private Response Validate(Product product)
         {
             Validator validator = new Validator();
@@ -72,6 +78,7 @@ namespace BusinessLogicalLayer.BLL
             return validator.Validate();
         }
 
+        //valida o nome do produto
         private void ValidateName(string name, int id, Validator validator)
         {
             if (name.IsNullOrWhiteSpace())
@@ -85,6 +92,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida a descrição do produto
         private void ValidateDescription(string description, int id, Validator validator)
         {
             if (description.IsNullOrWhiteSpace())
@@ -97,6 +105,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida a existencia de uma unica combinação de nome e descrição
         private void ValidateNameDescription(string name, string description, int id, Validator validator)
         {
             if (_productDAL.ExistName(name, id) && _productDAL.ExistDescription(description, id))
@@ -105,6 +114,7 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //valida o id do fornecedor
         private void ValidateSupplierID(List<int> supplierID, int id, Validator validator)
         {
             if (supplierID.Count == 0)
@@ -113,11 +123,14 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
+        //retorna uma lista de supplier_product de acordo com o id do produto
+
         public QueryResponse<List<Supplier_Product>> GetByProductId(int id)
         {
             return _productDAL.GetByProductId(id);
         }
 
+        //retorna uma lista de supplier_product de acordo com o id do fornecedor
         public QueryResponse<List<Supplier_Product>> GetBySupplierId(int id)
         {
             return _productDAL.GetBySupplierId(id);
