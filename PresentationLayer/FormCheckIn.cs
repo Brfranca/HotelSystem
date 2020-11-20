@@ -83,6 +83,13 @@ namespace PresentationLayer
                         _room = frmSearchReservation.room;
                         _client = frmSearchReservation.client;
                         _reservation = frmSearchReservation.reservation;
+                        _reservation.Active = false;
+                        Response response = _reservationBLL.Update(_reservation);
+                        if (!response.Success)
+                        {
+                            MessageBox.Show(response.Message);
+                            return;
+                        }
                         SelectClient();
                         SelectRoom();
                         SelectDate();

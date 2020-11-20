@@ -71,7 +71,7 @@ namespace PresentationLayer
         private void UpdateGrid()
         {
             dgvSearch.Rows.Clear();
-            QueryResponse<List<Reservation>> response = _reservationBLL.GetAll();
+            QueryResponse<List<Reservation>> response = _reservationBLL.GetByActiveState();
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);
