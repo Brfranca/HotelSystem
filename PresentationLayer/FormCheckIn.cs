@@ -60,11 +60,13 @@ namespace PresentationLayer
             FormSearchClient frmSearchClient = new FormSearchClient();
             frmSearchClient.ShowDialog();
             _client = frmSearchClient.client;
-
-            if (_checkInBLL.ExistClient(_client.ID.ToString()))
+            for (int i = 0; i < _checkInBLL.GetByActiveState().Data.Count; i++)
             {
-                MessageBox.Show("Esse cliente já efetuou o check in.");
-                return;
+                if (_checkInBLL.GetByActiveState().Data[i].ClientID == _client.ID)
+                {
+                    MessageBox.Show("Esse cliente já efetuou o check in.");
+                    return;
+                }
             }
 
             if (_client.ID != 0)
