@@ -4,12 +4,8 @@ using Entities;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -79,7 +75,6 @@ namespace PresentationLayer
         private void btnProductSelect_Click(object sender, EventArgs e)
         {
             SelectDataGrid();
-            
         }
 
         private void SelectDataGrid()
@@ -105,6 +100,56 @@ namespace PresentationLayer
         private void dgvProductSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectDataGrid();
+        }
+
+        private void txtSuppSearchName_Enter(object sender, EventArgs e)
+        {
+            pnlSuppName.EnterEvent();
+        }
+
+        private void txtSuppSearchName_Leave(object sender, EventArgs e)
+        {
+            pnlSuppName.LeaveEvent();
+        }
+
+        private void txtProduSearchID_Enter(object sender, EventArgs e)
+        {
+            pnlSuppId.EnterEvent();
+        }
+
+        private void txtProduSearchID_Leave(object sender, EventArgs e)
+        {
+            pnlSuppId.LeaveEvent();
+        }
+
+        private void txtSuppSearchName_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtSuppSearchName, txtProduSearchID, x => x.Name.ToLower().Contains(txtSuppSearchName.Text.ToLower()));
+
+        }
+
+        private void txtProduSearchID_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtProduSearchID, txtSuppSearchName, x => x.ID.ToString().ToLower().Contains(txtProduSearchID.Text.ToLower()));
+
+        }
+
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Product, bool> predicate)
+        {
+            if (textBox.Text.Length > 0)
+            {
+                textBox1.Clear();
+                List<Product> customerFiltered = new List<Product>();
+                customerFiltered.AddRange(_productGrid.Where(predicate));
+                dgvProductSearch.Rows.Clear();
+
+                InsertGrid(customerFiltered);
+            }
+            else
+            {
+                dgvProductSearch.Rows.Clear();
+                InsertGrid(_productGrid);
+            }
         }
     }
 }

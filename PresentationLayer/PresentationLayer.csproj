@@ -175,6 +175,7 @@
       <DependentUpon>FormSearchSupplierIncome.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CheckInGrid.cs" />
+    <Compile Include="Models\IncomeGrid.cs" />
     <Compile Include="Models\ReservationGrid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

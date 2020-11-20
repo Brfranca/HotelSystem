@@ -4,15 +4,11 @@ using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using Entities.Entities;
+using PresentationLayer.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -22,8 +18,9 @@ namespace PresentationLayer
         public Supplier supplier;
         private readonly IncomeBLL _incomeBLL;
         private Product _product;
+        private ProductBLL _productBLL;
         private List<IncomeItem> _incomeItems;
-        private List<Income> _incomeGrid;
+        private List<IncomeGrid> _incomesGrid;
         private int _currentRowGrid;
         private SupplierBLL _supplierBLL;
         public FormRegisterIncome()
@@ -34,6 +31,8 @@ namespace PresentationLayer
             _product = new Product();
             _incomeItems = new List<IncomeItem>();
             _supplierBLL = new SupplierBLL();
+            _productBLL = new ProductBLL();
+            _incomesGrid = new List<IncomeGrid>();
         }
 
         private void btnSelecSupp_Click(object sender, EventArgs e)
@@ -49,6 +48,7 @@ namespace PresentationLayer
         {
             lblCompanyName.Text = "Razão social: ";
             lblCNPJ.Text = "CNPJ: ";
+            lblCadID.Text = "ID: ";
         }
 
         private void CreateSupplier()
@@ -62,6 +62,7 @@ namespace PresentationLayer
                 btnSelectProduct.Enabled = true;
                 lblCompanyName.Text += supplier.CompanyName;
                 lblCNPJ.Text += supplier.CNPJ.InsertMaskCNPJ();
+                lblCadID.Text += supplier.ID;
             }
         }
 
@@ -157,6 +158,11 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 return;
             }
+            if (_incomeItems.Any(x => x.ProductID == incomeItem.ProductID))
+            {
+                MessageBox.Show("Produto já adicionado. Caso queira alterar a quantidade, remova o item adicionado com dois cliques e insira o produto novamente.");
+                return;
+            }
             _incomeItems.Add(incomeItem);
 
             UpdateToTalValue();
@@ -170,7 +176,7 @@ namespace PresentationLayer
                 totalValue += item.UnityPrice * ((double)item.Quantity);
             }
 
-            txtTotalValue.Text = totalValue.ToString();
+            txtTotalValue.Text = totalValue.ToString("F2");
             UpdateGridProducts();
         }
 
@@ -193,7 +199,13 @@ namespace PresentationLayer
             dgvIncomeItems.Rows.Clear();
             foreach (var item in _incomeItems)
             {
-                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice.ToString("C2"), item.Profit.ToString() + "%");
+                QueryResponse<Product> response = _productBLL.GetById(item.ProductID);
+                if (!response.Success)
+                {
+                    MessageBox.Show(response.Message);
+                    return;
+                }
+                dgvIncomeItems.Rows.Add(item.ProductID, response.Data.Name, item.Quantity, item.UnityPrice.ToString("C2"), item.Profit.ToString() + "%");
             }
         }
 
@@ -207,17 +219,46 @@ namespace PresentationLayer
                 MessageBox.Show(response.Message);
                 return;
             }
-            _incomeGrid = new List<Income>(response.Data);
-
-            InsertGrid(_incomeGrid);
+            ConvertIncomeGrid(response.Data);
+            InsertGrid(_incomesGrid);
         }
 
-        private void InsertGrid(List<Income> incomes)
+        private void ConvertIncomeGrid(List<Income> incomes)
         {
             foreach (var item in incomes)
             {
-                dgvIncomes.Rows.Add(item.ID, item.SupplierID, item.EntryDate.ToString("dd/MM/yyyy HH:mm"), item.TotalValue.ToString("C2", CultureInfo.CurrentCulture));
+                QueryResponse<Supplier> response = _supplierBLL.GetById(item.SupplierID);
+                if (!response.Success)
+                {
+                    MessageBox.Show(response.Message);
+                    return;
+                }
+                _incomesGrid.Add(CreateIncomeGrid(item, response.Data));
             }
+        }
+
+        private void InsertGrid(List<IncomeGrid> incomes)
+        {
+            foreach (var item in incomes)
+            {
+                dgvIncomes.Rows.Add
+                    (
+                    item.ID,
+                    item.SupplierName,
+                    item.EntryDate.ToString("dd/MM/yyyy HH:mm"),
+                    item.TotalValue.ToString("C2", CultureInfo.CurrentCulture));
+            }
+        }
+
+        private IncomeGrid CreateIncomeGrid(Income income, Supplier supplier)
+        {
+            IncomeGrid incomeGrid = new IncomeGrid();
+            incomeGrid.ID = income.ID;
+            incomeGrid.SupplierName = supplier.CompanyName;
+            incomeGrid.EntryDate = income.EntryDate;
+            incomeGrid.TotalValue = income.TotalValue;
+
+            return incomeGrid;
         }
 
         private void dgvIncomes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -228,6 +269,7 @@ namespace PresentationLayer
         private void btnIncomeSelect_Click(object sender, EventArgs e)
         {
             SelectDataGrid();
+            dgvIncomeItems.Enabled = false;
         }
 
         private void SelectDataGrid()
@@ -243,7 +285,7 @@ namespace PresentationLayer
             {
                 GetSupplierById(response.Data.SupplierID);
 
-                txtTotalValue.Text = response.Data.TotalValue.ToString();
+                txtTotalValue.Text = response.Data.TotalValue.ToString("F2");
                 lblID.Text = id.ToString();
 
                 GetListIncomeItems(id);
@@ -253,15 +295,19 @@ namespace PresentationLayer
             MessageBox.Show(response.Message);
         }
 
-
         private void GetListIncomeItems(int id)
         {
             QueryResponse<List<IncomeItem>> queryResponse = _incomeBLL.GetByIncomeId(id);
 
             foreach (IncomeItem item in queryResponse.Data)
             {
-
-                dgvIncomeItems.Rows.Add(item.ProductID, item.Quantity, item.UnityPrice.ToString("C2"), item.Profit.ToString() + "%");
+                QueryResponse<Product> response = _productBLL.GetById(item.ProductID);
+                if (!response.Success)
+                {
+                    MessageBox.Show(response.Message);
+                    return;
+                }
+                dgvIncomeItems.Rows.Add(item.ProductID, response.Data.Name, item.Quantity, item.UnityPrice.ToString("C2"), item.Profit.ToString() + "%");
                 _incomeItems.Add(item);
             }
 
@@ -274,8 +320,6 @@ namespace PresentationLayer
             {
                 MessageBox.Show(responseSupplier.Message);
                 return;
-
-                
             }
 
             lblCompanyName.Text += responseSupplier.Data.CompanyName;
@@ -285,11 +329,15 @@ namespace PresentationLayer
         private void dgvIncomes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectDataGrid();
+            dgvIncomeItems.Enabled = false;
+            btnIncomeRegister.Enabled = false;
         }
 
         private void btnProductClear_Click(object sender, EventArgs e)
         {
             this.ClearForm();
+            dgvIncomeItems.Enabled = true;
+            btnIncomeRegister.Enabled = true;
             RenewLabelProduct();
             RenewLabelSupplier();
             UpdateComponentsRegister();
@@ -318,6 +366,55 @@ namespace PresentationLayer
         private void txtProdSearchID_Leave(object sender, EventArgs e)
         {
             pnlProduID.LeaveEvent();
+        }
+
+        private void dgvIncomeItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (_currentRowGrid == -1)
+                return;
+            int id = (int)dgvIncomeItems.Rows[_currentRowGrid].Cells[0].Value;
+            RemoveItem(id);
+            UpdateGridProducts();
+        }
+
+        private void RemoveItem(int id)
+        {
+            _incomeItems.Remove(_incomeItems.FirstOrDefault(d => d.ProductID == id));
+            UpdateToTalValue();
+        }
+
+        private void dgvIncomeItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _currentRowGrid = e.RowIndex;
+        }
+
+        private void txtSearchIncomeBySupp_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtSearchIncomeBySupp, txtProdSearchID, x => x.SupplierName.ToLower().Contains(txtSearchIncomeBySupp.Text.ToLower()));
+
+        }
+
+        private void txtProdSearchID_TextChanged(object sender, EventArgs e)
+        {
+            FilterGrid(txtProdSearchID, txtSearchIncomeBySupp, x => x.ID.ToString().ToLower().Contains(txtProdSearchID.Text.ToLower()));
+        }
+
+        private void FilterGrid(TextBox textBox, TextBox textBox1, Func<IncomeGrid, bool> predicate)
+        {
+            if (textBox.Text.Length > 0)
+            {
+                textBox1.Clear();
+                List<IncomeGrid> customerFiltered = new List<IncomeGrid>();
+                customerFiltered.AddRange(_incomesGrid.Where(predicate));
+                dgvIncomes.Rows.Clear();
+
+                InsertGrid(customerFiltered);
+            }
+            else
+            {
+                dgvIncomes.Rows.Clear();
+                InsertGrid(_incomesGrid);
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.picProductClose = new System.Windows.Forms.PictureBox();
             this.btnProductSelect = new System.Windows.Forms.Button();
-            this.pnlSuppCNPJ = new System.Windows.Forms.Panel();
+            this.pnlSuppId = new System.Windows.Forms.Panel();
             this.txtProduSearchID = new System.Windows.Forms.TextBox();
             this.pnlSuppName = new System.Windows.Forms.Panel();
             this.txtSuppSearchName = new System.Windows.Forms.TextBox();
@@ -116,16 +116,16 @@
             this.btnProductSelect.UseVisualStyleBackColor = false;
             this.btnProductSelect.Click += new System.EventHandler(this.btnProductSelect_Click);
             // 
-            // pnlSuppCNPJ
+            // pnlSuppId
             // 
-            this.pnlSuppCNPJ.BackColor = System.Drawing.Color.White;
-            this.pnlSuppCNPJ.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.pnlSuppCNPJ.Location = new System.Drawing.Point(335, 111);
-            this.pnlSuppCNPJ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pnlSuppCNPJ.MaximumSize = new System.Drawing.Size(564, 1);
-            this.pnlSuppCNPJ.Name = "pnlSuppCNPJ";
-            this.pnlSuppCNPJ.Size = new System.Drawing.Size(206, 1);
-            this.pnlSuppCNPJ.TabIndex = 239;
+            this.pnlSuppId.BackColor = System.Drawing.Color.White;
+            this.pnlSuppId.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pnlSuppId.Location = new System.Drawing.Point(335, 111);
+            this.pnlSuppId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlSuppId.MaximumSize = new System.Drawing.Size(564, 1);
+            this.pnlSuppId.Name = "pnlSuppId";
+            this.pnlSuppId.Size = new System.Drawing.Size(150, 1);
+            this.pnlSuppId.TabIndex = 239;
             // 
             // txtProduSearchID
             // 
@@ -138,8 +138,11 @@
             this.txtProduSearchID.MaxLength = 11;
             this.txtProduSearchID.MinimumSize = new System.Drawing.Size(0, 24);
             this.txtProduSearchID.Name = "txtProduSearchID";
-            this.txtProduSearchID.Size = new System.Drawing.Size(191, 27);
+            this.txtProduSearchID.Size = new System.Drawing.Size(137, 27);
             this.txtProduSearchID.TabIndex = 240;
+            this.txtProduSearchID.TextChanged += new System.EventHandler(this.txtProduSearchID_TextChanged);
+            this.txtProduSearchID.Enter += new System.EventHandler(this.txtProduSearchID_Enter);
+            this.txtProduSearchID.Leave += new System.EventHandler(this.txtProduSearchID_Leave);
             // 
             // pnlSuppName
             // 
@@ -165,6 +168,9 @@
             this.txtSuppSearchName.Name = "txtSuppSearchName";
             this.txtSuppSearchName.Size = new System.Drawing.Size(258, 27);
             this.txtSuppSearchName.TabIndex = 238;
+            this.txtSuppSearchName.TextChanged += new System.EventHandler(this.txtSuppSearchName_TextChanged);
+            this.txtSuppSearchName.Enter += new System.EventHandler(this.txtSuppSearchName_Enter);
+            this.txtSuppSearchName.Leave += new System.EventHandler(this.txtSuppSearchName_Leave);
             // 
             // lblConsSupCod
             // 
@@ -287,7 +293,7 @@
             this.ClientSize = new System.Drawing.Size(563, 550);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnProductSelect);
-            this.Controls.Add(this.pnlSuppCNPJ);
+            this.Controls.Add(this.pnlSuppId);
             this.Controls.Add(this.txtProduSearchID);
             this.Controls.Add(this.pnlSuppName);
             this.Controls.Add(this.txtSuppSearchName);
@@ -317,7 +323,7 @@
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.PictureBox picProductClose;
         private System.Windows.Forms.Button btnProductSelect;
-        private System.Windows.Forms.Panel pnlSuppCNPJ;
+        private System.Windows.Forms.Panel pnlSuppId;
         private System.Windows.Forms.TextBox txtProduSearchID;
         private System.Windows.Forms.Panel pnlSuppName;
         private System.Windows.Forms.TextBox txtSuppSearchName;

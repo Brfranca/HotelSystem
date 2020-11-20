@@ -286,6 +286,8 @@ namespace PresentationLayer
 
         private void dgvIncomeItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (_currentRowGrid == -1)
+                return;
             int id = (int)dgvProducts.Rows[_currentRowGrid].Cells[0].Value;
             RemoveItem(id);
             UpdateGridProducts();

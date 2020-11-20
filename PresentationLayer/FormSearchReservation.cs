@@ -82,12 +82,12 @@ namespace PresentationLayer
                 return;
             }
             List<Reservation> reservations = new List<Reservation>(response.Data);
-            InsertReservationGrid(reservations);
+            ConvertReservationGrid(reservations);
 
             InsertGrid(_reservationsGrid);
         }
 
-        private void InsertReservationGrid(List<Reservation> reservations)
+        private void ConvertReservationGrid(List<Reservation> reservations)
         {
             foreach (var item in reservations)
             {
