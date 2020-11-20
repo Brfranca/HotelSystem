@@ -4,12 +4,8 @@ using Common;
 using Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -66,7 +62,6 @@ namespace PresentationLayer
                     suppliers.Add(response.Data);
                 }
             }
-
             this.Close();
         }
 
@@ -77,7 +72,6 @@ namespace PresentationLayer
 
         private void txtSuppSearchName_Enter(object sender, EventArgs e)
         {
-
             pnlSuppName.EnterEvent();
         }
 
@@ -122,16 +116,6 @@ namespace PresentationLayer
         private void txtSuppSearchCNPJ_TextChanged(object sender, EventArgs e)
         {
             FilterGrid(txtSuppSearchCNPJ, txtSuppSearchName, x => x.CNPJ.ToLower().Contains(txtSuppSearchCNPJ.Text.ToLower()));
-        }
-
-        private void dgvSuppliersSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvSuppliersSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

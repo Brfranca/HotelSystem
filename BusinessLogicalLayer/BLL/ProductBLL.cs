@@ -3,11 +3,7 @@ using Common;
 using DataAccessLayer.DAL;
 using Entities;
 using Entities.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
 {
@@ -30,7 +26,6 @@ namespace BusinessLogicalLayer.BLL
                 return resultInsert;
 
             return Response.CreateSuccess("O produto foi cadastrado com sucesso!");
-            
         }
 
         public Response Update(Product product)

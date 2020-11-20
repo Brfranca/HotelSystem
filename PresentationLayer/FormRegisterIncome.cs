@@ -1,5 +1,4 @@
-﻿using BusinessLogicalLayer;
-using BusinessLogicalLayer.BLL;
+﻿using BusinessLogicalLayer.BLL;
 using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;

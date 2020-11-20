@@ -5,9 +5,6 @@ using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
 {
@@ -32,7 +29,6 @@ namespace BusinessLogicalLayer.BLL
             if ((employee?.Data?.ID ?? 0) == 0)
                 return Response.CreateFailure("Usuário inválido!");
 
-            //Colocar para comparar convertendo a senha em MD5.
             if (employee.Data.Password != password.GenerateHash())
                 return Response.CreateFailure("Senha inválida!");
 
@@ -51,7 +47,6 @@ namespace BusinessLogicalLayer.BLL
             if (!resultInsert.Success)
                 return resultInsert;
 
-
             return Response.CreateSuccess("Funcionário cadastrado com sucesso!");
         }
 
@@ -68,7 +63,6 @@ namespace BusinessLogicalLayer.BLL
 
             return Response.CreateSuccess("Funcionário atualizado com sucesso!");
         }
-
 
         public Response UpdatePassword(Employee employee, string password2)
         {
@@ -136,15 +130,6 @@ namespace BusinessLogicalLayer.BLL
                 ValidateDistrict(employee.District, validator);
 
                 return validator.Validate();
-
-                /*
-                O validator.Validate() verifica se o comprimento da StringBuilder _errors é igual a zero, 
-                caso seja vai retornar Response.CreateSuccess();
-                Caso nao seja retornará Response.CreateFailure(_errors.ToString());
-                */
-
-                //Por que usar o id nos métodos ValidateEmail, ValidateRg e ValidateCpf?????
-
             }
             catch (Exception erro)
             {

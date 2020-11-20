@@ -122,7 +122,6 @@ namespace BusinessLogicalLayer
             }
             if (phone2.HasValue())
             {
-                //Caso tenha valor ver se é valido
                 if (!phone2.IsValidPhone())
                 {
                     validator.AddError("Telefone 2 inválido!");

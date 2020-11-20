@@ -174,7 +174,6 @@ namespace PresentationLayer
             MessageBox.Show(response.Message);
         }
 
-
         private void dgvClients_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _currentRowGrid = e.RowIndex;

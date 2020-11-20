@@ -4,20 +4,14 @@ using Common;
 using Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
 {
     public partial class FormSearchSupplierIncome : Form
     {
-        //Form para selecionar somente um fornecedor para a entrada
-
         private readonly SupplierBLL _supplierBLL;
         private List<Supplier> _supplierGrid;
         public Supplier supplier;
@@ -128,7 +122,6 @@ namespace PresentationLayer
             string cnpj = (string)dgvSuppliersSearch.Rows[_currentRowGrid].Cells[1].Value;
             QueryResponse<Supplier> response = _supplierBLL.GetByCnpj(cnpj);
             supplier = response.Data;
-
             this.Close();
         }
 

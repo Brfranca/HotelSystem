@@ -2,13 +2,8 @@
 using DataAccessLayer.Infrastructure;
 using Entities;
 using Entities.Entities;
-using System;
 using System.Collections.Generic;
 using System.Data.Common;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Transactions;
 
 namespace DataAccessLayer.DAL
@@ -51,13 +46,10 @@ namespace DataAccessLayer.DAL
         {
             using (TransactionScope scope = new TransactionScope())
             {
-                //atualizar descrição e nome produto reutilizando nosso metodo pronto
                 Response resultUpdateIncome = base.Update(income);
                 if (!resultUpdateIncome.Success)
                     return resultUpdateIncome;
 
-                //Esse delete recebe o nome do campo e o ID para excluir. <IncomeItem> para que a retirar a table name
-                //esse método não altera o valor do produto, rever!!!!
                 Response resultDelete = DeleteWhereId<IncomeItem>("INCOMEID", income.ID);
                 if (!resultDelete.Success)
                     return resultDelete;

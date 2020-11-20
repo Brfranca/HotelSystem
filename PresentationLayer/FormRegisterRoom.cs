@@ -4,12 +4,8 @@ using Entities;
 using Entities.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -31,7 +27,6 @@ namespace PresentationLayer
             cmbFloor.DataSource = Enum.GetValues(typeof(RoomFloor));
             UpdateGrid();
             btnRoomDelete.Visible = false;
-
         }
 
         private void btnRoomRegister_Click(object sender, EventArgs e)

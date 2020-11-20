@@ -5,15 +5,12 @@ using Entities.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
 {
     public class SaleBLL
     {
         private readonly SaleDAL _saleDAL;
-
         public SaleBLL()
         {
             _saleDAL = new SaleDAL();
@@ -30,7 +27,6 @@ namespace BusinessLogicalLayer.BLL
                 return resultInsert;
 
             return Response.CreateSuccess("Venda efetuada com sucesso!");
-
         }
 
         private Response Validate(Sale sale)

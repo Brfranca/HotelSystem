@@ -84,7 +84,6 @@ namespace DataAccessLayer.Infrastructure
                     builder.Append(item.Name + " = @" + item.Name + ",");
                 }
             }
-            //Verificar se length começa em 0 ou 1, para remover a virgula final
             return builder.ToString(0, builder.Length - 1);
         }
 
@@ -94,7 +93,6 @@ namespace DataAccessLayer.Infrastructure
             {
                 if (propriedade.GetCustomAttribute<NonEditable>() == null)
                 {
-                    //Não pode ter o casting de string!
                     if (propriedade.GetValue(item) == null || propriedade.GetValue(item) == "")
                     {
                         command.Parameters.AddWithValue("@" + propriedade.Name, DBNull.Value);

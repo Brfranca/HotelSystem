@@ -4,12 +4,8 @@ using Common;
 using Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -36,7 +32,6 @@ namespace PresentationLayer
         {
             dgvSearch.Rows.Clear();
             QueryResponse<List<Client>> response = _clientBLL.GetAll();
-
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);

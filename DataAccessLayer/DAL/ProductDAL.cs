@@ -2,13 +2,8 @@
 using DataAccessLayer.Infrastructure;
 using Entities;
 using Entities.Entities;
-using System;
 using System.Collections.Generic;
 using System.Data.Common;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Transactions;
 
 namespace DataAccessLayer.DAL

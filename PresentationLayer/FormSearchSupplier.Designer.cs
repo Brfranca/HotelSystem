@@ -147,8 +147,6 @@
             this.dgvSuppliersSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSuppliersSearch.Size = new System.Drawing.Size(518, 379);
             this.dgvSuppliersSearch.TabIndex = 225;
-            this.dgvSuppliersSearch.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliersSearch_CellContentDoubleClick);
-            this.dgvSuppliersSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSuppliersSearch_CellDoubleClick);
             // 
             // ColumnCompanyName
             // 

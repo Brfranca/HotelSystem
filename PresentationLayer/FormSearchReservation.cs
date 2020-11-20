@@ -9,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -54,9 +53,7 @@ namespace PresentationLayer
             int id = (int)dgvSearch.Rows[_currentRowGrid].Cells[0].Value;
             QueryResponse<Reservation> response = _reservationBLL.GetById(id);
             if (!response.Success)
-            {
                 MessageBox.Show(response.Message);
-            }
             reservation = response.Data;
             QueryResponse<Room> responseRoom = _roomBLL.GetById(reservation.RoomID);
             if (!responseRoom.Success)
@@ -75,7 +72,6 @@ namespace PresentationLayer
         {
             dgvSearch.Rows.Clear();
             QueryResponse<List<Reservation>> response = _reservationBLL.GetAll();
-
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);

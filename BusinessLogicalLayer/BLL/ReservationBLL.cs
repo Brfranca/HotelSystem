@@ -4,9 +4,6 @@ using DataAccessLayer.DAL;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLogicalLayer.BLL
 {
@@ -153,6 +150,5 @@ namespace BusinessLogicalLayer.BLL
         {
             return _reservationDAL.ExistClient(clientId, id);
         }
-
     }
 }

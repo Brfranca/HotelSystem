@@ -1,12 +1,10 @@
-﻿using BusinessLogicalLayer;
-using BusinessLogicalLayer.BLL;
+﻿using BusinessLogicalLayer.BLL;
 using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using Entities.Entities;
 using Entities.Enums;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace PresentationLayer

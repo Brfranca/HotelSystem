@@ -31,7 +31,6 @@ namespace BusinessLogicalLayer.BLL
                 return resultInsert;
 
             return Response.CreateSuccess("Quarto cadastrado com sucesso");
-            //rever pq eu fico chamando o CreateSuccess se ele é chamado dentro do DbExecuter().Execute()
         }
 
         public Response Update(Room room)
@@ -46,7 +45,6 @@ namespace BusinessLogicalLayer.BLL
 
             return Response.CreateSuccess("Quarto atualizado com sucesso!");
         }
-
 
         public Response Delete(Room room)
         {
@@ -88,7 +86,6 @@ namespace BusinessLogicalLayer.BLL
 
         private void ValidateRoomNumber(string number, int id, Validator validator)
         {
-            //ver se poderemos cadasrar numero de quarto com letras e como faremos a verificação se já existe o número ou nao considerando letras maiusculas e minisculas
             if (_roomDAL.ExistNumber(number, id))
             {
                 validator.AddError("Número de quarto já cadastrado");
@@ -98,7 +95,6 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("O número do quarto deve ser informado!");
             }
         }
-
 
         private void ValidatePrice(double pricePerDay, int id, Validator validator)
         {

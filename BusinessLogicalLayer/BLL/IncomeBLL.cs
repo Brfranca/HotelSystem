@@ -5,10 +5,7 @@ using Entities;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Transactions;
 
 namespace BusinessLogicalLayer.BLL
@@ -41,7 +38,6 @@ namespace BusinessLogicalLayer.BLL
             }
 
             return Response.CreateSuccess("A entrada foi cadastrada com sucesso!");
-
         }
         private Response UpdatePrice(Income income)
         {
@@ -66,9 +62,6 @@ namespace BusinessLogicalLayer.BLL
             return Response.CreateSuccess("Operação efetuada com sucesso!");
         }
 
-
-        //Não precisa fazer o update e delete no income!
-
         private Response Validate(Income income)
         {
             Validator validator = new Validator();
@@ -78,7 +71,6 @@ namespace BusinessLogicalLayer.BLL
 
             return validator.Validate();
         }
-
 
         public QueryResponse<Income> GetById(int id)
         {
@@ -113,7 +105,6 @@ namespace BusinessLogicalLayer.BLL
             }
         }
 
-
         private void ValidateListIncomeItems(List<IncomeItem> incomeItems, int id, Validator validator)
         {
             if (incomeItems.Count == 0)
@@ -121,7 +112,6 @@ namespace BusinessLogicalLayer.BLL
                 validator.AddError("Um ou mais produtos devem ser adicionados!");
             }
         }
-
 
         public Response ValidateIncomeItem(IncomeItem incomeitem)
         {
@@ -138,7 +128,6 @@ namespace BusinessLogicalLayer.BLL
         private void ValidatePrice(string price, Validator validate)
         {
             char[] priceChar = price.ToCharArray();
-
 
             if (price.IsNullOrWhiteSpace())
             {
@@ -158,7 +147,6 @@ namespace BusinessLogicalLayer.BLL
         {
             char[] profitChar = profit.ToCharArray();
 
-
             if (profit.IsNullOrWhiteSpace())
             {
                 validate.AddError("O lucro deve ser informado!");
@@ -175,7 +163,6 @@ namespace BusinessLogicalLayer.BLL
 
         public void ValidateQuantity(string quantity, Validator validate)
         {
-
             char[] quantityChar = quantity.ToCharArray();
 
             if (quantity.IsNullOrWhiteSpace())
@@ -204,7 +191,6 @@ namespace BusinessLogicalLayer.BLL
         {
             return _incomeDAL.GetAll();
         }
-
 
         public QueryResponse<List<IncomeItem>> GetByIncomeId(int id)
         {

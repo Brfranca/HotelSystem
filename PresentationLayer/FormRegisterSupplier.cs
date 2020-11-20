@@ -33,7 +33,6 @@ namespace PresentationLayer
             pnlSuppName.BackColor = Color.FromArgb(37, 206, 15);
         }
 
-
         private void txtSuppSearchName_Leave(object sender, EventArgs e)
         {
             pnlSuppName.LeaveEvent();

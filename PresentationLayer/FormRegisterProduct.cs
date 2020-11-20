@@ -1,17 +1,12 @@
 ﻿using BusinessLogicalLayer.BLL;
-using BusinessLogicalLayer.Extentions;
 using Common;
 using Entities;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -105,7 +100,6 @@ namespace PresentationLayer
             product.Name = txtProductName.Text;
             product.Description = txtProductDescription.Text;
             product.SuppliersID = _suppliers.Select(x => x.ID).ToList();
-
 
             return product;
         }

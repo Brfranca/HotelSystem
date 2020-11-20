@@ -122,6 +122,7 @@ namespace PresentationLayer
             ClearNameProduct();
             UpdateGridProducts();
         }
+
         private void UpdateGridProducts()
         {
             dgvIncomeItems.Rows.Clear();
@@ -134,9 +135,9 @@ namespace PresentationLayer
                 }
                 dgvIncomeItems.Rows.Add(item.ProductID, response.Data.Name, item.Quantity, item.UnityPrice.ToString("C2"));
             }
-
             UpdateToTalValue();
         }
+
         private void RenewTextBoxValue()
         {
             txtProdQuantity.Text = "0";
@@ -149,7 +150,6 @@ namespace PresentationLayer
             {
                 totalValue += item.UnityPrice * ((double)item.Quantity);
             }
-
             txtTotalValue.Text = totalValue.ToString("N2");
         }
 
@@ -161,7 +161,6 @@ namespace PresentationLayer
         {
             dgvProducts.Rows.Clear();
             QueryResponse<List<Product>> response = _productBLL.GetAll();
-
             if (!response.Success)
             {
                 MessageBox.Show(response.Message);
@@ -171,6 +170,7 @@ namespace PresentationLayer
 
             InsertGrid(_productGrid);
         }
+
         private void InsertGrid(List<Product> products)
         {
             foreach (var item in products)

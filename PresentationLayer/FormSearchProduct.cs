@@ -17,7 +17,6 @@ namespace PresentationLayer
         public Supplier supplier;
         public Product product;
         private int _currentRowGrid;
-
         public FormSearchProduct()
         {
             InitializeComponent();
@@ -131,7 +130,6 @@ namespace PresentationLayer
         private void txtProduSearchID_TextChanged(object sender, EventArgs e)
         {
             FilterGrid(txtProduSearchID, txtSuppSearchName, x => x.ID.ToString().ToLower().Contains(txtProduSearchID.Text.ToLower()));
-
         }
 
         private void FilterGrid(TextBox textBox, TextBox textBox1, Func<Product, bool> predicate)

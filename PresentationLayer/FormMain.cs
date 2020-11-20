@@ -5,7 +5,6 @@ using Entities.Entities;
 using Entities.Enums;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Timers;
 using System.Windows.Forms;
 
@@ -38,9 +37,7 @@ namespace PresentationLayer
                     }
                 }
             }
-
         }
-
 
         private void CustomizedDesign()
         {
@@ -96,7 +93,6 @@ namespace PresentationLayer
             }
         }
 
-        // CRIAR FORM DENTRO DE UM PAINEL 
         private Form activeForm = null;
         private void OpenChildForm(Form childForm)
         {
@@ -110,23 +106,6 @@ namespace PresentationLayer
             pnlDisplay.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }
-
-        // CRIAR COMPONENTES EM TEMPO DE EXECUÇÃO
-        Label AddLabel(int i)
-        {
-            Label l = new Label();
-            l.Name = "Room" + i.ToString();
-            l.Text = "Room" + i.ToString() + " disponível";
-            l.ForeColor = Color.White;
-            l.BackColor = Color.FromArgb(19, 127, 75);
-            l.Font = new Font("Segoe", 10, FontStyle.Bold);
-            l.Width = 250;
-            l.Height = 40;
-            //l.Location = new Point(start, end);
-            l.TextAlign = ContentAlignment.MiddleCenter;
-            l.Margin = new Padding(5);
-            return l;
         }
 
         private void picMainClose_Click(object sender, EventArgs e)

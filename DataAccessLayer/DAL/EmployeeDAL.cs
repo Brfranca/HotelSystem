@@ -2,12 +2,7 @@
 using Common;
 using DataAccessLayer.Infrastructure;
 using Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccessLayer.DAL
 {
@@ -15,14 +10,6 @@ namespace DataAccessLayer.DAL
     {
         public QueryResponse<Employee> GetByCpf(string cpf)
         {
-            /*
-            DbFactory.GetCurrentCommand tem como retorno: GetInstance()._provider.CreateCommand()
-            _provider = DbProviderFactories.GetFactory(_providerName);
-            _providerName = ConfigurationManager.ConnectionStrings[currentConnection].ProviderName;
-            ProviderName: string dentro do App.config que está dentro do PresentationLayer 
-            podendo ser "SqlServerConnection", "OracleServerCOnnection"... dependendo de qual banco de dados 
-            está sendo utilizado
-            */
             cpf = cpf.RemoveMaskCPF();
             DbCommand command = DbFactory.GetCurrentCommand();
             command.CommandText = $"{_select} WHERE CPF = @CPF";
