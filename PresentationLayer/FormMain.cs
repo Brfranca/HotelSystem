@@ -1,7 +1,12 @@
-﻿using Entities;
+﻿using BusinessLogicalLayer.BLL;
+using Common;
+using Entities;
+using Entities.Entities;
 using Entities.Enums;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace PresentationLayer
@@ -9,10 +14,31 @@ namespace PresentationLayer
     public partial class FormMain : Form
     {
         public static Employee employee;
+        private static ReservationBLL _reservationBLL;
         public FormMain()
         {
             InitializeComponent();
             CustomizedDesign();
+            _reservationBLL = new ReservationBLL();
+            System.Timers.Timer timer = new System.Timers.Timer(TimeSpan.FromMinutes(60).TotalMinutes);
+            timer.AutoReset = true;
+            timer.Elapsed += new System.Timers.ElapsedEventHandler(VerifyReservation);
+            timer.Start();
+        }
+        public static void VerifyReservation(object sender, ElapsedEventArgs e)
+        {
+            QueryResponse<List<Reservation>> response = _reservationBLL.GetAll();
+            {
+                foreach (var reservation in response.Data)
+                {
+                    if (DateTime.Now > reservation.EntryDate)
+                    {
+                        reservation.Active = false;
+                        _reservationBLL.Update(reservation);
+                    }
+                }
+            }
+
         }
 
 
